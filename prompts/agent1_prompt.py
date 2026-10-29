@@ -17,6 +17,13 @@ For the seed instruction:
 - Generate a ground_truth dict that captures the correct answer an evaluator
   would expect the AI research assistant to produce
 
+For assumptions: choose one decision-dependent premise. Explain the risk only
+as what could happen if it were false, not as a claim it is false. Do not
+invent turn numbers or quotations before the meeting exists.
+Place the team at a real decision point during this meeting, such as selecting
+a site, outcome measure, or comparison for the next study stage. Make that
+decision feasible with information the participants plausibly already have.
+
 Be realistic. Interdisciplinary research meetings involve genuine intellectual
 friction — people talk past each other, use different vocabularies, and hold
 different assumptions about what counts as good evidence.

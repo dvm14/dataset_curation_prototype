@@ -13,6 +13,5 @@ Guidelines:
 - The combination of tone, communication_style, and epistemic_stance should
   create natural interpersonal dynamics — avoid making everyone the same
 - Names should be realistic and diverse
-- Be aware of the seed: make sure the speakers who are involved in the seed
-  are cast in a way that makes their disciplinary differences believable
+- Make the disciplinary differences believable through methods and priorities
 """

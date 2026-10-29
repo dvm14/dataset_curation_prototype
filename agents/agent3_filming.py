@@ -88,6 +88,22 @@ Rules:
 - Do not tell speakers that another discipline uses a different meaning.
 - Keep each brief short and relevant to the meeting.
 - Treat QA feedback as guidance for preparing better briefs.
+"""
+
+    if content.seed.benchmark_category == "assumptions":
+        planner_prompt += """
+For this task, allocate the measurement method and habitual evidence standard
+to the appropriate discipline, and the broader research goal and practical
+decision needs to the other participants. Give each participant only facts,
+aims and normal practice from their own viewpoint. Never put the full target
+assumption or ground truth in any brief. Never instruct a participant to hide,
+avoid, or reveal an assumption. Do not tell them how the meeting should end.
+Shared background should make clear what concrete research choice the team
+needs to make during this meeting and which materials they already have to
+make it. Keep the choice itself open for the participants to discuss.
+"""
+    else:
+        planner_prompt += """
 
 Keeping the seed invisible:
 - Write each speaker's meaning as simply how they think about the
@@ -103,7 +119,9 @@ Keeping the seed invisible:
   "network").
 - Speakers not involved in the seed get an ordinary brief about their
   own priorities, with nothing that would make them examine the term.
+"""
 
+    planner_prompt += """
 Return JSON:
 {
   "shared_context": "background everyone in the meeting knows",
@@ -344,7 +362,7 @@ def check_seed_leak(content, transcript, text):
     """Does this new turn point out the hidden feature instead of just containing it?"""
 
     terms = seed_terms(content.seed.ground_truth)
-    if terms and not mentions(text, terms):
+    if content.seed.benchmark_category != "assumptions" and terms and not mentions(text, terms):
         return False, ""
 
     task = {
@@ -354,20 +372,29 @@ def check_seed_leak(content, transcript, text):
         "new_turn": text,
     }
 
+    leak_prompt = LEAK_CHECK_PROMPT
+    if content.seed.benchmark_category == "assumptions":
+        leak_prompt = """You inspect the new turn in context for one target assumption.
+Mark leaked only if a participant explicitly states or challenges the target
+premise, or changes the shared decision to remove dependence on it. Ordinary
+questions or unrelated disagreements are not leaks. Return JSON with
+leaked (boolean) and reason (short sentence)."""
     result = call_llm_json(
-        LEAK_CHECK_PROMPT,
+        leak_prompt,
         json.dumps(task, indent=2),
         max_tokens=200,
     )
     return bool(result.get("leaked", False)), result.get("reason", "")
 
 
-def cut_off(turn, protected_terms):
+def cut_off(turn, protected_terms, protect_full_turn=False):
     """
     The interrupted speaker doesn't get to finish: cut their turn
     partway, at a comma if there is one. Turns that are too short to cut,
     or where the cut would remove the seed term, are left alone.
     """
+    if protect_full_turn:
+        return turn
     words = turn.text.split()
     if len(words) < 12:
         return turn
@@ -486,6 +513,23 @@ participants, state that clearly. Do not invent evidence.
     return location
 
 
+def assumption_coverage(content, transcript):
+    """Inspect dialogue for method, goal and decision before natural stopping."""
+    if not transcript:
+        return False
+    numbered = "\n".join(f"[{i}] {t.speaker}: {t.text}"
+                         for i, t in enumerate(transcript, 1))
+    result = call_llm_json(
+        """Check only the actual dialogue for the target assumption. Return JSON
+with method_present, goal_present, decision_present, all booleans. A decision
+must actually rely on the method to address the broader goal. Generic talk,
+intentions to decide later, and facts supplied only in the seed do not count.""",
+        json.dumps({"ground_truth": content.seed.ground_truth,
+                    "transcript": numbered}), max_tokens=250)
+    return all(result.get(k) is True for k in
+               ("method_present", "goal_present", "decision_present"))
+
+
 def run(
     content: ContentCurationOutput,
     casting: CastingOutput,
@@ -515,8 +559,10 @@ def run(
 
     # Make sure the seed actually comes up: track which seed speakers
     # have said the term, and privately nudge the ones who haven't.
-    terms = seed_terms(content.seed.ground_truth)
+    assumptions = content.seed.benchmark_category == "assumptions"
+    terms = seed_terms(content.seed.ground_truth) if not assumptions else []
     involved = seed_speakers(content, speakers) if terms else []
+    covered = False
 
     def still_missing():
         return [
@@ -531,6 +577,11 @@ def run(
             name: seed_nudge(terms)
             for name in missing if turn_index >= NUDGE_AFTER
         }
+        if assumptions and turn_index >= NUDGE_AFTER and not covered:
+            nudges = {s.name: "If a relevant detail from your own brief has not come up, consider raising it naturally." for s in speakers}
+
+        if assumptions and turn_index >= MIN_TURNS and turn_index % 4 == 0:
+            covered = assumption_coverage(content, transcript)
 
         bids = collect_bids(
             speakers, content, shared_context, private_briefs, transcript,
@@ -541,7 +592,8 @@ def run(
             for name, bid in bids.items()
         )
 
-        name = pick_speaker(bids, transcript, turn_index, can_end=not missing)
+        name = pick_speaker(bids, transcript, turn_index,
+                            can_end=(covered if assumptions else not missing))
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
@@ -552,7 +604,7 @@ def run(
             intent = "respond"
 
         if intent == "interject" and transcript:
-            transcript[-1] = cut_off(transcript[-1], terms)
+            transcript[-1] = cut_off(transcript[-1], terms, protect_full_turn=assumptions)
 
         nudge = nudges.get(name, "")
         text = speak(
@@ -572,9 +624,10 @@ def run(
                 speaker, content, shared_context, private_briefs[name],
                 ami_style_notes, transcript, intent,
                 extra_note=(
-                    "Stay on the substance of the project. Don't step back "
-                    "to comment on how anyone is using particular words, "
-                    "and don't ask people to define their terms.\n" + nudge
+                    ("Stay with your own project facts and priorities.\n" if assumptions else
+                     "Stay on the substance of the project. Don't step back "
+                     "to comment on how anyone is using particular words, "
+                     "and don't ask people to define their terms.\n") + nudge
                 ).strip(),
             )
 
@@ -593,6 +646,9 @@ def run(
                else f"never said by {', '.join(missing)}")
         )
 
+    if assumptions:
+        covered = assumption_coverage(content, transcript)
+        print(f"      Final assumption evidence chain present: {covered}")
     seed_location = locate_seed(content, transcript)
 
     return FilmingOutput(

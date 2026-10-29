@@ -10,6 +10,8 @@ Configure the run parameters in the RUN CONFIG section below.
 """
 
 import json
+import os
+import argparse
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -65,6 +67,11 @@ CONFIG = {
 # ─────────────────────────────────────────────
 
 def run_pipeline(config: dict) -> GeneratedTranscript:
+    config = dict(config)
+    if isinstance(config.get("discipline_distance"), str):
+        config["discipline_distance"] = DisciplineDistance(config["discipline_distance"])
+    if config.get("benchmark_category") not in {"jargon", "assumptions"}:
+        raise ValueError("benchmark_category must be jargon or assumptions")
     transcript_id = str(uuid.uuid4())[:8]
     created_at = datetime.now()
     print(f"\n{'='*50}")
@@ -149,6 +156,9 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
             scores=scores,
             approved=qa.approved,
             issues=qa.issues,
+            transcript=filming.transcript,
+            evidence=qa.evidence,
+            assumption_status=qa.assumption_status,
         ))
         print(f"      Scores: {scores}")
         print(f"      Approved: {qa.approved}")
@@ -177,6 +187,11 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         qa_feedback=qa,
         qa_cycles=qa_cycles,
         qa_history=qa_history,
+        model_id=os.getenv("OPENAI_MODEL"),
+        run_config={**{key: (value.value if isinstance(value, DisciplineDistance) else value)
+                       for key, value in config.items()},
+                    "openai_reasoning_effort": os.getenv("OPENAI_REASONING_EFFORT", ""),
+                    "openai_min_output_tokens": os.getenv("OPENAI_MIN_OUTPUT_TOKENS", "0")},
     )
 
     # ── Save output ─────────────────────────────
@@ -217,5 +232,9 @@ def print_transcript(result: GeneratedTranscript):
 
 
 if __name__ == "__main__":
-    result = run_pipeline(CONFIG)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", help="JSON configuration file; default is built-in jargon setup")
+    args = parser.parse_args()
+    run_config = json.loads(Path(args.config).read_text()) if args.config else CONFIG
+    result = run_pipeline(run_config)
     print_transcript(result)

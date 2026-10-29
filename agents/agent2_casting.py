@@ -49,7 +49,7 @@ Research problem: {content.research_problem}
 
 Meeting context: {content.meeting_context}
 
-Seed to be aware of: {content.seed.explicit_instruction}
+Scenario guidance: {content.seed.explicit_instruction if content.seed.benchmark_category != 'assumptions' else 'Cast each discipline with its own realistic methods, research goals and practical priorities. Do not include any benchmark answer in a profile.'}
 
 Generate one speaker profile per discipline using these randomized attributes as a starting point.
 You may adjust background and distinct_perspective to fit the research problem,

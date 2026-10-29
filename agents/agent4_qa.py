@@ -65,6 +65,30 @@ def score(raw, key):
         return 1
 
 
+def validate_assumption_evidence(transcript, evidence):
+    """Check provenance only; the judge and human reviewer assess semantics."""
+    issues = []
+    roles = set()
+    if not isinstance(evidence, list):
+        return ["Evidence must be a list of turn, quote, and role records."]
+    for item in evidence:
+        if not isinstance(item, dict):
+            issues.append("Evidence record is not an object.")
+            continue
+        turn = item.get("turn")
+        quote = item.get("quote")
+        role = item.get("role")
+        if type(turn) is not int or not 1 <= turn <= len(transcript):
+            issues.append(f"Invalid evidence turn: {turn}.")
+        elif not isinstance(quote, str) or not quote.strip() or quote not in transcript[turn - 1].text:
+            issues.append(f"Evidence quote does not occur in turn {turn}.")
+        if role in {"method", "goal", "decision"}:
+            roles.add(role)
+    for role in {"method", "goal", "decision"} - roles:
+        issues.append(f"Missing {role} evidence.")
+    return issues
+
+
 def run(
     filming: FilmingOutput,
     content: ContentCurationOutput,
@@ -132,6 +156,22 @@ Return JSON:
 }}
 """
 
+    is_assumption = content.seed.benchmark_category == "assumptions"
+    if is_assumption:
+        user_message += """
+For assumptions, judge the FINAL transcript only. The target premise may be
+inferred but method, research goal and an actual shared decision relying on
+that method must each appear in the dialogue. Do not fill gaps from seed,
+personas, private briefs or outside knowledge. A generic discussion without
+the dependent decision is missing. Mark exposed if a participant states or
+challenges the target premise; resolved if the decision changes to remove its
+dependence. Ordinary questions and unrelated disagreement are neither.
+Do not assert the assumption is false. Return additional JSON fields:
+"assumption_status": "implicit"|"exposed"|"resolved"|"missing",
+"evidence": [{"turn": 1, "quote": "exact substring of that turn", "role": "method"|"goal"|"decision"}],
+"inference": "how the cited dialogue supports the unstated premise".
+"implicit" requires all three evidence roles and no explicit exposure or resolution.
+"""
     raw = call_llm_json(SYSTEM_PROMPT, user_message)
 
     scores = {key: score(raw, key) for key in APPROVAL_THRESHOLDS}
@@ -139,13 +179,28 @@ Return JSON:
         scores[key] >= minimum
         for key, minimum in APPROVAL_THRESHOLDS.items()
     )
+    evidence = raw.get("evidence", []) if is_assumption else []
+    status = raw.get("assumption_status") if is_assumption else None
+    inference = raw.get("inference", "") if is_assumption else ""
+    issues = raw.get("issues", [])
+    if is_assumption:
+        hard_issues = validate_assumption_evidence(filming.transcript, evidence)
+        if status not in {"implicit", "exposed", "resolved", "missing"}:
+            hard_issues.append("Missing or invalid assumption status.")
+        if not isinstance(inference, str) or not inference.strip():
+            hard_issues.append("Missing inference explanation.")
+        issues = list(issues) + hard_issues
+        approved = approved and status == "implicit" and not hard_issues
 
     return QAFeedback(
         **scores,
-        evidence_turns=[
-            t for t in raw.get("evidence_turns", []) if isinstance(t, int)
-        ],
+        evidence_turns=([item["turn"] for item in evidence if isinstance(item, dict)
+                         and type(item.get("turn")) is int] if is_assumption else [
+            t for t in raw.get("evidence_turns", []) if isinstance(t, int)]),
+        evidence=evidence if isinstance(evidence, list) else [],
+        inference=inference if isinstance(inference, str) else "",
+        assumption_status=status if status in {"implicit", "exposed", "resolved", "missing"} else None,
         realism_signals=raw.get("realism_signals", []),
-        issues=raw.get("issues", []),
+        issues=issues,
         approved=approved,
     )

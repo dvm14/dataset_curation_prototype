@@ -145,6 +145,38 @@ they have not been regenerated or revalidated on OpenAI.
 
 ## Value banks
 
+## Assumptions pilot
+
+Use the repository virtual environment and configured `.env`:
+
+```bash
+OPENAI_MIN_OUTPUT_TOKENS=2048 .venv/bin/python main.py --config configs/assumptions-green-space.json
+OPENAI_MIN_OUTPUT_TOKENS=2048 .venv/bin/python main.py --config configs/assumptions-heat.json
+OPENAI_MIN_OUTPUT_TOKENS=2048 .venv/bin/python main.py --config configs/assumptions-learning.json
+```
+
+Each command writes a JSON record in `data/outputs/`, including failures after
+the configured QA re-films. `qa_feedback.approved` is the outcome. Assumptions
+records include exact turn quotes, an inference, an implicit/exposed/resolved/
+missing status, model ID, run configuration, and the transcript and QA for
+each filming attempt. Quote matching and turn bounds are checked in code;
+the meaning of the evidence requires human review. Historical jargon JSON
+records remain readable with the expanded schema. The built-in jargon run is
+still `.venv/bin/python main.py`.
+
+For a transcript-only identification pilot on an approved candidate:
+
+```bash
+.venv/bin/python pilot_assumption.py data/outputs/transcript_<timestamp>_<id>.json
+```
+
+This pilot excludes the seed and ground truth from the identification request.
+Generation, QA and the pilot may use the same model, so pilot agreement is not
+independent validation. The assumptions category is an implementation proposal,
+not a frozen team benchmark specification.
+
+## Value banks
+
 Speaker attributes are randomized from `utils/value_banks.py` unless overridden. To fix an attribute for a discipline:
 
 ```python

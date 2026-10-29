@@ -215,6 +215,9 @@ class QAFeedback(BaseModel):
         default_factory=list,
         description="Turn numbers (1-indexed) the ground truth can be derived from"
     )
+    evidence: list[dict] = Field(default_factory=list)
+    inference: str = ""
+    assumption_status: Optional[Literal["implicit", "exposed", "resolved", "missing"]] = None
     realism_signals: list[str] = Field(
         default_factory=list,
         description="Which realism signals the judge found in the transcript"
@@ -233,6 +236,9 @@ class QAAttempt(BaseModel):
     scores: dict[str, int] = Field(description="Rubric scores for this attempt")
     approved: bool
     issues: list[str]
+    transcript: list[Turn] = Field(default_factory=list)
+    evidence: list[dict] = Field(default_factory=list)
+    assumption_status: Optional[str] = None
 
 
 # ─────────────────────────────────────────────
@@ -270,5 +276,8 @@ class GeneratedTranscript(BaseModel):
     )
     qa_cycles: int = Field(description="How many film + QA rounds ran")
     qa_history: list[QAAttempt] = Field(
-        description="Scores from every attempt, in order"
+        default_factory=list, description="Scores from every attempt, in order"
     )
+    model_id: Optional[str] = None
+    run_config: dict = Field(default_factory=dict)
+    pilot: Optional[dict] = None
