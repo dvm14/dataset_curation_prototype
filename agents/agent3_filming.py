@@ -173,17 +173,14 @@ def time_cue(transcript):
     return cue
 
 
-CACHE = {"type": "ephemeral"}
-
-
 def participant_blocks(speaker, content, shared_context, brief, transcript, tail):
     """
     What one participant can see: their own profile and brief, plus the
-    shared meeting. Built as content blocks so the parts that repeat
-    across calls are cached:
+    shared meeting. Stable content blocks preserve the repeated prefix
+    for OpenAI automatic prompt caching (cache hits are not guaranteed):
       1. fixed context (profile, brief, ...) — identical on every call
       2. one block per turn so far — each call only adds the newest turn
-      3. tail (time cue, style notes, instruction) — never cached
+      3. tail (time cue, style notes, instruction) — changes each call
     """
 
     fixed = f"""
@@ -204,14 +201,13 @@ YOUR PRIVATE DISCUSSION BRIEF:
 
 CONVERSATION SO FAR:"""
 
-    blocks = [{"type": "text", "text": fixed, "cache_control": CACHE}]
+    blocks = [{"type": "text", "text": fixed}]
 
     if transcript:
         blocks += [
             {"type": "text", "text": f"{turn.speaker}: {turn.text}"}
             for turn in transcript
         ]
-        blocks[-1]["cache_control"] = CACHE
     else:
         blocks.append({"type": "text", "text": "The meeting has not started yet."})
 

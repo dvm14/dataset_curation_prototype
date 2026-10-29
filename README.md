@@ -8,10 +8,23 @@ Generates synthetic interdisciplinary research meeting transcripts for evaluatin
 pip install -r requirements.txt
 ```
 
-Create a `.env` file:
+Copy `.env.example` to `.env`, then set:
 ```
-ANTHROPIC_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here
+OPENAI_MODEL=your_project_model_id
 ```
+Choose a model enabled in your OpenAI API project that supports the Responses
+API and JSON object mode. There is no implicit model default. All agents,
+including the style extractor, bids, leak checks and QA, use this model.
+The repository `.env` is loaded regardless of the working directory; exported
+environment variables take precedence. Keep the key out of Git.
+
+For reasoning models, optionally set `OPENAI_REASONING_EFFORT` to a value
+supported by that model. Reasoning and visible text share `max_output_tokens`:
+short bid calls inherited from the prototype may need a larger budget. Set
+`OPENAI_MIN_OUTPUT_TOKENS` (for example, `2048`) to give every call a larger
+minimum budget. Incomplete output fails explicitly; it is never accepted as a
+valid transcript. These settings require verification on your chosen model.
 
 Add an AMI transcript to `data/ami_transcripts/sample.txt`. Any plain-text excerpt from the AMI Meeting Corpus works. It is used for style reference only; its content is not reused.
 
@@ -21,7 +34,8 @@ Add an AMI transcript to `data/ami_transcripts/sample.txt`. Any plain-text excer
 python main.py
 ```
 
-Output is saved to `data/outputs/transcript_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. At the end of each run, the script prints token usage and an estimated API cost.
+Output is saved to `data/outputs/transcript_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. At the end of each run, the script prints cumulative session token usage.
+Dollar estimates are omitted; use your OpenAI project billing for actual costs.
 
 ## Pipeline
 
@@ -98,7 +112,36 @@ A transcript that still fails QA after the re-film is saved with `approved: fals
 
 ## Cost
 
-All agents use `claude-sonnet-4-6`. Agent 3 accounts for most of the cost: each turn makes 3 bid calls, a speaking call and sometimes a leak check. Speaker context and conversation history are prompt-cached, so each call pays full price mainly for the newest turn. Check the usage printout at the end of a run for actual costs. A run with a re-film costs roughly twice as much as one that passes on the first attempt.
+All agents use OpenAI through `utils/llm.py`. Agent 3 accounts for most calls:
+each turn makes a bid call per speaker, a speaking call, and sometimes a leak
+check. Repeated prefixes can benefit from OpenAI automatic prompt caching;
+there are no Anthropic cache directives. The usage report counts total input,
+cached input (a subset of input), and output tokens, aggregated safely across
+parallel bids. Refused or incomplete responses still count toward usage.
+
+JSON calls use Responses API JSON object mode; field-level validation remains
+in the agents' Pydantic models. JSON mode does not guarantee field correctness.
+No server conversation state is shared between participants (`store=False`).
+
+API reference: [JSON output handling](https://developers.openai.com/api/docs/guides/structured-outputs).
+
+## Offline tests and live check
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+Tests use the real OpenAI SDK with an in-memory HTTP transport; no credentials
+or paid API calls are required. For a manual live check after configuring `.env`:
+
+```bash
+python test_style_extractor.py
+```
+
+This command uses API credits. Run `python main.py` afterwards for the full
+meeting pipeline. Existing saved transcripts are historical Claude outputs;
+they have not been regenerated or revalidated on OpenAI.
 
 ## Value banks
 

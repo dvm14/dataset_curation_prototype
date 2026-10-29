@@ -186,7 +186,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     with open(out_path, "w") as f:
         json.dump(final.model_dump(), f, indent=2)
     print(f"\n✓ Saved to {out_path}")
-    print(f"\nAPI usage this run:\n{usage_report()}")
+    print(f"\nAPI usage this session:\n{usage_report()}")
 
     return final
 
