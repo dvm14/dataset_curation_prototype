@@ -1,0 +1,285 @@
+{
+  "transcript_id": "5d50de6a",
+  "generated_at": "2026-10-31T14:20:55.613055",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short to medium turns, though presenters speak in long, structured monologues. Early conversation is loose and social, with frequent greetings, small talk, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), minor audio/log-in checks, and occasional overlapping or interrupted starts. Speakers use many fillers and self-repairs\u2014\u201cum,\u201d \u201cyou know,\u201d repeated words, false starts, and reformulated questions\u2014especially among non-native speakers. The formality rises for introductions and presentations but remains warm and conversational; compliments are common before questions. Questions are often prefaced as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions and tend to be exploratory rather than adversarial. Participants build on prior comments by restating part of the answer, linking it to related work, or asking follow-ups. Disagreement is indirect and tentative, framed through uncertainty, alternative explanations, or open questions rather than blunt contradiction.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "ecology",
+    "anthropology",
+    "neuroscience"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Marisol Vega",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "Dr. Vega is an urban landscape ecologist with 14 years of experience building spatial exposure models for environmental-health studies. Her work combines GIS network analysis, high-resolution canopy and land-cover classification, field vegetation plots, park-audit protocols, and habitat-quality indicators such as canopy stratification, impervious-surface fraction, vegetation condition, and bird/insect habitat proxies. She has led municipal greening evaluations in disinvested neighborhoods and is accustomed to translating heterogeneous urban parcels into reproducible geospatial variables for multi-site studies.",
+      "distinct_perspective": "Vega treats green space as a set of measurable environmental attributes rather than a binary park/no-park condition. She wants the study to distinguish quantity, quality, configuration, and accessibility: network distance to sites, entrance density, sidewalk continuity, curb crossings, transit reach, grade, fencing, and other infrastructural barriers that determine whether a site is physically reachable. She is likely to argue that exposure estimates should be based on activity-space buffers and route-based access rather than residential proximity alone, and that informal lots need field verification because remotely sensed greenness may not represent usable ecological space.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Amina Okafor",
+      "discipline": "anthropology",
+      "functional_role": "project manager",
+      "background": "Dr. Okafor is a medical and urban anthropologist with 11 years of experience coordinating community-engaged research in low-income city neighborhoods. Her preliminary work for this project includes 38 semi-structured interviews, walking interviews, route mapping, and observation at bus stops, corner stores, parks, vacant-lot gardens, and tenant meetings. She studies how safety, racialized surveillance, caregiving schedules, disability, neighborhood conflict, and local histories of displacement shape everyday mobility and health. As project manager, she has also built relationships with resident leaders and is alert to the burden that repeated study procedures can place on participants.",
+      "distinct_perspective": "Okafor sees green space as socially interpreted and unevenly available, not simply present on a map. She will press the team to ask who feels welcome in a space, who avoids it after certain hours, who can bring children there, who expects police scrutiny, and whose daily obligations leave room for outdoor restoration. When she speaks of accessibility, she means whether residents can realistically and comfortably claim a space as theirs amid stigma, informal territorial control, safety concerns, mobility constraints, and competing demands. She is cautious about forcing residents' accounts into fixed survey categories, but wants to find a practical design that protects local meaning while producing information the broader team can use.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Daniel Kim",
+      "discipline": "neuroscience",
+      "functional_role": "research engineer",
+      "background": "Dr. Kim is an affective and environmental neuroscientist with 9 years of experience designing ambulatory psychophysiology studies. He develops protocols using wrist-worn electrodermal activity and heart-rate sensors, accelerometry, GPS traces, ecological momentary assessment prompts, and brief computerized attention tasks. His recent work has examined within-person links among daily stressors, mobility, autonomic regulation, sleep, and mood in populations for whom clinic-based testing is impractical. He has experience with missing-data pipelines, time-synchronization problems, and participant-centered adaptation of wearable protocols.",
+      "distinct_perspective": "Kim wants exposure definitions that can be aligned in time with repeated measures of affect, perceived stress, attentional fatigue, and autonomic arousal. He is likely to propose separating acute contact with green settings from cumulative neighborhood conditions, then testing lagged and within-person associations while accounting for physical activity, noise, heat, social company, time of day, and baseline distress. He will treat accessibility as a plausible candidate variable in the exposure model\u2014potentially as a determinant of actual visits, duration, and perceived restoration\u2014while remaining open to revising its operationalization after reviewing the ethnographic and ecological data. He will emphasize feasibility, measurement reliability, and the distinction between what sensors can detect and what participants report experiencing.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "benchmark_category": "jargon",
+  "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+  "seed_spec": {
+    "benchmark_category": "jargon",
+    "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+    "explicit_instruction": "Embed a natural exchange in which the ecologist and the anthropologist both use the term \"accessibility\" while discussing neighborhood green space, without either speaker explicitly noting that they mean different things. The ecologist should use accessibility to mean the physical, spatial, and infrastructural ease of reaching a green-space site, such as distance, entrances, sidewalk connectivity, transit access, and barriers. The anthropologist should use accessibility to mean socially and culturally experienced access: whether residents feel entitled, safe, welcomed, able to use the space given policing, surveillance, stigma, caregiving demands, disability, local conflict, or informal exclusion. Let the neuroscientist respond in a way that treats accessibility as a candidate variable for exposure measurement, helping the ambiguity remain plausible rather than resolved. The differing meanings must arise organically as the team debates study design; participants should not announce that they are using disciplinary jargon or explicitly state that they disagree about the definition.",
+    "ground_truth": {
+      "term": "accessibility",
+      "meanings": [
+        {
+          "discipline": "ecology",
+          "definition": "Accessibility refers to the physical and spatial feasibility of reaching green space, including proximity, route connectivity, entrances, walkability, transit links, and physical barriers."
+        },
+        {
+          "discipline": "anthropology",
+          "definition": "Accessibility refers to socially experienced and culturally mediated ability to use green space, including perceived safety, belonging, informal exclusion, policing, stigma, time constraints, and whether residents feel welcome or entitled to be there."
+        }
+      ],
+      "expected_assistant_response": "Identify \"accessibility\" as the ambiguous shared term and explain that the ecologist uses it as a spatial/infrastructural property of access, whereas the anthropologist uses it as a socially mediated, lived capacity to enter and use a space. The assistant should recommend disambiguating the construct or measuring both dimensions separately."
+    }
+  },
+  "seed_location": "Turns 10 (Dr. Amina Okafor, anthropologist) and 11 (Dr. Marisol Vega, ecologist) contain the required ambiguous shared term. Okafor uses \"accessibility\" for socially experienced ability to use space\u2014staying, bringing a child or mobility device, and expecting scrutiny\u2014while Vega uses it for spatial/infrastructural access\u2014network travel time, entrance conditions, and mobility-device feasibility. Turn 2 (Dr. Daniel Kim, neuroscientist) treats accessibility as a variable relevant to visit/exposure selection. The speakers do not explicitly announce or resolve the differing meanings.",
+  "ground_truth": {
+    "term": "accessibility",
+    "meanings": [
+      {
+        "discipline": "ecology",
+        "definition": "Accessibility refers to the physical and spatial feasibility of reaching green space, including proximity, route connectivity, entrances, walkability, transit links, and physical barriers."
+      },
+      {
+        "discipline": "anthropology",
+        "definition": "Accessibility refers to socially experienced and culturally mediated ability to use green space, including perceived safety, belonging, informal exclusion, policing, stigma, time constraints, and whether residents feel welcome or entitled to be there."
+      }
+    ],
+    "expected_assistant_response": "Identify \"accessibility\" as the ambiguous shared term and explain that the ecologist uses it as a spatial/infrastructural property of access, whereas the anthropologist uses it as a socially mediated, lived capacity to enter and use a space. The assistant should recommend disambiguating the construct or measuring both dimensions separately."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "Morning, everyone\u2014can folks on the remote link hear us okay? Great. We've got a pretty tight runway to the methods lock, so today I'd really like us to leave with a workable definition of exposure, one that doesn't treat a green parcel on the map as automatically usable, and a sampling frame we can actually take to the advisory liaison."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "Yeah. For the first phase, I\u2019d separate acute, time-stamped contact\u2014actual minutes in or immediately adjacent to a green setting\u2014from cumulative neighborhood greenness. The former can be aligned to EMA, EDA, and heart-rate windows; accessibility then isn\u2019t just a covariate, it may explain who gets those visits in the first place. I do need us to treat the GPS sync test as a prerequisite for route-level claims, with a brief location diary fallback if it fails."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "Yes\u2014and the diary fallback needs to be participant-led and really light. Rather than having people account for every avoided route, we could- after selected prompts, just ask whether the place felt usable then, whether they could enter, stay, rest, bring a child, that kind of thing, and leave a brief optional note for why not. Those reasons aren't interchangeable with a generic safety score."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "The usable-at-that-moment item matters, but it shouldn't substitute for the access layer. We can build a compact network impedance surface with entrances, sidewalk gaps, curb crossings, fencing, documented closures, that kind of thing, then field-audit the ambiguous parcels. Willow is exactly why parcel-centroid distance will- why it will misclassify exposure. On the ecological side, I'd keep quantity, vegetation condition, and configuration separate within route and activity-space buffers."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "And when we field-audit, I\u2019d really want residents or the advisory liaison looking at what we\u2019re calling an entrance or a barrier. An unlisted opening might be the only way somebody actually gets in, but it could also be a route people avoid with a stroller, after dark, or because they expect to be challenged. The surface can flag those conditions, but I don\u2019t think it can settle what they mean on its own."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "For our purposes, we can preserve both. The audited impedance layer is a stable predictor of opportunity, and the prompt-level usability response tells us whether that opportunity translated into contact that time. I'd keep the EMA item to maybe enter, stay, rest, plus social company and perceived safety, so it can sit beside the GPS window without turning into a survey, and then..."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Mm-hm, keep those distinct."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "And I\u2019d add time of day to that prompt, not as another burden, but because Riverside at noon and Riverside after dusk are just not the same exposure. We should let people say, \u201cI was nearby but chose not to enter,\u201d without asking them to document the route or, um, justify that choice."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "For Riverside, the access layer should be time-indexed where we can support it, documented closure hours, lighting, and incident context, rather than treating the promenade as uniformly available. I can make the audit form distinguish a physically passable entrance from an entrance that's, that's operationally available under those conditions."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "That distinction helps. I'd want the audit form to leave room for accessibility beyond just whether you can get through the entrance. Whether someone can realistically stay there, bring a child or mobility device, or expects scrutiny\u2014 those can turn an open entrance into a space people don't experience as available. Maybe the liaison can review the ambiguous entries before we hard-code them."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Yes. I can code accessibility as a layered attribute rather than collapse it to passable or not: network travel time from homes and routine destinations, then entrance-level conditions, and a separate audit flag for stroller or mobility-device feasibility. The liaison review could focus on the parcels where those layers conflict\u2014Willow, Riverside, the fenced lots\u2014before we finalize the classification."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "For sampling, those conflict cases are actually useful, not just nuisances. I\u2019d recruit people whose routine activity spaces do and don\u2019t intersect those sites, and make sure we have caregivers, people using mobility devices, older residents, and people with different work schedules in each neighborhood. Otherwise the layer will look more definitive than the population it represents."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "That stratification is useful for us too, because it gives us enough contrast to estimate visit selection instead of treating it as noise. And within each of those cells, I'd recruit people who regularly travel outside the neighborhood. I was thinking a home-based activity-space definition, but that would miss a lot of the acute exposures. We can keep the sensor week fairly short, with at least one weekday and one weekend day per person."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That gives us useful contrast."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "I\u2019d be careful that the cells don\u2019t get so fine-grained that we\u2019re promising representation we can\u2019t recruit. Maybe we set a few non-negotiable quotas, like neighborhood, caregiving or mobility constraint, and typical mobility pattern, then use the screener to purposively fill in the conflict-site and outside-neighborhood travel variation. The liaison can look at the screener language before we start."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I can turn those into a small number of recruitment strata without making the exposure model depend on the quotas. For the screener, I'd add routine destinations and usual travel mode, so we can construct preliminary network catchments before enrollment and then deliberately fill the Willow/Riverside and low-canopy-versus-high-canopy contrasts."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "Those screener fields can also give us a baseline mobility profile before the sensor week. I\u2019d avoid using them as the exposure itself, though. Once GPS is working, we need the actual time-aligned route and dwell windows. If it isn\u2019t, the diary prompt can capture a few anchor locations without pretending it has the same resolution, and..."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "And if GPS is the primary measure, we should be explicit in consent that we\u2019re not asking people to prove where they went or explain avoided places. Raw route access needs to be tightly, tightly limited. For the fallback, I\u2019d keep it to participant-chosen broad anchors and the brief usability item, not home or sensitive destinations unless they volunteer them."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "That works for the fallback. From the data side, we can store broad anchor categories separately from the GPS stream and use them only to classify the EMA window, park or garden, street-tree route, indoor, other, so we don't create a false sense of spatial precision. And before enrollment, I need one end-to-end sync run with the actual phones and wearables, or rather, the actual phones and wearables we're using, otherwise the lag windows just aren't defensible."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Agreed. The sync run also gives us a chance to test the spatial classification against the audited layer\u2014especially whether the device resolves the Willow entrance and the Riverside edge well enough to distinguish a visit from a pass-by. If it does not, I would not infer site-level exposure from a coarse trace; we can retain route-buffer vegetation exposure at the resolution the data actually support."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "The resolution point is also a trust point with residents. If the trace can't tell a pass-by from a visit, we shouldn't later call it time spent in Willow or Riverside. The participant's brief account can qualify that window without asking them to reconstruct a sensitive route. Can we build that limitation into the consent language and the analysis memo now?"
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "I can draft that into the analysis memo. We only use site-level labels when the positional uncertainty and dwell-time criteria are met. Otherwise it stays a route-buffer exposure or a self-reported broad-context exposure. And I'd put the sync run before any recruitment launch, because if we find systematic clock drift, we can still revise the EMA lag windows before the methods lock."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "Please. And before that sync run, I'd like the liaison to see the consent language, not just the technical limitation, but the plain statement that a gap or a coarse trace will never be treated as evidence that someone failed to go somewhere. Then we can take the screener and the conflict-site audit list to them together, rather than asking for review after those, those categories are already fixed."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I'll prepare the conflict-site audit list for the liaison to review. I'll separate mapped access, observed physical conditions, and the entries that need local interpretation, and circulate it with the screener draft. That should still leave enough time to field-verify Willow and the fenced parcels before November 14."
+    },
+    {
+      "speaker": "Dr. Daniel Kim",
+      "text": "I'll schedule the end-to-end sync run for next week, and I'll draft the memo so the classification rule is explicit. Site visit only when accuracy and dwell criteria are met, otherwise it stays route-level or broad self-report. Once Marisol's audit list is in, I can use those same ambiguous sites in the test instead of- rather than validating against the easy cases."
+    },
+    {
+      "speaker": "Dr. Amina Okafor",
+      "text": "Good. I\u2019ll coordinate the liaison review as one packet, and I want us to ask specifically whether the conflict-site labels and screener categories would feel recognizable to residents, not just whether the wording is clear. If anything needs reframing, we\u2019ve still got a little room before the fourteenth."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "seed_implicit": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      4,
+      5,
+      10,
+      11
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by highly polished, agenda-efficient turns throughout. For example, turns 4, 11, 16, 20, and 25 each deliver a complete technical argument and a tidy proposed next step, making the exchange read more like edited workshop dialogue than spontaneous meeting speech.",
+      "Several disfluencies are superficial insertions into otherwise fully composed sentences rather than producing genuinely unfinished thought; examples include the repairs in turns 4, 9, 19, and 25. Add more organic hesitation, abandoned points, and partial responses rather than only dash-based corrections.",
+      "The discussion is unusually linear and repeatedly converts every concern into an immediate operational solution. Turns 5-6, 10-11, 15-16, and 21-22 resolve issues almost instantly; leaving one or two questions temporarily open would make the interaction less scripted.",
+      "There are few concrete off-agenda anchors beyond the opening audio check and site names. A brief practical aside about the advisory liaison, field-audit logistics, prior site visit, or device availability could make the meeting feel more situated without derailing the research discussion."
+    ],
+    "seed_uses": [
+      {
+        "turn": 2,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Accessibility explains spatial opportunity for visits; GPS and route-level claims."
+      },
+      {
+        "turn": 3,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not use the term."
+      },
+      {
+        "turn": 10,
+        "sense": "anthropology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Focuses on experienced availability, scrutiny, and ability to stay or belong."
+      },
+      {
+        "turn": 11,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Defines travel time, entrances, and mobility feasibility as access attributes."
+      },
+      {
+        "turn": 12,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not use the term."
+      }
+    ],
+    "spoken_share": 0.79,
+    "written_turns": [
+      2,
+      11,
+      20,
+      22,
+      24
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 5,
+        "seed_implicit": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.79,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by highly polished, agenda-efficient turns throughout. For example, turns 4, 11, 16, 20, and 25 each deliver a complete technical argument and a tidy proposed next step, making the exchange read more like edited workshop dialogue than spontaneous meeting speech.",
+        "Several disfluencies are superficial insertions into otherwise fully composed sentences rather than producing genuinely unfinished thought; examples include the repairs in turns 4, 9, 19, and 25. Add more organic hesitation, abandoned points, and partial responses rather than only dash-based corrections.",
+        "The discussion is unusually linear and repeatedly converts every concern into an immediate operational solution. Turns 5-6, 10-11, 15-16, and 21-22 resolve issues almost instantly; leaving one or two questions temporarily open would make the interaction less scripted.",
+        "There are few concrete off-agenda anchors beyond the opening audio check and site names. A brief practical aside about the advisory liaison, field-audit logistics, prior site visit, or device availability could make the meeting feel more situated without derailing the research discussion."
+      ]
+    }
+  ]
+}

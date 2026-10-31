@@ -77,7 +77,7 @@ def sample_disciplines(distance: str, n: int = None) -> list[str]:
         disciplines = sample_disciplines("mixed", n=4)
     """
     options = DISCIPLINE_PAIRS.get(distance, DISCIPLINE_PAIRS["distant"])
-    group = random.choice(options)
+    group = list(random.choice(options))  # copy so the bank isn't mutated
     if n:
         # if more disciplines requested than in group, sample with replacement
         while len(group) < n:

@@ -78,18 +78,37 @@ Return a JSON object:
 
     raw = call_llm_json(SYSTEM_PROMPT, user_message)
 
+    specs_by_discipline = {
+        spec["discipline"].lower(): spec for spec in speaker_specs
+    }
+
+    def to_enum(enum_cls, value, fallback):
+        """
+        Match the LLM's value to the enum ignoring case/whitespace
+        (e.g. "Principal Investigator"); otherwise use the sampled value.
+        """
+        if isinstance(value, str):
+            for member in enum_cls:
+                if member.value.lower() == value.strip().lower():
+                    return member
+        return enum_cls(fallback)
+
     speakers = []
-    for s in raw.get("speakers", []):
+    for i, s in enumerate(raw.get("speakers", [])):
+        spec = specs_by_discipline.get(
+            str(s.get("discipline", "")).lower(),
+            speaker_specs[i % len(speaker_specs)],
+        )
         speakers.append(SpeakerProfile(
             name=s["name"],
             discipline=s["discipline"],
-            functional_role=FunctionalRole(s["functional_role"]),
+            functional_role=to_enum(FunctionalRole, s.get("functional_role"), spec["functional_role"]),
             background=s["background"],
             distinct_perspective=s["distinct_perspective"],
-            tone=Tone(s["tone"]),
-            language_complexity=LanguageComplexity(s["language_complexity"]),
-            communication_style=CommunicationStyle(s["communication_style"]),
-            epistemic_stance=EpistemicStance(s["epistemic_stance"]),
+            tone=to_enum(Tone, s.get("tone"), spec["tone"]),
+            language_complexity=to_enum(LanguageComplexity, s.get("language_complexity"), spec["language_complexity"]),
+            communication_style=to_enum(CommunicationStyle, s.get("communication_style"), spec["communication_style"]),
+            epistemic_stance=to_enum(EpistemicStance, s.get("epistemic_stance"), spec["epistemic_stance"]),
         ))
 
     return CastingOutput(speakers=speakers)
