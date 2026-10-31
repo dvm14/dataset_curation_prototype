@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 Create a `.env` file:
 ```
-ANTHROPIC_API_KEY=your_key_here
+OPENAI_API_KEY=your_key_here
 ```
 
 Add an AMI transcript to `data/ami_transcripts/sample.txt`. Any plain-text excerpt from the AMI Meeting Corpus works. It is used for style reference only; its content is not reused.
@@ -44,11 +44,16 @@ No single LLM call writes the transcript. Each cast speaker is a separate agent 
    - When someone cuts in, the previous turn is actually cut off mid-sentence ("—"). It is never cut where that would remove the seed term.
    - From turn 15, the meeting ends on its own once every bid is below 3. Turn 35 is a hard stop.
 3. **Speaking.** The winner writes their turn following the speaking rules in `prompts/agent3_prompt.py`: spoken rather than written, mostly cooperative, disagreement only when genuine, no recap of action items. A turn far over its word budget is regenerated once, shorter.
-4. **Time cue.** Agents are told how much of the 10-minute meeting has passed, based on words spoken (150 per minute), so any time they mention stays consistent. Near the turn cap they're told someone has a hard stop.
-5. **Seed safeguards.**
-   - **Leak check:** each turn containing the seed term is checked for giving the seed away (pointing out the two meanings, asking for a definition, silently switching to the other meaning). A leaking turn is regenerated up to 2 times.
+4. **Listener reactions.** In the same bid, each speaker says whether they'd react out loud to the last turn ("mm-hm", "oh, really?", "wait, the 18th?") without taking the floor. Before the winner speaks, one such listener (not the last speaker or the winner) may get a reaction of up to about six words.
+   - Let through 30% of the time (`REACTION_CHANCE`).
+   - Nobody reacts twice without taking a real turn in between. With 3 speakers the eligible listener is often the same person, who otherwise ended up doing nothing but backchannel.
+   - The reacting speaker sees the recent reactions and must not reuse their wording, and is told not to stamp approval ("exactly", "agreed").
+5. **Time cue.** Agents are told how much of the 10-minute meeting has passed, based on words spoken (150 per minute), so any time they mention stays consistent. Near the turn cap they're told someone has a hard stop.
+6. **Seed safeguards.**
+   - **Leak check:** each turn containing the seed term is checked for giving the seed away (pointing out the two meanings, asking for a definition, silently switching to the other meaning, objecting to what something is called, or renaming one's own sense). A leaking turn is regenerated up to 2 times.
    - **Coverage:** from turn 8, a seed speaker who hasn't said the term yet gets a private nudge to bring it up. The meeting can't end naturally until every seed speaker has used it.
-6. **Seed locator.** After the meeting, one call reports where the seed actually appears in the transcript.
+7. **Speech pass.** After the meeting, every turn of 15+ words is rewritten in parallel to read like transcribed speech: no semicolons, colons or parentheses, partial lists, varied openers, same points and roughly the same length. Each turn gets one disfluency type picked at random in code (none, a restart, a corrected word, a repeated word, losing the thread, trailing off, searching for a word), because asking for a restart in every long turn produced the same "X- well, X" repair everywhere. A rewrite is discarded, and the original kept, if it changes how often the seed term is used, changes the length outside 0.75–1.3×, or fails the leak check. Turn off with `SPEECH_PASS = False`.
+8. **Seed locator.** One call reports where the seed actually appears in the transcript.
 
 Tuning constants (turn limits, word budgets, nudge timing, meeting clock) are at the top of `agents/agent3_filming.py`.
 
@@ -60,12 +65,16 @@ The judge scores each criterion from 1 to 5, using 1/3/5 as anchors:
 |---|---|---|
 | Seed recoverable | ≥ 4 | Evidence turns can be pointed to, and the ground truth follows from them |
 | Seed implicit | ≥ 4 | Nobody names the issue, asks about it, or silently adjusts their usage |
-| Naturalness | ≥ 4 | Realism signals present; no tells such as essay-like turns or manufactured conflict |
+| Naturalness | ≥ 3 | Realism signals present; no tells such as essay-like turns or manufactured conflict |
 | Speaker distinctness | ≥ 3 | Speakers match their personas, with discipline-typical vocabulary |
-| Topical alignment | ≥ 3 | Stays on the research problem |
+| Domain alignment | ≥ 3 | Each speaker contributes from their own discipline (the research question itself may shift) |
 | Dialogue flow | ≥ 3 | Turns follow on from each other |
 
-The approval decision is made in code (`APPROVAL_THRESHOLDS` in `agents/agent4_qa.py`), not by the LLM. A missing or malformed score counts as 1. The judge also receives measured turn statistics (turn lengths, disfluency rate, turns per speaker) as context. These are not targets.
+The approval decision is made in code (`APPROVAL_THRESHOLDS` in `agents/agent4_qa.py`), not by the LLM. A missing or malformed score counts as 1. The judge also receives measured turn statistics (turn lengths, disfluency rate, turns per speaker) as context, which are not targets, and an exact count of which turns each speaker says the seed term in. It does not see the seed locator's report, which has misread speakers before.
+
+**Seed use check.** A separate small call labels each turn containing the seed term (and the turn after it) with which discipline's sense it carries, and whether it comments on the word or renames a sense. In code, seed_implicit is capped at 3 if any turn comments or renames, or if a seed speaker's sense never appears in a plain use. The main judge once gave 5 to a transcript whose only anthropology use objected to the label. The labels are saved as `seed_uses`.
+
+**Spoken share.** The 1–5 naturalness score barely moves between versions of a transcript, so QA also labels each turn of 15+ words as sounding spoken or written and reports the share (`spoken_share`, with `written_turns`). It is for comparing runs and is not part of approval.
 
 ## Configuration
 
@@ -98,7 +107,7 @@ A transcript that still fails QA after the re-film is saved with `approved: fals
 
 ## Cost
 
-All agents use `claude-sonnet-4-6`. Agent 3 accounts for most of the cost: each turn makes 3 bid calls, a speaking call and sometimes a leak check. Speaker context and conversation history are prompt-cached, so each call pays full price mainly for the newest turn. Check the usage printout at the end of a run for actual costs. A run with a re-film costs roughly twice as much as one that passes on the first attempt.
+All agents use `gpt-5.6-terra` with reasoning effort `none` (set by `MODEL` and `REASONING_EFFORT` in `utils/llm.py`). Agent 3 accounts for most of the cost: each turn makes 3 bid calls, a speaking call and sometimes a leak check. Speaker context and conversation history are prompt-cached with explicit cache breakpoints (`prompt_cache_breakpoint`), so each call pays full price mainly for the newest turn. Check the usage printout at the end of a run for actual costs. A run with a re-film costs roughly twice as much as one that passes on the first attempt.
 
 ## Value banks
 

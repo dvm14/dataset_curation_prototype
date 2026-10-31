@@ -1,0 +1,445 @@
+{
+  "transcript_id": "118495ac",
+  "generated_at": "2026-10-31T14:02:10.919979",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with a long, uninterrupted presentation format followed by extended technical Q&A. The opening is informal and chatty, full of quick greetings, side conversations, repetitions, and occasional transcription-like false starts; participants use frequent fillers such as \u201cyeah,\u201d \u201cum,\u201d \u201cokay,\u201d and \u201call right.\u201d The tone becomes semi-formal during introductions and talks, though speakers remain conversational and appreciative. Questions are usually prefaced with praise or hedging (\u201cI have a quick question,\u201d \u201cmaybe,\u201d \u201cI\u2019m curious,\u201d \u201cI\u2019m not sure\u201d), then unfold through multiple clauses and self-corrections. Participants build on points collaboratively rather than confrontationally, often restating what they think they heard before asking for clarification. Disagreement is rare and indirect, expressed as uncertainty, alternative possibilities, or requests for evidence rather than blunt contradiction. Overlap and interruption are modest but present in transitions, acknowledgments, and conversational backchannels; speakers frequently pause, repeat words, revise phrasing, and use informal handoffs like \u201cokay, great\u201d to move between turns.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Maya Chen",
+      "discipline": "ecology",
+      "functional_role": "PhD student",
+      "background": "Fourth-year urban ecology PhD student studying how the structure, maintenance, and connectivity of small urban green spaces shape environmental exposure. She has spent three years conducting park and vacant-lot field audits in disinvested neighborhoods, pairing canopy and understory surveys with satellite-derived NDVI, land-cover classification, pedestrian-network analysis, and GIS buffers. Her dissertation compares vegetation quantity with habitat quality and walkable reachability of green infrastructure.",
+      "distinct_perspective": "Maya treats greening as a spatially patterned environmental condition that can be measured at multiple scales. She wants the study to distinguish canopy, planted ground cover, park area, biodiversity, shade, and maintenance rather than treating all visible green as equivalent. For her, access is the physical opportunity to reach green space: how far a resident is from an entrance, whether sidewalks and crossings connect them to it, and how much usable vegetation lies within a realistic walking-network buffer. She is likely to ask whether a proposed measure actually corresponds to a place people can get to, rather than merely vegetation visible from above.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Rafael Ortiz",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "Research engineer with six years of experience building linked administrative, geospatial, and mobility-data pipelines for policy evaluations. He has supported difference-in-differences, event-study, synthetic-control, and instrumental-variables analyses of housing, transportation, and public-health interventions. For this project, he is constructing a parcel- and census-block-level panel aligned to phased greening investments, mental-health service utilization records, project timing, neighborhood covariates, and potential residential sorting or displacement indicators.",
+      "distinct_perspective": "Rafael frames the central question as whether greening investments causally change mental-health outcomes, for whom, and through which constraints. He wants a clearly dated treatment definition, untreated comparison areas, pre-trend diagnostics, and explicit attention to spillovers, selective migration, and staggered-adoption bias. In his use, access is effective availability: whether residents can realistically consume the amenity after time costs, travel frictions, hours, anticipated safety risks, and other constraints are accounted for. He is inclined to model predicted use or generalized travel cost rather than assume that nearby vegetation produces exposure, while remaining interested in ethnographic findings that can improve those assumptions.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Amina Rahman",
+      "discipline": "anthropology",
+      "functional_role": "domain expert",
+      "background": "Urban anthropologist and community-engaged researcher with fourteen years of fieldwork on housing precarity, public space, environmental justice, and neighborhood change. She has conducted long-term participant observation, walking interviews, oral histories, and collaborative mapping with tenant associations, youth groups, mutual-aid networks, and community-garden stewards. In preliminary work for this project, she has observed meetings, spent time in parks and gardens at different hours, and interviewed residents about routine mobility, safety, caregiving, and encounters with police and private security.",
+      "distinct_perspective": "Amina approaches green space as a socially governed setting rather than a neutral exposure. She expects the same park, garden, or restored lot to carry different meanings and practical possibilities across residents depending on race, age, disability, tenancy, work schedules, immigration concerns, caregiving duties, prior experiences of harassment, and fear of surveillance or displacement. She wants the team to document who participates in decisions about greening, who feels entitled to linger, which spaces are informally controlled, and whether investments alter neighborhood belonging as well as vegetation. She sees interviews and observation as necessary for identifying mechanisms and for testing whether the study's categories match residents' lived experience.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "benchmark_category": "jargon",
+  "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+  "seed_spec": {
+    "benchmark_category": "jargon",
+    "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+    "explicit_instruction": "Embed a natural conversational ambiguity around the term \"access\" between the ecology and economics researchers. The ecologist should use \"access\" to mean the spatial or physical opportunity to reach green space, such as distance to a park, connected walking routes, park entrances, or the amount of vegetation reachable within a defined buffer. The economist should use \"access\" to mean effective availability or opportunity to consume the amenity under relevant constraints, operationalized through measures such as predicted park use, time and travel costs, hours of operation, safety-related deterrents, or eligibility and affordability constraints. Let both researchers use the same word while discussing study variables or identification strategy, without either participant explicitly noting that they mean different things. The anthropologist may complicate the discussion by describing residents' experience of being unwelcome or surveilled in a park, but should not explicitly label the issue as a jargon conflict. The transcript should make the different disciplinary meanings inferable from context rather than announcing them.",
+    "ground_truth": {
+      "ambiguous_term": "access",
+      "discipline_meanings": [
+        {
+          "discipline": "ecology",
+          "meaning": "Spatial and physical accessibility of urban green space: whether and how readily a resident can physically reach green space, commonly measured by proximity, travel network connectivity, entrances, walkable routes, or green-space area within a geographic buffer."
+        },
+        {
+          "discipline": "economics",
+          "meaning": "Effective opportunity to use or receive benefits from green space given constraints: access as an amenity-consumption concept shaped by generalized travel costs, time, operating hours, safety or other deterrents, and barriers that affect realized or feasible use rather than distance alone."
+        }
+      ],
+      "expected_assistant_answer": "The term \"access\" is being used differently. The ecologist refers to geographic/physical accessibility, while the economist refers to effective or economically constrained opportunity to use the green-space amenity. The team should distinguish these constructs in its measures and interpretation rather than treating them as interchangeable."
+    }
+  },
+  "seed_location": "Present. The ambiguity around \"access\" is sustained without being explicitly named as a terminology conflict. Maya Chen uses it in the ecology/spatial sense: entrance-based reachability, pedestrian networks, crossings, sidewalks, and usable green space within 10- and 15-minute bands (turns 6, 10, 14, 19, 25, 28). Rafael Ortiz uses it in the economics/effective-use sense: generalized network cost, hours, site characteristics, safety and time constraints, governance barriers, calibrated predicted use, and access as a mechanism/modifier of treatment effects (turns 3, 8, 12, 17, 20, 27, 29). Amina Rahman adds residents' experiences of surveillance, steward rules, permission to linger, and feeling unwelcome (turns 5, 11, 16, 24, 30) without labeling this as a jargon conflict.",
+  "ground_truth": {
+    "ambiguous_term": "access",
+    "discipline_meanings": [
+      {
+        "discipline": "ecology",
+        "meaning": "Spatial and physical accessibility of urban green space: whether and how readily a resident can physically reach green space, commonly measured by proximity, travel network connectivity, entrances, walkable routes, or green-space area within a geographic buffer."
+      },
+      {
+        "discipline": "economics",
+        "meaning": "Effective opportunity to use or receive benefits from green space given constraints: access as an amenity-consumption concept shaped by generalized travel costs, time, operating hours, safety or other deterrents, and barriers that affect realized or feasible use rather than distance alone."
+      }
+    ],
+    "expected_assistant_answer": "The term \"access\" is being used differently. The ecologist refers to geographic/physical accessibility, while the economist refers to effective or economically constrained opportunity to use the green-space amenity. The team should distinguish these constructs in its measures and interpretation rather than treating them as interchangeable."
+  },
+  "transcript": [
+    {
+      "speaker": "Amina Rahman",
+      "text": "Morning, everyone. I know the display is being difficult, so we can work from the call if we need to. For me, the main thing today is making sure our green-space measures distinguish what has been installed from what people can actually use or feel comfortable using\u2014especially across different times of day\u2014before we lock the sampling and the causal framing."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "Mm-hm, yeah."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "I think we should keep two things separate from the start. The treatment is a dated investment or public opening, depending on the intervention, and access is the post-treatment mechanism, not NDVI or distance on its own. For the panel, I can build generalized network cost with hours and site characteristics, but Amina, I'd- I'd really like the interviews to help us calibrate the safety and time-constraint pieces, rather than treating them as just qualitative context."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "Right, yeah."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "I can do that as calibration, not just illustration. In the evening work, people might pass a site every day but not go in after dark, or they'd say security made them feel watched. With gardens, the keys and steward rules mattered a lot. We should- well, sample by time of day and resident position, caregivers, tenants, older and disabled residents, and use walking interviews to see where the network-cost categories break down."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "For the spatial side, I\u2019d separate passing a site from actually getting to a usable entrance. In the 18 audits, a few restored lots look close in a 400-meter circle, but then the route has a missing sidewalk or you\u2019re across an arterial with no crossing. Rafael, what geography were you thinking for treatment- block group, or network catchments around each entrance?"
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, yeah."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "I'd use entrance-based network catchments for the exposure and access measures, then aggregate those to the resident block or parcel for the outcome panel. But the treatment assignment should stay at the project footprint plus a pre-specified catchment. Otherwise we risk, well, letting post-installation routing determine who's treated. We can estimate effects across, say, 10- and 15-minute generalized-cost bands, and keep the block-group results as a robustness aggregation."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, that works."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "Yeah, that seems workable, as long as the catchment uses the pre-existing pedestrian network and the actual entrance location, not just the footprint centroid. I\u2019d also keep a separate usable-green measure in those bands. Tree canopy along the route isn\u2019t the same as a garden or pocket park somebody can enter, and the audits can flag that."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "And the usable-green flag should include governance, not just physical entry. A garden can be open in principle but still, well, effectively steward-controlled if somebody doesn't know the rules or worries they'll be challenged. I can build that into the walking interviews and mapping, and ask who was involved in the original greening decisions too."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "That\u2019s important, because governance could be part of effective access, not just a descriptive site attribute. I can\u2019t let it redefine treatment after the fact, but we can- well, pre-specify it as an access modifier and estimate heterogeneity. Investment assignment is the ITT, then changes in calibrated access or predicted use are the mechanism. The interviews could tell us if those governance barriers are stable pre-period features or if they actually shift when a site opens."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, exactly."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "One thing I'd want us to keep in that modifier is, access isn't just a site score. It's also how much usable green somebody can reach from home. We can calculate that in the 10- and 15-minute network bands, with entrances, crossings, sidewalk gaps, and then separate canopy along the walk from enterable park, garden, or restored-lot area."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "Mm-hm, right."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Yes, and I'd be careful not to turn that reachable quantity into benefit. Two households in the same band can have really different permission to linger or use it, especially after dark, or where tenancy and immigration concerns make being questioned feel costly. The mapping could ask people which technically reachable spaces they actually count as theirs, if that's useful for the modifier."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "That\u2019s useful. If we ask which spaces residents actually see as usable, and when, under what conditions, I can turn that into a calibrated predicted-use measure instead of acting like the network band is exposure. I do want to keep the estimand explicit, though. The primary is the ITT of an opening or installation. access and perceived permission are mechanisms and potential effect modifiers, not substitutes for the rollout design."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, exactly."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "The audits give us a way to keep that calibration grounded. I can code physical access separately from reported permission, like whether there's an entrance, sidewalk and crossing continuity, posted hours, shade, maintenance, that kind of thing. So when interviews say a place isn't really usable, we can see if that's a network problem, a site-condition problem, or something the physical layer just can't capture."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "For identification, I need those audit layers frozen at a pre-opening or baseline date where we can. Otherwise maintenance, crossings, even posted hours can respond to the investment. Maya, can we- can we separate the fixed network constraints from conditions that change after opening? Those later conditions matter substantively, but I'd treat them as part of the access pathway, not baseline controls."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "I can separate those. The street network, arterial crossings, and most sidewalk gaps, I can fix from the pre-opening ParcelPath and imagery. Entrances and posted hours I can date, and then maintenance, shade, ground cover, actual condition, those should be repeated measures after opening. For the 18 audited sites, I've got enough notes to make that split now, though, well, a couple of the lot restorations will need a baseline imagery check."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "Great, that gives us a clean baseline versus pathway split. I\u2019ll freeze the ParcelPath-based generalized cost at the last pre-opening observation, then let the dated entrance, hours, and condition measures evolve as mediators. And I\u2019ll need the same discipline for the CityCare panel because, well, changes in provider coverage or enrollment can otherwise look like a mental-health effect."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "And alongside the CityCare checks, I'd want a small repeated resident component around openings. Service use can shift for reasons that have nothing to do with felt wellbeing, and it doesn't tell us if people feel more belonging or, actually, more watched or worried about rents. We can- where feasible, revisit the same walking-interview participants at different hours."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "For that repeated component, could we make sure the recruitments span different access configurations, not just people near the new sites? Like, households technically within a 10-minute band but cut off by an arterial or a sidewalk gap are really useful, because otherwise we may only learn about people the network already works for."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, exactly."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "Yes\u2014those are especially valuable for seeing access heterogeneity instead of just averaging it away. I\u2019ll set up the quantitative comparison frame the same way, with pre-specified network bands and the technically near but high generalized-cost cases, plus matched untreated corridors where we can. We also need, well, enough never- or not-yet-treated blocks in each stratum so the staggered-adoption estimators have a credible comparison."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "I can make those strata from the audit side, not just the cost model. So, connected entrance access, technically near but severed, and then connected but poor-condition sites. I'd also like the untreated corridors matched on baseline land cover because a tree-lined corridor and a bare corridor could have really different starting exposure, even if neither got a new project."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "Baseline land cover should be in the matching set, along with pre-period CityCare utilization, deprivation, and the Neighborhood Change Monitor indicators. I\u2019d avoid matching on anything that could\u2019ve moved in anticipation of the project, though. So I\u2019ll date all that to before the first credible announcement, not just before opening. Then we can look at event-time pretrends within those access strata before we, I mean, before we make too much of the estimates."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "For the repeated interviews, I can ask directly about anticipation too, like when people first heard something was coming, who they thought it was for, and whether that changed how secure they felt staying in the neighborhood. That gives us a check on the announcement date beyond the formal city record, and it may- it may explain movement or avoidance before an opening."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "Mm-hm, yeah."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "That\u2019s really helpful for dating the announcement, and it matters for the design more than we usually admit. I\u2019ll treat the formal and resident-reported announcement windows as possible anticipation periods. I mean, flag them instead of quietly calling them pre-treatment, and use the Neighborhood Change Monitor to see whether resident composition or CityCare coverage shifts before opening. If those move early, then the clean estimand is really assignment or announcement, not just ribbon-cutting."
+    },
+    {
+      "speaker": "Amina Rahman",
+      "text": "Mm-hm, right."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "And for the baseline land-cover match, I\u2019ll keep canopy, low vegetation, and impervious cover separate. A corridor can look green in the satellite layer because of mature trees but still have no enterable space, so that distinction needs to- well, it needs to carry through into the pretrend strata. I can send over the dated audit split and the baseline imagery checks before methods review."
+    },
+    {
+      "speaker": "Rafael Ortiz",
+      "text": "That timing works. If you can send those dated layers before the 10th, I can lock the treatment cohorts and, well, build the matched risk sets and run the event-study diagnostics with the announcement windows flagged. Then we'll know if the proposal can honestly foreground opening effects, or if the primary effect needs to be around assignment and anticipation."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "seed_implicit": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      6,
+      8,
+      10,
+      14,
+      17,
+      19,
+      25,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by the highly polished, agenda-driven construction of many substantive turns. For example, turns 12, 17, 20, 23, 27, 29, and 32 each neatly state a methodological distinction, caveat, and resulting analytic decision; this reads more like collaboratively edited protocol prose than spontaneous speech.",
+      "Disfluencies are largely surface-level insertions into otherwise complete technical sentences, especially Rafael's repeated 'well' and self-repairs in turns 8, 12, 17, 20, 23, 27, 29, 32, and 35. More genuine unfinished thoughts, local confusion, or partial responses would improve realism.",
+      "The discussion reaches a sequence of unusually tidy agreements: treatment versus mechanism, baseline versus pathway, recruitment strata, anticipation windows, and deliverable timing. Turns 20-23 and 29-35 are particularly smooth handoffs with immediate resolution rather than the minor ambiguity or dropped thread typical of a live meeting.",
+      "Amina's many brief acknowledgments (turns 2, 4, 7, 9, 13, 18, 21, 26, 31, and 33) help pacing but are repetitive enough to feel mechanically inserted. Varying these with brief follow-up questions, corrections, or nonverbal-style reactions would make the exchange less patterned.",
+      "Turn 19: renames a sense of the seed term (Explicitly calls one construct physical access and distinguishes it from permission.)."
+    ],
+    "seed_uses": [
+      {
+        "turn": 3,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Generalized costs, hours, safety, and time constraints define effective opportunity."
+      },
+      {
+        "turn": 4,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 8,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Uses generalized-cost catchments and travel-time bands for access."
+      },
+      {
+        "turn": 9,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 12,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Effective access is modified by governance barriers and linked to predicted use."
+      },
+      {
+        "turn": 13,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 14,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Defines reachable usable green space through network bands, entrances, and routes."
+      },
+      {
+        "turn": 15,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 17,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Links usable spaces and conditions to calibrated predicted use."
+      },
+      {
+        "turn": 18,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 19,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": true,
+        "why": "Explicitly calls one construct physical access and distinguishes it from permission."
+      },
+      {
+        "turn": 20,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Treats changing conditions as an access pathway affecting outcomes."
+      },
+      {
+        "turn": 21,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 25,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Describes physical network barriers despite geographic proximity."
+      },
+      {
+        "turn": 26,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 27,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Uses generalized cost and heterogeneity in feasible access."
+      },
+      {
+        "turn": 28,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Categorizes connected entrances and severed physical routes."
+      },
+      {
+        "turn": 29,
+        "sense": "unclear",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to access strata without specifying physical versus effective access."
+      },
+      {
+        "turn": 30,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 0.96,
+    "written_turns": [
+      1
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 5,
+        "seed_implicit": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.71,
+      "approved": false,
+      "issues": [
+        "Naturalness is limited by highly polished, agenda-driven turns throughout. For example, turns 6, 12, 16, 18, 22, 24, and 27 each present a complete causal-identification argument and land on a clean methodological conclusion, making Rafael sound more like a prepared methods memo than spontaneous meeting speech.",
+        "Disfluencies are present but often function as light surface decoration on otherwise finished prose, especially in turns 5, 12, 18, 22, 24, 27, 30, and 32. Add more mid-thought revisions, abandoned points, and incomplete responses rather than only inserting 'um' or repeated words.",
+        "The discussion is unusually uniformly productive: potential tensions around whether usable/effective access is a mechanism, treatment definition, or a construct to establish before modeling are resolved quickly into compatible design choices (turns 7-18). Leaving one issue provisionally unresolved or returning to it later would feel more meeting-like.",
+        "Backchannel turns 2, 4, 8, 13, 19, 21, 28, and 31 help realism, but their repeated affirmative pattern is somewhat mechanical. Vary acknowledgments with brief questions, partial objections, operational follow-ups, or occasional silence before a substantive response.",
+        "Turn 3: renames a sense of the seed term (Distinguishes physical access from renamed usable access.).",
+        "Turn 5: renames a sense of the seed term (Maps network-based physical access; calls other layer usable access.).",
+        "Turn 6: renames a sense of the seed term (Refers to Maya's physical-access layer and usable-access categories.)."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 35,
+      "scores": {
+        "seed_recoverable": 5,
+        "seed_implicit": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "approved": false,
+      "issues": [
+        "Naturalness is limited by the highly polished, agenda-driven construction of many substantive turns. For example, turns 12, 17, 20, 23, 27, 29, and 32 each neatly state a methodological distinction, caveat, and resulting analytic decision; this reads more like collaboratively edited protocol prose than spontaneous speech.",
+        "Disfluencies are largely surface-level insertions into otherwise complete technical sentences, especially Rafael's repeated 'well' and self-repairs in turns 8, 12, 17, 20, 23, 27, 29, 32, and 35. More genuine unfinished thoughts, local confusion, or partial responses would improve realism.",
+        "The discussion reaches a sequence of unusually tidy agreements: treatment versus mechanism, baseline versus pathway, recruitment strata, anticipation windows, and deliverable timing. Turns 20-23 and 29-35 are particularly smooth handoffs with immediate resolution rather than the minor ambiguity or dropped thread typical of a live meeting.",
+        "Amina's many brief acknowledgments (turns 2, 4, 7, 9, 13, 18, 21, 26, 31, and 33) help pacing but are repetitive enough to feel mechanically inserted. Varying these with brief follow-up questions, corrections, or nonverbal-style reactions would make the exchange less patterned.",
+        "Turn 19: renames a sense of the seed term (Explicitly calls one construct physical access and distinguishes it from permission.)."
+      ]
+    }
+  ]
+}

@@ -74,10 +74,18 @@ speaker_distinctness:
   5 — blind annotators can match speakers to personas, vocabulary is
       typical of each discipline, and no speaker is a caricature
 
-topical_alignment:
-  1 — conversation drifts significantly from the research problem
-  3 — mostly on topic with minor tangents
-  5 — conversation stays on the research topic throughout
+domain_alignment:
+  The research question may shift or narrow during the meeting; that is
+  fine. What matters is that each speaker contributes from their own
+  discipline.
+  1 — speakers often talk outside their field or interchangeably (e.g.
+      the economist designs the neuroscience protocol); contributions
+      aren't recognizably from the speaker's discipline
+  3 — mostly grounded in each speaker's discipline, but some turns could
+      have come from anyone, or a speaker adopts another field's framing
+      as their own
+  5 — every substantive contribution is grounded in the speaker's own
+      discipline: its questions, methods, evidence and concerns
 
 dialogue_flow:
   1 — turns feel disconnected or randomly ordered
@@ -87,5 +95,53 @@ dialogue_flow:
 
 When listing issues, be specific — name the turn number or speaker where
 the problem occurs so the Filming agent can fix it precisely.
+"""
+
+
+SEED_USE_PROMPT = """
+You check how a seed term is used in a meeting transcript. The seed term
+has two discipline-specific senses (given below). For a benchmark item to
+work, each sense must show up in someone's ordinary use of the term,
+without anyone noticing the two senses differ.
+
+You get the turns that contain the term, plus the turn right after each.
+Label every turn listed:
+- "sense": which discipline's sense the term carries in this turn, or
+  "unclear" if you can't tell from the turn, or "none" if the turn
+  doesn't contain the term
+- "comments_on_term": the turn talks about the word rather than using it,
+  e.g. objects to what something is called or labeled ("after we've
+  already called it X")
+- "renames": the speaker gives a sense a different name to keep the
+  senses apart ("we'd call that measure physical contact")
+Be literal. A turn that only uses the word inside a remark about labeling
+is comments_on_term, not an ordinary use.
+
+Return JSON:
+{"turns": [{"turn": n, "sense": "<discipline>" | "unclear" | "none",
+  "comments_on_term": true | false, "renames": true | false,
+  "why": "a few words"}]}
+"""
+
+
+SPOKEN_CHECK_PROMPT = """
+You label turns from a meeting transcript. For each turn listed, decide
+whether it reads like something a person said out loud (as a careful
+transcriber would type it) or like composed written prose put in a
+speaker's mouth.
+
+"written" signs: a complete argument built in order (position,
+qualification, conclusion); written connectives ("thereby", "whereas",
+"rather than"); semicolons or colons; neat parallel lists; every clause
+grammatically finished. Fillers or a dash added to such a turn don't
+make it spoken.
+
+"spoken" signs: the sentence is built as it goes; restarts and
+self-corrections that change the sentence; points dropped or left
+unfinished; loose chaining with "and", "so"; repetition; ending on
+uncertainty or mid-thought.
+
+Judge each turn on its own. Return JSON:
+{"labels": [{"turn": n, "label": "spoken" | "written"}]}
 """
 

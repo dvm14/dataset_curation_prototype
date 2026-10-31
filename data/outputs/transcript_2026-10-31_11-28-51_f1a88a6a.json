@@ -1,0 +1,303 @@
+{
+  "transcript_id": "f1a88a6a",
+  "generated_at": "2026-10-31T11:28:51.084171",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with occasional long, uninterrupted presentation segments and extended answers during Q&A. The opening is casual and loosely coordinated, full of greetings, side chat, technical check-ins, and overlapping acknowledgments; once the formal session starts, speech becomes more structured but remains conversational. Speakers use frequent fillers and repairs (\u201cum,\u201d \u201cyeah,\u201d \u201cso,\u201d repetitions, self-corrections), especially non-native speakers, giving the exchange an informal, spontaneous feel. Questions are usually prefaced politely\u2014\u201cI have a question,\u201d \u201cnaive question,\u201d \u201ccan I ask\u201d\u2014and often unfold as multi-part, exploratory prompts rather than tightly phrased interrogatives. Participants build on prior remarks with praise, paraphrase, and tentative extensions, while challenges are indirect and framed as curiosity or uncertainty rather than confrontation. Disagreement is rare and softened through qualifiers such as \u201cI think,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d \u201cI\u2019m not sure,\u201d and acknowledgments of limitations. The moderator keeps transitions brisk with brief thanks, invitations for more questions, and clear movement between speakers.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "neuroscience",
+    "political science",
+    "computer science"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Amina Rahman",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "A cognitive-affective neuroscientist with 11 years of experience running longitudinal community cohorts. She has led field protocols combining salivary cortisol, heart-rate variability, ecological momentary assessment, actigraphy, and brief attention and mood tasks. As project manager, she coordinates repeated assessments across clinics and neighborhood sites and is attentive to participant burden, timing, and measurement reliability.",
+      "distinct_perspective": "She frames green space as a potentially restorative set of individual experiences that can be measured over defined windows: time spent near vegetation, visual and auditory contact, route-level proximity, and changes in physiological stress regulation. She wants exposure measures that align temporally with cortisol, affect, sleep, and cognitive outcomes, while recognizing that mobility and access data need contextual interpretation. In the meeting, she is likely to argue that without a sufficiently precise exposure construct, the study cannot identify which forms or doses of green contact are associated with mental-health change.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Mateo Alvarez",
+      "discipline": "political science",
+      "functional_role": "research engineer",
+      "background": "A political scientist with 14 years of experience studying urban governance, housing policy, environmental justice, and municipal budgeting. He has built neighborhood-level datasets from eviction filings, capital-improvement plans, policing records, transit service changes, participatory mapping, and interviews with tenant organizers. In this project, he engineers the policy and institutional data pipeline and audits how administrative categories can hide displacement and exclusion.",
+      "distinct_perspective": "He treats green space as a public good whose distribution and usability are produced through policy, land markets, policing, maintenance decisions, and local power. For him, exposure includes being subject to unequal environmental risks and unequal access: a resident may live beside a park but face eviction pressure, unsafe routes, surveillance, shift-work constraints, or exclusionary park rules. He is skeptical of models that convert these conditions into background covariates, because doing so can make structural causes appear as individual differences. In the meeting, he is likely to insist that causal claims distinguish intervention effects from selection, displacement, and unequal capacity to remain in or use a changing neighborhood.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Priya Natarajan",
+      "discipline": "computer science",
+      "functional_role": "PhD student",
+      "background": "A fourth-year computer science PhD student specializing in urban sensing, geospatial machine learning, and privacy-preserving data integration. She has worked with satellite-derived canopy measures, street-view imagery, passive mobility data, park counters, and survey-linked administrative records. Her current work focuses on documenting data provenance, estimating uncertainty across spatial scales, and designing access controls for sensitive location data.",
+      "distinct_perspective": "She sees the central challenge as representing several imperfect signals without pretending they measure the same thing. She can operationalize green-space-related variables at person, route, block, and neighborhood scales\u2014for example, vegetation visible along daily travel paths, time near park boundaries, park-entry counts, nighttime lighting, travel friction, and changes in imagery over time. She emphasizes that models need explicit definitions, missing-data rules, and privacy constraints, but is prepared to revise the platform when researchers identify variables that would flatten residents' lived conditions. In the meeting, she may propose multiple exposure fields and linked policy-context layers rather than a single index.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "benchmark_category": "jargon",
+  "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+  "seed_spec": {
+    "benchmark_category": "jargon",
+    "benchmark_task": "Given a meeting transcript where the same term was used by two different researchers from two different disciplines, test that the AI identifies the term as having two different meanings with definitions according to each discipline.",
+    "explicit_instruction": "Embed a natural exchange between the neuroscience and political science researchers in which both use the term \"exposure\" while discussing green space and mental health. The neuroscience researcher should use \"exposure\" to mean an individual participant's measurable contact with green environments over a defined period, such as time spent in vegetation-rich settings, proximity, or sensory/physiological contact that can be related to stress and mental-health measures. The political science researcher should use \"exposure\" to mean a socially and politically structured condition of being subject to environmental risks and unequal access, shaped by housing policy, policing, displacement, work schedules, safety, and public investment. Their comments should be plausible within a discussion of study design and should not explicitly announce that they are using the word differently. The computer scientist may respond by proposing operational variables or data sources, potentially reinforcing the ambiguity, but should not resolve it for the audience. The transcript should give an AI assistant enough contextual evidence to identify and distinguish the two meanings.",
+    "ground_truth": {
+      "ambiguous_term": "exposure",
+      "discipline_meanings": {
+        "neuroscience": {
+          "definition": "An individual-level, measurable dose or degree of contact with green space during a specified time window, operationalized through measures such as time spent in parks, residential greenness, proximity, mobility-derived visits, or sensory contact with natural environments.",
+          "role_in_study": "A predictor or intervention dose that can be associated with physiological stress, affective state, cognition, and other mental-health outcomes."
+        },
+        "political_science": {
+          "definition": "A structurally produced condition in which people are differentially subjected to environmental harms and constrained or enabled in accessing environmental benefits, due to policy, power relations, housing conditions, safety, displacement, labor demands, and unequal public investment.",
+          "role_in_study": "A lens for explaining why apparent green-space access or use is not simply an individual choice or neutral environmental dose, and why causal interpretations must account for unequal social and political conditions."
+        }
+      },
+      "expected_assistant_response": "The assistant should identify \"exposure\" as the shared term and explain that the neuroscientist uses it as an individual, quantifiable level of contact with green space, whereas the political scientist uses it as a structural and political condition of unequal environmental burden and access. It should note that treating these as interchangeable could lead the study to mistake socially constrained access for a simple behavioral or geographic measurement."
+    }
+  },
+  "seed_location": "Turns 4, 7, and 9 provide the neuroscience meaning: Dr. Amina Rahman defines person-level green contact over 24-hour, seven-day, and 28-day windows, links it to physiology/cortisol, and discusses mobility/address segmentation. Turns 1, 7, 14, 17, 25, and 35 provide the political-science meaning: Dr. Mateo Alvarez frames green-space access and reduced \"exposure\" through housing pressure, displacement, enforcement, affordability, and usable access. However, the feature is incomplete relative to the seed: Alvarez uses \"exposure\" explicitly in turn 7, but Rahman never explicitly says the term \"exposure\" herself; the transcript therefore does not contain an exchange in which both the neuroscience and political-science researchers use the word.",
+  "ground_truth": {
+    "ambiguous_term": "exposure",
+    "discipline_meanings": {
+      "neuroscience": {
+        "definition": "An individual-level, measurable dose or degree of contact with green space during a specified time window, operationalized through measures such as time spent in parks, residential greenness, proximity, mobility-derived visits, or sensory contact with natural environments.",
+        "role_in_study": "A predictor or intervention dose that can be associated with physiological stress, affective state, cognition, and other mental-health outcomes."
+      },
+      "political_science": {
+        "definition": "A structurally produced condition in which people are differentially subjected to environmental harms and constrained or enabled in accessing environmental benefits, due to policy, power relations, housing conditions, safety, displacement, labor demands, and unequal public investment.",
+        "role_in_study": "A lens for explaining why apparent green-space access or use is not simply an individual choice or neutral environmental dose, and why causal interpretations must account for unequal social and political conditions."
+      }
+    },
+    "expected_assistant_response": "The assistant should identify \"exposure\" as the shared term and explain that the neuroscientist uses it as an individual, quantifiable level of contact with green space, whereas the political scientist uses it as a structural and political condition of unequal environmental burden and access. It should note that treating these as interchangeable could lead the study to mistake socially constrained access for a simple behavioral or geographic measurement."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Morning, everyone. Can folks on the link hear us okay, or is the mic still doing that thing? ... Okay. We have a really short runway to the eighteenth, so I'd like us to leave today with not one exposure score, but a clear rule for what green-space measures can go into the causal plan. We can't- I mean, we can't treat housing pressure, enforcement, and people's ability to stay in place like they're just background noise."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "On the platform side, we can keep the measures separate. Route-level visible vegetation and lighting, block canopy change, park-entry patterns, and person-level time near green space. Then CivicConditions, uh, rent notices, park rules, transit disruption, should travel alongside them as linked context, not get folded into an exposure score."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "That works for me, as long as each person-level measure has a defined look-back window. For the physiology visits, I need to separate, say, green contact in the prior 24 hours or seven days from their more stable residential canopy. And RouteTrace gaps need an uncertainty flag, not to be read as zero exposure."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Mm-hm, exactly."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "Right. I can generate 24-hour and seven-day RouteTrace summaries with a coverage estimate, so a gap is visibly a gap, not a zero. I\u2019d keep residential canopy as its own slower-moving field, and use the 28-day window only if we want an intervention-response measure rather than something tied directly to a visit."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "And the 28-day measure needs, um, a companion record of whether the person was actually still able to remain there through that window. In Southgate especially, a drop in local exposure after renovation might not mean they chose not to use the park. It could be rent pressure, a move, or avoiding it after enforcement changed. I don't want those cases just disappearing into missingness or looking like a mobility pattern."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can add a residence-stability and displacement-status field from CivicConditions and the check-ins, but we shouldn't use it to, um, \u201ccorrect\u201d the exposure away. We can tag when a 28-day summary spans a move, a rent notice, or an access-rule change, and keep that as part of the estimand."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "I think that tagging is essential. But for the visit-linked outcomes, we should pre-specify what happens when a window spans a move. We can keep the full 28-day record, certainly, but the 24-hour and seven-day exposure should be segmented by address and mobility coverage. Otherwise we're aligning cortisol with an exposure period that may, well, refer to two quite different living situations."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can make segmentation the default for those visit windows. So, separate address episodes, plus a coverage flag for each segment. If somebody moved mid-window, analysts would get the segment-specific summaries and a flag that there isn't really one interpretable whole-window exposure, rather than forcing an average across both places."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Right, right."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "For the biospecimen visits, I'd make the primary analysis the most recent stable segment, as long as it has adequate coverage, rather than trying to average across a move. We should also keep a simple flag for whether the move was planned, rent-related, or unknown, because those aren't equivalent disruptions for cortisol or sleep."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "And I'd be careful with \"planned\" as though that makes it benign. A planned move after a rent increase or a redevelopment notice is still part of the intervention context. Could we retain the stated reason and the housing events beforehand, rather than, well, collapse moves into a planned-versus-unplanned adjustment variable?"
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "That is better. For my purposes, the visit record can carry the stated move reason and the dated housing events separately. Then we don't imply a move is physiologically neutral just because it was anticipated. I'd also want the date of the notice, where we have it, because the stress response may start well before the address change."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "And the notice date shouldn't just sit there as a covariate. We need it in the event history, alongside renovation opening, enforcement changes, and any actual move. Otherwise, well, a finding that the new park improved stress could just be describing the people who could afford to stay through the improvement."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can make that event history a linked dated table instead of flattening it into covariates. Notice, rule change, renovation opening, move, and then source and confidence. Then the exposure summaries can be indexed to those events, so analysts can see when the underlying conditions changed."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Yes, and could the event table also show a visit-relative flag, whether a notice or rule change happened in the prior 24 hours, seven days, or 28 days? That way we can, well, separate recent disruption from the longer residential context when we're interpreting cortisol, sleep, and EMA affect."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can derive those visit-relative flags from the dated event table, with the source and confidence carried through. I'd keep them separate from the green-exposure fields, though. And we'd need to document when a flag comes from a check-in versus an administrative record, because the notice dates, well, they'll be incomplete for some residents."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Mm-hm, exactly."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "That provenance matters for the physiology models too. I wouldn't treat an administratively dated notice and a retrospectively reported notice as interchangeable. We can retain both, but the visit-relative indicators should carry that distinction and a missingness category, rather than, you know, silently treating no recorded notice as no disruption."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I'll make the notice indicators three-state, so recorded event, no evidence in the available sources, and unknown because the relevant source is missing or delayed, rather than just a binary zero. And the provenance table can show which source generated each date, its confidence, and whether it was participant-reported, so the model inputs don't- don't erase that difference."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "And the three-state coding needs to apply to enforcement too, not just notices. No recorded park enforcement isn't the same as no enforcement experienced, especially if people change routes or stop going because they expect trouble. We should keep participant reports and the rule-change record visible there, even when the city's administrative trail is thin."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Mm-hm, yes."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can extend that same three-state scheme to enforcement, and keep city records, rule changes, and resident reports as separate source fields instead of merging them. One gap I want to keep visible is that ParkPulse only records entries at selected gates. It can't tell us duration, purpose, or whether someone felt able to stay, and East Harbor has parks with no counters, so I'd treat it as a partial use signal, not proof that access occurred."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Mm-hm, right."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "For the outcome side, we shouldn't use ParkPulse as a denominator for dose. The visit-linked dose should come from RouteTrace where coverage's adequate, and then, well, supplemented by the brief check-in on visual or auditory contact. ParkPulse can stay as a site-level contextual signal, with the coverage limits made explicit."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Mm-hm, right."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "Yeah, that\u2019s implementable. I\u2019ll label ParkPulse as site-level partial coverage, include which gates and dates we observed, and not derive any individual dose from it. RouteTrace and check-ins can stay as separate signals, with their own missingness and uncertainty fields."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Mm-hm, right."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "I'd just add, the check-in item needs to be time-stamped to that same 24-hour window, and it should stay really brief. Visual contact, auditory contact, and whether they felt able to linger, that would be enough. Then we can use it as a complementary experiential measure without pretending it fills RouteTrace gaps."
+    },
+    {
+      "speaker": "Priya Natarajan",
+      "text": "I can add those three check-in items with a timestamp and keep them as self-reported experience, not as an imputation layer for RouteTrace. And I'll put the proposed primary fields and the sensitivity-only fields in the provenance table before we circulate the methods package, because we need to get that distinction nailed down pretty quickly."
+    },
+    {
+      "speaker": "Dr. Mateo Alvarez",
+      "text": "Good. And in that table, can we make \u201cable to linger\u201d more than just a secondary experiential field? It\u2019s evidence of usable access, not just a subjective add-on. I\u2019m fine with RouteTrace as the movement signal, but if people pass a renovated park and don\u2019t feel they can stop, we shouldn\u2019t- we shouldn\u2019t let that count as equivalent exposure in the causal plan."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "seed_implicit": 5,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "topical_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      4,
+      7,
+      9,
+      12,
+      14,
+      16,
+      17,
+      25,
+      29,
+      33,
+      35
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The seed is incomplete: Dr. Alvarez explicitly uses \"exposure\" in turn 7, but Dr. Rahman never explicitly uses the word. Her individual-dose meaning is strongly conveyed in turns 4, 9, 12, 29, and 33, but recovering the intended cross-disciplinary ambiguity requires inference rather than identifying both speakers' uses of the shared term.",
+      "Naturalness is weakened by the repeated polished acknowledgment pattern, especially \"Mm-hm, yes\" and \"Mm-hm, right\" in turns 2, 5, 11, 13, 15, 18, 22, 26, 28, 30, and 32. These backchannels occur with unusually regular alternation and make the transcript feel engineered.",
+      "Many substantive turns are highly complete, technically orderly written paragraphs that propose a rule, explain its rationale, and reach a tidy operational conclusion. Examples include turns 6, 10, 19, 21, 24, 27, 31, and 34. The fillers and self-repairs are largely inserted into otherwise polished prose rather than producing genuinely unfinished or exploratory speech.",
+      "The conversation is exceptionally linear and consensus-driven: nearly every concern is immediately accepted and converted into a data-modeling solution. For example, turns 7-10, 14-16, 17-24, and 25-31 each resolve quickly, leaving little of the dropped, partially understood, or deferred discussion common in real meetings.",
+      "Mateo's persona is mostly distinct through attention to displacement, enforcement, and causal interpretation, and Priya is distinct through provenance and implementation. Amina's measurement perspective is clear, but all three speakers often share the same formal, solution-oriented cadence, reducing stronger disciplinary voice separation."
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 4,
+        "seed_implicit": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "topical_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "approved": false,
+      "issues": [
+        "The seed is recoverable but incomplete: Dr. Alvarez only explicitly calls the structural condition \"exposure\" in turn 1. Turns 13 and 17 provide strong evidence for his structural meaning, but he should use the word again in that sense to make the cross-disciplinary lexical clash unmistakable without making it explicit.",
+        "Naturalness is limited by the repeated polished acknowledgment pattern from Dr. Alvarez\u2014turns 5, 7, 10, 19, 25, and 27 are largely variations of \"Mm-hm, yes\" or \"Right\"\u2014which reads as mechanically inserted backchanneling rather than varied meeting participation.",
+        "Several substantive turns are unusually complete and agenda-perfect, especially turns 15, 20, 22, 24, 28, and 30. Priya consistently gives a fully formed implementation answer and tidy resolution; adding partial uncertainty, follow-up questions, or an unresolved implementation constraint would make the exchange less scripted.",
+        "The meeting has a concrete anchor in Southgate and a date in turn 30, but nearly every turn advances the same protocol design line cleanly. A brief practical interruption, clarification, or dropped subpoint would better match spontaneous interdisciplinary discussion."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 35,
+      "scores": {
+        "seed_recoverable": 3,
+        "seed_implicit": 5,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "topical_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "approved": false,
+      "issues": [
+        "The seed is incomplete: Dr. Alvarez explicitly uses \"exposure\" in turn 7, but Dr. Rahman never explicitly uses the word. Her individual-dose meaning is strongly conveyed in turns 4, 9, 12, 29, and 33, but recovering the intended cross-disciplinary ambiguity requires inference rather than identifying both speakers' uses of the shared term.",
+        "Naturalness is weakened by the repeated polished acknowledgment pattern, especially \"Mm-hm, yes\" and \"Mm-hm, right\" in turns 2, 5, 11, 13, 15, 18, 22, 26, 28, 30, and 32. These backchannels occur with unusually regular alternation and make the transcript feel engineered.",
+        "Many substantive turns are highly complete, technically orderly written paragraphs that propose a rule, explain its rationale, and reach a tidy operational conclusion. Examples include turns 6, 10, 19, 21, 24, 27, 31, and 34. The fillers and self-repairs are largely inserted into otherwise polished prose rather than producing genuinely unfinished or exploratory speech.",
+        "The conversation is exceptionally linear and consensus-driven: nearly every concern is immediately accepted and converted into a data-modeling solution. For example, turns 7-10, 14-16, 17-24, and 25-31 each resolve quickly, leaving little of the dropped, partially understood, or deferred discussion common in real meetings.",
+        "Mateo's persona is mostly distinct through attention to displacement, enforcement, and causal interpretation, and Priya is distinct through provenance and implementation. Amina's measurement perspective is clear, but all three speakers often share the same formal, solution-oriented cadence, reducing stronger disciplinary voice separation."
+      ]
+    }
+  ]
+}

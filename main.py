@@ -147,10 +147,12 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
             attempt=attempt,
             num_turns=len(filming.transcript),
             scores=scores,
+            spoken_share=qa.spoken_share,
             approved=qa.approved,
             issues=qa.issues,
         ))
         print(f"      Scores: {scores}")
+        print(f"      Spoken-sounding turns: {qa.spoken_share}")
         print(f"      Approved: {qa.approved}")
 
         if qa.approved:
@@ -207,12 +209,14 @@ def print_transcript(result: GeneratedTranscript):
           f"seed implicit: {qa.seed_implicit}/5, "
           f"naturalness: {qa.naturalness}/5, "
           f"speaker distinctness: {qa.speaker_distinctness}/5, "
+          f"spoken-sounding turns: {qa.spoken_share}, "
           f"approved: {qa.approved}")
     if len(result.qa_history) > 1:
         print("QA history:")
         for attempt in result.qa_history:
             scores = ", ".join(f"{k} {v}" for k, v in attempt.scores.items())
-            print(f"  attempt {attempt.attempt}: {scores} "
+            print(f"  attempt {attempt.attempt}: {scores}, "
+                  f"spoken {attempt.spoken_share} "
                   f"→ approved: {attempt.approved}")
 
 

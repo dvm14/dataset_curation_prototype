@@ -16,8 +16,10 @@ from schema import (
     ContentCurationOutput,
     CastingOutput,
 )
-from utils.llm import call_llm_json
-from prompts.agent3_prompt import SYSTEM_PROMPT, BID_PROMPT, LEAK_CHECK_PROMPT
+from utils.llm import call_llm_json, CACHE_BREAKPOINT
+from prompts.agent3_prompt import (
+    SYSTEM_PROMPT, BID_PROMPT, LEAK_CHECK_PROMPT, SPEECH_PASS_PROMPT,
+)
 
 
 # One turn means one participant speaks once.
@@ -26,6 +28,10 @@ MAX_TURNS = 35          # hard stop
 MAX_CONSECUTIVE = 1     # no back-to-back turns: one person continuing is one turn
 END_THRESHOLD = 3       # after MIN_TURNS, if every bid is below this, the meeting ends
 LEAK_RETRIES = 2        # times a turn is regenerated if it gives the seed away
+SPEECH_PASS = True       # after the meeting, rewrite each turn to sound spoken
+SPEECH_PASS_MIN_WORDS = 15  # shorter turns are left as they are
+SPEECH_PASS_LENGTH = (0.75, 1.3)  # rewrites outside this length ratio are discarded
+REACTION_CHANCE = 0.3    # how often a listener's wish to react ("mm-hm") is let through
 NUDGE_AFTER = 8         # from this turn on, seed speakers who haven't said the term get a private nudge
 
 # Meeting clock, based on how much has actually been said,
@@ -35,7 +41,7 @@ WORDS_PER_MINUTE = 150
 
 # Word budget per turn type. A turn more than LENGTH_SLACK over its
 # budget is regenerated once, shorter.
-WORD_LIMITS = {"respond": 80, "brief": 15, "interject": 40}
+WORD_LIMITS = {"respond": 80, "brief": 15, "interject": 40, "reaction": 8}
 LENGTH_SLACK = 1.5
 
 TURN_NOTES = {
@@ -52,7 +58,17 @@ TURN_NOTES = {
         "You just cut the last speaker off mid-sentence. Jump straight to "
         "your point, the way people do when they interrupt. Keep it short."
     ),
+    "reaction": (
+        "You're not taking the floor, just reacting out loud as a listener "
+        "while the conversation moves on: one to six words. It doesn't "
+        "have to be agreement. It can be surprise (\"oh, really?\"), a "
+        "quick check (\"wait, the 18th?\"), a small worry (\"hm, that's "
+        "tight\"), a laugh, or just \"okay\". Don't evaluate or sum up "
+        "what they said, don't add a point, and don't stamp approval "
+        "(\"exactly\", \"agreed\", \"that works\")."
+    ),
 }
+BID_INTENTS = ("respond", "brief", "interject")
 
 
 def prepare_private_briefs(content, casting, qa_feedback=None):
@@ -173,8 +189,6 @@ def time_cue(transcript):
     return cue
 
 
-CACHE = {"type": "ephemeral"}
-
 
 def participant_blocks(speaker, content, shared_context, brief, transcript, tail):
     """
@@ -204,14 +218,14 @@ YOUR PRIVATE DISCUSSION BRIEF:
 
 CONVERSATION SO FAR:"""
 
-    blocks = [{"type": "text", "text": fixed, "cache_control": CACHE}]
+    blocks = [{"type": "text", "text": fixed, "prompt_cache_breakpoint": CACHE_BREAKPOINT}]
 
     if transcript:
         blocks += [
             {"type": "text", "text": f"{turn.speaker}: {turn.text}"}
             for turn in transcript
         ]
-        blocks[-1]["cache_control"] = CACHE
+        blocks[-1]["prompt_cache_breakpoint"] = CACHE_BREAKPOINT
     else:
         blocks.append({"type": "text", "text": "The meeting has not started yet."})
 
@@ -228,7 +242,7 @@ TIME:
 {nudge}
 
 You are {speaker.name}. Decide whether you want to speak next.
-Return JSON with "urgency" and "intent".
+Return JSON with "urgency", "intent" and "react".
 """
     blocks = participant_blocks(
         speaker, content, shared_context, brief, transcript, tail
@@ -242,10 +256,14 @@ Return JSON with "urgency" and "intent".
         urgency = 0
 
     intent = result.get("intent", "respond")
-    if intent not in TURN_NOTES:
+    if intent not in BID_INTENTS:
         intent = "pass" if urgency == 0 else "respond"
 
-    return {"urgency": urgency, "intent": intent}
+    return {
+        "urgency": urgency,
+        "intent": intent,
+        "react": result.get("react") is True,
+    }
 
 
 def collect_bids(speakers, content, shared_context, briefs, transcript, nudges):
@@ -295,6 +313,25 @@ def pick_speaker(bids, transcript, turn_index, can_end=True):
     return random.choice(winners)
 
 
+def pick_reactor(bids, transcript, winner, just_reacted):
+    """
+    A listener who wants to react to the last turn ("mm-hm", "wait, the
+    18th?") gets a quick turn before the winner speaks, without needing
+    to win the floor. Not the last speaker, and not the winner.
+    With 3 speakers that leaves one person, who then became a
+    backchannel machine, so nobody reacts twice without taking the
+    floor in between (just_reacted).
+    """
+    if not transcript or random.random() > REACTION_CHANCE:
+        return None
+    reactors = [
+        name for name, bid in bids.items()
+        if bid["react"] and name not in (winner, transcript[-1].speaker)
+        and name not in just_reacted
+    ]
+    return random.choice(reactors) if reactors else None
+
+
 def seed_terms(ground_truth):
     """
     The seed's key term(s), when the ground truth names one. Agent 1 isn't
@@ -318,6 +355,13 @@ def seed_terms(ground_truth):
     return list(dict.fromkeys(terms))
 
 
+def count_mentions(text, terms):
+    return sum(
+        len(re.findall(rf"\b{re.escape(term)}(s|es)?\b", text, re.IGNORECASE))
+        for term in terms
+    )
+
+
 def mentions(text, terms):
     """Whole-word match that also allows a plural ("networks")."""
     return any(
@@ -327,12 +371,40 @@ def mentions(text, terms):
 
 
 def seed_speakers(content, speakers):
-    """Speakers the seed involves: named (full or last name) in the seed spec."""
+    """
+    Speakers the seed involves: named (full or last name) in the seed spec.
+    Agent 1 often names disciplines instead ("the neuroscience researcher"),
+    so if nobody is named, match each speaker's discipline against the
+    ground truth. A rough stem lets "neuroscientist" match "neuroscience".
+    """
     spec = content.seed.explicit_instruction + json.dumps(content.seed.ground_truth)
-    return [
+    named = [
         speaker for speaker in speakers
         if speaker.name in spec or speaker.name.split()[-1] in spec
     ]
+    if named:
+        return named
+
+    truth = json.dumps(content.seed.ground_truth).lower().replace("_", " ")
+    return [
+        speaker for speaker in speakers
+        if (d := speaker.discipline.lower().strip())
+        and d[:max(5, len(d) - 3)] in truth
+    ]
+
+
+def term_uses(transcript, terms):
+    """Measured, not judged: the turns where each speaker says the seed term."""
+    uses = {}
+    for number, turn in enumerate(transcript, start=1):
+        if count_mentions(turn.text, terms):
+            uses.setdefault(turn.speaker, []).append(number)
+    if not uses:
+        return f"Nobody says {terms}."
+    return "\n".join(
+        f"- {speaker}: turns {', '.join(map(str, numbers))}"
+        for speaker, numbers in uses.items()
+    )
 
 
 def seed_nudge(terms):
@@ -443,6 +515,77 @@ Return JSON with the field "text".
     return text
 
 
+# One is picked at random for each rewritten turn. Asking for "a restart"
+# in every long turn gave the same "X- well, X" repair everywhere.
+DISFLUENCIES = [
+    "none",
+    "none",
+    "abandon a sentence and start it again differently",
+    "correct a word or number just said",
+    "repeat a word while thinking",
+    "lose the thread partway and come back to it",
+    "trail off at the end instead of finishing the point",
+    "search for a word",
+]
+# No example phrases here: the model copied them word for word.
+
+
+def speech_pass(content, transcript, terms):
+    """
+    The turns were written one at a time and still read like writing.
+    Rewrite each one as spoken, keeping its content. A rewrite is
+    discarded (the original kept) if it changes how often the seed term
+    is used, changes the length too much, or gives the seed away.
+    """
+
+    def rewrite(i):
+        turn = transcript[i]
+        if len(turn.text.split()) < SPEECH_PASS_MIN_WORDS:
+            return turn, None
+
+        task = {
+            "speaker": turn.speaker,
+            "previous_turns": format_history(transcript[max(0, i - 3):i]),
+            "protected_terms": terms,
+            "disfluency": random.choice(DISFLUENCIES),
+            "turn": turn.text,
+        }
+        result = call_llm_json(
+            SPEECH_PASS_PROMPT, json.dumps(task, indent=2), max_tokens=400,
+        )
+        text = str(result.get("text", "")).strip()
+
+        if not text:
+            return turn, "empty"
+        if count_mentions(text, terms) != count_mentions(turn.text, terms):
+            return turn, "seed term changed"
+        ratio = len(text.split()) / len(turn.text.split())
+        if not SPEECH_PASS_LENGTH[0] <= ratio <= SPEECH_PASS_LENGTH[1]:
+            return turn, "length changed"
+        if turn.text.endswith("—") and not text.endswith("—"):
+            text = text.rstrip(".!? ") + "—"
+        if mentions(text, terms):
+            leaked, _ = check_seed_leak(content, transcript[:i], text)
+            if leaked:
+                return turn, "seed leak"
+        return Turn(speaker=turn.speaker, text=text), None
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        results = list(pool.map(rewrite, range(len(transcript))))
+
+    kept = [reason for _, reason in results if reason]
+    rewritten = sum(
+        1 for (new, reason), old in zip(results, transcript)
+        if not reason and new.text != old.text
+    )
+    print(
+        f"      Speech pass: rewrote {rewritten} of {len(transcript)} turns"
+        + (f" (kept {len(kept)} originals: {', '.join(sorted(set(kept)))})"
+           if kept else "")
+    )
+    return [new for new, _ in results]
+
+
 def locate_seed(content, transcript):
     """Find evidence of the seed in the actual generated conversation."""
 
@@ -459,6 +602,9 @@ Return JSON:
 
 If the feature is missing, incomplete, or explicitly revealed by
 participants, state that clearly. Do not invent evidence.
+
+measured_term_uses (when given) is an exact text match of every turn in
+which each speaker says the term. Treat it as correct.
 """
 
     numbered_turns = [
@@ -475,6 +621,10 @@ participants, state that clearly. Do not invent evidence.
         "ground_truth": content.seed.ground_truth,
         "transcript": numbered_turns,
     }
+    terms = seed_terms(content.seed.ground_truth)
+    if terms:
+        # The locator has misread who said the term before; give it the count.
+        task["measured_term_uses"] = term_uses(transcript, terms)
 
     result = call_llm_json(
         locator_prompt,
@@ -516,6 +666,8 @@ def run(
     )
 
     transcript = []
+    reactions = []          # texts of listener reactions so far
+    just_reacted = set()    # reacted and hasn't taken the floor since
 
     # Make sure the seed actually comes up: track which seed speakers
     # have said the term, and privately nudge the ones who haven't.
@@ -557,6 +709,27 @@ def run(
 
         if intent == "interject" and transcript:
             transcript[-1] = cut_off(transcript[-1], terms)
+        elif len(transcript) < MAX_TURNS - 1:
+            reactor = pick_reactor(bids, transcript, name, just_reacted)
+            if reactor:
+                # Reactions came out as "Mm-hm, yeah" over and over.
+                recent = ", ".join(f'"{r}"' for r in reactions[-6:])
+                reaction = speak(
+                    by_name[reactor], content, shared_context,
+                    private_briefs[reactor], ami_style_notes, transcript,
+                    "reaction",
+                    extra_note=(
+                        f"Reactions already heard in this meeting: {recent}. "
+                        "Don't reuse any of them or their wording."
+                        if recent else ""
+                    ),
+                )
+                if not (mentions(reaction, terms)
+                        and check_seed_leak(content, transcript, reaction)[0]):
+                    transcript.append(Turn(speaker=reactor, text=reaction))
+                    reactions.append(reaction)
+                    just_reacted.add(reactor)
+                    print(f"      Turn {len(transcript)}: {reactor} (reaction)")
 
         nudge = nudges.get(name, "")
         text = speak(
@@ -569,9 +742,9 @@ def run(
             if not leaked:
                 break
             if attempt == LEAK_RETRIES:
-                print(f"      Turn {turn_index + 1}: seed still leaks, keeping it for QA ({reason})")
+                print(f"      Turn {len(transcript) + 1}: seed still leaks, keeping it for QA ({reason})")
                 break
-            print(f"      Turn {turn_index + 1}: seed leak, regenerating ({reason})")
+            print(f"      Turn {len(transcript) + 1}: seed leak, regenerating ({reason})")
             text = speak(
                 speaker, content, shared_context, private_briefs[name],
                 ami_style_notes, transcript, intent,
@@ -583,11 +756,15 @@ def run(
             )
 
         transcript.append(Turn(speaker=name, text=text))
+        just_reacted.discard(name)
 
         print(
-            f"      Turn {turn_index + 1}: {name} ({intent}) "
+            f"      Turn {len(transcript)}: {name} ({intent}) "
             f"| bids: {bid_summary}"
         )
+
+        if len(transcript) >= MAX_TURNS:
+            break
 
     if involved:
         missing = still_missing()
@@ -596,6 +773,9 @@ def run(
             + ("said by every seed speaker" if not missing
                else f"never said by {', '.join(missing)}")
         )
+
+    if SPEECH_PASS:
+        transcript = speech_pass(content, transcript, terms)
 
     seed_location = locate_seed(content, transcript)
 

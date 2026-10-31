@@ -202,9 +202,10 @@ class QAFeedback(BaseModel):
                     "vocabulary and no caricatures? (1-5)"
     )
     # pipeline checks not covered by the rubric
-    topical_alignment: int = Field(
+    domain_alignment: int = Field(
         ge=1, le=5,
-        description="Does the transcript stay on the research topic? (1-5)"
+        description="Does each speaker's contribution stay grounded in their "
+                    "own discipline? The research question itself may shift. (1-5)"
     )
     dialogue_flow: int = Field(
         ge=1, le=5,
@@ -222,6 +223,21 @@ class QAFeedback(BaseModel):
     issues: list[str] = Field(
         description="List of specific problems to fix in re-filming"
     )
+    seed_uses: list[dict] = Field(
+        default_factory=list,
+        description="Label for each turn with the seed term (and the turn after): "
+                    "sense, comments_on_term, renames"
+    )
+    # finer naturalness measure, for comparing runs; not part of approval
+    spoken_share: float | None = Field(
+        default=None,
+        description="Share of substantive turns the judge labels as sounding "
+                    "spoken rather than written (0-1)"
+    )
+    written_turns: list[int] = Field(
+        default_factory=list,
+        description="Substantive turns labeled as reading like written prose"
+    )
     approved: bool = Field(
         description="True if transcript passes QA, False if re-filming needed"
     )
@@ -231,6 +247,7 @@ class QAAttempt(BaseModel):
     attempt: int = Field(description="1 = first filming, 2 = re-film")
     num_turns: int
     scores: dict[str, int] = Field(description="Rubric scores for this attempt")
+    spoken_share: float | None = None
     approved: bool
     issues: list[str]
 

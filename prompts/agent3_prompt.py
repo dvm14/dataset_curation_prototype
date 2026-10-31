@@ -110,8 +110,15 @@ Intent:
 - "interject": cutting in before the last speaker has fully finished
 - "pass": you don't want to speak (use with urgency 0-1)
 
+Separately from bidding, decide whether you'd react out loud as a
+listener to the last turn: "mm-hm", "right", "oh, okay", "hm", a quick
+"wait, the 18th?" or "sure". Real listeners do this often, even when
+they don't want the floor. Set "react" to true if you would. Leave it
+false if the last turn was yours or nothing in it prompts a reaction.
+
 Return JSON:
-{"urgency": 0-10, "intent": "respond" | "brief" | "interject" | "pass"}
+{"urgency": 0-10, "intent": "respond" | "brief" | "interject" | "pass",
+ "react": true | false}
 """
 
 
@@ -131,10 +138,62 @@ The new turn LEAKS the feature if the speaker makes it explicit, e.g.:
 - silently adjusting: switching to another participant's sense of the
   term, or conspicuously swapping in a different word right after the
   term was used differently
+- commenting on the word itself instead of using it: objecting to what
+  something is called or labeled ("before we've already called it
+  exposure", "I'm not sure that should count as exposure"), or putting
+  the term in quotes
+- renaming their own sense to keep it apart from another ("let's call
+  ours physical contact", "what I mean is really contact")
 
 The new turn does NOT leak if it just uses the term naturally in the
 speaker's own sense, even if that clashes with how someone else used it.
 
 Return JSON:
 {"leaked": true | false, "reason": "one short sentence"}
+"""
+
+
+SPEECH_PASS_PROMPT = """
+You edit one turn of a meeting transcript so it reads like what the
+person actually said out loud, as a careful transcriber would type it.
+The ideas were generated as text and still read like writing.
+
+Keep exactly:
+- the speaker's points, facts, names, numbers and dates. Don't add new
+  information, new conclusions or new agreement, and don't drop a point
+- every protected term, each used the same number of times and in the
+  same sense. Don't define it, explain it or swap it for another word
+- a turn that ends with "—" was cut off: it must still end with "—"
+  mid-thought. A turn that starts with "—" is cutting in: keep that
+- roughly the same length (within about 20%)
+
+Make it spoken. Swapping in plainer words isn't enough; change how the
+sentences are built:
+- no semicolons, colons or parentheses. Nobody speaks them. Break the
+  sentence up or run it on with "and", "so", "but"
+- add the one kind of disfluency named in "disfluency", and no other
+  kind. It should change how the sentence is built, not be dropped onto
+  a finished sentence. If it says "none", add none. Never patch a
+  restart with "well," ("we can- well, tabulate"): it has been overused
+- a neat list of three or four items usually comes out partial or
+  trailing ("maintenance, programming, that kind of thing")
+- a point may be half-made and dropped, or the turn may end on
+  uncertainty or a question instead of a conclusion
+- vary how the turn begins. Don't open with "Yeah," "Yes," or "Right,"
+  unless it's genuinely answering something; often people just start
+  on the point
+- fillers ("um", "uh", "I mean") only where someone is searching for
+  words, not sprinkled on top
+
+Example
+Written: "I'd treat citywide shifts as common shocks unless the
+deployment measure varies at the corridor-by-time level; otherwise they
+belong in the calendar and controls, not in the park's treatment."
+Spoken (disfluency: abandon a sentence and start it again differently):
+"So citywide shifts I'd just treat as common shocks. Unless the
+deployment- if it actually varies corridor by corridor over time,
+that's different. Otherwise they go in the calendar, the controls, not
+in the park treatment itself."
+
+Return JSON: {"text": "the edited turn"}
 """
