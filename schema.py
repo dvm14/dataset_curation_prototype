@@ -180,40 +180,76 @@ class FilmingOutput(BaseModel):
 
 class QAFeedback(BaseModel):
     """Structured feedback from the QA agent / LLM judge"""
-    topical_alignment: int = Field(
+    # team rubric (1 poor / 3 mixed / 5 strong)
+    seed_recoverable: int = Field(
         ge=1, le=5,
-        description="Does the transcript stay on the research topic? (1-5)"
+        description="Can evidence lines be pointed to, and does the ground "
+                    "truth follow from them with no outside assumptions? (1-5)"
     )
-    conversational_naturalness: int = Field(
+    seed_implicit: int = Field(
         ge=1, le=5,
-        description="Does it sound like a real meeting? Turn-taking, "
-                    "interruptions, hedging? (1-5)"
+        description="Is the seeded issue left unnamed, unasked-about, and "
+                    "not silently corrected, so the assistant has to find it? (1-5)"
+    )
+    naturalness: int = Field(
+        ge=1, le=5,
+        description="How many realism signals are present, and could a blind "
+                    "reader tell it from a real meeting? (1-5)"
+    )
+    speaker_distinctness: int = Field(
+        ge=1, le=5,
+        description="Are speakers matchable to personas, with discipline-typical "
+                    "vocabulary and no caricatures? (1-5)"
+    )
+    # pipeline checks not covered by the rubric
+    domain_alignment: int = Field(
+        ge=1, le=5,
+        description="Does each speaker's contribution stay grounded in their "
+                    "own discipline? The research question itself may shift. (1-5)"
     )
     dialogue_flow: int = Field(
         ge=1, le=5,
         description="Does the conversation progress coherently? (1-5)"
     )
-    seed_embedded: bool = Field(
-        description="Is the benchmark seed clearly present in the transcript?"
+    # evidence behind the scores
+    evidence_turns: list[int] = Field(
+        default_factory=list,
+        description="Turn numbers (1-indexed) the ground truth can be derived from"
     )
-    seed_naturalness: int = Field(
-        ge=1, le=5,
-        description="Does the seed feel natural or forced? (1-5)"
+    realism_signals: list[str] = Field(
+        default_factory=list,
+        description="Which realism signals the judge found in the transcript"
     )
     issues: list[str] = Field(
         description="List of specific problems to fix in re-filming"
+    )
+    seed_uses: list[dict] = Field(
+        default_factory=list,
+        description="Label for each turn with the seed term (and the turn after): "
+                    "sense, comments_on_term, renames"
+    )
+    # finer naturalness measure, for comparing runs; not part of approval
+    spoken_share: float | None = Field(
+        default=None,
+        description="Share of substantive turns the judge labels as sounding "
+                    "spoken rather than written (0-1)"
+    )
+    written_turns: list[int] = Field(
+        default_factory=list,
+        description="Substantive turns labeled as reading like written prose"
     )
     approved: bool = Field(
         description="True if transcript passes QA, False if re-filming needed"
     )
 
-class QAOutput(BaseModel):
-    """Output of Agent 4 — QA"""
-    feedback: QAFeedback
-    revised_transcript: Optional[FilmingOutput] = Field(
-        default=None,
-        description="Re-filmed transcript if approved=False, else None"
-    )
+class QAAttempt(BaseModel):
+    """One film + QA round, kept so score changes across re-films are visible"""
+    attempt: int = Field(description="1 = first filming, 2 = re-film")
+    num_turns: int
+    scores: dict[str, int] = Field(description="Rubric scores for this attempt")
+    spoken_share: float | None = None
+    approved: bool
+    issues: list[str]
 
 
 # ─────────────────────────────────────────────
@@ -246,5 +282,10 @@ class GeneratedTranscript(BaseModel):
     transcript: list[Turn]
     
     # qa record
-    qa_feedback: QAFeedback
-    qa_cycles: int = Field(description="How many QA/re-film cycles were needed")
+    qa_feedback: QAFeedback = Field(
+        description="QA of the saved transcript (the final attempt)"
+    )
+    qa_cycles: int = Field(description="How many film + QA rounds ran")
+    qa_history: list[QAAttempt] = Field(
+        description="Scores from every attempt, in order"
+    )
