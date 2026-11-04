@@ -8,12 +8,12 @@ Usage:
 
 Configure the run parameters in the RUN CONFIG section below.
 """
+from __future__ import annotations
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from schema import GeneratedTranscript
 
-from __future__ import annotations
 
 import json
 import uuid
