@@ -58,12 +58,9 @@ Time and wrapping up:
   action items. At most, mention a next step or two loosely.
 
 Vocabulary:
-- Use your field's vocabulary the way you normally would.
-- Assume your colleagues understand your terms the way you mean them.
-  Don't stop to define standard terms from your own field.
-- Don't comment on other people's word choice. If something someone
-  says doesn't quite fit how you think about it, respond to the
-  substance from your own perspective.
+- Use vocabulary consistent with your field and private brief.
+- Explain or define terms when appropriate to the meeting and your knowledge.
+- Do not invent misunderstandings or force an agreement.
 
 Return JSON with one field:
 {"text": "your next speaking turn"}
@@ -123,33 +120,17 @@ Return JSON:
 
 
 LEAK_CHECK_PROMPT = """
-You check one new turn in a simulated research meeting.
-
-The meeting secretly contains a benchmark feature (described in
-seed_instruction and ground_truth). An AI will later be asked to find
-this feature in the transcript, so participants must NOT notice it.
-
-The new turn LEAKS the feature if the speaker makes it explicit, e.g.:
-- pointing out that a term means different things to different people
-  or disciplines
-- asking someone what they mean by the term, or offering to define it,
-  in a way that would resolve or expose the mismatch
-- otherwise announcing or summarizing the feature
-- silently adjusting: switching to another participant's sense of the
-  term, or conspicuously swapping in a different word right after the
-  term was used differently
-- commenting on the word itself instead of using it: objecting to what
-  something is called or labeled ("before we've already called it
-  exposure", "I'm not sure that should count as exposure"), or putting
-  the term in quotes
-- renaming their own sense to keep it apart from another ("let's call
-  ours physical contact", "what I mean is really contact")
-
-The new turn does NOT leak if it just uses the term naturally in the
-speaker's own sense, even if that clashes with how someone else used it.
-
-Return JSON:
-{"leaked": true | false, "reason": "one short sentence"}
+Check the new turn against benchmark_task, seed_instruction and prior dialogue.
+A violation means the turn reveals testing machinery, OR destroys a condition
+explicitly required by the task (e.g. resolving a conflict meant to go unnoticed,
+assigning an owner that must remain unassigned, or introducing terminology
+confusion in a terminology-consistent control).
+Ordinary evidence is NOT leakage: dates, assumptions, objections, definitions,
+methods and assignments can be explicit when appropriate to the task.
+Do not apply a blanket requirement that all benchmark features stay hidden.
+For controls, permit clear definitions, agreement and productive collaboration.
+Do not require the new turn alone to contain the entire benchmark scenario.
+Return JSON: {"leaked": true | false, "reason": "short explanation"}
 """
 
 
@@ -161,8 +142,8 @@ The ideas were generated as text and still read like writing.
 Keep exactly:
 - the speaker's points, facts, names, numbers and dates. Don't add new
   information, new conclusions or new agreement, and don't drop a point
-- every protected term, each used the same number of times and in the
-  same sense. Don't define it, explain it or swap it for another word
+- all terminology and definitions, preserving their meaning
+- ownership gaps, uncertainty, objections and unresolved questions
 - a turn that ends with "—" was cut off: it must still end with "—"
   mid-thought. A turn that starts with "—" is cutting in: keep that
 - roughly the same length (within about 20%)
@@ -175,10 +156,8 @@ sentences are built:
   kind. It should change how the sentence is built, not be dropped onto
   a finished sentence. If it says "none", add none. Never patch a
   restart with "well," ("we can- well, tabulate"): it has been overused
-- a neat list of three or four items usually comes out partial or
-  trailing ("maintenance, programming, that kind of thing")
-- a point may be half-made and dropped, or the turn may end on
-  uncertainty or a question instead of a conclusion
+- preserve every item in lists of facts or actions; do not shorten away evidence
+- preserve the original degree of certainty and completeness
 - vary how the turn begins. Don't open with "Yeah," "Yes," or "Right,"
   unless it's genuinely answering something; often people just start
   on the point

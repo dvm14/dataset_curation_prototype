@@ -4,10 +4,10 @@ You are a quality assurance judge for interdisciplinary research meeting transcr
 Your job is to evaluate whether a generated transcript meets the standards
 needed for a benchmark dataset. Be critical but fair.
 
-The transcript contains a hidden benchmark feature (the seed). An AI
-assistant will later read the transcript and be asked to find it. The
-AI assistant is NOT a meeting participant: do not expect an AI character
-in the meeting, and do not penalize its absence.
+Evaluate whether the material enables the supplied benchmark task.
+Do not answer the task or grade an assistant that has not been run.
+The task may require explicit facts, unnoticed issues, or a clean control.
+No AI participant is required in the meeting. Never assume a jargon mismatch.
 
 Score each criterion 1-5. 1, 3 and 5 are anchors; use 2 and 4 for
 transcripts that fall between them.
@@ -21,15 +21,15 @@ seed_recoverable:
       from them with no outside assumptions
   List the evidence lines as turn numbers in evidence_turns.
 
-seed_implicit:
-  1 — the seeded issue is named and resolved in the meeting
-  3 — the issue is partly surfaced (e.g. someone asks "wait, what do you
-      mean?" but no one answers)
-  5 — no one names it, asks a question that surfaces it, or silently
-      adjusts their usage, so the assistant has to find it
-  "Silently adjusts" includes a speaker switching to another participant's
-  sense of a term, or conspicuously swapping in a different word after a
-  clash.
+task_compliance:
+  1 — the required situation is missing, contradicted, or a control contains
+      the target problem
+  3 — some required conditions are present, but important conditions are missing
+  5 — all conditions in benchmark_task are met, including explicit/implicit
+      requirements, participant roles, action counts, and absent information
+  Do not demand implicitness unless the task requires it. Explicit definitions,
+  assignments and decisions may be necessary evidence. Controls must not invent
+  the target problem. Cite concrete turns and missing conditions in issues.
 
 naturalness — count these realism signals:
   1. fillers and false starts ("um", "I- I think", restarted sentences)
@@ -98,32 +98,6 @@ the problem occurs so the Filming agent can fix it precisely.
 """
 
 
-SEED_USE_PROMPT = """
-You check how a seed term is used in a meeting transcript. The seed term
-has two discipline-specific senses (given below). For a benchmark item to
-work, each sense must show up in someone's ordinary use of the term,
-without anyone noticing the two senses differ.
-
-You get the turns that contain the term, plus the turn right after each.
-Label every turn listed:
-- "sense": which discipline's sense the term carries in this turn, or
-  "unclear" if you can't tell from the turn, or "none" if the turn
-  doesn't contain the term
-- "comments_on_term": the turn talks about the word rather than using it,
-  e.g. objects to what something is called or labeled ("after we've
-  already called it X")
-- "renames": the speaker gives a sense a different name to keep the
-  senses apart ("we'd call that measure physical contact")
-Be literal. A turn that only uses the word inside a remark about labeling
-is comments_on_term, not an ordinary use.
-
-Return JSON:
-{"turns": [{"turn": n, "sense": "<discipline>" | "unclear" | "none",
-  "comments_on_term": true | false, "renames": true | false,
-  "why": "a few words"}]}
-"""
-
-
 SPOKEN_CHECK_PROMPT = """
 You label turns from a meeting transcript. For each turn listed, decide
 whether it reads like something a person said out loud (as a careful
@@ -144,4 +118,3 @@ uncertainty or mid-thought.
 Judge each turn on its own. Return JSON:
 {"labels": [{"turn": n, "label": "spoken" | "written"}]}
 """
-

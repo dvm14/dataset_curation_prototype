@@ -83,6 +83,7 @@ class SeedSpec(BaseModel):
     Tells the Filming agent exactly what interdisciplinary feature
     to embed and where.
     """
+    task_id: str = "custom"
     benchmark_category: str = Field(
         description="Which benchmark category this seed tests "
                     "(e.g. jargon, assumptions, disagreement)"
@@ -97,7 +98,7 @@ class SeedSpec(BaseModel):
                     "different things...'"
     )
     ground_truth: dict = Field(
-        description="The known correct answer for evaluation. "
+        description="The proposed reference answer, requiring transcript evidence. "
                     "e.g. {'term': 'resilience', "
                     "'discipline_a': 'ecology', "
                     "'definition_a': 'ecological recovery after disturbance', "
@@ -186,10 +187,10 @@ class QAFeedback(BaseModel):
         description="Can evidence lines be pointed to, and does the ground "
                     "truth follow from them with no outside assumptions? (1-5)"
     )
-    seed_implicit: int = Field(
+    task_compliance: int = Field(
         ge=1, le=5,
-        description="Is the seeded issue left unnamed, unasked-about, and "
-                    "not silently corrected, so the assistant has to find it? (1-5)"
+        description="Does the material satisfy this task, including any explicit, "
+                    "implicit or control-case conditions? (1-5)"
     )
     naturalness: int = Field(
         ge=1, le=5,
@@ -272,6 +273,7 @@ class GeneratedTranscript(BaseModel):
     speakers: list[SpeakerProfile]
     
     # benchmark metadata
+    task_id: str = "custom"
     benchmark_category: str
     benchmark_task: str
     seed_spec: SeedSpec

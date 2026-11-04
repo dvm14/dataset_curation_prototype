@@ -18,6 +18,7 @@ def run(
     discipline_distance: DisciplineDistance,
     benchmark_task: str,
     benchmark_category: str,
+    task_id: str = "custom",
 ) -> ContentCurationOutput:
     """
     Input:
@@ -38,6 +39,7 @@ Disciplines in the meeting: {', '.join(disciplines)}
 
 Discipline distance: {discipline_distance.value}
 
+Task ID: {task_id}
 Benchmark category: {benchmark_category}
 
 Benchmark task to embed as a seed:
@@ -63,8 +65,9 @@ Return a JSON object matching this exact schema:
     # parse seed
     seed_data = raw.get("seed", {})
     seed = SeedSpec(
-        benchmark_category=seed_data.get("benchmark_category", benchmark_category),
-        benchmark_task=seed_data.get("benchmark_task", benchmark_task),
+        task_id=task_id,
+        benchmark_category=benchmark_category,
+        benchmark_task=benchmark_task,
         explicit_instruction=seed_data.get("explicit_instruction", ""),
         ground_truth=seed_data.get("ground_truth", {}),
     )

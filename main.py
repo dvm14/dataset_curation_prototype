@@ -8,21 +8,20 @@ Usage:
 
 Configure the run parameters in the RUN CONFIG section below.
 """
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from schema import GeneratedTranscript
+
+from __future__ import annotations
 
 import json
 import uuid
 from datetime import datetime
 from pathlib import Path
 
-from schema import DisciplineDistance, GeneratedTranscript, QAAttempt
-from agents.agent4_qa import APPROVAL_THRESHOLDS
-from utils.style_extractor import extract_style
-from utils.value_banks import sample_disciplines
-from utils.llm import usage_report
-import agents.agent1_content_curation as agent1
-import agents.agent2_casting as agent2
-import agents.agent3_filming as agent3
-import agents.agent4_qa as agent4
+import argparse
+from benchmark_tasks import TASKS, get_task, require_single_meeting
 
 
 # ─────────────────────────────────────────────
@@ -40,16 +39,10 @@ CONFIG = {
     ),
     "disciplines": None,  # None = randomize from value bank
     "num_speakers": 3,    # one cast speaker per discipline
-    "discipline_distance": DisciplineDistance.DISTANT,
+    "discipline_distance": "distant",
 
-    # Benchmark task to embed
-    "benchmark_category": "jargon",
-    "benchmark_task": (
-        "Given a meeting transcript where the same term was used by two "
-        "different researchers from two different disciplines, test that the "
-        "AI identifies the term as having two different meanings with "
-        "definitions according to each discipline."
-    ),
+    # Select the task; category and description come from benchmark_tasks.py.
+    "task_id": "jargon_01",
 
     # Optional: override specific speaker attributes by discipline
     # e.g. {"ecology": {"tone": "formal"}}
@@ -65,6 +58,19 @@ CONFIG = {
 # ─────────────────────────────────────────────
 
 def run_pipeline(config: dict) -> GeneratedTranscript:
+    task = get_task(config["task_id"])
+    require_single_meeting(task)  # Reject unsupported structures before API calls.
+    config = {**config, **task}
+    from schema import DisciplineDistance, GeneratedTranscript, QAAttempt
+    from agents.agent4_qa import APPROVAL_THRESHOLDS
+    from utils.style_extractor import extract_style
+    from utils.value_banks import sample_disciplines
+    from utils.llm import usage_report
+    import agents.agent1_content_curation as agent1
+    import agents.agent2_casting as agent2
+    import agents.agent3_filming as agent3
+    import agents.agent4_qa as agent4
+    config["discipline_distance"] = DisciplineDistance(config["discipline_distance"])
     transcript_id = str(uuid.uuid4())[:8]
     created_at = datetime.now()
     print(f"\n{'='*50}")
@@ -74,6 +80,8 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     # ── Stage 1: extract AMI style ──────────────
     print("[1/5] Extracting AMI style...")
     ami_path = Path(config["ami_transcript_path"])
+    if not ami_path.is_absolute():
+        ami_path = Path(__file__).parent / ami_path
     if not ami_path.exists():
         raise FileNotFoundError(
             f"AMI transcript not found at {ami_path}. "
@@ -86,6 +94,9 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     # ── Agent 1: Content Curation ───────────────
     print("[2/5] Agent 1 — Content Curation...")
     num_speakers = config["num_speakers"]
+    if task["task_id"] == "assumptions_02" and config["disciplines"] is None:
+        config["disciplines"] = ["clinical medicine", "sociology"]
+        num_speakers = 2
     disciplines = config["disciplines"] or sample_disciplines(
         config["discipline_distance"].value, n=num_speakers
     )
@@ -98,6 +109,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         research_problem=config["research_problem"],
         disciplines=disciplines,
         discipline_distance=config["discipline_distance"],
+        task_id=config["task_id"],
         benchmark_task=config["benchmark_task"],
         benchmark_category=config["benchmark_category"],
     )
@@ -170,6 +182,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         disciplines=content.disciplines,
         discipline_distance=content.discipline_distance,
         speakers=casting.speakers,
+        task_id=content.seed.task_id,
         benchmark_category=content.seed.benchmark_category,
         benchmark_task=content.seed.benchmark_task,
         seed_spec=content.seed,
@@ -183,7 +196,8 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
 
     # ── Save output ─────────────────────────────
     timestamp = created_at.strftime("%Y-%m-%d_%H-%M-%S")
-    out_path = Path(f"data/outputs/transcript_{timestamp}_{transcript_id}.json")
+    status = "approved" if qa.approved else "failed"
+    out_path = Path(__file__).parent / "data" / "outputs" / status / f"{content.seed.task_id}_{timestamp}_{transcript_id}.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(final.model_dump(), f, indent=2)
@@ -206,7 +220,7 @@ def print_transcript(result: GeneratedTranscript):
     print(f"Ground truth: {json.dumps(result.ground_truth, indent=2)}")
     qa = result.qa_feedback
     print(f"QA scores — seed recoverable: {qa.seed_recoverable}/5, "
-          f"seed implicit: {qa.seed_implicit}/5, "
+          f"task compliance: {qa.task_compliance}/5, "
           f"naturalness: {qa.naturalness}/5, "
           f"speaker distinctness: {qa.speaker_distinctness}/5, "
           f"spoken-sounding turns: {qa.spoken_share}, "
@@ -220,6 +234,30 @@ def print_transcript(result: GeneratedTranscript):
                   f"→ approved: {attempt.approved}")
 
 
-if __name__ == "__main__":
-    result = run_pipeline(CONFIG)
+def cli():
+    parser = argparse.ArgumentParser(description="Task-based meeting generation")
+    parser.add_argument("--task", default=CONFIG["task_id"], choices=TASKS)
+    parser.add_argument("--list-tasks", action="store_true")
+    parser.add_argument("--dry-run", action="store_true", help="Show task; no API calls")
+    args = parser.parse_args()
+    if args.list_tasks:
+        for key, task in TASKS.items():
+            print(f"{key:20} {task['input_type']:18} {task['benchmark_category']}")
+        return
+    task = get_task(args.task)
+    if args.dry_run:
+        print(json.dumps(task, indent=2, ensure_ascii=False))
+        print("Single-meeting runner supported:", task["input_type"] == "single_meeting")
+        return
+    try:
+        require_single_meeting(task)
+    except ValueError as exc:
+        parser.error(str(exc))
+    result = run_pipeline({**CONFIG, "task_id": args.task})
     print_transcript(result)
+    if not result.qa_feedback.approved:
+        raise SystemExit(2)
+
+
+if __name__ == "__main__":
+    cli()

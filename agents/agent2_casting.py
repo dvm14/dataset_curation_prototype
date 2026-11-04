@@ -49,11 +49,14 @@ Research problem: {content.research_problem}
 
 Meeting context: {content.meeting_context}
 
+Benchmark task: {content.seed.benchmark_task}
+
 Seed to be aware of: {content.seed.explicit_instruction}
 
 Generate one speaker profile per discipline using these randomized attributes as a starting point.
 You may adjust background and distinct_perspective to fit the research problem,
-but keep the assigned tone, language_complexity, communication_style, and epistemic_stance.
+and adjust sampled attributes if necessary to satisfy the task (e.g. a dominant
+and a quiet participant). Do not reveal hidden test answers in speaker profiles.
 
 Speaker attribute specs:
 {speaker_specs}

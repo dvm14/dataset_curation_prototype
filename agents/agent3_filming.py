@@ -7,7 +7,6 @@ round, each agent bids for the floor and the strongest bid speaks.
 
 import json
 import random
-import re
 from concurrent.futures import ThreadPoolExecutor
 
 from schema import (
@@ -32,7 +31,6 @@ SPEECH_PASS = True       # after the meeting, rewrite each turn to sound spoken
 SPEECH_PASS_MIN_WORDS = 15  # shorter turns are left as they are
 SPEECH_PASS_LENGTH = (0.75, 1.3)  # rewrites outside this length ratio are discarded
 REACTION_CHANCE = 0.3    # how often a listener's wish to react ("mm-hm") is let through
-NUDGE_AFTER = 8         # from this turn on, seed speakers who haven't said the term get a private nudge
 
 # Meeting clock, based on how much has actually been said,
 # so time references stay consistent with the conversation.
@@ -55,7 +53,7 @@ TURN_NOTES = {
         "(agreement, a short question, a hesitation)."
     ),
     "interject": (
-        "You just cut the last speaker off mid-sentence. Jump straight to "
+        "You are jumping into the conversation. Jump straight to "
         "your point, the way people do when they interrupt. Keep it short."
     ),
     "reaction": (
@@ -75,67 +73,33 @@ def prepare_private_briefs(content, casting, qa_feedback=None):
     """Prepare a separate discussion brief for each participant."""
 
     planner_prompt = """
-You prepare a research meeting: shared background that everyone in
-the room knows, plus a private brief for each participant.
-
-Use the meeting scenario, speaker profiles, and benchmark seed to
-give each participant relevant knowledge, priorities, or assumptions.
-
-Shared background (everyone sees the same text):
-- Ground the meeting in concrete, consistent specifics: the city and
-  neighborhoods, the institution(s), the grant or project name and its
-  deadline, today's date, datasets by name, and what happened at the
-  last meeting or since.
-- Include a logistics detail or two (someone joined late, a deadline
-  moved, a room or call issue) so the meeting isn't purely on-agenda.
-- Don't mention the seed here.
-
-Private briefs:
-- Disagreements should only come from genuine differences in the
-  speakers' priorities. Don't add conflict for its own sake.
-
-Rules:
-- Give each speaker only their own perspective.
-- Do not reveal the full benchmark answer to every participant.
-- Do not tell participants that they are being tested.
-- Do not write dialogue or prescribe an exact speaking sequence.
-- For an ambiguous term, give each relevant speaker their own
-  discipline's meaning and a reason to use that term naturally.
-- Do not tell speakers that another discipline uses a different meaning.
-- Keep each brief short and relevant to the meeting.
-- Treat QA feedback as guidance for preparing better briefs.
-
-Keeping the seed invisible:
-- Write each speaker's meaning as simply how they think about the
-  problem, the way it would appear in their own notes. It should feel
-  obvious to them, not like one option among several.
-- Never use words like "ambiguous", "different meaning", "definition",
-  "terminology", or "be careful how you use".
-- Don't put the seed term in quotes or single it out for emphasis.
-  Work it into the speaker's goals and concerns so they say it naturally.
-- Each speaker involved in the seed must have the exact seed term in
-  their brief several times, used in their own sense, so it is clearly
-  their everyday word for that idea (not a synonym like "graph" for
-  "network").
-- Speakers not involved in the seed get an ordinary brief about their
-  own priorities, with nothing that would make them examine the term.
-
+Prepare shared meeting background and one private brief per participant.
+Use benchmark_task and seed_instruction to create the required situation.
+Do not assume that it involves terminology or a hidden problem.
+Give each speaker only their own knowledge, priorities, assumptions and concerns.
+Never mention testing or give everyone the full reference answer.
+For implicit conflicts, distribute facts without explaining the conflict.
+For explicit tasks, permit definitions, objections, decisions and assignments.
+For controls, do not plant the target problem or manufacture friction.
+For unassigned action items, leave the intended ownership gaps intact.
+Use concrete consistent details, and preserve the task's required facts.
+Shared context contains only ordinary background everyone knows, not the answer.
+Private briefs must not contain evaluator instructions or the full answer.
+Do not prescribe dialogue or speaking order. Use QA feedback to improve briefs.
 Return JSON:
-{
-  "shared_context": "background everyone in the meeting knows",
-  "briefs": {
-    "exact speaker name": "private brief for this speaker"
-  }
-}
+{"shared_context": "ordinary shared background",
+ "briefs": {"exact speaker name": "short private discussion brief"}}
 """
 
     setup = {
+        "benchmark_category": content.seed.benchmark_category,
         "research_problem": content.research_problem,
         "meeting_context": content.meeting_context,
         "speakers": [
             speaker.model_dump(mode="json")
             for speaker in casting.speakers
         ],
+        "benchmark_task": content.seed.benchmark_task,
         "seed_instruction": content.seed.explicit_instruction,
         "ground_truth": content.seed.ground_truth,
         "qa_feedback": qa_feedback,
@@ -332,101 +296,14 @@ def pick_reactor(bids, transcript, winner, just_reacted):
     return random.choice(reactors) if reactors else None
 
 
-def seed_terms(ground_truth):
-    """
-    The seed's key term(s), when the ground truth names one. Agent 1 isn't
-    consistent about the key ("term", "ambiguous_term", ...), so take any
-    short string value under a key containing "term".
-    """
-    terms = []
-
-    def walk(value):
-        if isinstance(value, dict):
-            for key, item in value.items():
-                if ("term" in key.lower() and isinstance(item, str)
-                        and 0 < len(item.strip()) <= 40):
-                    terms.append(item.strip())
-                walk(item)
-        elif isinstance(value, list):
-            for item in value:
-                walk(item)
-
-    walk(ground_truth)
-    return list(dict.fromkeys(terms))
-
-
-def count_mentions(text, terms):
-    return sum(
-        len(re.findall(rf"\b{re.escape(term)}(s|es)?\b", text, re.IGNORECASE))
-        for term in terms
-    )
-
-
-def mentions(text, terms):
-    """Whole-word match that also allows a plural ("networks")."""
-    return any(
-        re.search(rf"\b{re.escape(term)}(s|es)?\b", text, re.IGNORECASE)
-        for term in terms
-    )
-
-
-def seed_speakers(content, speakers):
-    """
-    Speakers the seed involves: named (full or last name) in the seed spec.
-    Agent 1 often names disciplines instead ("the neuroscience researcher"),
-    so if nobody is named, match each speaker's discipline against the
-    ground truth. A rough stem lets "neuroscientist" match "neuroscience".
-    """
-    spec = content.seed.explicit_instruction + json.dumps(content.seed.ground_truth)
-    named = [
-        speaker for speaker in speakers
-        if speaker.name in spec or speaker.name.split()[-1] in spec
-    ]
-    if named:
-        return named
-
-    truth = json.dumps(content.seed.ground_truth).lower().replace("_", " ")
-    return [
-        speaker for speaker in speakers
-        if (d := speaker.discipline.lower().strip())
-        and d[:max(5, len(d) - 3)] in truth
-    ]
-
-
-def term_uses(transcript, terms):
-    """Measured, not judged: the turns where each speaker says the seed term."""
-    uses = {}
-    for number, turn in enumerate(transcript, start=1):
-        if count_mentions(turn.text, terms):
-            uses.setdefault(turn.speaker, []).append(number)
-    if not uses:
-        return f"Nobody says {terms}."
-    return "\n".join(
-        f"- {speaker}: turns {', '.join(map(str, numbers))}"
-        for speaker, numbers in uses.items()
-    )
-
-
-def seed_nudge(terms):
-    """Private reminder for a seed speaker who hasn't used the term yet."""
-    return (
-        "Something from your brief you haven't raised yet involves what you "
-        f"call {terms[0]}. If it fits the conversation, bring it up now, "
-        f"using the word \"{terms[0]}\" the way you normally would."
-    )
-
-
 def check_seed_leak(content, transcript, text):
-    """Does this new turn point out the hidden feature instead of just containing it?"""
-
-    terms = seed_terms(content.seed.ground_truth)
-    if terms and not mentions(text, terms):
-        return False, ""
+    """Check whether the turn violates the selected task's conditions."""
 
     task = {
+        "benchmark_task": content.seed.benchmark_task,
         "seed_instruction": content.seed.explicit_instruction,
         "ground_truth": content.seed.ground_truth,
-        "recent_conversation": format_history(transcript[-6:]),
+        "recent_conversation": format_history(transcript),
         "new_turn": text,
     }
 
@@ -435,29 +312,9 @@ def check_seed_leak(content, transcript, text):
         json.dumps(task, indent=2),
         max_tokens=200,
     )
-    return bool(result.get("leaked", False)), result.get("reason", "")
-
-
-def cut_off(turn, protected_terms):
-    """
-    The interrupted speaker doesn't get to finish: cut their turn
-    partway, at a comma if there is one. Turns that are too short to cut,
-    or where the cut would remove the seed term, are left alone.
-    """
-    words = turn.text.split()
-    if len(words) < 12:
-        return turn
-
-    low, high = int(len(words) * 0.4), int(len(words) * 0.75)
-    at_comma = [i for i in range(low, high) if words[i - 1].endswith(",")]
-    cut = random.choice(at_comma or list(range(low, high)))
-
-    removed = " ".join(words[cut:]).lower()
-    if any(term.lower() in removed for term in protected_terms):
-        return turn
-
-    kept = " ".join(words[:cut]).rstrip(",;:.")
-    return Turn(speaker=turn.speaker, text=kept + "—")
+    if not isinstance(result.get("leaked"), bool):
+        raise ValueError("Leak checker must return a boolean leaked field")
+    return result["leaked"], result.get("reason", "")
 
 
 def speak(speaker, content, shared_context, brief, ami_style_notes,
@@ -530,12 +387,12 @@ DISFLUENCIES = [
 # No example phrases here: the model copied them word for word.
 
 
-def speech_pass(content, transcript, terms):
+def speech_pass(content, transcript):
     """
     The turns were written one at a time and still read like writing.
     Rewrite each one as spoken, keeping its content. A rewrite is
-    discarded (the original kept) if it changes how often the seed term
-    is used, changes the length too much, or gives the seed away.
+    discarded if its length changes too much or it violates task conditions.
+    Final QA checks evidence after all rewrites.
     """
 
     def rewrite(i):
@@ -546,7 +403,7 @@ def speech_pass(content, transcript, terms):
         task = {
             "speaker": turn.speaker,
             "previous_turns": format_history(transcript[max(0, i - 3):i]),
-            "protected_terms": terms,
+            "benchmark_task": content.seed.benchmark_task,
             "disfluency": random.choice(DISFLUENCIES),
             "turn": turn.text,
         }
@@ -557,17 +414,14 @@ def speech_pass(content, transcript, terms):
 
         if not text:
             return turn, "empty"
-        if count_mentions(text, terms) != count_mentions(turn.text, terms):
-            return turn, "seed term changed"
         ratio = len(text.split()) / len(turn.text.split())
         if not SPEECH_PASS_LENGTH[0] <= ratio <= SPEECH_PASS_LENGTH[1]:
             return turn, "length changed"
         if turn.text.endswith("—") and not text.endswith("—"):
             text = text.rstrip(".!? ") + "—"
-        if mentions(text, terms):
-            leaked, _ = check_seed_leak(content, transcript[:i], text)
-            if leaked:
-                return turn, "seed leak"
+        leaked, _ = check_seed_leak(content, transcript[:i], text)
+        if leaked:
+            return turn, "task violation"
         return Turn(speaker=turn.speaker, text=text), None
 
     with ThreadPoolExecutor(max_workers=8) as pool:
@@ -600,11 +454,11 @@ Return JSON:
   "seed_location": "Relevant turn numbers and a short explanation"
 }
 
-If the feature is missing, incomplete, or explicitly revealed by
-participants, state that clearly. Do not invent evidence.
+If the task conditions are missing or incomplete, state that clearly.
+Explicit statements are valid unless this task requires an unnoticed issue.
+For controls, verify consistency and absence of the target problem.
+Do not invent evidence.
 
-measured_term_uses (when given) is an exact text match of every turn in
-which each speaker says the term. Treat it as correct.
 """
 
     numbered_turns = [
@@ -617,19 +471,13 @@ which each speaker says the term. Treat it as correct.
     ]
 
     task = {
+        "benchmark_task": content.seed.benchmark_task,
         "seed_instruction": content.seed.explicit_instruction,
         "ground_truth": content.seed.ground_truth,
         "transcript": numbered_turns,
     }
-    terms = seed_terms(content.seed.ground_truth)
-    if terms:
-        # The locator has misread who said the term before; give it the count.
-        task["measured_term_uses"] = term_uses(transcript, terms)
-
     result = call_llm_json(
-        locator_prompt,
-        json.dumps(task, indent=2),
-        max_tokens=1200,
+        locator_prompt, json.dumps(task, indent=2), max_tokens=1200,
     )
 
     location = result.get("seed_location")
@@ -669,24 +517,9 @@ def run(
     reactions = []          # texts of listener reactions so far
     just_reacted = set()    # reacted and hasn't taken the floor since
 
-    # Make sure the seed actually comes up: track which seed speakers
-    # have said the term, and privately nudge the ones who haven't.
-    terms = seed_terms(content.seed.ground_truth)
-    involved = seed_speakers(content, speakers) if terms else []
-
-    def still_missing():
-        return [
-            s.name for s in involved
-            if not any(t.speaker == s.name and mentions(t.text, terms)
-                       for t in transcript)
-        ]
-
+    # Task evidence is checked by QA; no word-count proxy for completion.
     for turn_index in range(MAX_TURNS):
-        missing = still_missing()
-        nudges = {
-            name: seed_nudge(terms)
-            for name in missing if turn_index >= NUDGE_AFTER
-        }
+        nudges = {}
 
         bids = collect_bids(
             speakers, content, shared_context, private_briefs, transcript,
@@ -697,7 +530,7 @@ def run(
             for name, bid in bids.items()
         )
 
-        name = pick_speaker(bids, transcript, turn_index, can_end=not missing)
+        name = pick_speaker(bids, transcript, turn_index, can_end=True)
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
@@ -707,9 +540,8 @@ def run(
         if intent == "pass":
             intent = "respond"
 
-        if intent == "interject" and transcript:
-            transcript[-1] = cut_off(transcript[-1], terms)
-        elif len(transcript) < MAX_TURNS - 1:
+        # Do not truncate previous facts to simulate an interruption.
+        if intent != "interject" and len(transcript) < MAX_TURNS - 1:
             reactor = pick_reactor(bids, transcript, name, just_reacted)
             if reactor:
                 # Reactions came out as "Mm-hm, yeah" over and over.
@@ -724,8 +556,7 @@ def run(
                         if recent else ""
                     ),
                 )
-                if not (mentions(reaction, terms)
-                        and check_seed_leak(content, transcript, reaction)[0]):
+                if not check_seed_leak(content, transcript, reaction)[0]:
                     transcript.append(Turn(speaker=reactor, text=reaction))
                     reactions.append(reaction)
                     just_reacted.add(reactor)
@@ -749,9 +580,9 @@ def run(
                 speaker, content, shared_context, private_briefs[name],
                 ami_style_notes, transcript, intent,
                 extra_note=(
-                    "Stay on the substance of the project. Don't step back "
-                    "to comment on how anyone is using particular words, "
-                    "and don't ask people to define their terms.\n" + nudge
+                    "Stay within your own brief and perspective. Do not invent "
+                    "facts or resolve matters you do not have evidence for. "
+                    "Produce a different natural contribution.\n" + nudge
                 ).strip(),
             )
 
@@ -766,16 +597,8 @@ def run(
         if len(transcript) >= MAX_TURNS:
             break
 
-    if involved:
-        missing = still_missing()
-        print(
-            f"      Seed term {terms}: "
-            + ("said by every seed speaker" if not missing
-               else f"never said by {', '.join(missing)}")
-        )
-
     if SPEECH_PASS:
-        transcript = speech_pass(content, transcript, terms)
+        transcript = speech_pass(content, transcript)
 
     seed_location = locate_seed(content, transcript)
 
