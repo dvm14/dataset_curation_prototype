@@ -13,6 +13,20 @@ from utils.seed_terms import is_term_task
 from prompts.agent1_prompt import SYSTEM_PROMPT
 
 
+# Keys Agent 1 has used for a scripted example meeting inside ground_truth.
+# The simulator reads ground_truth, so a script there gets acted out.
+DIALOGUE_KEYS = ("transcript", "dialogue", "utterance", "example_exchange", "script")
+
+
+def strip_dialogue(ground_truth):
+    if not isinstance(ground_truth, dict):
+        return ground_truth
+    dropped = [k for k in ground_truth if any(d in k.lower() for d in DIALOGUE_KEYS)]
+    if dropped:
+        print(f"      (dropped scripted dialogue from ground truth: {', '.join(dropped)})")
+    return {k: v for k, v in ground_truth.items() if k not in dropped}
+
+
 def run(
     research_problem: str,
     disciplines: list[str],
@@ -38,8 +52,10 @@ def run(
     term_note = ""
     if is_term_task(benchmark_category, benchmark_task):
         term_note = (
-            'Put the single shared term in ground_truth under the key "term" '
-            "(the word as speakers say it, not a phrase about it).\n\n"
+            'Write ground_truth as {"term": "<the word as speakers say it>", '
+            '"meanings": [{"discipline": "<one of the disciplines above>", '
+            '"meaning": "..."}, ...]}, one entry per discipline that uses the '
+            "term in its own sense.\n\n"
         )
 
     user_message = f"""
@@ -74,12 +90,13 @@ Benchmark task to embed as a seed:
 
     # parse seed
     seed_data = raw.get("seed", {})
+    ground_truth = strip_dialogue(seed_data.get("ground_truth", {}))
     seed = SeedSpec(
         task_id=task_id,
         benchmark_category=benchmark_category,
         benchmark_task=benchmark_task,
         explicit_instruction=seed_data.get("explicit_instruction", ""),
-        ground_truth=seed_data.get("ground_truth", {}),
+        ground_truth=ground_truth,
     )
 
     return ContentCurationOutput(

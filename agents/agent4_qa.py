@@ -13,7 +13,7 @@ import statistics
 
 from schema import QAFeedback, FilmingOutput, ContentCurationOutput, CastingOutput
 from utils.llm import call_llm_json
-from utils.seed_terms import seed_terms, term_uses, seed_speakers, count_mentions
+from utils.seed_terms import seed_terms, term_uses, seed_speakers, count_mentions, _stem
 from prompts.agent4_prompt import SYSTEM_PROMPT, SEED_USE_PROMPT, SPOKEN_CHECK_PROMPT
 
 
@@ -142,8 +142,7 @@ def seed_use_check(transcript, terms, content, casting):
     # Every seed speaker's sense needs at least one plain use, by anyone.
     # Same rough stem as seed_speakers, so "anthropologist" matches "anthropology".
     for speaker in seed_speakers(content, casting.speakers):
-        d = speaker.discipline.lower().strip()
-        if not any(d[:max(5, len(d) - 3)] in sense for sense in plain_senses):
+        if not any(_stem(speaker.discipline) in sense for sense in plain_senses):
             problems.append(
                 f"The {speaker.discipline} sense of the seed term never appears "
                 f"in a plain use of it."

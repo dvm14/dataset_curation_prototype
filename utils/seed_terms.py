@@ -70,13 +70,37 @@ def mentions(text, terms):
     return any(re.search(_pattern(term), text, re.IGNORECASE) for term in terms)
 
 
+def _stem(discipline):
+    """Rough stem so "neuroscientist" matches "neuroscience"."""
+    d = discipline.lower().strip()
+    return d[:max(5, len(d) - 3)]
+
+
 def seed_speakers(content, speakers):
     """
-    Speakers the seed involves: named (full or last name) in the seed spec.
-    Agent 1 often names disciplines instead ("the neuroscience researcher"),
-    so if nobody is named, match each speaker's discipline against the
-    ground truth. A rough stem lets "neuroscientist" match "neuroscience".
+    Speakers the seed involves.
+
+    Preferred: the disciplines listed in ground_truth["meanings"]. Name
+    matching over the whole ground truth once picked up a third speaker
+    who only appeared in a scripted example Agent 1 had put there.
+
+    Fallback for older ground truths: speakers named (full or last name)
+    in the seed spec, else speakers whose discipline appears in it.
     """
+    meanings = content.seed.ground_truth.get("meanings")
+    if isinstance(meanings, list):
+        listed = [
+            str(m.get("discipline", "")).lower().replace("_", " ")
+            for m in meanings if isinstance(m, dict)
+        ]
+        matched = [
+            speaker for speaker in speakers
+            if any(_stem(speaker.discipline) in d or _stem(d) in speaker.discipline.lower()
+                   for d in listed if d)
+        ]
+        if matched:
+            return matched
+
     spec = content.seed.explicit_instruction + json.dumps(content.seed.ground_truth)
     named = [
         speaker for speaker in speakers
@@ -88,8 +112,7 @@ def seed_speakers(content, speakers):
     truth = json.dumps(content.seed.ground_truth).lower().replace("_", " ")
     return [
         speaker for speaker in speakers
-        if (d := speaker.discipline.lower().strip())
-        and d[:max(5, len(d) - 3)] in truth
+        if speaker.discipline.strip() and _stem(speaker.discipline) in truth
     ]
 
 

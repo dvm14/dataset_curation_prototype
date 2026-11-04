@@ -52,8 +52,10 @@ class FakeLLM:
         if system.startswith(agent1_prompt.SYSTEM_PROMPT):
             self.calls["agent1"] += 1
             self.disciplines = re.search(r"Disciplines in the meeting: (.*)", body).group(1).split(", ")
-            truth = ({"term": TERM, "discipline_a": self.disciplines[0],
-                      "discipline_b": self.disciplines[1]}
+            truth = ({"term": TERM, "meanings": [
+                          {"discipline": self.disciplines[0], "meaning": "x"},
+                          {"discipline": self.disciplines[1], "meaning": "y"}],
+                      "transcript": [{"speaker": "Speaker C", "utterance": "scripted"}]}
                      if self.term_task else {"conflict": "approval after interviews"})
             return {"research_problem": "urban heat", "disciplines": self.disciplines,
                     "discipline_distance": "distant", "meeting_context": "Week 3 sync.",
@@ -187,3 +189,25 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             fn()
             print("ok", name)
+
+
+def test_seed_speakers_ignore_scripted_example():
+    """Regression, run 6c88f13b: a third speaker named only in a scripted
+    example inside ground_truth was treated as a seed speaker, and QA capped
+    task_compliance because 'the economics sense never appears'."""
+    from types import SimpleNamespace as NS
+    from utils.seed_terms import seed_speakers
+
+    truth = {"term": "attention", "meanings": [
+        {"discipline": "neuroscience", "speaker": "Dr. Elena Park", "meaning": "cognitive focus"},
+        {"discipline": "political science", "speaker": "Dr. Malik Torres", "meaning": "issue salience"}],
+        "transcript": [{"speaker": "Dr. Priya Shah, economist", "utterance": "I will keep those separate."}]}
+    speakers = [NS(name="Dr. Elena Park", discipline="neuroscience"),
+                NS(name="Dr. Malik Torres", discipline="political science"),
+                NS(name="Dr. Priya Shah", discipline="economics")]
+    content = NS(seed=NS(ground_truth=truth, explicit_instruction="Read the meeting transcript.",
+                         benchmark_category="Jargon", benchmark_task="Give a meeting..."))
+    assert [s.name for s in seed_speakers(content, speakers)] == ["Dr. Elena Park", "Dr. Malik Torres"]
+
+    cleaned = agent1.strip_dialogue(truth)
+    assert "transcript" not in cleaned and cleaned["term"] == "attention"
