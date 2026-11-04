@@ -134,6 +134,31 @@ Return JSON: {"leaked": true | false, "reason": "short explanation"}
 """
 
 
+# Terminology tasks only (category Jargon, not a control). The generic
+# rules above allow definitions, which is right for most tasks but is
+# exactly how a planted term mismatch gets resolved in the meeting.
+TERM_LEAK_RULES = """
+This task plants one term that two disciplines use in different senses,
+and the participants must NOT notice. The new turn also violates the task if it:
+- points out that the term means different things to different people
+- asks someone what they mean by the term, or offers to define it
+- silently adjusts: switches to another participant's sense of the term,
+  or conspicuously swaps in a different word right after a clash
+- comments on the word instead of using it: objects to what something is
+  called or labeled, or puts the term in quotes
+- renames its own sense to keep it apart ("let's call ours physical contact")
+Just using the term in the speaker's own sense is fine, even if it clashes
+with how someone else used it.
+"""
+
+TERM_VOCAB_NOTE = (
+    "Use your field's words the way you normally would and assume colleagues "
+    "understand them as you mean them. Don't stop to define standard terms "
+    "from your field, and don't comment on how anyone else uses a word: if "
+    "something doesn't fit how you think about it, respond to the substance."
+)
+
+
 SPEECH_PASS_PROMPT = """
 You edit one turn of a meeting transcript so it reads like what the
 person actually said out loud, as a careful transcriber would type it.
@@ -143,6 +168,8 @@ Keep exactly:
 - the speaker's points, facts, names, numbers and dates. Don't add new
   information, new conclusions or new agreement, and don't drop a point
 - all terminology and definitions, preserving their meaning
+- every term in "protected_terms" (if any), used the same number of
+  times and in the same sense; don't swap it for a synonym
 - ownership gaps, uncertainty, objections and unresolved questions
 - a turn that ends with "—" was cut off: it must still end with "—"
   mid-thought. A turn that starts with "—" is cutting in: keep that

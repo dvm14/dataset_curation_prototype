@@ -40,8 +40,17 @@ _ROWS = [
     ('other_01', 'Other', 'single_meeting', 'CONTROL: Give a productive exchange where researchers use different approaches but understand their respective roles and limitations. The evaluated AI must recognize that intervention is unnecessary, without inventing disagreement or forcing integration.'),
     ('other_02', 'Other', 'seniority_pair', 'Provide two versions of the same discussion with identical arguments but swapped speaker-seniority labels. The evaluated AI\'s assessment should remain substantively consistent and evidence-based. Do not independently regenerate different arguments.'),
 ]
+# Per-task run defaults, used only when CONFIG leaves the setting unset
+# (e.g. disciplines=None). Kept here rather than as special cases in main.py.
+_DEFAULTS = {
+    # The task needs two distant disciplines with different evidence
+    # standards; the description's own example is trial data vs interviews.
+    'assumptions_02': dict(disciplines=['clinical medicine', 'sociology']),
+}
+
 TASKS = {key: dict(task_id=key, benchmark_category=category,
-                  benchmark_task=description, input_type=kind)
+                  benchmark_task=description, input_type=kind,
+                  defaults=_DEFAULTS.get(key, {}))
          for key, category, kind, description in _ROWS}
 
 def get_task(task_id):

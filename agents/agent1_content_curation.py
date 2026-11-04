@@ -9,6 +9,7 @@ sys.path.append("..")
 
 from schema import ContentCurationOutput, SeedSpec, DisciplineDistance
 from utils.llm import call_llm_json
+from utils.seed_terms import is_term_task
 from prompts.agent1_prompt import SYSTEM_PROMPT
 
 
@@ -32,6 +33,15 @@ def run(
         ContentCurationOutput with research context + embedded SeedSpec
     """
 
+    # Terminology tasks are checked by exact match on the term
+    # (utils/seed_terms.py), so it has to be under a predictable key.
+    term_note = ""
+    if is_term_task(benchmark_category, benchmark_task):
+        term_note = (
+            'Put the single shared term in ground_truth under the key "term" '
+            "(the word as speakers say it, not a phrase about it).\n\n"
+        )
+
     user_message = f"""
 Research problem: {research_problem}
 
@@ -45,7 +55,7 @@ Benchmark category: {benchmark_category}
 Benchmark task to embed as a seed:
 {benchmark_task}
 
-Return a JSON object matching this exact schema:
+{term_note}Return a JSON object matching this exact schema:
 {{
   "research_problem": "...",
   "disciplines": [...],
