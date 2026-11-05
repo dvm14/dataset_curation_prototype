@@ -98,6 +98,33 @@ the problem occurs so the Filming agent can fix it precisely.
 """
 
 
+# Terminology tasks only.
+SEED_USE_PROMPT = """
+You check how a seed term is used in a meeting transcript. The seed term
+has two discipline-specific senses (given below). For a benchmark item to
+work, each sense must show up in someone's ordinary use of the term,
+without anyone noticing the two senses differ.
+
+You get the turns that contain the term, plus the turn right after each.
+Label every turn listed:
+- "sense": which discipline's sense the term carries in this turn, or
+  "unclear" if you can't tell from the turn, or "none" if the turn
+  doesn't contain the term
+- "comments_on_term": the turn talks about the word rather than using it,
+  e.g. objects to what something is called or labeled ("after we've
+  already called it X")
+- "renames": the speaker gives a sense a different name to keep the
+  senses apart ("we'd call that measure physical contact")
+Be literal. A turn that only uses the word inside a remark about labeling
+is comments_on_term, not an ordinary use.
+
+Return JSON:
+{"turns": [{"turn": n, "sense": "<discipline>" | "unclear" | "none",
+  "comments_on_term": true | false, "renames": true | false,
+  "why": "a few words"}]}
+"""
+
+
 SPOKEN_CHECK_PROMPT = """
 You label turns from a meeting transcript. For each turn listed, decide
 whether it reads like something a person said out loud (as a careful

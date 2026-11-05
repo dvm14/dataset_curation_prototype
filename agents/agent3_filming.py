@@ -16,8 +16,12 @@ from schema import (
     CastingOutput,
 )
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
+from utils.seed_terms import (
+    seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
+)
 from prompts.agent3_prompt import (
     SYSTEM_PROMPT, BID_PROMPT, LEAK_CHECK_PROMPT, SPEECH_PASS_PROMPT,
+    TERM_LEAK_RULES, TERM_VOCAB_NOTE,
 )
 
 
@@ -31,6 +35,9 @@ SPEECH_PASS = True       # after the meeting, rewrite each turn to sound spoken
 SPEECH_PASS_MIN_WORDS = 15  # shorter turns are left as they are
 SPEECH_PASS_LENGTH = (0.75, 1.3)  # rewrites outside this length ratio are discarded
 REACTION_CHANCE = 0.3    # how often a listener's wish to react ("mm-hm") is let through
+LEAK_CONTEXT_TURNS = 8   # turns of history the leak check sees; the ground truth carries the rest
+# Terminology tasks only (see utils/seed_terms.py):
+NUDGE_AFTER = 8          # from this turn on, seed speakers who haven't said the term get a private nudge
 
 # Meeting clock, based on how much has actually been said,
 # so time references stay consistent with the conversation.
@@ -296,25 +303,69 @@ def pick_reactor(bids, transcript, winner, just_reacted):
     return random.choice(reactors) if reactors else None
 
 
-def check_seed_leak(content, transcript, text):
-    """Check whether the turn violates the selected task's conditions."""
+def check_seed_leak(content, transcript, text, terms=()):
+    """
+    Check whether the turn violates the selected task's conditions.
+
+    For terminology tasks (terms given), a turn without the term can't
+    give it away, so it isn't checked: that keeps it to a few calls per
+    meeting instead of one per turn. The checker sees only recent turns;
+    the ground truth already tells it what has to stay intact.
+    """
+    if terms and not mentions(text, terms):
+        return False, ""
 
     task = {
         "benchmark_task": content.seed.benchmark_task,
         "seed_instruction": content.seed.explicit_instruction,
         "ground_truth": content.seed.ground_truth,
-        "recent_conversation": format_history(transcript),
+        "recent_conversation": format_history(transcript[-LEAK_CONTEXT_TURNS:]),
         "new_turn": text,
     }
 
-    result = call_llm_json(
-        LEAK_CHECK_PROMPT,
-        json.dumps(task, indent=2),
-        max_tokens=200,
-    )
-    if not isinstance(result.get("leaked"), bool):
-        raise ValueError("Leak checker must return a boolean leaked field")
-    return result["leaked"], result.get("reason", "")
+    try:
+        result = call_llm_json(
+            LEAK_CHECK_PROMPT + (TERM_LEAK_RULES if terms else ""),
+            json.dumps(task, indent=2),
+            max_tokens=200,
+        )
+    except ValueError as exc:
+        # Unparseable after retries. Keep the turn; final QA still checks it.
+        print(f"      (leak check failed, keeping turn: {exc})")
+        return False, ""
+
+    leaked = result.get("leaked")
+    if isinstance(leaked, str):
+        leaked = {"true": True, "false": False}.get(leaked.strip().lower())
+    if not isinstance(leaked, bool):
+        # Losing the whole meeting over one malformed reply costs more
+        # than letting QA catch a rare miss.
+        print(f"      (leak check returned {result!r}, keeping turn)")
+        return False, ""
+    return leaked, result.get("reason", "")
+
+
+def cut_off(turn, protected_terms):
+    """
+    Terminology tasks only. The interrupted speaker doesn't get to finish:
+    cut their turn partway, at a comma if there is one. Turns that are too
+    short to cut, or where the cut would remove the seed term, are left alone.
+    Other tasks don't cut, since a cut could drop a date or fact the task needs.
+    """
+    words = turn.text.split()
+    if len(words) < 12:
+        return turn
+
+    low, high = int(len(words) * 0.4), int(len(words) * 0.75)
+    at_comma = [i for i in range(low, high) if words[i - 1].endswith(",")]
+    cut = random.choice(at_comma or list(range(low, high)))
+
+    removed = " ".join(words[cut:]).lower()
+    if any(term.lower() in removed for term in protected_terms):
+        return turn
+
+    kept = " ".join(words[:cut]).rstrip(",;:.")
+    return Turn(speaker=turn.speaker, text=kept + "—")
 
 
 def speak(speaker, content, shared_context, brief, ami_style_notes,
@@ -387,11 +438,12 @@ DISFLUENCIES = [
 # No example phrases here: the model copied them word for word.
 
 
-def speech_pass(content, transcript):
+def speech_pass(content, transcript, terms=()):
     """
     The turns were written one at a time and still read like writing.
     Rewrite each one as spoken, keeping its content. A rewrite is
-    discarded if its length changes too much or it violates task conditions.
+    discarded if its length changes too much or it violates task conditions,
+    and for terminology tasks if it changes how often the seed term is used.
     Final QA checks evidence after all rewrites.
     """
 
@@ -404,6 +456,7 @@ def speech_pass(content, transcript):
             "speaker": turn.speaker,
             "previous_turns": format_history(transcript[max(0, i - 3):i]),
             "benchmark_task": content.seed.benchmark_task,
+            "protected_terms": list(terms),
             "disfluency": random.choice(DISFLUENCIES),
             "turn": turn.text,
         }
@@ -414,12 +467,14 @@ def speech_pass(content, transcript):
 
         if not text:
             return turn, "empty"
+        if terms and count_mentions(text, terms) != count_mentions(turn.text, terms):
+            return turn, "seed term changed"
         ratio = len(text.split()) / len(turn.text.split())
         if not SPEECH_PASS_LENGTH[0] <= ratio <= SPEECH_PASS_LENGTH[1]:
             return turn, "length changed"
         if turn.text.endswith("—") and not text.endswith("—"):
             text = text.rstrip(".!? ") + "—"
-        leaked, _ = check_seed_leak(content, transcript[:i], text)
+        leaked, _ = check_seed_leak(content, transcript[:i], text, terms)
         if leaked:
             return turn, "task violation"
         return Turn(speaker=turn.speaker, text=text), None
@@ -459,6 +514,9 @@ Explicit statements are valid unless this task requires an unnoticed issue.
 For controls, verify consistency and absence of the target problem.
 Do not invent evidence.
 
+measured_term_uses (when given) is an exact text match of every turn in
+which each speaker says the term. Treat it as correct.
+
 """
 
     numbered_turns = [
@@ -476,6 +534,10 @@ Do not invent evidence.
         "ground_truth": content.seed.ground_truth,
         "transcript": numbered_turns,
     }
+    terms = seed_terms(content)
+    if terms:
+        # The locator has misread who said the term before; give it the count.
+        task["measured_term_uses"] = term_uses(transcript, terms)
     result = call_llm_json(
         locator_prompt, json.dumps(task, indent=2), max_tokens=1200,
     )
@@ -517,9 +579,25 @@ def run(
     reactions = []          # texts of listener reactions so far
     just_reacted = set()    # reacted and hasn't taken the floor since
 
-    # Task evidence is checked by QA; no word-count proxy for completion.
+    # Terminology tasks: make sure the term actually comes up. Track which
+    # seed speakers have said it, and privately nudge the ones who haven't.
+    # Other tasks have no exact-match proxy; QA checks their evidence.
+    terms = seed_terms(content)
+    involved = seed_speakers(content, speakers) if terms else []
+
+    def still_missing():
+        return [
+            s.name for s in involved
+            if not any(t.speaker == s.name and mentions(t.text, terms)
+                       for t in transcript)
+        ]
+
     for turn_index in range(MAX_TURNS):
-        nudges = {}
+        missing = still_missing()
+        nudges = {
+            name: seed_nudge(terms)
+            for name in missing if turn_index >= NUDGE_AFTER
+        }
 
         bids = collect_bids(
             speakers, content, shared_context, private_briefs, transcript,
@@ -530,7 +608,7 @@ def run(
             for name, bid in bids.items()
         )
 
-        name = pick_speaker(bids, transcript, turn_index, can_end=True)
+        name = pick_speaker(bids, transcript, turn_index, can_end=not missing)
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
@@ -540,8 +618,12 @@ def run(
         if intent == "pass":
             intent = "respond"
 
-        # Do not truncate previous facts to simulate an interruption.
-        if intent != "interject" and len(transcript) < MAX_TURNS - 1:
+        # Only terminology tasks cut the interrupted turn (never through the
+        # term). Elsewhere a cut could drop a fact the task depends on.
+        if intent == "interject" and transcript:
+            if terms:
+                transcript[-1] = cut_off(transcript[-1], terms)
+        elif len(transcript) < MAX_TURNS - 1:
             reactor = pick_reactor(bids, transcript, name, just_reacted)
             if reactor:
                 # Reactions came out as "Mm-hm, yeah" over and over.
@@ -556,20 +638,22 @@ def run(
                         if recent else ""
                     ),
                 )
-                if not check_seed_leak(content, transcript, reaction)[0]:
+                if not check_seed_leak(content, transcript, reaction, terms)[0]:
                     transcript.append(Turn(speaker=reactor, text=reaction))
                     reactions.append(reaction)
                     just_reacted.add(reactor)
                     print(f"      Turn {len(transcript)}: {reactor} (reaction)")
 
         nudge = nudges.get(name, "")
+        if terms:
+            nudge = (TERM_VOCAB_NOTE + "\n" + nudge).strip()
         text = speak(
             speaker, content, shared_context, private_briefs[name],
             ami_style_notes, transcript, intent, extra_note=nudge,
         )
 
         for attempt in range(LEAK_RETRIES + 1):
-            leaked, reason = check_seed_leak(content, transcript, text)
+            leaked, reason = check_seed_leak(content, transcript, text, terms)
             if not leaked:
                 break
             if attempt == LEAK_RETRIES:
@@ -597,8 +681,16 @@ def run(
         if len(transcript) >= MAX_TURNS:
             break
 
+    if involved:
+        missing = still_missing()
+        print(
+            f"      Seed term {terms}: "
+            + ("said by every seed speaker" if not missing
+               else f"never said by {', '.join(missing)}")
+        )
+
     if SPEECH_PASS:
-        transcript = speech_pass(content, transcript)
+        transcript = speech_pass(content, transcript, terms)
 
     seed_location = locate_seed(content, transcript)
 

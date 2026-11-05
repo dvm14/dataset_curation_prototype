@@ -13,7 +13,8 @@ import statistics
 
 from schema import QAFeedback, FilmingOutput, ContentCurationOutput, CastingOutput
 from utils.llm import call_llm_json
-from prompts.agent4_prompt import SYSTEM_PROMPT, SPOKEN_CHECK_PROMPT
+from utils.seed_terms import seed_terms, term_uses, seed_speakers, count_mentions, _stem
+from prompts.agent4_prompt import SYSTEM_PROMPT, SEED_USE_PROMPT, SPOKEN_CHECK_PROMPT
 
 
 # Minimum rubric score for approval. The seed criteria are stricter:
@@ -88,6 +89,67 @@ def spoken_check(transcript):
     return round(1 - len(written) / len(numbers), 2), written
 
 
+# Terminology tasks only. Highest task_compliance allowed when a seed turn
+# comments on or renames the term, or a seed speaker's sense never appears
+# in a plain use. The judge gave 5 to a transcript whose only anthropology
+# use objected to the label.
+SEED_USE_CAP = 3
+
+
+def seed_use_check(transcript, terms, content, casting):
+    """
+    Label each turn with the seed term (and the turn after it, where a
+    rename would show up) in a separate small call: inside the main judge
+    call these labels came back all clean. The rules are applied here in
+    code. Returns (labels, issue strings).
+    """
+    if not terms:
+        return [], []
+    numbers = sorted({
+        n for i, t in enumerate(transcript, start=1)
+        if count_mentions(t.text, terms)
+        for n in (i, i + 1) if n <= len(transcript)
+    })
+    if not numbers:
+        return [], [f"Nobody says the seed term {terms}."]
+
+    disciplines = {s.name: s.discipline for s in casting.speakers}
+    truth = content.seed.ground_truth
+    senses = truth.get("discipline_specific_meanings", truth)
+    turns_text = "\n".join(
+        f"[{n}] {transcript[n - 1].speaker} "
+        f"({disciplines.get(transcript[n - 1].speaker, '')}): {transcript[n - 1].text}"
+        for n in numbers
+    )
+    raw = call_llm_json(
+        SEED_USE_PROMPT,
+        f"SEED TERM: {terms}\n\nSENSES:\n{json.dumps(senses, indent=2)}\n\n"
+        f"TURNS:\n{turns_text}",
+        max_tokens=2000,
+    )
+    labels = [u for u in raw.get("turns", []) if isinstance(u, dict)]
+
+    problems, plain_senses = [], []
+    for use in labels:
+        turn = use.get("turn")
+        if use.get("comments_on_term") is True:
+            problems.append(f"Turn {turn}: comments on the seed term instead of using it ({use.get('why', '')}).")
+        elif use.get("renames") is True:
+            problems.append(f"Turn {turn}: renames a sense of the seed term ({use.get('why', '')}).")
+        elif turn in numbers and count_mentions(transcript[turn - 1].text, terms):
+            plain_senses.append(str(use.get("sense", "")).lower().replace("_", " "))
+
+    # Every seed speaker's sense needs at least one plain use, by anyone.
+    # Same rough stem as seed_speakers, so "anthropologist" matches "anthropology".
+    for speaker in seed_speakers(content, casting.speakers):
+        if not any(_stem(speaker.discipline) in sense for sense in plain_senses):
+            problems.append(
+                f"The {speaker.discipline} sense of the seed term never appears "
+                f"in a plain use of it."
+            )
+    return labels, problems
+
+
 def score(raw, key):
     """Missing or malformed scores count as failing, not as a pass."""
     try:
@@ -126,6 +188,16 @@ def run(
         speaker.model_dump_json() for speaker in casting.speakers
     )
 
+    # Terminology tasks: exact counts, not another agent's reading. The judge
+    # once repeated the seed locator's false claim that a speaker never said
+    # the term.
+    terms = seed_terms(content)
+    measured_uses = (
+        "\nSEED TERM USES (measured by exact text match; treat as correct):\n"
+        + term_uses(filming.transcript, terms) + "\n"
+        if terms else ""
+    )
+
     user_message = f"""
 Evaluate the generated meeting material, NOT a tested assistant response.
 
@@ -147,7 +219,7 @@ GROUND TRUTH the AI assistant should be able to derive:
 
 TURN STATISTICS (measured):
 {turn_statistics(filming.transcript)}
-
+{measured_uses}
 AMI style reference (what a natural meeting sounds like):
 {ami_style_notes}
 
@@ -172,6 +244,11 @@ Return JSON:
     scores = {key: score(raw, key) for key in APPROVAL_THRESHOLDS}
     issues = raw.get("issues", [])
 
+    seed_uses, problems = seed_use_check(filming.transcript, terms, content, casting)
+    if problems:
+        scores["task_compliance"] = min(scores["task_compliance"], SEED_USE_CAP)
+        issues = issues + problems
+
     approved = all(
         scores[key] >= minimum
         for key, minimum in APPROVAL_THRESHOLDS.items()
@@ -187,7 +264,7 @@ Return JSON:
             t for t in raw.get("evidence_turns", []) if isinstance(t, int)
         ],
         realism_signals=raw.get("realism_signals", []),
-        seed_uses=[],
+        seed_uses=seed_uses,
         issues=issues,
         approved=approved,
     )

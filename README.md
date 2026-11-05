@@ -1,6 +1,6 @@
 # Benchmark Transcript Generation Pipeline
 
-Generates synthetic interdisciplinary research meeting transcripts for evaluating AI research assistants. Each transcript has a hidden benchmark feature (the **seed**), for example one term used with two different disciplinary meanings, plus a ground truth label the AI assistant's answer can be scored against.
+Generates synthetic interdisciplinary research meeting transcripts for evaluating AI research assistants. Each transcript is built for one task from Evaluation Benchmark v2 (`benchmark_tasks.py`) and carries the situation that task needs (the **seed**), for example one term used with two different disciplinary meanings, a timeline conflict nobody notices, or a clean control with no problem planted, plus a proposed reference answer (ground truth) the AI assistant's answer can be scored against.
 
 ## Setup
 
@@ -18,10 +18,20 @@ Add an AMI transcript to `data/ami_transcripts/sample.txt`. Any plain-text excer
 ## Run
 
 ```bash
-python main.py
+python main.py --list-tasks              # all 33 tasks, their input type and category
+python main.py --task coordination_03 --dry-run   # show the task, no API calls
+python main.py --task jargon_01          # generate one transcript
 ```
 
-Output is saved to `data/outputs/transcript_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. At the end of each run, the script prints token usage and an estimated API cost.
+Only `single_meeting` tasks can be generated so far (28 of 33). The other five (`problem_02`, `integration_02`, `self_review_01`, `adaptation_01`, `other_02`) need several linked inputs and are rejected before any API call.
+
+Output is saved to `data/outputs/approved/` or `data/outputs/failed/` as `<task_id>_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. The script exits with code 2 when the transcript fails QA. At the end of each run it prints token usage and an estimated API cost.
+
+Offline test (fake LLM, no key or cost needed):
+
+```bash
+python -m pytest tests/test_task_pipeline.py -q
+```
 
 ## Pipeline
 
@@ -38,10 +48,10 @@ Agent 4  QA                 — scores the transcript against the rubric
 
 No single LLM call writes the transcript. Each cast speaker is a separate agent that sees only its own profile and private brief, plus what has been said so far.
 
-1. **Planning.** One call writes **shared background** that everyone in the meeting knows (city, institution, grant and deadline, datasets, what happened last meeting, logistics), plus a **private brief** per speaker. Seed speakers get their own meaning of the seed term as their everyday word for it. Nobody is told that someone else uses it differently.
+1. **Planning.** One call writes **shared background** that everyone in the meeting knows (city, institution, grant and deadline, datasets, what happened last meeting, logistics), plus a **private brief** per speaker. The task's required facts are split across briefs so the situation can arise, but nobody is told the answer or that they are being tested. For terminology tasks, seed speakers get their own meaning of the seed term as their everyday word for it.
 2. **Turn-taking by bidding.** Before every turn, all speakers bid in parallel on how much they want to speak (urgency 0–10) and how: a normal response, a quick reaction, cutting in, or passing. The highest bid speaks, and ties are broken at random. Nobody assigns turns.
    - The same speaker can't take two turns in a row.
-   - When someone cuts in, the previous turn is actually cut off mid-sentence ("—"). It is never cut where that would remove the seed term.
+   - Terminology tasks only: when someone cuts in, the previous turn is actually cut off mid-sentence ("—"), never where that would remove the seed term. Other tasks don't cut, since a cut could drop a date or fact the task depends on.
    - From turn 15, the meeting ends on its own once every bid is below 3. Turn 35 is a hard stop.
 3. **Speaking.** The winner writes their turn following the speaking rules in `prompts/agent3_prompt.py`: spoken rather than written, mostly cooperative, disagreement only when genuine, no recap of action items. A turn far over its word budget is regenerated once, shorter.
 4. **Listener reactions.** In the same bid, each speaker says whether they'd react out loud to the last turn ("mm-hm", "oh, really?", "wait, the 18th?") without taking the floor. Before the winner speaks, one such listener (not the last speaker or the winner) may get a reaction of up to about six words.
@@ -49,10 +59,10 @@ No single LLM call writes the transcript. Each cast speaker is a separate agent 
    - Nobody reacts twice without taking a real turn in between. With 3 speakers the eligible listener is often the same person, who otherwise ended up doing nothing but backchannel.
    - The reacting speaker sees the recent reactions and must not reuse their wording, and is told not to stamp approval ("exactly", "agreed").
 5. **Time cue.** Agents are told how much of the 10-minute meeting has passed, based on words spoken (150 per minute), so any time they mention stays consistent. Near the turn cap they're told someone has a hard stop.
-6. **Seed safeguards.**
-   - **Leak check:** each turn containing the seed term is checked for giving the seed away (pointing out the two meanings, asking for a definition, silently switching to the other meaning, objecting to what something is called, or renaming one's own sense). A leaking turn is regenerated up to 2 times.
-   - **Coverage:** from turn 8, a seed speaker who hasn't said the term yet gets a private nudge to bring it up. The meeting can't end naturally until every seed speaker has used it.
-7. **Speech pass.** After the meeting, every turn of 15+ words is rewritten in parallel to read like transcribed speech: no semicolons, colons or parentheses, partial lists, varied openers, same points and roughly the same length. Each turn gets one disfluency type picked at random in code (none, a restart, a corrected word, a repeated word, losing the thread, trailing off, searching for a word), because asking for a restart in every long turn produced the same "X- well, X" repair everywhere. A rewrite is discarded, and the original kept, if it changes how often the seed term is used, changes the length outside 0.75–1.3×, or fails the leak check. Turn off with `SPEECH_PASS = False`.
+6. **Task safeguards.**
+   - **Leak check:** a turn is checked for breaking a condition the task needs, for example resolving a conflict that must go unnoticed, assigning an owner who must stay unassigned, or adding confusion to a control. Explicit dates, definitions and decisions are fine when the task allows them. A violating turn is regenerated up to 2 times. The checker sees the last 8 turns (`LEAK_CONTEXT_TURNS`); the ground truth tells it what has to stay intact. If its reply is malformed, the turn is kept and QA judges it.
+   - **Terminology tasks** (category Jargon, not a control; see `utils/seed_terms.py`): only turns containing the seed term are leak-checked, with extra rules against pointing out the two meanings, asking for a definition, switching to the other meaning, objecting to a label, or renaming one's own sense. Speakers are told not to define their field's terms or comment on others' word choice. From turn 8, a seed speaker who hasn't said the term yet gets a private nudge, and the meeting can't end naturally until every seed speaker has used it.
+7. **Speech pass.** After the meeting, every turn of 15+ words is rewritten in parallel to read like transcribed speech: no semicolons, colons or parentheses, partial lists, varied openers, same points and roughly the same length. Each turn gets one disfluency type picked at random in code (none, a restart, a corrected word, a repeated word, losing the thread, trailing off, searching for a word), because asking for a restart in every long turn produced the same "X- well, X" repair everywhere. A rewrite is discarded, and the original kept, if it changes the length outside 0.75–1.3×, fails the leak check, or (terminology tasks) changes how often the seed term is used. Turn off with `SPEECH_PASS = False`.
 8. **Seed locator.** One call reports where the seed actually appears in the transcript.
 
 Tuning constants (turn limits, word budgets, nudge timing, meeting clock) are at the top of `agents/agent3_filming.py`.
@@ -64,15 +74,15 @@ The judge scores each criterion from 1 to 5, using 1/3/5 as anchors:
 | Criterion | Needed to pass | What it checks |
 |---|---|---|
 | Seed recoverable | ≥ 4 | Evidence turns can be pointed to, and the ground truth follows from them |
-| Seed implicit | ≥ 4 | Nobody names the issue, asks about it, or silently adjusts their usage |
+| Task compliance | ≥ 4 | Every condition in the task description is met: required facts and roles present, issues unnoticed only where the task says so, controls free of the target problem |
 | Naturalness | ≥ 3 | Realism signals present; no tells such as essay-like turns or manufactured conflict |
 | Speaker distinctness | ≥ 3 | Speakers match their personas, with discipline-typical vocabulary |
 | Domain alignment | ≥ 3 | Each speaker contributes from their own discipline (the research question itself may shift) |
 | Dialogue flow | ≥ 3 | Turns follow on from each other |
 
-The approval decision is made in code (`APPROVAL_THRESHOLDS` in `agents/agent4_qa.py`), not by the LLM. A missing or malformed score counts as 1. The judge also receives measured turn statistics (turn lengths, disfluency rate, turns per speaker) as context, which are not targets, and an exact count of which turns each speaker says the seed term in. It does not see the seed locator's report, which has misread speakers before.
+The approval decision is made in code (`APPROVAL_THRESHOLDS` in `agents/agent4_qa.py`), not by the LLM. A missing or malformed score counts as 1. The judge also receives measured turn statistics (turn lengths, disfluency rate, turns per speaker) as context, which are not targets, and for terminology tasks, an exact count of which turns each speaker says the seed term in. It does not see the seed locator's report, which has misread speakers before.
 
-**Seed use check.** A separate small call labels each turn containing the seed term (and the turn after it) with which discipline's sense it carries, and whether it comments on the word or renames a sense. In code, seed_implicit is capped at 3 if any turn comments or renames, or if a seed speaker's sense never appears in a plain use. The main judge once gave 5 to a transcript whose only anthropology use objected to the label. The labels are saved as `seed_uses`.
+**Seed use check (terminology tasks).** A separate small call labels each turn containing the seed term (and the turn after it) with which discipline's sense it carries, and whether it comments on the word or renames a sense. In code, task_compliance is capped at 3 if any turn comments or renames, if nobody says the term, or if a seed speaker's sense never appears in a plain use. The main judge once gave 5 to a transcript whose only anthropology use objected to the label. The labels are saved as `seed_uses` (empty for other tasks).
 
 **Spoken share.** The 1–5 naturalness score barely moves between versions of a transcript, so QA also labels each turn of 15+ words as sounding spoken or written and reports the share (`spoken_share`, with `written_turns`). It is for comparing runs and is not part of approval.
 
@@ -84,11 +94,10 @@ Edit the `CONFIG` dict in `main.py`:
 |-----|-------------|
 | `ami_transcript_path` | Path to AMI .txt file |
 | `research_problem` | What the team is working on |
-| `disciplines` | List of fields, or `None` to randomize |
+| `disciplines` | List of fields, or `None` to use the task's default (`_DEFAULTS` in `benchmark_tasks.py`, e.g. `assumptions_02`) or randomize |
 | `num_speakers` | Number of speakers / disciplines (default 3) |
 | `discipline_distance` | `"close"` / `"distant"` / `"mixed"` |
-| `benchmark_category` | Which category to test (jargon, assumptions, etc.) |
-| `benchmark_task` | The evaluation task description |
+| `task_id` | Which task from `benchmark_tasks.py` to generate (overridden by `--task`). Category and description come from the task table |
 | `speaker_overrides` | Optional per-discipline attribute overrides |
 | `max_refilms` | Re-films allowed if QA fails (default 1). Every attempt is QA'd |
 
@@ -107,7 +116,7 @@ A transcript that still fails QA after the re-film is saved with `approved: fals
 
 ## Cost
 
-All agents use `gpt-5.6-terra` with reasoning effort `none` (set by `MODEL` and `REASONING_EFFORT` in `utils/llm.py`). Agent 3 accounts for most of the cost: each turn makes 3 bid calls, a speaking call and sometimes a leak check. Speaker context and conversation history are prompt-cached with explicit cache breakpoints (`prompt_cache_breakpoint`), so each call pays full price mainly for the newest turn. Check the usage printout at the end of a run for actual costs. A run with a re-film costs roughly twice as much as one that passes on the first attempt.
+All agents use `gpt-5.6-terra` with reasoning effort `none` (set by `MODEL` and `REASONING_EFFORT` in `utils/llm.py`). Agent 3 accounts for most of the cost: each turn makes 3 bid calls and a speaking call. Leak checks run on only the few turns with the seed term for terminology tasks, but on every turn and every speech-pass rewrite for other tasks (roughly two per turn), each with an 8-turn window. Speaker context and conversation history are prompt-cached with explicit cache breakpoints (`prompt_cache_breakpoint`), so each call pays full price mainly for the newest turn. Check the usage printout at the end of a run for actual costs. A run with a re-film costs roughly twice as much as one that passes on the first attempt.
 
 ## Value banks
 

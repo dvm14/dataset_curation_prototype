@@ -12,5 +12,11 @@ Do not make participants perform the evaluated assistant's analysis for it.
 Participant-visible meeting_context must contain ordinary background only:
 never expose the test instruction, intended answer or hidden conflict there.
 Do not invent citations; literature recommendations require later verification.
+explicit_instruction tells the meeting simulator what has to happen in the
+meeting (who knows what, what is said, what stays unresolved). It is NOT the
+question the evaluated assistant will be asked.
+ground_truth is the reference answer only. Never include sample dialogue,
+example utterances or a scripted transcript in it: the simulator reads it,
+and scripted lines get copied into the meeting.
 Return the requested JSON schema.
 """

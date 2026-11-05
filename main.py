@@ -60,7 +60,11 @@ CONFIG = {
 def run_pipeline(config: dict) -> GeneratedTranscript:
     task = get_task(config["task_id"])
     require_single_meeting(task)  # Reject unsupported structures before API calls.
+    defaults = task.pop("defaults")
     config = {**config, **task}
+    for key, value in defaults.items():
+        if config.get(key) is None:
+            config[key] = value
     from schema import DisciplineDistance, GeneratedTranscript, QAAttempt
     from agents.agent4_qa import APPROVAL_THRESHOLDS
     from utils.style_extractor import extract_style
@@ -93,10 +97,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
 
     # ── Agent 1: Content Curation ───────────────
     print("[2/5] Agent 1 — Content Curation...")
-    num_speakers = config["num_speakers"]
-    if task["task_id"] == "assumptions_02" and config["disciplines"] is None:
-        config["disciplines"] = ["clinical medicine", "sociology"]
-        num_speakers = 2
+    num_speakers = len(config["disciplines"]) if config["disciplines"] else config["num_speakers"]
     disciplines = config["disciplines"] or sample_disciplines(
         config["discipline_distance"].value, n=num_speakers
     )
