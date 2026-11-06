@@ -16,7 +16,7 @@ from schema import (
     CastingOutput,
 )
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
-from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in
+from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in, FACT_GATE_TURNS
 from utils.seed_terms import (
     seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
 )
@@ -95,13 +95,15 @@ Shared context contains only ordinary background everyone knows, not the answer.
 Private briefs must not contain evaluator instructions or the full answer.
 Do not prescribe dialogue or speaking order. Use QA feedback to improve briefs.
 
-Also list required_facts: each concrete fact the transcript must state aloud
-for the task to be testable (a date, deadline, number, owner, decision or
-definition the task or ground truth depends on), at most 8. Give each to the
-speaker whose brief contains it, and a cue: 1-6 words that will appear
-verbatim when it is said, using the task's exact values (e.g.
-"February 1, 2027", "Priya", "100 meters"). Don't list the conclusion the
-evaluated AI should reach, only the facts it should reach it from.
+Also list required_facts: the concrete values the transcript must state
+aloud for the task to be testable (dates, deadlines, numbers, thresholds,
+named owners), usually 2-5, at most 8. Give each to the speaker whose brief
+contains it, and a cue: the value itself, 1-6 words that will appear
+verbatim when it is said, using the task's exact form (e.g.
+"February 1, 2027", "Priya", "100 meters"). Each fact states one value on
+its own. Never list a relationship between facts ("cannot start before
+approval"), a constraint, or the conclusion the evaluated AI should reach:
+a speaker reminded of it will say it, and that can give the task away.
 Return JSON:
 {"shared_context": "ordinary shared background",
  "briefs": {"exact speaker name": "short private discussion brief"},
@@ -633,8 +635,9 @@ def run(
             for name, bid in bids.items()
         )
 
+        facts_block_end = missing_facts and turn_index < FACT_GATE_TURNS
         name = pick_speaker(bids, transcript, turn_index,
-                            can_end=not missing and not missing_facts)
+                            can_end=not missing and not facts_block_end)
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break

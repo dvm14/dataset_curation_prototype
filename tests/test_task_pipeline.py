@@ -242,7 +242,13 @@ def test_cue_matching():
     assert cue_said("so Feb- February 1st, 2027 works", "February 1, 2027")
     assert not cue_said("February 10, 2027", "February 1, 2027")
     assert not cue_said("in February", "February 1, 2027")
+    assert cue_said("we start March 18th", "March 18, 2027")
+    assert not cue_said("the 2027 cohort", "March 18, 2027")
     from types import SimpleNamespace as NS
     facts = parse_facts([{"speaker": "A", "fact": "f", "cue": "one two three four five six seven"},
                          {"speaker": "A", "fact": "f", "cue": "Priya"}, "junk"], [NS(name="A")])
     assert [f["cue"] for f in facts] == ["Priya"]
+    from utils.required_facts import is_value_cue
+    assert is_value_cue("February 1, 2027") and is_value_cue("300-meter buffer") and is_value_cue("WHO-5")
+    assert not is_value_cue("cannot occur until approved")
+    assert not is_value_cue("as part of those interviews")
