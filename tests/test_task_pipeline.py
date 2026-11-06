@@ -34,8 +34,9 @@ TERM = "resilience"
 class FakeLLM:
     """Answers each prompt type with minimal valid JSON and counts calls."""
 
-    def __init__(self, term_task, malformed_leak_every=0):
+    def __init__(self, term_task, malformed_leak_every=0, extra_cast=0):
         self.term_task = term_task
+        self.extra_cast = extra_cast
         self.malformed_leak_every = malformed_leak_every
         self.calls = Counter()
         self.leak_chars = []
@@ -64,16 +65,25 @@ class FakeLLM:
 
         if system.startswith(agent2_prompt.SYSTEM_PROMPT):
             self.calls["agent2"] += 1
-            return {"speakers": [
-                {"name": f"Speaker {chr(65 + i)}", "discipline": d,
-                 "background": "x", "distinct_perspective": "y"}
-                for i, d in enumerate(self.disciplines)]}
+            cast = [{"name": f"Speaker {chr(65 + i)}", "discipline": d,
+                     "background": "x", "distinct_perspective": "y"}
+                    for i, d in enumerate(self.disciplines)]
+            # extra people cast for roles named in the seed ("project lead")
+            cast += [{"name": f"Extra {i}", "discipline": "project lead",
+                      "background": "x", "distinct_perspective": "y"}
+                     for i in range(self.extra_cast)]
+            return {"speakers": cast}
 
         if "Prepare shared meeting background" in system:
             self.calls["planner"] += 1
             names = [s["name"] for s in json.loads(body)["speakers"]]
+            facts = [] if self.term_task else [
+                {"speaker": names[0], "fact": "Approval is expected March 1, 2027.", "cue": "March 1, 2027"},
+                {"speaker": names[1], "fact": "Interviews start February 1, 2027.", "cue": "February 1, 2027"},
+                {"speaker": "Nobody", "fact": "dropped: unknown speaker", "cue": "x"}]
             return {"shared_context": "Durham, grant due Dec 1.",
-                    "briefs": {n: f"brief for {n}" for n in names}}
+                    "briefs": {n: f"brief for {n}" for n in names},
+                    "required_facts": facts}
 
         if system.startswith(agent3_prompt.BID_PROMPT):
             self.calls["bid"] += 1
@@ -88,8 +98,11 @@ class FakeLLM:
             # Seed speakers (first two) only say the term once nudged.
             says_term = self.term_task and name != "Speaker C" and "you haven't raised yet" in body
             filler = "so I think the corridor data from last spring would let us test that properly"
+            # Required facts are only said once nudged (with the "1st" form).
+            fact = re.search(r"haven't mentioned yet:\n- .*?(\w+) 1, 2027", body)
             return {"text": f"{name} here, {filler}"
-                            + (f" and the {TERM} of the system matters" if says_term else "") + "."}
+                            + (f" and the {TERM} of the system matters" if says_term else "")
+                            + (f", and {fact.group(1)} 1st, 2027 is the date" if fact else "") + "."}
 
         if system.startswith(agent3_prompt.LEAK_CHECK_PROMPT):
             self.calls["leak"] += 1
@@ -211,3 +224,25 @@ def test_seed_speakers_ignore_scripted_example():
 
     cleaned = agent1.strip_dialogue(truth)
     assert "transcript" not in cleaned and cleaned["term"] == "attention"
+
+
+def test_required_facts_get_said_before_meeting_ends():
+    result, fake = run_task("coordination_03")
+    text = " ".join(t.text for t in result.transcript)
+    assert "March 1st, 2027" in text and "February 1st, 2027" in text
+
+
+def test_extra_cast_is_trimmed_not_fatal():
+    result, _ = run_task("coordination_03", extra_cast=3)
+    assert [s.name for s in result.speakers] == ["Speaker A", "Speaker B", "Speaker C"]
+
+
+def test_cue_matching():
+    from utils.required_facts import cue_said, parse_facts
+    assert cue_said("so Feb- February 1st, 2027 works", "February 1, 2027")
+    assert not cue_said("February 10, 2027", "February 1, 2027")
+    assert not cue_said("in February", "February 1, 2027")
+    from types import SimpleNamespace as NS
+    facts = parse_facts([{"speaker": "A", "fact": "f", "cue": "one two three four five six seven"},
+                         {"speaker": "A", "fact": "f", "cue": "Priya"}, "junk"], [NS(name="A")])
+    assert [f["cue"] for f in facts] == ["Priya"]

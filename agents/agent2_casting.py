@@ -17,6 +17,31 @@ from utils.value_banks import sample_speaker_attributes
 from prompts.agent2_prompt import SYSTEM_PROMPT
 
 
+def pick_one_per_discipline(cast, disciplines):
+    """
+    The LLM sometimes casts extra people for roles named in the seed
+    ("project lead", "education lead"): 4 or 6 speakers for 3 disciplines,
+    which used to abort the run. Keep the first speaker for each discipline,
+    fill any discipline it skipped from the leftovers, and drop the rest.
+    """
+    cast = [s for s in cast if isinstance(s, dict) and s.get("name")]
+    chosen, used = [], set()
+    for discipline in disciplines:
+        for i, s in enumerate(cast):
+            if i not in used and str(s.get("discipline", "")).strip().lower() == discipline.lower():
+                chosen.append(s); used.add(i); break
+        else:
+            chosen.append(None)
+    leftovers = [s for i, s in enumerate(cast) if i not in used]
+    for slot, discipline in enumerate(disciplines):
+        if chosen[slot] is None and leftovers:
+            chosen[slot] = {**leftovers.pop(0), "discipline": discipline}
+    if len(cast) != len(disciplines):
+        print(f"      (casting returned {len(cast)} speakers for "
+              f"{len(disciplines)} disciplines; kept one per discipline)")
+    return [s for s in chosen if s is not None]
+
+
 def run(
     content: ContentCurationOutput,
     speaker_overrides: dict[str, dict] = {},
@@ -53,7 +78,9 @@ Benchmark task: {content.seed.benchmark_task}
 
 Seed to be aware of: {content.seed.explicit_instruction}
 
-Generate one speaker profile per discipline using these randomized attributes as a starting point.
+Generate exactly {len(speaker_specs)} speaker profiles, one per discipline listed below,
+using these randomized attributes as a starting point. Roles named in the seed
+(e.g. "project lead") are filled by these speakers; don't add extra people.
 You may adjust background and distinct_perspective to fit the research problem,
 and adjust sampled attributes if necessary to satisfy the task (e.g. a dominant
 and a quiet participant). Do not reveal hidden test answers in speaker profiles.
@@ -97,7 +124,7 @@ Return a JSON object:
         return enum_cls(fallback)
 
     speakers = []
-    for i, s in enumerate(raw.get("speakers", [])):
+    for i, s in enumerate(pick_one_per_discipline(raw.get("speakers", []), content.disciplines)):
         spec = specs_by_discipline.get(
             str(s.get("discipline", "")).lower(),
             speaker_specs[i % len(speaker_specs)],

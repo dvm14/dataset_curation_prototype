@@ -7,7 +7,9 @@ no target problem. Allow explicit definitions, decisions and assignments when
 required. Keep an issue unnoticed only when the task requires that condition.
 Ground truth is a proposed reference answer; later QA must verify actual evidence.
 Specify necessary dates, dependencies, decisions, viewpoints and evidence so the
-scenario is testable. For tasks requiring missing information, preserve the gap.
+scenario is testable. Keep it to what the task needs: a meeting can only carry a
+handful of required facts naturally. If the task needs a glossary or set of
+definitions, use 3-5 key terms, not every concept in the study. For tasks requiring missing information, preserve the gap.
 Do not make participants perform the evaluated assistant's analysis for it.
 Participant-visible meeting_context must contain ordinary background only:
 never expose the test instruction, intended answer or hidden conflict there.

@@ -16,6 +16,7 @@ from schema import (
     CastingOutput,
 )
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
+from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in
 from utils.seed_terms import (
     seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
 )
@@ -93,9 +94,18 @@ Use concrete consistent details, and preserve the task's required facts.
 Shared context contains only ordinary background everyone knows, not the answer.
 Private briefs must not contain evaluator instructions or the full answer.
 Do not prescribe dialogue or speaking order. Use QA feedback to improve briefs.
+
+Also list required_facts: each concrete fact the transcript must state aloud
+for the task to be testable (a date, deadline, number, owner, decision or
+definition the task or ground truth depends on), at most 8. Give each to the
+speaker whose brief contains it, and a cue: 1-6 words that will appear
+verbatim when it is said, using the task's exact values (e.g.
+"February 1, 2027", "Priya", "100 meters"). Don't list the conclusion the
+evaluated AI should reach, only the facts it should reach it from.
 Return JSON:
 {"shared_context": "ordinary shared background",
- "briefs": {"exact speaker name": "short private discussion brief"}}
+ "briefs": {"exact speaker name": "short private discussion brief"},
+ "required_facts": [{"speaker": "exact speaker name", "fact": "...", "cue": "..."}]}
 """
 
     setup = {
@@ -132,7 +142,7 @@ Return JSON:
                 f"Missing private brief for {speaker.name}"
             )
 
-    return shared_context, briefs
+    return shared_context, briefs, parse_facts(result.get("required_facts"), casting.speakers)
 
 
 def format_history(transcript):
@@ -438,12 +448,13 @@ DISFLUENCIES = [
 # No example phrases here: the model copied them word for word.
 
 
-def speech_pass(content, transcript, terms=()):
+def speech_pass(content, transcript, terms=(), facts=()):
     """
     The turns were written one at a time and still read like writing.
     Rewrite each one as spoken, keeping its content. A rewrite is
     discarded if its length changes too much or it violates task conditions,
-    and for terminology tasks if it changes how often the seed term is used.
+    for terminology tasks if it changes how often the seed term is used,
+    and if it drops the cue of a required fact (e.g. "February 1, 2027").
     Final QA checks evidence after all rewrites.
     """
 
@@ -469,6 +480,8 @@ def speech_pass(content, transcript, terms=()):
             return turn, "empty"
         if terms and count_mentions(text, terms) != count_mentions(turn.text, terms):
             return turn, "seed term changed"
+        if not cues_in(turn.text, facts) <= cues_in(text, facts):
+            return turn, "required fact changed"
         ratio = len(text.split()) / len(turn.text.split())
         if not SPEECH_PASS_LENGTH[0] <= ratio <= SPEECH_PASS_LENGTH[1]:
             return turn, "length changed"
@@ -569,7 +582,7 @@ def run(
 
     by_name = {speaker.name: speaker for speaker in speakers}
 
-    shared_context, private_briefs = prepare_private_briefs(
+    shared_context, private_briefs, facts = prepare_private_briefs(
         content,
         casting,
         qa_feedback,
@@ -592,12 +605,24 @@ def run(
                        for t in transcript)
         ]
 
+    # Every other task: the facts it depends on (see utils/required_facts.py).
+    # Terminology tasks already have the term check and are left as they were.
+    if terms:
+        facts = []
+    elif facts:
+        print(f"      Required facts: {len(facts)} "
+              f"({'; '.join(f['cue'] for f in facts)})")
+
     for turn_index in range(MAX_TURNS):
         missing = still_missing()
+        missing_facts = unsaid(facts, transcript)
         nudges = {
             name: seed_nudge(terms)
             for name in missing if turn_index >= NUDGE_AFTER
         }
+        if turn_index >= NUDGE_AFTER:
+            for name in {f["speaker"] for f in missing_facts}:
+                nudges[name] = fact_nudge([f for f in missing_facts if f["speaker"] == name])
 
         bids = collect_bids(
             speakers, content, shared_context, private_briefs, transcript,
@@ -608,7 +633,8 @@ def run(
             for name, bid in bids.items()
         )
 
-        name = pick_speaker(bids, transcript, turn_index, can_end=not missing)
+        name = pick_speaker(bids, transcript, turn_index,
+                            can_end=not missing and not missing_facts)
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
@@ -689,8 +715,15 @@ def run(
                else f"never said by {', '.join(missing)}")
         )
 
+    if facts:
+        left = unsaid(facts, transcript)
+        print(
+            f"      Required facts: {len(facts) - len(left)}/{len(facts)} said"
+            + (f"; never said: {'; '.join(f['cue'] for f in left)}" if left else "")
+        )
+
     if SPEECH_PASS:
-        transcript = speech_pass(content, transcript, terms)
+        transcript = speech_pass(content, transcript, terms, facts)
 
     seed_location = locate_seed(content, transcript)
 

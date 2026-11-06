@@ -130,6 +130,10 @@ methods and assignments can be explicit when appropriate to the task.
 Do not apply a blanket requirement that all benchmark features stay hidden.
 For controls, permit clear definitions, agreement and productive collaboration.
 Do not require the new turn alone to contain the entire benchmark scenario.
+Judge ONLY what the new turn itself says. recent_conversation is context for
+understanding it. If an earlier turn already broke a condition, that is not
+this turn's fault: flag the new turn only if it adds a violation of its own
+(e.g. points out, agrees with, or acts on the resolution).
 Return JSON: {"leaked": true | false, "reason": "short explanation"}
 """
 

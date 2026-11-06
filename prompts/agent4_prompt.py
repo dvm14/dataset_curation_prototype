@@ -27,6 +27,10 @@ task_compliance:
   3 — some required conditions are present, but important conditions are missing
   5 — all conditions in benchmark_task are met, including explicit/implicit
       requirements, participant roles, action counts, and absent information
+  Judge the conditions against the key items in ground_truth (its terms,
+  dates, roles), not against every word in the meeting. Standard field
+  abbreviations and everyday research vocabulary (GPS, HRV, survey,
+  baseline) do not need definitions unless ground_truth lists them.
   Do not demand implicitness unless the task requires it. Explicit definitions,
   assignments and decisions may be necessary evidence. Controls must not invent
   the target problem. Cite concrete turns and missing conditions in issues.
