@@ -23,7 +23,17 @@ python main.py --task coordination_03 --dry-run   # show the task, no API calls
 python main.py --task jargon_01          # generate one transcript
 ```
 
-Only `single_meeting` tasks can be generated so far (28 of 33). The other five (`problem_02`, `integration_02`, `self_review_01`, `adaptation_01`, `other_02`) need several linked inputs and are rejected before any API call.
+All 33 tasks can be generated. 28 are single meetings. The other five need several linked inputs and go through `multi_meeting.py` automatically:
+
+| Task | Input | What is generated |
+|---|---|---|
+| `problem_02` | plan + meeting | a written research plan, then one meeting that changes the direction |
+| `integration_02` | paired meetings | a cross-disciplinary meeting (3 people) and a within-field meeting (2 specialties), separate casts |
+| `self_review_01` | meeting sequence | 3 meetings of one project in which the research question evolves |
+| `adaptation_01` | meeting pair | 2 meetings; a passing remark in the second undermines an assumption of the first plan, unnoticed |
+| `other_02` | seniority pair | 1 meeting of 2 people, saved with two label sets (senior/junior swapped), dialogue identical |
+
+A series planner (replacing Agent 1) designs the set: each meeting's own instruction and ground truth, and the reference answer for the whole set. Each meeting is then filmed and QA'd by Agents 2-4 as usual, with the same cast across one project's meetings. A 4-6 sentence summary of each meeting is carried into the next meeting's context, so later meetings build on what was said. A series QA call checks the set as a whole (`series_recoverable`, `series_compliance`); the sample is approved only if every meeting passes its own QA and both series scores are at least 4. Output JSON has `meetings` (each with transcript, speakers, ground truth and QA), the overall `ground_truth`, `plan_document` or `versions` where relevant, and `series_qa`.
 
 Output is saved to `data/outputs/approved/` or `data/outputs/failed/` as `<task_id>_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. The script exits with code 2 when the transcript fails QA. At the end of each run it prints token usage and an estimated API cost.
 

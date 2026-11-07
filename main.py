@@ -57,6 +57,73 @@ CONFIG = {
 # PIPELINE
 # ─────────────────────────────────────────────
 
+def load_ami_style(config):
+    from utils.style_extractor import extract_style
+    ami_path = Path(config["ami_transcript_path"])
+    if not ami_path.is_absolute():
+        ami_path = Path(__file__).parent / ami_path
+    if not ami_path.exists():
+        raise FileNotFoundError(
+            f"AMI transcript not found at {ami_path}. "
+            "Add a .txt file from the AMI dataset to data/ami_transcripts/"
+        )
+    ami_style_notes = extract_style(ami_path.read_text())
+    print(f"      Style notes extracted ({len(ami_style_notes)} chars)")
+    return ami_style_notes
+
+
+def film_with_qa(content, casting, ami_style_notes, max_refilms, step=("[4/5]", "[5/5]")):
+    """
+    Film, QA, and re-film with QA's issues if it fails. Every attempt is
+    QA'd, so the saved scores match the saved transcript. Shared by the
+    single-meeting pipeline and multi_meeting.py.
+    """
+    from schema import QAAttempt
+    from agents.agent4_qa import APPROVAL_THRESHOLDS
+    import agents.agent3_filming as agent3
+    import agents.agent4_qa as agent4
+
+    qa_history = []
+    qa_feedback_text = None
+    for attempt in range(1, max_refilms + 2):
+        label = "Filming" if attempt == 1 else f"Re-filming (attempt {attempt})"
+        print(f"{step[0]} Agent 3 — {label}...")
+        filming = agent3.run(
+            content=content,
+            casting=casting,
+            ami_style_notes=ami_style_notes,
+            qa_feedback=qa_feedback_text,
+        )
+        print(f"      Generated {len(filming.transcript)} turns")
+        print(f"      Seed location: {filming.seed_location}")
+
+        print(f"{step[1]} Agent 4 — QA (attempt {attempt})...")
+        qa = agent4.run(
+            filming=filming,
+            content=content,
+            casting=casting,
+            ami_style_notes=ami_style_notes,
+        )
+        scores = {key: getattr(qa, key) for key in APPROVAL_THRESHOLDS}
+        qa_history.append(QAAttempt(
+            attempt=attempt,
+            num_turns=len(filming.transcript),
+            scores=scores,
+            spoken_share=qa.spoken_share,
+            approved=qa.approved,
+            issues=qa.issues,
+        ))
+        print(f"      Scores: {scores}")
+        print(f"      Spoken-sounding turns: {qa.spoken_share}")
+        print(f"      Approved: {qa.approved}")
+
+        if qa.approved:
+            break
+        qa_feedback_text = "\n".join(f"- {issue}" for issue in qa.issues)
+
+    return filming, qa, qa_history
+
+
 def run_pipeline(config: dict) -> GeneratedTranscript:
     task = get_task(config["task_id"])
     require_single_meeting(task)  # Reject unsupported structures before API calls.
@@ -65,15 +132,11 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     for key, value in defaults.items():
         if config.get(key) is None:
             config[key] = value
-    from schema import DisciplineDistance, GeneratedTranscript, QAAttempt
-    from agents.agent4_qa import APPROVAL_THRESHOLDS
-    from utils.style_extractor import extract_style
+    from schema import DisciplineDistance, GeneratedTranscript
     from utils.value_banks import sample_disciplines
     from utils.llm import usage_report
     import agents.agent1_content_curation as agent1
     import agents.agent2_casting as agent2
-    import agents.agent3_filming as agent3
-    import agents.agent4_qa as agent4
     config["discipline_distance"] = DisciplineDistance(config["discipline_distance"])
     transcript_id = str(uuid.uuid4())[:8]
     created_at = datetime.now()
@@ -83,17 +146,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
 
     # ── Stage 1: extract AMI style ──────────────
     print("[1/5] Extracting AMI style...")
-    ami_path = Path(config["ami_transcript_path"])
-    if not ami_path.is_absolute():
-        ami_path = Path(__file__).parent / ami_path
-    if not ami_path.exists():
-        raise FileNotFoundError(
-            f"AMI transcript not found at {ami_path}. "
-            "Add a .txt file from the AMI dataset to data/ami_transcripts/"
-        )
-    ami_raw = ami_path.read_text()
-    ami_style_notes = extract_style(ami_raw)
-    print(f"      Style notes extracted ({len(ami_style_notes)} chars)")
+    ami_style_notes = load_ami_style(config)
 
     # ── Agent 1: Content Curation ───────────────
     print("[2/5] Agent 1 — Content Curation...")
@@ -132,45 +185,9 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
           f"{', '.join(s.name for s in casting.speakers)}")
 
     # ── Agents 3 + 4: Filming and QA ────────────
-    # Film, QA, and re-film with QA's issues if it fails.
-    # Every attempt is QA'd, so the saved scores match the saved transcript.
-    qa_history = []
-    qa_feedback_text = None
-    for attempt in range(1, config["max_refilms"] + 2):
-        label = "Filming" if attempt == 1 else f"Re-filming (attempt {attempt})"
-        print(f"[4/5] Agent 3 — {label}...")
-        filming = agent3.run(
-            content=content,
-            casting=casting,
-            ami_style_notes=ami_style_notes,
-            qa_feedback=qa_feedback_text,
-        )
-        print(f"      Generated {len(filming.transcript)} turns")
-        print(f"      Seed location: {filming.seed_location}")
-
-        print(f"[5/5] Agent 4 — QA (attempt {attempt})...")
-        qa = agent4.run(
-            filming=filming,
-            content=content,
-            casting=casting,
-            ami_style_notes=ami_style_notes,
-        )
-        scores = {key: getattr(qa, key) for key in APPROVAL_THRESHOLDS}
-        qa_history.append(QAAttempt(
-            attempt=attempt,
-            num_turns=len(filming.transcript),
-            scores=scores,
-            spoken_share=qa.spoken_share,
-            approved=qa.approved,
-            issues=qa.issues,
-        ))
-        print(f"      Scores: {scores}")
-        print(f"      Spoken-sounding turns: {qa.spoken_share}")
-        print(f"      Approved: {qa.approved}")
-
-        if qa.approved:
-            break
-        qa_feedback_text = "\n".join(f"- {issue}" for issue in qa.issues)
+    filming, qa, qa_history = film_with_qa(
+        content, casting, ami_style_notes, config["max_refilms"],
+    )
 
     qa_cycles = len(qa_history)
 
@@ -248,12 +265,16 @@ def cli():
     task = get_task(args.task)
     if args.dry_run:
         print(json.dumps(task, indent=2, ensure_ascii=False))
-        print("Single-meeting runner supported:", task["input_type"] == "single_meeting")
+        print("Runner:", "single meeting" if task["input_type"] == "single_meeting"
+              else f"multi_meeting.py ({task['input_type']})")
         return
-    try:
-        require_single_meeting(task)
-    except ValueError as exc:
-        parser.error(str(exc))
+    if task["input_type"] != "single_meeting":
+        # Plan + meeting, paired meetings, sequences, seniority pairs.
+        from multi_meeting import run_series
+        series = run_series({**CONFIG, "task_id": args.task})
+        if not series["approved"]:
+            raise SystemExit(2)
+        return
     result = run_pipeline({**CONFIG, "task_id": args.task})
     print_transcript(result)
     if not result.qa_feedback.approved:
