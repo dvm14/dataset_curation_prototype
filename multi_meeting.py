@@ -53,7 +53,25 @@ SERIES_THRESHOLD = 4
 SENIOR, JUNIOR = FunctionalRole.PI, FunctionalRole.PHD_STUDENT
 
 
-def plan_series(task, research_problem, disciplines):
+def plan_series(task, research_problem, disciplines, retries=1):
+    """Plan the set; a malformed plan is re-requested before anything is filmed."""
+    for attempt in range(retries + 1):
+        try:
+            return _plan_once(task, research_problem, disciplines)
+        except ValueError as exc:
+            if attempt == retries:
+                raise
+            print(f"      (series plan rejected, asking again: {exc})")
+
+
+def meeting_group(meeting):
+    """Disciplines (or specialties) of one paired meeting, or None if unusable."""
+    raw = meeting.get("disciplines") or meeting.get("specialties") or []
+    group = [d.strip() for d in raw if isinstance(d, str) and d.strip()]
+    return group if 2 <= len(group) <= 4 and len(set(group)) == len(group) else None
+
+
+def _plan_once(task, research_problem, disciplines):
     raw = call_llm_json(
         SERIES_PLAN_PROMPT,
         json.dumps({
@@ -77,6 +95,13 @@ def plan_series(task, research_problem, disciplines):
                 raise ValueError(f"Series planner: a meeting has no {key}.")
         if not isinstance(m.get("ground_truth"), dict):
             m["ground_truth"] = {"must_contain": m["instruction"]}
+    if task["input_type"] == "paired_meetings":
+        # Checked here, before filming: a within-field meeting once came back
+        # as ["neuroscience"] and the run crashed after meeting A was paid for.
+        for m in meetings:
+            if not meeting_group(m):
+                raise ValueError(f"{m['label']}: needs 2-4 distinct disciplines or "
+                                 f"specialties, got {m.get('disciplines')}")
     if task["input_type"] == "plan_and_meeting" and not str(raw.get("plan_document", "")).strip():
         raise ValueError("Series planner returned no plan_document.")
     if not isinstance(raw.get("ground_truth"), dict):
@@ -108,6 +133,10 @@ def meeting_content(task, plan, meeting, index, total, disciplines, distance, ea
     part = (f"Part {index} of {total} of a multi-part sample for this benchmark task: "
             f"{task['benchmark_task']}\nJudge this transcript only on its own part: "
             f"{meeting['instruction']}")
+    if task["input_type"] == "seniority_pair":
+        part += ("\nSeniority labels are attached to the speakers afterwards, in two "
+                 "swapped versions; the dialogue itself should not show seniority. "
+                 "Do not mark it down for the labels being absent from the turns.")
     return ContentCurationOutput(
         research_problem=plan.get("research_problem") or "",
         disciplines=disciplines,
@@ -180,9 +209,7 @@ def run_series(config):
     for index, meeting in enumerate(plan["meetings"], 1):
         group = disciplines
         if kind == "paired_meetings":
-            group = [d for d in meeting.get("disciplines") or [] if isinstance(d, str) and d.strip()]
-            if not 2 <= len(group) <= 4:
-                raise ValueError(f"{meeting['label']}: paired meetings need 2-4 disciplines, got {group}")
+            group = meeting_group(meeting)
         content = meeting_content(task, plan, meeting, index, total, group,
                                   distance, earlier if kind != "paired_meetings" else [])
 

@@ -18,9 +18,10 @@ from prompts import series_prompt
 
 
 class SeriesFake(FakeLLM):
-    def __init__(self, series_scores=5, **kw):
+    def __init__(self, series_scores=5, bad_first_plan=False, **kw):
         super().__init__(term_task=False, **kw)
         self.series_scores = series_scores
+        self.bad_first_plan = bad_first_plan
         self.contexts = []
 
     def json(self, system, user, max_tokens=4000, model=None):
@@ -39,6 +40,8 @@ class SeriesFake(FakeLLM):
             if kind == "paired_meetings":
                 meetings[0]["disciplines"] = ["hydrology", "economics", "anthropology"]
                 meetings[1]["disciplines"] = ["cognitive neuroscience", "computational neuroscience"]
+                if self.bad_first_plan and self.calls["series_plan"] == 1:
+                    meetings[1]["disciplines"] = ["neuroscience"]
             plan = {"research_problem": "flood risk", "project_context": "Durham team.",
                     "meetings": meetings, "ground_truth": {"answer": "x"}}
             if kind == "plan_and_meeting":
@@ -142,3 +145,14 @@ def test_cli_routes_multi_input_tasks(monkeypatch):
     monkeypatch.setattr("sys.argv", ["main.py", "--task", "adaptation_01"])
     base.main.cli()
     assert called["cfg"]["task_id"] == "adaptation_01"
+
+
+def test_bad_paired_plan_is_replanned_before_filming():
+    out, fake = run_series("integration_02", bad_first_plan=True)
+    assert fake.calls["series_plan"] == 2
+    assert len(out["meetings"][1]["speakers"]) == 2
+
+
+def test_seniority_part_tells_qa_labels_come_later():
+    out, _ = run_series("other_02")
+    assert "labels are attached to the speakers afterwards" in out["meetings"][0]["seed_spec"]["benchmark_task"]

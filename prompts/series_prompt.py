@@ -18,8 +18,11 @@ is simulated separately by speaker agents, so give each meeting:
   raises what, which facts are stated, what stays unconnected or unresolved.
   Only this meeting's part; facts from earlier meetings are carried over by
   the team's memory of them, not repeated here.
-- "ground_truth": what this one transcript must contain, so it can be
-  checked on its own (facts, positions, decisions). Values only, no dialogue.
+- "ground_truth": only the 2-5 points from this meeting that the overall
+  answer depends on (a fact, a position, a decision), at the level of detail
+  the evaluated AI needs. Not incidental details such as exact phrasing,
+  who credits whom, or every number: each meeting is checked against this,
+  and over-specified points fail transcripts that do the task. No dialogue.
 
 Use concrete, consistent details across meetings: same project, same people
 (unless the task needs different groups), dates in order, numbers that agree.
@@ -35,7 +38,8 @@ Return JSON:
  "project_context": "who the team is and where the project stands, 2-3 sentences",
  "plan_document": "only if STRUCTURE asks for one, else omit",
  "meetings": [{"label": "...", "disciplines": ["only if STRUCTURE says each
-   meeting has its own group"], "meeting_context": "...", "instruction": "...",
+   meeting has its own group: 2-4 entries; for a within-field meeting list
+   the specialties, never just the field"], "meeting_context": "...", "instruction": "...",
    "ground_truth": {...}}],
  "ground_truth": {...}}
 """
@@ -80,7 +84,8 @@ STRUCTURES = {
         "assumption, stated plainly in meeting 1 (e.g. 'the clinic will "
         "share de-identified records from March'). In meeting 2, about "
         "something else, one speaker mentions in passing a fact that "
-        "undermines that assumption. Nobody in meeting 2 connects it to the "
+        "undermines that assumption. Meeting 1 does not plan a fallback for "
+        "that assumption. Nobody in meeting 2 connects the remark to the "
         "plan, questions it, or changes the plan. Overall ground_truth: the "
         "assumption (meeting 1), the passing remark (meeting 2, speaker), why "
         "it conflicts, and how the plan should be updated."
@@ -121,6 +126,10 @@ is there; 3 = some points need inference; 1 = key points are missing.
 series_compliance (1-5): does the set satisfy the benchmark task's structure
 (e.g. the links between meetings exist, the unnoticed conflict stays
 unnoticed, the two versions differ only as required)? 5 = fully; 1 = not.
+If the task needs something to stay unnoticed or unresolved, read every
+turn of the meeting where it appears: if anyone links it to the earlier
+plan, questions it, or starts working around it, series_compliance is at
+most 2, however well the rest fits.
 
 List concrete problems in issues, citing meeting labels and turn numbers.
 Return JSON: {"series_recoverable": n, "series_compliance": n, "issues": ["..."]}
