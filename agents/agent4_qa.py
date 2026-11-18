@@ -14,7 +14,9 @@ import statistics
 from schema import QAFeedback, FilmingOutput, ContentCurationOutput, CastingOutput
 from utils.llm import call_llm_json
 from utils.seed_terms import seed_terms, term_uses, seed_speakers, count_mentions, _stem
-from prompts.agent4_prompt import SYSTEM_PROMPT, SEED_USE_PROMPT, SPOKEN_CHECK_PROMPT
+from prompts.agent4_prompt import (
+    SYSTEM_PROMPT, SEED_USE_PROMPT, SPOKEN_CHECK_PROMPT, MOVE_CHECK_PROMPT,
+)
 
 
 # Minimum rubric score for approval. The seed criteria are stricter:
@@ -87,6 +89,57 @@ def spoken_check(transcript):
     }
     written = [i for i in numbers if labels.get(i) != "spoken"]
     return round(1 - len(written) / len(numbers), 2), written
+
+
+# Moves that explore rather than settle or plan.
+EXPLORING_MOVES = {"question", "idea", "observation", "concern"}
+
+
+def move_check(transcript):
+    """
+    Meetings came out as everyone turning each concern into a solution
+    and volunteering to build it. Label each turn's main move and report
+    how much of the meeting explores. Returns a dict for QAFeedback.
+    """
+    if not transcript:
+        return {}
+    turns_text = "\n".join(
+        f"[{i}] {t.speaker}: {t.text}"
+        for i, t in enumerate(transcript, start=1)
+    )
+    raw = call_llm_json(MOVE_CHECK_PROMPT, turns_text, max_tokens=3000)
+    labels = {
+        item.get("turn"): item
+        for item in raw.get("labels", []) if isinstance(item, dict)
+    }
+
+    moves = {}
+    for i in range(1, len(transcript) + 1):
+        move = str(labels.get(i, {}).get("move", "unlabeled"))
+        moves[move] = moves.get(move, 0) + 1
+    # Backchannels aren't contributions either way.
+    substantive = [
+        i for i in range(1, len(transcript) + 1)
+        if labels.get(i, {}).get("move") != "backchannel"
+    ]
+    exploring = [
+        i for i in substantive
+        if labels.get(i, {}).get("move") in EXPLORING_MOVES
+    ]
+    return {
+        "exploration_share": (
+            round(len(exploring) / len(substantive), 2) if substantive else None
+        ),
+        "turn_moves": moves,
+        "volunteer_turns": [
+            i for i in range(1, len(transcript) + 1)
+            if labels.get(i, {}).get("volunteers") is True
+        ],
+        "unsure_turns": [
+            i for i in range(1, len(transcript) + 1)
+            if labels.get(i, {}).get("unsure") is True
+        ],
+    }
 
 
 # Terminology tasks only. Highest task_compliance allowed when a seed turn
@@ -260,6 +313,7 @@ Return JSON:
         **scores,
         spoken_share=spoken_share,
         written_turns=written_turns,
+        **move_check(filming.transcript),
         evidence_turns=[
             t for t in raw.get("evidence_turns", []) if isinstance(t, int)
         ],

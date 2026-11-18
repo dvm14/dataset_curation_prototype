@@ -121,6 +121,10 @@ class FakeLLM:
             self.calls["spoken"] += 1
             return {"labels": []}
 
+        if system.startswith(agent4_prompt.MOVE_CHECK_PROMPT):
+            self.calls["moves"] += 1
+            return {"labels": []}
+
         raise AssertionError(f"Unrecognised prompt: {system[:80]!r}")
 
 
