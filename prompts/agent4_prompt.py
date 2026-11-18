@@ -67,6 +67,12 @@ naturalness — count these realism signals:
   - a garbled or self-contradicting statement that nobody reacts to
   - no concrete anchors at all (place, institution, dataset, date, small
     talk); the meeting is purely on-agenda
+  - nobody explores: most turns turn the last concern straight into a
+    solution or volunteer for the work ("I can set up..."), questions
+    are only requests ("could your system do X?"), and nobody asks
+    something they don't know or admits needing to check. When the task
+    calls for planning or owners, assignments are expected, but people
+    still ask and don't know things
 
 speaker_distinctness:
   1 — speakers are cartoonish or interchangeable
@@ -122,6 +128,40 @@ Return JSON:
 {"turns": [{"turn": n, "sense": "<discipline>" | "unclear" | "none",
   "comments_on_term": true | false, "renames": true | false,
   "why": "a few words"}]}
+"""
+
+
+MOVE_CHECK_PROMPT = """
+You label what each turn of a research meeting transcript does. Give
+each turn its single main move:
+- "question": asks something the speaker doesn't know and wants to
+  find out (why another field does something, what someone has seen,
+  what would happen if). Not a request for someone to do something
+- "request": asks someone whether they can or will do something
+  ("could your system handle X?", "can you send Y?")
+- "idea": thinks out loud: speculates, wonders, offers a hunch or a
+  half-formed possibility without settling it
+- "observation": shares something seen or experienced: an example from
+  fieldwork or data, something that happened, a surprising result
+- "concern": raises a worry or problem without solving it in the turn
+- "answer": explains or answers what was asked
+- "proposal": says how something should be done or designed
+- "commitment": the speaker offers or agrees to do a piece of work, or
+  assigns it ("I can set up...", "I'll draft...", "Priya can take...")
+- "agreement": mainly agrees or accepts what was said
+- "backchannel": a listener noise or few-word reaction ("mm-hm", "oh,
+  really?")
+
+Also mark for each turn:
+- "volunteers": true if the turn offers or assigns a piece of work
+  anywhere in it, even if that isn't its main move
+- "unsure": true if the speaker admits not knowing, needing to check,
+  or being unsure about something that matters to the point (a hedge
+  like "I think" alone doesn't count)
+
+Return JSON:
+{"labels": [{"turn": n, "move": "...", "volunteers": true | false,
+  "unsure": true | false}]}
 """
 
 

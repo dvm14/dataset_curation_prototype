@@ -1,0 +1,306 @@
+{
+  "transcript_id": "531e03dc",
+  "generated_at": "2026-11-18T12:01:32.755212",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short-to-medium turns during setup and discussion, shifting to long, structured monologues for presentations. Small overlaps, delayed responses, and fragmented audio-like phrasing are common, especially in greetings and transitions. Speakers use frequent fillers and hesitations\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cI mean,\u201d repeated words, false starts, and self-corrections\u2014and often hedge claims with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d or \u201cwe\u2019re interested in.\u201d Formality is moderate: introductions and talks are professional, but the surrounding chat is warm, joking, and informal. Questions are usually framed politely and tentatively, often prefaced with praise or disclaimers such as having a \u201cquick\u201d or \u201cnaive\u201d question. Participants build on one another by restating part of a prior point before asking for clarification, while disagreement is indirect and exploratory rather than confrontational. Responses tend to acknowledge the question positively, admit uncertainty openly, and identify open questions rather than assert definitive conclusions.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "computer science",
+    "sociology",
+    "ecology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Priya Nanduri",
+      "discipline": "computer science",
+      "functional_role": "project manager",
+      "background": "A computer scientist with 9 years of experience building mobile data-collection systems and applied statistical models for public-health and civic research. She has led projects involving GPS traces, app-based surveys, missing-data diagnostics, sampling weights, and fairness checks for predictive and explanatory models. For this study, she oversees the survey app, consent flow, data security, integration of neighborhood-level measures, and the analysis plan for the May 2027 pilot.",
+      "distinct_perspective": "Priya treats the study design as a measurement and inference pipeline: who can access the app, what the phone records, which observations are missing, and how modeling choices affect estimated associations between green-space exposure and mental-health outcomes. She is attentive to systematic distortions introduced by device ownership, participation patterns, location accuracy, question wording, and model specification, while relying on Mateo and Lin to establish the social and ecological validity of the variables.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Mateo Alvarez",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A sociology postdoctoral researcher with 5 years of experience conducting mixed-methods research on neighborhood inequality, housing insecurity, public-space governance, and health. His work combines semi-structured interviews, community-based recruitment, survey interpretation, and qualitative coding, often in partnership with tenant groups and local nonprofits. He will lead resident and organization interviews and advise on recruitment, questionnaire wording, and interpretation of reported park access and use.",
+      "distinct_perspective": "Mateo approaches green space as a socially governed resource rather than a neutral physical amenity. He expects access, comfort, safety, and use to be shaped by race, class, immigration status, policing, disability, work schedules, and residents' prior experiences with public institutions. He focuses on how recruitment practices, interviewer assumptions, and institutional narratives may affect whose accounts are heard and how residents are represented.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Lin Chen",
+      "discipline": "ecology",
+      "functional_role": "principal investigator",
+      "background": "An urban ecologist and principal investigator with 14 years of experience studying how vegetation structure, heat exposure, maintenance regimes, and biodiversity vary across cities. She has coordinated field audits of parks, street-tree corridors, and vacant-lot greening projects using standardized observation protocols, canopy measurements, photographic records, and GIS-based site inventories. She will coordinate repeated field observations across the three neighborhoods before and during the May 2027 pilot.",
+      "distinct_perspective": "Lin distinguishes the presence of greenery from the ecological and usable qualities of a green space. She wants observations to capture canopy cover, shade, vegetation condition, species composition, maintenance, seating, permeability, noise, and the difference between a mapped park and a space residents can actually occupy. She is careful not to infer residents' mental-health experiences from ecological indicators alone and looks to the social-science and computing teams to connect site conditions to lived exposure and reported outcomes.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Generate a natural planning-meeting transcript. Priya (computer science) and Mateo (sociology) must each use the term \"bias\" while discussing the study design, but they must use it in their discipline-specific senses. Priya knows and explains bias as systematic error in data, measurement, sampling, or model outputs that can distort estimates or predictions. Mateo knows and explains bias as socially patterned prejudice, unequal treatment, or assumptions affecting how people are perceived, recruited, questioned, or represented. Lin may participate in the broader discussion but must not provide an additional discipline-specific definition of \"bias.\" The participants should discuss ordinary study-planning details, including the May 2027 pilot, recruitment, the mobile survey, interviews, and field observations. The different meanings should emerge clearly from the conversation without anyone explicitly announcing that this is a jargon test. Do not resolve the two meanings into a single definition; preserve the moment in which the shared word has discipline-specific meanings.",
+    "ground_truth": {
+      "term": "bias",
+      "meanings": [
+        {
+          "discipline": "computer science",
+          "meaning": "Systematic distortion or error in data collection, measurement, sampling, or model behavior that can skew estimates, classifications, or predictions."
+        },
+        {
+          "discipline": "sociology",
+          "meaning": "Socially patterned prejudice, unequal treatment, or taken-for-granted assumptions that shape how people are perceived, recruited, questioned, or represented."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 10-11. Mateo (sociology) says bias can creep in when a daytime observer's inference about who belongs shapes an audit variable, indicating socially patterned assumptions/prejudice affecting representation. Priya (computer science) warns that inferring safety or belonging from visits would bake observer and participation bias into the exposure measure, indicating systematic measurement/sampling distortion. Both use the exact term \"bias\" in the measured turns; Lin provides no additional definition. However, the transcript does not mention the required May 2027 pilot.",
+  "ground_truth": {
+    "term": "bias",
+    "meanings": [
+      {
+        "discipline": "computer science",
+        "meaning": "Systematic distortion or error in data collection, measurement, sampling, or model behavior that can skew estimates, classifications, or predictions."
+      },
+      {
+        "discipline": "sociology",
+        "meaning": "Socially patterned prejudice, unequal treatment, or taken-for-granted assumptions that shape how people are perceived, recruited, questioned, or represented."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Lin Chen",
+      "text": "Hi, everyone\u2014can you hear me okay? Great. Um, I thought today we could get the spatial unit and the basic measures aligned before we get too far into the pilot logistics. For the field side especially, I need to know whether I\u2019m auditing parks and lots as sites, street segments, or actual walking routes, because canopy on a map can look quite, quite different from the shade and access somebody encounters."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "I\u2019d be wary of making the site the only unit. In the early conversations, people described the same park very differently depending on when they could go and the route there, especially after work or with kids. Could the audit distinguish the site itself from the approach route, and maybe capture time-of-day conditions rather than- rather than treating accessibility as fixed?"
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "For the app, I\u2019d avoid making one GPS point stand in for access. We can link a reported visit to a site or route category, but I want to ask a short follow-up about when they went and whether they walked there, because otherwise a missed boundary could look like a bad report. Lin, could your audit give us separate fields for the approach route and the site- the space itself?"
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "Mm, yeah."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "I can split it that way. A site sheet for the park or lot, then a short approach-segment sheet for the likely walking entry. I'd want the approach tied to the route category Priya is using, though, because otherwise we could audit a pleasant block that nobody, nobody actually takes. And we should probably do at least some late-afternoon repeats. The canopy cover alone really missed the walking-side shade in the walkthroughs."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That works. I can have the app's visit prompt use a broad route category instead of acting like we know their exact path, and then link it to the matching approach audit. Lin, for those late-afternoon repeats, how stable do you expect the conditions to be from week to week? I need to know if one score can reasonably sit alongside responses collected across the whole pilot."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "The structural features should be pretty stable over a few weeks, like path surface, gate status, seating, and major vegetation condition, so those can have a baseline score. But shade, noise, litter, and whether the space feels occupiable can shift by hour and maintenance cycle. I'd keep those as dated observation fields rather than collapsing them into one number. I'm less sure we can safely get enough evening observations to treat those as systematic. Actually, we'd need to check staffing first."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That distinction helps. I can keep the audit date and time in the linkage, so we don't imply somebody's response saw conditions from a different week. And for the baseline fields, we can use the stable score. Maybe for the pilot, we treat evening observations as a coverage question first, like how many sites and weeks we can actually observe. I was going to say build a full time-of-day measure, but not around them yet."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "I can treat evening as a small stratified set for the pilot, enough to see whether the day-versus-evening difference is large and whether staff can do it safely, but not enough to claim full coverage. Mateo, when people say a place is unusable after work, do they usually mean the route, the gate or programming, or something else? That would help me decide what to flag in those, those repeats."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "It\u2019s usually a bundle, and it varies by person. Gate hours or poor lighting, sure, but also whether someone expects to be questioned, feels watched, or can only go with children after a long shift. I\u2019d flag those, but I\u2019d be careful not to make a daytime observer\u2019s inference about who belongs there into an audit variable. That\u2019s a place bias can creep in. The interviews can help us interpret what the evening repeats don\u2019t..."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That\u2019s a useful boundary for the app too. We shouldn\u2019t infer felt safety or belonging from whether someone did or didn\u2019t visit, because that would bake observer and participation bias into the exposure measure. Mateo, in the interviews, have people said whether they\u2019d answer a quick phone prompt while they\u2019re out or later at home? That affects what recall window we can reasonably use."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "A few people said they'd answer later, not while they were in the space, especially if they were with children, commuting, or worried about drawing attention to themselves. I think a same-evening prompt with a next-day fallback might be less burdensome than trying to catch the visit in real time. But I'd want to ask directly in the first interviews. The people willing to use the app may not be the- may not be the ones for whom an in-the-moment prompt is hardest."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "Hm, that makes sense."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "I think we should design for that, rather than treat a delayed response as a failure. We could do a same-evening notification, then a next-day recall prompt that asks about the most recent visit and roughly when it happened. But I want to keep a clear timestamp for when they answered, or rather, when they answered versus when they say the visit occurred, so we can see whether recall is changing the reports."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "Yeah, and the fallback needs an explicit option for no visit, but it can't read like disinterest. Maybe it asks what, um, got in the way, like time, getting there, physical access, not feeling comfortable, or something else, with multiple selections and a skip, since those reasons can overlap."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "And for the analysis, I\u2019d keep that as a separate barrier outcome. I wouldn\u2019t fold it into \u201cnon-use.\u201d Multiple selections and skip matter, otherwise we\u2019ll mistake a missing answer or a complicated evening for a preference. We should also log whether the fallback was answered that same evening or the next day, since those groups may not be comparable."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "Before we settle the app flow, Priya, can I ask what it requires up front? Location permission, a smartphone with data, account creation, anything like that? I'm worried the people most likely to use the next-day option may also be the ones screened out or, um, dropping off before we ever see that barrier question."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "We should not require location permission, a data plan, or account creation just to enroll and answer the core survey. The app can work with a study code and store responses offline until it connects. Location would be an optional, separate consent, and I need to confirm with security whether a coarser, coarser location setting still lets us calculate the distance categories we need. For the pilot, I'll make a participation funnel so we can see exactly where people are excluded or drop off."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "That\u2019s reassuring. Can the funnel distinguish people who decline optional location from people who never finish enrollment or who stop responding later? Those are socially different processes. And I\u2019d also want to see how the study-code setup lands with the community organizations, whether it feels independent enough that residents don\u2019t connect participation to services or eligibility..."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Absolutely. I\u2019ll separate consented-but-no-location, enrollment not completed, and later survey attrition, instead of using one overall completion rate. And on the study code, I\u2019d like Mateo\u2019s read from the organizations before we finalize the language, because technically simple can still feel like it\u2019s\u2014 tied to a service provider."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "Yeah, I\u2019ll raise it with them as a question about perceived independence, not just whether they\u2019ll distribute a link. I\u2019m particularly interested in whether recruitment through a tenant group versus, say, a service provider changes who feels safe declining or participating\u2014and we may need more than one channel if it does."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That matters for the funnel too. We should tag the recruitment channel without making it identifiable, so we can see whether consent, location opt-in, and follow-up differ by channel. The pilot probably needs to test at least two channels in each neighborhood. Otherwise, if response is low- if we only use one channel, we won\u2019t know whether it\u2019s the app or who we reached."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "Two channels per neighborhood feels like the minimum. I\u2019d want the scripts documented too, and who delivers them. A tenant-group invitation and a provider invitation can lead to different consent patterns, even with the same link, and that\u2019s not just a recruitment nuisance. It shapes whose park experiences we\u2019re able to interpret."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Yeah, we can record channel, inviter type, and script version as separate, non-identifying fields. Then the pilot summaries can show where patterns diverge\u2014who starts, who opts into location, who answers the fallback\u2014without pretending recruitment channel is random. I\u2019d rather see that early than pool everybody and call the differences neighborhood effects."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "And it\u2019ll help us keep recruitment effects separate from neighborhood differences in the exposure data."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "I think we\u2019ve covered what I needed for today. I\u2019ll carry this into the pilot flow, and we can pick up the open pieces next time. Thanks, both."
+    },
+    {
+      "speaker": "Mateo Alvarez",
+      "text": "All right, take care, both."
+    },
+    {
+      "speaker": "Lin Chen",
+      "text": "Thanks\u2014bye, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      10,
+      11,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by highly polished, agenda-driven turns: most substantive turns present a complete concern, explanation, and proposed next step, especially Priya's turns 16, 18, 20, 22, and 24.",
+      "Disfluencies are present but often feel inserted into otherwise finished prose (for example, repeated words and dash cutoffs in turns 2, 3, 8, 18, and 22), rather than arising organically from overlapping conversational thought.",
+      "The discussion is almost entirely on-agenda and lacks concrete incidental anchors such as a specific institution, local place name, date reference beyond the supplied pilot context, or small talk after the opening.",
+      "Turn 26 functions as a tidy meeting-minutes-style close ('covered what I needed,' 'carry this into the pilot flow,' 'open pieces next time'), which contributes to a scripted feel.",
+      "Speaker distinction is strong by disciplinary contribution, but Priya and Mateo sometimes share similarly polished planning language; more idiosyncratic phrasing or interactional differences would make them easier to identify without disciplinary context."
+    ],
+    "seed_uses": [
+      {
+        "turn": 10,
+        "sense": "sociology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to observer assumptions about who belongs in the space."
+      },
+      {
+        "turn": 11,
+        "sense": "computer science",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to observer and participation distortion in an exposure measure."
+      },
+      {
+        "turn": 12,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.2,
+    "turn_moves": {
+      "proposal": 11,
+      "request": 1,
+      "backchannel": 3,
+      "commitment": 4,
+      "question": 4,
+      "answer": 2,
+      "observation": 1,
+      "agreement": 2
+    },
+    "volunteer_turns": [
+      5,
+      9,
+      18,
+      20,
+      21,
+      24,
+      26
+    ],
+    "unsure_turns": [
+      7,
+      18
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.2,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by highly polished, agenda-driven turns: most substantive turns present a complete concern, explanation, and proposed next step, especially Priya's turns 16, 18, 20, 22, and 24.",
+        "Disfluencies are present but often feel inserted into otherwise finished prose (for example, repeated words and dash cutoffs in turns 2, 3, 8, 18, and 22), rather than arising organically from overlapping conversational thought.",
+        "The discussion is almost entirely on-agenda and lacks concrete incidental anchors such as a specific institution, local place name, date reference beyond the supplied pilot context, or small talk after the opening.",
+        "Turn 26 functions as a tidy meeting-minutes-style close ('covered what I needed,' 'carry this into the pilot flow,' 'open pieces next time'), which contributes to a scripted feel.",
+        "Speaker distinction is strong by disciplinary contribution, but Priya and Mateo sometimes share similarly polished planning language; more idiosyncratic phrasing or interactional differences would make them easier to identify without disciplinary context."
+      ]
+    }
+  ]
+}

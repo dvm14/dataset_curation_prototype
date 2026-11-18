@@ -7,6 +7,7 @@ round, each agent bids for the floor and the strongest bid speaks.
 
 import json
 import random
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 
 from schema import (
@@ -46,7 +47,8 @@ WORDS_PER_MINUTE = 150
 
 # Word budget per turn type. A turn more than LENGTH_SLACK over its
 # budget is regenerated once, shorter.
-WORD_LIMITS = {"respond": 80, "brief": 15, "interject": 40, "reaction": 8}
+WORD_LIMITS = {"respond": 80, "brief": 15, "interject": 40, "reaction": 8,
+               "close": 35, "goodbye": 8}
 LENGTH_SLACK = 1.5
 
 TURN_NOTES = {
@@ -72,6 +74,21 @@ TURN_NOTES = {
         "what they said, don't add a point, and don't stamp approval "
         "(\"exactly\", \"agreed\", \"that works\")."
     ),
+    # The meeting used to just stop after the last substantive turn.
+    # No quoted example phrase: every closing copied it word for word.
+    "close": (
+        "You're ending the meeting now. Signal in your own words that "
+        "you're stopping, the way people do. Maybe add one loose next step "
+        "or when you'll talk next, and thanks. One or two short sentences. "
+        "Don't recap what was decided, don't raise anything new, and don't "
+        "assign tasks or state decisions that weren't already made in the "
+        "meeting."
+    ),
+    "goodbye": (
+        "The meeting is ending. Say a quick goodbye in a few words, in "
+        "your own way. Don't add a point, and don't repeat the wording of "
+        "anyone who has just said goodbye."
+    ),
 }
 BID_INTENTS = ("respond", "brief", "interject")
 
@@ -84,6 +101,22 @@ Prepare shared meeting background and one private brief per participant.
 Use benchmark_task and seed_instruction to create the required situation.
 Do not assume that it involves terminology or a hidden problem.
 Give each speaker only their own knowledge, priorities, assumptions and concerns.
+Each brief also gives the speaker things they DON'T know, so the
+meeting has something to explore and not only positions to state:
+- one or two genuine open questions they'd like answered, at least one
+  about another participant's field or data (why they do something
+  that way, what they've seen, whether something would hold up)
+- one thing they're unsure about or would need to check before
+  committing to it
+- one concrete observation from their own recent work that puzzles
+  them or doesn't fit (a pilot result, something seen in the field,
+  an odd pattern in the data)
+Write these the way they'd sit in someone's own notes.
+Don't hand speakers ready-made solutions or a plan to propose, and
+don't say who should do what, unless the task itself calls for
+decisions, owners or dates.
+These questions and puzzles must not point at the task's hidden issue
+(e.g. a seed term's meaning, or the conflict the AI must find).
 Never mention testing or give everyone the full reference answer.
 For implicit conflicts, distribute facts without explaining the conflict.
 For explicit tasks, permit definitions, objections, decisions and assignments.
@@ -301,6 +334,66 @@ def pick_reactor(bids, transcript, winner, just_reacted):
         and name not in just_reacted
     ]
     return random.choice(reactors) if reactors else None
+
+
+# One is picked at random for each meeting that ends on its own. Left to
+# itself, almost every closing began "I think we're at time".
+CLOSING_STYLES = [
+    "you're out of time",
+    "you've covered what you needed to for today",
+    "you'll leave it there and follow up by email",
+    "the rest can wait until the next meeting",
+    "you'll let people go a few minutes early",
+]
+# A meeting that hits MAX_TURNS was told someone has a hard stop.
+HARD_STOP_CLOSING = "someone has to leave now"
+
+
+def close_meeting(speakers, content, shared_context, briefs,
+                  ami_style_notes, transcript, terms):
+    """
+    Turn-taking only decides when the talking stops, so without this the
+    transcript ended on whatever substantive turn came last. The person
+    who opened the meeting closes it (or, if they just spoke, whoever
+    has spoken most besides the last speaker), then one or two others
+    say goodbye. Closing turns don't count toward MAX_TURNS. A closing
+    turn that leaks is dropped rather than retried.
+    """
+    by_name = {speaker.name: speaker for speaker in speakers}
+    last = transcript[-1].speaker
+    closer = transcript[0].speaker
+    if closer == last:
+        counts = Counter(t.speaker for t in transcript if t.speaker != last)
+        closer = counts.most_common(1)[0][0] if counts else next(
+            name for name in by_name if name != last)
+
+    closing = []
+
+    def add(name, intent, note=""):
+        text = speak(
+            by_name[name], content, shared_context, briefs[name],
+            ami_style_notes, transcript + closing, intent, extra_note=note,
+        )
+        if check_seed_leak(content, transcript + closing, text, terms)[0]:
+            return False
+        closing.append(Turn(speaker=name, text=text))
+        return True
+
+    style = (HARD_STOP_CLOSING if len(transcript) >= MAX_TURNS
+             else random.choice(CLOSING_STYLES))
+    if not add(closer, "close", f"The reason you're ending: {style}."):
+        print("      Closing turn leaked, ending without it")
+        return transcript
+
+    others = [name for name in by_name if name != closer]
+    for name in random.sample(others, k=min(len(others), random.randint(1, 2))):
+        # Two goodbyes in a row came out identical.
+        said = "; ".join(f'"{t.text}"' for t in closing)
+        add(name, "goodbye", f"Already said: {said}")
+
+    print(f"      Closing: {closer} closes ({style}), "
+          f"{len(closing) - 1} goodbye(s)")
+    return transcript + closing
 
 
 def check_seed_leak(content, transcript, text, terms=()):
@@ -680,6 +773,12 @@ def run(
 
         if len(transcript) >= MAX_TURNS:
             break
+
+    if transcript:
+        transcript = close_meeting(
+            speakers, content, shared_context, private_briefs,
+            ami_style_notes, transcript, terms,
+        )
 
     if involved:
         missing = still_missing()

@@ -239,6 +239,25 @@ class QAFeedback(BaseModel):
         default_factory=list,
         description="Substantive turns labeled as reading like written prose"
     )
+    # how much the meeting explores rather than plans; not part of approval
+    exploration_share: float | None = Field(
+        default=None,
+        description="Share of non-backchannel turns whose main move is a "
+                    "question, idea, observation or open concern (0-1)"
+    )
+    turn_moves: dict[str, int] = Field(
+        default_factory=dict,
+        description="Count of turns per main move (question, proposal, "
+                    "commitment, ...)"
+    )
+    volunteer_turns: list[int] = Field(
+        default_factory=list,
+        description="Turns where a speaker offers or assigns a piece of work"
+    )
+    unsure_turns: list[int] = Field(
+        default_factory=list,
+        description="Turns where a speaker admits not knowing or needing to check"
+    )
     approved: bool = Field(
         description="True if transcript passes QA, False if re-filming needed"
     )
@@ -249,6 +268,7 @@ class QAAttempt(BaseModel):
     num_turns: int
     scores: dict[str, int] = Field(description="Rubric scores for this attempt")
     spoken_share: float | None = None
+    exploration_share: float | None = None
     approved: bool
     issues: list[str]
 
