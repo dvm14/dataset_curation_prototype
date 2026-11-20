@@ -1,0 +1,357 @@
+{
+  "transcript_id": "9a8059b4",
+  "generated_at": "2026-11-18T11:37:34.728045",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short-to-medium conversational turns before and after much longer, highly structured presentation turns. Early small talk is loose and overlap-prone, with frequent greetings, quick acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), repetitions, self-corrections, and occasional audio/logistics interruptions. Speakers hedge often with \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cI guess,\u201d and \u201cyou know,\u201d especially when speculating or answering questions. Formality is moderate: introductions and talk transitions are ceremonious, but the surrounding interaction is friendly, joking, and informal. Participants generally challenge ideas indirectly, framing concerns as \u201ca question,\u201d \u201cI\u2019m curious,\u201d or \u201chave you looked at\u2026,\u201d and presenters respond affirmingly before qualifying limits or uncertainty. Questions are usually prefaced by praise or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cquick question\u201d), then develop into multi-part, exploratory prompts. Technical speakers use repeated signposting, rhetorical questions, restatements, and simple verbal transitions to guide listeners through complex material.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "ecology",
+    "anthropology",
+    "neuroscience"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Okafor",
+      "discipline": "ecology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Okafor is a postdoctoral landscape ecologist with four years of post-PhD research on urban habitat networks, following six years of graduate fieldwork in Midwestern and East Coast cities. She combines GIS-based land-cover mapping, street-level vegetation audits, bird and pollinator surveys, and patch-network models to study how parks, tree corridors, gardens, and restored vacant lots function as urban ecological systems.",
+      "distinct_perspective": "Maya treats green space as a spatially structured habitat network rather than a simple count of nearby parks. She wants the site-selection framework to distinguish area, vegetation quality, maintenance, and connectivity among green patches, while remaining cautious about how ecological indicators can be validly linked to residents' mental-health outcomes.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Luis Herrera",
+      "discipline": "anthropology",
+      "functional_role": "domain expert",
+      "background": "Dr. Herrera is a medical anthropologist with 14 years of community-based research experience in disinvested urban neighborhoods. His work uses participant observation, walking interviews, oral histories, neighborhood ethnography, and collaborative interview design to examine how housing insecurity, policing, caregiving, and public-space use shape everyday stress and well-being.",
+      "distinct_perspective": "Luis is concerned that formal measures of green-space access may mistake visibility or mapped proximity for usable, safe, socially meaningful space. He will press the team to learn how residents define a park, whether they feel able to use it, who controls it, and how histories of neglect or redevelopment affect what greening means locally. He is skeptical of protocols that treat neighborhood exposure as interchangeable across communities.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Priya Nanduri",
+      "discipline": "neuroscience",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Nanduri is a cognitive-affective neuroscience postdoctoral researcher with five years of experience studying stress, attention, and mood using resting-state fMRI, EEG, salivary cortisol, and validated symptom scales. Her recent work examines whether repeated environmental exposures are associated with changes in neural systems involved in emotion regulation and threat monitoring.",
+      "distinct_perspective": "Priya sees mental-health effects as potentially operating through stress physiology and brain systems supporting attention, affect regulation, and rumination. She wants measures that can relate residents' reported contact with green environments to symptom assessments and feasible neural or physiological data, while deferring to community and ecological experts about what counts as meaningful neighborhood exposure.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Create a planning-meeting transcript involving at least an ecologist and a neuroscientist, with an anthropologist participating in ordinary study-design discussion. The ecologist and neuroscientist must each use the word \"connectivity\" naturally and unambiguously in their own discipline-specific sense, without initially noticing that they mean different things. The ecologist knows connectivity as the degree to which green-space patches are physically linked or traversable for organisms; the neuroscientist knows connectivity as functional coupling or coordinated activity between brain regions measured from neural data. Keep the difference implicit rather than having participants explain or resolve it. Include concrete discussion of the proposed urban-green-space and mental-health study, but do not introduce any additional conflicting uses of technical terms that could obscure the target. No participant should state the benchmark task or provide a meta-analysis of the ambiguity.",
+    "ground_truth": {
+      "term": "connectivity",
+      "meanings": [
+        {
+          "discipline": "ecology",
+          "meaning": "The physical or ecological linkage among green-space patches that allows organisms, propagules, or ecological processes to move between them."
+        },
+        {
+          "discipline": "neuroscience",
+          "meaning": "Functional coupling or coordinated activity between brain regions, typically inferred from neural measurements such as fMRI or EEG."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 9 and 11: Dr. Maya Okafor uses \"connectivity\" for ecological/physical linkage and permeability among green-space patches and routes. Turn 13: Dr. Priya Nanduri explicitly uses \"connectivity\" to mean neural connectivity, i.e., coordinated functional activity between brain regions. The distinct meanings occur in an urban-green-space and mental-health planning discussion, with Dr. Luis Herrera participating in ordinary study-design discussion.",
+  "ground_truth": {
+    "term": "connectivity",
+    "meanings": [
+      {
+        "discipline": "ecology",
+        "meaning": "The physical or ecological linkage among green-space patches that allows organisms, propagules, or ecological processes to move between them."
+      },
+      {
+        "discipline": "neuroscience",
+        "meaning": "Functional coupling or coordinated activity between brain regions, typically inferred from neural measurements such as fMRI or EEG."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "Hi, everyone. Thanks for making time\u2014can you all hear me okay? Great. I was hoping today we could get clear on what we need to observe before we choose sites, because I don't think park acreage or nearest-park distance will capture the, the ecological differences among these neighborhoods."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Yeah, exactly. I\u2019d want us to separate what\u2019s present from what people can actually use day to day. On the preliminary walks by the garden cluster, caregivers kept calling the garden \u201cfor the school,\u201d while the little shaded step- the shaded stoop across the street was where people said they actually stopped and talked. So an amenities inventory would get that backwards."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "Mm, that's really important."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "Yes, and that is exactly why I would not want a single access measure. Luis, when residents say they \u201chave a park,\u201d are they usually naming the closest mapped park, or the place they actually use? For the ecological side, those can be very different networks\u2014especially where a road, fence, or poor maintenance breaks what looks connected on the map."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Usually, they name the place they can actually fit into a day, where a child can be watched and somebody they know is sitting, not necessarily the nearest park. I think we should ask that separately. What places count as green space to you, and where have you actually spent time this week? The gap between those answers may be what we need to explain."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "And for us, that gap may matter more than a generic exposure score. We could ask about usual routes and routine outdoor stops, not just visits, and pair that with brief repeated stress and affect ratings, because in our pilot, the more consistent signal was people whose outdoor time was built into daily, daily life. Luis, does a route-based prompt feel workable in interviews?"
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "It can work if we let people start with a typical day instead of handing them a route to account for. A caregiver might say, you know, \"I walk to school, then I wait on that stoop,\" and that gives us the route, plus who they're with and whether it feels available. But I'd want an option to do it seated, with a map or just a narrative, because walking interviews won't be comfortable or feasible for everybody, especially if...\u2014"
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "Right, that makes sense."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "That would also let us map the actual pedestrian network instead of assuming a straight-line buffer around each site. If people describe a route, we can note the road crossings, fenced edges, shade, and the small planted patches along it. Those may be the features that make a tree corridor function, or not function, as a connected green route. I\u2019m a little cautious, though, about calling that ecological connectivity without field checks."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "The field check has to include who can linger there, not just whether the planting is continuous. A route may be technically walkable, but then- but it may cross a block where people feel watched or unwelcome. I can build prompts around those breaks and ask local partners what observation on the housing-complex blocks would feel acceptable."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "For the site audit, I can keep two linked records. One is the physical permeability of the green network, so canopy gaps, crossings, fences, vegetation condition. And the other is the resident-reported social breaks along the same route. I wouldn't fold those into one connectivity score, but comparing them may show us where the aerial layer is, is misleading us, like on the east-side corridor."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "That split sounds right. I'd also want the social breaks to be resident-defined before we, we code them too tightly. Sometimes it's not a fixed feature, but a time of day or who happens to be on the block. I can test that in the interviews. Where along a usual route do you change your behavior, and what makes that place different?"
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "That time-of-day piece is useful for us too, because a place can be physically connected but not provide a reliable restorative exposure if people only move through it under stress. When I say connectivity, I mean neural connectivity, obviously, but it makes me wonder whether any small physiological subset should capture repeated routine contact across days rather than a single visit\u2014we'd otherwise be measuring current state more than the pattern of exposure."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "That seems sensible. For a subset, I could characterize routine-contact routes at two or three points over the study period, rather than treating the baseline audit as fixed. Pruning, lot maintenance, and garden access can change quickly. I just wouldn't infer that a corridor's ecological function is the mechanism for a stress result without keeping those measures separate."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "That gives us a more defensible time-varying exposure measure. I\u2019d like the brief symptom and momentary-stress sampling to line up with those route windows, maybe a few days at each wave, so we can separate a bad day from- so we can tell whether someone\u2019s usual outdoor contact has actually changed. The neural piece, if we do it at all, probably belongs after we see whether that repeated field protocol is tolerable."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "I can support that with repeat audits, but we should check what the city records can actually tell us. The land-cover layer may miss a lot that changes between waves, especially recently greened lots and maintenance work, so I'll check whether current parcel and maintenance records are available before we build the exposure measure around..."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Before those records start driving site selection, I should check them against what local partners say has actually changed in use or, I mean, in meaning. A lot that was recently greened can read as neighborhood care to one group and as a redevelopment signal to another, and that changes whether people will spend time there at all."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "I can treat those records as a change-detection lead rather than ground truth. We can flag parcels with recent work, then verify the vegetation condition, access, and maintenance in the field. For site selection, I think we need a mix that deliberately separates a large park, the garden-and-lot clusters, and the apparent tree corridor, even if their mapped green-area totals overlap."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "That mix would let us test whether routine contact, not just total greenness, is what tracks stress and mood. On the assessment side, I'd keep the core protocol light, with baseline symptom measures and then a few days of brief momentary ratings at each audit wave. Then we can use the site types to make sure we're not really just comparing park proximity, and..."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "Mm, okay."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Mm, and for those waves, can we avoid making participation depend on people being visibly out in the neighborhood at particular times? Some folks, especially around the complexes, may have caregiving constraints or may not want to be seen doing a study walk. I can check with partners whether seated route narratives and phone, phone check-ins would feel acceptable alongside the momentary ratings."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "The momentary ratings can be phone-based and completed wherever someone is, so we should be clear that they\u2019re sampling current stress and context, not checking that anyone went outside. We can ask whether they\u2019ve had routine outdoor contact since the last prompt without requiring a location trace, and then the seated route narrative gives us that richer exposure context."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "That feels much safer. I\u2019d add one open-ended check-in at each wave, something like, \u201cwas there a place outside that mattered to your day, or that you avoided?\u201d A yes/no contact item can miss the stoop, the bus-stop tree, or a change in who feels welcome. I\u2019ll talk with the partners this week about the complexes and what recruitment language won\u2019t make people feel monitored."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "And that open-ended item may also catch small sites that never show up in a park-access measure. I\u2019ll make sure our audit form can link any places residents name to the nearest patch or route segment, without assuming that named place is the ecological unit we score. Then we can see what\u2019s, what\u2019s being missed on the ground."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "That gives us a way to preserve what contact means without turning it into passive tracking. I can fold that open-ended check-in into the phone protocol and code it alongside the brief affect and stress ratings. We may find that a named place matters even on days when someone reports very, very little time outdoors. For this first round, I think that\u2019s more valuable than stretching for EEG."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Yeah, that\u2019s promising."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "I agree, it's better to keep the first round focused on repeatable field and route measures, and then..."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Okay, I think we should leave it there. I\u2019ll follow up by email once I\u2019ve spoken with the partners this week. Thanks, thanks everybody."
+    },
+    {
+      "speaker": "Dr. Maya Okafor",
+      "text": "Thank you, Luis. Take care, everyone."
+    },
+    {
+      "speaker": "Dr. Priya Nanduri",
+      "text": "Thanks, both\u2014bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      9,
+      11,
+      13
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turn 13 explicitly says, \"When I say connectivity, I mean neural connectivity, obviously,\" which violates the seed requirement that the differing meanings remain implicit and that participants not explain or resolve the ambiguity. It also fails to establish the required neuroscience meaning: functional coupling or coordinated activity between brain regions inferred from neural data.",
+      "The ecologist's uses are well supported in turns 9 and 11: Maya discusses a tree corridor and green network being physically connected or interrupted by crossings, fences, and canopy gaps. However, Priya's turn 13 does not define or operationalize neural connectivity through brain-region coupling, fMRI, EEG, or other neural measurements, so the full ground-truth meaning is not recoverable without outside knowledge.",
+      "Naturalness is limited by highly polished, agenda-focused turns. Many substantive turns are complete mini-arguments that immediately convert a concern into a protocol solution, especially turns 9-25. The transcript does include realistic repetitions, cutoffs, and brief acknowledgments, but the disfluencies often sit atop otherwise finished prose.",
+      "The discussion is almost entirely on-agenda and has few concrete social anchors beyond generic references to corridors, complexes, and local partners. Adding a small logistical aside, uncertainty-driven exploratory question, or less resolved exchange would make it feel less authored.",
+      "Turn 13's \"obviously\" is somewhat unnatural in context because no prior speaker has used connectivity in a neural sense; it draws attention to the intended ambiguity rather than allowing it to arise naturally.",
+      "Turn 9: comments on the seed term instead of using it (Discusses whether to label a green route ecological connectivity.)."
+    ],
+    "seed_uses": [
+      {
+        "turn": 9,
+        "sense": "ecology",
+        "comments_on_term": true,
+        "renames": false,
+        "why": "Discusses whether to label a green route ecological connectivity."
+      },
+      {
+        "turn": 10,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 11,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Uses connectivity score for physical green-network permeability."
+      },
+      {
+        "turn": 12,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 13,
+        "sense": "neuroscience",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Explicitly defines it as neural connectivity."
+      },
+      {
+        "turn": 14,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.19,
+    "turn_moves": {
+      "proposal": 9,
+      "observation": 1,
+      "agreement": 4,
+      "question": 2,
+      "concern": 1,
+      "commitment": 9,
+      "idea": 1,
+      "backchannel": 3
+    },
+    "volunteer_turns": [
+      10,
+      11,
+      12,
+      14,
+      16,
+      17,
+      18,
+      21,
+      23,
+      24,
+      25,
+      28
+    ],
+    "unsure_turns": [],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.85,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "Task-compliance failure: the required ambiguity must remain implicit and participants must not explain or resolve it. Priya explicitly identifies the competing meanings in turn 12: \"when Maya says connectivity, I\u2019d keep that distinct from neural connectivity,\" and Maya resolves the terminology in turn 13 by relabeling her measure \"ecological connectivity.\" This effectively supplies the benchmark answer inside the transcript rather than requiring the evaluated AI to infer it.",
+        "Turn 12 also states the neuroscience meaning too directly by linking neural connectivity to EEG/fMRI, while turn 13 confirms Maya's ecological sense. The seed requires natural use without initially noticing the different meanings; here the participants immediately notice and disambiguate them.",
+        "Naturalness is weakened by polished, complete, agenda-driven turns throughout. Most substantive turns present a concern, qualification, and tidy proposed response, particularly turns 9-14 and 21-29. The disfluencies are mostly surface-level insertions into otherwise edited prose.",
+        "The meeting has limited off-agenda texture or concrete contextual anchors beyond generic redevelopment and candidate sites. It proceeds unusually efficiently from concern to solution, with little genuine uncertainty or exploratory questioning outside narrowly framed design choices.",
+        "The transcript is substantially longer than necessary for the target ambiguity and spends most of its duration on repeat windows, saliva logistics, participation modes, and feasibility. Those topics are coherent but dilute the benchmark's central jargon evidence.",
+        "Turn 12: comments on the seed term instead of using it (Discusses distinguishing Maya's usage from neural connectivity.).",
+        "Turn 13: comments on the seed term instead of using it (Proposes labeling the ecological sense 'ecological connectivity.').",
+        "The neuroscience sense of the seed term never appears in a plain use of it."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "Turn 13 explicitly says, \"When I say connectivity, I mean neural connectivity, obviously,\" which violates the seed requirement that the differing meanings remain implicit and that participants not explain or resolve the ambiguity. It also fails to establish the required neuroscience meaning: functional coupling or coordinated activity between brain regions inferred from neural data.",
+        "The ecologist's uses are well supported in turns 9 and 11: Maya discusses a tree corridor and green network being physically connected or interrupted by crossings, fences, and canopy gaps. However, Priya's turn 13 does not define or operationalize neural connectivity through brain-region coupling, fMRI, EEG, or other neural measurements, so the full ground-truth meaning is not recoverable without outside knowledge.",
+        "Naturalness is limited by highly polished, agenda-focused turns. Many substantive turns are complete mini-arguments that immediately convert a concern into a protocol solution, especially turns 9-25. The transcript does include realistic repetitions, cutoffs, and brief acknowledgments, but the disfluencies often sit atop otherwise finished prose.",
+        "The discussion is almost entirely on-agenda and has few concrete social anchors beyond generic references to corridors, complexes, and local partners. Adding a small logistical aside, uncertainty-driven exploratory question, or less resolved exchange would make it feel less authored.",
+        "Turn 13's \"obviously\" is somewhat unnatural in context because no prior speaker has used connectivity in a neural sense; it draws attention to the intended ambiguity rather than allowing it to arise naturally.",
+        "Turn 9: comments on the seed term instead of using it (Discusses whether to label a green route ecological connectivity.)."
+      ]
+    }
+  ]
+}

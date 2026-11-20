@@ -83,6 +83,7 @@ class SeedSpec(BaseModel):
     Tells the Filming agent exactly what interdisciplinary feature
     to embed and where.
     """
+    task_id: str = "custom"
     benchmark_category: str = Field(
         description="Which benchmark category this seed tests "
                     "(e.g. jargon, assumptions, disagreement)"
@@ -97,7 +98,7 @@ class SeedSpec(BaseModel):
                     "different things...'"
     )
     ground_truth: dict = Field(
-        description="The known correct answer for evaluation. "
+        description="The proposed reference answer, requiring transcript evidence. "
                     "e.g. {'term': 'resilience', "
                     "'discipline_a': 'ecology', "
                     "'definition_a': 'ecological recovery after disturbance', "
@@ -180,40 +181,96 @@ class FilmingOutput(BaseModel):
 
 class QAFeedback(BaseModel):
     """Structured feedback from the QA agent / LLM judge"""
-    topical_alignment: int = Field(
+    # team rubric (1 poor / 3 mixed / 5 strong)
+    seed_recoverable: int = Field(
         ge=1, le=5,
-        description="Does the transcript stay on the research topic? (1-5)"
+        description="Can evidence lines be pointed to, and does the ground "
+                    "truth follow from them with no outside assumptions? (1-5)"
     )
-    conversational_naturalness: int = Field(
+    task_compliance: int = Field(
         ge=1, le=5,
-        description="Does it sound like a real meeting? Turn-taking, "
-                    "interruptions, hedging? (1-5)"
+        description="Does the material satisfy this task, including any explicit, "
+                    "implicit or control-case conditions? (1-5)"
+    )
+    naturalness: int = Field(
+        ge=1, le=5,
+        description="How many realism signals are present, and could a blind "
+                    "reader tell it from a real meeting? (1-5)"
+    )
+    speaker_distinctness: int = Field(
+        ge=1, le=5,
+        description="Are speakers matchable to personas, with discipline-typical "
+                    "vocabulary and no caricatures? (1-5)"
+    )
+    # pipeline checks not covered by the rubric
+    domain_alignment: int = Field(
+        ge=1, le=5,
+        description="Does each speaker's contribution stay grounded in their "
+                    "own discipline? The research question itself may shift. (1-5)"
     )
     dialogue_flow: int = Field(
         ge=1, le=5,
         description="Does the conversation progress coherently? (1-5)"
     )
-    seed_embedded: bool = Field(
-        description="Is the benchmark seed clearly present in the transcript?"
+    # evidence behind the scores
+    evidence_turns: list[int] = Field(
+        default_factory=list,
+        description="Turn numbers (1-indexed) the ground truth can be derived from"
     )
-    seed_naturalness: int = Field(
-        ge=1, le=5,
-        description="Does the seed feel natural or forced? (1-5)"
+    realism_signals: list[str] = Field(
+        default_factory=list,
+        description="Which realism signals the judge found in the transcript"
     )
     issues: list[str] = Field(
         description="List of specific problems to fix in re-filming"
+    )
+    seed_uses: list[dict] = Field(
+        default_factory=list,
+        description="Label for each turn with the seed term (and the turn after): "
+                    "sense, comments_on_term, renames"
+    )
+    # finer naturalness measure, for comparing runs; not part of approval
+    spoken_share: float | None = Field(
+        default=None,
+        description="Share of substantive turns the judge labels as sounding "
+                    "spoken rather than written (0-1)"
+    )
+    written_turns: list[int] = Field(
+        default_factory=list,
+        description="Substantive turns labeled as reading like written prose"
+    )
+    # how much the meeting explores rather than plans; not part of approval
+    exploration_share: float | None = Field(
+        default=None,
+        description="Share of non-backchannel turns whose main move is a "
+                    "question, idea, observation or open concern (0-1)"
+    )
+    turn_moves: dict[str, int] = Field(
+        default_factory=dict,
+        description="Count of turns per main move (question, proposal, "
+                    "commitment, ...)"
+    )
+    volunteer_turns: list[int] = Field(
+        default_factory=list,
+        description="Turns where a speaker offers or assigns a piece of work"
+    )
+    unsure_turns: list[int] = Field(
+        default_factory=list,
+        description="Turns where a speaker admits not knowing or needing to check"
     )
     approved: bool = Field(
         description="True if transcript passes QA, False if re-filming needed"
     )
 
-class QAOutput(BaseModel):
-    """Output of Agent 4 — QA"""
-    feedback: QAFeedback
-    revised_transcript: Optional[FilmingOutput] = Field(
-        default=None,
-        description="Re-filmed transcript if approved=False, else None"
-    )
+class QAAttempt(BaseModel):
+    """One film + QA round, kept so score changes across re-films are visible"""
+    attempt: int = Field(description="1 = first filming, 2 = re-film")
+    num_turns: int
+    scores: dict[str, int] = Field(description="Rubric scores for this attempt")
+    spoken_share: float | None = None
+    exploration_share: float | None = None
+    approved: bool
+    issues: list[str]
 
 
 # ─────────────────────────────────────────────
@@ -234,8 +291,16 @@ class GeneratedTranscript(BaseModel):
     disciplines: list[str]
     discipline_distance: DisciplineDistance
     speakers: list[SpeakerProfile]
+
+    # variety bank choices, saved on their own so pass rates can be broken
+    # down by style / background later (None for older outputs or when the
+    # research problem or style was set by hand)
+    research_id: Optional[str] = None
+    meeting_style: Optional[str] = None
+    meeting_opening: Optional[str] = None
     
     # benchmark metadata
+    task_id: str = "custom"
     benchmark_category: str
     benchmark_task: str
     seed_spec: SeedSpec
@@ -246,5 +311,10 @@ class GeneratedTranscript(BaseModel):
     transcript: list[Turn]
     
     # qa record
-    qa_feedback: QAFeedback
-    qa_cycles: int = Field(description="How many QA/re-film cycles were needed")
+    qa_feedback: QAFeedback = Field(
+        description="QA of the saved transcript (the final attempt)"
+    )
+    qa_cycles: int = Field(description="How many film + QA rounds ran")
+    qa_history: list[QAAttempt] = Field(
+        description="Scores from every attempt, in order"
+    )

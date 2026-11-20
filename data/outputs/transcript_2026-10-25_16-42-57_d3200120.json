@@ -1,0 +1,259 @@
+{
+  "transcript_id": "d3200120",
+  "generated_at": "2026-10-25T16:42:57.143182",
+  "ami_style_notes": "This meeting exhibits a distinctly informal, collegial register that shifts fluidly between casual social chat and dense technical presentation. Turn lengths are highly variable: the pre-talk socializing features extremely short, rapid exchanges with frequent overlapping affirmations and near-simultaneous responses, while the formal presentation segments involve very long, uninterrupted monologues. During Q&A, turns settle into a medium length, with questioners occasionally building multi-part questions and speakers giving expansive answers that sometimes trail into tangential observations.\n\nHedging is pervasive and characteristic throughout. Speakers routinely soften claims with phrases like \"what we think is going on,\" \"sort of,\" \"on some level,\" \"I would never try to convince you of that,\" and \"I guess.\" False starts and self-corrections are common, particularly when speakers are working through reasoning in real time. Filler words \u2014 \"uh,\" \"um,\" and \"you know\" \u2014 appear at high density even in prepared remarks, giving scientific explanations an improvised, thinking-aloud quality.\n\nDisagreement is handled entirely indirectly; no one contradicts anyone outright. Instead, challenges arrive as genuine questions or hedged observations (\"I'm just curious about this\"), and the respondent typically acknowledges uncertainty openly rather than defending a position. Participants build on each other's points by echoing key terms and then extending them, often with an affirming \"yeah yeah\" before pivoting. Questions are predominantly open and exploratory in framing, frequently prefaced with self-deprecating qualifiers like \"naive question\" or \"I'm not sure.\" Rapport is maintained through laughter cues, enthusiastic backchanneling (\"wow wow,\" \"great great\"), and casual personal asides woven naturally around technical content.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities",
+  "disciplines": [
+    "neuroscience",
+    "political science",
+    "computer science"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Aisha Patel",
+      "discipline": "neuroscience",
+      "functional_role": "postdoctoral researcher",
+      "background": "Three years into a postdoc at a urban health research institute, following a PhD focused on cortisol dynamics and HPA axis regulation in chronic stress populations. Has spent the past six months collecting salivary cortisol samples and administering psychophysiological stress protocols with residents in three low-income Chicago neighborhoods. Trained primarily in controlled lab environments and is navigating the messiness of field-based biomarker collection for the first time. Comfortable with her biological data but genuinely uncertain about how cortisol fluctuations map onto policy-relevant mental health constructs like anxiety or depression.",
+      "distinct_perspective": "Frames mental health through the lens of measurable physiological stress response \u2014 cortisol rhythms, allostatic load, autonomic nervous system reactivity. Sees green space access as a potential environmental stressor-buffer, but struggles to articulate how her biomarker data connects to the broader social and spatial patterns the rest of the team is tracking. Worried that her clean mechanistic story breaks down when confounded by socioeconomic stressors that exist independent of park access.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Marcus Rivera",
+      "discipline": "political science",
+      "functional_role": "project manager",
+      "background": "Associate professor with fifteen years of research on environmental justice, municipal resource allocation, and community advocacy in majority-minority urban neighborhoods. Has conducted extensive fieldwork using process tracing, elite interviews, and archival analysis of city budget decisions and park development timelines. Serves as the de facto project manager for this study, coordinating IRB logistics, community partner relationships, and funder communications. Deeply skeptical of purely technocratic or biomedical framings of what are, in his view, fundamentally political problems.",
+      "distinct_perspective": "Understands green space access as the downstream product of political contestation \u2014 who sits at the table when parks budgets are decided, which advocacy coalitions have leverage over municipal agencies, and how historical patterns of disinvestment get reproduced or challenged through policy. Sees the tension with Aisha's data as evidence that biology can't tell you why some neighborhoods got parks and others didn't. Pushes the team to situate their findings within the political economy of urban planning.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Lena Zhou",
+      "discipline": "computer science",
+      "functional_role": "project manager",
+      "background": "Research scientist with eight years of experience in spatial computing, GIS-integrated machine learning, and urban data infrastructure. Co-managing the project alongside Marcus, responsible for the computational pipeline that integrates satellite imagery, census tract data, park access shapefiles, and self-reported survey responses. Built a graph-based spatial model representing neighborhood connectivity and park accessibility, and has been experimenting with a neural network classifier to predict mental health outcome categories from the combined feature set. Pragmatic about what the models can and cannot do, and often the one pushing the team toward operational clarity.",
+      "distinct_perspective": "Treats the research problem as a data integration and representation challenge \u2014 the question is whether the right features have been encoded and whether the model architecture can surface meaningful patterns across heterogeneous datasets. Sees the tension between Marcus's and Aisha's findings as potentially resolvable through better feature engineering or a more carefully specified outcome variable, rather than as a deep conceptual conflict. Occasionally frustrated when disciplinary debates feel like they're blocking concrete methodological decisions.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "benchmark_category": "jargon",
+  "benchmark_task": "Identify the term 'network' as used differently by two researchers in the transcript \u2014 Dr. Rivera (political science) uses 'network' to mean a system of institutional relationships and political actors (advocacy groups, city agencies, community organizations) that shape policy outcomes, while Dr. Zhou (computer science) uses 'network' to mean a computational graph structure (nodes and edges) used in her spatial analysis or neural network model \u2014 and provide the discipline-specific definition for each usage without flagging the ambiguity explicitly in the conversation.",
+  "seed_spec": {
+    "benchmark_category": "jargon",
+    "benchmark_task": "Identify the term 'network' as used differently by two researchers in the transcript \u2014 Dr. Rivera (political science) uses 'network' to mean a system of institutional relationships and political actors (advocacy groups, city agencies, community organizations) that shape policy outcomes, while Dr. Zhou (computer science) uses 'network' to mean a computational graph structure (nodes and edges) used in her spatial analysis or neural network model \u2014 and provide the discipline-specific definition for each usage without flagging the ambiguity explicitly in the conversation.",
+    "explicit_instruction": "Design a transcript segment in which the term 'network' is used naturally by both Dr. Rivera (political science) and Dr. Zhou (computer science), each with their own discipline-specific meaning. Dr. Rivera should use 'network' to refer to a coalition of political actors and institutions (e.g., advocacy groups, municipal agencies, community organizations) that influence green space policy. Dr. Zhou should use 'network' to refer to a computational structure \u2014 either a graph/node-edge model in her spatial analysis pipeline or a neural network architecture in her ML model. Neither speaker should explicitly acknowledge or flag that they are using the term differently. The benchmark task is for an AI assistant reviewing the transcript to identify that 'network' carries two distinct meanings and define each one according to its discipline of origin.",
+    "ground_truth": {
+      "ambiguous_term": "network",
+      "usage_1": {
+        "speaker": "Dr. Marcus Rivera",
+        "discipline": "political science",
+        "definition": "A system of interconnected political and institutional actors \u2014 such as advocacy organizations, city planning agencies, community groups, and elected officials \u2014 whose relationships and interactions shape the formulation and implementation of public policy, in this case urban green space allocation in low-income communities.",
+        "example_context": "Rivera uses 'network' when discussing how community organizations and city agencies are linked in ways that either facilitate or obstruct equitable green space policy."
+      },
+      "usage_2": {
+        "speaker": "Dr. Lena Zhou",
+        "discipline": "computer science",
+        "definition": "A computational graph structure composed of nodes and edges used to represent spatial relationships in data, or alternatively a neural network \u2014 a layered mathematical model inspired by biological neurons used in machine learning to identify patterns in datasets such as satellite imagery or demographic data.",
+        "example_context": "Zhou uses 'network' when describing her spatial analysis pipeline or the ML model architecture she built to predict green space access scores across city blocks."
+      },
+      "are_definitions_the_same": false,
+      "explanation": "In political science, 'network' refers to real-world relational structures among human and institutional actors that have political agency and shape policy. In computer science, 'network' refers to an abstract mathematical or computational structure (graph or neural network) used for data modeling and analysis. The two usages share a metaphor of interconnection but refer to fundamentally different objects \u2014 one social/political, one computational/mathematical."
+    }
+  },
+  "seed_location": "The seed instruction required Dr. Rivera to use 'network' to refer to a coalition of political actors and institutions, and Dr. Zhou to use 'network' to refer to a computational graph or neural network structure. Reviewing all 23 turns, neither speaker uses the word 'network' at any point in the transcript. Dr. Rivera discusses coalitions, organizing, archives, and political capacity but never uses the term 'network.' Dr. Zhou discusses her model, graph centrality, NDVI tiles, and features but refers to a 'graph' rather than a 'network.' The seed feature is entirely absent from the transcript.",
+  "ground_truth": {
+    "ambiguous_term": "network",
+    "usage_1": {
+      "speaker": "Dr. Marcus Rivera",
+      "discipline": "political science",
+      "definition": "A system of interconnected political and institutional actors \u2014 such as advocacy organizations, city planning agencies, community groups, and elected officials \u2014 whose relationships and interactions shape the formulation and implementation of public policy, in this case urban green space allocation in low-income communities.",
+      "example_context": "Rivera uses 'network' when discussing how community organizations and city agencies are linked in ways that either facilitate or obstruct equitable green space policy."
+    },
+    "usage_2": {
+      "speaker": "Dr. Lena Zhou",
+      "discipline": "computer science",
+      "definition": "A computational graph structure composed of nodes and edges used to represent spatial relationships in data, or alternatively a neural network \u2014 a layered mathematical model inspired by biological neurons used in machine learning to identify patterns in datasets such as satellite imagery or demographic data.",
+      "example_context": "Zhou uses 'network' when describing her spatial analysis pipeline or the ML model architecture she built to predict green space access scores across city blocks."
+    },
+    "are_definitions_the_same": false,
+    "explanation": "In political science, 'network' refers to real-world relational structures among human and institutional actors that have political agency and shape policy. In computer science, 'network' refers to an abstract mathematical or computational structure (graph or neural network) used for data modeling and analysis. The two usages share a metaphor of interconnection but refer to fundamentally different objects \u2014 one social/political, one computational/mathematical."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Hey, sorry \u2014 that ran way over. Okay, so, um, I was on with Darnell from the Englewood partner org and it got a little intense, I'll say that much. I'll fill you in. But first \u2014 did either of you get the email from RWJF Thursday? Because November 1st is... yeah, we need to talk about that. Okay, let me just \u2014 can we start with where Lena's model landed, and then I want to get into the Humboldt framing question, because I think that's actually the thing we need to resolve before we can even think about the report structure."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Yeah, okay, good \u2014 the model's actually in a place I'm happy with, so let's do that. I retrained over the weekend on the updated NDVI tiles and the South Shore held-out blocks are looking solid. But Marcus, before we even get into the Humboldt framing thing, I really want us to land on a shared outcome variable today \u2014 like, actually decide \u2014 because the November 1st thing means I have maybe three weeks of real iteration time left and I cannot keep running it against three different targets."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah, okay, the outcome variable \u2014 I actually want to weigh in on that because I think which target we anchor on is not just a modeling question, it's basically a framing decision for the whole report. Like, if we optimize against cortisol alone we're telling one story, if we weight the PHQ-9 we're telling a different one. Can we spend five minutes on that before Lena commits to a direction?"
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Yeah, I\u2014 okay, I want to weigh in on that too, because honestly the cortisol data and the PHQ-9 are not telling the same story right now, and if Lena anchors on one it's going to shape what the biomarker piece even looks like in the report. Like, can we just get that on the table before we pick?"
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Okay but \u2014 and I hear that you both want to hash out the story first \u2014 the thing is, those two concerns aren't separable for me anymore. Like, if cortisol and PHQ-9 are diverging, that's actually data, right? So maybe the answer is we run both as targets and treat the divergence as a finding rather than a problem we have to resolve before we can proceed. But I need someone to say yes or no to that so I know what I'm building."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Yeah, I think treating the divergence as a finding actually makes sense to me \u2014 like, that's kind of what I've been sitting with for three weeks. My worry is just, um, if Lena runs cortisol as a target, I want to make sure it's the slope data specifically, not just single-point cortisol levels, because those really aren't equivalent and I don't want that distinction to get lost in the model."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Okay yes, slope specifically \u2014 I can work with that, that's a concrete spec. So let's just say: cortisol slope and PHQ-9 both as targets, treat divergence as a finding, and Marcus, I want to at least flag your policy-equity index as a covariate even if it's not the primary prediction target \u2014 does that hold for you?"
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah, the equity index as a covariate works for me \u2014 but I want to make sure we're treating it as more than a control variable, you know? Like, I don't want it buried in a robustness check. The Humboldt story is basically: the parks came first because of political organizing, and then the health signal followed. That ordering matters a lot for what we tell RWJF about what actually moves the needle."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Yeah, and \u2014 that's actually the thing I keep getting stuck on. Like, from a biological standpoint the Humboldt cortisol signal is real, but if the parks were there first because of organizing, then I can't really separate 'park access reduced stress' from 'sustained community investment over time reduced stress,' and those are pretty different mechanisms. I don't know how we tell that story without hedging it to death."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Yeah, and that's actually showing up in my model in a really specific way \u2014 like, graph centrality correlates with outcomes in Humboldt and South Shore but basically flatlines in Englewood, and I think that's exactly the mechanism question you're describing. The parks are there in Englewood on paper but something's different, and I don't know yet if it's quality, maintenance, safety perception, or something else I'm just not encoding."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "That Englewood flatline thing is \u2014 yeah, that's actually exactly what my archive is showing from the political side. Like, the infrastructure exists on paper but there's no organized constituency holding the Parks District accountable for maintaining it, and I think that's not a covariate, that's the mechanism. Can we talk about how we name that in the report? Because 'graph centrality' and 'political capacity' are pointing at the same thing and I don't want one to swallow the other."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Right, okay, so \u2014 I think we're actually saying the same thing here, like 'political capacity' is maybe the feature I'm missing for Englewood, the thing that proxy-encodes whether investment actually translates to maintained, used space. So Marcus, could your archive give me something I can operationalize? Even rough \u2014 like, whether a neighborhood had an active parks advocacy org in a given period?"
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah, I think I can get you something usable \u2014 like, from the archive I could code each neighborhood-year for whether there was an active parks coalition with documented city hall engagement. It's not clean quantitative data but I can operationalize it as a binary presence-absence per period. The Humboldt case is almost a natural experiment in that sense, because there's a pretty clear before-and-after around 2006 when that coalition really crystallized."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Okay, that binary presence-absence coding is actually really useful \u2014 like, even as a rough feature I can tie it to neighborhood-year in the graph and see if it changes the Englewood picture. Can you get me something I can work with by, I don't know, end of next week? Because I need a little runway to retrain before we're out of time."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah, end of next week I can do \u2014 and honestly I should probably loop you in on the Humboldt interview transcripts too, because there's a few stakeholders who describe the 2006 shift really explicitly, like they name the specific relationships and leverage points. That might actually help you figure out what the feature is doing mechanistically, not just whether it's there."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "The Humboldt interview transcripts actually \u2014 yeah, I'd love to look at those too, because I'm wondering if the timeline of that 2006 coalition shift lines up with anything I could see in the cortisol data retrospectively. Like, I can't prove it with two time points, but if community organizing preceded the stress-buffering signal by years, that changes how I'd even narrate the biological mechanism."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah \u2014 and actually that's kind of the framing I want to nail down before we break, because if Aisha's narrating the biological mechanism and Lena's encoding political capacity as a feature, I want to make sure the report's introduction is clear that the causal arrow runs from organizing to parks to health, not the other way around. Like, that has to be in the body of the report, not a caveat buried in the discussion section."
+    },
+    {
+      "speaker": "Dr. Lena Zhou",
+      "text": "Yeah, I'm with you on that \u2014 like, the causal ordering needs to be up front, not hedged into a footnote. Okay, we're almost out of time but I feel like we actually have enough to move: Marcus gets me the coalition coding by next week, we run cortisol slope and PHQ-9 as dual targets, equity index as a named covariate. Can we do a quick check-in Thursday just to confirm the feature handoff is on track?"
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Thursday works, yeah."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Yeah, Thursday works for me."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah, and let's talk about the Darnell call then too \u2014 that's not unrelated."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Yeah, curious what that was about."
+    },
+    {
+      "speaker": "Dr. Marcus Rivera",
+      "text": "Yeah \u2014 it's very much related."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "seed_implicit": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 3,
+    "topical_alignment": 4,
+    "dialogue_flow": 4,
+    "evidence_turns": [],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths including short reactions",
+      "imperfect coherence: points dropped or left open"
+    ],
+    "issues": [
+      "Seed entirely absent: the word 'network' never appears in the transcript. Dr. Rivera uses 'coalition,' 'organizing,' 'constituency'; Dr. Zhou uses 'graph,' 'graph centrality,' 'model.' The benchmark feature cannot be recovered at all.",
+      "Turns 1\u201318 are polished and paragraph-like despite disfluency markers sprinkled on top \u2014 each turn has a clear thesis and conclusion, which undermines naturalness.",
+      "Disagreements all resolve neatly and quickly (e.g., turns 5\u20137 on dual targets, turns 11\u201313 on political capacity as feature) with no sustained friction or dropped threads.",
+      "Turn 18 functions as a written-minutes recap ('Marcus gets me the coalition coding by next week, we run cortisol slope and PHQ-9 as dual targets, equity index as a named covariate'), a strong tell against naturalness.",
+      "Turns 21\u201323 are a manufactured cliffhanger about the Darnell call that adds nothing substantive and feels scripted.",
+      "Speaker distinctness is somewhat stereotyped: Lena is always the pragmatist pushing for specs, Marcus always the political framer, Aisha always uncertain about mechanism \u2014 none breaks from type.",
+      "No concrete small talk, place anchors, or personal asides beyond the brief Darnell mention in turn 1 \u2014 the meeting is almost purely on-agenda, unlike natural interdisciplinary meetings.",
+      "Disfluencies are largely confined to turn openings ('Yeah, okay,' 'Right, okay, so') rather than mid-sentence, making them feel sprinkled rather than organic."
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 22,
+      "scores": {
+        "seed_recoverable": 2,
+        "seed_implicit": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 3,
+        "topical_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "approved": false,
+      "issues": [
+        "Turn 10 is the only location where 'network' appears, and it is used exclusively by Dr. Zhou in her computational sense ('spatial network'). Dr. Rivera never uses 'network' in the political science sense to refer to a coalition of political actors, advocacy groups, or municipal agencies. The seed requires both speakers to use the term with discipline-specific meanings, but Rivera's usage is entirely absent, making the benchmark task only half-completable.",
+        "Because Rivera's political science usage of 'network' is missing, the seed is only partially recoverable. An AI assistant can identify Zhou's computational usage in Turn 10 but cannot find a contrasting Rivera usage to compare it against, so the core benchmark task \u2014 identifying two distinct meanings \u2014 cannot be fully completed from the text.",
+        "seed_implicit scores 3 rather than 5 because Zhou's computational use of 'network' in Turn 10 is somewhat surfaced (she describes 'graph centrality pass on the spatial network'), giving a partial signal, but the absence of Rivera's usage means the implicit ambiguity is never actually created between two speakers.",
+        "Several longer turns (e.g., Turn 1, Turn 3, Turn 9, Turn 18) read like polished written paragraphs with thesis-concession-counterpoint structure, particularly Rivera's turns which often have a 'but I want to flag' construction repeated formulaically across Turns 3, 9, 16, 18.",
+        "The disagreements that do arise (cortisol as outcome vs. feature, model explanation vs. prediction) resolve quickly and neatly without sustained tension, with Turn 8 wrapping up a complex methodological debate in a single tidy summary.",
+        "Rivera's 'I want to flag' construction is used four times (Turns 3, 9, 16, 18), creating a repetitive pushback formula that feels manufactured rather than natural.",
+        "Speaker distinctness is somewhat stereotyped: Zhou is consistently the pragmatic operationalizer, Rivera consistently the 'but what about the why' critic, and Patel is relegated to brief clarifications with minimal character beyond her cortisol data. Personas are recognizable but feel like types rather than individuals.",
+        "Turns 21 and 22 are near-duplicate back-to-back short reactions ('Yeah, mid-October is cutting it close' / 'Yeah, mid-October is not a lot of runway') that feel artificially constructed to add a short-turn realism signal rather than emerging organically.",
+        "No concrete small talk, place references beyond neighborhood names, or casual social anchors appear beyond Marcus's brief apology in Turn 1, making the meeting feel slightly thin on the informal rapport signals the AMI reference describes."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 23,
+      "scores": {
+        "seed_recoverable": 1,
+        "seed_implicit": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 3,
+        "topical_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "approved": false,
+      "issues": [
+        "Seed entirely absent: the word 'network' never appears in the transcript. Dr. Rivera uses 'coalition,' 'organizing,' 'constituency'; Dr. Zhou uses 'graph,' 'graph centrality,' 'model.' The benchmark feature cannot be recovered at all.",
+        "Turns 1\u201318 are polished and paragraph-like despite disfluency markers sprinkled on top \u2014 each turn has a clear thesis and conclusion, which undermines naturalness.",
+        "Disagreements all resolve neatly and quickly (e.g., turns 5\u20137 on dual targets, turns 11\u201313 on political capacity as feature) with no sustained friction or dropped threads.",
+        "Turn 18 functions as a written-minutes recap ('Marcus gets me the coalition coding by next week, we run cortisol slope and PHQ-9 as dual targets, equity index as a named covariate'), a strong tell against naturalness.",
+        "Turns 21\u201323 are a manufactured cliffhanger about the Darnell call that adds nothing substantive and feels scripted.",
+        "Speaker distinctness is somewhat stereotyped: Lena is always the pragmatist pushing for specs, Marcus always the political framer, Aisha always uncertain about mechanism \u2014 none breaks from type.",
+        "No concrete small talk, place anchors, or personal asides beyond the brief Darnell mention in turn 1 \u2014 the meeting is almost purely on-agenda, unlike natural interdisciplinary meetings.",
+        "Disfluencies are largely confined to turn openings ('Yeah, okay,' 'Right, okay, so') rather than mid-sentence, making them feel sprinkled rather than organic."
+      ]
+    }
+  ]
+}
