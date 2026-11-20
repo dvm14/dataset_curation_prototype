@@ -291,6 +291,13 @@ class GeneratedTranscript(BaseModel):
     disciplines: list[str]
     discipline_distance: DisciplineDistance
     speakers: list[SpeakerProfile]
+
+    # variety bank choices, saved on their own so pass rates can be broken
+    # down by style / background later (None for older outputs or when the
+    # research problem or style was set by hand)
+    research_id: Optional[str] = None
+    meeting_style: Optional[str] = None
+    meeting_opening: Optional[str] = None
     
     # benchmark metadata
     task_id: str = "custom"
