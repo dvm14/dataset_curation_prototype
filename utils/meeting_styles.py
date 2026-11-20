@@ -103,10 +103,11 @@ MEETING_STYLES = {
     "screen_share_working_session": {
         "description": (
             "Someone is sharing a document, figure or spreadsheet and the "
-            "group works through it. People refer to what is on screen "
-            "('that column', 'the second figure') without explaining it. "
-            "Turns are short and practical, with pauses while someone "
-            "scrolls or reads."
+            "group works through it. People point at what is on screen "
+            "('that column', 'the second figure'), but whoever is reading "
+            "still says the key numbers, names and dates out loud, since "
+            "only the audio is recorded. Turns are short and practical, "
+            "with pauses while someone scrolls or reads."
         ),
         "examples": [
             "Can you scroll up- no, further. Yeah, that row.",
@@ -172,13 +173,31 @@ STOCK_PHRASES_TO_AVOID = [
 ]
 
 
-def pick_style(name=None, avoid_seniority=False):
+# Styles whose shape contradicts what a task needs. Found in the Claude pilot
+# (e.g. assumptions_03 needs a long meeting and drew quick_checkin). Only
+# clear contradictions are listed; anything else is left to the rule that
+# task instructions win.
+SHORT = ["quick_checkin", "running_out_of_time"]      # cut short, items skipped
+TASK_STYLE_EXCLUDE = {
+    "assumptions_03": SHORT,                            # "a long meeting"
+    "problem_03": SHORT,                                # weigh questions, choose one
+    "problem_04": SHORT + ["one_voice_leads"],          # each of three opens a question
+    "coordination_01": ["running_out_of_time"],         # plan next steps
+    "coordination_05": SHORT,                           # end with exactly six items
+    "methods_02": SHORT + ["round_robin_updates"],      # credible reasons on both sides
+    "disagreement_01": SHORT + ["round_robin_updates"], # rationale and evidence per side
+    "other_01": ["polite_friction"],                    # control: productive, no tension
+}
+
+
+def pick_style(name=None, avoid_seniority=False, task_id=None):
     """
     Return (name, style). With name=None the style is chosen at random.
 
     avoid_seniority — True for tasks where the dialogue must not reveal who
     is senior (other_02, seniority_pair). Styles marked "shows_seniority"
     are never picked then, and asking for one by name is an error.
+    task_id — styles in TASK_STYLE_EXCLUDE for that task are never picked.
     """
     if name is not None:
         if name not in MEETING_STYLES:
@@ -190,9 +209,13 @@ def pick_style(name=None, avoid_seniority=False):
                 f"meeting_style {name!r} builds seniority into the dialogue, "
                 "which this task forbids. Pick another style or leave it unset."
             )
+        if name in TASK_STYLE_EXCLUDE.get(task_id, []):
+            raise ValueError(f"meeting_style {name!r} contradicts task {task_id}.")
         return name, MEETING_STYLES[name]
+    excluded = TASK_STYLE_EXCLUDE.get(task_id, [])
     options = [n for n, st in MEETING_STYLES.items()
-               if not (avoid_seniority and st.get("shows_seniority"))]
+               if not (avoid_seniority and st.get("shows_seniority"))
+               and n not in excluded]
     name = random.choice(options)
     return name, MEETING_STYLES[name]
 

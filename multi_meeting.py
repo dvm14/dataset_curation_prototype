@@ -19,8 +19,9 @@ How it works:
    into the next meeting's context, so later meetings build on what was
    actually said rather than on the plan.
 4. A series QA call checks the set as a whole (links between meetings,
-   overall ground truth). The sample is approved only if every meeting
-   passes its own QA and the set scores >= 4 on both series criteria.
+   overall ground truth). The sample is approved if every meeting is well
+   made (its craft scores pass) and the set scores >= 4 on both series
+   criteria. Per-meeting seed scores still drive re-filming.
 
 Agent 1 is not used: the planner replaces it, since it has to keep several
 meetings consistent with each other.
@@ -51,6 +52,15 @@ MEETING_COUNTS = {
 SPEAKERS_PER_GROUP = {"seniority_pair": 2}
 SERIES_THRESHOLD = 4
 SENIOR, JUNIOR = FunctionalRole.PI, FunctionalRole.PHD_STUDENT
+
+
+CRAFT = ("naturalness", "speaker_distinctness", "domain_alignment", "dialogue_flow")
+
+
+def meeting_craft_ok(qa):
+    """Per-meeting check used for sets: craft scores only, seed scores are judged on the set."""
+    from agents.agent4_qa import APPROVAL_THRESHOLDS
+    return all((qa.get(k) or 0) >= APPROVAL_THRESHOLDS[k] for k in CRAFT)
 
 
 def plan_series(task, research_problem, disciplines, retries=1):
@@ -272,10 +282,15 @@ def run_series(config):
 
     print("\n[4] Series QA...")
     sqa = series_qa(task, plan, meetings_out, versions)
-    meetings_ok = all(m["qa_feedback"]["approved"] for m in meetings_out)
+    # Each meeting must be well made (naturalness, distinct speakers, flow,
+    # domain). Whether the task is carried out is judged on the whole set:
+    # one meeting of a pair is not meant to hold the task on its own, and
+    # per-meeting seed scores failed sets the set judge passed (integration_02).
+    meetings_ok = all(meeting_craft_ok(m["qa_feedback"]) for m in meetings_out)
     approved = (meetings_ok and sqa["series_recoverable"] >= SERIES_THRESHOLD
                 and sqa["series_compliance"] >= SERIES_THRESHOLD)
-    print(f"      Meetings approved: {sum(m['qa_feedback']['approved'] for m in meetings_out)}/{total}")
+    print(f"      Meetings well made: {sum(meeting_craft_ok(m['qa_feedback']) for m in meetings_out)}/{total}"
+          f"   (fully approved alone: {sum(m['qa_feedback']['approved'] for m in meetings_out)})")
     print(f"      Series: recoverable {sqa['series_recoverable']}, compliance {sqa['series_compliance']}")
     print(f"      Approved: {approved}")
 

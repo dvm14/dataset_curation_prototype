@@ -156,3 +156,11 @@ def test_bad_paired_plan_is_replanned_before_filming():
 def test_seniority_part_tells_qa_labels_come_later():
     out, _ = run_series("other_02")
     assert "labels are attached to the speakers afterwards" in out["meetings"][0]["seed_spec"]["benchmark_task"]
+
+
+def test_set_approval_uses_craft_scores_per_meeting():
+    from multi_meeting import meeting_craft_ok
+    good_craft_weak_seed = {"seed_recoverable": 3, "task_compliance": 3, "naturalness": 3,
+                            "speaker_distinctness": 4, "domain_alignment": 4, "dialogue_flow": 4}
+    assert meeting_craft_ok(good_craft_weak_seed)
+    assert not meeting_craft_ok(dict(good_craft_weak_seed, naturalness=2))

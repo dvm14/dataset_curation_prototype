@@ -154,3 +154,22 @@ def test_seniority_pair_run_never_uses_seniority_styles(monkeypatch):
         main.load_ami_style(config)
         seen.add(config["meeting_style_used"])
     assert flagged <= seen
+
+
+def test_task_style_exclusions():
+    from utils.meeting_styles import TASK_STYLE_EXCLUDE
+    for task_id, banned in TASK_STYLE_EXCLUDE.items():
+        assert set(banned) <= set(MEETING_STYLES), task_id
+        picked = {pick_style(task_id=task_id)[0] for _ in range(500)}
+        assert not picked & set(banned), task_id
+        try:
+            pick_style(banned[0], task_id=task_id)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"{banned[0]} should be refused for {task_id}")
+    assert "quick_checkin" in {pick_style(task_id="jargon_01")[0] for _ in range(500)}
+
+
+def test_screen_share_says_values_aloud():
+    assert "out loud" in MEETING_STYLES["screen_share_working_session"]["description"]

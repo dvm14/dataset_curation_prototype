@@ -92,7 +92,8 @@ def load_ami_style(config):
     # styles built around a senior/junior dynamic are excluded.
     task_kind = get_task(config["task_id"])["input_type"]
     style_name, style = pick_style(config.get("meeting_style"),
-                                   avoid_seniority=task_kind == "seniority_pair")
+                                   avoid_seniority=task_kind == "seniority_pair",
+                                   task_id=config["task_id"])
     opening = pick_opening()
     ami_style_notes += "\n\n" + style_block(style_name, style, opening)
     # Recorded on config so the saved output can carry them as fields.

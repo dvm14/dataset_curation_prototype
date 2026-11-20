@@ -90,6 +90,9 @@ python rejudge.py --judge gpt-5.6-terra --limit 5
 
 It writes `rejudge_<judge>_<time>.csv` with the saved and new scores side by side.
 
+`RUN_TAG=v2` stores a run in `data/outputs/<GEN_MODEL>__v2/`, so a rerun on changed code
+doesn't count earlier samples as done.
+
 Offline test (fake LLM, no key or cost needed):
 
 ```bash

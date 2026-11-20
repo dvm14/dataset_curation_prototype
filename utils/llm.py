@@ -51,10 +51,15 @@ def output_root():
     """
     data/outputs/<generator>/ for runs that set GEN_MODEL, so Claude and GPT
     samples never mix; data/outputs/ when it isn't set, as before.
+    RUN_TAG=x adds a suffix (data/outputs/<generator>__x/) to keep a rerun
+    on changed code apart from earlier samples.
     """
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent / "data" / "outputs"
-    return root / GEN_MODEL if os.getenv("GEN_MODEL") else root
+    if not os.getenv("GEN_MODEL"):
+        return root
+    tag = os.getenv("RUN_TAG", "").strip()
+    return root / (f"{GEN_MODEL}__{tag}" if tag else GEN_MODEL)
 
 
 _clients = {}

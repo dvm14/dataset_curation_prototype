@@ -92,6 +92,9 @@ def test_judge_calls_use_judge_model(monkeypatch):
 def test_output_root_separates_generators(monkeypatch):
     monkeypatch.setenv("GEN_MODEL", "claude-sonnet-5-5")
     monkeypatch.setattr(llm, "GEN_MODEL", "claude-sonnet-5-5")
+    monkeypatch.delenv("RUN_TAG", raising=False)
     assert llm.output_root().parts[-3:] == ("data", "outputs", "claude-sonnet-5-5")
+    monkeypatch.setenv("RUN_TAG", "v2")
+    assert llm.output_root().name == "claude-sonnet-5-5__v2"
     monkeypatch.delenv("GEN_MODEL")
     assert llm.output_root().parts[-2:] == ("data", "outputs")
