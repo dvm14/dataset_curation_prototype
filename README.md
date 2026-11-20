@@ -11,7 +11,16 @@ pip install -r requirements.txt
 Create a `.env` file:
 ```
 OPENAI_API_KEY=your_key_here
+ANTHROPIC_API_KEY=your_key_here     # only needed when a model below is a claude-* model
+GEN_MODEL=gpt-5.6-terra             # writes the meetings (Agents 1-3, series planner)
+JUDGE_MODEL=gpt-5.6-terra           # grades them (Agent 4 QA, series QA)
 ```
+
+Any `claude-*` model goes to the Anthropic API; anything else to OpenAI. Both
+roles default to `gpt-5.6-terra`. To generate with Claude but grade exactly as
+before, set only `GEN_MODEL=claude-sonnet-5-5`: keeping one judge for every
+generator makes their transcripts comparable. Claude calls use adaptive
+thinking at `CLAUDE_EFFORT` (default `low`); thinking tokens are billed as output.
 
 Add an AMI transcript to `data/ami_transcripts/sample.txt`. Any plain-text excerpt from the AMI Meeting Corpus works. It is used for style reference only; its content is not reused.
 
@@ -51,6 +60,21 @@ failed series-level QA does not automatically regenerate the series.
 See `MERGE_NOTES.md` for the exact merge scope and validation limitations.
 
 Output is saved to `data/outputs/approved/` or `data/outputs/failed/` as `<task_id>_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. The script exits with code 2 when the transcript fails QA. At the end of each run it prints token usage and an estimated API cost.
+
+### Batch runs
+
+```bash
+python run_batch.py --n 1                 # pilot: one sample for each of the 33 tasks
+python run_batch.py --n 10 --workers 6    # ten per task
+python run_batch.py --n 10 --budget 150   # stop starting new runs once $150 is spent
+python run_batch.py --n 10 --dry-run      # what would run, no API calls
+```
+
+When `GEN_MODEL` is set, samples go to `data/outputs/<GEN_MODEL>/<task_id>/{approved,failed}/`
+and record `generator_model` and `judge_model`, so runs from different generators
+never mix. Samples already on disk count toward `--n`, so an interrupted batch
+resumes where it stopped. Each sample runs as its own `main.py` process (log in
+`<output root>/logs/`); a crashed run is retried once. A CSV summary is written at the end.
 
 Offline test (fake LLM, no key or cost needed):
 

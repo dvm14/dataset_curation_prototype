@@ -35,7 +35,7 @@ from benchmark_tasks import get_task
 from schema import (
     CastingOutput, ContentCurationOutput, DisciplineDistance, FunctionalRole, SeedSpec,
 )
-from utils.llm import call_llm_json, usage_report
+from utils.llm import call_llm_json, usage_report, GEN_MODEL, JUDGE_MODEL, output_root
 from prompts.series_prompt import (
     SERIES_PLAN_PROMPT, STRUCTURES, SUMMARY_PROMPT, SERIES_QA_PROMPT,
 )
@@ -162,7 +162,7 @@ def series_qa(task, plan, meetings_out, versions):
         parts.append(f"=== {m['label']} ===\nSpeakers: {roles}\n{numbered(m['_turns'])}")
     if versions:
         parts.append("VERSIONS (same dialogue, these speaker labels):\n" + json.dumps(versions, indent=2))
-    raw = call_llm_json(SERIES_QA_PROMPT, "\n\n".join(parts), max_tokens=2000)
+    raw = call_llm_json(SERIES_QA_PROMPT, "\n\n".join(parts), max_tokens=2000, model=JUDGE_MODEL)
 
     def score(key):
         try:
@@ -297,10 +297,12 @@ def run_series(config):
         "versions": versions,
         "series_qa": sqa,
         "approved": approved,
+        "generator_model": GEN_MODEL,
+        "judge_model": JUDGE_MODEL,
         "ami_style_notes": ami_style_notes,
     }
     status = "approved" if approved else "failed"
-    out_path = (Path(__file__).parent / "data" / "outputs" / task["task_id"] / status /
+    out_path = (output_root() / task["task_id"] / status /
                 f"{task['task_id']}_{created_at.strftime('%Y-%m-%d_%H-%M-%S')}_{series_id}.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=2, default=str))

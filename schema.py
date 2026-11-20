@@ -284,6 +284,8 @@ class GeneratedTranscript(BaseModel):
     """
     transcript_id: str
     generated_at: str
+    generator_model: str = ""
+    judge_model: str = ""
     
     # pipeline inputs
     ami_style_notes: str

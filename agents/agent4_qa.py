@@ -12,7 +12,7 @@ import re
 import statistics
 
 from schema import QAFeedback, FilmingOutput, ContentCurationOutput, CastingOutput
-from utils.llm import call_llm_json
+from utils.llm import call_llm_json, JUDGE_MODEL
 from utils.seed_terms import seed_terms, term_uses, seed_speakers, count_mentions, _stem
 from prompts.agent4_prompt import (
     SYSTEM_PROMPT, SEED_USE_PROMPT, SPOKEN_CHECK_PROMPT, MOVE_CHECK_PROMPT,
@@ -81,7 +81,7 @@ def spoken_check(transcript):
         f"[{i}] {transcript[i - 1].speaker}: {transcript[i - 1].text}"
         for i in numbers
     )
-    raw = call_llm_json(SPOKEN_CHECK_PROMPT, turns_text, max_tokens=2000)
+    raw = call_llm_json(SPOKEN_CHECK_PROMPT, turns_text, max_tokens=2000, model=JUDGE_MODEL)
 
     labels = {
         item.get("turn"): item.get("label")
@@ -107,7 +107,7 @@ def move_check(transcript):
         f"[{i}] {t.speaker}: {t.text}"
         for i, t in enumerate(transcript, start=1)
     )
-    raw = call_llm_json(MOVE_CHECK_PROMPT, turns_text, max_tokens=3000)
+    raw = call_llm_json(MOVE_CHECK_PROMPT, turns_text, max_tokens=3000, model=JUDGE_MODEL)
     labels = {
         item.get("turn"): item
         for item in raw.get("labels", []) if isinstance(item, dict)
@@ -179,6 +179,7 @@ def seed_use_check(transcript, terms, content, casting):
         f"SEED TERM: {terms}\n\nSENSES:\n{json.dumps(senses, indent=2)}\n\n"
         f"TURNS:\n{turns_text}",
         max_tokens=2000,
+        model=JUDGE_MODEL,
     )
     labels = [u for u in raw.get("turns", []) if isinstance(u, dict)]
 
@@ -292,7 +293,7 @@ Return JSON:
 }}
 """
 
-    raw = call_llm_json(SYSTEM_PROMPT, user_message)
+    raw = call_llm_json(SYSTEM_PROMPT, user_message, model=JUDGE_MODEL)
 
     scores = {key: score(raw, key) for key in APPROVAL_THRESHOLDS}
     issues = raw.get("issues", [])

@@ -233,7 +233,10 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     qa_cycles = len(qa_history)
 
     # ── Assemble final output ───────────────────
+    from utils.llm import GEN_MODEL, JUDGE_MODEL
     final = GeneratedTranscript(
+        generator_model=GEN_MODEL,
+        judge_model=JUDGE_MODEL,
         transcript_id=transcript_id,
         generated_at=created_at.isoformat(),
         ami_style_notes=ami_style_notes,
@@ -259,7 +262,8 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     # ── Save output ─────────────────────────────
     timestamp = created_at.strftime("%Y-%m-%d_%H-%M-%S")
     status = "approved" if qa.approved else "failed"
-    out_path = Path(__file__).parent / "data" / "outputs" / task["task_id"] / status / f"{content.seed.task_id}_{timestamp}_{transcript_id}.json"
+    from utils.llm import output_root
+    out_path = output_root() / task["task_id"] / status / f"{content.seed.task_id}_{timestamp}_{transcript_id}.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(final.model_dump(), f, indent=2)
