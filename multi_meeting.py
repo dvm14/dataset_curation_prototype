@@ -178,7 +178,7 @@ def series_qa(task, plan, meetings_out, versions):
 
 def run_series(config):
     import agents.agent2_casting as agent2
-    from main import load_ami_style, film_with_qa
+    from main import load_ami_style, film_with_qa, reseed
     from utils.value_banks import sample_disciplines
 
     task = get_task(config["task_id"])
@@ -204,6 +204,7 @@ def run_series(config):
         # With no disciplines set, take the background's own disciplines so
         # the problem and the cast match.
         from utils.research_banks import pick_research, research_text
+        reseed(config, "research")
         entry = pick_research(disciplines=disciplines, n=n_speakers,
                               distance=distance.value)
         if entry is None:
@@ -235,6 +236,7 @@ def run_series(config):
             print(f"[3] Casting for {', '.join(group)}...")
             overrides = ({group[0]: {"functional_role": SENIOR}, group[1]: {"functional_role": JUNIOR}}
                          if kind == "seniority_pair" else config.get("speaker_overrides", {}))
+            reseed(config, f"casting:{index}")
             casts[key] = agent2.run(content=content, speaker_overrides=overrides)
             print(f"      Cast: {', '.join(s.name for s in casts[key].speakers)}")
         casting = casts[key]
@@ -289,6 +291,7 @@ def run_series(config):
         "research_id": research_id,
         "meeting_style": config.get("meeting_style_used"),
         "meeting_opening": config.get("meeting_opening_used"),
+        "sample_seed": config.get("sample_seed"),
         "research_problem": plan.get("research_problem"),
         "project_context": plan.get("project_context"),
         "plan_document": plan.get("plan_document") if kind == "plan_and_meeting" else None,

@@ -49,7 +49,7 @@ def run_one(task_id, index, log_dir):
     start = time.time()
     with open(log, "w") as fh:
         code = subprocess.call(
-            [sys.executable, "-u", "main.py", "--task", task_id],
+            [sys.executable, "-u", "main.py", "--task", task_id, "--seed", str(index)],
             cwd=ROOT, stdout=fh, stderr=subprocess.STDOUT,
         )
     text = log.read_text(errors="replace")

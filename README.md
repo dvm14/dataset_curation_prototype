@@ -76,6 +76,11 @@ never mix. Samples already on disk count toward `--n`, so an interrupted batch
 resumes where it stopped. Each sample runs as its own `main.py` process (log in
 `<output root>/logs/`); a crashed run is retried once. A CSV summary is written at the end.
 
+Sample *k* of a task runs as `main.py --seed k`, which fixes the research background,
+meeting style, opening and speaker attributes. So sample *k* gets the same setup for
+every generator model, and Claude and GPT outputs can be compared pair by pair.
+Each saved JSON records `sample_seed`, `research_id`, `meeting_style` and `meeting_opening`.
+
 Offline test (fake LLM, no key or cost needed):
 
 ```bash

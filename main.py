@@ -21,6 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 import argparse
+import random
 from benchmark_tasks import TASKS, get_task, require_single_meeting
 
 
@@ -61,6 +62,18 @@ CONFIG = {
 # PIPELINE
 # ─────────────────────────────────────────────
 
+def reseed(config, stage):
+    """
+    With a sample seed (run_batch.py passes --seed), make the random picks
+    of one stage repeatable: sample k of a task gets the same background,
+    style, opening and speaker attributes for every generator model.
+    Reseeding per stage keeps API retries (which also draw random numbers)
+    from shifting later picks.
+    """
+    if config.get("sample_seed") is not None:
+        random.seed(f"{config['task_id']}:{config['sample_seed']}:{stage}")
+
+
 def load_ami_style(config):
     from utils.style_extractor import extract_style
     ami_path = Path(config["ami_transcript_path"])
@@ -74,6 +87,7 @@ def load_ami_style(config):
     ami_style_notes = extract_style(ami_path.read_text())
     # One meeting style and opening per meeting, on top of the AMI notes.
     from utils.meeting_styles import pick_style, pick_opening, style_block
+    reseed(config, "style")
     # other_02 (seniority_pair): the dialogue must not show seniority, so
     # styles built around a senior/junior dynamic are excluded.
     task_kind = get_task(config["task_id"])["input_type"]
@@ -164,6 +178,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
     # Research background: use the bank unless a problem was set by hand.
     if config.get("research_problem") is None:
         n_wanted = len(config["disciplines"]) if config["disciplines"] else config["num_speakers"]
+        reseed(config, "research")
         entry = pick_research(
             disciplines=config["disciplines"],
             n=n_wanted,
@@ -213,6 +228,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
 
     # ── Agent 2: Casting ────────────────────────
     print("[3/5] Agent 2 — Casting...")
+    reseed(config, "casting")
     casting = agent2.run(
         content=content,
         speaker_overrides=config.get("speaker_overrides", {}),
@@ -243,6 +259,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         research_id=config.get("research_id_used"),
         meeting_style=config.get("meeting_style_used"),
         meeting_opening=config.get("meeting_opening_used"),
+        sample_seed=config.get("sample_seed"),
         research_problem=content.research_problem,
         disciplines=content.disciplines,
         discipline_distance=content.discipline_distance,
@@ -307,6 +324,8 @@ def cli():
     parser.add_argument("--task", default=CONFIG["task_id"], choices=TASKS)
     parser.add_argument("--list-tasks", action="store_true")
     parser.add_argument("--dry-run", action="store_true", help="Show task; no API calls")
+    parser.add_argument("--seed", type=int, default=None,
+                        help="Sample number; same seed gives the same background/style for any model")
     args = parser.parse_args()
     if args.list_tasks:
         for key, task in TASKS.items():
@@ -321,11 +340,11 @@ def cli():
     if task["input_type"] != "single_meeting":
         # Plan + meeting, paired meetings, sequences, seniority pairs.
         from multi_meeting import run_series
-        series = run_series({**CONFIG, "task_id": args.task})
+        series = run_series({**CONFIG, "task_id": args.task, "sample_seed": args.seed})
         if not series["approved"]:
             raise SystemExit(2)
         return
-    result = run_pipeline({**CONFIG, "task_id": args.task})
+    result = run_pipeline({**CONFIG, "task_id": args.task, "sample_seed": args.seed})
     print_transcript(result)
     if not result.qa_feedback.approved:
         raise SystemExit(2)

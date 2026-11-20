@@ -300,6 +300,7 @@ class GeneratedTranscript(BaseModel):
     research_id: Optional[str] = None
     meeting_style: Optional[str] = None
     meeting_opening: Optional[str] = None
+    sample_seed: Optional[int] = None  # run_batch.py sample number
     
     # benchmark metadata
     task_id: str = "custom"
