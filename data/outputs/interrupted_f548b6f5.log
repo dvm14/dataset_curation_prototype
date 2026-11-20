@@ -1,0 +1,41 @@
+
+==================================================
+Pipeline run: f548b6f5
+==================================================
+
+[1/5] Extracting AMI style...
+      Style notes extracted (630 chars)
+[2/5] Agent 1 — Content Curation...
+      Disciplines: neuroscience, anthropology
+      Seed: In the meeting dialogue, have the neuroscientist naturally describe measuring within-person HRV chan...
+[3/5] Agent 2 — Casting...
+      Cast 2 speakers: Maya Chen, Nadia Okafor
+[4/5] Agent 3 — Filming...
+      Turn 1: Nadia Okafor (respond) | bids: Chen 6, Okafor 6
+      Turn 2: Maya Chen (respond) | bids: Chen 6, Okafor 1
+      Turn 3: Nadia Okafor (respond) | bids: Chen 1, Okafor 8
+Traceback (most recent call last):
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/main.py", line 237, in <module>
+    result = run_pipeline(run_config)
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/main.py", line 136, in run_pipeline
+    filming = agent3.run(
+        content=content,
+    ...<2 lines>...
+        qa_feedback=qa_feedback_text,
+    )
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/agents/agent3_filming.py", line 613, in run
+    leaked, reason = check_seed_leak(content, transcript, text)
+                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/agents/agent3_filming.py", line 379, in check_seed_leak
+    result = call_llm_json(
+        leak_prompt,
+        json.dumps(task, indent=2),
+        max_tokens=200,
+    )
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/utils/llm.py", line 128, in call_llm_json
+    raw = _request(instructions, user_message, max_tokens, model, json_mode=True)
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/utils/llm.py", line 99, in _request
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: OpenAI response incomplete: max_output_tokens. For max_output_tokens, increase OPENAI_MIN_OUTPUT_TOKENS or use a supported lower OPENAI_REASONING_EFFORT.

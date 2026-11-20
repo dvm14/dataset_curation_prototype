@@ -23,6 +23,7 @@ from prompts.agent3_prompt import SYSTEM_PROMPT, BID_PROMPT, LEAK_CHECK_PROMPT
 # One turn means one participant speaks once.
 MIN_TURNS = 15          # the meeting can't end on its own before this
 MAX_TURNS = 35          # hard stop
+ASSUMPTION_MAX_TURNS = 26
 MAX_CONSECUTIVE = 1     # no back-to-back turns: one person continuing is one turn
 END_THRESHOLD = 3       # after MIN_TURNS, if every bid is below this, the meeting ends
 LEAK_RETRIES = 2        # times a turn is regenerated if it gives the seed away
@@ -37,6 +38,12 @@ WORDS_PER_MINUTE = 150
 # budget is regenerated once, shorter.
 WORD_LIMITS = {"respond": 80, "brief": 15, "interject": 40}
 LENGTH_SLACK = 1.5
+
+
+def word_limit(intent, category):
+    if category == "assumptions" and intent == "respond":
+        return 35
+    return WORD_LIMITS[intent]
 
 TURN_NOTES = {
     "respond": (
@@ -172,7 +179,7 @@ def format_history(transcript):
     return "\n".join(f"{turn.speaker}: {turn.text}" for turn in transcript)
 
 
-def time_cue(transcript):
+def time_cue(transcript, max_turns=MAX_TURNS):
     """
     Meeting time from words spoken so far, so agents wind down on their
     own and any time they mention matches the conversation. Near the turn
@@ -184,9 +191,9 @@ def time_cue(transcript):
     cue = f"About {minutes} of {MEETING_MINUTES} scheduled minutes have passed."
 
     turns = len(transcript)
-    if turns >= MAX_TURNS - 3 or minutes >= MEETING_MINUTES:
+    if turns >= max_turns - 3 or minutes >= MEETING_MINUTES:
         cue += " Someone has a hard stop, so the meeting has to wrap up now."
-    elif turns >= MAX_TURNS - 6 or minutes >= MEETING_MINUTES * 0.75:
+    elif turns >= max_turns - 6 or minutes >= MEETING_MINUTES * 0.75:
         cue += " The meeting is getting close to its end."
     return cue
 
@@ -238,7 +245,7 @@ def get_bid(speaker, content, shared_context, brief, transcript, nudge=""):
 
     tail = f"""
 TIME:
-{time_cue(transcript)}
+{time_cue(transcript, ASSUMPTION_MAX_TURNS if content.seed.benchmark_category == 'assumptions' else MAX_TURNS)}
 {nudge}
 
 You are {speaker.name}. Decide whether you want to speak next.
@@ -307,6 +314,22 @@ def pick_speaker(bids, transcript, turn_index, can_end=True):
         if bid["urgency"] == top
     ]
     return random.choice(winners)
+
+
+def assumption_turn_policy(bid, turn_index, covered):
+    """Keep low-energy turns brief and stop an unproductive missing-evidence tail."""
+    intent = bid["intent"]
+    if intent == "respond" and bid["urgency"] <= 3:
+        intent = "brief"
+    can_end = covered or turn_index >= MIN_TURNS + 6
+    if turn_index % 4 in (0, 1):
+        note = ("One small spoken thought, often 10-25 words. React to one "
+                "specific point. Do not repeat a caveat already discussed or "
+                "wrap up a complete argument.")
+    else:
+        note = ("Add only one new point. Do not repeat a caveat already "
+                "discussed; a quick reaction is enough if nothing new comes to mind.")
+    return intent, can_end, note
 
 
 def seed_terms(ground_truth):
@@ -429,7 +452,7 @@ def speak(speaker, content, shared_context, brief, ami_style_notes,
     def generate(note):
         tail = f"""
 TIME:
-{time_cue(transcript)}
+{time_cue(transcript, ASSUMPTION_MAX_TURNS if content.seed.benchmark_category == 'assumptions' else MAX_TURNS)}
 
 STYLE REFERENCE (how people in a real meeting talked):
 {ami_style_notes}
@@ -453,7 +476,7 @@ Return JSON with the field "text".
     text = generate(instruction)
 
     # Spoken turns are short. One retry if this reads like a written paragraph.
-    limit = WORD_LIMITS[intent]
+    limit = word_limit(intent, content.seed.benchmark_category)
     if len(text.split()) > limit * LENGTH_SLACK:
         print(f"      ({speaker.name}: {len(text.split())} words, asking for a shorter turn)")
         text = generate(
@@ -571,7 +594,7 @@ def run(
                        for t in transcript)
         ]
 
-    for turn_index in range(MAX_TURNS):
+    for turn_index in range(ASSUMPTION_MAX_TURNS if assumptions else MAX_TURNS):
         missing = still_missing()
         nudges = {
             name: seed_nudge(terms)
@@ -592,8 +615,8 @@ def run(
             for name, bid in bids.items()
         )
 
-        name = pick_speaker(bids, transcript, turn_index,
-                            can_end=(covered if assumptions else not missing))
+        can_end = (covered or turn_index >= MIN_TURNS + 6) if assumptions else not missing
+        name = pick_speaker(bids, transcript, turn_index, can_end=can_end)
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
@@ -602,11 +625,17 @@ def run(
         intent = bids[name]["intent"]
         if intent == "pass":
             intent = "respond"
+        if assumptions:
+            intent, _, turn_note = assumption_turn_policy(bids[name], turn_index, covered)
+            if intent == "pass":
+                intent = "brief"
+        else:
+            turn_note = ""
 
         if intent == "interject" and transcript:
             transcript[-1] = cut_off(transcript[-1], terms, protect_full_turn=assumptions)
 
-        nudge = nudges.get(name, "")
+        nudge = (turn_note + "\n" + nudges.get(name, "")).strip()
         text = speak(
             speaker, content, shared_context, private_briefs[name],
             ami_style_notes, transcript, intent, extra_note=nudge,

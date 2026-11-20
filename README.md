@@ -174,6 +174,10 @@ This pilot excludes the seed and ground truth from the identification request.
 Generation, QA and the pilot may use the same model, so pilot agreement is not
 independent validation. The assumptions category is an implementation proposal,
 not a frozen team benchmark specification.
+If no sample passes overall QA, `--diagnostic` permits a sample that passed
+only the seed recoverability and implicitness thresholds. Its output is
+explicitly labeled as a diagnostic on a QA-rejected sample, not a qualifying
+pilot.
 
 ## Value banks
 

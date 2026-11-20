@@ -1,0 +1,15 @@
+{
+  "ami_transcript_path": "data/ami_transcripts/sample.txt",
+  "research_problem": "Which neighborhood rain gardens to select for a joint flood resilience field study",
+  "disciplines": ["hydrology", "civil engineering", "environmental economics"],
+  "num_speakers": 3,
+  "discipline_distance": "mixed",
+  "benchmark_category": "assumptions",
+  "benchmark_task": "Generate one implicit, decision-dependent premise: the team uses a hydrology measurement such as infiltration or runoff reduction to choose a pair of rain garden sites for a broader flood resilience study. The shared site-selection decision must be made during the meeting, drawing on the method and broader goal. The premise connecting the measure to that goal should be inferable from actual dialogue but left unspoken. Ground truth should focus on the measurement-based choice, without arbitrary counts of the total candidate pool or numerical cutoffs. Include a conditional risk if the premise were false.",
+  "speaker_overrides": {
+    "hydrology": {"communication_style": "collaborative"},
+    "civil engineering": {"communication_style": "collaborative"},
+    "environmental economics": {"communication_style": "collaborative"}
+  },
+  "max_refilms": 1
+}

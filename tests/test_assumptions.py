@@ -1,6 +1,6 @@
 from schema import Turn
 from agents.agent4_qa import validate_assumption_evidence
-from agents.agent3_filming import seed_terms, cut_off
+from agents.agent3_filming import seed_terms, cut_off, assumption_turn_policy, word_limit
 from agents.agent4_qa import run as qa_run
 from schema import (ContentCurationOutput, SeedSpec, DisciplineDistance,
                     CastingOutput, SpeakerProfile, FunctionalRole, Tone,
@@ -144,3 +144,37 @@ def test_curator_retries_blank_assumption_field(monkeypatch):
                     "task", "assumptions")
     assert result.seed.ground_truth["why_needed"] == "valid"
     assert len(calls) == 2
+
+
+def test_assumption_turn_policy_shortens_low_urgency_and_avoids_empty_tail():
+    intent, can_end, note = assumption_turn_policy(
+        {"intent": "respond", "urgency": 2}, turn_index=22, covered=False)
+    assert intent == "brief"
+    assert can_end
+    assert "repeat" in note.lower()
+
+
+def test_assumption_turn_policy_protects_early_evidence_window():
+    _, can_end, _ = assumption_turn_policy(
+        {"intent": "respond", "urgency": 2}, turn_index=16, covered=False)
+    assert not can_end
+
+
+def test_assumptions_response_budget_is_spoken_length():
+    assert word_limit("respond", "assumptions") < word_limit("respond", "jargon")
+
+
+def test_pilot_diagnostic_sends_only_transcript(monkeypatch, tmp_path):
+    import pilot_assumption
+    path = tmp_path / "candidate.json"
+    path.write_text(json.dumps({"benchmark_category": "assumptions",
+                                "transcript_id": "abc", "ground_truth": {"assumption": "SECRET"},
+                                "seed_spec": {"explicit_instruction": "SECRET"},
+                                "qa_feedback": {"approved": False, "seed_recoverable": 4,
+                                                "seed_implicit": 5, "assumption_status": "implicit"},
+                                "transcript": [{"speaker": "A", "text": "Choose this site."}]}))
+    seen = []
+    monkeypatch.setattr(pilot_assumption, "call_llm_json", lambda system, user: (seen.append(user) or {}))
+    pilot_assumption.run(path, diagnostic=True)
+    assert "Choose this site." in seen[0]
+    assert "SECRET" not in seen[0]

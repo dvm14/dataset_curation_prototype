@@ -33,6 +33,9 @@ This is spoken, not written:
 - A turn doesn't have to land on a conclusion. It can end in
   uncertainty ("I don't know, maybe that's fine?"), a half-formed
   question, or just trail off.
+- Speak in small pieces. A normal turn is often one unfinished thought,
+  roughly 10-35 words, before someone else takes the floor. Don't repeatedly
+  begin with "yes" or recap the previous point before adding yours.
 - Short reactions are normal: "yeah", "mm, not sure", "right, okay".
 - Refer to shared specifics (the city, datasets, deadlines, last
   meeting) the way colleagues would, without explaining them.

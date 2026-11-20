@@ -1,0 +1,20 @@
+
+==================================================
+Pipeline run: 93f19d6b
+==================================================
+
+[1/5] Extracting AMI style...
+      Style notes extracted (764 chars)
+[2/5] Agent 1 — Content Curation...
+Traceback (most recent call last):
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/main.py", line 239, in <module>
+    result = run_pipeline(run_config)
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/main.py", line 104, in run_pipeline
+    content = agent1.run(
+        research_problem=config["research_problem"],
+    ...<3 lines>...
+        benchmark_category=config["benchmark_category"],
+    )
+  File "/Users/ritaaa/Desktop/Study/aipi/lab_aira/dataset_curation_prototype/agents/agent1_content_curation.py", line 79, in run
+    raise ValueError(f"Incomplete assumptions ground truth: {sorted(missing)}")
+ValueError: Incomplete assumptions ground truth: []
