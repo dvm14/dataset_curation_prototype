@@ -32,14 +32,18 @@ CONFIG = {
     # Path to your AMI transcript file
     "ami_transcript_path": "data/ami_transcripts/sample.txt",
 
-    # Research setup — set manually or leave disciplines=None to randomize
-    "research_problem": (
-        "Understanding how urban green space affects mental health outcomes "
-        "in low-income communities"
-    ),
+    # Research setup — set manually or leave both as None to randomize.
+    # research_problem=None picks a background from utils/research_banks.py
+    # (matched to the disciplines if you set them, otherwise it also picks
+    # the disciplines). Set a string here to use your own problem.
+    "research_problem": None,
     "disciplines": None,  # None = randomize from value bank
     "num_speakers": 3,    # one cast speaker per discipline
     "discipline_distance": "distant",
+
+    # Meeting style from utils/meeting_styles.py, e.g. "tangent_heavy".
+    # None = pick one at random for each meeting.
+    "meeting_style": None,
 
     # Select the task; category and description come from benchmark_tasks.py.
     "task_id": "jargon_01",
@@ -68,6 +72,11 @@ def load_ami_style(config):
             "Add a .txt file from the AMI dataset to data/ami_transcripts/"
         )
     ami_style_notes = extract_style(ami_path.read_text())
+    # One meeting style and opening per meeting, on top of the AMI notes.
+    from utils.meeting_styles import pick_style, style_block
+    style_name, style = pick_style(config.get("meeting_style"))
+    ami_style_notes += "\n\n" + style_block(style_name, style)
+    print(f"      Meeting style: {style_name}")
     print(f"      Style notes extracted ({len(ami_style_notes)} chars)")
     return ami_style_notes
 
@@ -138,10 +147,29 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
             config[key] = value
     from schema import DisciplineDistance, GeneratedTranscript
     from utils.value_banks import sample_disciplines
+    from utils.research_banks import pick_research, research_text
     from utils.llm import usage_report
     import agents.agent1_content_curation as agent1
     import agents.agent2_casting as agent2
     config["discipline_distance"] = DisciplineDistance(config["discipline_distance"])
+
+    # Research background: use the bank unless a problem was set by hand.
+    if config.get("research_problem") is None:
+        n_wanted = len(config["disciplines"]) if config["disciplines"] else config["num_speakers"]
+        entry = pick_research(
+            disciplines=config["disciplines"],
+            n=n_wanted,
+            distance=config["discipline_distance"].value,
+        )
+        if entry is not None:
+            if not config["disciplines"]:
+                config["disciplines"] = list(entry["disciplines"])
+            config["research_problem"] = research_text(entry, only=config["disciplines"])
+        else:
+            raise ValueError(
+                f"No research background in utils/research_banks.py covers "
+                f"{config['disciplines']}. Add one or set research_problem."
+            )
     transcript_id = str(uuid.uuid4())[:8]
     created_at = datetime.now()
     print(f"\n{'='*50}")

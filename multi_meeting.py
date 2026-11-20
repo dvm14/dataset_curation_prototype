@@ -195,11 +195,26 @@ def run_series(config):
     ami_style_notes = load_ami_style(config)
 
     distance = DisciplineDistance(config.get("discipline_distance", "distant"))
-    disciplines = config.get("disciplines") or sample_disciplines(
-        distance.value, n=SPEAKERS_PER_GROUP.get(kind, config.get("num_speakers", 3)))
+    n_speakers = SPEAKERS_PER_GROUP.get(kind, config.get("num_speakers", 3))
+    research_problem = config.get("research_problem")
+    disciplines = config.get("disciplines")
+    if research_problem is None:
+        # Same bank the single-meeting runner uses (utils/research_banks.py).
+        # With no disciplines set, take the background's own disciplines so
+        # the problem and the cast match.
+        from utils.research_banks import pick_research, research_text
+        entry = pick_research(disciplines=disciplines, n=n_speakers,
+                              distance=distance.value)
+        if entry is None:
+            raise ValueError(f"No research background covers {disciplines}. "
+                             "Add one to utils/research_banks.py or set research_problem.")
+        disciplines = disciplines or list(entry["disciplines"])
+        research_problem = research_text(entry, only=disciplines)
+    elif not disciplines:
+        disciplines = sample_disciplines(distance.value, n=n_speakers)
 
     print("[2] Planning the series...")
-    plan = plan_series(task, config["research_problem"], disciplines)
+    plan = plan_series(task, research_problem, disciplines)
     total = len(plan["meetings"])
     for m in plan["meetings"]:
         print(f"      {m['label']}: {m['instruction'][:90]}...")
