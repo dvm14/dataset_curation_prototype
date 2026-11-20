@@ -73,9 +73,17 @@ def load_ami_style(config):
         )
     ami_style_notes = extract_style(ami_path.read_text())
     # One meeting style and opening per meeting, on top of the AMI notes.
-    from utils.meeting_styles import pick_style, style_block
-    style_name, style = pick_style(config.get("meeting_style"))
-    ami_style_notes += "\n\n" + style_block(style_name, style)
+    from utils.meeting_styles import pick_style, pick_opening, style_block
+    # other_02 (seniority_pair): the dialogue must not show seniority, so
+    # styles built around a senior/junior dynamic are excluded.
+    task_kind = get_task(config["task_id"])["input_type"]
+    style_name, style = pick_style(config.get("meeting_style"),
+                                   avoid_seniority=task_kind == "seniority_pair")
+    opening = pick_opening()
+    ami_style_notes += "\n\n" + style_block(style_name, style, opening)
+    # Recorded on config so the saved output can carry them as fields.
+    config["meeting_style_used"] = style_name
+    config["meeting_opening_used"] = opening
     print(f"      Meeting style: {style_name}")
     print(f"      Style notes extracted ({len(ami_style_notes)} chars)")
     return ami_style_notes
@@ -165,6 +173,7 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
             if not config["disciplines"]:
                 config["disciplines"] = list(entry["disciplines"])
             config["research_problem"] = research_text(entry, only=config["disciplines"])
+            config["research_id_used"] = entry["id"]
         else:
             raise ValueError(
                 f"No research background in utils/research_banks.py covers "
@@ -228,6 +237,9 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         transcript_id=transcript_id,
         generated_at=created_at.isoformat(),
         ami_style_notes=ami_style_notes,
+        research_id=config.get("research_id_used"),
+        meeting_style=config.get("meeting_style_used"),
+        meeting_opening=config.get("meeting_opening_used"),
         research_problem=content.research_problem,
         disciplines=content.disciplines,
         discipline_distance=content.discipline_distance,

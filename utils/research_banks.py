@@ -142,6 +142,40 @@ RESEARCH_BANK = [
         },
     },
     {
+        "id": "chw_blood_pressure",
+        "distance": "distant",
+        "disciplines": ["clinical medicine", "sociology"],
+        "problem": (
+            "Evaluating a program where community health workers visit "
+            "patients with uncontrolled high blood pressure at home"
+        ),
+        "lenses": {
+            "clinical medicine": "blood pressure control as the outcome, "
+                                 "randomized or stepped-wedge designs, "
+                                 "medication titration, follow-up visits",
+            "sociology": "trust between workers and families, who counts as "
+                         "a patient, home visits as observed practice, "
+                         "interviews with workers and patients",
+        },
+    },
+    {
+        "id": "walk_in_diabetes_clinic",
+        "distance": "distant",
+        "disciplines": ["clinical medicine", "sociology"],
+        "problem": (
+            "Deciding whether a nurse-led walk-in diabetes clinic at a "
+            "safety-net hospital is working and for whom"
+        ),
+        "lenses": {
+            "clinical medicine": "HbA1c change, comparison groups, "
+                                 "no-show and follow-up rates, hospital "
+                                 "quality metrics",
+            "sociology": "why patients come at odd hours, clinic culture "
+                         "and staff roles, stigma, qualitative accounts "
+                         "of waiting and being seen",
+        },
+    },
+    {
         "id": "ai_math_tutor",
         "distance": "distant",
         "disciplines": ["computer science", "education"],

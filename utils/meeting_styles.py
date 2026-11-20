@@ -30,6 +30,7 @@ MEETING_STYLES = {
         ],
     },
     "one_voice_leads": {
+        "shows_seniority": True,
         "description": (
             "One person (often the most senior) talks for much of the "
             "meeting in long turns. Others come in with short questions or "
@@ -114,6 +115,7 @@ MEETING_STYLES = {
         ],
     },
     "deferential_junior": {
+        "shows_seniority": True,
         "description": (
             "A senior person leads and a more junior person is cautious, "
             "checks before offering ideas ('this might be a dumb question') "
@@ -170,16 +172,34 @@ STOCK_PHRASES_TO_AVOID = [
 ]
 
 
-def pick_style(name=None):
-    """Return (name, style). With name=None the style is chosen at random."""
+def pick_style(name=None, avoid_seniority=False):
+    """
+    Return (name, style). With name=None the style is chosen at random.
+
+    avoid_seniority — True for tasks where the dialogue must not reveal who
+    is senior (other_02, seniority_pair). Styles marked "shows_seniority"
+    are never picked then, and asking for one by name is an error.
+    """
     if name is not None:
         if name not in MEETING_STYLES:
             raise ValueError(
                 f"Unknown meeting_style {name!r}. Options: {sorted(MEETING_STYLES)}"
             )
+        if avoid_seniority and MEETING_STYLES[name].get("shows_seniority"):
+            raise ValueError(
+                f"meeting_style {name!r} builds seniority into the dialogue, "
+                "which this task forbids. Pick another style or leave it unset."
+            )
         return name, MEETING_STYLES[name]
-    name = random.choice(list(MEETING_STYLES))
+    options = [n for n, st in MEETING_STYLES.items()
+               if not (avoid_seniority and st.get("shows_seniority"))]
+    name = random.choice(options)
     return name, MEETING_STYLES[name]
+
+
+def pick_opening():
+    """One opening instruction, chosen at random."""
+    return random.choice(MEETING_OPENINGS)
 
 
 def style_block(name, style, opening=None):
@@ -188,7 +208,7 @@ def style_block(name, style, opening=None):
     The Filming and QA agents already receive ami_style_notes, so this
     needs no change to either agent.
     """
-    opening = opening or random.choice(MEETING_OPENINGS)
+    opening = opening or pick_opening()
     examples = "\n".join(f"  - {line}" for line in style["examples"])
     avoid = "; ".join(f'"{p}"' for p in STOCK_PHRASES_TO_AVOID)
     return (
