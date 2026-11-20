@@ -22,17 +22,39 @@ def test_entries_are_complete():
 
 def test_default_run_gets_variety():
     random.seed(1)
-    seen = Counter(pick_research(None, 3, "distant")["id"] for _ in range(200))
-    assert len(seen) >= 4
-    assert all(len(next(e for e in RESEARCH_BANK if e["id"] == i)["disciplines"]) == 3
-               for i in seen)
+    picks = [pick_research(None, 3, "distant") for _ in range(400)]
+    assert all(len(e["disciplines"]) == 3 for e in picks)
+    assert all(set(e["lenses"]) == set(e["disciplines"]) for e in picks)
+    # three-discipline entries plus the grown two-discipline ones
+    assert len({e["id"] for e in picks}) >= 18
+
+
+def test_two_discipline_entries_grow_to_three_without_changing_the_bank():
+    two = [e for e in RESEARCH_BANK if len(e["disciplines"]) == 2]
+    assert two and all("third" in e for e in two)
+    random.seed(2)
+    grown = [e for e in (pick_research(None, 3) for _ in range(400))
+             if e["id"] in {t["id"] for t in two}]
+    assert grown
+    for e in grown:
+        base = next(t for t in two if t["id"] == e["id"])
+        assert e["disciplines"][:2] == base["disciplines"]
+        assert e["disciplines"][2] == base["third"]["discipline"]
+        assert e["disciplines"][2] not in base["disciplines"]
+        assert len(base["disciplines"]) == 2  # bank itself is untouched
+
+
+def test_two_speaker_runs_use_two_discipline_entries_as_they_are():
+    random.seed(3)
+    picks = [pick_research(None, 2, "distant") for _ in range(100)]
+    assert all(len(e["disciplines"]) == 2 for e in picks)
 
 
 def test_task_discipline_override_is_matched():
     e = pick_research(["clinical medicine", "sociology"])
     assert set(e["disciplines"]) == {"clinical medicine", "sociology"}
     text = research_text(e, only=["clinical medicine", "sociology"])
-    assert "readmissions" in text
+    assert e["problem"] in text and "anthropology:" not in text
 
 
 def test_unknown_disciplines_return_none():

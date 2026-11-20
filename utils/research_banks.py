@@ -18,10 +18,16 @@ import random
 
 # distance: "close" = neighbouring fields, "distant" = far apart,
 #           "mixed" = three or more fields with both near and far pairs.
+# third:    optional. For a two-discipline entry, a third field that fits the
+#           same problem, so three-speaker runs can use it too.
 RESEARCH_BANK = [
     # ── Two disciplines, close ────────────────────────────
     {
         "id": "sleep_adolescent_emotion",
+        "third": {
+            "discipline": "education",
+            "lens": "school schedules and bus routes, attendance and grades, teacher and parent attitudes to later start times",
+        },
         "distance": "close",
         "disciplines": ["neuroscience", "psychology"],
         "problem": (
@@ -37,6 +43,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "tidal_wetland_restoration",
+        "third": {
+            "discipline": "economics",
+            "lens": "avoided storm damage, cost-benefit of restoration options, property values, who pays",
+        },
         "distance": "close",
         "disciplines": ["ecology", "environmental engineering"],
         "problem": (
@@ -52,6 +62,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "pollinator_strips",
+        "third": {
+            "discipline": "economics",
+            "lens": "farm income, cost of planting and upkeep, subsidy design, effect on crop yields",
+        },
         "distance": "close",
         "disciplines": ["ecology", "biology"],
         "problem": (
@@ -67,6 +81,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "wearable_arrhythmia",
+        "third": {
+            "discipline": "clinical medicine",
+            "lens": "cardiology follow-up, who acts on an alert, false-alarm burden, clinical guidelines",
+        },
         "distance": "close",
         "disciplines": ["computer science", "biomedical engineering"],
         "problem": (
@@ -82,6 +100,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "school_vaccination_outreach",
+        "third": {
+            "discipline": "sociology",
+            "lens": "family decision-making, trust in schools and clinics, how worries spread through community networks",
+        },
         "distance": "close",
         "disciplines": ["epidemiology", "public health"],
         "problem": (
@@ -98,6 +120,10 @@ RESEARCH_BANK = [
     # ── Two disciplines, distant ──────────────────────────
     {
         "id": "consciousness_end_of_life",
+        "third": {
+            "discipline": "clinical medicine",
+            "lens": "bedside prognosis, conversations with families, ethics committees, how uncertain results are used",
+        },
         "distance": "distant",
         "disciplines": ["neuroscience", "philosophy"],
         "problem": (
@@ -113,6 +139,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "mangrove_payments",
+        "third": {
+            "discipline": "anthropology",
+            "lens": "customary land use, community norms about who gets paid, local trust in outside programs",
+        },
         "distance": "distant",
         "disciplines": ["ecology", "economics"],
         "problem": (
@@ -128,6 +158,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "heart_failure_readmission",
+        "third": {
+            "discipline": "economics",
+            "lens": "hospital readmission penalties, cost per avoided readmission, payment models",
+        },
         "distance": "distant",
         "disciplines": ["clinical medicine", "sociology"],
         "problem": (
@@ -143,6 +177,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "chw_blood_pressure",
+        "third": {
+            "discipline": "public health",
+            "lens": "program reach and equity, screening and follow-up across a population, workforce and funding",
+        },
         "distance": "distant",
         "disciplines": ["clinical medicine", "sociology"],
         "problem": (
@@ -160,6 +198,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "walk_in_diabetes_clinic",
+        "third": {
+            "discipline": "public health",
+            "lens": "who the clinic reaches and misses, population-level diabetes burden, funding and staffing",
+        },
         "distance": "distant",
         "disciplines": ["clinical medicine", "sociology"],
         "problem": (
@@ -177,6 +219,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "ai_math_tutor",
+        "third": {
+            "discipline": "psychology",
+            "lens": "math anxiety, motivation, how children respond to hints and feedback",
+        },
         "distance": "distant",
         "disciplines": ["computer science", "education"],
         "problem": (
@@ -192,6 +238,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "rural_point_of_care",
+        "third": {
+            "discipline": "public health",
+            "lens": "clinic supply chains, screening programs, referral pathways, community health workers",
+        },
         "distance": "distant",
         "disciplines": ["biomedical engineering", "anthropology"],
         "problem": (
@@ -207,6 +257,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "wastewater_surveillance",
+        "third": {
+            "discipline": "environmental engineering",
+            "lens": "sampling sites, sewer flow and dilution, lab methods, detection limits",
+        },
         "distance": "distant",
         "disciplines": ["epidemiology", "science & technology studies"],
         "problem": (
@@ -223,6 +277,10 @@ RESEARCH_BANK = [
     },
     {
         "id": "scarcity_decisions",
+        "third": {
+            "discipline": "psychology",
+            "lens": "stress manipulations, self-report scales, laboratory design and replication",
+        },
         "distance": "distant",
         "disciplines": ["neuroscience", "economics"],
         "problem": (
@@ -362,16 +420,32 @@ RESEARCH_BANK = [
 ]
 
 
+def _with_third(entry):
+    """A two-discipline entry grown to three using its "third" field."""
+    third = entry["third"]
+    grown = dict(entry)
+    grown["disciplines"] = list(entry["disciplines"]) + [third["discipline"]]
+    grown["lenses"] = {**entry["lenses"], third["discipline"]: third["lens"]}
+    grown["distance"] = "mixed"
+    return grown
+
+
 def pick_research(disciplines=None, n=None, distance=None):
     """
     Choose a research background.
 
     disciplines — if given, return an entry whose disciplines match them
                   (same set first, then any entry that contains them all).
-                  Returns None when nothing fits; the caller keeps its own
-                  problem text.
-    n           — number of speakers wanted, when disciplines is None
-    distance    — "close" / "distant" / "mixed", preferred but not forced
+                  Returns None when nothing fits; the caller decides what
+                  to do.
+    n           — number of speakers wanted, when disciplines is None.
+                  Entries with n disciplines are used as they are. Entries
+                  with n-1 disciplines are grown by one using their "third"
+                  field, so three-speaker runs also draw on the
+                  two-discipline backgrounds.
+    distance    — "close" / "distant" / "mixed", a preference for two-speaker
+                  runs only (with three or more fields, near and far pairs
+                  are both present, so it is not applied).
     """
     if disciplines:
         wanted = set(disciplines)
@@ -380,13 +454,17 @@ def pick_research(disciplines=None, n=None, distance=None):
         pool = exact or sub
         return random.choice(pool) if pool else None
 
-    pool = [e for e in RESEARCH_BANK if n is None or len(e["disciplines"]) == n]
-    # Distance is a preference. It is dropped when it would leave too few
-    # choices (e.g. 3 speakers with "distant" would otherwise always give
-    # the same background).
-    by_distance = [e for e in pool if distance is None or e["distance"] == distance]
-    pool = by_distance if len(by_distance) >= 3 else (pool or RESEARCH_BANK)
-    return random.choice(pool)
+    if n is None:
+        return random.choice(RESEARCH_BANK)
+    pool = [e for e in RESEARCH_BANK if len(e["disciplines"]) == n]
+    pool += [_with_third(e) for e in RESEARCH_BANK
+             if len(e["disciplines"]) == n - 1 and "third" in e]
+    if n <= 2 and distance is not None:
+        # A preference, dropped when it would leave too few choices.
+        by_distance = [e for e in pool if e["distance"] == distance]
+        if len(by_distance) >= 3:
+            pool = by_distance
+    return random.choice(pool or RESEARCH_BANK)
 
 
 def research_text(entry, with_lenses=True, only=None):
