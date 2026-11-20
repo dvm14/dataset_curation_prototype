@@ -17,6 +17,8 @@ nudge used for terminology tasks.
 
 import re
 
+from utils.names import match_speaker
+
 MAX_FACTS = 8
 # The meeting can't end with facts unsaid until this turn; after that it
 # may. Blocking until MAX_TURNS made 10 of 11 meetings run to the 35-turn
@@ -68,6 +70,7 @@ def parse_facts(raw, speakers):
         if not isinstance(item, dict):
             continue
         speaker, fact, cue = (str(item.get(k, "")).strip() for k in ("speaker", "fact", "cue"))
+        speaker = match_speaker(speaker, speakers) or speaker
         if speaker in names and fact and 0 < len(_cue_words(cue)) <= 6 and is_value_cue(cue):
             facts.append({"speaker": speaker, "fact": fact, "cue": cue})
     return facts[:MAX_FACTS]

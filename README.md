@@ -81,6 +81,15 @@ meeting style, opening and speaker attributes. So sample *k* gets the same setup
 every generator model, and Claude and GPT outputs can be compared pair by pair.
 Each saved JSON records `sample_seed`, `research_id`, `meeting_style` and `meeting_opening`.
 
+To check a judge, re-score saved transcripts without regenerating them:
+
+```bash
+python rejudge.py --judge gpt-5.6-terra            # all single-meeting samples of GEN_MODEL
+python rejudge.py --judge gpt-5.6-terra --limit 5
+```
+
+It writes `rejudge_<judge>_<time>.csv` with the saved and new scores side by side.
+
 Offline test (fake LLM, no key or cost needed):
 
 ```bash

@@ -34,8 +34,9 @@ TERM = "resilience"
 class FakeLLM:
     """Answers each prompt type with minimal valid JSON and counts calls."""
 
-    def __init__(self, term_task, malformed_leak_every=0, extra_cast=0):
+    def __init__(self, term_task, malformed_leak_every=0, extra_cast=0, planner_quirk=None):
         self.term_task = term_task
+        self.planner_quirk = planner_quirk
         self.extra_cast = extra_cast
         self.malformed_leak_every = malformed_leak_every
         self.calls = Counter()
@@ -81,8 +82,14 @@ class FakeLLM:
                 {"speaker": names[0], "fact": "Approval is expected March 1, 2027.", "cue": "March 1, 2027"},
                 {"speaker": names[1], "fact": "Interviews start February 1, 2027.", "cue": "February 1, 2027"},
                 {"speaker": "Nobody", "fact": "dropped: unknown speaker", "cue": "x"}]
+            keys = names
+            if self.planner_quirk == "titles":      # "Dr. Speaker A" for "Speaker A"
+                keys = [f"Dr. {n}" for n in names]
+                facts = [dict(f, speaker=f"Dr. {f['speaker']}") for f in facts]
+            if self.planner_quirk == "miss_first" and self.calls["planner"] == 1:
+                keys = names[:-1]
             return {"shared_context": "Durham, grant due Dec 1.",
-                    "briefs": {n: f"brief for {n}" for n in names},
+                    "briefs": {k: f"brief for {k}" for k in keys},
                     "required_facts": facts}
 
         if system.startswith(agent3_prompt.BID_PROMPT):
@@ -256,3 +263,43 @@ def test_cue_matching():
     assert is_value_cue("February 1, 2027") and is_value_cue("300-meter buffer") and is_value_cue("WHO-5")
     assert not is_value_cue("cannot occur until approved")
     assert not is_value_cue("as part of those interviews")
+
+
+def test_planner_names_with_titles_still_match():
+    """Claude wrote 'Priya Raman' for 'Dr. Priya Raman' and filming crashed."""
+    result, fake = run_task("assumptions_04", planner_quirk="titles")
+    assert fake.calls["planner"] == 1
+    assert result.transcript
+
+
+def test_planner_reply_missing_a_brief_is_retried():
+    result, fake = run_task("assumptions_04", planner_quirk="miss_first")
+    assert fake.calls["planner"] >= 2
+    assert result.transcript
+
+
+def test_match_speaker():
+    from types import SimpleNamespace as S
+    from utils.names import match_speaker
+    cast = [S(name="Dr. Priya Raman"), S(name="Marcus Ellery"), S(name="Wei-Lin Chang")]
+    assert match_speaker("Priya Raman", cast) == "Dr. Priya Raman"
+    assert match_speaker("Prof. Marcus Ellery", cast) == "Marcus Ellery"
+    assert match_speaker("Chang", cast) == "Wei-Lin Chang"
+    assert match_speaker("Nobody", cast) is None
+
+
+def test_rejudge_rebuilds_a_saved_transcript(tmp_path, monkeypatch):
+    """rejudge.py can re-score a saved JSON with another judge."""
+    import rejudge
+    import utils.llm as llm
+    result, fake = run_task("assumptions_04")
+    folder = tmp_path / "assumptions_04" / "failed"
+    folder.mkdir(parents=True)
+    (folder / "x.json").write_text(result.model_dump_json())
+    monkeypatch.setattr(llm, "output_root", lambda: tmp_path)
+    monkeypatch.setattr(agent4, "call_llm_json", fake.json)
+    monkeypatch.setenv("JUDGE_MODEL", "restored-after-test")
+    monkeypatch.setattr(sys, "argv", ["rejudge.py", "--judge", "some-judge"])
+    rejudge.main()
+    out = list(tmp_path.glob("rejudge_some-judge_*.csv"))
+    assert out and "assumptions_04" in out[0].read_text()

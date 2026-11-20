@@ -17,6 +17,7 @@ from schema import (
     CastingOutput,
 )
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
+from utils.names import remap
 from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in, FACT_GATE_TURNS
 from utils.seed_terms import (
     seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
@@ -157,25 +158,25 @@ Return JSON:
         "qa_feedback": qa_feedback,
     }
 
-    result = call_llm_json(
-        planner_prompt,
-        json.dumps(setup, indent=2),
-        max_tokens=3500,
-    )
-
-    shared_context = result.get("shared_context")
-    if not isinstance(shared_context, str) or not shared_context.strip():
-        raise ValueError("Planner returned no shared meeting context.")
-
-    briefs = result.get("briefs", {})
-
-    # Make sure every participant has a usable brief.
-    for speaker in casting.speakers:
-        brief = briefs.get(speaker.name)
-        if not isinstance(brief, str) or not brief.strip():
-            raise ValueError(
-                f"Missing private brief for {speaker.name}"
-            )
+    # Names in the reply are matched to the cast ignoring titles; a reply
+    # that still misses someone is requested once more before giving up.
+    for attempt in range(2):
+        result = call_llm_json(
+            planner_prompt,
+            json.dumps(setup, indent=2),
+            max_tokens=3500,
+        )
+        shared_context = result.get("shared_context")
+        briefs = remap(result.get("briefs"), casting.speakers)
+        missing = [s.name for s in casting.speakers
+                   if not isinstance(briefs.get(s.name), str) or not briefs[s.name].strip()]
+        if isinstance(shared_context, str) and shared_context.strip() and not missing:
+            break
+        print(f"      Planner reply incomplete (missing: {missing or 'shared context'}), retrying...")
+    else:
+        if not isinstance(shared_context, str) or not shared_context.strip():
+            raise ValueError("Planner returned no shared meeting context.")
+        raise ValueError(f"Missing private brief for {missing[0]}")
 
     return shared_context, briefs, parse_facts(result.get("required_facts"), casting.speakers)
 
