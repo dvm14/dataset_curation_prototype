@@ -12,7 +12,7 @@ def test_series_preserves_closing_and_exploration_metrics(monkeypatch, task_id, 
     original = agent3.speak
     closing_intents = []
 
-    def speak(speaker, content, shared_context, brief, style, transcript, intent, extra_note=''):
+    def speak(speaker, content, shared_context, brief, style, transcript, intent, extra_note='', word_limit=None):
         if intent in ('close', 'goodbye'):
             closing_intents.append(intent)
             return 'Thanks, let us stop here.' if intent == 'close' else 'See you.'

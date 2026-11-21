@@ -18,6 +18,7 @@ from schema import (
 )
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
 from utils.names import remap
+from utils import floor_control as floor
 from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in, FACT_GATE_TURNS
 from utils.seed_terms import (
     seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
@@ -409,6 +410,34 @@ def close_meeting(speakers, content, shared_context, briefs,
     return transcript + closing
 
 
+def wrap_up(speakers, content, shared_context, briefs, ami_style_notes,
+            transcript, items):
+    """
+    The chair (whoever opened) runs through exactly the task's action items.
+    Owners and dates are checked in code; a wrap-up that misses one is
+    regenerated. Returns (transcript, cues) — the cues are protected from
+    the speech pass.
+    """
+    by_name = {s.name: s for s in speakers}
+    chair = transcript[0].speaker
+    if transcript[-1].speaker == chair:          # no back-to-back turns
+        chair = next(t.speaker for t in reversed(transcript) if t.speaker != chair)
+    cues = floor.wrap_up_cues(items, speakers)
+    note = floor.wrap_up_note(items)
+    text, missing = "", []
+    for attempt in range(floor.WRAP_UP_RETRIES + 1):
+        extra = note + (f"\nYour last try left out: {', '.join(missing)}. Say each one." if missing else "")
+        text = speak(by_name[chair], content, shared_context, briefs[chair],
+                     ami_style_notes, transcript, "respond", extra_note=extra,
+                     word_limit=floor.WRAP_UP_WORDS)
+        missing = floor.wrap_up_missing(text, cues)
+        if not missing:
+            break
+    print(f"      Wrap-up: {chair} runs through {sum(map(len, items))} action items"
+          + (f" (still missing: {', '.join(missing)})" if missing else ""))
+    return transcript + [Turn(speaker=chair, text=text)], cues
+
+
 def check_seed_leak(content, transcript, text, terms=()):
     """
     Check whether the turn violates the selected task's conditions.
@@ -475,7 +504,7 @@ def cut_off(turn, protected_terms):
 
 
 def speak(speaker, content, shared_context, brief, ami_style_notes,
-          transcript, intent, extra_note=""):
+          transcript, intent, extra_note="", word_limit=None):
     """The winning participant writes their turn."""
 
     instruction = TURN_NOTES[intent]
@@ -516,7 +545,7 @@ Return JSON with the field "text".
     text = generate(instruction)
 
     # Spoken turns are short. One retry if this reads like a written paragraph.
-    limit = WORD_LIMITS[intent]
+    limit = word_limit or WORD_LIMITS[intent]
     if len(text.split()) > limit * LENGTH_SLACK:
         print(f"      ({speaker.name}: {len(text.split())} words, asking for a shorter turn)")
         text = generate(
@@ -709,6 +738,16 @@ def run(
         print(f"      Required facts: {len(facts)} "
               f"({'; '.join(f['cue'] for f in facts)})")
 
+    # Constraints the code enforces (utils/floor_control.py).
+    roles = floor.airtime_roles(content, speakers)
+    if roles:
+        print(f"      Airtime: {roles['dominant']} leads (~{roles['share']:.0%} of words), "
+              f"{roles['quiet']} speaks late and little")
+    items = floor.action_items(content)
+    if items:
+        print(f"      Action items: {len(items[0])} assigned + {len(items[1])} unassigned, "
+              "run through at the end")
+
     for turn_index in range(MAX_TURNS):
         missing = still_missing()
         missing_facts = unsaid(facts, transcript)
@@ -731,15 +770,26 @@ def run(
 
         facts_block_end = missing_facts and turn_index < FACT_GATE_TURNS
         name = pick_speaker(bids, transcript, turn_index,
-                            can_end=not missing and not facts_block_end)
+                            can_end=(not missing and not facts_block_end
+                                     and not floor.quiet_still_due(roles, transcript)))
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
             break
 
+        forced, barred = floor.steer(roles, transcript, turn_index)
+        if forced and consecutive_turns(transcript, forced) < MAX_CONSECUTIVE:
+            name = forced
+        elif name in barred:
+            allowed = {n: b for n, b in bids.items() if n not in barred
+                       and consecutive_turns(transcript, n) < MAX_CONSECUTIVE}
+            if allowed:
+                name = pick_speaker(allowed, transcript, turn_index, can_end=False)
+
         speaker = by_name[name]
         intent = bids[name]["intent"]
-        if intent == "pass":
+        if intent == "pass" or (name == forced and intent == "brief"):
             intent = "respond"
+        word_limit = floor.turn_limit(roles, name, transcript)
 
         # Only terminology tasks cut the interrupted turn (never through the
         # term). Elsewhere a cut could drop a fact the task depends on.
@@ -747,7 +797,8 @@ def run(
             if terms:
                 transcript[-1] = cut_off(transcript[-1], terms)
         elif len(transcript) < MAX_TURNS - 1:
-            reactor = pick_reactor(bids, transcript, name, just_reacted)
+            reactor = pick_reactor({n: b for n, b in bids.items() if n not in barred},
+                                   transcript, name, just_reacted)
             if reactor:
                 # Reactions came out as "Mm-hm, yeah" over and over.
                 recent = ", ".join(f'"{r}"' for r in reactions[-6:])
@@ -770,9 +821,15 @@ def run(
         nudge = nudges.get(name, "")
         if terms:
             nudge = (TERM_VOCAB_NOTE + "\n" + nudge).strip()
+        if items and turn_index >= NUDGE_AFTER:
+            nudge = (nudge + "\n" + floor.items_hold_note(items)).strip()
+        if word_limit:
+            nudge = (nudge + f"\nKeep this turn short: one or two sentences, "
+                     f"under {word_limit} words.").strip()
         text = speak(
             speaker, content, shared_context, private_briefs[name],
             ami_style_notes, transcript, intent, extra_note=nudge,
+            word_limit=word_limit,
         )
 
         for attempt in range(LEAK_RETRIES + 1):
@@ -791,6 +848,7 @@ def run(
                     "facts or resolve matters you do not have evidence for. "
                     "Produce a different natural contribution.\n" + nudge
                 ).strip(),
+                word_limit=word_limit,
             )
 
         transcript.append(Turn(speaker=name, text=text))
@@ -803,6 +861,17 @@ def run(
 
         if len(transcript) >= MAX_TURNS:
             break
+
+    wrap_cues = []
+    if transcript and items:
+        transcript, wrap_cues = wrap_up(
+            speakers, content, shared_context, private_briefs,
+            ami_style_notes, transcript, items,
+        )
+    if roles:
+        print(f"      Airtime: {roles['dominant']} {floor.word_share(transcript, roles['dominant']):.0%} "
+              f"of words; {roles['quiet']} "
+              f"{sum(t.speaker == roles['quiet'] for t in transcript)} turn(s)")
 
     if transcript:
         transcript = close_meeting(
@@ -826,7 +895,7 @@ def run(
         )
 
     if SPEECH_PASS:
-        transcript = speech_pass(content, transcript, terms, facts)
+        transcript = speech_pass(content, transcript, terms, list(facts) + wrap_cues)
 
     seed_location = locate_seed(content, transcript)
 

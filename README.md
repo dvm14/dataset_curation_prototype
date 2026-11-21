@@ -61,7 +61,20 @@ See `MERGE_NOTES.md` for the exact merge scope and validation limitations.
 
 Output is saved to `data/outputs/approved/` or `data/outputs/failed/` as `<task_id>_<YYYY-MM-DD_HH-MM-SS>_<id>.json`. The script exits with code 2 when the transcript fails QA. At the end of each run it prints token usage and an estimated API cost.
 
-### Batch runs
+#### Constraints enforced in code
+
+Some task requirements are countable, and speakers kept "fixing" them, so the code
+controls them (`utils/floor_control.py`):
+
+- **Airtime** (`integration_01`): the dominant speaker takes the floor whenever they are
+  below ~65% of the words; others get short turns; the quiet speaker stays out until
+  turn 15, then makes their point, at most 3 turns in all.
+- **Action items** (ground truth with `assigned_items` / `unassigned_items`, e.g.
+  `coordination_05`): nobody reads out a list or adds a to-do during the meeting; the
+  chair runs through exactly those items at the end, owners and dates checked in code
+  and protected from the speech pass.
+
+## Batch runs
 
 ```bash
 python run_batch.py --n 1                 # pilot: one sample for each of the 33 tasks

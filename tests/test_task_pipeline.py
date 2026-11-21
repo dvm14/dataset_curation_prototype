@@ -26,6 +26,7 @@ import agents.agent2_casting as agent2  # noqa: E402
 import agents.agent3_filming as agent3  # noqa: E402
 import agents.agent4_qa as agent4  # noqa: E402
 import utils.style_extractor as style_extractor  # noqa: E402
+import utils.floor_control as floor_control  # noqa: E402
 from prompts import agent1_prompt, agent2_prompt, agent3_prompt, agent4_prompt  # noqa: E402
 
 TERM = "resilience"
@@ -34,8 +35,10 @@ TERM = "resilience"
 class FakeLLM:
     """Answers each prompt type with minimal valid JSON and counts calls."""
 
-    def __init__(self, term_task, malformed_leak_every=0, extra_cast=0, planner_quirk=None):
+    def __init__(self, term_task, malformed_leak_every=0, extra_cast=0, planner_quirk=None,
+                 truth=None):
         self.term_task = term_task
+        self.truth = truth
         self.planner_quirk = planner_quirk
         self.extra_cast = extra_cast
         self.malformed_leak_every = malformed_leak_every
@@ -58,7 +61,7 @@ class FakeLLM:
                           {"discipline": self.disciplines[0], "meaning": "x"},
                           {"discipline": self.disciplines[1], "meaning": "y"}],
                       "transcript": [{"speaker": "Speaker C", "utterance": "scripted"}]}
-                     if self.term_task else {"conflict": "approval after interviews"})
+                     if self.term_task else self.truth or {"conflict": "approval after interviews"})
             return {"research_problem": "urban heat", "disciplines": self.disciplines,
                     "discipline_distance": "distant", "meeting_context": "Week 3 sync.",
                     "seed": {"explicit_instruction": f"{self.disciplines[0]} and "
@@ -99,9 +102,19 @@ class FakeLLM:
                     "intent": random.choice(["respond", "respond", "brief", "interject"]),
                     "react": random.random() < 0.5}
 
+        if system.startswith(floor_control.ROLES_PROMPT):
+            self.calls["roles"] += 1
+            return {"dominant": self.disciplines[0], "quiet": self.disciplines[-1]}
+
         if system.startswith(agent3_prompt.SYSTEM_PROMPT):
             self.calls["speak"] += 1
             name = re.search(r"Speak only as (.+?)\.\n", body).group(1)
+            items = re.findall(r"^- (.+?) — (.+?)$", body, re.M)
+            if "run through the action items" in body:
+                self.calls["wrap_up"] += 1
+                return {"text": "Okay, six things. " + " ".join(f"{task}: {who}." for task, who in items)}
+            if "Keep this turn short" in body:
+                return {"text": f"{name} here, short point."}
             # Seed speakers (first two) only say the term once nudged.
             says_term = self.term_task and name != "Speaker C" and "you haven't raised yet" in body
             filler = "so I think the corridor data from last spring would let us test that properly"
@@ -153,7 +166,7 @@ def run_task(task_id, **fake_kwargs):
     task = main.get_task(task_id)
     fake = FakeLLM(term_task=agent1.is_term_task(task["benchmark_category"], task["benchmark_task"]),
                    **fake_kwargs)
-    patched = [(m, "call_llm_json") for m in (agent1, agent2, agent3, agent4)]
+    patched = [(m, "call_llm_json") for m in (agent1, agent2, agent3, agent4, floor_control)]
     saved = {(m, a): getattr(m, a) for m, a in patched}
     saved[(style_extractor, "call_llm")] = style_extractor.call_llm
     for m, a in patched:
@@ -303,3 +316,60 @@ def test_rejudge_rebuilds_a_saved_transcript(tmp_path, monkeypatch):
     rejudge.main()
     out = list(tmp_path.glob("rejudge_some-judge_*.csv"))
     assert out and "assumptions_04" in out[0].read_text()
+
+
+def test_airtime_task_gives_the_dominant_speaker_most_words():
+    """integration_01: Claude kept airtime even (50%); the code now steers it."""
+    result, fake = run_task("integration_01")
+    assert fake.calls["roles"] == 1
+    turns = result.transcript
+    dominant = next(s.name for s in result.speakers if s.discipline == fake.disciplines[0])
+    quiet = next(s.name for s in result.speakers if s.discipline == fake.disciplines[-1])
+    assert floor_control.word_share(turns, dominant) >= 0.6
+    quiet_at = [i for i, t in enumerate(turns) if t.speaker == quiet]
+    assert quiet_at and quiet_at[0] >= floor_control.QUIET_FROM_TURN
+    assert len(quiet_at) <= floor_control.QUIET_MAX_TURNS + 1     # + a goodbye
+    assert all(a.speaker != b.speaker for a, b in zip(turns, turns[1:]))
+
+
+ITEMS_TRUTH = {
+    "total_action_items": 6,
+    "assigned_items": [
+        {"item": "Deploy three sensors", "owner": "Speaker A", "due_date": "March 14"},
+        {"item": "Send case definition", "owner": "Speaker B", "date": "March 18"},
+        {"item": "Hold listening sessions", "owner": "Speaker C", "date": "March 28"}],
+    "unassigned_items": [{"item": f"Open item {i}", "owner": "unassigned", "date": "none"}
+                         for i in range(3)]}
+
+
+def test_action_items_are_run_through_once_at_the_end():
+    """coordination_05: the group added a seventh item; the list is now fixed in code."""
+    result, fake = run_task("coordination_05", truth=ITEMS_TRUTH)
+    assert fake.calls["wrap_up"] == 1
+    wrap = [t.text for t in result.transcript if t.text.startswith("Okay, six things")]
+    assert len(wrap) == 1
+    for cue in ("March 14", "March 18", "March 28", "Speaker A", "Open item 2"):
+        assert cue in wrap[0]
+    assert fake.calls["roles"] == 0                       # no airtime steering here
+
+
+def test_floor_control_units():
+    from types import SimpleNamespace as S
+    from schema import Turn
+    content = S(seed=S(task_id="coordination_05", ground_truth=ITEMS_TRUTH))
+    assigned, unassigned = floor_control.action_items(content)
+    assert [i["date"] for i in assigned] == ["March 14", "March 18", "March 28"]
+    assert len(unassigned) == 3
+    assert floor_control.action_items(S(seed=S(task_id="x", ground_truth={"a": 1}))) is None
+    cast = [S(name="Dr. Priya Nair"), S(name="Marcus Feldman")]
+    assert floor_control.owner_cue("Priya Nair", cast) == "Priya"
+    cues = floor_control.wrap_up_cues(([{"item": "x", "owner": "Priya Nair", "date": "March 14"}], []), cast)
+    assert floor_control.wrap_up_missing("Priya, by March 14th", cues) == []
+    assert floor_control.wrap_up_missing("Priya, soon", cues) == ["March 14"]
+
+    roles = {"dominant": "D", "quiet": "Q", "share": 0.65}
+    early = [Turn(speaker="D", text="a " * 10), Turn(speaker="E", text="b " * 30)]
+    assert floor_control.steer(roles, early, 3) == ("D", {"Q"})
+    late = early + [Turn(speaker="D", text="a " * 200)]
+    assert floor_control.steer(roles, late, 16) == ("Q", set())
+    assert floor_control.quiet_still_due(roles, late)
