@@ -1,0 +1,321 @@
+{
+  "transcript_id": "e93ede5e",
+  "generated_at": "2026-11-21T20:58:19.043035",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style, with mostly short-to-medium turns outside the formal presentations and long, highly structured monologues during talks. Early conversation is chatty and loosely organized, with frequent greetings, technical checks, side comments, laughter-like acknowledgments, and occasional overlapping or interrupted entries. Speakers rely heavily on fillers and discourse markers such as \u201cyeah,\u201d \u201cum,\u201d \u201cokay,\u201d \u201cright,\u201d \u201csort of,\u201d and \u201cyou know,\u201d with repetitions, self-corrections, and false starts that make the speech feel spontaneous. Formality shifts noticeably: introductions and presentations are semi-formal and appreciative, while questions and discussion are informal, supportive, and often prefaced with praise or hedges like \u201cI have a quick question,\u201d \u201cI\u2019m just curious,\u201d or \u201cI\u2019m not sure.\u201d Participants build on prior remarks by restating part of the answer, connecting it to related work, and asking follow-ups; challenges are indirect and framed as open questions rather than objections. Questions are often long, exploratory, and multipart, with speakers thinking aloud before reaching the core point.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mara Iosefa",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "Marine ecologist with 14 years of experience designing reef-monitoring programs in Pacific community-managed fisheries. She leads underwater visual censuses, spawning-aggregation counts, size-structure surveys, larval-settlement monitoring, and habitat-condition assessments, and translates these data into harvest-control recommendations.",
+      "distinct_perspective": "Frames catch limits primarily as a biological control on fishing mortality and reproductive capacity. She focuses on whether enough large breeding fish remain at aggregation sites to sustain replenishment of local populations, and is wary of quota designs that appear economically elegant but are not conservative enough for depleted, data-limited reef stocks.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Daniel Chen",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Fisheries economist and postdoctoral researcher with 6 years of fieldwork on small-scale coastal fisheries in Southeast Asia and the Pacific. He combines household income surveys, landing-price records, choice experiments, and simple behavioral field trials to study how quota rules, reporting burdens, and payments affect fishing decisions.",
+      "distinct_perspective": "Treats the catch-limit system as a set of incentives that households must be able to follow without unacceptable income shocks. He emphasizes predictable rules, credible monitoring, market effects, and voluntary participation in reporting and compliance programs, and questions conservation measures that assume fishers can absorb short-term losses without practical support.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Leilani Vea",
+      "discipline": "anthropology",
+      "functional_role": "research engineer",
+      "background": "Anthropologist with 11 years of ethnographic research on customary marine tenure, kinship obligations, women\u2019s roles in fish processing and exchange, and village-level fisheries governance. Her methods include participant observation, oral-history interviews, household network mapping, and facilitated community discussions.",
+      "distinct_perspective": "Examines how proposed limits will interact with customary authority, reciprocal sharing, seasonal ceremonies, and unequal access to boats, gear, and market income. She stresses that compliance and legitimacy depend on who participates in rule-making, how exceptions are interpreted, and whether conservation costs are distributed fairly across households and clans.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 3,
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Create a natural research-planning meeting transcript among the ecologist and economist, with the anthropologist contributing ordinary contextual comments. The ecologist must use the term \"recruitment\" to mean the addition of young fish to the population or fishable stock, linked to spawning aggregations and stock recovery. The economist must use the same term, \"recruitment,\" to mean bringing people into participation in a program or activity, specifically enrolling fishers in a voluntary catch-reporting and compliance-incentive scheme. Each speaker should make their intended meaning clear from context without explicitly announcing that the term has different disciplinary meanings. Keep the terminology ambiguity unremarked during the meeting. Do not introduce another competing use of \"recruitment,\" and do not resolve or explain the ambiguity in the transcript.",
+    "ground_truth": {
+      "term": "recruitment",
+      "meanings": [
+        {
+          "discipline": "ecology",
+          "meaning": "The addition of young fish to the population or fishable stock, shaped by successful spawning, larval survival, and settlement."
+        },
+        {
+          "discipline": "economics",
+          "meaning": "Enrolling or attracting fishers to participate in the voluntary catch-reporting and compliance-incentive scheme."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turn 7: Dr. Mara Iosefa (ecologist) uses \"recruitment\" for juveniles surviving through juvenile stages into the local fish stock, in the context of spawning aggregations and recovery. Turn 10: Dr. Daniel Chen (economist) uses \"recruitment\" for enrolling fishers in voluntary site-coded catch reporting, with incentives and participation concerns. Dr. Leilani Vea provides contextual anthropological comments and does not introduce another use of the term.",
+  "ground_truth": {
+    "term": "recruitment",
+    "meanings": [
+      {
+        "discipline": "ecology",
+        "meaning": "The addition of young fish to the population or fishable stock, shaped by successful spawning, larval survival, and settlement."
+      },
+      {
+        "discipline": "economics",
+        "meaning": "Enrolling or attracting fishers to participate in the voluntary catch-reporting and compliance-incentive scheme."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where\u2019d we get to? Um, since we\u2019ve only got ten minutes, I was hoping we could get clear on what evidence actually, actually supports a limit households can live with, especially around the aggregation sites, and what we still need before we put anything in front of the committee."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "We'd only just started. From the biological side, I don't think total landings alone can support a limit yet. Both aggregation sites still have depressed counts of large mature fish, and the size distributions are badly truncated in several targets. So any proposed ceiling needs a real seasonal closure at the aggregations alongside it. Otherwise we're regulating catch while still removing the reproductive..."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "I\u2019m not arguing against the closure. I just need to know, Mara, how certain are we that those depressed counts at the aggregations tell us about the wider ground? If effort shifts out of those sites, what would your surveys- what\u2019s the first thing you\u2019d expect them to pick up, smaller fish elsewhere, lower density, something like that?"
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "The first clear signal would probably be spatial redistribution in the exploited size classes. You'd see declining density and mean size on the adjacent reefs before we could say much from landings. But I'd want- I'd want paired transects outside both aggregation footprints, because fishers may concentrate on particular passage habitats, and a flat wider-ground average could hide quite severe local depletion."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Mm, the passage habitats."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "That point about the passage habitats matters socially too, because access to those routes isn't evenly shared. Some are tied to particular clans, and households with boats can shift effort much more easily. Mara, what would persuade you that a closure is actually rebuilding the aggregation and not just pushing that same fishing pressure onto the adjacent reefs?"
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "I'd need a few indicators to line up, not just stable counts at the aggregation. We'd need rising abundance in the mature size classes there, no compensatory decline in density or mean size on those passage reefs, and then evidence that recruitment makes it through the juvenile stages into the local stock. North Pass had a settlement pulse, but the adult census didn't move, so it could be mortality, movement, or timing. We really can't call that recovery yet."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "That uncertainty is exactly why I'd be careful about selling a broad lower quota as if it protects those sites by itself. If North Pass closes and effort shifts into those clan-held passage reefs, the cash shock is going to land very unevenly. Do we have any rough sense of how quickly we could detect that shift, not just in transects but in the landing- I mean, landing records?"
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "Not very quickly, I think, not from the existing records. They're aggregated at the landing level, and the timing is too coarse to distinguish a shift into passage habitats from ordinary trip-to-trip variation. We'd need site-coded, near-real-time reporting paired with the transects. Daniel, do your household interviews suggest people would report consistently if participation is voluntary, especially when prices rise?"
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Voluntary reporting could work, but recruitment is really the whole issue. People aren't going to give site-coded catches just because we ask, especially when a good price week makes that information feel risky. They need some small, visible benefit and a process they think applies fairly across boat owners and people selling through relatives. And I need to check whether my household sample is missing some of those indirect sellers before I put a participation rate on it."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "Hm, that\u2019s a concern."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "And it\u2019s not just an incentive problem. If site-coded reporting makes clan-held routes visible to outsiders while catches sold through kin stay invisible, people may see that as shifting authority, not just increasing scrutiny. Daniel, do your indirect sellers include the women processing and exchanging fish, or is the sample mostly the person who landed it?"
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Mostly the person who landed it, unfortunately. We did get a few processors, but not enough to say their reporting costs or incentives look like the boat owners'. And sales through relatives are exactly where the price-and-landing link gets, um, blurry. I need to check that before we treat the landing records as household income evidence."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "Oh\u2014yeah, that\u2019s a real gap."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "We shouldn't use the current landing series to calibrate a household-safe quota with much confidence, then. Leilani, on that overlap at the aggregation boundary, have people described a locally legitimate way to make access decisions there? Ecologically, I need the closure to cover the actual aggregation footprint and those immediate passage habitats. It can't just stop at a line that fish and fishing effort both cross."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "Not yet, not in a way I\u2019d call settled. Some elders describe joint discussion through the relevant clan representatives, but I still need to confirm who can speak for the overlap. The ceremony calendar matters too, because it changes who\u2019s present and what fishing obligations are active. I\u2019d be wary of drawing the ecological boundary first and then asking customary authority to ratify it afterward. Could we bring the footprint and passage maps into those conversations as options, rather than as a fixed line?"
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "Yeah, as options\u2014"
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Maps as options makes more sense. But if the eventual boundary shifts through those discussions, we shouldn't promise a single quota number yet. The exposure changes depending on which households lose access to which passage route. Leilani, do people have any acceptable way of sharing catch information at a group level, rather than asking each boat to disclose sites, or\u2014"
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "Possibly, but I wouldn\u2019t assume \u201cgroup\u201d is neutral there. A clan representative could share a seasonal pattern or a pooled total without naming boats, but women who process and redistribute fish may still be outside that channel. I think we need to ask in the boundary discussions what level of aggregation feels safe, and who\u2019s authorized to contribute it, or rather, who\u2019s authorized to contribute that information. Otherwise we\u2019ll reproduce the same information hierarchy."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "From the income side, pooled seasonal totals might be enough to flag a displacement problem, if we can pair them with a very short household check-in on lost fishing days and sales channels. But I wouldn't make reporting a condition of receiving support until we know who gets left out of those clan channels. Otherwise, sorry, the people taking the biggest closure hit may be the least visible."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "Right, and biologically I don\u2019t want the monitoring design to depend on boat-level disclosure either. We can detect displacement with fixed paired transects in the passage habitats, but only if the customary discussions let us identify the relevant reefs without turning the maps into an imposed boundary. The settlement pulse at North Pass is still just a pulse; until the next round tells us whether juveniles recruit through, the closure has to be precautionary."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "For the committee, precautionary can\u2019t just mean a closure where the income consequences are left unspecified. I think we can say the biological case for protecting North Pass is strong, but the quota and any support package have to stay provisional until we know the boundary and have a better read on processors and kin sales. Otherwise, we\u2019re putting a very precise burden on households from pretty incomplete income data."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "I\u2019d phrase the ecological case a little more tightly. Protection of North Pass and the other aggregation is necessary because spawning biomass is low, but we can\u2019t infer recovery from settlement alone. If the committee wants a number now, it should be explicitly interim and conservative, with the next juvenile and paired-passage surveys as the biological, um, trigger for revisiting it."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Mm, and the income trigger?"
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "I\u2019d make the income trigger broader than reported cash sales. Maybe we do a short, repeated check-in on lost fishing days, changes in sharing obligations, and whether processors are seeing less fish or just different species and sizes. But the indicators have to- they have to be agreed locally, or they\u2019ll read as another outside audit. And we shouldn\u2019t set it before we know the ceremony timing and who can authorize those conversations."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "I'd want the income trigger to include whether total net cash from fishing has actually fallen, not just reported sales, because a price increase can mask a volume loss for a while. But Leilani's right, we can't settle those measures at the last minute. We need to ask processors and the kin-sale households what a workable check-in looks like."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "Mm, that needs checking."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "Before we leave it, I think the committee needs to hear that the interim period itself needs a legitimate exception process. Ceremonial obligations, say, or households without a boat whose access is altered indirectly. I can\u2019t say what that looks like until I\u2019ve checked the authority arrangements, but if exceptions are- if they\u2019re improvised after the line is announced, that\u2019s where trust can unravel."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "And any exception process has to be, um, clear in income terms too. Who qualifies, what support follows, and whether it reaches a processor or kin-seller instead of just the boat owner. I have to jump, but I don\u2019t think we should let an interim number get separated from that question."
+    },
+    {
+      "speaker": "Dr. Mara Iosefa",
+      "text": "I think we've covered what we needed for today, and Daniel has to go. We'll pick this up once those conversations and the next survey round have, um, moved along a bit. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Daniel Chen",
+      "text": "Thanks\u2014bye, both."
+    },
+    {
+      "speaker": "Dr. Leilani Vea",
+      "text": "All right, take care, Mara."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      7,
+      10
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 7, 16, 19, 21-23, and 25-29. Even where fillers occur, most speakers articulate a concern, qualify it, and land on a clear recommendation in a single turn.",
+      "The meeting resolves or converts nearly every concern directly into a proposed monitoring, consultation, or support-design step (for example turns 9-10, 15-16, 18-21, and 24-26), which makes the interaction feel more deliberately authored than exploratory.",
+      "Turn 30 functions as a tidy closing summary of what was covered and when the group will resume, despite the running-out-of-time style requesting no final recap. It is brief, but still reads as a formalized meeting close.",
+      "Daniel and Mara are strongly distinguishable by subject matter, but their syntax and interaction style are somewhat similar: both routinely give carefully structured caveat-heavy recommendations. More idiosyncratic economist phrasing or less polished ecological responses would improve distinctness."
+    ],
+    "seed_uses": [
+      {
+        "turn": 7,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Recruitment through juvenile stages into local fish stock."
+      },
+      {
+        "turn": 8,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 10,
+        "sense": "economics",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Recruitment refers to enrolling voluntary catch reporters."
+      },
+      {
+        "turn": 11,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.36,
+    "turn_moves": {
+      "proposal": 9,
+      "answer": 5,
+      "question": 8,
+      "backchannel": 4,
+      "agreement": 4,
+      "concern": 2
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [
+      2,
+      7,
+      10,
+      13,
+      16,
+      25,
+      28,
+      29
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.36,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 7, 16, 19, 21-23, and 25-29. Even where fillers occur, most speakers articulate a concern, qualify it, and land on a clear recommendation in a single turn.",
+        "The meeting resolves or converts nearly every concern directly into a proposed monitoring, consultation, or support-design step (for example turns 9-10, 15-16, 18-21, and 24-26), which makes the interaction feel more deliberately authored than exploratory.",
+        "Turn 30 functions as a tidy closing summary of what was covered and when the group will resume, despite the running-out-of-time style requesting no final recap. It is brief, but still reads as a formalized meeting close.",
+        "Daniel and Mara are strongly distinguishable by subject matter, but their syntax and interaction style are somewhat similar: both routinely give carefully structured caveat-heavy recommendations. More idiosyncratic economist phrasing or less polished ecological responses would improve distinctness."
+      ]
+    }
+  ]
+}

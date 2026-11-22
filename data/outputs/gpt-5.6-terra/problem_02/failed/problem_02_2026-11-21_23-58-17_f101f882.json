@@ -1,0 +1,355 @@
+{
+  "series_id": "f101f882",
+  "generated_at": "2026-11-21T23:58:17.272430",
+  "task_id": "problem_02",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.",
+  "input_type": "plan_and_meeting",
+  "research_id": "sleep_adolescent_emotion",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 1,
+  "research_problem": "Understanding how chronic sleep loss affects emotion regulation in teenagers and whether delaying high-school start times improves sleep, emotional functioning, and school outcomes.",
+  "project_context": "The Youth Sleep and School Timing Consortium includes Dr. Maya Chen (neuroscience), Dr. Luis Romero (developmental psychology), and Dr. Aisha Patel (education policy). They are preparing a two-year study with two public high schools that had been considering a 45-minute later start-time change; the team has completed its initial design plan but has not begun baseline data collection.",
+  "plan_document": "Youth Sleep and School Timing Consortium: Existing Research Plan\n\nAim: Determine whether chronic short sleep is associated with impaired emotion regulation in adolescents and whether a 45-minute delay in high-school start time improves sleep, neural regulation markers, and educational outcomes.\n\n1. Does chronic short sleep predict poorer emotion regulation in 14- to 16-year-old students, as measured by daily diaries, validated questionnaires, and amygdala-prefrontal functional connectivity during an emotion-reappraisal fMRI task?\n2. Does implementing a 45-minute later school start time increase actigraphy-measured sleep duration and improve emotion regulation, attendance, and course grades relative to a comparison school maintaining its current schedule?\n3. Do changes in sleep duration mediate the relationship between later start time and changes in neural, psychological, and educational outcomes?\n\nThe study will recruit approximately 240 students across Eastview High and Northgate High. Eastview is expected to move its first bell from 7:30 a.m. to 8:15 a.m. in the following academic year, while Northgate will retain its 7:30 a.m. schedule. Data collection is planned at baseline and six months after implementation.\n\nTasks\n1. Dr. Chen will finalize the emotion-reappraisal fMRI protocol, scanner scheduling, connectivity preprocessing pipeline, and scan-retest reliability checks.\n2. Dr. Romero will select and pilot the emotion-regulation questionnaires and 14-day evening diary protocol, including adolescent-friendly validity checks for self-report.\n3. Dr. Patel will obtain district schedule documentation, map Eastview and Northgate bus-route changes, and assemble attendance and course-grade extracts.\n4. Chen and Romero will develop the actigraphy protocol and define minimum valid wear-time criteria.\n5. Patel will coordinate school consent, parent communications, and implementation tracking for the Eastview start-time change.\n6. The full team will preregister a difference-in-differences analysis comparing outcome changes between Eastview and Northgate, with sleep-duration mediation models.",
+  "ground_truth": {
+    "old_questions": [
+      "Whether a 45-minute later school start at Eastview, compared with Northgate retaining its schedule, improves sleep, emotion regulation, attendance, and grades.",
+      "Whether sleep-duration changes mediate the effects of the later-start policy on neural, psychological, and educational outcomes.",
+      "Whether chronic short sleep is associated with poorer emotion regulation, including diary, questionnaire, and amygdala-prefrontal connectivity measures."
+    ],
+    "new_questions": [
+      "Whether chronic short sleep is associated with poorer emotion regulation in adolescents, while treating a single baseline fMRI measure as a cross-sectional neural vulnerability marker.",
+      "Among Eastview students, whether participation in, and/or sleep improvement during, the voluntary eight-week sleep-education and evening phone-use planning advisory program is associated with improved emotion regulation and school outcomes, with no causal claim about a school start-time policy.",
+      "How self-selection into the voluntary advisory program should be handled analytically remains to be decided between propensity weighting and covariate adjustment."
+    ],
+    "what_changed_and_why": [
+      "The planned delayed start was cancelled because transportation could not support revised bus routes, so the planned natural experiment between Eastview and Northgate no longer exists.",
+      "A voluntary sleep-focused advisory program replaces the policy change as the new applied direction, but voluntary participation makes its evaluation observational rather than causal.",
+      "Reduced scanner access permits only one scan per student, so fMRI cannot assess scan-retest reliability or pre/post neural change."
+    ],
+    "tasks_to_update": [
+      "Replace the later-start implementation tracking and Eastview bus-route-change work with tracking of advisory-program delivery and participation.",
+      "Replace the difference-in-differences analysis of Eastview versus Northgate and the start-time sleep-mediation models with an observational analysis of the voluntary advisory program; finalize a method for selection adjustment.",
+      "Revise recruitment, consent, and study materials to remove the delayed-start evaluation and explain the advisory-program observational design.",
+      "Revise the fMRI task to remove scan-retest reliability checks and pre/post connectivity-change analyses, retaining one baseline scan."
+    ],
+    "tasks_unchanged": [
+      "Continue actigraphy collection and valid wear-time criteria.",
+      "Continue the emotion-regulation questionnaires and 14-day evening diary protocol.",
+      "Continue collection of attendance and course-grade records.",
+      "Continue school consent and parent communications, adapted to the revised design.",
+      "Preserve the earlier chronic-sleep-loss and emotion-regulation direction, including its cross-sectional psychological and neural components."
+    ],
+    "citations": {
+      "plan_document": "Original research questions and task assignments.",
+      "Direction Update Meeting \u2014 March 18, 2027": "Cancellation of later start, voluntary advisory program, one-scan constraint, retained work, and deferred selection-adjustment decision."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Direction Update Meeting \u2014 March 18, 2027",
+      "disciplines": [
+        "neuroscience",
+        "psychology",
+        "education"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "domain expert",
+          "background": "Associate professor of developmental cognitive neuroscience with 12 years of experience studying adolescent sleep, affective circuitry, and fMRI measurement reliability. She has led multi-site emotion-reappraisal studies and is responsible for the consortium's scanner protocol, preprocessing decisions, and interpretation of amygdala-prefrontal connectivity measures.",
+          "distinct_perspective": "Chen treats fMRI as an indirect, context-sensitive biological measure rather than a direct readout of emotion regulation. She prioritizes what can be validly inferred from the available acquisition design: with one scan per student, neural data can identify cross-sectional vulnerability correlates of habitual sleep but cannot support claims about neural change caused by the advisory program. She is attentive to motion, task reliability, developmental heterogeneity, and the risk of overstating connectivity findings alongside self-report outcomes.",
+          "tone": "diplomatic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Luis Romero",
+          "discipline": "psychology",
+          "functional_role": "PhD student",
+          "background": "Fourth-year PhD candidate in developmental psychology who has spent five years conducting intensive longitudinal research on adolescent sleep, daily affect, emotion regulation, and digital media habits. He has experience with 14-day diary designs, actigraphy-linked self-report protocols, validated adolescent questionnaires, and multilevel models of within-person change.",
+          "distinct_perspective": "Romero frames sleep loss as a developmental and behavioral process that unfolds in daily routines, family constraints, peer contexts, and adolescents' own coping strategies. He focuses on whether changes in objectively measured sleep coincide with changes in emotion-regulation experiences, while sharply distinguishing temporal association from causal intervention effects. He is particularly alert to selection into the voluntary advisory program: students who opt in may already differ in motivation, distress, parent support, or sleep concerns.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Aisha Patel",
+          "discipline": "education",
+          "functional_role": "research engineer",
+          "background": "Research engineer with eight years of experience building data pipelines and implementation records for district-university partnerships. Her work includes linking attendance, grades, course enrollment, bell schedules, transportation documentation, and student-consent records while navigating school calendars, data-use agreements, and practical constraints on program delivery.",
+          "distinct_perspective": "Patel views the study through the operational realities of schools: what the district actually implemented, which students could access the advisory, how participation was recorded, and whether administrative outcomes are comparable across schools and terms. She emphasizes precise documentation of the cancelled schedule change, advisory dosage and attendance, recruitment reach, and data provenance. She is less certain about the best analytic adjustment for voluntary participation, but recognizes that implementation records must support whichever observational strategy the team later adopts.",
+          "tone": "formal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        }
+      ],
+      "meeting_context": "The Youth Sleep and School Timing Consortium includes Dr. Maya Chen (neuroscience), Dr. Luis Romero (developmental psychology), and Dr. Aisha Patel (education policy). They are preparing a two-year study with two public high schools that had been considering a 45-minute later start-time change; the team has completed its initial design plan but has not begun baseline data collection.\n\nDirection Update Meeting \u2014 March 18, 2027. The consortium is meeting after the district issued its final transportation decision and after the team reviewed practical constraints on student scanning. The purpose is to revise the study design before recruitment materials and data-collection procedures are finalized.\n\nThe team's current research plan, which everyone has read:\nYouth Sleep and School Timing Consortium: Existing Research Plan\n\nAim: Determine whether chronic short sleep is associated with impaired emotion regulation in adolescents and whether a 45-minute delay in high-school start time improves sleep, neural regulation markers, and educational outcomes.\n\n1. Does chronic short sleep predict poorer emotion regulation in 14- to 16-year-old students, as measured by daily diaries, validated questionnaires, and amygdala-prefrontal functional connectivity during an emotion-reappraisal fMRI task?\n2. Does implementing a 45-minute later school start time increase actigraphy-measured sleep duration and improve emotion regulation, attendance, and course grades relative to a comparison school maintaining its current schedule?\n3. Do changes in sleep duration mediate the relationship between later start time and changes in neural, psychological, and educational outcomes?\n\nThe study will recruit approximately 240 students across Eastview High and Northgate High. Eastview is expected to move its first bell from 7:30 a.m. to 8:15 a.m. in the following academic year, while Northgate will retain its 7:30 a.m. schedule. Data collection is planned at baseline and six months after implementation.\n\nTasks\n1. Dr. Chen will finalize the emotion-reappraisal fMRI protocol, scanner scheduling, connectivity preprocessing pipeline, and scan-retest reliability checks.\n2. Dr. Romero will select and pilot the emotion-regulation questionnaires and 14-day evening diary protocol, including adolescent-friendly validity checks for self-report.\n3. Dr. Patel will obtain district schedule documentation, map Eastview and Northgate bus-route changes, and assemble attendance and course-grade extracts.\n4. Chen and Romero will develop the actigraphy protocol and define minimum valid wear-time criteria.\n5. Patel will coordinate school consent, parent communications, and implementation tracking for the Eastview start-time change.\n6. The full team will preregister a difference-in-differences analysis comparing outcome changes between Eastview and Northgate, with sleep-duration mediation models.",
+      "seed_spec": {
+        "task_id": "problem_02",
+        "benchmark_category": "Problem Formulation",
+        "benchmark_task": "Part 1 of 1 of a multi-part sample for this benchmark task: Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.\nJudge this transcript only on its own part: Dr. Patel reports that the district has cancelled the planned Eastview 45-minute delayed start because the transportation contract cannot support revised bus routes. Instead, both Eastview and Northgate will keep 7:30 a.m. starts next year. She also reports that the district will permit a voluntary, school-delivered morning advisory program at Eastview: participating students may attend an eight-week sleep-education and evening phone-use planning program, but it does not alter the first bell and is not assigned at random. Dr. Romero raises that this creates a selection problem, so the original causal school-schedule comparison and mediation claim cannot be sustained. He proposes reframing the intervention question around whether students who improve sleep during the advisory program show better emotion regulation, while clearly treating the program evaluation as observational. Dr. Chen states that scanner access has been reduced to one scan per student because of a hospital scheduling change; the team cannot estimate scan-to-scan reliability or characterize within-person connectivity change. She recommends retaining a single baseline fMRI measure as a cross-sectional neural vulnerability marker, rather than using fMRI as a pre/post intervention outcome. The team agrees to retain the chronic-sleep-loss question, replace the later-start causal question and its mediation question, keep actigraphy, questionnaires, diaries, attendance, grades, consent, and implementation tracking, and revise analysis and recruitment materials accordingly. The meeting does not resolve whether advisory participation will be modeled with propensity weighting or covariate adjustment; that analytic detail is deferred.",
+        "explicit_instruction": "Dr. Patel reports that the district has cancelled the planned Eastview 45-minute delayed start because the transportation contract cannot support revised bus routes. Instead, both Eastview and Northgate will keep 7:30 a.m. starts next year. She also reports that the district will permit a voluntary, school-delivered morning advisory program at Eastview: participating students may attend an eight-week sleep-education and evening phone-use planning program, but it does not alter the first bell and is not assigned at random. Dr. Romero raises that this creates a selection problem, so the original causal school-schedule comparison and mediation claim cannot be sustained. He proposes reframing the intervention question around whether students who improve sleep during the advisory program show better emotion regulation, while clearly treating the program evaluation as observational. Dr. Chen states that scanner access has been reduced to one scan per student because of a hospital scheduling change; the team cannot estimate scan-to-scan reliability or characterize within-person connectivity change. She recommends retaining a single baseline fMRI measure as a cross-sectional neural vulnerability marker, rather than using fMRI as a pre/post intervention outcome. The team agrees to retain the chronic-sleep-loss question, replace the later-start causal question and its mediation question, keep actigraphy, questionnaires, diaries, attendance, grades, consent, and implementation tracking, and revise analysis and recruitment materials accordingly. The meeting does not resolve whether advisory participation will be modeled with propensity weighting or covariate adjustment; that analytic detail is deferred.",
+        "ground_truth": {
+          "district_change": "Eastview will not adopt the planned 45-minute later start; both schools will retain 7:30 a.m. starts.",
+          "new_intervention_direction": "The team will study the voluntary eight-week Eastview sleep-education and evening phone-use planning advisory program observationally, not as a randomized or causal school-schedule intervention.",
+          "fMRI_change": "Because only one scan per student is available, fMRI remains a single baseline cross-sectional neural vulnerability measure and is no longer a pre/post outcome or scan-retest reliability component.",
+          "task_decisions": "The later-start implementation tracking, bus-route mapping for a schedule change, difference-in-differences comparison, and sleep-mediation analysis for the start-time policy must be replaced; actigraphy, questionnaires, diaries, educational records, consent, and program implementation tracking continue.",
+          "unresolved_analysis_detail": "The team has not yet chosen between propensity weighting and covariate adjustment for addressing self-selection into the voluntary advisory program."
+        }
+      },
+      "ground_truth": {
+        "district_change": "Eastview will not adopt the planned 45-minute later start; both schools will retain 7:30 a.m. starts.",
+        "new_intervention_direction": "The team will study the voluntary eight-week Eastview sleep-education and evening phone-use planning advisory program observationally, not as a randomized or causal school-schedule intervention.",
+        "fMRI_change": "Because only one scan per student is available, fMRI remains a single baseline cross-sectional neural vulnerability measure and is no longer a pre/post outcome or scan-retest reliability component.",
+        "task_decisions": "The later-start implementation tracking, bus-route mapping for a schedule change, difference-in-differences comparison, and sleep-mediation analysis for the start-time policy must be replaced; actigraphy, questionnaires, diaries, educational records, consent, and program implementation tracking continue.",
+        "unresolved_analysis_detail": "The team has not yet chosen between propensity weighting and covariate adjustment for addressing self-selection into the voluntary advisory program."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "...before we get into the documents, I just want to flag that the district's final transportation decision came through, so the 8:15 Eastview bell\u2014sorry, the 8:15 Eastview start\u2014is not happening next year. I thought we should use today to reset around what's actually feasible now, the voluntary advisory and what that means for recruitment and the measures, rather than try to preserve the old school-level comparison."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "...then I think we should formally retire the difference-in-differences and the mediation claim about the bell change. The core sleep question is still very viable with actigraphy, diaries, and the regulation measures. But for the advisory, we need to be really explicit that any improvement among enrollees is observational, not an effect of the program. Aisha, do we know what pre-program information the district can give us on who was invited, who enrolled, and who actually attended?"
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "For invited students, I can preserve the outreach list and dates, although I need to confirm whether staff referrals- whether those sit in the same system. We can link enrollment and session-level attendance, and I can pull prior attendance, tardiness, grades, enrollment history, and the usual demographics before the program starts. What I need from you is which background fields are essential for the eventual adjustment, so I configure that pull correctly."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, the session-level part is important."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "I'd want the prior attendance and tardiness, grades, demographics, and enrollment history, plus course load if that's available, and any flag for other supports or referrals. Those aren't perfect proxies for family support or motivation, obviously, but they help us describe who selects in. I don't think we should decide between weighting and covariate adjustment until we see the overlap."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And on the scan side, I need to be clear that the hospital has reduced us to one session per student. So it can stay as a baseline, cross-sectional measure\u2014whether the 14-day sleep pattern relates to differences during reappraisal\u2014but it is no longer a pre/post advisory outcome or a reliability, I mean, reliability component. Luis, what window would you treat as habitual sleep for that link? I'd want something stable enough that we're not matching one scan to a particularly odd two weeks."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "I'd use the 14-day actigraphy window right before the scan, and use the diary timing to flag obvious atypical periods like illness, exams, a trip, that kind of thing. Fourteen days is usually a reasonable estimate of a student's school-week pattern, but I'd model weekday and weekend sleep separately instead of calling it one stable trait. The social-jetlag piece may be doing something important for reappraisal too, so\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I like separating those rather than flattening them. For the scan analysis, though, we should pre-specify a primary exposure, probably mean school-night sleep over the preceding 14 days, and treat weekend timing and social jetlag as secondary because the connectivity estimates themselves will already be fairly noisy. And we\u2019ll need to record scan time carefully. I\u2019m still checking whether the hospital slots- whether they cluster at one time of day or not."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "I\u2019ll add the scan date and time, and whether it was a school day, weekend, or closure day, to the linked study file so we don\u2019t have to reconstruct that later. Maya, do you need the appointment timing relative to first bell too, or are calendar type and clock time enough for now?"
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "Mm, timing relative to bell."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Relative to first bell too, please. A 7:00 a.m. scan after a 7:30 bell, that's a different context from an afternoon scan, and sleepiness itself can shift task engagement. I don't know yet how much scheduling spread the hospital will force on us. And I'd like the actual arrival and scan-start times, not just the booked appointment, if the site can export those."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "I can request those from the hospital and keep them with the scan file. I\u2019ll need to check whether actual arrival and scan-start are retained in the export, or only in their scheduling system. On the advisory side, I\u2019ve also noticed the early interest list seems to skew toward students with stronger attendance, while some students staff flagged for tardiness have not opted in, so preserving outreach and non-enrollment will matter quite a bit."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That selection pattern makes the advisory comparison even more delicate, yeah. I'd want outreach status and referral source kept separate from enrollment and actual sessions, because a student who was flagged but never comes isn't really comparable to a student who self-enrolls. For the scan analysis, those variables may also help us describe who ends up in the imaging subset."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "That early-interest pattern is exactly why I'd frame the advisory question around within-student sleep change and regulation, and then be very cautious in how we describe enrollment and dose. Aisha, if the referral source is recorded, can it distinguish self-referral from counselor or attendance-team outreach? Those pathways probably reflect pretty different baseline routines and reasons for joining."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "I think so, though I need to verify how consistently staff enter that field. I can keep self-initiated interest, counselor referral, attendance-team referral, and any mixed pathway separate, separate, rather than collapsing them. And if it\u2019s missing for some students, we should preserve that missingness rather than infer the source from the list."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "Preserving missingness is important, otherwise we end up treating administrative inconsistency like it\u2019s a meaningful category. And I\u2019d keep the invitation date too, if we can, because students who were approached after they\u2019d already started changing routines may look different from students who had the full opportunity to enroll."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, keep that date too."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "I can retain invitation date alongside the outreach channel and the enrollment and attendance dates. One operational wrinkle I still need to check is whether the advisory roster will link to the consented sample soon enough for baseline scheduling, especially for students who enroll just before the first session. I don't want us to silently treat a late roster match as baseline information, but\u2014"
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "We need a clean temporal rule here. Baseline is only measures completed before the student's first advisory session, not before the roster happens to reach us. For late enrollees, we may still include them, but we should record whether baseline came before outreach, enrollment, or first attendance. I lost the thread there, but those are genuinely different selection points."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "That is workable. I\u2019ll timestamp outreach, enrollment, the roster match, and the first attended session separately, and then tag each baseline measure against those dates. The only thing I can\u2019t promise yet is how quickly the school can release a last-minute roster, so I\u2019ll check that before we set a firm scanning workflow."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "Hm, that could get tight."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hm, and from the imaging side, I really can't schedule a student as baseline if there's any chance they've already attended the first session, sorry, attended. With one scan, we have no way to disentangle that afterward. Maybe we hold scan booking until the first-session date is verified, even if that means the imaging subset is smaller. I'd rather have a clean cross-sectional baseline than a larger one that's temporally muddled."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "...yes, I think that's the safer rule. I'll check with Eastview about whether they can give us a verified first-session date before we send out any scan invitations, and if they can't, we should treat those students as ineligible for the imaging baseline instead of trying to repair the timing afterward."
+        },
+        {
+          "speaker": "Dr. Luis Romero",
+          "text": "Yeah, I\u2019d rather lose imaging cases than blur the baseline window."
+        },
+        {
+          "speaker": "Dr. Aisha Patel",
+          "text": "Okay, I think we\u2019ve covered what we needed today. I\u2019ll follow up once I have the roster\u2014 the timing answer from Eastview. Thank you both."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Thanks, Aisha. Talk soon."
+        }
+      ],
+      "seed_location": "Turns 1-2 establish the cancelled Eastview later start and retirement of the old school-level difference-in-differences/mediation direction, but the transcript does not explicitly state that both Eastview and Northgate will retain 7:30 a.m. starts. Turns 2-5 and 12-20 preserve the observational advisory direction, self-selection concern, implementation/administrative tracking, and defer the choice between propensity weighting and covariate adjustment. Turns 6-8 establish the one-scan limitation and retain fMRI only as a baseline cross-sectional measure, not a pre/post or reliability outcome. The chronic-sleep-loss question is retained through the 14-day actigraphy/diary and regulation discussion in turns 6-8. Consent and questionnaires are not explicitly discussed, and the specific replacement of bus-route mapping/later-start implementation tasks is not explicitly stated.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          12,
+          14,
+          18,
+          19,
+          22,
+          23
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence"
+        ],
+        "issues": [
+          "Turns 1-2 establish that the planned later start is cancelled and that the old difference-in-differences/mediation approach is retired, but they never state the required transportation-contract reason, the planned 45-minute delay, or that Northgate will also retain a 7:30 a.m. start.",
+          "The advisory is discussed throughout turns 1-20 as voluntary and observational, but the transcript never identifies it as an eight-week sleep-education and evening phone-use planning program. This prevents recovery of a central new-intervention detail.",
+          "The required retained chronic-sleep-loss research question is only indirectly suggested by the 14-day actigraphy and sleep-pattern discussion in turns 6-8; it is not explicitly retained as a study question.",
+          "The task-decision inventory is incomplete. Turns 1-2 retire the school-level comparison and mediation claim and turns 3, 6-8 retain several measures, but no one explicitly addresses replacement of later-start implementation tracking, bus-route mapping, or revisions to analysis and recruitment materials.",
+          "The analytic choice is appropriately deferred in turn 5, but the transcript frames it as a choice made after inspecting overlap rather than clearly documenting that no choice between propensity weighting and covariate adjustment has yet been made for the protocol.",
+          "Naturalness is weakened by polished, highly complete technical turns and an almost uninterrupted sequence of concern-to-solution-to-assignment. The dialogue contains a prohibited stock phrase in turn 19: \"I lost the thread there,\" despite the supplied meeting-style instructions explicitly forbidding it.",
+          "The meeting does not resemble the requested round-robin update format very closely: after Patel's opening, it becomes a tightly sequenced technical planning discussion rather than each participant giving a relatively self-contained update with only a few clarifications."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.28,
+        "turn_moves": {
+          "proposal": 7,
+          "question": 4,
+          "answer": 4,
+          "agreement": 3,
+          "request": 1,
+          "observation": 1,
+          "concern": 2,
+          "commitment": 3,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          3,
+          9,
+          12,
+          15,
+          18,
+          20,
+          23,
+          25
+        ],
+        "unsure_turns": [
+          3,
+          8,
+          11,
+          12,
+          15,
+          18,
+          19,
+          20
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.67,
+          "exploration_share": 0.31,
+          "approved": false,
+          "issues": [
+            "Task compliance: the required unresolved analytic choice between propensity weighting and covariate adjustment is never explicitly raised or deferred. The transcript appropriately treats self-selection as a problem (turns 4, 15, 18), but it does not establish that those two specific approaches remain undecided.",
+            "Task compliance: the transcript does not explicitly state the retained chronic-sleep-loss research question or explicitly contrast it with the retired later-start causal question and mediation question. It supports the replacement indirectly through habitual sleep and cross-sectional framing (turns 2, 4, 25), but the old/new question formulation is less recoverable than required.",
+            "Task compliance: the retained materials are only partly enumerated. Actigraphy, diaries, attendance, consent/linkage, and some grade handling appear (turns 6-7, 18-23), but questionnaires and educational records are not clearly affirmed together as continuing elements, and the retired bus-route mapping/difference-in-differences tasks are not named.",
+            "Naturalness: although all five realism signals appear, much of the exchange is composed of polished, complete technical paragraphs that efficiently introduce an issue, qualify it, and conclude with a next step. This makes it read more like an edited planning dialogue than a spontaneous round-robin meeting, especially turns 4-7, 14-15, and 18-23.",
+            "Naturalness: the stated round-robin-updates style is only weakly reflected after the opening. The conversation becomes a sustained, orderly planning discussion with repeated handoffs rather than distinct update blocks and only a few brief clarifications."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 26,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.28,
+          "approved": false,
+          "issues": [
+            "Turns 1-2 establish that the planned later start is cancelled and that the old difference-in-differences/mediation approach is retired, but they never state the required transportation-contract reason, the planned 45-minute delay, or that Northgate will also retain a 7:30 a.m. start.",
+            "The advisory is discussed throughout turns 1-20 as voluntary and observational, but the transcript never identifies it as an eight-week sleep-education and evening phone-use planning program. This prevents recovery of a central new-intervention detail.",
+            "The required retained chronic-sleep-loss research question is only indirectly suggested by the 14-day actigraphy and sleep-pattern discussion in turns 6-8; it is not explicitly retained as a study question.",
+            "The task-decision inventory is incomplete. Turns 1-2 retire the school-level comparison and mediation claim and turns 3, 6-8 retain several measures, but no one explicitly addresses replacement of later-start implementation tracking, bus-route mapping, or revisions to analysis and recruitment materials.",
+            "The analytic choice is appropriately deferred in turn 5, but the transcript frames it as a choice made after inspecting overlap rather than clearly documenting that no choice between propensity weighting and covariate adjustment has yet been made for the protocol.",
+            "Naturalness is weakened by polished, highly complete technical turns and an almost uninterrupted sequence of concern-to-solution-to-assignment. The dialogue contains a prohibited stock phrase in turn 19: \"I lost the thread there,\" despite the supplied meeting-style instructions explicitly forbidding it.",
+            "The meeting does not resemble the requested round-robin update format very closely: after Patel's opening, it becomes a tightly sequenced technical planning discussion rather than each participant giving a relatively self-contained update with only a few clarifications."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with casual pre-session chatter giving way to long, highly structured presentation turns and then medium-length technical questions. Overlap is common in greetings, acknowledgments, and transitions, while the formal discussion generally follows a respectful one-speaker-at-a-time rhythm. Participants use frequent fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cyou know,\u201d repeated words, false starts, and self-corrections\u2014especially in spontaneous questions and answers. The tone is collegial and informal despite the specialized setting: speakers praise one another, hedge claims with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d and \u201cit could be,\u201d and frame challenges as curiosity rather than confrontation. Questions are often prefaced with compliments or disclaimers such as \u201cnaive question,\u201d then unfold in several clauses, sometimes with the asker clarifying mid-question. Responses are expansive and exploratory, openly acknowledging uncertainty and future work, while building on the questioner\u2019s framing rather than rejecting it directly.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

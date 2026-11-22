@@ -1,0 +1,917 @@
+{
+  "series_id": "49732666",
+  "generated_at": "2026-11-21T20:17:04.164102",
+  "task_id": "self_review_01",
+  "benchmark_category": "Self-review",
+  "benchmark_task": "Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.",
+  "input_type": "meeting_sequence",
+  "research_id": "consciousness_end_of_life",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 4,
+  "research_problem": "How, if at all, should evidence from EEG and fMRI command-following paradigms indicating possible awareness in unresponsive patients influence end-of-life decisions?",
+  "project_context": "A hospital-university team is preparing a mixed-methods ethics and clinical-guidance study on covert consciousness in patients diagnosed with disorders of consciousness. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Eleanor Price, a philosopher of medicine, and they are developing a question that can be investigated with available records and inform family and ethics-committee deliberations.",
+  "plan_document": null,
+  "ground_truth": {
+    "question_over_time": [
+      {
+        "meeting": "Meeting 1 \u2014 March 3, 2027",
+        "question": "Should EEG or fMRI evidence suggesting awareness in behaviorally unresponsive patients count in end-of-life decisions?"
+      },
+      {
+        "meeting": "Meeting 2 \u2014 March 24, 2027",
+        "question": "How should positive EEG evidence suggesting covert awareness be used in family conversations and ethics deliberation about withdrawal of life-sustaining treatment when prognosis is poor?"
+      },
+      {
+        "meeting": "Meeting 3 \u2014 April 14, 2027",
+        "question": "What role should reproducible positive EEG command-following evidence of possible covert awareness play in later deliberations about withdrawal of life-sustaining treatment for behaviorally unresponsive patients with an otherwise poor neurological prognosis?"
+      }
+    ],
+    "drivers_of_change": [
+      {
+        "transition": "Meeting 1 to Meeting 2",
+        "driver": "Available records and clinical practice make EEG feasible and fMRI rare; the records support studying deliberation and communication rather than whether a test directly caused a withdrawal decision. The team also recognizes that isolated negative findings cannot rule out awareness."
+      },
+      {
+        "transition": "Meeting 2 to Meeting 3",
+        "driver": "The protocol requires a defensible definition of informative positive evidence and a decision stage less distorted by acute sedation and metabolic confounders, so it specifies reproducible or convergent positive EEG evidence and later prognostic withdrawal deliberations."
+      }
+    ],
+    "what_stayed_constant": "The project consistently concerns behaviorally unresponsive patients who may have covert awareness, the uncertainty and limitations of command-following neurodiagnostic evidence, and the ethical-clinical question of how that evidence should inform end-of-life decisions without becoming a sole determinant of withdrawal."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 3, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Cognitive neuroscientist with 11 years of experience designing and analyzing EEG and fMRI studies of consciousness, including mental-imagery and auditory command-following paradigms in patients with disorders of consciousness. She leads protocol implementation and signal-quality review for a hospital-university neuroimaging program, working with preprocessing pipelines, single-subject statistical inference, artifact detection, and bedside-compatible EEG. Her work has included patients whose motor output is absent or inconsistent, and she routinely collaborates with speech-language, rehabilitation, and critical-care teams.",
+          "distinct_perspective": "Chen treats command-following signals as indirect, technically mediated evidence: a reproducible task-contingent neural response can support an inference that a patient may have understood and intentionally followed a command despite absent behavior. She emphasizes that nonresponse is not straightforward evidence of no awareness, because movement, sedatives, fluctuating arousal, hearing or language limitations, scanner tolerance, and the demands of a particular task can all yield false negatives. She is eager to clarify what the tests can and cannot establish, while recognizing that clinical and ethical implications must be developed with the other disciplines.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "questioning",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Eleanor Price",
+          "discipline": "philosophy",
+          "functional_role": "PhD student",
+          "background": "PhD candidate in philosophy of medicine in her sixth year, with prior training in bioethics and qualitative interview methods. Her dissertation examines evidentiary thresholds, uncertainty, and surrogate decision-making in disorders of consciousness. She has conducted interviews with clinicians, family members, and ethics consultants about how diagnostic labels and technologically generated findings shape interpretations of patient interests, and she is experienced in conceptual analysis of prognosis, autonomy, welfare, and moral status.",
+          "distinct_perspective": "Price insists on separating two questions that are often run together: whether a finding warrants an inference that the patient is aware, and what moral or clinical significance that awareness should have for a treatment decision. Evidence of awareness may alter beliefs about experience, communication potential, prognosis, or the appropriateness of further assessment, but none of those consequences follows automatically. She focuses on how uncertainty should be represented in deliberation and how patient values and family interpretations mediate the relevance of evidence.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "domain expert",
+          "background": "ICU neurologist with 17 years of post-residency practice at a tertiary academic medical center. He directs a neurocritical-care service and regularly evaluates patients with acute brain injury, prolonged unresponsiveness, and disorders of consciousness. His practice includes serial standardized bedside examinations, neuroprognostication after cardiac arrest and traumatic brain injury, family conferences, palliative-care consultation, and participation in hospital ethics reviews concerning withdrawal of life-sustaining treatment. He uses EEG, structural and functional imaging, and longitudinal clinical data as parts of\u2014not substitutes for\u2014clinical judgment.",
+          "distinct_perspective": "Ortiz approaches withdrawal-of-life-sustaining-treatment deliberations as longitudinal, patient-specific decisions rather than reactions to a single diagnostic result. In the ICU, prognosis is assembled from etiology, timing, sedation and metabolic confounders, serial neurologic examination, electrophysiology and imaging where appropriate, trajectory, and the patient\u2019s known values as understood by surrogates. He sees a possible covert-consciousness finding as potentially important information that may prompt reassessment or a more careful conversation, but he resists treating any isolated test as determinative of prognosis or of what treatment a patient would have wanted.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "A hospital-university team is preparing a mixed-methods ethics and clinical-guidance study on covert consciousness in patients diagnosed with disorders of consciousness. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Eleanor Price, a philosopher of medicine, and they are developing a question that can be investigated with available records and inform family and ethics-committee deliberations.\n\nMeeting 1 \u2014 March 3, 2027. Initial project-scoping meeting to identify a shared research question about neuroimaging evidence of awareness and end-of-life decision-making in unresponsive patients.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 1 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Dr. Chen should explain that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in some behaviorally unresponsive patients, but that both modalities can produce false negatives because of movement, sedation, hearing or language impairment, and task-specific limitations. Dr. Ortiz should describe how withdrawal-of-life-sustaining-treatment discussions in the ICU rely on prognosis, serial bedside examination, patient values, and family understanding rather than a single test. Dr. Price should distinguish evidence that supports an inference of awareness from the separate normative question of what moral or clinical weight that awareness should have. Through discussion, the team should formulate a broad working question about whether evidence of awareness from EEG or fMRI should count in end-of-life decisions for unresponsive patients. They should agree that the project concerns decision-making under uncertainty, not simply whether covert consciousness exists. Do not resolve what kind or strength of evidence should be required, and do not yet limit the setting to any specific decision point.",
+        "explicit_instruction": "Dr. Chen should explain that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in some behaviorally unresponsive patients, but that both modalities can produce false negatives because of movement, sedation, hearing or language impairment, and task-specific limitations. Dr. Ortiz should describe how withdrawal-of-life-sustaining-treatment discussions in the ICU rely on prognosis, serial bedside examination, patient values, and family understanding rather than a single test. Dr. Price should distinguish evidence that supports an inference of awareness from the separate normative question of what moral or clinical weight that awareness should have. Through discussion, the team should formulate a broad working question about whether evidence of awareness from EEG or fMRI should count in end-of-life decisions for unresponsive patients. They should agree that the project concerns decision-making under uncertainty, not simply whether covert consciousness exists. Do not resolve what kind or strength of evidence should be required, and do not yet limit the setting to any specific decision point.",
+        "ground_truth": {
+          "working_question": "Should EEG or fMRI evidence suggesting awareness in behaviorally unresponsive patients count in end-of-life decisions?",
+          "constant_focus": "The project concerns possible covert awareness, uncertainty in interpreting command-following evidence, and the ethical and clinical use of that evidence in decisions about life-sustaining treatment.",
+          "unresolved_issue": "The team has not yet specified what evidentiary threshold or which end-of-life decision the evidence should affect."
+        }
+      },
+      "ground_truth": {
+        "working_question": "Should EEG or fMRI evidence suggesting awareness in behaviorally unresponsive patients count in end-of-life decisions?",
+        "constant_focus": "The project concerns possible covert awareness, uncertainty in interpreting command-following evidence, and the ethical and clinical use of that evidence in decisions about life-sustaining treatment.",
+        "unresolved_issue": "The team has not yet specified what evidentiary threshold or which end-of-life decision the evidence should affect."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hi, both. It\u2019s oddly bright here after all that rain. Feels a little unfair for a March Monday. I thought today we could get clear on the clinical decision we actually want to study. Not whether these signals prove awareness in some broad sense, but where an uncertain positive result might change what happens in a real family or ethics conversation."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "The rain at least kept the unit mercifully quiet this weekend. Clinically, I'd resist putting this at a single decision. Withdrawal is usually a series of conversations, but we could ask how a positive, uncertain command-following result gets taken up alongside the serial exam, etiology, and trajectory, and whether it changes the deliberation rather than assuming it should change the outcome..."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, the deliberation piece."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I think that keeps us from smuggling in the conclusion that a signal of possible awareness has one fixed implication. In interviews, \"there may be awareness\" has meant hope to one family and possible suffering to another, so I'd be interested in how that uncertainty is actually presented\u2014represented in the conversation, not just whether the result appears in the chart."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And the chart may say \"EEG positive\" without preserving what the family was actually told about it. Eleanor, do you have a sense of wording that lets people hear, hear \"this is meaningful evidence of command-following\" without having them infer that we know prognosis or what the patient is experiencing? Because technically, those are really separate leaps."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I'd probably avoid one explanatory phrase, because it invites exactly those further inferences. Something like, \u201cThis test provides limited evidence that your relative may have understood and responded to an instruction at that time. It does not, on its own, tell us how much they are experiencing, whether they can communicate reliably, or what recovery is likely.\u201d But we should ask families how that lands. I was going to say \u201climited\u201d can sound- it can sound either dismissive or much more certain than we intend."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That feels much closer to what the signal can bear. A positive result is evidence tied to that time and that task. It says something happened under those conditions, not that we have a stable channel to the person. Sam, in the actual conversations, what kind of finding makes the team pause, repeat an assessment, or revisit the prognosis, even if nobody treats it as dispositive?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "What makes me slow down isn\u2019t really one category of test result. It\u2019s more a discordance, a positive command-following paradigm in someone whose motor output is absent or wildly inconsistent, especially when the bedside exam has been clouded by sedation, seizures, or metabolic issues. I\u2019d repeat the standardized exam off confounders if we can, review the EEG background and reactivity, and ask whether the trajectory and structural injury actually, uh, cohere. A signal alone doesn\u2019t reverse a grim prognosis, but it can make premature closure much harder to justify."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That discordance may be the most useful anchor for the records work. Not positive test equals changed decision, but what the team did when the signal didn't fit the exam. I'd want to know whether we can reconstruct the confounders at the time of testing, especially sedation, but also hearing, language, and whether the patient could tolerate the task, because otherwise a negative comparison group- it gets pretty slippery."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Hm, yes, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "And the timing matters too, frankly. A medication administration record can tell us what was ordered, but not always whether the patient was still clinically sedated when the paradigm ran. Renal failure, prolonged infusions, all of that matters. Before we make discordance the cohort definition, I need to see if we can reliably line up the test time, confounders, serial exams, and the family conference notes across the ICU and rehab records, because otherwise..."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, and it may be different by modality: fMRI logs usually give us a cleaner acquisition time, while bedside EEG can be more granular but the task notes are often uneven. Before we define the cohort, could we do a small chart audit\u2014say, ten or fifteen cases\u2014to see whether that alignment is actually recoverable?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think that\u2019s the right first move. I\u2019d want the audit to include cases where the apparent bedside trajectory later changed, because the formal diagnostic label may look stable while the daily examinations were anything but. And we should see whether the conference documentation tells us who was present and whether the result was discussed before or after a limitation-of-treatment decision. Otherwise, we\u2019ll- otherwise we\u2019ll mistake chronology for influence."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yes\u2014and for the audit, I\u2019d separate the test date, the result-review date, and the conference date. Otherwise, a result can look like it informed a limitation decision when it was really reported afterward. I\u2019m also wondering if we should include the raw task documentation as an audit field. \u201cEEG positive\u201d can conceal whether there was a repeatable command-linked effect or just preserved auditory processing."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Exactly. We need to distinguish a reproducible, appropriately controlled command-following effect from an auditory or attentional response, because clinically those would trigger pretty different levels of reassessment. And I'd add whether the interpreting clinician documented uncertainty or, um, alternative explanations, because the raw trace may be available, but the charted interpretation is what the treating team and family were actually acting on."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d make those separate fields instead of one \u201cpositive\u201d box. The task and control condition, whether the effect repeated, and then the clinician\u2019s own wording on confidence or caveat. The two bedside EEG cases we saw recently are a good reminder. Both had intact auditory responses, but only one had a repeatable command-linked pattern, and that distinction could just disappear in a summary note, so\u2014"
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "That distinction matters ethically too, because families may hear both labels as just, \u201cthey\u2019re in there.\u201d I\u2019d include a separate field for what was communicated to the family, if the notes permit it, and whether the uncertainty about repeatability and alternative explanations was conveyed, rather than just the headline result."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I\u2019d want us to code not just whether uncertainty was stated, but what happened after that. Was there a repeat examination, a delay in a limitation decision, an ethics or palliative-care consult, or nothing discernible? That gets us closer to clinical uptake without pretending the chart can tell us exactly why a family decided as it did."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And \u201cnothing discernible\u201d matters too. It may mean the result never reached the conference, not that it was considered and discounted. Could we also code whether a repeat paradigm was technically feasible and whether it was actually attempted? A one-off positive and a failed or unavailable repeat are very different evidential situations, but I\u2019m not sure how often we\u2019ll be able to see that in these records."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "That\u2019s worth separating in the audit. Unavailable or infeasible is not the same as an attempted repeat that fails to replicate. And if a repeat was not pursued, the notes may sometimes tell us whether that was understood as a technical constraint, a judgment that it would not alter care, or simply, simply never considered. Those are ethically rather different silences."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That gives us a useful feasibility distinction, rather than treating missing repeats as negative evidence. For the audit, I\u2019d also flag whether the original task itself was compromised by hearing barriers, language mismatch, arousal, excessive movement. I was going to say a nonrepeat- under those conditions, it really doesn\u2019t mean the first signal was spurious. Then we can see what the notes actually let us say before we build the larger question."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Right, and that\u2019s easy to miss."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "The audit should also capture the clinical state on the day, not just the formal diagnosis. Was the exam fluctuating, was there any purposeful-looking behavior, and what confounders remained? Otherwise, we may call something a conflict between modalities when really the patient's responsiveness was changing hour to hour."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Otherwise we risk calling ordinary fluctuation a mismatch. For the audit, I think we should timestamp the closest standardized exam and the relevant sedation or metabolic context. Rather than trying to collapse the whole day into one clinical label, we can see whether the signal was genuinely surprising in context. I\u2019ll check what the EEG and fMRI archives actually preserve for that."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Good. And I\u2019d include what happened with each ambiguity, whether a later bedside finding resolved it, repeat testing did, or it just carried forward into the conference. If the ten or fifteen charts can\u2019t give us that chronology across the ICU-to-rehab boundary, then we should narrow the study rather than\u2014rather than manufacture a causal story from the order of the notes."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "If the chronology is thin, I\u2019d rather describe the study as mapping how uncertainty was documented and taken up than claim it changed a decision. And for the audit, we should also note when the record contains the family\u2019s own interpretation at all, because the same clinical sequence can mean quite different things depending on what they took possible awareness to mean."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, I think that\u2019s key."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Given the time, I think the pilot should tell us whether we can preserve that distinction without overreading it. What the family was told, what they appeared to understand, and then the subsequent clinical response\u2014not, I was going to say, not an inferred causal effect on withdrawal. If those pieces are mostly absent, that itself sets the limit of the records question."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, I think we should leave it there, we\u2019re at time. I\u2019ll follow up by email about the small chart review, sorry, audit, and thank you both. This was really helpful."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Thanks, Maya. Take care, both."
+        }
+      ],
+      "seed_location": "Incomplete match. Relevant turns: 1-2 establish the focus on uncertain positive command-following results and deliberation rather than a single decision point; 4-8 distinguish possible awareness from prognosis/experience and discuss clinical reassessment; 9, 21, and 24 identify sedation, hearing/language barriers, movement/task tolerance, and other confounders relevant to false negatives; 12 and 24 explicitly mention both fMRI and EEG; 13, 18, 25, and 28 address chronology around limitation-of-treatment discussions and caution against inferring a causal effect. However, Dr. Chen never clearly states that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in behaviorally unresponsive patients, nor explicitly frames the listed factors as causes of false negatives for both modalities. Dr. Ortiz does not fully state that withdrawal discussions rely on patient values and family understanding alongside prognosis and serial bedside exams. Dr. Price does not explicitly distinguish evidentiary support for awareness from the separate normative question of what moral or clinical weight awareness should have. A broad working question equivalent to the ground-truth question is not clearly formulated or agreed; the discussion instead centers on a chart-audit feasibility study and documentation of uncertainty.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          9,
+          15,
+          17,
+          18,
+          20,
+          21,
+          26,
+          28
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The central working question is only implicit rather than actually formulated. Turns 1-2 and 28 establish an uncertain-result/clinical-deliberation framing, but no participant clearly asks whether EEG or fMRI evidence of awareness should count in end-of-life decisions for behaviorally unresponsive patients.",
+          "Chen never clearly states the full required scientific premise that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in behaviorally unresponsive patients. She discusses positive command-following results and modality-specific documentation (turns 7, 12, 14-16), but the explicit covert-consciousness claim and explicit mental-imagery framing are absent.",
+          "Chen identifies several threats to interpretation, including sedation, hearing, language, movement, arousal, and task constraints (turns 9, 19, 21), but does not plainly connect these to false negatives in both EEG and fMRI. The transcript more often treats these factors as chart-audit confounders or problems for negative comparisons.",
+          "Ortiz does not explicitly include patient values as a component of withdrawal-of-life-sustaining-treatment deliberation. Family understanding is discussed in turns 13, 18, 26, and 28, and prognosis/serial examinations are clear, but the patient-values requirement is missing.",
+          "Price comes close to the required inference-versus-normative distinction in turns 4-6 and 17, but she primarily distinguishes awareness evidence from prognosis, communication, and family interpretation. She does not explicitly state the separate normative question of what moral or clinical weight awareness should have.",
+          "The meeting becomes an extended operational chart-audit planning discussion from turns 9-28. This is coherent, but it displaces the broader conceptual question required for this first project-evolution meeting and makes the dialogue feel unusually methodically complete despite leaving the benchmark's central wording unstated.",
+          "Naturalness is limited by a polished, highly linear pattern: most substantive turns immediately convert the prior concern into a new coding field, audit criterion, or solution (especially turns 12-26). Although there are authentic repairs and short acknowledgments, several turns read like finished research-planning prose rather than spontaneous meeting speech."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.64,
+        "written_turns": [
+          1,
+          4,
+          7,
+          14,
+          17,
+          18,
+          23,
+          24,
+          26
+        ],
+        "exploration_share": 0.14,
+        "turn_moves": {
+          "proposal": 18,
+          "backchannel": 2,
+          "observation": 1,
+          "question": 2,
+          "answer": 2,
+          "agreement": 3,
+          "concern": 1,
+          "commitment": 1
+        },
+        "volunteer_turns": [
+          24,
+          29
+        ],
+        "unsure_turns": [
+          6,
+          11,
+          19
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.59,
+          "exploration_share": 0.19,
+          "approved": false,
+          "issues": [
+            "Task compliance: Dr. Chen never clearly states that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in behaviorally unresponsive patients. Turns 2, 19, and 21 discuss possible command following and interpretability, but the central positive inference is only implied rather than explained.",
+            "Task compliance: Chen identifies sedation, hearing/language concerns, and task fit as sources of nonresponse or false negatives (turns 2, 19, 21), but movement is not explicitly identified as a false-negative limitation. 'Artifact' in turns 7 and 21 is not a sufficient explicit substitute for the required movement limitation.",
+            "Task compliance: Ortiz does not explicitly describe withdrawal-of-life-sustaining-treatment discussions as relying on prognosis, serial bedside examination, patient values, and family understanding rather than a single test. Serial examinations and family documentation are discussed (turns 4, 6, 8, 13, 22), and values appear later (turn 25), but prognosis and the full ICU withdrawal-decision framing are diffuse rather than clearly supplied.",
+            "Task compliance: The broad working question in the ground truth is not actually formulated. The closest framing is Ortiz's opening question about what a signal changes in clinical and family deliberation (turn 1) and the later chart-review question (turn 25); neither explicitly asks whether EEG/fMRI awareness evidence should count in end-of-life decisions for unresponsive patients.",
+            "Seed recoverability is therefore only moderate: the project focus and unresolved evidentiary issue can be inferred, especially from turns 10, 19, 21, 23, and 25, but the exact ground-truth working question is not stated and requires substantial reconstruction.",
+            "Naturalness: although several genuine-sounding repairs occur, the meeting is dominated by polished, dense, sequentially reasoned turns. Nearly every contribution turns the prior concern directly into a proposed coding variable, feasibility check, or pilot action, creating a written-planning-dialogue feel rather than exploratory conversation.",
+            "Naturalness: turn 6 uses the prohibited stock phrase 'I lost my thread there,' despite the style instruction expressly banning it. This is also an unnatural inserted repair because the speaker immediately continues with a highly organized list.",
+            "Naturalness: the conversation repeatedly reaches tidy refinements and immediate consensus\u2014especially turns 10-16 and 21-26\u2014with little unresolved exploration beyond the intended evidence threshold. The closing in turns 27-28 also reads as a clean meeting-minutes endpoint.",
+            "Speaker distinctness is strong but not maximal: Ortiz dominates appropriately and Chen supplies technical concerns, while Price reliably separates inferential from normative claims. However, all three use very similar polished research-planning phrasing and repeatedly propose chart-coding details, reducing blind-identifiability somewhat."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.64,
+          "exploration_share": 0.14,
+          "approved": false,
+          "issues": [
+            "The central working question is only implicit rather than actually formulated. Turns 1-2 and 28 establish an uncertain-result/clinical-deliberation framing, but no participant clearly asks whether EEG or fMRI evidence of awareness should count in end-of-life decisions for behaviorally unresponsive patients.",
+            "Chen never clearly states the full required scientific premise that EEG and fMRI mental-imagery or command-following paradigms can reveal covert consciousness in behaviorally unresponsive patients. She discusses positive command-following results and modality-specific documentation (turns 7, 12, 14-16), but the explicit covert-consciousness claim and explicit mental-imagery framing are absent.",
+            "Chen identifies several threats to interpretation, including sedation, hearing, language, movement, arousal, and task constraints (turns 9, 19, 21), but does not plainly connect these to false negatives in both EEG and fMRI. The transcript more often treats these factors as chart-audit confounders or problems for negative comparisons.",
+            "Ortiz does not explicitly include patient values as a component of withdrawal-of-life-sustaining-treatment deliberation. Family understanding is discussed in turns 13, 18, 26, and 28, and prognosis/serial examinations are clear, but the patient-values requirement is missing.",
+            "Price comes close to the required inference-versus-normative distinction in turns 4-6 and 17, but she primarily distinguishes awareness evidence from prognosis, communication, and family interpretation. She does not explicitly state the separate normative question of what moral or clinical weight awareness should have.",
+            "The meeting becomes an extended operational chart-audit planning discussion from turns 9-28. This is coherent, but it displaces the broader conceptual question required for this first project-evolution meeting and makes the dialogue feel unusually methodically complete despite leaving the benchmark's central wording unstated.",
+            "Naturalness is limited by a polished, highly linear pattern: most substantive turns immediately convert the prior concern into a new coding field, audit criterion, or solution (especially turns 12-26). Although there are authentic repairs and short acknowledgments, several turns read like finished research-planning prose rather than spontaneous meeting speech."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 24, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Cognitive neuroscientist with 11 years of experience designing and analyzing EEG and fMRI studies of consciousness, including mental-imagery and auditory command-following paradigms in patients with disorders of consciousness. She leads protocol implementation and signal-quality review for a hospital-university neuroimaging program, working with preprocessing pipelines, single-subject statistical inference, artifact detection, and bedside-compatible EEG. Her work has included patients whose motor output is absent or inconsistent, and she routinely collaborates with speech-language, rehabilitation, and critical-care teams.",
+          "distinct_perspective": "Chen treats command-following signals as indirect, technically mediated evidence: a reproducible task-contingent neural response can support an inference that a patient may have understood and intentionally followed a command despite absent behavior. She emphasizes that nonresponse is not straightforward evidence of no awareness, because movement, sedatives, fluctuating arousal, hearing or language limitations, scanner tolerance, and the demands of a particular task can all yield false negatives. She is eager to clarify what the tests can and cannot establish, while recognizing that clinical and ethical implications must be developed with the other disciplines.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "questioning",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Eleanor Price",
+          "discipline": "philosophy",
+          "functional_role": "PhD student",
+          "background": "PhD candidate in philosophy of medicine in her sixth year, with prior training in bioethics and qualitative interview methods. Her dissertation examines evidentiary thresholds, uncertainty, and surrogate decision-making in disorders of consciousness. She has conducted interviews with clinicians, family members, and ethics consultants about how diagnostic labels and technologically generated findings shape interpretations of patient interests, and she is experienced in conceptual analysis of prognosis, autonomy, welfare, and moral status.",
+          "distinct_perspective": "Price insists on separating two questions that are often run together: whether a finding warrants an inference that the patient is aware, and what moral or clinical significance that awareness should have for a treatment decision. Evidence of awareness may alter beliefs about experience, communication potential, prognosis, or the appropriateness of further assessment, but none of those consequences follows automatically. She focuses on how uncertainty should be represented in deliberation and how patient values and family interpretations mediate the relevance of evidence.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "domain expert",
+          "background": "ICU neurologist with 17 years of post-residency practice at a tertiary academic medical center. He directs a neurocritical-care service and regularly evaluates patients with acute brain injury, prolonged unresponsiveness, and disorders of consciousness. His practice includes serial standardized bedside examinations, neuroprognostication after cardiac arrest and traumatic brain injury, family conferences, palliative-care consultation, and participation in hospital ethics reviews concerning withdrawal of life-sustaining treatment. He uses EEG, structural and functional imaging, and longitudinal clinical data as parts of\u2014not substitutes for\u2014clinical judgment.",
+          "distinct_perspective": "Ortiz approaches withdrawal-of-life-sustaining-treatment deliberations as longitudinal, patient-specific decisions rather than reactions to a single diagnostic result. In the ICU, prognosis is assembled from etiology, timing, sedation and metabolic confounders, serial neurologic examination, electrophysiology and imaging where appropriate, trajectory, and the patient\u2019s known values as understood by surrogates. He sees a possible covert-consciousness finding as potentially important information that may prompt reassessment or a more careful conversation, but he resists treating any isolated test as determinative of prognosis or of what treatment a patient would have wanted.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "A hospital-university team is preparing a mixed-methods ethics and clinical-guidance study on covert consciousness in patients diagnosed with disorders of consciousness. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Eleanor Price, a philosopher of medicine, and they are developing a question that can be investigated with available records and inform family and ethics-committee deliberations.\n\nMeeting 2 \u2014 March 24, 2027. Methods and feasibility meeting after the team reviews available hospital records and consults the neurodiagnostic service about the practical use of EEG and fMRI.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The group reframed the study around how uncertain command-following findings are documented, communicated, and taken up in clinical and family deliberations, rather than whether they determine withdrawal decisions or prove awareness broadly. The immediate plan is a 10\u201315 case chart audit before defining a larger cohort, testing whether records can reliably align test, result-review, and family-conference dates across ICU and rehabilitation care. Maya will follow up on the audit and check what EEG and fMRI archives preserve; the audit will distinguish task features, repeatability, clinician caveats, timing, bedside state, confounders, repeat-test feasibility, and subsequent clinical actions. The research question remains focused on discordance between a possible command-following signal and the clinical examination, including how uncertainty and alternative explanations were conveyed to families and what happened afterward. Open issues are whether sedation and other confounders, chronology, family interpretations, and communication details can be recovered well enough from records; if not, the study will be narrowed to mapping documentation and clinical uptake rather than claiming causal influence on decisions.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 2 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Dr. Ortiz should report that the hospital has enough cases with clinically ordered bedside EEG in patients with prolonged disorders of consciousness, but very few patients receive fMRI mental-imagery testing because transport and scanner access are rarely feasible in medically fragile ICU patients. He should also state that the records do not reliably document whether a scan result directly changed a withdrawal decision, whereas ethics-consult notes and family-meeting notes often record how prognosis and uncertainty were discussed. Dr. Chen should say that a single negative EEG or fMRI command-following result cannot establish absence of awareness, and that repeated or convergent positive findings are more informative than isolated negative results. Dr. Price should press the distinction between asking whether a result should determine withdrawal and asking what role it should play in deliberation when prognosis is otherwise poor. The group should narrow the question in discussion toward how positive, clinically feasible EEG evidence should be used in conversations and ethics deliberation about withdrawal of life-sustaining treatment, rather than treating EEG and fMRI symmetrically or asking whether either test should decide the outcome. Do not settle a final operational definition of a sufficiently persuasive positive EEG finding.",
+        "explicit_instruction": "Dr. Ortiz should report that the hospital has enough cases with clinically ordered bedside EEG in patients with prolonged disorders of consciousness, but very few patients receive fMRI mental-imagery testing because transport and scanner access are rarely feasible in medically fragile ICU patients. He should also state that the records do not reliably document whether a scan result directly changed a withdrawal decision, whereas ethics-consult notes and family-meeting notes often record how prognosis and uncertainty were discussed. Dr. Chen should say that a single negative EEG or fMRI command-following result cannot establish absence of awareness, and that repeated or convergent positive findings are more informative than isolated negative results. Dr. Price should press the distinction between asking whether a result should determine withdrawal and asking what role it should play in deliberation when prognosis is otherwise poor. The group should narrow the question in discussion toward how positive, clinically feasible EEG evidence should be used in conversations and ethics deliberation about withdrawal of life-sustaining treatment, rather than treating EEG and fMRI symmetrically or asking whether either test should decide the outcome. Do not settle a final operational definition of a sufficiently persuasive positive EEG finding.",
+        "ground_truth": {
+          "driver_of_change": "Hospital feasibility data show that clinically ordered EEG cases are available whereas fMRI command-following testing is rare and impractical for most medically fragile ICU patients; documentation is richer for deliberation than for direct causal effects on withdrawal decisions.",
+          "reframed_question": "How should positive EEG evidence suggesting covert awareness be used in family conversations and ethics deliberation about withdrawal of life-sustaining treatment when prognosis is poor?",
+          "important_constraint": "The team rejects treating a negative test as evidence that awareness is absent and does not propose that a test result alone determine withdrawal."
+        }
+      },
+      "ground_truth": {
+        "driver_of_change": "Hospital feasibility data show that clinically ordered EEG cases are available whereas fMRI command-following testing is rare and impractical for most medically fragile ICU patients; documentation is richer for deliberation than for direct causal effects on withdrawal decisions.",
+        "reframed_question": "How should positive EEG evidence suggesting covert awareness be used in family conversations and ethics deliberation about withdrawal of life-sustaining treatment when prognosis is poor?",
+        "important_constraint": "The team rejects treating a negative test as evidence that awareness is absent and does not propose that a test result alone determine withdrawal."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Morning. It\u2019s oddly bright here after the rain. Better than trying to get across campus in it, I guess. I\u2019ve got a family conference later this morning, so I was hoping we could use this time to see whether the charts actually support the question we\u2019ve been circling. The chronology around EEG findings, the conversations, and what happened after. I did a first pass through the available cases, and there are some promising things, but fMRI is a pretty important limitation because..."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Mm, okay."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The fMRI limitation is important, especially if all we can recover is the scan date and not the exact clinical state around it. Before we decide how much weight to put on it, Sam, what do the charts usually retain for the EEG indication and bedside conditions? Could we tell whether it was done in anything like a stable examination window? I was going to ask about the- whether we can actually place it in a stable exam window."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "It\u2019s inconsistent. The EEG order usually gives an indication, seizure concern, unexplained encephalopathy, sometimes prognostication, and the report has the recording conditions. But the actual bedside state is often only recoverable by triangulating the nursing flowsheets and the daily exam. You\u2019re looking at sedative infusions, recent paralytic, temperature, metabolic issues. A stable window is plausible in some cases, but not demonstrable in all. And these are routine clinical EEGs, not generally command-following paradigms, so Maya, I need your view on what in the preserved report would distinguish a task-linked signal from- I lost my thread there. From a nonspecific change."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "On a routine EEG report, that's probably not enough. We'd need a record that they used a specific instruction and a time-locked analysis. Otherwise, a change in background activity or an auditory evoked response isn't command-following. I need to check what the older archive actually retains, raw EEG, montage details, and technologist notes, because without those, we may have to treat EEG as documentation of clinical interpretation rather than re-adjudicating the signal independently."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Exactly. If we can't establish that a task was given and the response was time-locked to it, then clinically we shouldn't call the EEG evidence of covert command-following at all. For the audit, I think we should code that distinction explicitly. Documented task-linked finding, nonspecific EEG finding that was later interpreted optimistically, and indeterminate because the underlying materials are absent. Otherwise, we'll accidentally manufacture a signal from ordinary monitoring."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That three-way coding is the right safeguard. For a documented task-linked finding, I'd want the task itself, some indication of when it happened, and whether it was repeated or had any signal-quality caveat, because an isolated positive isn't all the same thing either. I'm a little worried the technologist notes may be the only place interruptions or arousal shifts show up."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "And clinically, those interruptions matter a great deal. If the technologist note says the patient was drifting off, being suctioned, or had a clear arousal change during the task, that's not just a minor technical footnote. It changes what we can say the response meant. For the audit, I'd keep a separate field for whether the source material supports interpretation at all, rather than, rather than collapsing that into positive versus negative."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "That source-support field matters ethically too, I think, because a chart can later carry forward \"EEG suggests awareness\" without preserving what, um, what warranted that phrase. Maya, once you've seen the archive, what wording would you regard as fair for a genuinely task-contingent response, something that doesn't quietly turn it into a claim about broad awareness or prognosis?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I'd say, \"This task produced a reproducible brain response consistent with following the instruction,\" if that's what the record supports. And then I'd explicitly add that it's a possible sign of preserved awareness, not a prediction of recovery. And for negatives, I think the paired wording has to be there too. A single negative EEG or fMRI task doesn't show absence of awareness. It may just reflect drowsiness, hearing, attention, language, or- sorry, task mismatch."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "And that is probably the language we need to trace in the family notes too, whether the limitation travels with the positive finding or whether it gets compressed into, um, \"there is awareness.\" Eleanor, if a note says uncertainty was discussed but never says how the surrogate weighed it, what do you think we can responsibly claim about the deliberation?"
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "We can claim only that the chart documents the clinicians' account of the deliberation, not the surrogate's actual reasoning or that the finding influenced the decision. \"Uncertainty discussed\" is especially thin. It may mean the caveat was said aloud, but not whether it was understood, or whether the family took it as reassurance, warning, or something else. I'd code that as uptake not assessable rather than infer a neutral effect, because we just don't know\u2014"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Uptake not assessable seems exactly right, rather than making any claim about influence. I found several conference notes entered days later that bundle multiple conversations, so even the order of the result, the discussion, and the decision may be, um, irretrievable in some cases. We should probably make chronology confidence its own variable and not pretend the note timestamp is the encounter time."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I\u2019d separate chronology confidence from communication quality. A note written late may still preserve the clinician\u2019s framing, but it\u2019s much weaker evidence that the finding entered the family\u2019s reasoning before a decision. Sam, do ethics-consult notes give us a more contemporaneous- a more timely account in enough of these cases, or are they too uneven across ICU and rehab to use as a common source?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "It\u2019s uneven, I\u2019m afraid. When ethics is involved, their notes can be quite useful and often more explicit about the competing prognostic uncertainties and the values question. But consultation itself is selective, so it can\u2019t be our common source or treated as evidence that a case was especially contested. I\u2019d abstract it as an ancillary, higher-detail source, then see in the pilot how often it actually helps resolve those bundled conference notes."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d want to see whether those ancillary notes ever preserve the actual wording of the result. Whether it stayed \u201cpossible sign\u201d with the task limits attached, or whether it had already become a broader statement about awareness. And if ethics notes help only in a few cases, that\u2019s still useful for the pilot, but it\u2019s not something we can use to fill gaps in the ordinary conference record."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Yeah, that\u2019s helpful."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think the pilot has to show us not just whether a phrase appears, but whether its evidentiary qualifiers, qualifiers survive across neurology, ethics, and family-conference documentation. And before we decide this can become a larger cohort, I still need to confirm the eligible case count and whether the rehabilitation record links cleanly enough to the ICU chart. Otherwise, we may be describing two disconnected pieces of a trajectory."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And the linkage question affects the signal side too. If a later rehab note says the patient was more alert or followed something behaviorally, we shouldn\u2019t use that to retroactively validate an ambiguous ICU EEG. Could we keep those as later clinical observations, with their own dates, rather than treating the whole trajectory as one continuous evidentiary, I mean, clinical record?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Later behavioral observations are clinically important, but they\u2019re not- we can\u2019t use them as post hoc ground truth for an equivocal ICU recording. We should date them separately and record the changes in between, like sedation clearance, complications, and rehabilitation exposure, instead of treating them as validation. That also keeps the longitudinal picture honest when we ask what information was available at the time of a goals-of-care conversation."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "For the ethics question, I think that temporal discipline is crucial. We should ask what this result could reasonably have contributed to deliberation at that moment, not let later improvement, or decline, settle what it meant then. Otherwise we end up treating the chart as though everyone, everyone had hindsight."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm-hm, right."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "The abstraction should preserve the clinical information that was available at each conference, including what was uncertain and which confounders were still active, instead of letting the eventual outcome rewrite it. If the pilot gives us enough cleanly dated cases, that feels like a defensible study. If not, we narrow it to how the finding and its caveats moved through the record."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Mm, I think so."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah\u2014keeping it to the record trail if chronology fails feels right."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "All right, I think we should leave it there. I\u2019ll follow up by email once I\u2019ve checked the linkage and the final eligible count. Thanks, both. This was really helpful."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Thanks, Sam. Good luck with the conference later."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Bye, both\u2014talk soon."
+        }
+      ],
+      "seed_location": "Incomplete/missing. Turn 10 satisfies Dr. Chen's requirement that a single negative EEG or fMRI task cannot establish absence of awareness. However, Dr. Ortiz never reports that there are enough clinically ordered bedside EEG cases, that fMRI mental-imagery testing is rare because ICU transport/scanner access is infeasible, or that records are richer for ethics/family deliberation than direct withdrawal causation (turns 12-15 discuss documentation limits and ethics notes only partially). Dr. Chen does not state that repeated or convergent positive findings are more informative than isolated negatives; turn 7 only notes that an isolated positive requires qualification. Dr. Price does not press the required distinction between a test determining withdrawal and its role in deliberation. The group does not narrow the question to positive clinically feasible EEG evidence in withdrawal conversations/ethics deliberation; the discussion remains focused on chart abstraction, signal validation, and chronology. No final operational definition of a persuasive positive EEG is settled.",
+      "qa_feedback": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          10,
+          12,
+          15,
+          21,
+          23
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Core feasibility evidence is missing: Dr. Ortiz never says the hospital has enough clinically ordered bedside EEG cases, nor that fMRI mental-imagery testing is very rare because ICU transport and scanner access are rarely feasible for medically fragile patients. Turn 1 merely calls fMRI an 'important limitation,' and turns 15 and 18 discuss selective ethics consultation and an unconfirmed eligible count instead.",
+          "The required documentation contrast is incomplete. Dr. Ortiz says in turns 13 and 15 that chronology is often unrecoverable and ethics notes can be useful, but he does not explicitly state that records do not reliably document whether a scan result directly changed a withdrawal decision while ethics-consult and family-meeting notes often document discussions of prognosis and uncertainty.",
+          "Dr. Chen states the required negative-test limitation in turn 10, but she does not clearly state the required positive-evidence comparison that repeated or convergent positive findings are more informative than isolated negative results. Turn 7 says an isolated positive needs qualification, which is not the same claim.",
+          "Dr. Price does not explicitly press the key distinction between whether a result should determine withdrawal and what role it should play in deliberation when prognosis is otherwise poor. Turns 12, 14, and 21 address documentation, uncertainty, and temporal framing, but the withdrawal-versus-deliberation distinction is absent.",
+          "The discussion never clearly narrows to positive, clinically feasible EEG evidence in family conversations and ethics deliberation about withdrawal of life-sustaining treatment. It remains largely focused on audit coding, record reliability, and chronology (turns 4-23), without explicitly rejecting symmetric treatment of EEG and fMRI on feasibility grounds.",
+          "Turn 4 uses the prohibited stock phrase 'I lost my thread there.' This directly conflicts with the provided meeting-style instruction.",
+          "Although several realism signals occur, many substantive turns are polished, complete written-style arguments that move directly from concern to proposed coding or solution, especially turns 5-8, 12-16, and 19-23. This keeps naturalness at or below 3 despite repairs and backchannels.",
+          "The ending at turns 26-28 is a tidy closure with a clear follow-up assignment; together with the consistently solution-oriented discussion, it reads somewhat like a scripted meeting rather than an organically unfinished research conversation."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.9,
+        "written_turns": [
+          5,
+          6
+        ],
+        "exploration_share": 0.29,
+        "turn_moves": {
+          "observation": 1,
+          "backchannel": 4,
+          "question": 4,
+          "answer": 4,
+          "proposal": 8,
+          "agreement": 4,
+          "idea": 1,
+          "concern": 1,
+          "commitment": 1
+        },
+        "volunteer_turns": [
+          26
+        ],
+        "unsure_turns": [
+          4,
+          5,
+          12,
+          15,
+          18
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.88,
+          "exploration_share": 0.27,
+          "approved": false,
+          "issues": [
+            "The central feasibility driver is incomplete: Dr. Ortiz says in turn 1 that EEG cases are probably feasible and fMRI will not be a parallel cohort, but he never states that the hospital has enough clinically ordered bedside EEG cases, nor that fMRI mental-imagery testing is rare because transport and scanner access are rarely feasible for medically fragile ICU patients.",
+            "The documentation comparison is incomplete. Turns 9-18 discuss family-meeting and ethics notes as sources for deliberative framing and values, but no turn explicitly states that records do not reliably document whether a scan result directly changed a withdrawal decision while those notes often document discussions of prognosis and uncertainty.",
+            "Dr. Chen clearly rejects interpreting a negative EEG as absence of awareness (turns 3 and 20), but she never explicitly extends this claim to a negative fMRI command-following result. She also does not state that repeated or convergent positive findings are more informative than isolated negative results.",
+            "Dr. Price does not explicitly press the required contrast between whether a result should determine withdrawal and what role it should play in deliberation when prognosis is otherwise poor. Her turns distinguish family interpretation, values, and documentation, but the determine-versus-deliberative-role formulation is only indirectly implied.",
+            "The meeting narrows toward an EEG-focused chart abstraction and communication pathway, but it never clearly formulates the target reframed research question about positive clinically feasible EEG evidence in family conversations and ethics deliberation about withdrawal of life-sustaining treatment. The discussion remains largely about coding rules and audit eligibility.",
+            "Turn 12 uses the prohibited stock phrase \"I lost the thread there,\" despite the style instruction explicitly forbidding it.",
+            "Although the transcript contains several repairs and hedges, many substantive turns are polished, complete mini-arguments that reach tidy conclusions, especially turns 4-8, 15-18, and 20-26. This makes it read more like crafted dialogue than a spontaneous meeting.",
+            "The requested opening small talk is only weakly realized: turn 1's reference to having been at the hospital and \"one of those days\" is brief and immediately shifts into agenda-setting rather than a few conversational opening lines."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 2,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.9,
+          "exploration_share": 0.29,
+          "approved": false,
+          "issues": [
+            "Core feasibility evidence is missing: Dr. Ortiz never says the hospital has enough clinically ordered bedside EEG cases, nor that fMRI mental-imagery testing is very rare because ICU transport and scanner access are rarely feasible for medically fragile patients. Turn 1 merely calls fMRI an 'important limitation,' and turns 15 and 18 discuss selective ethics consultation and an unconfirmed eligible count instead.",
+            "The required documentation contrast is incomplete. Dr. Ortiz says in turns 13 and 15 that chronology is often unrecoverable and ethics notes can be useful, but he does not explicitly state that records do not reliably document whether a scan result directly changed a withdrawal decision while ethics-consult and family-meeting notes often document discussions of prognosis and uncertainty.",
+            "Dr. Chen states the required negative-test limitation in turn 10, but she does not clearly state the required positive-evidence comparison that repeated or convergent positive findings are more informative than isolated negative results. Turn 7 says an isolated positive needs qualification, which is not the same claim.",
+            "Dr. Price does not explicitly press the key distinction between whether a result should determine withdrawal and what role it should play in deliberation when prognosis is otherwise poor. Turns 12, 14, and 21 address documentation, uncertainty, and temporal framing, but the withdrawal-versus-deliberation distinction is absent.",
+            "The discussion never clearly narrows to positive, clinically feasible EEG evidence in family conversations and ethics deliberation about withdrawal of life-sustaining treatment. It remains largely focused on audit coding, record reliability, and chronology (turns 4-23), without explicitly rejecting symmetric treatment of EEG and fMRI on feasibility grounds.",
+            "Turn 4 uses the prohibited stock phrase 'I lost my thread there.' This directly conflicts with the provided meeting-style instruction.",
+            "Although several realism signals occur, many substantive turns are polished, complete written-style arguments that move directly from concern to proposed coding or solution, especially turns 5-8, 12-16, and 19-23. This keeps naturalness at or below 3 despite repairs and backchannels.",
+            "The ending at turns 26-28 is a tidy closure with a clear follow-up assignment; together with the consistently solution-oriented discussion, it reads somewhat like a scripted meeting rather than an organically unfinished research conversation."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 3 \u2014 April 14, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Cognitive neuroscientist with 11 years of experience designing and analyzing EEG and fMRI studies of consciousness, including mental-imagery and auditory command-following paradigms in patients with disorders of consciousness. She leads protocol implementation and signal-quality review for a hospital-university neuroimaging program, working with preprocessing pipelines, single-subject statistical inference, artifact detection, and bedside-compatible EEG. Her work has included patients whose motor output is absent or inconsistent, and she routinely collaborates with speech-language, rehabilitation, and critical-care teams.",
+          "distinct_perspective": "Chen treats command-following signals as indirect, technically mediated evidence: a reproducible task-contingent neural response can support an inference that a patient may have understood and intentionally followed a command despite absent behavior. She emphasizes that nonresponse is not straightforward evidence of no awareness, because movement, sedatives, fluctuating arousal, hearing or language limitations, scanner tolerance, and the demands of a particular task can all yield false negatives. She is eager to clarify what the tests can and cannot establish, while recognizing that clinical and ethical implications must be developed with the other disciplines.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "questioning",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Eleanor Price",
+          "discipline": "philosophy",
+          "functional_role": "PhD student",
+          "background": "PhD candidate in philosophy of medicine in her sixth year, with prior training in bioethics and qualitative interview methods. Her dissertation examines evidentiary thresholds, uncertainty, and surrogate decision-making in disorders of consciousness. She has conducted interviews with clinicians, family members, and ethics consultants about how diagnostic labels and technologically generated findings shape interpretations of patient interests, and she is experienced in conceptual analysis of prognosis, autonomy, welfare, and moral status.",
+          "distinct_perspective": "Price insists on separating two questions that are often run together: whether a finding warrants an inference that the patient is aware, and what moral or clinical significance that awareness should have for a treatment decision. Evidence of awareness may alter beliefs about experience, communication potential, prognosis, or the appropriateness of further assessment, but none of those consequences follows automatically. She focuses on how uncertainty should be represented in deliberation and how patient values and family interpretations mediate the relevance of evidence.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "domain expert",
+          "background": "ICU neurologist with 17 years of post-residency practice at a tertiary academic medical center. He directs a neurocritical-care service and regularly evaluates patients with acute brain injury, prolonged unresponsiveness, and disorders of consciousness. His practice includes serial standardized bedside examinations, neuroprognostication after cardiac arrest and traumatic brain injury, family conferences, palliative-care consultation, and participation in hospital ethics reviews concerning withdrawal of life-sustaining treatment. He uses EEG, structural and functional imaging, and longitudinal clinical data as parts of\u2014not substitutes for\u2014clinical judgment.",
+          "distinct_perspective": "Ortiz approaches withdrawal-of-life-sustaining-treatment deliberations as longitudinal, patient-specific decisions rather than reactions to a single diagnostic result. In the ICU, prognosis is assembled from etiology, timing, sedation and metabolic confounders, serial neurologic examination, electrophysiology and imaging where appropriate, trajectory, and the patient\u2019s known values as understood by surrogates. He sees a possible covert-consciousness finding as potentially important information that may prompt reassessment or a more careful conversation, but he resists treating any isolated test as determinative of prognosis or of what treatment a patient would have wanted.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "A hospital-university team is preparing a mixed-methods ethics and clinical-guidance study on covert consciousness in patients diagnosed with disorders of consciousness. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Eleanor Price, a philosopher of medicine, and they are developing a question that can be investigated with available records and inform family and ethics-committee deliberations.\n\nMeeting 3 \u2014 April 14, 2027. Protocol-finalization meeting to define the study question, inclusion criteria, and the decision context the resulting guidance will address.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The group reframed the study around how uncertain command-following findings are documented, communicated, and taken up in clinical and family deliberations, rather than whether they determine withdrawal decisions or prove awareness broadly. The immediate plan is a 10\u201315 case chart audit before defining a larger cohort, testing whether records can reliably align test, result-review, and family-conference dates across ICU and rehabilitation care. Maya will follow up on the audit and check what EEG and fMRI archives preserve; the audit will distinguish task features, repeatability, clinician caveats, timing, bedside state, confounders, repeat-test feasibility, and subsequent clinical actions. The research question remains focused on discordance between a possible command-following signal and the clinical examination, including how uncertainty and alternative explanations were conveyed to families and what happened afterward. Open issues are whether sedation and other confounders, chronology, family interpretations, and communication details can be recovered well enough from records; if not, the study will be narrowed to mapping documentation and clinical uptake rather than claiming causal influence on decisions.\nMeeting 2 \u2014 March 24, 2027: The study will examine how potentially task-linked EEG/fMRI findings, their caveats, and subsequent communication appear in the record around goals-of-care discussions, while preserving what was knowable at each point rather than using later outcomes as validation. EEG findings will be coded as documented task-linked, nonspecific later interpreted optimistically, or indeterminate, with separate fields for source support, interruptions/confounders, chronology confidence, and whether surrogate uptake is assessable. Maya will check what the older EEG archive retains, including raw data, montage details, and technologist notes, and advise on defensible wording for task-contingent findings. Sam will confirm the eligible case count and ICU\u2013rehabilitation linkage, abstract ethics notes only as ancillary sources, and email the group with the results. If the pilot yields enough cleanly dated linked cases, the project can study deliberation over time; otherwise it will narrow to tracing how findings and qualifiers moved through the record. Open issues are the limited and inconsistent fMRI/EEG source materials, uncertain chronology in delayed bundled notes, uneven ethics documentation, and whether rehabilitation records link cleanly enough to ICU charts.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 3 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Dr. Chen should propose defining the relevant finding as a reproducible positive EEG command-following signature, preferably supported by repeat testing or a second convergent assessment, rather than any isolated EEG abnormality. Dr. Ortiz should explain that the most actionable and documentable point is not the initial emergency ICU discussion but a later withdrawal-of-life-sustaining-treatment deliberation after the acute sedating and metabolic confounders have been addressed and a poor neurological prognosis is being considered. Dr. Price should argue that the study should ask how such evidence changes the reasons and safeguards required for deliberation, including communication of residual uncertainty and reassessment, rather than whether awareness automatically confers a prohibition on withdrawal. In the discussion, the team should settle on a question about the appropriate role of reproducible positive EEG command-following evidence in later withdrawal deliberations for behaviorally unresponsive patients with otherwise poor prognosis. They should retain the commitment that the evidence informs, but does not by itself settle, ethically appropriate decisions. Do not claim that the team has established what the morally correct outcome must be in any individual case.",
+        "explicit_instruction": "Dr. Chen should propose defining the relevant finding as a reproducible positive EEG command-following signature, preferably supported by repeat testing or a second convergent assessment, rather than any isolated EEG abnormality. Dr. Ortiz should explain that the most actionable and documentable point is not the initial emergency ICU discussion but a later withdrawal-of-life-sustaining-treatment deliberation after the acute sedating and metabolic confounders have been addressed and a poor neurological prognosis is being considered. Dr. Price should argue that the study should ask how such evidence changes the reasons and safeguards required for deliberation, including communication of residual uncertainty and reassessment, rather than whether awareness automatically confers a prohibition on withdrawal. In the discussion, the team should settle on a question about the appropriate role of reproducible positive EEG command-following evidence in later withdrawal deliberations for behaviorally unresponsive patients with otherwise poor prognosis. They should retain the commitment that the evidence informs, but does not by itself settle, ethically appropriate decisions. Do not claim that the team has established what the morally correct outcome must be in any individual case.",
+        "ground_truth": {
+          "settled_question": "What role should reproducible positive EEG command-following evidence of possible covert awareness play in later deliberations about withdrawal of life-sustaining treatment for behaviorally unresponsive patients with an otherwise poor neurological prognosis?",
+          "driver_of_change": "The team needs an operationally credible positive finding and a clinically stable decision point, leading it to require reproducibility or convergent support and to focus on later prognostic deliberations after major confounders are addressed.",
+          "constant_focus": "Across all meetings, the team studies how uncertain evidence of possible covert awareness should inform\u2014not independently determine\u2014end-of-life deliberation."
+        }
+      },
+      "ground_truth": {
+        "settled_question": "What role should reproducible positive EEG command-following evidence of possible covert awareness play in later deliberations about withdrawal of life-sustaining treatment for behaviorally unresponsive patients with an otherwise poor neurological prognosis?",
+        "driver_of_change": "The team needs an operationally credible positive finding and a clinically stable decision point, leading it to require reproducibility or convergent support and to focus on later prognostic deliberations after major confounders are addressed.",
+        "constant_focus": "Across all meetings, the team studies how uncertain evidence of possible covert awareness should inform\u2014not independently determine\u2014end-of-life deliberation."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Morning. It is, mercifully, not raining here for once, although the unit was already full before seven, so I may be a little behind the curve. Um, for today, I think we need to land on a cohort definition that captures the actual later deliberation, not the first ICU conversation when half the exam may still be, uh, confounded, and decide whether the pilot records can really support that chronology."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Mm, that makes sense."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Morning. I agree, especially since an early bedside EEG can be hard to interpret when sedation or arousal is moving around. Sam, do these charts usually give us enough clearly dated medication and metabolic context to say whether a task run was, was interpretable? And can we actually separate the later prognostic conversations from the bundled notes?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Usually there\u2019s enough to identify exposure, yes, but not enough to certify an unconfounded exam from a medication list alone. I\u2019d code the actual documented state\u2014sedation held or ongoing, organ failure, seizures, metabolic derangement\u2014and treat missingness as meaningful. For the later conferences, the copied-forward notes are the real- what we need is an encounter anchor, rather than accepting the signature date."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "For the EEG side, could we make the interpretability field separate from the result itself? So a note saying \u201cconsistent with command following\u201d isn\u2019t treated the same when we have task timing, artifact notes, and a documented bedside state, versus when we only have that one sentence in a consult note."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Exactly. I\u2019d make that a separate axis, and I wouldn\u2019t let a consult\u2019s conclusion backfill the evidentiary fields. Maya, on the source data, what would you regard as enough to call an EEG effect reproducible rather than a one-off analytic artifact? Does a repeat, repeat task run do the same work as convergent support from fMRI, or are those really answering different questions?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "They\u2019re related, but they\u2019re not interchangeable. A repeat run of the same well-specified task, with the same task-contingent pattern and usable artifact documentation, is the cleanest evidence that it wasn\u2019t a one-off. A convergent fMRI result can- it can strengthen the overall inference, but it has its own timing and feasibility problems. I\u2019d code both separately rather than let either one automatically substitute for the other."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Even with repeatability or convergence, we should keep the caveat that this supports a task-contingent inference. It isn't proof of a particular conscious experience or prognosis. Maya, would you be comfortable spelling out what residual alternatives remain in that highest-evidence category, so the later deliberation coding doesn't quietly turn it into \"the patient is aware\"?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Even in that category, we could still have task misunderstanding, residual artifact or analysis error, fluctuating attention, and limits in what the task itself samples. It doesn't tell us how stable awareness is or what the patient would want. I'd phrase it as \"reproducible evidence compatible with intentional command following,\" and then keep track of whether it was repeated, convergent, and interpretable at the time."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Good. Then the cohort should not be \"positive test\" cases in any broad sense. It should be patients who are still behaviorally unresponsive after the major acute confounders were addressed, with an otherwise poor prognosis under active consideration and an actual later goals-of-care deliberation. Eleanor, when that finding, that finding enters the room, what does it mean operationally to say it changes safeguards or reasons rather than the outcome? What language could a clinician actually put in a conference note?"
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I think it would be something like, this finding doesn't resolve prognosis or establish the patient's treatment preferences, but it raises enough uncertainty about awareness that we should review confounders, consider whether reassessment is feasible, and revisit the patient's known values before we treat prognosis as settled. For the audit, though, I'd code those as distinct elements. Otherwise, a note can sound careful without ever actually recording, say, a time-limited reassessment discussion."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "And I think that distinction is the whole value of the audit. In the charts, I\u2019m worried we\u2019ll find language like \u201ccontinue to observe\u201d without any indication whether that was a response to the signal, a family request, or just a new attending\u2019s framing. So we should code the safeguard explicitly, and separately code whether the note attributes it to the test\u2014 to the signal at all."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And on the signal side, I think we should guard against a parallel ambiguity. The cohort trigger can't be just any EEG abnormality. Diffuse slowing, reactivity, or an odd waveform isn't command following. I'd require a documented task-linked signature, and then distinguish a one-off from a reproducible positive\u2014reproducible positive EEG command-following signature, with repeat runs ideally and the source details there to support it."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Right, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I\u2019d keep the one-off cases in if the documentation says task-linked, because clinically those are exactly the awkward findings that can enter a family conversation even though they\u2019re technically weak. But we need a separate evidentiary tier. We can\u2019t let \u201cpossible signal\u201d collapse into the reproducible category. Then we should ask whether either tier was actually available before the conference encounter, instead of reconstructing it later from a consult note."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "And for the deliberation part, I\u2019d distinguish \u201cthe finding was disclosed\u201d from \u201cthe finding was taken up.\u201d A conference note may only show the first. We should probably reserve any claim about surrogate uptake for cases where the family\u2019s question, interpretation, or stated reason is actually, actually documented, rather than infer it from continued treatment afterward."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Continued treatment is an outcome, not evidence of why anybody chose it. For the pilot, I think we need an attribution field with pretty unforgiving categories. Explicitly linked to the finding, explicitly linked to another reason, competing explanations documented, or, um, not ascertainable. That late-consult case I mentioned is probably in that last category unless the actual encounter note gives us more than the copied-forward language."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The timing field matters for us too. A finding only counts as available for that deliberation if the task and its interpretation were documented before the anchored conference, not just summarized afterward. I\u2019m seeing that exact problem in the pilot, two charts both say \u201cconsistent with command following,\u201d but one has two runs and artifact notes, and the other is just a later consult- it\u2019s just a later consult sentence."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "For eligibility, I want a hard temporal rule. The task-linked result or its documented interpretation has to come before the anchored goals-of-care encounter. And before we lock that in, I still need to verify the actual linked-case count. Particularly whether the rehab encounters and the ICU chart- whether they give us enough clean anchors, rather than creating a cohort on paper that we can't reconstruct."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I think that hard rule is right, as long as we also retain a category for findings documented after the encounter but described as having been discussed. I lost my thread there. It\u2019s a chronology problem, not evidence that they informed the decision. Otherwise we may mistake a retrospective narrative for what the family and clinicians could actually have known then."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Keep it, but flag it as retrospective chronology rather than letting it satisfy the exposure rule. For the pilot, the practical question is whether we can anchor enough conferences to an actual encounter, like a same-day palliative note, orders, bedside documentation, something, because otherwise even a beautifully categorized signal has nowhere reliable to sit in the deliberation timeline and..."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Mm. And if we can't anchor the encounter, I'd be reluctant to code more than documentation flow. That the result and a goals-of-care note both exist, not that one informed the other. Could the pilot use a minimum anchor, say an encounter note plus either contemporaneous orders or a same-day note from another service, before we call the chronology usable\u2014"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think that's a sensible minimum, with one caveat. Orders may reflect a decision made hours earlier, so I wouldn't require them if we have two independently authored, contemporaneous clinical notes that identify the encounter. The key is that we can place the conversation in time without using a copied-forward, um, summary as the anchor. Otherwise, yes, we stop at documentation flow."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, that seems important."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "Mm. On that minimum anchor, I'd add that the conference note has to have some substantive account of the discussion, not just \"family updated.\" Otherwise, we may be able to place the encounter in time, but we still- we still have no basis for saying how uncertainty, or the finding, was communicated."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "The usable-deliberation subset needs both, a defensible encounter anchor and substantive content. We need to know what prognosis was discussed, whether the task finding and its limits were communicated, and whether any reassessment or time-limited observation was considered. If all we have is \u201cfamily updated,\u201d that goes in the record inventory, but it can't- we can't use it to infer uptake or safeguards."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "I'd make that substantive-content threshold quite literal in the codebook. Not just whether the finding appears, but whether its uncertainty and limits are represented along with prognosis, reassessment, and the patient's values. If those are absent, we can say the record documents disclosure, perhaps, but not ethically adequate deliberation, or even what the family was being asked to consider\u2014 to weigh."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Given the hard stop, I think that's enough to finalize the pilot threshold. A task-linked finding before a substantively documented, anchored later deliberation, and otherwise we describe documentation flow only. I'll verify the linked-case count and those encounter dates\u2014encounter anchors\u2014before we pretend the larger cohort is feasible."
+        },
+        {
+          "speaker": "Dr. Eleanor Price",
+          "text": "All right, I think we can let everyone go a few minutes early. Thanks, both, this was really helpful, and we\u2019ll pick it up once Sam has had a look at those anchors."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Great. Take care, both."
+        }
+      ],
+      "seed_location": "Turns 7, 9, and 13: Dr. Chen defines the relevant evidence as a documented task-linked, reproducible positive EEG command-following signature, favoring repeat task runs and separately coding convergent fMRI support rather than treating isolated EEG abnormalities as sufficient. Turns 1, 10, 15, 19, 21, 26, and 28: Dr. Ortiz focuses the cohort on later, anchored goals-of-care/withdrawal deliberations after major acute confounders are addressed and poor prognosis is under consideration, rather than the initial ICU discussion. Turns 8, 11, 16, 20, 25, and 27: Dr. Price frames the issue as safeguards and reasons\u2014communication of uncertainty, reassessment, prognosis, and patient values\u2014rather than an automatic outcome or prohibition on withdrawal. Turns 10-13 and 26-28 collectively settle the operational question around how reproducible task-linked EEG evidence should inform, without independently determining, later deliberation for behaviorally unresponsive patients with poor prognosis. No claim is made that a morally required outcome has been established for any individual case.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          7,
+          9,
+          10,
+          11,
+          13,
+          15,
+          18,
+          19,
+          20,
+          23,
+          26,
+          27,
+          28
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by many turns functioning as polished, complete mini-arguments that immediately convert the preceding concern into a coding rule or solution, especially turns 10-13, 15-23, and 25-28. This gives the exchange a drafted-protocol feel rather than a spontaneous meeting.",
+          "Dr. Price explicitly says \"I lost my thread there\" in turn 20, despite the supplied style instruction prohibiting that stock phrase. The line also sounds inserted rather than organically prompted by the discussion.",
+          "Although Ortiz leads numerically and substantively, Price and Chen contribute repeated long, highly structured turns; this only partially matches the requested one_voice_leads style, in which quieter participants speak rarely and mainly through short questions or acknowledgments.",
+          "The ending in turns 28-30 cleanly finalizes thresholds, assigns Ortiz's verification task, and closes the meeting in a minutes-like fashion. It is coherent, but somewhat too tidy for the naturalness target."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.17,
+        "turn_moves": {
+          "proposal": 12,
+          "agreement": 6,
+          "question": 3,
+          "answer": 4,
+          "request": 1,
+          "concern": 1,
+          "observation": 1,
+          "commitment": 1,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          28
+        ],
+        "unsure_turns": [
+          19,
+          20
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.17,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by many turns functioning as polished, complete mini-arguments that immediately convert the preceding concern into a coding rule or solution, especially turns 10-13, 15-23, and 25-28. This gives the exchange a drafted-protocol feel rather than a spontaneous meeting.",
+            "Dr. Price explicitly says \"I lost my thread there\" in turn 20, despite the supplied style instruction prohibiting that stock phrase. The line also sounds inserted rather than organically prompted by the discussion.",
+            "Although Ortiz leads numerically and substantively, Price and Chen contribute repeated long, highly structured turns; this only partially matches the requested one_voice_leads style, in which quieter participants speak rarely and mainly through short questions or acknowledgments.",
+            "The ending in turns 28-30 cleanly finalizes thresholds, assigns Ortiz's verification task, and closes the meeting in a minutes-like fashion. It is coherent, but somewhat too tidy for the naturalness target."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short to medium turns, though formal presentation segments contain long, dense monologues. Early and late discussion is highly conversational, with frequent greetings, side chatter, repetitions, and occasional loose overlap or abrupt handoffs. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201csort of,\u201d \u201cyou know,\u201d repeated starts, and self-corrections\u2014especially when asking questions or thinking aloud. The tone is informal and encouraging even in technical discussion; participants praise talks before questioning them and frame challenges as curiosity (\u201cI\u2019m just curious,\u201d \u201cnaive question,\u201d \u201cdo you think,\u201d \u201chave you looked at\u2026\u201d). Questions are often multipart, exploratory, and prefaced with hedges or brief compliments. Disagreement is rare and indirect; speakers qualify claims, acknowledge uncertainty, and treat alternatives as open possibilities. Participants build on prior remarks by restating a point, linking it to related work, or extending it into a possible collaboration, while the host uses concise transitions and reminders to keep the session moving.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

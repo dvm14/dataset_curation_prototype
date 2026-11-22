@@ -1,0 +1,386 @@
+{
+  "transcript_id": "3ff300b2",
+  "generated_at": "2026-11-21T17:52:11.844851",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with mostly short-to-medium turns outside the presentations and long, structured monologues during talks. There is frequent overlap, delayed responses, and occasional technical or transcription-related fragmentation, especially in the opening small talk; speakers use many fillers and repairs such as \u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections. The tone is informal but professionally respectful, with warm greetings, light joking, praise, and conversational asides before transitions into more formal introductions and questions. Participants generally build on one another by acknowledging points first (\u201cgreat,\u201d \u201cthanks,\u201d \u201cthat\u2019s interesting\u201d) before asking a follow-up or extending an idea. Questions tend to be exploratory and multi-part, often hedged with phrases like \u201cI\u2019m curious,\u201d \u201cdo you think,\u201d \u201chave you looked at,\u201d or \u201cmaybe,\u201d rather than framed as sharp challenges. Disagreement is largely indirect: speakers qualify claims, point to uncertainty, and describe alternative explanations rather than openly contradicting someone. Presenters answer at length, thinking aloud and openly marking limits in the evidence, while moderators use brief, practical cues to manage transitions and keep the session moving.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Introducing a risk-scoring model to help community clinics decide which patients to call first.",
+  "disciplines": [
+    "computer science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "computer science",
+      "functional_role": "principal investigator",
+      "background": "A machine-learning researcher with 12 years of experience building and evaluating clinical prediction systems from electronic health record data. She has led multi-site projects on temporal validation, calibration, fairness assessment, feature provenance, and clinical decision-support implementation, including work with safety-net health systems. She is accustomed to moving quickly from available data to a baseline model, while recognizing that label construction, cohort rules, and workflow constraints determine whether a model is usable.",
+      "distinct_perspective": "Frames the project as a prediction-and-deployment problem: define a forecast horizon, construct labels and features without information leakage, train and calibrate a model, then assess discrimination, calibration, and subgroup performance. She sees ranked outreach lists as a decision-support interface whose usefulness can be tested empirically, but may initially treat the available 30-day emergency-department visit or hospitalization field as an expedient starting label until clinical and population definitions are clarified.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Rafael Mensah",
+      "discipline": "epidemiology",
+      "functional_role": "domain expert",
+      "background": "A clinical epidemiologist with 16 years of experience studying ambulatory-care outcomes, access to care, and preventable acute utilization in community health-center populations. He has designed retrospective cohort studies and pragmatic evaluations using electronic health records, claims, and care-management records. His work emphasizes target-population definition, causal selection processes, outcome validity, missingness, and transportability across clinics.",
+      "distinct_perspective": "Treats the score as meaningful only after the team specifies the clinical question and the population to whom it applies. He distinguishes an observed emergency visit from a preventable event and from a failure of follow-up, and is attentive to the fact that patients appear in outreach data because of prior access, referral, and care-selection processes. He will press for a written outcome and eligibility specification, clinic review of whether the outcome represents an actionable outreach opportunity, and a later, separate population for validation rather than relying on a single historical split.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Lila Ortiz",
+      "discipline": "sociology",
+      "functional_role": "domain expert",
+      "background": "A medical sociologist with 9 years of qualitative and mixed-methods research experience in community clinics, focused on care navigation, frontline discretion, patient trust, and the consequences of administrative categorization. She uses ethnographic observation, semi-structured interviews, workflow mapping, and thematic analysis, and has studied how outreach staff adapt standardized tools under time pressure.",
+      "distinct_perspective": "Focuses on how a ranking becomes a social and organizational practice rather than assuming that a score directly determines action. She asks who is made visible or invisible by a prioritized list, how staff reconcile a score with local knowledge, whether patients experience prioritization as care or surveillance, and what constraints shape whether calls can be completed. She can begin by documenting current outreach practices and patient experiences before a model exists, but sees meaningful observation of score use as dependent on a concrete prototype worklist and a stated proposal for how staff are expected to use it.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "clinic_triage_model",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 1,
+  "task_id": "coordination_04",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+  "seed_spec": {
+    "task_id": "coordination_04",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+    "explicit_instruction": "Have the meeting surface these proposed activities in a deliberately unsequenced order: (1) the computer scientist proposes training and calibrating the model immediately using a label for 30-day emergency-department visit or hospitalization; (2) the sociologist proposes observing staff use of a prototype ranked worklist and interviewing patients about how being prioritized is perceived; (3) the epidemiologist says the team must first decide whether the target outcome is any 30-day emergency-department visit/hospitalization, a potentially preventable event, or failure to complete follow-up after an identified care need, and must define which patients are eligible for scoring given selection into care; (4) the computer scientist asks for the final cohort and outcome labels before conducting leakage checks, subgroup performance evaluation, model training, calibration, or score explanations; (5) the epidemiologist says validation must use a later, distinct clinic population after the outcome and eligibility rules are fixed; and (6) the sociologist says workflow observation can begin only once the team has a prototype worklist and a specified proposed use of the ranking, while early interviews about existing outreach practices can occur before a model exists. Ensure participants explicitly agree on the outcome-definition and cohort-definition decision as the first substantive deliverable, assign epidemiology to draft it with clinic input, and set a date of March 18 for sign-off. Do not resolve which outcome option will be selected during the meeting; preserve that decision as pending clinic input. Make clear that no model training, validation, or prototype score-workflow testing can start until the definitions are signed off. Do not mention the benchmark task or ask participants to order the work for the assistant.",
+    "ground_truth": {
+      "dependency_issue": "The proposed work is out of order because the model's labels, analytic cohort, validation population, and prototype worklist all depend on a signed-off definition of the target outcome and the population eligible for scoring. Training on a provisional emergency-department/hospitalization label could produce a model for the wrong clinical and operational objective, and workflow testing cannot use a ranked list until a model has been built.",
+      "ordered_next_steps": [
+        {
+          "step": 1,
+          "activity": "Epidemiology, with clinic input, drafts the target-outcome definition and patient eligibility/cohort rules, including how selection into care will be handled.",
+          "dependency": "This establishes the label and analytic population needed by all downstream quantitative work.",
+          "deadline": "March 18 sign-off"
+        },
+        {
+          "step": 2,
+          "activity": "Team and clinics approve the outcome and cohort definitions.",
+          "dependency": "Approval is required before extracting final labels or constructing training and validation datasets."
+        },
+        {
+          "step": 3,
+          "activity": "Computer science constructs datasets from the approved definitions and performs feature-leakage review, model training, calibration, subgroup-performance assessment, and score-explanation development.",
+          "dependency": "Each task requires fixed labels and cohort membership."
+        },
+        {
+          "step": 4,
+          "activity": "Epidemiology validates the completed model in a later, distinct clinic population defined using the same approved outcome and eligibility rules.",
+          "dependency": "External validation requires a trained model and pre-specified outcome and cohort definitions."
+        },
+        {
+          "step": 5,
+          "activity": "Sociology observes staff use of the prototype ranked worklist and interviews patients about perceptions of prioritization, using the specified intended workflow.",
+          "dependency": "This requires a prototype score/worklist and a defined use case. Sociology may separately begin interviews or observation of current, non-model outreach practices before this point."
+        }
+      ],
+      "decisions_and_assignments": {
+        "pending_decision": "Choose among the proposed target outcomes after clinic input; the meeting does not select one.",
+        "assigned_owner": "Epidemiology drafts the outcome and eligibility definition with clinic input.",
+        "required_signoff_date": "March 18",
+        "gating_rule": "No model training, external validation, or prototype score-workflow testing begins before the definitions are signed off."
+      }
+    }
+  },
+  "seed_location": "The transcript substantially realizes the dependency-gated sequencing, though it does not explicitly surface the seed's deliberately unsequenced initial proposal to train immediately on a 30-day ED/hospitalization label. Turns 1-2 and 8 establish that the outcome remains undecided pending clinic input, with alternatives including acute utilization, potentially preventable events, and incomplete follow-up. Turns 8, 19, and 21 assign Rafael/epidemiology to draft outcome and eligibility/cohort rules with clinic input and set March 18 sign-off; turn 8 explicitly gates training, validation, and prototype testing until then. Turns 9-12 state that modeling, performance assessment, leakage/temporality review, and worklist development await signed definitions. Turns 23-26 specify later, distinct-population validation after definitions are fixed. Turn 27 explicitly identifies the workflow dependency: early study of existing outreach may begin now, but ranked-worklist observation and patient interviews about prioritization require a concrete prototype worklist and agreed use/language. The target dependency issue is therefore present: labels, cohort/eligibility, validation, modeling, and prototype workflow testing depend on signed-off definitions, while prototype workflow research also depends on a built worklist. Missing/incomplete seed element: no participant explicitly proposes immediate model training/calibration using the provisional 30-day ED/hospitalization label, so the requested deliberately out-of-order proposed activity is absent.",
+  "ground_truth": {
+    "dependency_issue": "The proposed work is out of order because the model's labels, analytic cohort, validation population, and prototype worklist all depend on a signed-off definition of the target outcome and the population eligible for scoring. Training on a provisional emergency-department/hospitalization label could produce a model for the wrong clinical and operational objective, and workflow testing cannot use a ranked list until a model has been built.",
+    "ordered_next_steps": [
+      {
+        "step": 1,
+        "activity": "Epidemiology, with clinic input, drafts the target-outcome definition and patient eligibility/cohort rules, including how selection into care will be handled.",
+        "dependency": "This establishes the label and analytic population needed by all downstream quantitative work.",
+        "deadline": "March 18 sign-off"
+      },
+      {
+        "step": 2,
+        "activity": "Team and clinics approve the outcome and cohort definitions.",
+        "dependency": "Approval is required before extracting final labels or constructing training and validation datasets."
+      },
+      {
+        "step": 3,
+        "activity": "Computer science constructs datasets from the approved definitions and performs feature-leakage review, model training, calibration, subgroup-performance assessment, and score-explanation development.",
+        "dependency": "Each task requires fixed labels and cohort membership."
+      },
+      {
+        "step": 4,
+        "activity": "Epidemiology validates the completed model in a later, distinct clinic population defined using the same approved outcome and eligibility rules.",
+        "dependency": "External validation requires a trained model and pre-specified outcome and cohort definitions."
+      },
+      {
+        "step": 5,
+        "activity": "Sociology observes staff use of the prototype ranked worklist and interviews patients about perceptions of prioritization, using the specified intended workflow.",
+        "dependency": "This requires a prototype score/worklist and a defined use case. Sociology may separately begin interviews or observation of current, non-model outreach practices before this point."
+      }
+    ],
+    "decisions_and_assignments": {
+      "pending_decision": "Choose among the proposed target outcomes after clinic input; the meeting does not select one.",
+      "assigned_owner": "Epidemiology drafts the outcome and eligibility definition with clinic input.",
+      "required_signoff_date": "March 18",
+      "gating_rule": "No model training, external validation, or prototype score-workflow testing begins before the definitions are signed off."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hi, everyone\u2014thanks for making time. I know we only have ten minutes, so I'd like us to leave with a usable definition of who's on the list and what we're actually trying to predict. Otherwise the modeling choices are kind of artificial. I put the extract summary on screen, but before we get into the columns\u2014Rafael, clinically, what does that observed 30-day ED or hospitalization field, what do you think it's actually standing in for here?"
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "At present, it's an observed acute-care record, not yet a clinical outcome we can assume is actionable. It could reflect an unavoidable exacerbation, an event that was potentially preventable, or just incomplete follow-up after a need was already known. Those imply pretty different call lists. I think we need clinic input before choosing among them, including which source captures outside ED visits most reliably."
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And that changes whether missed visits and prior contact attempts are legitimate predictors, or whether they're just proxies for a need that's already been recognized. Lila, when somebody opens the ranked list, what do they actually need beside a score to decide\u2014what do they need to see to decide, okay, this person is appropriate to call today? Recent utilization, care gaps, preferred language, something else?"
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "They need enough context to treat the list as a prompt, not an instruction. Recent relevant events, prior outreach attempts, preferred language, and whether someone already has an active plan. But I'd want to know if the rank is advisory and whether staff can move people down or off the list, because they often know a phone is disconnected or a case manager is already engaged, and that's rarely in the record."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s exactly the interface constraint. I\u2019d make the rank advisory, with a visible defer or remove reason, already engaged, wrong number, language routing, whatever, and capture that action because it becomes part of evaluating whether the list is helping. But we need to decide whether those staff overrides are just workflow data or whether any of them can feed back into a later model. Right now their, their provenance is too uneven."
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "I'd keep them separate at first. The override log can show us where the record is missing the practical conditions for a call, but if we feed those labels back too quickly, we may just train the model to reproduce uneven documentation. And could we distinguish \u201cnot reachable\u201d from \u201cnot appropriate to call\u201d? Those mean pretty different things."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "I would separate those. An unsuccessful call may be a contact-information or staffing problem, not a patient-level failure, and I\u2019d like to ask the outreach leads how they currently interpret it. More basically, we shouldn\u2019t let any of these fields decide the target by accident. I\u2019ll draft the outcome and eligibility definition with clinic input for sign-off on March 18, and until then, no training, validation, or prototype testing."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "March 18 is when I can start a defensible build, not before. I\u2019m glad you put that boundary on it. Looking at the extract, the ED/hospital field is complete enough that we could use it as a candidate endpoint once you\u2019ve specified what counts, but I\u2019m not going to freeze a 30-day index date or run performance estimates on a provisional cohort. Missed appointments and prior attempts are especially risky on timing."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "Good. And once we fix the index date, I want us to verify temporality variable by variable, what was known before that date versus what was recorded because the acute event or follow-up process had already... started. Otherwise we risk a score that looks strong historically but is really just detecting the aftermath."
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "Right, and that distinction matters."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Exactly. I\u2019m going to need a source-and-timestamp audit for each candidate feature, not just a broad cutoff, especially that outreach-attempt field, because it may be entered after the call or backfilled. Once Rafael\u2019s definition is signed, we can make the worklist show the underlying recent events and care-gap context rather than asking staff to trust a bare risk\u2014 actually, a bare risk number."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "And that audit should include the outcome source too, not just the predictors. In the extract, one clinic has fewer recorded acute events but many more incomplete follow-up fields. I can't tell yet if that's a real care-pattern difference, missing outside ED capture, or just a different workflow. I need to check that with the clinic leaders before we treat those event rates as, as comparable."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "We shouldn't pool the three clinics by default either. If outside-event capture differs, what looks like calibration could be clinic-specific data quality, not actual risk. Rafael, when you talk with the leads, could you ask whether they can distinguish an outside ED notification from a genuinely absent event record? That determines whether we stratify the endpoint, or whether this is just not a viable shared label yet."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "I'll ask that specifically, along with which feed they see as the best record of outside ED use. I also need to ask if they can reliably identify an already-known care need, because that\u2019s the difference between predicting acute utilization and predicting a missed follow-up opportunity. I wouldn\u2019t assume the same label can serve both, especially if..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "From the modeling side, those are different prediction tasks, and I don't want a single rank quietly standing in for both. Once you have that clinic readout, we can see if there's a common, observable endpoint across all three, or if the pilot needs a narrower eligibility group or even clinic-specific outcome handling, and then we'd\u2014"
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "One thing I'd want Rafael to ask alongside that is how eligibility handles people with sparse recent records or unstable contact information. Are they excluded from the cohort, or are they included with very little information? Because either way, that shapes who never- I don't think we'll see who never appears on the list just from overall event rates."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "I would not make sparse records an automatic exclusion without seeing who that removes. From an epidemiologic standpoint, eligibility has to mean the person is sufficiently connected to the clinic for both the predictors and the outreach to make sense, not just that they have complete data. I\u2019ll put that question to the leads. What minimum recent relationship or contact basis makes someone genuinely, uh, callable?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And for the build, I'd keep that separate from feature availability. Someone can be eligible because the clinic can reasonably contact them, while sparse clinical history is a modeled missingness pattern instead of an automatic exclusion. But if the leads say a phone or another contact route is a hard operational prerequisite, then we should put that explicitly in the cohort rule and not let the score infer it from old outreach fields, because..."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "That separation is important. From the cohort side, I\u2019ll ask each lead about the minimum relationship and contact criteria, and I\u2019ll also look at who would be left out. I\u2019m thinking particularly about patients with sparse records or unstable phone access, so we don\u2019t mistake operational reachability for low clinical need. Then, once that\u2019s settled, the signed March 18 definition can state both pieces plainly."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And when we evaluate the pilot, I want the denominator to be that explicitly eligible, callable population, not everybody with an EHR row. Then we can inspect who is systematically absent from it by clinic, language, and whatever contact indicators are appropriate. Otherwise, a very clean-looking worklist could just be optimized for the people the data already- the people the data already sees."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "After March 18, once the definition is fixed, we should hold back a later, distinct clinic population for validation under those same rules. We should not call another split of this historical file validation. That is the only way we'll know whether the list carries forward beyond the particular documentation and outreach patterns in this extract."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Exactly. I'd want that later holdout to be temporally separated and, if the endpoint capture supports it, reported clinic by clinic before we make any claims about transportability. For the spring pilot, the operational evaluation can still be modest. Did staff use the advisory list, what did they override, and did the context fields make the calls- did the context fields make the calls actionable?"
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "That seems important."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "From the epidemiology side, I\u2019d keep those two evaluations separate. The later-population validation asks whether the risk estimate still identifies the defined outcome, while the spring pilot asks whether a ranked, advisory list fits the actual calling work. I\u2019ll bring the clinic questions into the March 18 definition discussion, including how they classify unsuccessful calls and who\u2019s meaningfully reachable."
+    },
+    {
+      "speaker": "Dr. Lila Ortiz",
+      "text": "Before the spring pilot, I can start with the existing outreach practice, how staff assemble a call list now, what makes a call feasible, and how they distinguish unreachable from inappropriate. But observing use of the ranked list, or asking patients what prioritization felt like, really needs that concrete worklist and agreed patient-facing language first. That\u2019s the dependency."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Once that definition is signed, we can move quickly. I don't want to- we shouldn't pretend the provisional data answer more than they do."
+    },
+    {
+      "speaker": "Dr. Rafael Mensah",
+      "text": "All right, we are at time, so let\u2019s stop there. I\u2019ll see everyone at the March 18\u2014at the March 18 discussion. Thank you."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thanks, everyone. Take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 2,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      5,
+      8,
+      9,
+      12,
+      21,
+      23,
+      26,
+      27,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required deliberately unsequenced proposal to train and calibrate immediately on the provisional 30-day ED/hospitalization label is not clearly present. Maya instead says she will not freeze the index date or run performance estimates on a provisional cohort (turn 9), so the key out-of-order quantitative proposal is softened into a refusal before it is ever proposed.",
+      "The opening does not follow the specified screen-share working-session opening: nobody apologizes for being a couple minutes late or asks where the group has got to. Turn 1 opens as a polished chair introduction rather than an in-progress meeting re-entry.",
+      "Naturalness is substantially limited by highly composed, complete argumentative turns. Many speakers articulate a concern, qualification, consequence, and resolution in a single turn\u2014for example turns 8, 21, 23, 26, and 27\u2014making the exchange read like a scripted research-planning dialogue rather than live collaborative talk.",
+      "The stated five realism signals appear, but most disfluencies are light repairs embedded in otherwise polished prose (for example turns 6, 12, 15, 16, 22, and 24). This is a listed artificiality tell and warrants a score of 3 or lower.",
+      "The screen-share format is only lightly realized. Apart from references to an extract summary and fields/columns (turns 1, 9, 13), there are no practical scrolling, locating, reading, or document-navigation moments that would make it sound like an active shared-screen working session.",
+      "Turn 27 correctly distinguishes early observation of existing outreach from later ranked-worklist observation, but it omits the seed's explicit pre-model patient-interview activity. It says patient-perception interviews require the concrete worklist, which is consistent with the ground truth's later activity but leaves the broader early qualitative work less fully represented."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.64,
+    "written_turns": [
+      2,
+      5,
+      7,
+      8,
+      14,
+      21,
+      23,
+      26,
+      27
+    ],
+    "exploration_share": 0.11,
+    "turn_moves": {
+      "question": 2,
+      "answer": 2,
+      "backchannel": 2,
+      "proposal": 9,
+      "commitment": 7,
+      "agreement": 5,
+      "concern": 1,
+      "request": 2
+    },
+    "volunteer_turns": [
+      8,
+      15,
+      17,
+      19,
+      21,
+      26,
+      27,
+      29
+    ],
+    "unsure_turns": [
+      6,
+      13,
+      15
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.88,
+      "exploration_share": 0.13,
+      "approved": false,
+      "issues": [
+        "Task compliance: the required deliberately unsequenced proposed activities are not all surfaced. Dr. Chen discusses a provisional label and explicitly defers modeling (turns 3, 7, 15), but never proposes immediately training and calibrating a model on the provisional 30-day ED/hospitalization label as required by seed item 1.",
+        "Task compliance: the required sociology proposal to observe staff using a prototype ranked worklist and interview patients specifically about how being prioritized is perceived is absent. Dr. Ortiz only says she would ask patients about outreach after contact once a workflow exists (turn 21); she never states that prototype-worklist observation depends on a prototype and specified use of the ranking, nor does she explicitly preserve early interviews/observation of existing non-model outreach practices as an activity that can begin before modeling.",
+        "Task compliance: Dr. Chen does not explicitly request final cohort and outcome labels before leakage checks, subgroup-performance evaluation, model training, calibration, and score explanations. She identifies the need for a signed-off specification before performance claims and mentions leakage (turns 15, 23, 26), but subgroup assessment, calibration, and score explanations are missing.",
+        "Task compliance: validation is discussed as waiting until after March 18 and using a later clinic period or population (turns 18-20), but it is not assigned to epidemiology as the ground-truth ordered steps specify, and no completed-model dependency is stated as clearly as required.",
+        "Task compliance: the transcript does not follow the required screen-share working-session opening. No one apologizes for being a couple of minutes late or asks where the group has got to; it opens with a polished agenda statement in turn 1. There are also no concrete screen/document references despite the prescribed style.",
+        "Naturalness: despite several fillers and repairs, most substantive turns are highly polished, self-contained written arguments that cleanly state a concern and a solution or next action. This is especially pronounced in turns 12, 14-20, and 25-29. The disfluencies largely decorate otherwise finished prose.",
+        "Naturalness: the meeting ends with a near-minutes recap in turn 29, including all immediate deliverables, ownership, deadline, and gating rule, followed by tidy closings (turns 30-32). This reads more like scripted documentation than a live working session.",
+        "Naturalness: the interaction contains little genuine exploration after concerns arise; concerns are typically converted immediately into a proposed review-sheet field, assignment, or solution. For example, turns 21-28 repeatedly add fields and operational details without uncertainty being pursued in a less resolved way.",
+        "Speaker distinctness: Dr. Ortiz is less differentiated than her persona calls for. Her contributions are plausible qualitative/workflow comments, but she does not introduce ethnographic observation, interview design, patient perceptions of prioritization, or the distinction between current practice research and prototype-use research with enough depth to be unmistakably sociological."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.64,
+      "exploration_share": 0.11,
+      "approved": false,
+      "issues": [
+        "The required deliberately unsequenced proposal to train and calibrate immediately on the provisional 30-day ED/hospitalization label is not clearly present. Maya instead says she will not freeze the index date or run performance estimates on a provisional cohort (turn 9), so the key out-of-order quantitative proposal is softened into a refusal before it is ever proposed.",
+        "The opening does not follow the specified screen-share working-session opening: nobody apologizes for being a couple minutes late or asks where the group has got to. Turn 1 opens as a polished chair introduction rather than an in-progress meeting re-entry.",
+        "Naturalness is substantially limited by highly composed, complete argumentative turns. Many speakers articulate a concern, qualification, consequence, and resolution in a single turn\u2014for example turns 8, 21, 23, 26, and 27\u2014making the exchange read like a scripted research-planning dialogue rather than live collaborative talk.",
+        "The stated five realism signals appear, but most disfluencies are light repairs embedded in otherwise polished prose (for example turns 6, 12, 15, 16, 22, and 24). This is a listed artificiality tell and warrants a score of 3 or lower.",
+        "The screen-share format is only lightly realized. Apart from references to an extract summary and fields/columns (turns 1, 9, 13), there are no practical scrolling, locating, reading, or document-navigation moments that would make it sound like an active shared-screen working session.",
+        "Turn 27 correctly distinguishes early observation of existing outreach from later ranked-worklist observation, but it omits the seed's explicit pre-model patient-interview activity. It says patient-perception interviews require the concrete worklist, which is consistent with the ground truth's later activity but leaves the broader early qualitative work less fully represented."
+      ]
+    }
+  ]
+}

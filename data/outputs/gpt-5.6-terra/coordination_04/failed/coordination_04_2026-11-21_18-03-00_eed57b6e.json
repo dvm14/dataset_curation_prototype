@@ -1,0 +1,371 @@
+{
+  "transcript_id": "eed57b6e",
+  "generated_at": "2026-11-21T18:03:00.949676",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style with mostly short-to-medium turns in the opening and Q&A, contrasted with long, uninterrupted formal presentation turns. Informal chatter includes many greetings, quick acknowledgments, repetitions (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), filler words (\u201cum,\u201d \u201cuh\u201d), self-corrections, false starts, and occasional fragmented or ungrammatical phrasing, suggesting live, multilingual speech rather than polished scripting. Interruptions are limited and generally cooperative\u2014brief interjections, confirmations, or handoffs rather than confrontational overlap. Speakers hedge frequently with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d \u201cwe\u2019re interested in,\u201d and \u201cI don\u2019t know,\u201d especially when discussing interpretations or future work. The tone shifts from casual and joking before the session to professionally warm during introductions and talks; questions are polite, often prefaced with praise or disclaimers such as \u201cquick question,\u201d \u201cnaive question,\u201d or \u201cgreat talk,\u201d and may be long, exploratory, and somewhat reformulated midstream. Challenges are indirect and curiosity-driven, with presenters responding openly by acknowledging limits, qualifying claims, and framing uncertainty as an ongoing question.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding whether a nurse-led walk-in diabetes clinic at a safety-net hospital is working and for whom.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "public health"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Desai",
+      "discipline": "clinical medicine",
+      "functional_role": "postdoctoral researcher",
+      "background": "An endocrinology-trained postdoctoral researcher with 7 years of clinical research experience in safety-net ambulatory care. She has worked with electronic health-record cohorts, diabetes quality measures, HbA1c trajectories, and pragmatic evaluations of care-delivery interventions. She spends part of each week embedded in the hospital diabetes service and is attentive to how visit type, laboratory timing, and clinical indication affect interpretation of outcomes.",
+      "distinct_perspective": "Frames the clinic as a clinical intervention whose effects should be assessed through explicitly specified eligibility criteria, exposure definitions, baseline risk characterization, and outcome windows. She is especially concerned that scheduled diabetes visits, walk-in encounters, and unrelated laboratory values can be conflated in the EHR, producing misleading HbA1c comparisons. She tends to prioritize internally coherent cohort construction and clinically meaningful comparators before broader access or experience questions.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Elena Mart\u00ednez",
+      "discipline": "sociology",
+      "functional_role": "research engineer",
+      "background": "A research engineer with 5 years of experience supporting qualitative and mixed-methods studies of healthcare access, institutional trust, and chronic-disease self-management. She has built recruitment workflows from administrative datasets, conducted semi-structured interviews in English and Spanish, and used framework analysis to examine how patients navigate fragmented safety-net systems. Her prior work has focused on the meanings patients attach to unscheduled care rather than on clinical effectiveness alone.",
+      "distinct_perspective": "Approaches walk-in use as a socially situated care-seeking practice shaped by work schedules, transportation, prior experiences of dismissal, documentation concerns, and lack of longitudinal primary care. She wants interviews to distinguish convenience from necessity and to examine whether frequent users experience the clinic as a bridge to care, a substitute for inaccessible services, or another episodic stop. She is alert to recruitment bias and asks how administrative categories such as \u201cuser\u201d or \u201cfrequent user\u201d will map onto patients' actual care pathways.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Jordan Okafor",
+      "discipline": "public health",
+      "functional_role": "research engineer",
+      "background": "A public-health research engineer with 6 years of experience producing equity-focused service evaluations for urban safety-net systems. He works with geocoded administrative data, insurance categories, area-level deprivation measures, chronic-disease registries, and descriptive utilization analyses. He has helped teams translate program data into reach assessments for operational leaders, with particular attention to who is included or excluded by denominator choices.",
+      "distinct_perspective": "Frames the evaluation around population reach and distributive equity: which local residents with diabetes are using the clinic, which groups remain absent, and whether evening/weekend access appears to reach people with limited connection to primary care. He emphasizes that neighborhood, insurance, and diabetes-burden analyses require a defensible eligible population, consistent index dates, and pre-specified fields before any extract can be requested. He treats clinical causal claims as important but relies on clinical colleagues to determine medically valid cohort and outcome definitions.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "walk_in_diabetes_clinic",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "task_id": "coordination_04",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+  "seed_spec": {
+    "task_id": "coordination_04",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+    "explicit_instruction": "Hold a planning meeting in which participants discuss several evaluation tasks in an impractical order. The clinical medicine representative should propose immediately calculating six-month HbA1c change and comparing clinic users with non-users. The public health representative should say they need the clinical team to first define the eligible evaluation population, index date, comparison group, and required data fields before they can request the hospital extract and calculate reach by neighborhood, insurance status, and diabetes burden. The sociology representative should propose recruiting interview participants from a list of frequent walk-in users, but should state that the list cannot be generated until the clinical team defines what counts as a walk-in clinic user and the hospital extract is obtained. Clinical medicine should acknowledge that a cohort definition must distinguish walk-in diabetes visits from scheduled diabetes visits and specify a baseline HbA1c window. End with the team agreeing that clinical medicine will finalize the cohort, index-date, outcome-window, comparison-group, and data-field specification by December 6, 2026; public health will then request and clean the extract by December 20; sociology will receive the resulting eligible-user list after cleaning and then recruit interview participants. Do not resolve analytic results or claim that the clinic is effective.",
+    "ground_truth": {
+      "dependency_issue": "The proposed outcome analysis, population-reach analysis, and interview recruitment all depend on an upstream, shared clinical data specification. They cannot validly begin from an undefined or unavailable cohort.",
+      "ordered_next_steps": [
+        {
+          "order": 1,
+          "owner": "Clinical medicine",
+          "action": "Finalize the evaluation specification: define eligible walk-in diabetes clinic users, distinguish them from scheduled diabetes visits, set the index date and baseline/follow-up HbA1c windows, identify the non-user comparison group, and list needed fields including HbA1c, visit type and dates, follow-up/no-show records, emergency-department use, demographic variables, insurance, and geography.",
+          "deadline": "December 6, 2026",
+          "dependency": "This definition is required before the hospital can create a valid extract, calculate clinical outcomes, identify a comparison group, or generate a recruitment list."
+        },
+        {
+          "order": 2,
+          "owner": "Public health",
+          "action": "Request and clean the de-identified hospital extract using the finalized specification; produce the eligible clinic-user file and descriptive reach variables.",
+          "deadline": "December 20, 2026",
+          "dependency": "Requires the clinical cohort, index-date, comparison-group, and field definitions. The cleaned file is required for reach analysis and for sociology's sampling frame."
+        },
+        {
+          "order": 3,
+          "owner": "Clinical medicine and public health",
+          "action": "Conduct outcome and reach analyses from the cleaned extract: clinical medicine estimates HbA1c change and follow-up/no-show outcomes using the defined comparison group, while public health describes whom the clinic reaches and misses.",
+          "deadline": "After December 20, 2026",
+          "dependency": "Both analyses require the cleaned, correctly defined extract."
+        },
+        {
+          "order": 4,
+          "owner": "Sociology",
+          "action": "Use the cleaned eligible-user list to purposively recruit interview participants, including frequent and infrequent users where feasible, and conduct interviews about odd-hour attendance, waiting, stigma, clinic culture, and staff roles.",
+          "deadline": "After December 20, 2026",
+          "dependency": "Recruitment requires an accurate list of people who meet the agreed definition of walk-in clinic user."
+        }
+      ],
+      "key_decision": "The team must prioritize creation of the shared cohort and data specification over immediately running HbA1c comparisons, reach estimates, or interview recruitment."
+    }
+  },
+  "seed_location": "Partially present. Turns 6-10 identify that reach and outcome work require Maya's clinical eligibility/cohort, comparator, index encounter, and HbA1c-window definitions; turn 10 commits to a cohort/comparator/field specification by December 6. Turn 11 states sociology needs a cleaned eligible-user list before recruiting, and turn 16 makes the extract/cleaned reach file dependent on the December 6 specification, due December 20. However, the requested initial impractical-order proposals are not present: clinical medicine does not propose immediately calculating HbA1c change and comparing users versus non-users, and sociology does not propose recruiting from a frequent-walk-in-user list before noting the list dependency. The meeting also does not end with the specified explicit three-party agreement; sociology's post-cleaning receipt/recruitment sequence is implied rather than finalized in the closing.",
+  "ground_truth": {
+    "dependency_issue": "The proposed outcome analysis, population-reach analysis, and interview recruitment all depend on an upstream, shared clinical data specification. They cannot validly begin from an undefined or unavailable cohort.",
+    "ordered_next_steps": [
+      {
+        "order": 1,
+        "owner": "Clinical medicine",
+        "action": "Finalize the evaluation specification: define eligible walk-in diabetes clinic users, distinguish them from scheduled diabetes visits, set the index date and baseline/follow-up HbA1c windows, identify the non-user comparison group, and list needed fields including HbA1c, visit type and dates, follow-up/no-show records, emergency-department use, demographic variables, insurance, and geography.",
+        "deadline": "December 6, 2026",
+        "dependency": "This definition is required before the hospital can create a valid extract, calculate clinical outcomes, identify a comparison group, or generate a recruitment list."
+      },
+      {
+        "order": 2,
+        "owner": "Public health",
+        "action": "Request and clean the de-identified hospital extract using the finalized specification; produce the eligible clinic-user file and descriptive reach variables.",
+        "deadline": "December 20, 2026",
+        "dependency": "Requires the clinical cohort, index-date, comparison-group, and field definitions. The cleaned file is required for reach analysis and for sociology's sampling frame."
+      },
+      {
+        "order": 3,
+        "owner": "Clinical medicine and public health",
+        "action": "Conduct outcome and reach analyses from the cleaned extract: clinical medicine estimates HbA1c change and follow-up/no-show outcomes using the defined comparison group, while public health describes whom the clinic reaches and misses.",
+        "deadline": "After December 20, 2026",
+        "dependency": "Both analyses require the cleaned, correctly defined extract."
+      },
+      {
+        "order": 4,
+        "owner": "Sociology",
+        "action": "Use the cleaned eligible-user list to purposively recruit interview participants, including frequent and infrequent users where feasible, and conduct interviews about odd-hour attendance, waiting, stigma, clinic culture, and staff roles.",
+        "deadline": "After December 20, 2026",
+        "dependency": "Recruitment requires an accurate list of people who meet the agreed definition of walk-in clinic user."
+      }
+    ],
+    "key_decision": "The team must prioritize creation of the shared cohort and data specification over immediately running HbA1c comparisons, reach estimates, or interview recruitment."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Hi, everyone. I\u2019m hoping by the time we leave today we\u2019ll have enough agreement on who actually counts as a clinic user, so I can specify the extract. Otherwise, a six-month HbA1c comparison is going to be pretty slippery. I\u2019d also like to hear what each of you thinks the clinic is meant to be doing for patients beyond the obvious clinical signal."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "For the interviews, that definition is really consequential. Maya, how are you thinking about separating a true walk-in diabetes encounter from a same-day scheduled visit, or from a visit where diabetes is just incidental? Patients may describe all of those as \u201ccoming to the clinic,\u201d but they point to pretty different care pathways."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "That\u2019s exactly the problem. I don\u2019t want to infer it from a diabetes diagnosis code alone. I need the encounter location, appointment status, visit type, timing, and probably the nurse documentation, because a redirected same-day patient may be clinically part of the intervention even if the scheduling field says otherwise. I\u2019m losing the thread here, but do patients experience that redirected pathway as walk-in access, or as just another scheduled appointment?"
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "I think it could be either. The distinction may be less about the redirection itself and more about whether they had a viable alternative that day. If somebody gets sent over after trying to get a primary-care slot, and then they come back because the hours work around shifts, that's one pathway. If staff simply route every same-day need there, though, patients may not experience much choice at all. Could the documentation capture where they came from or- why they were redirected?"
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Possibly, but I need to see the actual note templates before I promise that. If there\u2019s a referral source, arrival mode, or a free-text reason for redirect, that could be a useful, uh, adjudication variable. If not, we may have to classify those encounters separately instead of forcing them into walk-in versus scheduled. And for your interviews, I\u2019d want to ask that viable-alternative question directly, because it may explain what the administrative label misses."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "That separation matters for reach too. Somebody redirected from primary care may still be exactly who evening walk-in access is helping, but I need Maya's clinical rule for what makes a non-user eligible at that same point, especially for people without a recent HbA1c. Otherwise the denominator gets pretty incoherent."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "I\u2019d define eligibility independently of having an HbA1c, otherwise we select people who were already being monitored. For a non-user comparator, I\u2019m thinking adults with diabetes evidence who had some opportunity to use the clinic during the same calendar period. Maybe an ambulatory or ED contact, or residence in the service area. I need to know\u2014actually, Jordan, what denominator you think is defensible at neighborhood level, especially with unstable addresses."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "I'd keep two denominators, maybe. For the hospital-facing reach measure, adults with documented diabetes and a service-area address who had any qualifying hospital contact in the period is probably defensible, and then we can show how much address missingness changes it. But if we say local residents with diabetes, I'd need to know whether we have tract, ZIP, or just a derived neighborhood field. I was going to say we could- no, I wouldn't fold unstable-address patients into a neighborhood rate as though that were neutral."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "Mm, yeah, the missingness."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "For the clinical analysis, I\u2019d keep people with missing or unstable addresses in the eligible hospital cohort, but leave them out of any neighborhood-rate denominator, and report that explicitly instead of quietly dropping them. I still want the six-month HbA1c change, with baseline and follow-up windows anchored to an index encounter, not just any two labs, because those early post-visit draws are going to distort it. I can have the cohort, comparator, and field specification settled by December 6, and then the neighborhood-rate work can start once that\u2019s\u2014"
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "That helps, because I really don\u2019t want to treat the frequent users as a self-evident group before those fields are cleaned. Once the eligible-user list exists, I\u2019d want to look for some variation in apparent frequency, not just the people everybody recognizes, and ask whether missed daytime follow-ups reflect work, transport, or whether it\u2019s- something in the follow-up process that isn\u2019t actually reachable."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "Right, that\u2019s useful."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Frequency as an exposure, I\u2019d be careful with that, because somebody can look like a one-time user just because the first encounter generated a lab and then they disappeared from our system. Elena, when you sample, could you include people with no documented follow-up, not- could you include them alongside repeat users? That may tell us whether no follow-up is failure of access, resolution of the immediate need, or just care elsewhere."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "I'd include both. We should sample across that follow-up pattern as well as apparent walk-in frequency, so repeat users with and without a documented follow-up, and one-time users. Because \"no follow-up\" can mean very different things, depending on whether they found care somewhere else or just couldn't make the daytime system work."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Hm, important distinction."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "Once Maya's December 6 specification is locked, I can turn around the de-identified extract and cleaned reach file by December 20. I do need to check with data services whether we get a geocodable address, tract, ZIP, or just a derived neighborhood field, because that really sets the ceiling on what we can say about who isn't being reached."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "The geography field determines whether the reach analysis is descriptive by neighborhood or whether it\u2019s really just a hospital catchment profile. For the extract, I\u2019ll also need the raw address-completeness indicator, not just the derived geography, so we can characterize who gets excluded from those rates. And I need to confirm with data services that appointment status and clinic location are reliable across the evening sessions."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "And before I settle on recruitment, I need to check the approved contact route, whether phone and text outreach can be done in Spanish as well as English. Otherwise the interview sample could just reproduce the access pattern we're trying to understand, especially for people whose record has an incomplete address or inconsistent follow-up."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "Yeah, that could skew it."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "And that isn't just an interview-sampling issue. It affects how we interpret the whole qualitative component. If Spanish-language text or phone outreach isn't available, we shouldn't describe the interviews as patient experience of the clinic generally. It would be a reachable-subgroup sample. Elena, do you know if interpreter-supported recruitment is covered under the existing approval, or- do we need an amendment?"
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "I don\u2019t know yet. I need to check the approval language rather than assume. My memory is that interpreter-supported interviews may be covered, but recruitment contact itself, especially Spanish text, could be a separate issue. I\u2019ll verify, verify that before we build the sample around it."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Okay\u2014please check that before we treat language as a sampling stratum."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "I'll check it before December 20 and let you know what the approval actually permits. We need that approval answer before we set up the sampling work. If Spanish outreach is constrained, I may still want to document who on the eligible list becomes unreachable through the permitted routes, because that's not just a recruitment nuisance, nuisance. It may be part of the access story."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Document that as a recruitment-flow limitation, absolutely, but I'd keep it analytically separate from the clinical follow-up outcome. Someone unreachable for an interview isn't necessarily lost to care. Once we see the encounter build, I'll make sure the extract can distinguish documented follow-up, subsequent outside-looking gaps in our record, as far as it can, and ED use, rather than collapsing all of that into one category, and then..."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "Yeah, separating those in the file will keep the reach story from getting muddled too."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "Exactly\u2014otherwise we\u2019ll end up attributing access patterns to clinical outcomes."
+    },
+    {
+      "speaker": "Elena Mart\u00ednez",
+      "text": "I think we've got enough for now, and the rest can wait until we see the files and the approval- the approval language. Thanks, everyone. Talk soon."
+    },
+    {
+      "speaker": "Jordan Okafor",
+      "text": "Sounds good. Bye, everybody."
+    },
+    {
+      "speaker": "Dr. Maya Desai",
+      "text": "All right, take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      6,
+      10,
+      11,
+      13,
+      16,
+      17,
+      18,
+      21,
+      23
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Turn 3 uses the prohibited stock phrase \"I\u2019m losing the thread here,\" which violates the stated meeting-style instruction.",
+      "The required initial impractical ordering is only weakly represented. Dr. Desai mentions wanting six-month HbA1c change in turns 1 and 10, but she does not clearly propose immediately calculating it before the upstream specification; the discussion already treats specification as necessary.",
+      "Jordan does not explicitly state the full required prerequisite set before requesting the extract: eligible population, index date, comparison group, and required data fields. Turns 6 and 16 imply parts of this, but the complete dependency is not plainly stated.",
+      "The sociology dependency is incomplete. Elena discusses needing an eligible-user list after fields are cleaned (turn 11) and sampling after approval (turn 23), but does not explicitly say that a frequent-walk-in-user list cannot be generated until clinical walk-in definitions are finalized and the hospital extract is obtained.",
+      "The final agreement omits several required clinical deliverables by December 6: an explicit index-date specification, baseline/follow-up HbA1c windows, and a clearly defined non-user comparison group. Turn 10 says \"cohort, comparator, and field specification,\" but this is less complete than the ground-truth action.",
+      "The ending does not explicitly agree to the full post-cleaning sequence: clinical and public-health analyses after December 20, followed by sociology receiving the cleaned eligible-user list and recruiting from it. Turn 16 gives the public-health deadline, but turn 23 centers approval constraints rather than confirming the required handoff.",
+      "Naturalness is limited despite several surface disfluencies. Many substantive turns are polished, complete mini-arguments that cleanly state a concern and solution, particularly turns 3-8, 10-11, and 16-18. Several disfluencies are also conspicuous repetitions or inserted dashes on otherwise polished prose (for example turns 21 and 23), which reads scripted rather than spontaneous.",
+      "The transcript has a strong one-voice lead in Maya, but the close at turns 27-29 functions like a tidy written meeting ending, and the discussion resolves most concerns immediately rather than leaving much genuine exploration or uncertainty."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.24,
+    "turn_moves": {
+      "proposal": 8,
+      "question": 2,
+      "concern": 3,
+      "idea": 1,
+      "backchannel": 4,
+      "request": 2,
+      "commitment": 4,
+      "agreement": 5
+    },
+    "volunteer_turns": [
+      10,
+      14,
+      16,
+      21,
+      23,
+      24
+    ],
+    "unsure_turns": [
+      3,
+      5,
+      7,
+      8,
+      16,
+      17,
+      18,
+      21
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.28,
+      "approved": false,
+      "issues": [
+        "The required initial impractical ordering is missing. Clinical medicine does not propose immediately calculating six-month HbA1c change and comparing clinic users with non-users; instead, Maya begins in turn 1 by insisting on defining clinic users and a defensible baseline before outcomes or interviews.",
+        "The non-user comparison group is never defined or assigned. This is a required element of the December 6 clinical specification in the ground truth; turns 3, 9, and 20 discuss walk-in users, baseline labs, and HbA1c feasibility but not a comparator group.",
+        "The clinical specification does not explicitly enumerate several required fields from the ground truth, especially follow-up/no-show records and demographic variables. ED use, insurance, geography, visit timing/type, and HbA1c are discussed across turns 5-23, but the full field specification is incomplete.",
+        "The dependency issue is only partially explicit. Turns 9-10 clearly establish specification before extract and recruitment, but the meeting does not clearly state that outcome analysis and reach analysis must wait for the cleaned extract; it mainly discusses feasibility and file creation.",
+        "The meeting does not follow the requested one_voice_leads style. Maya is somewhat prominent, but Jordan has ten substantive turns and Elena has eight, with all three extensively developing the agenda rather than one speaker leading while others mostly offer short questions or acknowledgments.",
+        "Naturalness is limited by highly polished, complete turns. For example, turns 3, 5, 7, 9, 19, 20, 21, and 23 each present a coherent technical argument and tidy conclusion. The dashes and repeated words are mostly surface disfluencies on otherwise scripted prose.",
+        "The ending in turns 27-29 functions as a concise written-meeting wrap-up, and turn 27 restates the dependency/action sequence rather than leaving the conversation with more natural uncertainty or loose ends."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "Turn 3 uses the prohibited stock phrase \"I\u2019m losing the thread here,\" which violates the stated meeting-style instruction.",
+        "The required initial impractical ordering is only weakly represented. Dr. Desai mentions wanting six-month HbA1c change in turns 1 and 10, but she does not clearly propose immediately calculating it before the upstream specification; the discussion already treats specification as necessary.",
+        "Jordan does not explicitly state the full required prerequisite set before requesting the extract: eligible population, index date, comparison group, and required data fields. Turns 6 and 16 imply parts of this, but the complete dependency is not plainly stated.",
+        "The sociology dependency is incomplete. Elena discusses needing an eligible-user list after fields are cleaned (turn 11) and sampling after approval (turn 23), but does not explicitly say that a frequent-walk-in-user list cannot be generated until clinical walk-in definitions are finalized and the hospital extract is obtained.",
+        "The final agreement omits several required clinical deliverables by December 6: an explicit index-date specification, baseline/follow-up HbA1c windows, and a clearly defined non-user comparison group. Turn 10 says \"cohort, comparator, and field specification,\" but this is less complete than the ground-truth action.",
+        "The ending does not explicitly agree to the full post-cleaning sequence: clinical and public-health analyses after December 20, followed by sociology receiving the cleaned eligible-user list and recruiting from it. Turn 16 gives the public-health deadline, but turn 23 centers approval constraints rather than confirming the required handoff.",
+        "Naturalness is limited despite several surface disfluencies. Many substantive turns are polished, complete mini-arguments that cleanly state a concern and solution, particularly turns 3-8, 10-11, and 16-18. Several disfluencies are also conspicuous repetitions or inserted dashes on otherwise polished prose (for example turns 21 and 23), which reads scripted rather than spontaneous.",
+        "The transcript has a strong one-voice lead in Maya, but the close at turns 27-29 functions like a tidy written meeting ending, and the discussion resolves most concerns immediately rather than leaving much genuine exploration or uncertainty."
+      ]
+    }
+  ]
+}

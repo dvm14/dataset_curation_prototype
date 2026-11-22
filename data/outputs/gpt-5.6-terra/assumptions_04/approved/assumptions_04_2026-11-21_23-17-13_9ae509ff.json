@@ -1,0 +1,352 @@
+{
+  "transcript_id": "9ae509ff",
+  "generated_at": "2026-11-21T23:17:13.566704",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short to medium turns, though presentations are long, structured monologues followed by extended technical questions. There is frequent overlap, especially in greetings, acknowledgments, and transitions, with many clipped \u201cyeah,\u201d \u201cokay,\u201d \u201cright,\u201d and \u201cgreat\u201d responses. Speakers hedge heavily using \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cyou know,\u201d \u201cmaybe,\u201d and self-corrections; nonnative phrasing and repeated starts are left unpolished, contributing to an informal live feel. Participants build rapport through light banter before shifting into formal scientific introductions and highly detailed explanations. Questions are usually prefaced politely\u2014\u201cI have a question,\u201d \u201cnaive question,\u201d \u201cjust curious\u201d\u2014then develop aloud through multiple clauses, sometimes with interruptions or clarification requests. Challenges are indirect and exploratory rather than confrontational, framed as alternative interpretations or open questions. Speakers often repeat key words, revise sentences midstream, and use conversational signposting such as \u201call right,\u201d \u201cso,\u201d and \u201cwith that.\u201d\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "principal investigator",
+      "background": "Dr. Chen is a cognitive neuroscientist with 13 years of experience studying attention regulation in children and adolescents. Her lab uses EEG, computerized sustained-attention tasks, and longitudinal designs to examine neural markers associated with attentional control. She has led several school-based feasibility studies, although most of her prior EEG work occurred in structured assessment sessions rather than busy classrooms.",
+      "distinct_perspective": "Maya sees the intervention as making a claim about an attention-related neural process, so she is inclined to ask whether the headband detects a pre-to-post change in a prespecified EEG-derived attention marker. She recognizes that teacher-reported behavior matters for educational usefulness, but she distinguishes a neural proxy from observable classroom engagement and is cautious about treating either as a complete definition of attention. She is receptive to combining measures but wants the team to be explicit about what each measure can and cannot establish.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Luis Romero",
+      "discipline": "education",
+      "functional_role": "research engineer",
+      "background": "Luis is an education research engineer with 9 years of experience partnering with public schools to implement and evaluate classroom interventions. He has designed teacher-friendly data-collection workflows, conducted classroom observation studies, and supported implementation research involving grades 2 through 6. His work emphasizes ecological validity, teacher burden, family communication, and whether a program produces changes that are visible during ordinary instruction.",
+      "distinct_perspective": "Luis frames the central question as whether students sustain on-task behavior more effectively in their actual classrooms. He regards teacher observations and structured classroom behavior ratings as potentially meaningful indicators of the outcome schools care about, while recognizing that teachers who know which students received the program may be influenced by expectations. He is interested in independent or blinded observation if it can be made feasible, but defers to neuroscience and engineering colleagues on what the EEG marker can validly mean for children using this particular device.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "biomedical engineering",
+      "functional_role": "PhD student",
+      "background": "Priya is a fourth-year biomedical engineering PhD student specializing in wearable biosignal acquisition and signal-quality assessment. She has worked for 5 years on dry-electrode EEG systems, including artifact detection, electrode-skin impedance proxies, motion contamination, fit variability, and quality-control pipelines for pediatric users. She has experience validating hardware performance in controlled usability studies but limited experience translating device-level metrics into school-based educational outcomes.",
+      "distinct_perspective": "Priya focuses on the measurement chain between a child's underlying neural activity and the value reported by the headband. She emphasizes that dry-electrode contact, hair characteristics, head size, movement, sweat, and task context can alter usable EEG data and may create apparent pre-to-post differences that are not durable changes in attention. She can help specify signal-quality thresholds, missingness reporting, and artifact handling, but is uncertain how strongly an EEG-derived marker should be treated as evidence of classroom benefit without device-specific validation in grades 3\u20135.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "task_id": "assumptions_04",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+  "seed_spec": {
+    "task_id": "assumptions_04",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+    "explicit_instruction": "Conduct a planning meeting with Dr. Maya Chen (neuroscience), Luis Romero (education), and Priya Nair (biomedical engineering). The team agrees that attention must be measured before and after the 12-week program, but leaves unresolved what counts as the study's primary measure of improved attention. Dr. Chen treats the term as referring primarily to change in an EEG-derived attention marker measured with the headband. Luis treats it as referring primarily to teachers' observations of sustained on-task behavior during regular lessons. Priya notes that the headband's dry-electrode signal quality and fit may differ across children and may limit interpretation of EEG changes. The team should recognize that the phrase \"improves attention\" can support these plausible interpretations, but they should not settle which one governs the primary endpoint during the meeting. They may discuss a combined or secondary-measure approach, but no final endpoint hierarchy, threshold for success, or analysis rule is decided. Include that teacher ratings could be influenced by expectations because teachers know which students use the program, while EEG markers may reflect signal quality or task context rather than durable classroom change. Preserve the unresolved ambiguity. The meeting should identify information needed to resolve it: the district's decision purpose and acceptable evidence, the validated reliability and interpretability of the EEG marker in grades 3-5 using this device, and the feasibility and validity of blinded or independent classroom observation.",
+    "ground_truth": {
+      "ambiguous_assumption": "The team has not defined what \"improves attention\" means for the primary evaluation endpoint.",
+      "plausible_interpretations": [
+        {
+          "interpretation": "Improvement means a pre-to-post change in the headband's EEG-derived attention marker.",
+          "rationale": "This interpretation aligns with the neuroscience claim that neurofeedback should alter a neural marker targeted by training."
+        },
+        {
+          "interpretation": "Improvement means better sustained on-task behavior during ordinary classroom lessons, as observed or rated by teachers or independent observers.",
+          "rationale": "This interpretation aligns with the educational purpose of determining whether the program benefits learning-relevant classroom behavior."
+        }
+      ],
+      "why_it_is_consequential": "The interpretation determines the primary outcome, measurement procedures, success threshold, sample-size and analysis choices, and whether the pilot can support a claim that the program helps classrooms rather than only changes a device-based signal.",
+      "known_constraints_and_concerns": [
+        "Teacher ratings may be affected by placebo or expectation effects because teachers know which students are using the program.",
+        "Dry-electrode EEG data may vary with headband fit, movement, hair characteristics, contact quality, battery state, and the measurement task.",
+        "A change in an EEG marker may not demonstrate durable improvement in classroom attention.",
+        "The intervention must fit within two 15-minute sessions per week and cannot displace core instruction or established student supports."
+      ],
+      "information_needed_to_resolve": [
+        "The school district's intended decision after the pilot: whether it needs evidence of classroom benefit, mechanistic neural change, or both.",
+        "Evidence that the selected EEG attention marker is reliable, valid, and interpretable for grades 3-5 when collected through this dry-electrode device.",
+        "The device's child-fit and signal-quality performance, including prespecified criteria for usable recordings and handling of unequal data loss.",
+        "Whether blinded or independent classroom observation is feasible, and the validity and burden of that observation method relative to teacher ratings.",
+        "A prespecified endpoint hierarchy and success criteria once the decision purpose is agreed."
+      ],
+      "appropriate_next_step": "Ask one clarification question about the district's decision purpose, such as whether a positive pilot result must show observable classroom benefit or may be based primarily on an EEG marker. Then convene the team to select and prespecify a primary endpoint, with the other measure retained as a secondary or mechanistic outcome as appropriate."
+    }
+  },
+  "seed_location": "Turns 1-26. The meeting preserves the unresolved definition of what counts as improved attention for the primary endpoint: EEG-derived change is discussed as mechanistic/possibly exploratory (turns 3, 5-7, 11, 21-25), while independent classroom observation of on-task behavior is discussed as potentially more relevant to district decisions (turns 2-4, 12, 18-19, 23). No endpoint hierarchy, success threshold, or analysis rule is finalized. The dialogue identifies needed information about district decision purpose (turns 1-3, 18-20), EEG reliability/interpretability and child-specific signal-quality/missingness issues (turns 5-13, 21-25), and feasibility of blinded or independent observation (turns 3-4, 12, 14, 19, 23). It also notes teacher-rating expectation concerns indirectly by preferring independent observers (turn 4) and explicitly discusses EEG fit, movement, context, and proprietary-score limitations.",
+  "ground_truth": {
+    "ambiguous_assumption": "The team has not defined what \"improves attention\" means for the primary evaluation endpoint.",
+    "plausible_interpretations": [
+      {
+        "interpretation": "Improvement means a pre-to-post change in the headband's EEG-derived attention marker.",
+        "rationale": "This interpretation aligns with the neuroscience claim that neurofeedback should alter a neural marker targeted by training."
+      },
+      {
+        "interpretation": "Improvement means better sustained on-task behavior during ordinary classroom lessons, as observed or rated by teachers or independent observers.",
+        "rationale": "This interpretation aligns with the educational purpose of determining whether the program benefits learning-relevant classroom behavior."
+      }
+    ],
+    "why_it_is_consequential": "The interpretation determines the primary outcome, measurement procedures, success threshold, sample-size and analysis choices, and whether the pilot can support a claim that the program helps classrooms rather than only changes a device-based signal.",
+    "known_constraints_and_concerns": [
+      "Teacher ratings may be affected by placebo or expectation effects because teachers know which students are using the program.",
+      "Dry-electrode EEG data may vary with headband fit, movement, hair characteristics, contact quality, battery state, and the measurement task.",
+      "A change in an EEG marker may not demonstrate durable improvement in classroom attention.",
+      "The intervention must fit within two 15-minute sessions per week and cannot displace core instruction or established student supports."
+    ],
+    "information_needed_to_resolve": [
+      "The school district's intended decision after the pilot: whether it needs evidence of classroom benefit, mechanistic neural change, or both.",
+      "Evidence that the selected EEG attention marker is reliable, valid, and interpretable for grades 3-5 when collected through this dry-electrode device.",
+      "The device's child-fit and signal-quality performance, including prespecified criteria for usable recordings and handling of unequal data loss.",
+      "Whether blinded or independent classroom observation is feasible, and the validity and burden of that observation method relative to teacher ratings.",
+      "A prespecified endpoint hierarchy and success criteria once the decision purpose is agreed."
+    ],
+    "appropriate_next_step": "Ask one clarification question about the district's decision purpose, such as whether a positive pilot result must show observable classroom benefit or may be based primarily on an EEG marker. Then convene the team to select and prespecify a primary endpoint, with the other measure retained as a secondary or mechanistic outcome as appropriate."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where have we got to? If we\u2019re just starting, I was hoping we could get clear today on what decision the district needs this pilot to inform, because that really changes what the outcome ought to be."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "We\u2019re just starting, really. From the school side, I think the decision is whether this is worth taking into a larger classroom trial because students are actually more on-task during ordinary lessons, not just whether they can produce a change on the headband\u2019s measure. But I\u2019d want to understand what that marker, um, lets us claim before we decide how to measure it."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That helps. The marker is a neural proxy for the process the training targets. A pre/post shift could be useful mechanistic evidence, but it wouldn't by itself show they're staying engaged in a noisy fourth-grade lesson. Luis, with independent observation, have observers- have you found that observers can be meaningfully blinded to participation, and that the ratings hold up in those busy classrooms?"
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "They can, sometimes. If an observer comes in for a set lesson block and codes brief intervals instead of going on an overall impression, reliability is usually workable. The harder part is keeping them unaware of who participates, because kids may talk about the headband. I'd need to ask both schools whether an outside observer can sit in without disrupting core instruction. I was going to say teacher ratings- I'd be much more comfortable with an outside observer than teacher ratings alone."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm. On the headband side, I\u2019d want us to be careful that a pre/post marker shift isn\u2019t just differential recording quality. Dry contact and movement can look surprisingly plausible to an automated flag. Maya, which device-derived marker are you considering, and do we have grade 3 to 5 test-retest evidence for it? I\u2019ve seen short recordings pass contact QC after a child readjusted the band, then then show low-frequency motion contamination."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I don't have that device-specific evidence in hand, and that's exactly the check we need before we make it central. The marker I had in mind is the vendor's attention index, or, uh, the underlying band-power feature if they'll disclose it. But research-grade test-retest doesn't automatically transfer to dry electrodes in eight- to ten-year-olds. And yes, Priya, motion or contact change could easily masquerade as pre/post improvement."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "It makes me wonder whether, for this pilot, the EEG piece should be treated as feasibility plus a possible mechanism, rather than evidence of classroom benefit. Priya, do you have a rough sense of how much recording loss might vary by hair, fit, or movement? If the children we can record well are systematically the ones already able to sit still, that- it complicates even the exploratory interpretation."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "It could vary quite a lot, honestly, and it may not be random. Hair density or texture, smaller head circumference, repeated readjustment, and higher movement all affect effective contact. Those could correlate with age, comfort, or baseline self-regulation. I don't have a defensible percentage for this device yet, though. We'd need to look at raw-data retention by child, not just the vendor's session-complete flag."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Yeah, that selection issue."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And over 12 weeks, that could bias the apparent pre/post change either way, depending on who gives us usable recordings at both time points. I think we need raw retention and artifact rates by child as- we need to treat those as outcomes in their own right, not just bury them in QC. But I\u2019m not sure yet whether that makes EEG too fragile for anything beyond exploratory use."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "With only two 15-minute sessions a week, I'd be reluctant to ask the schools to infer much from a noisy device signal. On the classroom side, we could still keep it modest, maybe a few independent interval-observation blocks at baseline and near the end. But I need to check whether either school can fit that into regular lessons without displacing support services, and..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "The observation blocks would also give us some context for the EEG missingness in grades 3\u20135, because we may see the same children struggling with fit or movement across sessions. I\u2019d just avoid assuming the vendor\u2019s \u201csession complete\u201d means usable physiology. I need to check whether the device exports battery state reliably too, alongside the raw retention and artifact information. That could- actually, that would help us tell whether the missingness is about the children or the device."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "The two 15-minute sessions per week are already a pretty lean schedule, so I\u2019d rather not add a data workflow staff can\u2019t actually sustain. For the observations, I\u2019m thinking short samples during regular lessons at baseline and near week 12. But whether that\u2019s feasible really depends on the schools\u2019 schedules and whether observers can stay unobtrusive."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That makes sense, as long as we record the observation timing against the headband sessions instead of treating them as interchangeable. The signal conditions in a quiet training task and a normal lesson are really different, so if we see a relationship, or if we don't, it may be hard to tell what's attention and what's context. Luis, would the baseline and week-12 lesson blocks be in the same subject or at roughly the same time of day?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Right, that context matters."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Ideally, yes, the same subject and about the same time of day, so we're not comparing, say, morning math at baseline with Friday-afternoon\u2014 sorry, independent reading. I don't know if the schools can guarantee that for every child, but we can at least make that the scheduling target and record the lesson context when it shifts."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That seems important. If the lesson context shifts, I'd want that documented rather than pretending those observations are directly comparable. And a few, a few repeated short samples may tell us more than one longer visit. I'm still wondering if the district would see that kind of observed on-task change as what it needs for a larger trial, with the EEG serving more as a feasibility and mechanism signal."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "I think so, yes, as long as the district sees it as a pilot signal, not a definitive effect estimate. The observation protocol would need to be light enough to run, with short repeated samples and matched lessons where we can, but it answers the question teachers actually recognize, which is, are these students staying with instruction more often? I can ask both schools specifically whether they'd accept independent observers for that."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, yes, I\u2019d want to hear that."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm. Before we lean too hard on the EEG as a mechanism measure, I think we need the vendor to tell us what actually gets exported. Raw or minimally processed signal, contact indicators, timestamps, and whether battery state is reliable. Without that, we may only be able to say whether sessions were operationally, operationally completed, not whether the neural proxy was interpretable."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "If the export is limited to a proprietary score, I wouldn\u2019t want to call it a mechanistic outcome at all. We need to know what the district can actually inspect, raw or minimally processed data, artifact and contact information, before we decide whether an EEG pre/post measure is interpretable or just a device readout."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "From the school perspective, that distinction matters a lot. If all we have is a proprietary score, I\u2019d describe it to the district as implementation data, whether sessions happened and were tolerable, not evidence that attention changed. I\u2019ll check the observer access question with both schools, and then we can, can see whether the classroom measure is feasible enough to carry more of the pilot."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, let\u2019s see what they say."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I\u2019d keep the vendor request really concrete. Even with a raw export, if we don\u2019t have synchronized timestamps or per-channel quality information, we may not be able to separate a genuine change from fit and motion. Once we know that, we can be honest about whether the EEG component is interpretable at all, instead of deciding it from the label on the score."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "All right, I think we can let people go a few minutes early. We'll pick this up once we've heard from the schools and the vendor, and then we can..."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Thanks, everyone. Talk soon."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Bye, take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      11,
+      12,
+      18,
+      19,
+      21,
+      22,
+      23,
+      25
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central endpoint ambiguity is strongly implied but never stated as explicitly as the seed requires: no turn directly says that \u201cimproves attention\u201d has two plausible meanings or that the primary measure remains undecided. Turns 18-23 distinguish classroom observation from EEG feasibility/mechanism, but a benchmark answer must infer the unresolved primary-endpoint issue.",
+      "Teacher expectation bias is only weakly and indirectly represented. Turn 4 says Luis prefers an outside observer to teacher ratings, but it does not explicitly establish that teachers know which children use the program and that this knowledge could bias ratings, as required by the ground truth.",
+      "The meeting has several polished, complete argumentative turns that read more like crafted research dialogue than live speech, especially turns 3, 6, 9, 11, 19, 21, 22, and 25. Disfluencies are present, but often function as light surface decoration rather than changing the underlying polished syntax.",
+      "The required one-voice-leads style is not well matched: Maya has 11 turns but many are brief acknowledgments, while Luis and Priya contribute frequent, similarly substantial technical turns. The exchange is relatively balanced rather than clearly led by one speaker.",
+      "The 12-week pre/post requirement is present (turns 11-18), and the two 15-minute weekly schedule is present (turns 12 and 14), but no endpoint hierarchy, success threshold, or analysis rule is decided; that absence is appropriate and preserved."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.95,
+    "written_turns": [
+      22
+    ],
+    "exploration_share": 0.42,
+    "turn_moves": {
+      "question": 3,
+      "idea": 3,
+      "answer": 3,
+      "concern": 3,
+      "agreement": 4,
+      "backchannel": 4,
+      "proposal": 5,
+      "observation": 1,
+      "commitment": 2
+    },
+    "volunteer_turns": [
+      19,
+      23
+    ],
+    "unsure_turns": [
+      4,
+      6,
+      9,
+      11,
+      12,
+      13,
+      14,
+      17
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "The required opening is absent: turn 1 begins with Luis opening the agenda, rather than one person apologizing for being a couple of minutes late and asking where the group has got to.",
+        "The transcript does not satisfy the specified one_voice_leads style. Luis speaks most often, but turns are fairly evenly distributed (Luis 13, Priya 10, Maya 7), and Priya and Maya make repeated substantive contributions rather than mostly short questions or brief agreement.",
+        "The central ambiguity is mostly preserved, but Dr. Chen substantially narrows the endpoint framing in turn 15 by endorsing EEG as exploratory and classroom observations as the companion outcome. The meeting never explicitly states that both EEG change and classroom on-task behavior remain plausible candidates for the primary endpoint; it should more directly name that unresolved choice.",
+        "Several ground-truth constraints are missing or only partial. The transcript mentions no two-15-minute-session limit, and it does not explicitly mention battery state as a signal-quality concern. It also does not explicitly identify the need for prespecified usable-recording criteria, an endpoint hierarchy, or success criteria after the district purpose is clarified.",
+        "Naturalness is weakened by highly polished, complete argumentative turns throughout, especially turns 14-17 and 23-25. Disfluencies are present but often read as inserted surface markers rather than arising from genuinely unfinished or overlapping live speech. The ending in turns 29-30 is also unusually tidy.",
+        "The meeting identifies independent observations and school scheduling concerns (turns 6-11), but it does not clearly resolve whether the observations would be blinded, nor does it explicitly frame blinded observation feasibility as information needed to settle the endpoint choice."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.95,
+      "exploration_share": 0.42,
+      "approved": true,
+      "issues": [
+        "The central endpoint ambiguity is strongly implied but never stated as explicitly as the seed requires: no turn directly says that \u201cimproves attention\u201d has two plausible meanings or that the primary measure remains undecided. Turns 18-23 distinguish classroom observation from EEG feasibility/mechanism, but a benchmark answer must infer the unresolved primary-endpoint issue.",
+        "Teacher expectation bias is only weakly and indirectly represented. Turn 4 says Luis prefers an outside observer to teacher ratings, but it does not explicitly establish that teachers know which children use the program and that this knowledge could bias ratings, as required by the ground truth.",
+        "The meeting has several polished, complete argumentative turns that read more like crafted research dialogue than live speech, especially turns 3, 6, 9, 11, 19, 21, 22, and 25. Disfluencies are present, but often function as light surface decoration rather than changing the underlying polished syntax.",
+        "The required one-voice-leads style is not well matched: Maya has 11 turns but many are brief acknowledgments, while Luis and Priya contribute frequent, similarly substantial technical turns. The exchange is relatively balanced rather than clearly led by one speaker.",
+        "The 12-week pre/post requirement is present (turns 11-18), and the two 15-minute weekly schedule is present (turns 12 and 14), but no endpoint hierarchy, success threshold, or analysis rule is decided; that absence is appropriate and preserved."
+      ]
+    }
+  ]
+}

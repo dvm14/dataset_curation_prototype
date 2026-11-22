@@ -1,0 +1,340 @@
+{
+  "transcript_id": "2af24b00",
+  "generated_at": "2026-11-21T14:57:12.330676",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly medium-to-long turns: informal pre-meeting chat is brief and fragmented, while presentations and answers are extended, explanatory, and slide-driven. Overlap and interruptions are low, with speakers generally waiting for turns, though transitions can be abrupt and occasionally awkward. The tone is friendly, collegial, and semi-formal\u2014casual greetings, jokes, and personal asides coexist with professional introductions and technical discussion. Speakers frequently hedge with \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and \u201cI guess,\u201d especially when speculating; they build on one another by praising the talk before asking questions and framing challenges as curiosity rather than contradiction. Speech includes many fillers, repetitions, self-corrections, false starts, and unfinished phrasing, particularly from nonnative speakers and in live Q&A. Disagreement is indirect and softened, often expressed as uncertainty or an alternative possibility. Questions are usually prefaced with compliments or disclaimers (\u201cquick question,\u201d \u201cnaive question\u201d), then unfold as multi-part, exploratory prompts rather than concise interrogatives.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Planning how to raise school-entry vaccination rates in a county that recently experienced a measles cluster.",
+  "disciplines": [
+    "epidemiology",
+    "public health",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Amina Rahman",
+      "discipline": "epidemiology",
+      "functional_role": "principal investigator",
+      "background": "Dr. Rahman is a county infectious-disease epidemiologist with 14 years of experience in vaccine-preventable disease surveillance, outbreak investigation, and immunization-coverage assessment. She has led measles and pertussis response analyses using case interviews, school immunization records, registry extracts, denominator reconciliation, and small-area mapping. She is accustomed to working with imperfect administrative data and translating uncertainty into operational recommendations for local health departments.",
+      "distinct_perspective": "She frames the recent 18-case measles cluster as evidence that countywide MMR documentation can obscure concentrated susceptibility. For the eight-week school-entry horizon, she will distinguish documented coverage from true immunization status, emphasize the 81% and 84% catchment estimates as potentially meaningful but provisional because of registry-reporting lag, and press for explicit case, denominator, and coverage definitions before targeting resources. She supports geographic prioritization but cautions against treating incomplete surveillance and school-record data as a definitive map of undervaccination.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Marcus Chen",
+      "discipline": "public health",
+      "functional_role": "research engineer",
+      "background": "Marcus Chen is an immunization-program operations manager with 11 years of experience designing county vaccination campaigns, clinic workflows, reminder systems, and partnerships with school districts and pediatric practices. His work focuses on implementation under staffing, procurement, and scheduling constraints; he routinely uses registration data, call-center metrics, clinic throughput estimates, and rapid-cycle process improvement rather than formal causal evaluation. He coordinates closely with frontline staff and is attentive to interventions that can be deployed before a fixed deadline.",
+      "distinct_perspective": "Chen treats the problem as a near-term delivery challenge: the county has two evening clinics, translated reminder materials, limited paid outreach, and little capacity to impose another data-entry burden on school nurses. He will push the group to make the existing plan executable\u2014use low-burden lists and existing records where possible, reduce appointment friction, coordinate referral pathways with pediatric practices, and direct scarce outreach toward the catchments most likely to benefit. He sees convenience, reminders, and clear division of labor as essential, while deferring to epidemiology on interpretation of coverage data and to sociology on community engagement.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Elena Morales",
+      "discipline": "sociology",
+      "functional_role": "PhD student",
+      "background": "Elena Morales is a fourth-year sociology PhD candidate studying family health decision-making, institutional trust, and the circulation of health concerns through local social networks. Her fieldwork has included interviews and observation with parents, school staff, community organizers, and bilingual service providers in suburban and rural communities. She combines qualitative interviewing with network-informed analysis of how reputations, stories of prior care, and peer conversations shape whether families view public-health requests as credible or intrusive.",
+      "distinct_perspective": "Morales argues that families' vaccine decisions cannot be reduced to a deficit of information or a simple access barrier. In the two lower-documentation catchments, worries about safety, scheduling, and school or health-department trust may travel through kinship, parent, faith, and neighborhood networks, creating shared interpretations of risk and institutional credibility. She will advocate for outreach that listens to local concerns, avoids stigmatizing particular areas, and works with trusted messengers and organizations. She recognizes that the current plan already includes trust-oriented community outreach, and she will help clarify its limits rather than assume messaging alone will resolve hesitation.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "school_vaccination_outreach",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 4,
+  "task_id": "opportunity_01",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+  "seed_spec": {
+    "task_id": "opportunity_01",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+    "explicit_instruction": "Simulate a planning meeting among the epidemiologist, public-health program manager, and sociologist. Ensure participants establish the immediate planning horizon (eight weeks before school entry), the recent 18-case measles cluster, the unequal local MMR documentation estimates (92% countywide; 81% and 84% in two catchments), and the uncertainty caused by registry-reporting lag. Have epidemiology contribute the importance of susceptible geographic pockets, accurate case and coverage definitions, and cautious interpretation of incomplete surveillance data. Have public health contribute the two evening clinics, translated reminders, limited outreach funds, and school-nurse capacity constraint. Have sociology contribute family decision-making, trust in schools and clinics, community-network spread of worries, and the potential role of trusted local messengers. Record that the current plan is centered on geographic targeting, access/convenience, reminders, and trust-oriented community outreach. Leave unresolved which outside research tradition or literature could offer a genuinely new viewpoint beyond those existing perspectives. Do not name, recommend, or invent specific publications during the meeting.",
+    "ground_truth": {
+      "existing_perspectives": [
+        "Epidemiologic targeting of susceptible pockets using school and surveillance/registry data, while accounting for reporting lag and uncertainty.",
+        "Public-health delivery strategies focused on convenient vaccination access, reminders and translated materials, constrained by clinic capacity, outreach funds, and school-nurse workload.",
+        "Sociological explanations focused on family decision-making, institutional trust, trusted messengers, and the spread of concerns through community networks."
+      ],
+      "novel_literature_opportunity": "A strong new viewpoint would draw on implementation science and organizational/behavioral systems research on default pathways and friction reduction: how enrollment workflows, provider prompts, standing orders, reminder-recall systems, appointment scheduling, documentation requirements, and opt-out versus opt-in designs shape vaccination completion. This differs from the existing focus on where low coverage is, whether families can access clinics, and whether they trust messengers. Literature recommendations should be externally verified rather than treated as established from the meeting record.",
+      "meeting_evidence_required": [
+        "The outbreak and deadline create a short, operationally relevant planning window.",
+        "Coverage is uneven at the catchment level, but the administrative data have known lag/incompleteness.",
+        "Resources include two evening clinics, translated reminders, and limited paid outreach.",
+        "School nurses have limited additional administrative capacity.",
+        "The group has already considered geographic targeting, access, trust, community messengers, and networked worries, so a recommendation limited to those themes is not novel."
+      ]
+    }
+  },
+  "seed_location": "The requested meeting conditions are substantially present, though the explicit eight-week-before-school-entry framing is incomplete. Turns 1 and 27 establish an eight-week planning runway and school entry context, but do not state verbatim that it is eight weeks before entry. Epidemiology evidence appears in turns 2, 7, 11, and 19: unequal 81%/84% catchment documentation versus 92% countywide, registry/reporting lag and incomplete documentation, cautious private geographic prioritization, case/exposure interpretation, and the 18 linked measles cases. Public-health operational evidence appears in turns 8, 20, 23, 25, and 27: translated reminders, limited paid outreach, clinic staffing/supply and walk-in constraints, nurse/call handling, and capacity uncertainty; however, the transcript never explicitly says there are two evening clinics or explicitly identifies a school-nurse capacity constraint. Sociology evidence appears in turns 4, 10-18, and 23-26: family decision-making, institutional trust and concerns, networked spread through classrooms/activities/church, trusted local partners/messengers, and practical friction. The current plan is reflected in turns 7-8 and 19-27: geographic targeting, access/convenience and reminders, plus trust-oriented outreach and local partners. No publications or outside literature traditions are named or recommended, leaving the literature question unresolved as requested. Notably, turns 13-20 discuss process/scheduling friction and call-screen changes, but they do not name or recommend external implementation-science/default-pathway literature.",
+  "ground_truth": {
+    "existing_perspectives": [
+      "Epidemiologic targeting of susceptible pockets using school and surveillance/registry data, while accounting for reporting lag and uncertainty.",
+      "Public-health delivery strategies focused on convenient vaccination access, reminders and translated materials, constrained by clinic capacity, outreach funds, and school-nurse workload.",
+      "Sociological explanations focused on family decision-making, institutional trust, trusted messengers, and the spread of concerns through community networks."
+    ],
+    "novel_literature_opportunity": "A strong new viewpoint would draw on implementation science and organizational/behavioral systems research on default pathways and friction reduction: how enrollment workflows, provider prompts, standing orders, reminder-recall systems, appointment scheduling, documentation requirements, and opt-out versus opt-in designs shape vaccination completion. This differs from the existing focus on where low coverage is, whether families can access clinics, and whether they trust messengers. Literature recommendations should be externally verified rather than treated as established from the meeting record.",
+    "meeting_evidence_required": [
+      "The outbreak and deadline create a short, operationally relevant planning window.",
+      "Coverage is uneven at the catchment level, but the administrative data have known lag/incompleteness.",
+      "Resources include two evening clinics, translated reminders, and limited paid outreach.",
+      "School nurses have limited additional administrative capacity.",
+      "The group has already considered geographic targeting, access, trust, community messengers, and networked worries, so a recommendation limited to those themes is not novel."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Marcus Chen",
+      "text": "Morning, everyone. Glad we found a time. This eight-week runway is suddenly feeling pretty short. I'd like to use today to get a realistic read on what we can actually deliver before entry, especially how firmly we should target those two catchments while the registry catches up, and what kind of outreach families will actually act on. Maybe we can just go around and hear updates from since last time, and then\u2014"
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Morning. It\u2019s oddly cool out here, which I\u2019m enjoying before the clinic traffic starts. Since last time, I\u2019ve been back through the line list and the preliminary school-registry linkage. The 81 and 84 percent figures still look like useful signals, but not clean coverage estimates. Several case households reported routine pediatric care despite absent or late documentation. I need to reconcile the rosters against the newest extract and make sure both catchments used the same, same enrollment-date rule before we label either one publicly."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Mm, that enrollment-date piece matters."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "I\u2019d be careful about making those catchments into a public label before that reconciliation. Even once we know the numbers, though, I\u2019d want us to distinguish missing documentation from a family having decided against vaccination. In the parent networks I\u2019ve been hearing about, appointment friction and safety- safety concerns can be sitting together, and people move between them."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Operationally, I think we should treat those as two different queues, even if we can't sort them perfectly today. Amina, do you have a sense yet whether the late reports could move either catchment enough that paid outreach should wait, or are they stable enough as a targeting signal without putting a label on the schools?"
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Hm, I\u2019d keep it quiet for now."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "They\u2019re stable enough to prioritize privately, but not stable enough to name as low-coverage schools. Even a fairly substantial batch of late practice reports may shift the point estimates, but it wouldn\u2019t erase the fact that both are well below the county documentation figure. I\u2019d use the clinics and reminders there while I finish the roster-to-registry reconciliation."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That gives me enough to use them as a back-end priority. That's really what I needed. We can aim the translated reminders and the small paid buy into those catchments without calling either school out, and keep the clinic invitation open countywide. I just need to check staffing and supply before I promise how much walk-in capacity those evenings have."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Yeah, that seems sensible."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "That feels right. Amina, one thing I'd like to understand from the cluster is whether, in the case interviews, the exposure patterns looked mostly household- and classroom-based or whether there were broader neighborhood connections. I'm asking because that changes the social scale where families may be comparing stories about what happened."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Mostly household and classroom links, as far as the final exposure histories support it. We didn't see a single broad neighborhood venue tying the whole cluster together. But there were some, some overlap points through siblings and routine activities, so I wouldn't read that as each household making decisions in isolation. There may be a few very local networks worth understanding."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "That actually helps. I\u2019d look for the sibling and routine-activity overlaps instead of assuming a catchment is one social unit. A story from one classroom can still travel through after-school pickup, cousins, church, all of that. Marcus, have front-line staff said whether families who postpone are getting hung up on the process itself, like forms, appointments, records, or is it mostly the safety conversation?"
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "It\u2019s mixed, which is the frustrating part. Some families get vaccinated at their usual pediatric practice after one reminder, then the school-facing record lags. A smaller set calls repeatedly about appointments and still never shows in clinic registration, so that feels more like a process or scheduling barrier. I don\u2019t have a clean count on the safety conversations versus forms and access yet because the front-line notes just aren\u2019t consistent enough to pretend we..."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "That\u2019s useful, actually. I wouldn\u2019t make the reminders try to diagnose why someone\u2019s delayed. Just make the next step really plain, where to go, what to bring, whether walk-ins are real, and leave room to ask questions with a person instead of getting another notice. And for the repeat callers, do we know if they\u2019re dropping off at the same point, or is that just not visible in the notes, because..."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Not really visible in the notes, unfortunately. We can see the calls and then no registration, but we can't tell whether it was transport, childcare, work hours, or someone getting stuck on a confusing step. I think the call-center script may be the one place we can add a very short disposition field without asking school nurses to do anything."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "A very short field could be useful if it\u2019s framed as helping, not screening people out. Something like, \u201cWhat would make it easier to get this done?\u201d Then we may at least see whether the same, same friction is recurring, without asking callers to disclose a whole story to the county."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I like that wording. We can make it one optional pick on the existing call screen, hours, transportation, childcare, paperwork or records, or \"talk to someone,\" and then the agent can give the relevant next step instead of just repeating the clinic date. I'd want to see whether our vendor can add it quickly, but that's a much lighter lift than trying to reconstruct this from school records."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "That\u2019s a good use of it, especially if \u201ctalk to someone\u201d doesn\u2019t just route people back to a generic line. I\u2019d be interested in whether the vendor can preserve it as an optional aggregate signal. Not a family-level flag, but something that could show us where the process is breaking, maybe more than the stated reason alone."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "I'd keep that aggregate and operational, yes. That 92% countywide documentation number is exactly why I don't want us treating an individual caller's missing record as a proxy for refusal. With the 18 linked cases, the actionable question is whether the friction clusters by place or, I mean, by step in the process. If the vendor can give us weekly counts without retaining a new outreach-risk label, that'd be enough to adjust the clinics and reminders."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "If we can get a weekly aggregate by catchment and barrier option, that\u2019s enough to decide whether the second clinic needs different hours or whether the reminder needs to foreground walk-ins, records, um, whatever it is. I\u2019ll check the vendor turnaround and separately get the actual staffing and supply numbers before we make the clinic invitation sound unlimited."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Hm, vendor timing is the question."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Mm, yes\u2014weekly and nonidentifying feels important here."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "And if the vendor can\u2019t turn it around quickly, I don\u2019t want that to hold up the basic reminders. We can still make those really explicit about hours, walk-ins, and what records to bring. Elena, for the person callers get when they want to talk to someone, does that need to be- does it need to be a local pediatric clinician or community messenger specifically, or is a well-briefed county nurse enough in your view?"
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "A well-briefed county nurse can be enough for the immediate question, especially if they can actually answer questions about records and clinic logistics instead of just repeating a script. But I wouldn't assume that works for every concern. Some families may take a clinician's recommendation more seriously, and local partners could be useful, though I'd need to check whether they're comfortable being visibly tied to county outreach before we build that in."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That makes sense. For the first line, I can have the county nurse handle the practical questions and set up a really simple warm handoff to participating pediatric practices for anything clinical or safety-related, assuming they'll take those calls. Elena, if you could get a quick read on which local partners would be comfortable in that visible role, that would keep us from designing around messengers we don't actually have."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "I can do a quick check-in, but I want to be careful not to promise affiliation, or rather, not to promise more than advice or a place to share materials. I\u2019ll ask what visible involvement feels workable and whether there are particular concerns they\u2019re already hearing that the nurse or practice handoff ought to be ready for."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That\u2019s perfect. Advice versus visible endorsement is an important distinction. I\u2019ll keep the initial setup modest, with the county nurse handling logistics, a pediatric-practice handoff where available, and materials that partners can share without suggesting they\u2019re co-sponsoring the campaign. We\u2019re basically at time, so I\u2019ll come back once I have the staffing, supply, and vendor turnaround instead of overpromising on clinic capacity."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Okay, I think that\u2019s probably a good place to leave it. I\u2019ll follow up by email after I\u2019ve checked in with the partners\u2014actually, with the local partners. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Thanks, all. Take care."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Appreciate it\u2014bye, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      10,
+      11,
+      12,
+      15,
+      17,
+      19,
+      20,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is substantially weakened because many turns are polished, complete written arguments that cleanly identify a concern and immediately propose a resolution. For example, turns 7, 8, 16-20, and 23-27 repeatedly convert uncertainty into tidy operational decisions.",
+      "The disfluencies are largely surface-level additions to otherwise highly composed prose (for example, repeated words in turns 2, 4, 11, 16, 19 and 'um' in turn 20). This gives the dialogue a scripted rather than spontaneously spoken quality.",
+      "The meeting does not closely follow the specified round-robin-updates format after the opening: rather than each person providing a relatively uninterrupted update followed by a few clarifications, turns 4-27 become an extended, highly orderly problem-solving exchange.",
+      "The ending in turns 27-28 functions like a polished written recap of decisions and ownership, even though it avoids a formal bullet-point summary. This contributes to the transcript feeling more like prepared meeting notes than a live conversation.",
+      "Speaker distinctness is strong in disciplinary content, but Marcus and Elena sometimes share similarly polished operational language and can sound somewhat interchangeable outside their core topics (for example, turns 17-18 and 25-26)."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.32,
+    "turn_moves": {
+      "proposal": 7,
+      "observation": 2,
+      "agreement": 3,
+      "concern": 2,
+      "question": 5,
+      "answer": 4,
+      "commitment": 4,
+      "request": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      2,
+      7,
+      8,
+      17,
+      20,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "unsure_turns": [
+      8,
+      13,
+      17,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.86,
+      "exploration_share": 0.15,
+      "approved": false,
+      "issues": [
+        "Task-compliance gap: the transcript never states that the program has two evening clinics. Marcus refers to 'the last evening series' (turn 6) and later to 'the second clinic' (turn 24), but this is only inferable and does not cleanly establish the required resource condition.",
+        "Task-compliance gap: translated reminder materials are not established. Marcus proposes a call/text option (turn 19) and discusses reminder wording (turns 18-20), but no speaker says reminders or materials are translated.",
+        "Task-compliance gap: the school-nurse capacity constraint is absent. Turn 3 says the group does not want nurses reconciling records one by one, but it does not establish that school nurses have limited additional administrative capacity.",
+        "Task-compliance gap: sociology does not contribute the required community-network spread of worries or the potential role of trusted local messengers. Elena discusses trust in school notices and clinic processes (turns 7, 10, 12, 14), but neither local messengers nor networked circulation of concerns is mentioned.",
+        "The existing trust-oriented outreach perspective is only partially recorded. Trust is discussed extensively, but the meeting never explicitly identifies a current community-outreach/trusted-messenger component, which weakens the basis for judging that literature on trust or networks would not be novel.",
+        "Naturalness is weakened by the highly polished, solution-forward structure. Most turns convert the prior concern directly into a workable operational adjustment or assignment, especially turns 9-24, with little genuine uncertainty, exploration, misunderstanding, or dropped thread.",
+        "Several disfluencies are surface-level truncations appended to otherwise polished prose (for example turns 1, 5, 7, 11, 17, 19, 23, and 25), which reads more like scripted dialogue than spontaneous speech.",
+        "The requested round-robin update style is only partly reflected: after Amina's update, the meeting becomes an extended, tightly coherent design discussion rather than each participant giving a substantive update on work completed since the previous meeting."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.32,
+      "approved": false,
+      "issues": [
+        "Naturalness is substantially weakened because many turns are polished, complete written arguments that cleanly identify a concern and immediately propose a resolution. For example, turns 7, 8, 16-20, and 23-27 repeatedly convert uncertainty into tidy operational decisions.",
+        "The disfluencies are largely surface-level additions to otherwise highly composed prose (for example, repeated words in turns 2, 4, 11, 16, 19 and 'um' in turn 20). This gives the dialogue a scripted rather than spontaneously spoken quality.",
+        "The meeting does not closely follow the specified round-robin-updates format after the opening: rather than each person providing a relatively uninterrupted update followed by a few clarifications, turns 4-27 become an extended, highly orderly problem-solving exchange.",
+        "The ending in turns 27-28 functions like a polished written recap of decisions and ownership, even though it avoids a formal bullet-point summary. This contributes to the transcript feeling more like prepared meeting notes than a live conversation.",
+        "Speaker distinctness is strong in disciplinary content, but Marcus and Elena sometimes share similarly polished operational language and can sound somewhat interchangeable outside their core topics (for example, turns 17-18 and 25-26)."
+      ]
+    }
+  ]
+}

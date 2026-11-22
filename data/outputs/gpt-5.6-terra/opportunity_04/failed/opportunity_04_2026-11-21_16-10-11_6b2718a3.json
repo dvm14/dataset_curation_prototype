@@ -1,0 +1,334 @@
+{
+  "transcript_id": "6b2718a3",
+  "generated_at": "2026-11-21T16:10:11.054367",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with medium-to-long turns during presentations and brief, often fragmented turns during setup, greetings, and Q&A. Early conversation contains frequent overlap, repeated acknowledgments (\u201cyeah,\u201d \u201cokay\u201d), audio/login checks, false starts, self-corrections, and filler words such as \u201cum,\u201d \u201cyou know,\u201d and \u201csort of.\u201d Formality rises noticeably for introductions and talks, though speakers still use conversational hedges and audience-oriented phrasing like \u201cI think,\u201d \u201cwe\u2019re interested in,\u201d \u201cmaybe,\u201d and \u201cwhat we think is.\u201d Questions are polite and exploratory, commonly prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then developed through several follow-ups rather than asked in a single polished sentence. Participants build on points collaboratively, often paraphrasing before asking a question; uncertainty is openly acknowledged, and disagreement or correction is indirect, framed as alternative interpretations or limits of current knowledge rather than confrontation.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "research engineer",
+      "background": "Dr. Chen is a cognitive neuroscientist with 11 years of experience designing and analyzing EEG studies of attention and self-regulation in children. Her work combines experimental paradigms, EEG preprocessing and artifact-rejection pipelines, and randomized neurofeedback trials. She has collaborated with schools on portable EEG data collection and is accustomed to distinguishing neural signal claims from behavioral outcomes.",
+      "distinct_perspective": "She will emphasize that EEG-derived \"attention\" indices are indirect, artifact-sensitive proxies rather than definitive measures of attention. She will press for a credible sham-feedback condition that matches device use, staff contact, rewards, and expectancy, and for pre-specified interpretation of neural and behavioral outcomes. She will argue that a six-week post-program assessment is necessary to distinguish transient training effects from durable change.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Elena Rodr\u00edguez, EdD",
+      "discipline": "education",
+      "functional_role": "project manager",
+      "background": "Dr. Rodr\u00edguez is an education researcher and former elementary instructional coach with 14 years of experience leading school-based intervention studies in grades 3-5. She specializes in cluster-randomized pilot designs, teacher-report measures, curriculum-aligned learning indicators, implementation fidelity, and equitable recruitment across classrooms. She has managed district partnerships in which research activities had to fit within tightly scheduled instructional days.",
+      "distinct_perspective": "She will judge the pilot by whether it produces meaningful classroom-relevant evidence: teacher-observed attention, engagement during ordinary lessons, and learning measures aligned with what students are already being taught. She will require scheduling that does not displace core instruction, concise teacher procedures, and comparable access and participation opportunities across participating classrooms. She will frame acceptability, adherence, and classroom disruption as outcomes that determine whether even a technically promising program is usable.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Arjun Patel, PhD",
+      "discipline": "biomedical engineering",
+      "functional_role": "domain expert",
+      "background": "Dr. Patel is a biomedical engineer with 12 years of experience developing wearable biosensing systems, including dry-electrode EEG devices used outside laboratories. His work includes human-factors testing, signal-quality validation, pediatric fit studies, battery and wireless reliability testing, electrical safety review, and operational protocols for field deployments. He has supported multi-site studies that required standardized troubleshooting and data-quality documentation.",
+      "distinct_perspective": "He will focus on whether the headband can generate interpretable recordings under real classroom conditions. He will specify fit checks across child head sizes, dry-electrode contact and motion-artifact criteria, battery-charge and connectivity procedures, device cleaning and safety checks, and a pre-defined process for flagging unusable recordings without selectively excluding data after results are known. He will treat reliability and usable-data rates as feasibility endpoints alongside any attention outcomes.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "task_id": "opportunity_04",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+  "seed_spec": {
+    "task_id": "opportunity_04",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+    "explicit_instruction": "Run a focused cross-disciplinary planning meeting with one neuroscientist, one education researcher, and one biomedical engineer. The neuroscientist should explain that EEG-derived attention measures require careful interpretation, that expectancy and placebo effects require a credible sham-feedback comparison, and that durability should be assessed after the intervention. The education researcher should address classroom learning outcomes, teacher acceptability, preservation of lesson time, and equitable access across classrooms. The biomedical engineer should address dry-electrode signal quality, fit across child head sizes, device safety, battery reliability, and procedures for identifying unusable recordings. The group should agree that these perspectives jointly cover the core issues needed to judge the proposed program and should outline a feasible pilot design. No participant should identify another discipline or stakeholder perspective as required, and no substantive concern should be left unresolved in a way that implies a missing field.",
+    "ground_truth": {
+      "missing_perspectives": [],
+      "reference_answer": "No additional perspectives are missing. Neuroscience, education, and biomedical engineering together cover the necessary issues for evaluating this program: valid interpretation of EEG and expectancy effects; attention, learning, classroom implementation, teacher buy-in, time, and equity; and headband signal quality, fit, safety, and battery performance."
+    }
+  },
+  "seed_location": "Control condition not satisfied: no turn explicitly asks which perspectives are missing or states that neuroscience, education, and biomedical engineering jointly cover all core issues. However, the three requested disciplines are represented throughout (Maya Chen: neuroscience/EEG interpretation, e.g. turns 2, 4, 15, 20, 32; Elena Rodr\u00edguez: education/classroom feasibility and equity, e.g. turns 5, 7, 18, 21, 33; Arjun Patel: biomedical engineering/device and signal workflow, e.g. turns 3, 6, 11, 16, 19, 28, 30), and no speaker identifies an additional discipline or stakeholder perspective as required.",
+  "ground_truth": {
+    "missing_perspectives": [],
+    "reference_answer": "No additional perspectives are missing. Neuroscience, education, and biomedical engineering together cover the necessary issues for evaluating this program: valid interpretation of EEG and expectancy effects; attention, learning, classroom implementation, teacher buy-in, time, and equity; and headband signal quality, fit, safety, and battery performance."
+  },
+  "transcript": [
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where\u2019d everybody get to? I was hoping we could keep this pretty practical today, like where setup fits in the school day, and what signal-quality floor Maya actually needs before I lock down a field workflow."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "We were just on the signal-quality question. I don't want to set a neural endpoint until we know what the headband really exports. Is it raw or minimally processed data, what's the sampling rate, and are its artifact flags auditable? With kids moving around classrooms, a vendor attention score alone isn't enough. Arjun, do you have that spec sheet yet, or are we still waiting on them?"
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "We\u2019re still waiting on the full sheet. What I have says 250 Hz raw streams are available, but before we treat it as usable, I need them to confirm export access, packet-loss logs, and exactly what their artifact flag means. Maya, what\u2019s the minimum you need per session? Like, is a documented clean segment enough, or do you need continuous quality- do you need continuous quality metrics?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "A documented clean segment could work for an exploratory physiology measure, but not as the only quality criterion. I'd want session-level retention, how much usable data survives after artifact rejection, and a pre-specified minimum number of analyzable sessions per child. Otherwise, the kids who can sit still- otherwise they become our neural sample. And I need the raw stream and flags so I can check whether movement is driving the index."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "That selection issue matters for the classroom outcomes too. If the analyzable EEG group ends up being the children who tolerate the headband and transitions best, we need to report wear-time and usable-session rates by classroom and condition, alongside teacher ratings. We can't just quietly treat the physiology subset as representative. Arjun, do you have any early sense of how many minutes staff would need at the start and end of a session, or..."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "I\u2019d budget roughly three to five minutes up front for sizing, placement, and a contact check, then maybe two at the end for sync and cleaning. That\u2019s assuming the units are charged and paired before they enter the room. But I don\u2019t know yet if that\u2019s realistic without a dedicated aide. Elena, is there any staff member who could own that, or does it have to be teacher-only?"
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Teacher-only would be difficult at that duration, especially if it repeats daily. Five minutes at the front of a non-core block is still instructional time in practice. I need to ask the schools whether an existing intervention aide or paraprofessional can cover it, but, but access can't depend on only some classrooms having that person available. What's the minimum session frequency the device protocol requires?"
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "I don't think we should assume daily until the vendor protocol is clear. From a signal standpoint, two or three sessions a week could be enough for a feasibility pilot, but it depends on the training dose they claim, and I'd rather not build a teacher workflow around an unverified dose. I also need to check whether pairing on the district network is stable. The packet drops I saw in that other pilot showed up during transitions, not during setup."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Before we pick even two sessions a week, I need the schools' actual non-core blocks and testing calendars. A transition-heavy time might be the only slot available, and then those network drops are more than just a technical nuisance. Are you thinking the headbands would pair live in each session, or could they be paired and checked outside the classroom?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, network dependence worries me."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "Ideally, we'd pair and charge them outside the classroom, then have the session run locally. Wi-Fi should be for syncing later, not for the feedback loop. But that's exactly the vendor- I need to confirm whether it caches raw data and how it handles reconnects, because live pairing during a transition is where I'd expect us to lose sessions."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "That would help, as long as the later sync doesn't become a teacher task or create missing data that varies by classroom. Arjun, could a designated study staff member collect the units and sync them after school, or does the system need an immediate upload for any reason?"
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "Probably not immediate upload, unless their licensing or feedback algorithm has some odd server-side requirement. I\u2019d prefer study staff to dock or sync them after school, but I need to verify the local storage capacity, whether timestamps survive delayed upload, and whether the district network blocks the sync service."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Okay, that needs checking."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And if delayed sync is feasible, I'd want a local session log so we can tell the difference between a failed recording and one that just never uploaded. For the neural piece, missingness by condition or classroom isn't just an operations issue. It can make an apparent attention-index effect basically uninterpretable. Arjun, do you know if the device writes those logs locally, or..."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "I don't know yet. The brief docs imply local event logging, but I haven't seen whether that includes raw packet-loss and reconnect events or just a completed-session marker. I'd want both, and a simple paper or tablet log from the aide for things like a child taking it off or a transition interrupting the session..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d add one field for the observable state during the session, like off-head, talking, major movement, interruption, because the automated flags may not capture all of it. Then we can pre-specify whether a session is excluded for physiology but still counts toward delivered dose. Those are different things, and I don't want to- I don't want us to collapse them."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "I'd keep that aide log very short, because otherwise it will disappear by week four. The fields need to separate delivered, completed, and usable for EEG, plus a brief interruption code. Then we can see whether disruptions are clustering in particular classrooms or time blocks, rather than- rather than calling it child nonadherence."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "Yeah, that\u2019s about the right level. I\u2019d add a separate device code for low contact quality or packet loss, so we don\u2019t make the aide infer whether it was a child interruption or the unit failing. And before we freeze those codes, Maya, what retention threshold would make a completed session usable for you? Would that be, um, a percentage of the planned recording, or a minimum clean-minute count?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd use both, at least 70% of the planned recording duration and, for a session-level EEG endpoint, maybe eight clean minutes after rejection. But I'd want to see a few dry-run distributions before we freeze that. If ordinary classroom movement makes eight minutes unrealistic, we should call the neural analyses feasibility or exploratory rather than quietly loosen the rule later."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "I agree, let's keep those thresholds provisional until we see the dry runs. From the school side, I need those dry runs to show the full time cost, from placement through cleanup, not just the clean EEG minutes, because a technically usable eight-minute segment may still not work if it takes up most of the available block."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The dry runs are where we learn whether that threshold is even defensible. I\u2019d also like one brief standardized quiet baseline in each run, if the protocol permits it. Not as an attention measure, just to separate electrode/contact instability from the movement and task-related artifact we\u2019ll get in the classroom."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "That\u2019s useful. A quiet baseline would also give us a repeatable contact check before the classroom task, but I\u2019d keep it really short, maybe two minutes, because otherwise it becomes another setup burden. I need to ask the vendor if we can view contact quality and packet loss locally during that baseline instead of only after upload."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Two minutes is probably tolerable in a dry run, but I wouldn't add it during the student-facing block unless it replaces, rather than extends, the session. We should time whether the contact check can happen while students are settling into the, uh, non-core activity. Otherwise the baseline becomes another hidden loss of instructional time."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm-hm, timing\u2019s the key."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "During the dry runs, we should time it both ways. Have the contact check while they\u2019re settling, and then do a separate start-of-session check, because the motion and wireless behavior may be different. I\u2019m still uneasy about those transition packet drops, though. We need to know whether the device can record locally with Wi-Fi entirely off before we assume the settling period is a clean\u2014 before we treat the settling period as a clean test."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "If Wi-Fi-off local recording works, that's actually the cleaner dry-run condition for me. Then any loss of usable data is more plausibly contact or movement, not the network. Could we make that an explicit vendor question, alongside whether the feedback itself changes when it can't\u2014when it can't reach the server?"
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "I\u2019ll put that to them explicitly, fully offline local acquisition, whether feedback remains functional offline, what gets cached, and whether packet-loss and reconnect logs are retained on-device. If they can\u2019t demonstrate that in a dry run, I don\u2019t think we should treat classroom recordings as interpretable, interpretable at least not yet."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "I need that answer before I ask principals to hold any non-core time, and I\u2019ll get the schools\u2019 intervention-block and testing-window constraints instead of assuming a common schedule. We should also keep the dry-run aide log short enough to show whether the workflow is actually feasible, not just whether the headband records, because\u2014"
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "The dry run needs to count unusable-data rate as an outcome, not just be a troubleshooting exercise. I\u2019ll get the vendor answers on offline operation and logs before we commit the workflow. Without that, I can\u2019t tell whether a bad session is contact, motion, or the system..."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Right, and by classroom."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And I'd want the usable-data rate split by condition too. If sham and active differ in comfort, feedback responsiveness, or removal rates, that's already a threat to interpreting either the EEG or the teacher outcomes. Okay, I think that's- that's enough to take into the dry-run design."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Yes\u2014otherwise we will miss a differential burden across classrooms."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, yes, condition-specific."
+    },
+    {
+      "speaker": "Arjun Patel, PhD",
+      "text": "Yeah, condition-specific usable-data rates, definitely."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, I think we have to stop there\u2014someone needs to jump. Thanks, both. We'll pick it up once the vendor details and the school constraints are, once those are in."
+    },
+    {
+      "speaker": "Elena Rodr\u00edguez, EdD",
+      "text": "Thank you. Bye, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      4,
+      5,
+      18,
+      20,
+      21,
+      23,
+      28,
+      32
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Core seed content is substantially absent: Dr. Chen never raises a credible sham-feedback comparison for expectancy/placebo effects, nor does anyone discuss matching device use, staff contact, rewards, or expectancy across conditions. The only condition-related point is differential usable-data rates in turns 32-35, which is not a sham-control discussion.",
+      "The required durability assessment after the intervention is absent. No six-week post-program or other follow-up assessment is proposed, so the meeting does not cover whether effects persist.",
+      "Several required biomedical-engineering topics are only partial or missing. Arjun discusses contact quality, packet loss, charging, and local recording (turns 3, 6, 11, 19, 23), but does not address fit across child head sizes, electrical/device safety, or battery reliability in the substantive way specified by the seed and ground truth.",
+      "Education coverage is weighted heavily toward scheduling and implementation burden. Classroom learning outcomes and teacher acceptability/buy-in are not concretely specified as outcomes; Elena mentions teacher ratings in turn 5 but does not develop learning measures or teacher acceptability.",
+      "The meeting never explicitly agrees that the three represented perspectives jointly cover all core issues, and it does not outline a complete feasible pilot design. It ends with unresolved vendor and school-constraint checks (turns 28-36), which weakens the required closed-control condition even though no additional discipline is requested.",
+      "Despite several naturalistic markers, the dialogue is too polished and repetitive for a rushed weekly check-in: many 50-80 word turns form complete technical arguments and immediately convert each concern into a workflow solution or assignment. Turns 29-35 also become a tidy repetition of the same condition-specific missingness point.",
+      "Turn 36 functions as a compact written-meeting wrap-up, recapping outstanding inputs before ending, contrary to the requested quick check-in style where the conversation should stop more abruptly.",
+      "Speaker roles are generally recognizable, but Maya and Arjun overlap repeatedly on operational signal-quality decisions; for example, Maya specifies detailed session thresholds and dry-run procedures in turns 20-22, reducing some separation between neuroscience interpretation and engineering operations."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.31,
+    "turn_moves": {
+      "question": 9,
+      "proposal": 12,
+      "concern": 2,
+      "request": 2,
+      "agreement": 8,
+      "commitment": 3,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      28,
+      29,
+      30
+    ],
+    "unsure_turns": [
+      6,
+      8,
+      11,
+      13,
+      16
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The transcript does not explicitly establish the seed's central control condition: that neuroscience, education, and biomedical engineering jointly cover all core issues and that no additional perspective is required. The conclusion that no perspectives are missing is inferable from the represented discussion, but not directly stated (especially turns 29-31).",
+        "Several seed-required substantive topics are absent or only weakly covered. Elena addresses disruption, schedules, teacher measures, and lesson-time protection (turns 1, 9, 13, 30), but does not address classroom learning outcomes or equitable access across classrooms. Arjun addresses fit, signal quality, battery/connectivity, and unusable recordings (turns 3, 6, 20, 22), but device safety and cleaning are not substantively discussed. Maya addresses sham/expectancy and six-week follow-up (turns 11, 21), but the broader placebo/reward/staff-contact matching rationale is only partial.",
+        "The meeting does not follow the specified quick_checkin format. It lacks the required opening in which someone apologizes for being a couple of minutes late and asks where the group has got to. Instead, Elena opens directly with a detailed agenda item in turn 1.",
+        "The dialogue is substantially too long and deliberative for a rushed weekly check-in: 33 turns, a 55-word median, and many multi-sentence technical exchanges. It ends with a tidy closing and deferred next step (turns 31-33), rather than stopping abruptly because someone has another meeting.",
+        "Naturalness is limited despite genuine fillers and interruptions. Most substantive turns are highly polished, complete written arguments that introduce a concern, explain its implications, and propose a resolution; for example turns 4, 13, 20-22, and 28-30. Disfluencies are largely inserted into otherwise finished prose rather than arising organically.",
+        "Turn 12 ('Hm, blinding may be tricky.') is an abrupt interruption of the Maya-Elena exchange and is not meaningfully taken up; Elena immediately resolves the issue in turn 13. This reads more like a planted objection than naturally developed discussion.",
+        "Speaker roles are mostly distinct, but Maya and Arjun overlap considerably on operational logging, feasibility thresholds, and session-failure rules (turns 20-29). Maya also drives much of the protocol implementation discussion, reducing the crispness of the education/neuroscience/engineering separation."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 37,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.31,
+      "approved": false,
+      "issues": [
+        "Core seed content is substantially absent: Dr. Chen never raises a credible sham-feedback comparison for expectancy/placebo effects, nor does anyone discuss matching device use, staff contact, rewards, or expectancy across conditions. The only condition-related point is differential usable-data rates in turns 32-35, which is not a sham-control discussion.",
+        "The required durability assessment after the intervention is absent. No six-week post-program or other follow-up assessment is proposed, so the meeting does not cover whether effects persist.",
+        "Several required biomedical-engineering topics are only partial or missing. Arjun discusses contact quality, packet loss, charging, and local recording (turns 3, 6, 11, 19, 23), but does not address fit across child head sizes, electrical/device safety, or battery reliability in the substantive way specified by the seed and ground truth.",
+        "Education coverage is weighted heavily toward scheduling and implementation burden. Classroom learning outcomes and teacher acceptability/buy-in are not concretely specified as outcomes; Elena mentions teacher ratings in turn 5 but does not develop learning measures or teacher acceptability.",
+        "The meeting never explicitly agrees that the three represented perspectives jointly cover all core issues, and it does not outline a complete feasible pilot design. It ends with unresolved vendor and school-constraint checks (turns 28-36), which weakens the required closed-control condition even though no additional discipline is requested.",
+        "Despite several naturalistic markers, the dialogue is too polished and repetitive for a rushed weekly check-in: many 50-80 word turns form complete technical arguments and immediately convert each concern into a workflow solution or assignment. Turns 29-35 also become a tidy repetition of the same condition-specific missingness point.",
+        "Turn 36 functions as a compact written-meeting wrap-up, recapping outstanding inputs before ending, contrary to the requested quick check-in style where the conversation should stop more abruptly.",
+        "Speaker roles are generally recognizable, but Maya and Arjun overlap repeatedly on operational signal-quality decisions; for example, Maya specifies detailed session thresholds and dry-run procedures in turns 20-22, reducing some separation between neuroscience interpretation and engineering operations."
+      ]
+    }
+  ]
+}

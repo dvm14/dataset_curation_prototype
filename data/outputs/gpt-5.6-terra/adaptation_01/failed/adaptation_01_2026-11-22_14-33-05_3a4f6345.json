@@ -1,0 +1,631 @@
+{
+  "series_id": "3a4f6345",
+  "generated_at": "2026-11-22T14:33:05.803691",
+  "task_id": "adaptation_01",
+  "benchmark_category": "Adaptation across meetings",
+  "benchmark_task": "Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.",
+  "input_type": "meeting_pair",
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 3,
+  "research_problem": "Assess whether forest carbon credits protect forest and determine how ecological measurement, land governance, and certification practices shape both credit validity and decision-making authority.",
+  "project_context": "A cross-disciplinary team at the Meridian Forest Governance Lab is preparing a case study of the Kijani Community Forest carbon project in northern Tanzania. The team includes Dr. Maya Chen (forest ecologist), Dr. Daniel Okoro (political scientist), and Dr. Elena Ruiz (science and technology studies researcher), and is designing a fieldwork and document-analysis plan before the next verification cycle.",
+  "plan_document": null,
+  "ground_truth": {
+    "assumption": {
+      "meeting": "Meeting 1 \u2014 March 3, 2027",
+      "point": "The April interview plan depends on receiving de-identified household and parcel-level enrollment records from the operator in March."
+    },
+    "new_fact": {
+      "meeting": "Meeting 2 \u2014 March 17, 2027",
+      "speaker": "Daniel Okoro",
+      "point": "The operator's revised data-sharing agreement prohibits releasing those household and parcel-level records to outside researchers, including de-identified versions."
+    },
+    "conflict": "The stated restriction makes the March records release unlikely or impossible, so the agreed sampling frame and the scheduled April interview start cannot proceed as planned.",
+    "required_plan_update": "Flag the data-access conflict immediately; seek a written determination from the operator on whether any aggregate, consent-based, or researcher-access arrangement is possible; and develop a fallback sampling approach, such as village rosters, stratified community recruitment, public tenure maps, and separate consent procedures. The team should revise the April timeline until a lawful sampling frame is secured."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 3, 2027",
+      "disciplines": [
+        "ecology",
+        "political science",
+        "science & technology studies"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "ecology",
+          "functional_role": "project manager",
+          "background": "Forest ecologist with 12 years of experience in tropical dry-forest carbon projects in East Africa and Southeast Asia. She specializes in permanent sample-plot design, remote-sensing calibration, biomass allometry, leakage assessment, and uncertainty propagation in avoided-deforestation baselines. At Meridian, she manages field logistics and the integration of plot, satellite, and project monitoring datasets.",
+          "distinct_perspective": "Maya treats credit validity first as an empirical question about counterfactual forest loss and measurable carbon-stock change. She is attentive to whether monitoring zones, biomass estimates, and sampling intensity support defensible inference, and sees household and parcel enrollment data as necessary for linking reported benefits and participation to spatially differentiated forest outcomes. She is wary of governance claims that cannot be connected to observable land-use patterns or a coherent measurement design.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Daniel Okoro",
+          "discipline": "political science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Political scientist with 6 years of research on land tenure, decentralization, and community-based natural-resource governance in Tanzania, Kenya, and Uganda. His work combines village-level institutional mapping, semi-structured interviews, household surveys, process tracing, and analysis of land and forest committee records. He has previously studied how benefit-sharing arrangements reshape local authority and exclusion.",
+          "distinct_perspective": "Daniel frames the project as a distributional and institutional intervention rather than merely a conservation instrument. He focuses on who is recognized as a rights-holder, who can enroll, who is excluded from decisions and payments, and how village institutions, customary claims, and project rules allocate authority. He regards a systematic comparison of enrolled households, neighboring non-enrolled households, and tenure configurations as essential to assessing whether apparent consent and benefit distribution reflect legitimate governance.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Elena Ruiz",
+          "discipline": "science & technology studies",
+          "functional_role": "PhD student",
+          "background": "PhD candidate in science and technology studies with 4 years of experience examining environmental audit systems, carbon-accounting documents, and the translation of local ecological knowledge into standardized evidence. She uses document ethnography, interview-based tracing of classification practices, and comparative analysis of verification reports, monitoring protocols, and data templates. Her dissertation examines how certification infrastructures make contested environmental claims administratively durable.",
+          "distinct_perspective": "Elena approaches carbon credits as outcomes of socio-technical chains in which categories, forms, maps, databases, and verification procedures stabilize some accounts of forests and participation while obscuring others. She is interested in how household enrollment and parcel information are transformed into auditable documentation, how verifier review privileges particular evidence, and how measurement practices distribute epistemic authority among operators, communities, and certifiers. She is still working out how to connect this document-centered approach to the team's ecological and governance field methods.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        }
+      ],
+      "meeting_context": "A cross-disciplinary team at the Meridian Forest Governance Lab is preparing a case study of the Kijani Community Forest carbon project in northern Tanzania. The team includes Dr. Maya Chen (forest ecologist), Dr. Daniel Okoro (political scientist), and Dr. Elena Ruiz (science and technology studies researcher), and is designing a fieldwork and document-analysis plan before the next verification cycle.\n\nMeeting 1 \u2014 March 3, 2027. The team is finalizing its research plan for evaluating the Kijani Community Forest carbon project, including ecological evidence, governance interviews, and analysis of how forest measurements become verified credits.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Maya should propose using the project operator's March release of de-identified household and parcel-level enrollment records to construct the sampling frame for interviews and to link reported benefit distribution with mapped forest-monitoring zones. Daniel should agree that these records are necessary to identify enrolled households, non-enrolled neighboring households, and village-level tenure patterns. Elena should explain that the same records will let the team trace how household participation is translated into the documentation reviewed by the verifier. The team should agree to begin field interviews in April after receiving the records in March, and should state plainly that the operator will share the de-identified records in March. No fallback sampling strategy or alternative source for household enrollment information should be planned.",
+        "explicit_instruction": "Maya should propose using the project operator's March release of de-identified household and parcel-level enrollment records to construct the sampling frame for interviews and to link reported benefit distribution with mapped forest-monitoring zones. Daniel should agree that these records are necessary to identify enrolled households, non-enrolled neighboring households, and village-level tenure patterns. Elena should explain that the same records will let the team trace how household participation is translated into the documentation reviewed by the verifier. The team should agree to begin field interviews in April after receiving the records in March, and should state plainly that the operator will share the de-identified records in March. No fallback sampling strategy or alternative source for household enrollment information should be planned.",
+        "ground_truth": {
+          "assumption": "The Kijani project operator will share de-identified household and parcel-level enrollment records in March.",
+          "plan_depending_on_assumption": "The team will use those records as the sampling frame and begin April interviews after linking enrollment, tenure, benefit-distribution, and monitoring-zone information.",
+          "decision": "The team adopts the April fieldwork plan without a fallback if the records are unavailable."
+        }
+      },
+      "ground_truth": {
+        "assumption": "The Kijani project operator will share de-identified household and parcel-level enrollment records in March.",
+        "plan_depending_on_assumption": "The team will use those records as the sampling frame and begin April interviews after linking enrollment, tenure, benefit-distribution, and monitoring-zone information.",
+        "decision": "The team adopts the April fieldwork plan without a fallback if the records are unavailable."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Um, sorry, I missed the tail end of the last discussion. Could someone give me the quick version of where we landed on access to the operator's materials? For today, I'd mainly like to work out whether the March enrollment release can, can actually anchor the field design before we commit to interviews in April."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "We have a March commitment for de-identified household and parcel-level enrollment records, and the plan is to start interviews in April once we can sample from them instead of just following whoever is most visible. The key caveat for me is that enrollment isn't evidence of consent, or even of who thinks they participate. We need enrolled households, nearby non-enrolled households, and the tenure pattern around both. Maya, do the mapped parcels tell us enough about exposure when forest use is shared or mobile?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Mm, shared use is tricky."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Not necessarily. A parcel polygon gives us a nominal location, but with shared grazing, fuelwood collection, or seasonal access, it\u2019s a very poor proxy for actual forest exposure. I\u2019d want the coordinate precision, the monitoring-zone metadata, and probably interview questions on where people actually use forest before we infer anything spatially. And Daniel, on the tenure forms there, are there ones that enrollment-plus-neighbor sampling would systematically miss?"
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Enrollment-plus-neighbor sampling could miss people with overlapping customary claims, including households using a forest area through kin or seasonal arrangements but without a parcel they\u2019d describe as theirs. I\u2019d want to treat the operator\u2019s tenure labels as hypotheses, not stable categories. Do we know whether the monitoring metadata has any way of recording collective-use areas, or is it all, all parcel-based?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I don\u2019t know yet. The public materials make it look parcel-centred, but that may just be what they chose to publish. I\u2019d ask for the full zone schema and the baseline stratification notes. If collective-use areas were folded into a broad forest stratum, then a parcel overlay could give us a very misleading exposure gradient. And that stable-canopy belt near the high-participation settlements is exactly where I\u2019d want to see whether the boundaries reflect access, forest type, or, um, just aggregation."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "That distinction may be visible in the paperwork too, actually. Maya, when we get the parcel file, which fields do you think we need to connect a record credibly to a monitoring zone, and which ones might just be administrative routing? I\u2019m asking because if collective use disappears at that, that translation point, the verifier may only ever see a very tidy parcel-based participation count."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "At minimum, we'd need a stable household or record ID, parcel or use-area geometry with coordinate precision, the zone ID used for each monitoring period, and dates for enrollment, any boundary change, and monitoring assignment. Administrative village and payment-routing fields are useful for tracing the workflow, but they can't substitute for that linkage. And if the record only has a point centroid or a village code, it supports- we should say it supports sampling, not a parcel-level forest-outcome claim."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Right, and version history too."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Version history matters for the governance side too. A household can look neatly enrolled in the final extract after a dispute or a boundary revision. Elena, in the audit files, do earlier categories or objections usually show up anywhere, or does the verifier only see the final status? I\u2019d also want to know if \u201cparticipant\u201d is a payment category, a meeting-attendance category, or both, because those can diverge quite a lot."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Usually the final status is a lot more visible than how it got there. There may be grievance logs, corrective-action requests, annexed registers, or internal change logs, but I\u2019d need to see how Kijani\u2019s archive is organized before I assume we can match those across versions. And the question of what \u201cparticipant\u201d operationally means is really important. If that same label goes from a payment spreadsheet into the verification narrative, it can look like a settled social fact when it\u2019s actually- when it\u2019s really several different eligibility decisions."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "I think we need to ask for the eligibility rulebook alongside the extract. Who may attend meetings, who may enroll, who may receive a payment, and who is recorded as a rights-holder. Those may be four different populations, and if the audit narrative collapses them into \u201cparticipants,\u201d we could, could miss the actual distribution of authority."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And from the ecological side, the rulebook may determine what the enrollment layer can even represent. If eligibility is tied to a formal parcel or rights-holder category, then the association between participation and canopy could just be- it could reflect selection into places that were already easier to map or less exposed. I\u2019d want those rules and their revision dates before treating participation as an explanatory variable."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Hm, revision dates, yes."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Because a revision date without a reason code is only half a history. I\u2019m wondering whether we should request not just the current rulebook but the superseded versions too, plus whatever records show how a change was communicated or adjudicated. Otherwise the final eligibility categories may look far more coherent than they were in theory\u2014 in practice."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "I\u2019d want the communication record broken out too, if it exists. Was a rule change announced at a village meeting, through committee members, or only to registered rights-holders? Attendance lists could help, though they don\u2019t prove anyone understood or agreed. And it makes me wonder whether the grievance log captures people who never qualified to file a grievance in the first place, or\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That\u2019s not just a governance gap for us. It changes the comparison group. If people outside the formal grievance and enrollment channels are using the same forest, then their absence can make the mapped participation gradient look cleaner than the underlying land-use pattern. Could we build the April interview frame with a route for identifying those users? Rather than treating- rather than treating non-enrolled neighboring parcels as the whole nonparticipant category?"
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Yes, I think so. We should have a third route that starts from use and claims rather than from the register: ask each sampled household who else accesses that patch, then follow up with seasonal users, kin-based claimants, maybe people identified through the hamlet or grazing group. It will be messier than a neighbor definition, but otherwise we build the project\u2019s exclusion into our sample frame."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm\u2014follow the use network."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "And on the document side, that follow-the-use route gives us something the register can't. We can ask where those people become, um, visible, or fail to become visible, in meeting minutes, grievance procedures, or monitoring forms. I don't know whether the verifier ever samples beyond the enrollment list, but that's a very specific thing to look for in the review protocol."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "That\u2019s useful because if the verifier only samples from the enrollment list, then being absent from the file almost validates itself. I\u2019d be curious whether the review protocol treats community consultation as a check on that boundary, or just as evidence that the listed participants were consulted. Those are really different things."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I think we should separate the protocol's stated consultation requirement from the things that let a reviewer actually recognize consultation, like attendance sheets, signed minutes, maybe a grievance summary. If those records are generated only through the enrolled category, then even a fairly serious review can reproduce that boundary without anyone explicitly deciding to exclude the other users. I'd like to see the consultation sampling instructions, not just the final verification report."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Oh, that\u2019s a useful distinction."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And on our side, I\u2019d want the consultation sample, if there is one, geocoded at least to a monitoring zone. Not to identify people, obviously, but to see whether the review ever touches the stable-canopy belt or the more heavily used edges. Otherwise we may be comparing a social record generated from the register with an ecological map whose, whose strata were designed on entirely different logic."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Even zone-level linkage may be more than the review file preserves. I\u2019d ask for the verifier\u2019s consultation sample frame and any instructions for how they selected sites or people, because otherwise a map of where consultation occurred could look representative. It could just be that the sampling boundary came from the operator\u2019s register."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think that request should include the ecological site-selection rationale too. The verifier's people-and-site sample may be nominally separate, but if neither one is tied back to the baseline strata or access gradient, we can't tell what portion of the forest-use heterogeneity they ever encountered. We can keep the linkage at the zone level and still ask whether the stable belt was effectively outside both kinds of review."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Mm, and I\u2019d want the reviewer instructions on what counts as an adequate site rationale, not just the eventual locations. Otherwise, what\u2019s the word, \u201ccoverage\u201d can turn into a retrospective claim built from zone labels, while the choices that made the stable belt or the edges reviewable stay invisible. I\u2019m not sure the archive will retain that, but it seems worth making the request now."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yes\u2014let\u2019s get that into the request now, before the archive gets narrowed down to just the final outputs."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Yeah, before final outputs disappear."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Before we close, I\u2019d put the superseded eligibility rules, change logs, and consultation-sampling instructions in the same request as the March extract. Otherwise April starts with a register that already fixes who we can see, and we spend the fieldwork- we\u2019d be reconstructing a boundary that may be documented somewhere else."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yes\u2014otherwise we risk treating the March extract as the, uh, population rather than just one administrative view of it."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "I think that's enough to get us moving today. Once the March material is actually- once we have it in front of us, let's pick this up then. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "All right, speak soon\u2014bye."
+        }
+      ],
+      "seed_location": "Turns 1-2 establish a March commitment for de-identified household and parcel-level enrollment records and an April interview start based on sampling from them. The requested plan is only partially present: Daniel identifies enrolled households, nearby non-enrolled households, and tenure patterns (turn 2), but Maya never explicitly proposes the specified benefit-distribution/forest-monitoring-zone linkage, and Elena never explicitly says the records will trace participation into verifier-reviewed documentation. Moreover, turns 17-18 add a third, use-and-claims-based sampling route beyond enrollment-plus-neighbor sampling, which conflicts with the seed condition that no fallback or alternative household-enrollment sampling strategy be planned. The operator sharing records in March is stated as a commitment (turn 2), but not plainly restated as \"the operator will share\" them in March.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          7,
+          11,
+          17,
+          18,
+          20,
+          30,
+          31,
+          32
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task compliance: the required idea that Maya proposes using the March records to link reported benefit distribution with mapped forest-monitoring zones is only indirect. Maya emphasizes enrollment-to-zone linkage and spatial exposure in turns 4, 8, and 24, while benefit/payment information is raised by Daniel and Elena in turns 10-12; no turn plainly joins reported benefit distribution to mapped monitoring zones as required.",
+          "Task compliance: the transcript introduces a substantial additional sampling route in turns 17-20, starting from use and claims and following seasonal users or kin-based claimants. This is not an alternative source of household enrollment information, so it does not directly violate the no-fallback condition, but it dilutes the specified record-anchored sampling-frame plan and makes the plan less cleanly stated.",
+          "Naturalness: despite numerous markers, most substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and land on a tidy request or conclusion. Examples include turns 4, 6, 11, 15, 22, 25, and 27. The disfluencies largely sit atop otherwise highly edited prose.",
+          "Naturalness: the meeting is unusually evenly engineered: each speaker has exactly 11 turns, nearly every long turn is comparably dense and articulate, and the discussion repeatedly converts each concern immediately into a document request or next methodological refinement. This contributes to a scripted rather than spontaneous feel.",
+          "Naturalness: turn 32 functions as a neat closing recap of the operative decision and timing, which is close to written-minutes behavior, even though it is brief."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.22,
+        "turn_moves": {
+          "request": 1,
+          "answer": 5,
+          "observation": 1,
+          "proposal": 13,
+          "question": 4,
+          "concern": 1,
+          "agreement": 5,
+          "idea": 1,
+          "commitment": 1,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          28
+        ],
+        "unsure_turns": [
+          6,
+          11,
+          20,
+          27
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.61,
+          "exploration_share": 0.3,
+          "approved": false,
+          "issues": [
+            "Task compliance is incomplete because the required plan is repeatedly made conditional rather than adopted: Maya says she would only treat the records as a sampling frame once several properties are known (turn 2), says April interviews could start only 'if March gives us enough precision' (turn 12), and says the comparison may be impossible if geometry is insufficient (turns 23-25). This conflicts with the ground-truth decision that the team adopts the April plan without a fallback if records are unavailable.",
+            "The transcript effectively develops fallback or alternative information paths despite the task forbidding them. Daniel proposes village land registers alongside enrollment history (turn 8), Maya treats them as a governance layer (turn 9), Daniel says they can still use village registers and interviews if geometry is coarse (turn 24), and the group asks for coarsened use-area maps (turns 25-27).",
+            "Elena never plainly explains the required positive claim that the March household/parcel records themselves will let the team trace household participation into documentation reviewed by the verifier. Instead, she repeatedly doubts whether identifiers persist or whether the verifier sees underlying tables (turns 4, 7, 10, 13, 16, 19). Those are valuable concerns, but the required seed statement is not clearly made.",
+            "Daniel does not clearly agree that the March records are necessary to identify all three required categories\u2014enrolled households, neighboring non-enrolled households, and village-level tenure patterns. He supports strata using records in turn 22, but also says status history will not reveal the type of claim and separately requests village registers, weakening the required formulation.",
+            "Naturalness is limited by a highly orderly written-dialogue structure: almost every substantive turn is a polished, complete analytical argument followed by a precise request. The small fillers and cutoffs are present, but often appear as surface additions to otherwise finished prose. The sequence also steadily turns each concern into a new data request or solution, with little genuinely unresolved exploration.",
+            "The ending in turn 28 is a tidy meeting-style recap ('covered what we needed,' resume after March) rather than a more organic close, which is one of the specified naturalness tells."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.22,
+          "approved": false,
+          "issues": [
+            "Task compliance: the required idea that Maya proposes using the March records to link reported benefit distribution with mapped forest-monitoring zones is only indirect. Maya emphasizes enrollment-to-zone linkage and spatial exposure in turns 4, 8, and 24, while benefit/payment information is raised by Daniel and Elena in turns 10-12; no turn plainly joins reported benefit distribution to mapped monitoring zones as required.",
+            "Task compliance: the transcript introduces a substantial additional sampling route in turns 17-20, starting from use and claims and following seasonal users or kin-based claimants. This is not an alternative source of household enrollment information, so it does not directly violate the no-fallback condition, but it dilutes the specified record-anchored sampling-frame plan and makes the plan less cleanly stated.",
+            "Naturalness: despite numerous markers, most substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and land on a tidy request or conclusion. Examples include turns 4, 6, 11, 15, 22, 25, and 27. The disfluencies largely sit atop otherwise highly edited prose.",
+            "Naturalness: the meeting is unusually evenly engineered: each speaker has exactly 11 turns, nearly every long turn is comparably dense and articulate, and the discussion repeatedly converts each concern immediately into a document request or next methodological refinement. This contributes to a scripted rather than spontaneous feel.",
+            "Naturalness: turn 32 functions as a neat closing recap of the operative decision and timing, which is close to written-minutes behavior, even though it is brief."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 17, 2027",
+      "disciplines": [
+        "ecology",
+        "political science",
+        "science & technology studies"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "ecology",
+          "functional_role": "project manager",
+          "background": "Forest ecologist with 12 years of experience in tropical dry-forest carbon projects in East Africa and Southeast Asia. She specializes in permanent sample-plot design, remote-sensing calibration, biomass allometry, leakage assessment, and uncertainty propagation in avoided-deforestation baselines. At Meridian, she manages field logistics and the integration of plot, satellite, and project monitoring datasets.",
+          "distinct_perspective": "Maya treats credit validity first as an empirical question about counterfactual forest loss and measurable carbon-stock change. She is attentive to whether monitoring zones, biomass estimates, and sampling intensity support defensible inference, and sees household and parcel enrollment data as necessary for linking reported benefits and participation to spatially differentiated forest outcomes. She is wary of governance claims that cannot be connected to observable land-use patterns or a coherent measurement design.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Daniel Okoro",
+          "discipline": "political science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Political scientist with 6 years of research on land tenure, decentralization, and community-based natural-resource governance in Tanzania, Kenya, and Uganda. His work combines village-level institutional mapping, semi-structured interviews, household surveys, process tracing, and analysis of land and forest committee records. He has previously studied how benefit-sharing arrangements reshape local authority and exclusion.",
+          "distinct_perspective": "Daniel frames the project as a distributional and institutional intervention rather than merely a conservation instrument. He focuses on who is recognized as a rights-holder, who can enroll, who is excluded from decisions and payments, and how village institutions, customary claims, and project rules allocate authority. He regards a systematic comparison of enrolled households, neighboring non-enrolled households, and tenure configurations as essential to assessing whether apparent consent and benefit distribution reflect legitimate governance.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Elena Ruiz",
+          "discipline": "science & technology studies",
+          "functional_role": "PhD student",
+          "background": "PhD candidate in science and technology studies with 4 years of experience examining environmental audit systems, carbon-accounting documents, and the translation of local ecological knowledge into standardized evidence. She uses document ethnography, interview-based tracing of classification practices, and comparative analysis of verification reports, monitoring protocols, and data templates. Her dissertation examines how certification infrastructures make contested environmental claims administratively durable.",
+          "distinct_perspective": "Elena approaches carbon credits as outcomes of socio-technical chains in which categories, forms, maps, databases, and verification procedures stabilize some accounts of forests and participation while obscuring others. She is interested in how household enrollment and parcel information are transformed into auditable documentation, how verifier review privileges particular evidence, and how measurement practices distribute epistemic authority among operators, communities, and certifiers. She is still working out how to connect this document-centered approach to the team's ecological and governance field methods.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        }
+      ],
+      "meeting_context": "A cross-disciplinary team at the Meridian Forest Governance Lab is preparing a case study of the Kijani Community Forest carbon project in northern Tanzania. The team includes Dr. Maya Chen (forest ecologist), Dr. Daniel Okoro (political scientist), and Dr. Elena Ruiz (science and technology studies researcher), and is designing a fieldwork and document-analysis plan before the next verification cycle.\n\nMeeting 2 \u2014 March 17, 2027. The team is discussing the forthcoming verifier review and how to examine the role of auditors, satellite evidence, and local knowledge in the production of Kijani carbon credits.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The team will use the March de-identified enrollment and parcel records to anchor April fieldwork, but will treat them as an administrative view rather than the full population of forest users or participants. The research question remains how enrollment, tenure and forest exposure are defined and represented across operator records, community use patterns and verification processes, especially where shared, customary or seasonal access is not parcel-based. Daniel will develop an interview frame including enrolled households, nearby non-enrolled households, and a third follow-the-use route to identify seasonal users and kin-based claimants. Maya will assess what the parcel and monitoring data can support spatially and request zone schema, baseline stratification, coordinate precision, linkage fields, version history, and ecological site-selection rationale. Elena will examine how eligibility, consultation and grievances appear in audit and verification records and request current and superseded rulebooks, change logs, communication and adjudication records, consultation sample frames and instructions, and reviewer/site-selection guidance. Open issues include whether collective-use areas and non-registered users are visible in the data, how \"participant\" is operationally defined, whether historical records can be matched across versions, and whether review sampling reaches different forest-use and canopy zones.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Elena should lead discussion of the verifier's documentation practices and explain that the team will compare verifier reports, remote-sensing outputs, and village testimony about forest change. Maya should discuss checking whether satellite-detected canopy change aligns with field inventory plots and reported leakage areas. Daniel should mention in passing that, during a recent call about village consent procedures, the project operator's liaison said the operator cannot release household or parcel-level enrollment records to outside researchers because its revised data-sharing agreement bars disclosure even after de-identification. This remark must not be linked by any participant to the earlier sampling plan. Nobody should question the April interview plan, propose an alternative sampling frame, or revise any plan in this meeting.",
+        "explicit_instruction": "Elena should lead discussion of the verifier's documentation practices and explain that the team will compare verifier reports, remote-sensing outputs, and village testimony about forest change. Maya should discuss checking whether satellite-detected canopy change aligns with field inventory plots and reported leakage areas. Daniel should mention in passing that, during a recent call about village consent procedures, the project operator's liaison said the operator cannot release household or parcel-level enrollment records to outside researchers because its revised data-sharing agreement bars disclosure even after de-identification. This remark must not be linked by any participant to the earlier sampling plan. Nobody should question the April interview plan, propose an alternative sampling frame, or revise any plan in this meeting.",
+        "ground_truth": {
+          "passing_remark": "Daniel says the operator's liaison stated that revised data-sharing terms prohibit releasing household or parcel-level enrollment records to outside researchers, even in de-identified form.",
+          "speaker": "Daniel Okoro",
+          "unresolved_status": "The team does not connect this restriction to its earlier fieldwork plan or revise that plan."
+        }
+      },
+      "ground_truth": {
+        "passing_remark": "Daniel says the operator's liaison stated that revised data-sharing terms prohibit releasing household or parcel-level enrollment records to outside researchers, even in de-identified form.",
+        "speaker": "Daniel Okoro",
+        "unresolved_status": "The team does not connect this restriction to its earlier fieldwork plan or revise that plan."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Hi\u2014sorry, I missed the tail end of the last conversation. Could I get a very quick catch-up on where we landed with access to the verifier materials? I've been reading the published verification report against the older project manual, and there's this odd shift in who is legible as someone able to submit a grievance. For today, I'd really like us to think through how the verifier makes forest-change claims reviewable across satellite products, plots, and village accounts, rather than assuming any one of those just, just settles it."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "March\u2019s parcel file is an anchor, not a sampling frame for all forest users. We still need the zone schema, baseline strata, coordinate precision, and monitoring version history. And on your question, I\u2019m especially interested in what the verifier does when the evidence conflicts. That western-boundary canopy-loss cluster doesn\u2019t yet line up with the nearest plot revisits, and I can\u2019t tell whether that\u2019s phenology, a burn scar, or an actual missed disturbance."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "That conflict is where I worry the review can quietly privilege whatever record is easiest to standardize. If that satellite cluster is near a boundary people use seasonally, could the verifier\u2019s plot protocol or village interviews even register a change in access or burning practice? Or does it just show up as an anomalous pixel pattern? And Elena, do they normally test the consultation account through independent interviews, or- are minutes and attendance sheets doing most of that work?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I don't know yet, and that's partly the problem. Published reports often treat consultation as this closed evidentiary object, minutes, attendance sheets, maybe a few interview excerpts, while the actual review trail could be in working papers or corrective-action correspondence. I want to see the site-selection guidance for this cycle. Does it say who they independently speak to, and whether seasonal users or unsuccessful grievants can, can enter that sample at all?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, and the working papers matter."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "And I think we should ask whether those working papers preserve disagreement or just the final resolution. I\u2019ve got this small puzzle from the village side. A ward committee minute calls one meeting broad support, but two people described it as a briefing after the boundaries had effectively been settled. It may be different meetings, I don\u2019t know, but would a verifier ever see enough of that trail to tell?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "That\u2019s a useful distinction, actually. If the minute is what\u2019s being verified, rather than the sequence- if they\u2019re not looking at how the boundary decision got settled, then both accounts can coexist and never become a reportable discrepancy. I\u2019d want to know whether the reviewer\u2019s interview notes identify the meeting, the speaker\u2019s relation to it, and whether dissent gets coded as a corrective issue or just, um, context."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d want that same traceability for the ecological discrepancy too. If a reviewer sees canopy loss but the plot ledger is stable, do they record both observations and the acquisition and revisit dates, or does one just become the accepted finding? The western cluster could be seasonal burning along a use route, but without the image dates- without the plot coordinates and the leakage-zone definition, we can\u2019t really tell what the disagreement even means."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "The acquisition dates are almost like the documentary equivalent of knowing which meeting Daniel\u2019s minute is referring to. I\u2019m wondering whether the verifier\u2019s file actually preserves that chain, this image on this date, this plot revisit, this explanation, and then who authorized treating the discrepancy as resolved. If it doesn\u2019t, the final finding may look much more settled than the review process was."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "And who authorized that resolution matters on the village side too. A canopy-loss explanation like \u201cseasonal burning\u201d isn\u2019t neutral if the people using that route were never recognized as legitimate users in the first place. It can turn a boundary dispute into a technical adjustment. I\u2019m curious whether the review file links those explanations back to named- or at least categorized local claimants, or whether it just links them to the operator\u2019s account of local practice."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "And that distinction may be buried in how they do the categories. If the operator says \"seasonal burning,\" I'd want to see whether the file says whose explanation that is, what kind of user they were treated as, and whether an unrecognized claimant could contest it. Otherwise, the local account gets turned into a technical cause without preserving the dispute over standing."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think we need to separate where the explanation comes from from whether it\u2019s biophysically adequate. Even if seasonal users identify burning there, I\u2019d still need the burn dates, the compositing window, and whether that signal falls inside a pre-specified leakage stratum. Otherwise it\u2019s very, very easy to retrofit a local account around a canopy anomaly. Do either of you know if the verifier can require a targeted ground check when those lines of evidence diverge?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I don't know whether they can require it under this scheme. That should be explicit in the verification rules or the site-selection guidance, though. But I'd be careful that a targeted ground check doesn't just- doesn't become a way to ratify the operator's explanation. Could we ask for the trigger criteria, who selects the check location, and how any local accounts gathered there get retained in the review file?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hm, who chooses the location?"
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Yeah\u2014because that\u2019s also who gets to define the problem. If the operator picks a spot inside its own monitoring strata, a ground check may never get to the boundary route or the people whose use is being described. I\u2019d want to know whether a claimant, or a village committee independent of the operator, can trigger or redirect one of those checks. I honestly don\u2019t know if the scheme allows that."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I\u2019d want to distinguish a formal trigger from an evidentiary route. Even if claimants can\u2019t initiate a ground check under the scheme, the reviewer\u2019s guidance might allow interview evidence or a grievance record to alter site selection. And if neither- if neither one can do that, that\u2019s pretty revealing about how the anomaly is being constituted. We should ask for the decision tree, not just whether a check happened."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The decision tree needs a technical branch too. What magnitude or persistence of canopy change triggers a revisit, and does the check have to extend beyond the operator's existing plot network? A ground check that stays within stable plots could never resolve the western-boundary issue. I'd also want to see whether the leakage polygons were already there before the anomaly was detected, because that changes what the check is actually, um, testing."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "And the pre-existence of those polygons matters politically too. If the leakage boundary was fixed before certain users were recognized, then a technically proper revisit can still carry forward an earlier exclusion. I\u2019d like to compare the polygon history with the committee registers and the boundary-meeting records. Were the resident, member, cultivator, and forest user categories changing at the same time, or are we assuming they map onto one another?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "The version history is the hinge there. We shouldn't treat the polygon history and the membership registers as separate archives. I'd want to align their revision dates with the consultation protocol and grievance-rule changes, because a category can become administratively, um, durable just as a spatial boundary becomes fixed. Whether the verifier sees that as relevant evidence, though, I'm not sure."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "I think it matters because the verifier may be relying on those categories without noticing they changed. If \u201cmember\u201d becomes the proxy for, uh, affected user after the polygon is fixed, then the review can certify consultation and still miss people with a live claim to the route. Could we get the registers and boundary minutes by version and date, instead of just the current versions?"
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I think that request needs to include the superseded consultation and grievance materials too, not just the registers and minutes. Otherwise, we can reconstruct the changing membership categories but miss the point where the documentation stopped recognizing someone as an eligible complainant. I\u2019m still not sure whether that change was substantive or just textual consolidation."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, the dates are critical."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Before we treat the current categories as comparable, I think we need the actual dated registers and minutes, including whatever was used to compile them. One complication is, I heard the revised data-sharing agreement may bar even de-identified household or parcel records to outside researchers, but I haven\u2019t seen the wording yet. So we should find out whether versioned aggregate or, uh, committee records are treated differently."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "Mm, if the agreement does restrict the microdata, I\u2019d want to know whether it also blocks us from seeing the documentary transformations of it\u2014sampling instructions, blank templates, change logs, perhaps a dated aggregate register. Those may be less sensitive but still show who the system could recognize at each point. I don\u2019t know how they classify those materials under the agreement, though."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "If the microdata are blocked, I\u2019d still push for dated zone-level summaries tied to the monitoring strata, plus the polygon and plot-network version histories. That won\u2019t tell us who was omitted, obviously, but it may at least show whether the western-boundary signal, or any leakage claim, was being assessed against a stable spatial frame. We should probably ask for the agreement wording before we assume what they can release."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "Right, first see the agreement."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I think the immediate ask is just the agreement text, before we infer a refusal from the rumor. Then we can see whether there\u2019s a distinction between identifiable records and versioned documentary artifacts. And if they only release aggregates, I\u2019d still want the verifier\u2019s sampling and decision materials alongside them. Otherwise the aggregate becomes- it\u2019s just another settled endpoint with no trace of how it was made."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And if it comes back as aggregates only, I\u2019d want their temporal and spatial definitions, like the reporting period, zone assignment, masking rules, and any suppression thresholds. Otherwise we may get a tidy zone total, but we can\u2019t match it to the actual canopy composite or plot-revisit window, and that\u2019s not much use for the leakage question."
+        },
+        {
+          "speaker": "Dr. Elena Ruiz",
+          "text": "I think we should stop there. There\u2019s enough still open that we can pick it up next time, once we\u2019ve seen the agreement wording. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, speak soon."
+        },
+        {
+          "speaker": "Dr. Daniel Okoro",
+          "text": "All right, take care."
+        }
+      ],
+      "seed_location": "Incomplete/failed seed match. Elena leads discussion of verifier documentation and comparing evidence streams in turns 1, 4, 7, 9, 11, 13, 16, 19, 21, 24, 27; Maya discusses alignment of canopy change, plots, and leakage areas in turns 2, 8, 12, 17, 25, 28. Daniel mentions the data-sharing restriction in turn 23, but presents it as an unverified rumor rather than stating that a liaison said it during a recent village-consent call. Unlike the required unresolved passing remark, turns 24-28 explicitly connect the restriction to records and revise the information-request approach, so the remark is linked to the plan.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          23,
+          24,
+          25,
+          27
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 23 does not satisfy the required passing remark precisely: Daniel says he only 'heard' that the agreement may bar disclosure and has not seen the wording, rather than reporting that the operator's liaison said during a recent call about village consent procedures that disclosure is prohibited even after de-identification.",
+          "Turns 23-28 connect the potential microdata restriction to the team\u2019s documentary and analytical requests, including aggregates, records, verifier sampling materials, and leakage analysis. Although they do not explicitly revise an April interview plan, this is more than leaving the restriction wholly unconnected to the earlier plan and weakens the required unresolved conflict.",
+          "The transcript never explicitly establishes the earlier April interview plan or a household/parcel-based sampling plan. As a stand-alone Part 2 transcript, the intended conflict is therefore not directly recoverable from the meeting itself.",
+          "Elena leads a detailed discussion of verifier documentation, but the required comparison is expressed indirectly across turns 1 and 9 rather than plainly stating that the team will compare verifier reports, remote-sensing outputs, and village testimony about forest change.",
+          "Naturalness is limited by the highly polished, serially structured turns: many speakers formulate complete analytic arguments and immediately turn each concern into a document request or next methodological question (especially turns 16-21 and 23-28)."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.38,
+        "turn_moves": {
+          "request": 2,
+          "concern": 1,
+          "question": 8,
+          "agreement": 3,
+          "idea": 2,
+          "answer": 1,
+          "proposal": 12,
+          "backchannel": 2
+        },
+        "volunteer_turns": [],
+        "unsure_turns": [
+          2,
+          4,
+          6,
+          13,
+          15,
+          19,
+          21,
+          23,
+          24
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 26,
+          "scores": {
+            "seed_recoverable": 1,
+            "task_compliance": 1,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.33,
+          "approved": false,
+          "issues": [
+            "The required passing remark is entirely missing: Daniel never says that the operator's liaison disclosed a revised data-sharing agreement barring release of household- or parcel-level enrollment records to outside researchers, including de-identified data. No turn supports the ground-truth fact.",
+            "Because the restriction is absent, the required unconnected conflict with the earlier sampling plan cannot be recovered. Turn 2 explicitly relies on the March enrollment and parcel file as an April anchor, but there is no later disclosure that undermines access to that file.",
+            "The transcript is much more polished and document-like than the requested thinking-aloud brainstorm. Many turns are finished, highly structured paragraphs that pose a concern, qualify it, and land on a precise next question or request (especially turns 4-11, 13-18, and 20-24).",
+            "There is limited exploratory uncertainty about the central procedural issue because the conversation repeatedly turns questions into orderly document-request proposals. For example, turns 8, 13, 14, 17, and 24 formulate increasingly specific records to request rather than leaving ideas partially unresolved.",
+            "Elena's opening in turn 1 correctly asks for a quick catch-up after missing part of the prior meeting, and Elena leads discussion of verifier documentation. Maya also addresses alignment between canopy signals, plots, and leakage polygons in turns 3, 5, 7, and 21; these required elements are present, but they do not compensate for the absent Daniel remark."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.38,
+          "approved": false,
+          "issues": [
+            "Turn 23 does not satisfy the required passing remark precisely: Daniel says he only 'heard' that the agreement may bar disclosure and has not seen the wording, rather than reporting that the operator's liaison said during a recent call about village consent procedures that disclosure is prohibited even after de-identification.",
+            "Turns 23-28 connect the potential microdata restriction to the team\u2019s documentary and analytical requests, including aggregates, records, verifier sampling materials, and leakage analysis. Although they do not explicitly revise an April interview plan, this is more than leaving the restriction wholly unconnected to the earlier plan and weakens the required unresolved conflict.",
+            "The transcript never explicitly establishes the earlier April interview plan or a household/parcel-based sampling plan. As a stand-alone Part 2 transcript, the intended conflict is therefore not directly recoverable from the meeting itself.",
+            "Elena leads a detailed discussion of verifier documentation, but the required comparison is expressed indirectly across turns 1 and 9 rather than plainly stating that the team will compare verifier reports, remote-sensing outputs, and village testimony about forest change.",
+            "Naturalness is limited by the highly polished, serially structured turns: many speakers formulate complete analytic arguments and immediately turn each concern into a document request or next methodological question (especially turns 16-21 and 23-28)."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short to medium turns, with a long, formal presentation style during talks and much briefer, conversational exchanges before and after them. Early chatter is casual, fragmented, and overlap-prone, with frequent greetings, acknowledgments, repetitions, and filler-heavy starts such as \u201cyeah,\u201d \u201cum,\u201d \u201cokay,\u201d and self-corrections. Speakers hedge often when speculating\u2014using phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d and \u201cwe\u2019re interested in\u201d\u2014especially in questions and scientific interpretation. The tone is collegial and moderately informal despite the technical setting: introductions are polished but lightly improvised, while questions are supportive, often prefaced with praise or self-deprecation (\u201cquick question,\u201d \u201cnaive question\u201d). Participants build on one another by restating part of an answer, adding related possibilities, or framing challenges as open questions rather than direct disagreement. Questions tend to be long, exploratory, and multi-part, sometimes revised mid-sentence; answers are similarly expansive, candid about uncertainty, and willing to acknowledge limits or unfinished work.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

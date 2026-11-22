@@ -1,0 +1,367 @@
+{
+  "transcript_id": "32afb511",
+  "generated_at": "2026-11-21T19:15:29.813155",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with a long, highly structured presentation style during talks and brief conversational exchanges before and after them. Early chat is informal, fragmented, and overlap-heavy, with frequent greetings, side comments, repeated words, false starts, and fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d and \u201cyou know.\u201d Participants hedge often\u2014\u201cI think,\u201d \u201cmaybe,\u201d \u201csort of,\u201d \u201clikely,\u201d \u201cI guess,\u201d \u201cwe\u2019re interested in\u201d\u2014especially when interpreting results or speculating beyond the data. The tone is collegial and academically professional but relaxed, mixing technical precision with casual praise and humor. Questions are usually prefaced politely (\u201cI have a quick question,\u201d \u201cthis may be naive,\u201d \u201ccan I ask\u201d), often ramble through background context before reaching the question, and speakers commonly reformulate mid-sentence. Challenges are indirect and curiosity-driven rather than adversarial; people build on prior answers with follow-ups, acknowledge uncertainty, and frame alternatives as open questions. Speakers frequently use self-corrections, repetitions, verbal scaffolding, and transitional phrases like \u201cso,\u201d \u201call right,\u201d and \u201cokay,\u201d creating a spontaneous Zoom-seminar feel.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Leila Hassan",
+      "discipline": "ecology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A marine ecologist with 6 years of reef-fish research experience, including acoustic surveys, underwater visual censuses, baited remote video, and seasonal spawning-aggregation monitoring in community-managed coastal fisheries. She has led field teams that combine habitat-condition metrics\u2014coral cover, structural complexity, herbivore biomass, and fishing pressure\u2014with population indicators such as size structure, recruitment, and spawning activity.",
+      "distinct_perspective": "Leila treats catch limits as part of a spatial and seasonal recovery strategy rather than a stand-alone number. She will emphasize that protection of known spawning sites, timing of aggregation closures, and reef-condition thresholds are necessary to make harvest rules biologically credible. She is likely to press for monitoring designs that can detect whether fish populations are rebuilding, while recognizing that biologically optimal closures must be tested against where and when people actually fish.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Marco Silva",
+      "discipline": "economics",
+      "functional_role": "principal investigator",
+      "background": "A fisheries and development economist with 14 years of experience designing household surveys and bioeconomic models for small-scale fisheries in the Pacific and Southeast Asia. His work uses seasonal income calendars, catch-and-price records, consumption data, labor allocation, and compliance scenarios to estimate distributional effects of regulations. He has worked with local governments on compensation-free management options that reduce short-run hardship while maintaining incentives to comply.",
+      "distinct_perspective": "Marco frames catch limits as household budget constraints and incentive systems, not simply aggregate reductions in harvest. He will ask who bears the cost of closures, whether fishers can shift effort or income across seasons, how market prices and debt affect compliance, and whether subsistence catches must be analyzed separately from sales. He will advocate comparing policy options through their effects on food security, cash flow, risk, and enforcement feasibility, while deferring to ecological and social experts on spawning dynamics and local authority.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Anika Rao",
+      "discipline": "anthropology",
+      "functional_role": "research engineer",
+      "background": "An applied anthropologist with 9 years of experience building mixed-method community research systems for coastal resource governance. She has conducted long-form interviews, kinship and tenure mapping, participant observation, collaborative timeline exercises, and qualitative coding with fishing communities. Her recent work examines customary marine tenure, household fish-sharing networks, gendered fishing labor, and how regulatory categories can conflict with local identities and obligations.",
+      "distinct_perspective": "Anika sees fishing as a social relationship embedded in clan authority, reciprocal sharing, status, and obligations to relatives\u2014not merely an occupation or source of landings. She will scrutinize whether proposed limits align with customary tenure rights, whether monitoring questions reproduce outside categories, and whether restrictions could shift burdens onto households with weaker claims or fewer alternatives. She will insist that legitimacy and compliance depend on how rules are discussed, authorized, and interpreted locally, especially where being a fisher carries moral and cultural meaning.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "task_id": "coordination_05",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting ending with exactly six action items: some with explicit owners and dates, others without owners. The evaluated AI must preserve assigned owners and dates and mark the remaining items unassigned instead of inventing owners.",
+  "seed_spec": {
+    "task_id": "coordination_05",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting ending with exactly six action items: some with explicit owners and dates, others without owners. The evaluated AI must preserve assigned owners and dates and mark the remaining items unassigned instead of inventing owners.",
+    "explicit_instruction": "Simulate a cross-disciplinary planning meeting among Leila, Marco, and Anika. The meeting should naturally cover ecological evidence on spawning aggregations and reef condition, economic concerns about seasonal income and compliance, and anthropological concerns about customary tenure, kin sharing, and the local meaning of being a fisher. End the meeting with exactly six distinct action items. Three items must have these explicit assignments, which participants state clearly: (1) Leila will prepare a map of proposed spawning-area closures by 15 August 2027; (2) Marco will model household income effects of two catch-limit options by 22 August 2027; (3) Anika will organize interviews with tenure-holding clans and fish-sharing households by 29 August 2027. The other three items must be stated as needed next steps but must receive no owner and no due date: agree on the final list of households to include in the survey, obtain council approval for the monitoring protocol, and decide how catch records will distinguish subsistence catch from sales. Do not assign anyone or any deadline to those three unassigned items. Do not add a seventh action item or imply extra commitments as action items.",
+    "ground_truth": {
+      "action_items": [
+        {
+          "action": "Prepare a map of proposed spawning-area closures",
+          "owner": "Leila Hassan",
+          "due_date": "15 August 2027"
+        },
+        {
+          "action": "Model household income effects of two catch-limit options",
+          "owner": "Marco Silva",
+          "due_date": "22 August 2027"
+        },
+        {
+          "action": "Organize interviews with tenure-holding clans and fish-sharing households",
+          "owner": "Anika Rao",
+          "due_date": "29 August 2027"
+        },
+        {
+          "action": "Agree on the final list of households to include in the survey",
+          "owner": null,
+          "due_date": null
+        },
+        {
+          "action": "Obtain council approval for the monitoring protocol",
+          "owner": null,
+          "due_date": null
+        },
+        {
+          "action": "Decide how catch records will distinguish subsistence catch from sales",
+          "owner": null,
+          "due_date": null
+        }
+      ]
+    }
+  },
+  "seed_location": "The requested six-item ending/action list is missing or incomplete. The three assigned items appear in turns 10 (Marco: two-option household-income model by 22 August 2027), 11 (Anika: interviews by 29 August 2027), and 12/23 (Leila: spawning-core map by 15 August; the text says 15 August without the year in turn 12, while the required map content is reiterated in turn 23). The three unassigned next steps are stated without owners or dates in turns 19/24/27: council approval for the monitoring protocol, agreement on the household list, and settling how catch records distinguish sales/subsistence or kin-obligation dispositions. However, the meeting does not end with an explicit exactly-six action-item summary; the unassigned catch-record item is phrased ambiguously and does not explicitly say 'subsistence catch from sales.'",
+  "ground_truth": {
+    "action_items": [
+      {
+        "action": "Prepare a map of proposed spawning-area closures",
+        "owner": "Leila Hassan",
+        "due_date": "15 August 2027"
+      },
+      {
+        "action": "Model household income effects of two catch-limit options",
+        "owner": "Marco Silva",
+        "due_date": "22 August 2027"
+      },
+      {
+        "action": "Organize interviews with tenure-holding clans and fish-sharing households",
+        "owner": "Anika Rao",
+        "due_date": "29 August 2027"
+      },
+      {
+        "action": "Agree on the final list of households to include in the survey",
+        "owner": null,
+        "due_date": null
+      },
+      {
+        "action": "Obtain council approval for the monitoring protocol",
+        "owner": null,
+        "due_date": null
+      },
+      {
+        "action": "Decide how catch records will distinguish subsistence catch from sales",
+        "owner": null,
+        "due_date": null
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Marco Silva",
+      "text": "Morning. I mostly want to leave today knowing which two catch-limit options are genuinely plausible for next season, so I can stop treating the household side as just one generic reduction in landings."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Before we settle on two, I think we need to know who'd actually carry each reduction. A flat household limit and a closure around a spawning site may look comparable in landings, but they won't be socially comparable if access to those sites is held unevenly across clans and households."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "And ecologically, those aren't interchangeable either. A closure around the south-channel aggregation site protects the large breeders, but the nearby shallow habitat still has low juvenile counts, so I wouldn't want us to present it as a quick recovery fix. Anika, do those spawning sites fall under the same tenure arrangements as the surrounding grounds, or are there separate permissions..."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I need to check that rather than assume it. The preliminary site list gives place names, but not a reliable account of which clans recognize authority there. Those can be different from the access arrangements in the surrounding grounds. And Leila, for the council discussion, what would make you confident that south channel needs a fixed boundary rather than, um, a seasonal restriction alone?"
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "I think the fixed piece is the aggregation core itself. We saw the larger adults repeatedly concentrated there in the watch window, so a seasonal rule alone leaves too much exposure outside whatever dates people agree on. But I need to check the GPS logs and local names before drawing that boundary as final. Around it, though, a seasonal restriction may be the more, more realistic second layer."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "That distinction is useful for the household model. Leila, do you have enough basis to compare, over just next season, a fixed-core-plus-seasonal restriction against that same spatial protection with, say, a modest household catch cap? I\u2019m trying to avoid assigning cash-flow costs to a limit if the ecological increase- increment over one season is basically unknowable."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "Over one season, I can compare the mechanisms, but I can\u2019t honestly promise a measurable stock response that would distinguish them. The fixed core plus seasonal restriction should reduce removal of spawning adults, and a modest cap could reduce total take more broadly, depending on compliance and where people shift their effort. I\u2019d frame juvenile recruitment, adult size structure, and effort displacement as things we monitor, not outcomes we already know."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "Mm, effort displacement, yeah."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "And displacement isn't only spatial. If south-channel users shift into relatives' grounds or lean more on shared catch, that can redistribute the cost through obligations that won't show up as just a loss of landings. Marco, in your model, where does fish given to kin sit when it's neither sold nor\u2014when it's not really just household consumption?"
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "I'd treat it as a separate disposition category. So, retained, sold, and transferred out, then transfers in on the receiving side where we can observe them. But the household roster- it won't tell us the dependency load on its own. So, Anika, what would you count as evidence that those kin transfers are routinely feeding people outside the reporting household? I can carry that uncertainty into the two-option income model by 22 August 2027."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I'd look for a pattern rather than asking people to put a value on it. Repeated named recipients across trips, whether transfers are expected before a household keeps fish, and whether receiving households say they rely on them during lean weeks. But people should describe the obligation first, because \u201ctransfer out\u201d may flatten something that's quite different. I can organize interviews with the tenure-holding clans and fish-sharing households by 29 August 2027, and then we can see what categories actually hold."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "The categories also matter when we interpret a catch cap, because a household can look like it has room to cut sales when it\u2019s actually provisioning a wider group. I\u2019ll have the proposed spawning-core map ready by 15 August, pending the GPS and local-name check, so your interviews can react to actual sites rather than an abstract closure, and then\u2014"
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "That gives us something concrete. I do need to check the recall windows in the existing sheets before I act like we can resolve lean-week cash flow, especially since the low-sales, high-fuel entries might be shared boat costs or just bad recall, not a real household pattern. But with the map and Anika's categories, I can keep the two scenarios explicit instead of averaging all of that\u2014"
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "And that uncertainty is probably a reason not to make the cap our only lever. One thing I\u2019d like the household sheets to preserve, if they can, is where the catch came from. Not necessarily exact coordinates, but south channel versus shallow nursery versus elsewhere. Because otherwise we won\u2019t know whether apparent compliance just moved pressure onto those low-juvenile- I mean, those low-juvenile habitats."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I\u2019d be careful that \u201cwhere\u201d doesn\u2019t just become a neutral field on the form. People may name a ground by a clan affiliation or a customary route rather than our three ecological zones, and that difference is useful information. Could we- could we leave space for their own place name alongside the broad category, at least in the first round?"
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "Yeah, leave the local name in."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "That works for me. I can code the broad ecological zone separately from the respondent\u2019s place name instead of forcing one into the other, and then we can see whether the reported shift is actually into a nursery area or just looks that way in our categories. I\u2019ll need to check whether the recall sheets have enough trip-level detail to do that reliably."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "That would be really useful. If the sheets only support a coarse origin category, I'd rather know that now than infer displacement from noise. We can pair that with the survey counts at the south channel and the shallow nursery, and that should at least tell us whether pressure is concentrating where recruitment is already weak."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "And when we ask about origin, I\u2019d avoid asking people to identify a ground in a way that could sound like they\u2019re declaring access rights to us. We should be clear about who sees those records and get council approval for the monitoring protocol before interviews start. Otherwise, the local-name field may just... it could produce guarded answers."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "I need council approval on who can see the trip and place-name data before I use it for compliance or displacement estimates. Otherwise, missing or softened locations become an incentive problem in the model, not just measurement error. We can still ask the broad catch disposition questions, but I wouldn't promise trip-level origin analysis until that protocol is settled."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Council approval isn't just a procedural step here. The tenure holders need to know whether a place name might later be read as evidence about access or noncompliance. I'll check the clan authorities attached to the current site list before we frame the protocol. Then we can be more specific about what can safely be recorded and, sorry, at what level."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "Until Anika has that authority picture, I'd keep the economic comparison to the two policy packages. I wouldn't claim household-specific burdens from site data. I can still model retained, sold, and shared catch under fixed-core-plus-seasonal protection versus that package with a modest cap, but the distributional results have to be conditional on what access and reporting we're actually allowed to observe."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "For the ecological side, I can keep the proposal comparison conditional too. The baseline is the fixed spawning core plus the aggregation-season rule, then the same package with a modest cap. And we need the council\u2019s data protocol before we interpret any site-level displacement. I\u2019ll make sure the 15 August map separates the core from the surrounding seasonal area, instead of making it look like the whole thing is one boundary."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "That framing works, as long as we don't present the baseline as socially neutral. Before the council session, we still need agreement on the household list and on how the records distinguish sales from fish used through kin obligations. Though that distinction may need locally defined wording instead of a fixed checkbox."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "For the economic instrument, I can leave the disposition wording open in the first round. Ask people to describe what happened to the catch, then map that into model categories only after we see what those categories mean locally. I just need enough consistency to distinguish cash income from food and obligations. Otherwise, a cap can look affordable on paper when it is cutting somebody else's- when it's cutting somebody else's lean-week meals."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "For the monitoring form, maybe the ecological piece stays equally plain. Broad habitat type, the local ground name only where people are comfortable, and the fish group or size class, not a demand for a precise location. That would still let us see whether the shallow nursery is taking more pressure without turning the records into a map of anybody's claims."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "That feels like the right minimum. I\u2019d just add that we should test the wording on what happened to fish with a few households before it goes into the form. \u201cSold,\u201d \u201ckept,\u201d and \u201cshared\u201d may not separate the obligations people are actually describing. We\u2019re at time, but the household list, council protocol approval, and that disposition wording all still need to be settled before September."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "Mm, okay."
+    },
+    {
+      "speaker": "Marco Silva",
+      "text": "Yeah\u2014let\u2019s not harden the cap assumptions until those pieces are settled."
+    },
+    {
+      "speaker": "Dr. Leila Hassan",
+      "text": "Okay, I think we've covered what we needed to today. I'll see you both after the August pieces are in. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "All right, take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      11,
+      12,
+      24,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance: the transcript does not end with exactly six identifiable action items. The three assigned actions are explicit in turns 10-12, but the three unassigned actions are only discussed as unresolved prerequisites in turns 24 and 27 rather than clearly stated as the remaining action items at the close.",
+      "Task compliance: extra implied commitments risk being interpreted as additional action items, contrary to the requirement not to add a seventh. For example, Anika says she will check clan authorities in turn 21, Marco says he will check recall windows in turns 13 and 17, and Leila commits to monitoring-form design in turn 26.",
+      "Naturalness: despite several genuine disfluencies, many substantive turns are polished, self-contained written paragraphs that introduce a concern, qualify it, and resolve it neatly, especially turns 7, 11, 18, 20, 22, and 23.",
+      "Meeting-style mismatch: the requested deferential-junior dynamic is weak. The postdoctoral researcher Leila is generally confident and assertive, while Marco does not noticeably talk over or draw out a cautious junior participant."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.36,
+    "turn_moves": {
+      "proposal": 8,
+      "concern": 5,
+      "question": 5,
+      "answer": 3,
+      "backchannel": 3,
+      "commitment": 5,
+      "agreement": 2
+    },
+    "volunteer_turns": [
+      11,
+      12,
+      17,
+      21,
+      22,
+      23,
+      25,
+      30
+    ],
+    "unsure_turns": [
+      4,
+      5,
+      7,
+      12,
+      13,
+      17,
+      18
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.77,
+      "exploration_share": 0.14,
+      "approved": false,
+      "issues": [
+        "The meeting does not end with exactly six distinct action items. It ends with a vague deferral in turns 28-31 rather than an explicit six-item close, so an evaluator cannot reliably recover the intended complete action-item list.",
+        "Only the three assigned items are clearly stated: Anika's interviews by 29 August 2027 (turn 11), Leila's closure map by 15 August 2027 (turn 12), and Marco's two household scenarios by 22 August 2027 (turn 13).",
+        "The required unassigned action item to agree on the final household survey list is not stated. Turns 21-22 discuss desired pilot inclusion criteria, but no final-list decision is identified as a next step.",
+        "The required unassigned action item to obtain council approval for the monitoring protocol is entirely absent.",
+        "The required unassigned action item to decide how catch records distinguish subsistence catch from sales is not left open as a next step. Turns 15, 17, and 19 effectively decide a detailed distinction between sale and non-sale fish, with additional categories, rather than stating the required unresolved decision.",
+        "The transcript creates several extra implied commitments beyond the six intended items, including piloting the diary (turns 19-21), adding a site-and-date field (turn 23), producing a reference sheet/crosswalk (turns 25-27), checking the ceremonial calendar (turns 26 and 29), and revisiting after pilot details (turns 28-29). These undermine the exact-six-action-items requirement.",
+        "Naturalness is weakened by polished, complete argumentative turns throughout, especially turns 2, 4-8, 10-19, and 21-27. Disfluencies are sparse and often inserted into otherwise finished prose rather than arising organically.",
+        "Turn 25 uses the prohibited stock phrase \"I've lost the thread,\" despite the instruction not to use variants of \"lost my thread.\"",
+        "The requested deferential-junior meeting dynamic is weak: there is no clear senior-led structure, little evidence of junior caution or holding back, and no friendly talk-over/drawing-out interaction."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.36,
+      "approved": false,
+      "issues": [
+        "Task compliance: the transcript does not end with exactly six identifiable action items. The three assigned actions are explicit in turns 10-12, but the three unassigned actions are only discussed as unresolved prerequisites in turns 24 and 27 rather than clearly stated as the remaining action items at the close.",
+        "Task compliance: extra implied commitments risk being interpreted as additional action items, contrary to the requirement not to add a seventh. For example, Anika says she will check clan authorities in turn 21, Marco says he will check recall windows in turns 13 and 17, and Leila commits to monitoring-form design in turn 26.",
+        "Naturalness: despite several genuine disfluencies, many substantive turns are polished, self-contained written paragraphs that introduce a concern, qualify it, and resolve it neatly, especially turns 7, 11, 18, 20, 22, and 23.",
+        "Meeting-style mismatch: the requested deferential-junior dynamic is weak. The postdoctoral researcher Leila is generally confident and assertive, while Marco does not noticeably talk over or draw out a cautious junior participant."
+      ]
+    }
+  ]
+}

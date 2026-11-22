@@ -1,0 +1,345 @@
+{
+  "transcript_id": "e8e6f7c9",
+  "generated_at": "2026-11-22T12:14:08.413619",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chatter followed by long, highly structured presentation turns and brief Q&A exchanges. Overlap is low but there are frequent quick backchannels\u2014\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat,\u201d \u201cright\u201d\u2014and occasional interrupted or unfinished thoughts. The tone is collegial, casual, and professionally academic, with participants using hedges such as \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit seems,\u201d and \u201cI guess,\u201d especially when speculating. Speakers often build on prior comments by restating part of a question before answering, validating it as \u201ca good question,\u201d then qualifying the response or identifying an open issue. Disagreement is indirect and framed as uncertainty, limitations, or alternative possibilities rather than blunt contradiction. Speech includes numerous fillers (\u201cum,\u201d \u201cuh\u201d), repetitions, self-corrections, false starts, and conversational fragments, particularly from non-native speakers and during transitions. Questions are generally polite and exploratory, often prefaced with praise or disclaimers like \u201cI have a naive question\u201d or \u201cjust curious,\u201d and can be multi-part, with the respondent answering expansively before inviting further discussion.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Assessing whether forest carbon credits actually protect forest and who gets to decide how that is measured, integrating ecological evidence on baselines, leakage, inventory, remote sensing, and permanence with political analysis of governance, enforcement, tenure, and authority and STS analysis of credit quantification, auditing, certification, and recognized knowledge.",
+  "disciplines": [
+    "ecology",
+    "political science",
+    "science & technology studies"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "Dr. Chen has 12 years of experience building and evaluating forest-cover-change workflows for tropical landscapes in Southeast Asia. Her work combines Sentinel-2 time series, change-detection algorithms, stratified accuracy assessment, and field or high-resolution-image validation. She has advised REDD+ and conservation projects on baseline construction, leakage assessment, and the limits of annual loss products, and is accustomed to producing comparable estimates across sites with uneven local data.",
+      "distinct_perspective": "Maya treats the first cross-project evidence base as a problem of consistent observation: the team needs one spatially comparable annual product before it can test differences in project claims, baselines, and leakage. She sees the national Sentinel-2 loss maps as a practical common denominator, while insisting that their classification rules, error structure, and relationship to project monitoring be documented rather than assumed.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Samuel Okoro",
+      "discipline": "political science",
+      "functional_role": "PhD student",
+      "background": "Samuel is a fourth-year doctoral researcher with six years of prior work on decentralization, land administration, and environmental enforcement in Indonesia and comparable forest-frontier settings. He uses document analysis, institutional mapping, policy tracing, and interviews with district officials, village leaders, and project implementers. His dissertation examines how overlapping customary, village, district, and national claims shape who can authorize land-use restrictions and whose boundaries become enforceable.",
+      "distinct_perspective": "Samuel approaches carbon-credit measurement as an exercise of public authority as well as technical estimation. A forest-loss map matters because it can be compared with state reporting and may influence which institutions, tenure claims, and enforcement accounts are treated as legitimate. He looks for mismatches between mapped project areas and actual jurisdiction, and asks who bears responsibility when a project claims avoided loss but authority over land is fragmented.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Leila Haddad",
+      "discipline": "science & technology studies",
+      "functional_role": "postdoctoral researcher",
+      "background": "Leila is a postdoctoral researcher with seven years of research on carbon accounting, environmental standards, and audit practices in Southeast Asia. She conducts ethnographic observation, interview-based process tracing, and close reading of monitoring protocols, verification reports, and certification methodologies. Her previous work has examined how categories such as forest, degradation, leakage, and permanence become stabilized through software, templates, expert review, and audit procedures.",
+      "distinct_perspective": "Leila examines measurement as a governance process rather than a neutral technical input. She asks how a national classification system, a certifier's methodology, and community-recognized land categories each make some forms of forest change visible and others irrelevant. For her, the central question is not only whether a map is accurate, but whose definitions, evidence, and authority are built into the map when it becomes the basis for credit claims.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 4,
+  "task_id": "disagreement_02",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+  "seed_spec": {
+    "task_id": "disagreement_02",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+    "explicit_instruction": "Hold a planning meeting in which the team selects the national space agency's 2018\u20132025 Sentinel-2 forest-cover-loss maps as the primary dataset for the initial cross-project analysis. Maya explains that the maps provide consistent annual coverage across all three projects and can be checked against project monitoring reports during later validation. Samuel supports using the national dataset because it is publicly available and allows comparison with state reporting. Leila objects once: she says that treating the national map as the primary dataset may obscure how its forest definition and classification rules differ from the definitions used by project certifiers and communities, thereby pre-judging whose measurements count. The group nevertheless decides to use the national dataset for the initial analysis, alongside retaining project reports, audit reports, and village boundary maps as contextual materials. After stating her objection and reason, Leila does not speak again about the dataset decision; do not resolve, retract, or add to her objection. Maya assigns herself to document the dataset's classification method and compare it with project-monitoring definitions. Samuel will compile tenure and administrative-boundary information. The meeting should establish a concrete revisit condition: reconsider the dataset choice before final estimates if validation finds material disagreement between the national maps and project monitoring reports, or if interviews reveal that locally recognized forest boundaries or forest categories are absent from the national product. No participant should claim that the decision is unanimous.",
+    "ground_truth": {
+      "decision": "Use the national space agency's annual 2018\u20132025 Sentinel-2-derived forest-cover-loss maps as the primary dataset for the initial cross-project analysis.",
+      "supporting_reasons": {
+        "ecology": "The dataset offers consistent annual coverage across all three projects and can later be validated against project monitoring reports.",
+        "political_science": "Its public availability supports comparison with state reporting."
+      },
+      "dissent": {
+        "participant": "Leila Haddad",
+        "discipline": "science and technology studies",
+        "reason": "Using the national map as the primary dataset may obscure differences between its forest definition and classification rules and the definitions used by project certifiers and communities, pre-judging whose measurements count.",
+        "status": "Leila objects once and remains silent about the dataset decision thereafter; the objection is not resolved or withdrawn."
+      },
+      "associated_materials": "Project monitoring reports, certification audit reports, and village boundary maps are retained as contextual materials rather than selected as the primary forest-cover dataset.",
+      "assignments": [
+        {
+          "participant": "Maya Chen",
+          "task": "Document the national dataset's classification method and compare it with project-monitoring definitions."
+        },
+        {
+          "participant": "Samuel Okoro",
+          "task": "Compile tenure and administrative-boundary information."
+        }
+      ],
+      "revisit_trigger": "Reconsider the primary dataset before final estimates if validation identifies material disagreement between national maps and project monitoring reports, or if interviews show that locally recognized forest boundaries or forest categories are absent from the national product.",
+      "agreement_status": "The group adopted the dataset decision despite Leila's recorded dissent; it was not unanimous."
+    }
+  },
+  "seed_location": "Task conditions are not satisfied. The requested decision to select the national 2018\u20132025 Sentinel-2 maps as the primary dataset is never finalized. Instead, turns 22\u201324 characterize them only as a provisional/common spatial layer, explicitly \"not a settled primary measure,\" pending definition review. Leila speaks repeatedly about the dataset decision after her initial concerns (turns 7, 15, 18, 21, 23, and 25), so she neither objects once nor remains silent thereafter. The specified concrete revisit trigger involving material disagreement with project monitoring reports or interviews revealing absent locally recognized boundaries/categories is also not established; turn 22 gives a different trigger concerning inadequate release documentation or rule changes.",
+  "ground_truth": {
+    "decision": "Use the national space agency's annual 2018\u20132025 Sentinel-2-derived forest-cover-loss maps as the primary dataset for the initial cross-project analysis.",
+    "supporting_reasons": {
+      "ecology": "The dataset offers consistent annual coverage across all three projects and can later be validated against project monitoring reports.",
+      "political_science": "Its public availability supports comparison with state reporting."
+    },
+    "dissent": {
+      "participant": "Leila Haddad",
+      "discipline": "science and technology studies",
+      "reason": "Using the national map as the primary dataset may obscure differences between its forest definition and classification rules and the definitions used by project certifiers and communities, pre-judging whose measurements count.",
+      "status": "Leila objects once and remains silent about the dataset decision thereafter; the objection is not resolved or withdrawn."
+    },
+    "associated_materials": "Project monitoring reports, certification audit reports, and village boundary maps are retained as contextual materials rather than selected as the primary forest-cover dataset.",
+    "assignments": [
+      {
+        "participant": "Maya Chen",
+        "task": "Document the national dataset's classification method and compare it with project-monitoring definitions."
+      },
+      {
+        "participant": "Samuel Okoro",
+        "task": "Compile tenure and administrative-boundary information."
+      }
+    ],
+    "revisit_trigger": "Reconsider the primary dataset before final estimates if validation identifies material disagreement between national maps and project monitoring reports, or if interviews show that locally recognized forest boundaries or forest categories are absent from the national product.",
+    "agreement_status": "The group adopted the dataset decision despite Leila's recorded dissent; it was not unanimous."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026the rains have been pretty disruptive on the east coast this month, so I hope nobody's had field travel rearranged again. Anyway, for today, I think we need to leave with a primary spatial dataset for the first comparison. My preference is the national agency's annual Sentinel-2 loss maps from 2018 through 2025, because they give us one consistent observation record across all three sites. Then we can use the project and audit materials to, um, understand where their definitions and claims differ."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "Mm, one consistent record."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "\u2026and for my purposes, that consistency matters because it isn't a project-controlled account. We should use the agency maps as the primary dataset, then keep the project reports, audits, and village maps to test where the mapped project boundary lines up with any enforceable authority. I\u2019ll compile the tenure and administrative boundary material, though I still need to check whether district planning and forestry records are available consistently\u2014 comparably across all three sites."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "\u2026but \u201cnot project-controlled\u201d doesn't make it neutral. Before we call it primary, I need to see the agency's exact forest and loss definitions alongside the three certification methodologies. Maya, do you know what the national product calls loss, uh, compared with temporary canopy disturbance, and whether that rule stays stable year to year?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014that is the right question. I don't yet know whether the metadata gives us enough release-by-release detail on cloud handling and the, um, class-change threshold to say the rule is stable. I need to check that rather than assume it. But that's exactly why I'd keep the agency maps primary and document their definition beside each project's monitoring definition, so any non-equivalence is visible rather than buried."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Right, that needs checking."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "And I don't want \"document the difference\" to quietly mean the agency definition wins and the others become caveats. There's also that odd degraded-forest case in one audit. The narrative says one thing, the monitoring table says another. I need to check whether that's just reporting shorthand or a real category difference\u2014category change, before I'm comfortable treating any of these as directly comparable."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014yes, and I do not think the agency product should win by default. It is the common measurement frame for the first comparison, not the ground truth or the authoritative forest category. Leila, if you can identify the audit language around that degraded-forest discrepancy, we can make a crosswalk that preserves where the categories simply do not align, rather than forcing them into one loss number."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "\u2014and the crosswalk should include the boundary source, not just the forest categories. Leila, do audit reports usually say who supplied or approved the polygon used for monitoring? At one site, two village maps put the same hamlet on opposite sides of the project line, and the district map follows neither. Until we know which line enforcement actors recognize, a loss estimate inside the polygon has a pretty unstable institutional..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014yes, boundary provenance needs to be in the same table as the forest crosswalk. Samuel, when those claims overlap, do you know which boundary record district offices actually use in practice\u2014the planning map, the forestry record, or something else? And ecologically, I saw a 2021 loss cluster along access corridors at one site that mostly disappears in 2022, even though the roads look unchanged. So I don't want to interpret an inside-polygon pattern until we have both the annual classification notes and the recognized boundary."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "\u2014I don't know yet, and I'd be cautious about treating any one district record as the operative one. In similar cases, planning offices may use one line for permits, while forestry enforcement uses another, and village recognition is different again. I need to establish that site by site. The 2021 corridor pattern is exactly the kind of case where we should avoid giving the map an enforcement interpretation until we know which polygon, if any, officials were actually using."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014exactly. For the first pass, I'd treat each candidate polygon as its own analysis geometry, rather than deciding now which one's the real boundary. Then we can see whether the loss estimates change materially across them. And before we read much into that 2021 corridor signal, I need to look at the annual product notes and probably a small high-resolution-image sample because an unchanged road with a disappearing signal could easily be\u2014could just be cloud or threshold behavior."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "\u2014yes, separate geometries is preferable, but I'd label them by the institution that supplied them, rather than treating them as interchangeable technical variants. If the estimate moves substantially between the village, project, and district polygons, that's itself a finding about contested authority, not just spatial uncertainty. I can put together that provenance table while I check what district records we can obtain."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014right, label them by source, absolutely. From the mapping side, I can run the same annual loss summaries on each provenance-labelled polygon and report the spread, rather than collapsing it. That gives us a comparable sensitivity check without pretending the geometries mean the same thing. The unresolved piece for me is whether the agency release notes- whether they let us distinguish a boundary effect from that 2021\u201322 classification behavior."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "The spread is useful, but I\u2019d resist calling it just a sensitivity check. If the answer changes because we use the village line instead of the project line, that\u2019s partly about who\u2019s been allowed to define the object being monitored. Samuel, when you find out which record an office acts on, could we also note what made that record consequential, like a permit, a signed map, or just an internal planning file?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, yes, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "\u2014yes. I would record both the document and the practical act, like whether a permit cites the line, whether an enforcement notice uses it, who signed it, and whether village actors recognize it. Those can diverge quite sharply, so an internally circulated planning file may be consequential for one office but not for people facing- for people who are actually facing restrictions on the ground."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "The same line can be consequential in a permit file and almost meaningless in village practice. I think the provenance table should have a field for that evidence, not just a source label. What made the polygon actionable, for whom, and in what setting? Otherwise we risk making the signed map look like it settled something it may not have- something it may not actually have settled."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Mm, that is important."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014and for the mapping table, we shouldn't put one \"inside project\" label on the agency pixels. We can keep the loss class as observed and then join it separately to each provenance-labelled polygon and to that evidence field. I'll check the release metadata now, especially the cloud treatment and annual change thresholds, because otherwise it's too easy to overread the 2021\u201322 corridor difference."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "\u2026and one small thing, the release metadata isn't just a technical appendix for us. If cloud treatment or a threshold changed, that changes what the agency could count as loss that year, so it belongs in the crosswalk with the certification rules. I'm still not ready to call the agency map primary, though, until we have those definitions in front of us, and if\u2014"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014I agree, the metadata belongs in the crosswalk, not in a footnote. Given the time, I think we can provisionally use the agency maps as the common spatial layer, conditional on that definition review. I wouldn't call them the settled measure of loss. If the release documentation is inadequate, or it shows a rule change, we revisit before producing comparative estimates."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "\u2026Conditional is better, yes, but I want the record to say I haven't agreed that it's the primary dataset yet. Let's review the agency definition and all three certification methodologies first. If we use it in the meantime, call it the common spatial layer, and keep the, I guess, non-equivalences visible instead of turning them into one comparable loss figure."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2014yes, that wording works for me. Common spatial layer, not a settled primary measure. I\u2019ll bring the release-by-release definitions, including cloud handling and change thresholds if they\u2019re available, and lay them next to the three project methodologies. Then we can decide whether a comparable annual estimate is\u2014 whether it\u2019s defensible at all."
+    },
+    {
+      "speaker": "Dr. Leila Haddad",
+      "text": "I think we should leave it there before we run over. I\u2019ll- I\u2019ll follow up by email once we\u2019ve had a chance to look at the definitions. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Thank you. Speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      3,
+      4,
+      5,
+      8,
+      13,
+      20,
+      22,
+      23,
+      24
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central required decision is not actually made as specified. Maya initially proposes the agency maps as primary in turn 1, but turns 22-24 explicitly retreat to calling them a conditional 'common spatial layer' and 'not a settled primary measure.' The ground-truth decision to use them as the primary dataset for the initial analysis is therefore not cleanly supported.",
+      "Leila violates the required one-time objection constraint. She objects to the primary-dataset decision repeatedly in turns 4, 7, 15, 21, and 23, including after the provisional decision is discussed. The seed specifically requires that after stating her objection and reason, she not speak again about that decision.",
+      "The requested revisit trigger is incomplete. Turn 22 provides a documentation/rule-change trigger, but does not state reconsideration before final estimates upon material disagreement between national maps and project monitoring reports, nor upon interviews revealing absent locally recognized forest boundaries or categories.",
+      "Samuel's required rationale is only partially present. Turn 3 supports independence from project control and comparison of project claims to authority, but does not establish that public availability supports comparison with state reporting.",
+      "The transcript is not meaningfully tangent-heavy despite the requested meeting style. The opening weather remark in turn 1 is brief and no side topic develops for several turns before a return to the agenda.",
+      "Naturalness is limited by many polished, fully formed analytical paragraphs, especially turns 3-5, 11-15, and 17-24. Although interruptions and self-corrections occur, they often function as surface disfluencies on otherwise highly composed turns."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "proposal": 5,
+      "backchannel": 2,
+      "commitment": 6,
+      "question": 3,
+      "answer": 3,
+      "agreement": 4,
+      "concern": 2,
+      "request": 1
+    },
+    "volunteer_turns": [
+      3,
+      5,
+      7,
+      8,
+      11,
+      12,
+      13,
+      14,
+      20,
+      24,
+      25
+    ],
+    "unsure_turns": [
+      3,
+      5,
+      7,
+      11,
+      12,
+      13,
+      14,
+      23,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.76,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The required concrete revisit trigger is not established. The transcript discusses validation and high-resolution imagery (turns 8, 14, 19-21), but never says to reconsider the primary-dataset choice before final estimates if national-map and project-monitoring results materially disagree, nor if interviews show locally recognized forest categories or boundaries are absent from the national product.",
+        "Leila does not comply with the requirement to object once and then remain silent about the dataset decision. After her initial objection in turn 3, she returns to the choice in turn 24 ('primary comparison layer, maybe, but not the primary account') and again in turn 29, restating how reports and village maps should be treated. This continues and develops her dissent rather than preserving it as a single unretracted objection.",
+        "The meeting never cleanly records that the group has adopted the national dataset despite Leila's dissent. Maya and Samuel converge on 'primary comparison layer' in turns 25-26, but the decision remains somewhat diffuse and is not clearly tied to the initial cross-project-analysis selection.",
+        "Maya's reason is incomplete relative to the seed: turns 1 and 4 establish cross-site consistency, but the transcript does not explicitly say the national layer can be checked against project monitoring reports during later validation. The proposed checks focus mostly on high-resolution imagery and boundaries.",
+        "Samuel's public-availability rationale is only weakly expressed. Turn 27 calls the layer a 'public reference point' for comparison with state reporting, but it does not clearly state that public availability is a reason for selecting it.",
+        "The requested tangent-heavy style is largely absent. The opening briefly references cloud masking and a brochure (turn 1), but there is no meaningful off-agenda drift such as a conference, script, campus problem, or other detour before returning to the agenda.",
+        "Although there are multiple disfluencies, many substantive turns are polished, complete mini-arguments that immediately convert concerns into plans or assignments, especially turns 4-8, 12-16, and 18-27. This makes the dialogue read more like a carefully drafted workshop discussion than spontaneous meeting speech."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "The central required decision is not actually made as specified. Maya initially proposes the agency maps as primary in turn 1, but turns 22-24 explicitly retreat to calling them a conditional 'common spatial layer' and 'not a settled primary measure.' The ground-truth decision to use them as the primary dataset for the initial analysis is therefore not cleanly supported.",
+        "Leila violates the required one-time objection constraint. She objects to the primary-dataset decision repeatedly in turns 4, 7, 15, 21, and 23, including after the provisional decision is discussed. The seed specifically requires that after stating her objection and reason, she not speak again about that decision.",
+        "The requested revisit trigger is incomplete. Turn 22 provides a documentation/rule-change trigger, but does not state reconsideration before final estimates upon material disagreement between national maps and project monitoring reports, nor upon interviews revealing absent locally recognized forest boundaries or categories.",
+        "Samuel's required rationale is only partially present. Turn 3 supports independence from project control and comparison of project claims to authority, but does not establish that public availability supports comparison with state reporting.",
+        "The transcript is not meaningfully tangent-heavy despite the requested meeting style. The opening weather remark in turn 1 is brief and no side topic develops for several turns before a return to the agenda.",
+        "Naturalness is limited by many polished, fully formed analytical paragraphs, especially turns 3-5, 11-15, and 17-24. Although interruptions and self-corrections occur, they often function as surface disfluencies on otherwise highly composed turns."
+      ]
+    }
+  ]
+}

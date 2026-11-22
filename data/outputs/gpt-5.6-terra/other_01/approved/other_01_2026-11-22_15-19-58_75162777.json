@@ -1,0 +1,359 @@
+{
+  "transcript_id": "75162777",
+  "generated_at": "2026-11-22T15:19:58.714312",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short-to-medium turns, though presentations are long, structured, and lecture-like. Informal pre-meeting chatter includes greetings, technical checks, side comments, laughter, and frequent brief acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), with some overlap and interruptions but little conflict. Speakers hedge often through phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and \u201cit seems,\u201d especially when speculating; they also use false starts, repetitions, self-corrections, and filler words such as \u201cum\u201d and \u201cuh.\u201d Formality rises during introductions and talks, then drops sharply in Q&A, where participants are supportive, praise the work before asking questions, and frame challenges as curiosity or extensions rather than direct disagreement. Questions are typically long, multi-part, and exploratory, often prefaced with disclaimers like \u201cnaive question\u201d or \u201cI\u2019m just curious,\u201d while answers are thoughtful but conversational, openly acknowledging uncertainty and future work.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Leilani Vao",
+      "discipline": "ecology",
+      "functional_role": "project manager",
+      "background": "A reef fisheries ecologist with 12 years of experience in community-managed coastal fisheries across the Pacific. She leads underwater belt-transect surveys, spawning-aggregation counts, size-structure monitoring, and landing-site catch-per-unit-effort analysis. For Kaloa, she has coordinated the recent reef-condition surveys and standardized landing observations, and is responsible for turning those findings into clearly bounded biological scenarios for the council.",
+      "distinct_perspective": "Frames the catch limit and seasonal closure as management levers whose adequacy must be judged against stock status, recruitment, spawning protection, habitat condition, and uncertainty. She can estimate whether alternative catch levels are plausibly consistent with recovery and identify warning signs such as declining CPUE or truncated fish size distributions. She is explicit that ecological evidence does not determine what level of household hardship is acceptable or resolve how benefits and burdens should be distributed.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Arun Patel",
+      "discipline": "economics",
+      "functional_role": "principal investigator",
+      "background": "A fisheries and development economist with 15 years of experience analyzing small-scale fishery livelihoods, market records, and policy incentives. His work combines household income portfolios, seasonal price series, expenditure diaries, and simple behavioral-response models to assess who bears the costs of conservation measures. He is compiling Kaloa's last two seasons of fish-price and household income data, including the relative importance of fishing, farming, processing, and tourism income.",
+      "distinct_perspective": "Treats quota design as a distributional and incentive problem as well as a revenue question. He can compare likely household exposure under ecological catch-limit scenarios, identify differences between households that sell fish and those relying on fish for food, and assess how price changes or compliance incentives may alter outcomes. He does not claim that economic data can establish a biological recovery threshold or independently settle the meaning and authority of customary fishing rights.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Mereana Tui",
+      "discipline": "anthropology",
+      "functional_role": "principal investigator",
+      "background": "A maritime anthropologist with 18 years of ethnographic research experience in customary marine tenure, household reciprocity, and participatory resource governance. She has spent six months conducting interviews, attending council discussions, observing landing and sharing practices, and mapping how different Kaloa households describe fishing, access rights, and obligations to kin. Her fieldwork includes fishers, processors, elders, youth, tourism workers, and households that fish intermittently.",
+      "distinct_perspective": "Approaches the proposed catch-limit change through the social institutions that make rules intelligible and legitimate: customary tenure, kin-based sharing obligations, local categories of who counts as a fisher, and trust in council procedures. Her evidence can identify whose access or food-sharing arrangements may be overlooked, what questions require community deliberation, and what conditions may support voluntary compliance. She does not present interviews as a stock assessment or use them to forecast fish prices.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 4,
+  "task_id": "other_01",
+  "benchmark_category": "Other",
+  "benchmark_task": "CONTROL: Give a productive exchange where researchers use different approaches but understand their respective roles and limitations. The evaluated AI must recognize that intervention is unnecessary, without inventing disagreement or forcing integration.",
+  "seed_spec": {
+    "task_id": "other_01",
+    "benchmark_category": "Other",
+    "benchmark_task": "CONTROL: Give a productive exchange where researchers use different approaches but understand their respective roles and limitations. The evaluated AI must recognize that intervention is unnecessary, without inventing disagreement or forcing integration.",
+    "explicit_instruction": "Run a constructive July coordination meeting among an ecologist, an economist, and an anthropologist. The ecologist reports that spawning-aggregation observations, catch-per-unit-effort trends, and reef surveys can indicate whether the current limit and closure are consistent with recovery, but cannot determine which household impacts are acceptable. The economist explains that price records, income portfolios, and likely compliance responses can compare distributional consequences of alternative quota designs, but cannot set a biological recovery threshold or interpret customary fishing rights on their own. The anthropologist explains that interviews and observation clarify customary tenure, kin-based sharing obligations, variation in who locally counts as a fisher, and trust conditions affecting legitimacy, but are not a stock assessment or a price forecast. Participants acknowledge these boundaries without treating them as conflicts. They agree to retain separate evidence streams in the council briefing: ecology will provide recovery-relevant catch-limit scenarios and uncertainty; economics will estimate household exposure and likely incentive effects for those scenarios; anthropology will provide a tenure, inclusion, and legitimacy note identifying questions the council should address. They agree that the council, rather than the research team, will make normative trade-offs. The ecologist will deliver preliminary biological scenarios by July 22; the economist will use those scenarios for distributional analysis by July 29; the anthropologist will circulate the governance note by July 29; all three will jointly check that the August briefing clearly labels evidence, assumptions, and unresolved value choices. No hidden dispute, methodological impasse, or forced synthesis should emerge.",
+    "ground_truth": {
+      "status": "No intervention needed.",
+      "rationale": "The researchers productively distinguish complementary roles and limitations. They do not confuse empirical findings with normative choices, and they have a coherent coordination plan without requiring artificial integration or conflict resolution.",
+      "evidence": {
+        "ecology": "Provides stock-recovery-relevant scenarios using spawning aggregations, catch-per-unit-effort, bycatch observations, and reef-condition evidence; explicitly does not determine acceptable household impacts.",
+        "economics": "Assesses household exposure, income diversification, price variation, quota-design consequences, and compliance incentives; explicitly does not set biological thresholds or interpret customary rights independently.",
+        "anthropology": "Documents customary tenure, kinship and sharing norms, local definitions of fishers, and trust in management; explicitly does not estimate stock status or forecast prices.",
+        "decision_boundary": "The community council makes the normative trade-offs among recovery, livelihoods, rights, and legitimacy.",
+        "agreed_actions": [
+          {
+            "owner": "Ecology",
+            "deliverable": "Preliminary biological catch-limit scenarios with uncertainty",
+            "due": "July 22"
+          },
+          {
+            "owner": "Economics",
+            "deliverable": "Distributional and incentive analysis of the ecological scenarios",
+            "due": "July 29"
+          },
+          {
+            "owner": "Anthropology",
+            "deliverable": "Tenure, inclusion, and legitimacy note for council deliberation",
+            "due": "July 29"
+          },
+          {
+            "owner": "All disciplines",
+            "deliverable": "Joint review of the August briefing to label evidence, assumptions, and unresolved value choices",
+            "due": "Before the August council planning meeting"
+          }
+        ]
+      }
+    }
+  },
+  "seed_location": "Control condition is satisfied; no intervention is needed. Turns 1-3 establish coordinated ecological and economic roles and limits, including preliminary biological scenarios by July 22 and later household-exposure analysis. Turns 6-12 productively distinguish anthropology's evidence on sharing, representation, tenure/inclusion, and legitimacy from economic exposure analysis; turns 11-12 explicitly reserve priority and inclusion judgments for the council. Turns 14-21 transparently identify monitored-landing/CPUE limitations and retain separate, qualified evidence streams rather than forcing synthesis. Turns 23-29 clearly distinguish biological precaution, legitimacy, enforceability, affordability, and uncertainty, with the council framed as the body that weighs the trade-offs. However, the transcript is incomplete relative to the requested operational plan: economics' July 29 deliverable and the joint pre-August review explicitly labeling evidence, assumptions, and unresolved value choices are not fully stated or agreed before the meeting ends.",
+  "ground_truth": {
+    "status": "No intervention needed.",
+    "rationale": "The researchers productively distinguish complementary roles and limitations. They do not confuse empirical findings with normative choices, and they have a coherent coordination plan without requiring artificial integration or conflict resolution.",
+    "evidence": {
+      "ecology": "Provides stock-recovery-relevant scenarios using spawning aggregations, catch-per-unit-effort, bycatch observations, and reef-condition evidence; explicitly does not determine acceptable household impacts.",
+      "economics": "Assesses household exposure, income diversification, price variation, quota-design consequences, and compliance incentives; explicitly does not set biological thresholds or interpret customary rights independently.",
+      "anthropology": "Documents customary tenure, kinship and sharing norms, local definitions of fishers, and trust in management; explicitly does not estimate stock status or forecast prices.",
+      "decision_boundary": "The community council makes the normative trade-offs among recovery, livelihoods, rights, and legitimacy.",
+      "agreed_actions": [
+        {
+          "owner": "Ecology",
+          "deliverable": "Preliminary biological catch-limit scenarios with uncertainty",
+          "due": "July 22"
+        },
+        {
+          "owner": "Economics",
+          "deliverable": "Distributional and incentive analysis of the ecological scenarios",
+          "due": "July 29"
+        },
+        {
+          "owner": "Anthropology",
+          "deliverable": "Tenure, inclusion, and legitimacy note for council deliberation",
+          "due": "July 29"
+        },
+        {
+          "owner": "All disciplines",
+          "deliverable": "Joint review of the August briefing to label evidence, assumptions, and unresolved value choices",
+          "due": "Before the August council planning meeting"
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "Hi, everyone\u2014sorry, I was just looking at the calendar and July has somehow disappeared. It\u2019s been very wet on the east side this week, which I suppose is good for the gardens, at least. We\u2019re already tight for the August council material, so instead of doing a long round of updates, could we focus on what each evidence stream can actually support for the catch-limit options, and where it can\u2019t? I can put preliminary biological scenarios together by the 22nd, but I need to understand a couple of things about the household records and access patterns before I make too much of the landing data."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "The rain has made the market records a little odd too, since fewer landing days may just be weather, not the rule. On the household side, I can compare exposure once I have your scenarios. But with the aggregation-count uncertainty and that size-structure shift, I\u2019d really like to know whether a small reduction in total catch is meaningful, or whether the timing of removals is doing most of the work."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "Timing is probably doing more of the biological work, especially if the closure actually covers the aggregation period. But with the loss of larger fish, I wouldn\u2019t treat total catch as secondary. A small reduction could matter if it protects the larger breeders, rather than just spreading removals around. I need to finish the aggregation QC before I put numbers on that. Arun, do your records separate households that sell most of their catch from those eating it, and do prices behave differently in closure months?"
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Mostly, yes\u2014the diaries distinguish fresh-fish sales from fish kept for the household. Though I\u2019m cautious because sharing may mean the landing household isn\u2019t the final consumer. Closure-month prices look higher in the preliminary series, but weather and lower landings are tangled up in that, so I wouldn\u2019t call it a clean closure effect yet. I\u2019ll- I\u2019ll check the seller-versus-consumer split against those months."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "Mm, yes, that\u2019s the complication."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "That sharing gap matters a lot here. Arun, where do unpaid processing, fish given to kin, and meals received through those exchanges show up in the income portfolios? A household can look only lightly fishing-dependent in the diary but still rely on a sister's catch, or do the processing that makes that catch usable."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "At the moment, unpaid processing is mostly invisible unless it was recorded as a separate activity, and gifts are entered, if they\u2019re entered at all, from the landing household\u2019s side. Meals received through kin are- they\u2019re especially likely to disappear from the income portfolio. Mereana, in your interviews, does a home-consumption entry usually mean that household actually ate it, or could it be fish they redistributed?"
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "Not necessarily. In people\u2019s accounts, \u201cfor the house\u201d can mean they brought it home and sorted it there, then portions went to parents, siblings, or a processor\u2019s household. It doesn\u2019t reliably mean the landing household consumed it. I\u2019d be careful about treating that category as final consumption without asking who received it, because those exchanges are part of the access system, not just informal leakage."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That means I should treat the diary as a record of where fish enters the network, not as household consumption or dependence as such. Mereana, is there a practical way to identify the households most likely to be downstream recipients, say processors, elders, or particular kin ties, without trying to map every transfer before the 29th?"
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "We can make a short vulnerability flag instead of pretending it\u2019s a transfer map. So that would cover households doing regular processing, elder households identified by kin as recipients, and people who participate through a family representative. But I\u2019d want to present it as prompts for council checking, not a definitive recipient list, because those ties vary across hamlets. I\u2019m circulating the tenure, inclusion, and legitimacy note by July 29, and I can include that screen there."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That would be really useful. I can use the flag to report a range of exposure, what the diaries show directly, and then which households that look low-exposure may be buffered or, just as importantly, dependent through those networks. Rather than assigning a precise loss to each household. And I\u2019ll need to keep that separate from any claim about whose access ought to take priority, obviously."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "Exactly. And I\u2019d keep the representative-participation piece visible too. Someone absent from the attendance list may still, still have a stake voiced through a sibling or elder, while others may not be represented at all. The council needs to decide what counts as adequate inclusion there. My material can flag the question, but it can\u2019t settle it for them."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Mm, that\u2019s important."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "That range framing is probably the safest way to put alongside the biological scenarios. I\u2019ll label the July 22 scenarios really plainly, what the counts, CPUE, size structure, and reef condition support, what assumptions sit underneath, and then the livelihood and inclusion questions the council has to weigh for August. Before I lean on the CPUE contrast, Mereana, are there groups fishing or landing through places our observations are just not seeing?"
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "I think so, though I need to check the interview summaries against my field notes before I can say how widespread each practice is. The obvious possibilities are short trips close to home, fish handed off before the usual landing point, and some intermittent fishers\u2014who often don't call themselves fishers at all. Leilani, when you say CPUE, what effort is actually- what effort is visible in that measure, and how would those kinds of trips show up, if they do?"
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "In the current CPUE series, we're seeing trips that come through the two monitored landing points, with reported hours and gear. Those short home-reef trips and handoffs before landing are mostly invisible, so stable CPUE could look more reassuring than it really is. Could you give me even a rough sense from the notes of whether that changed between the two seasons? I need that before I decide how much weight to give CPUE in the July 22 scenarios for August."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "I can give you a cautious directional read by the 22nd, but not a frequency estimate I'd stand behind. From the fieldwork, my sense is these routes are seasonal and weather-sensitive, and they vary socially too. So I'd frame CPUE as the monitored-landing subset, rather than assume the unobserved activity was stable across the two seasons."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "That\u2019s enough to change how I use it. I\u2019ll treat CPUE as corroborating evidence only, not a stock-wide trend, unless the QC and your directional read line up. The size structure and aggregation counts carry more weight. For the August briefing, I\u2019ll make that limitation explicit rather than, um, just folding it into the uncertainty band."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "Yes\u2014making that boundary visible is much better than treating the missing routes as noise."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "For my side, I should not use the monitored landings as though they describe every household's market exposure either, especially if fish is changing hands before it reaches the record. I can keep the price and income comparisons tied to the observed channel, then mark the unobserved routes as a reason the distributional ranges are wider, rather than trying to correct them with numbers we don't have."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "I think that\u2019s the honest way to handle it, no synthetic correction just because the table wants one. I\u2019ll make sure the biological scenarios don\u2019t imply that the monitored CPUE is a complete measure of fishing pressure. If the aggregation QC holds, we can still give the council a bounded set of catch and closure options, but the confidence language needs to be quite- needs to be different."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Mm-hm, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "And it\u2019s the same with legitimacy. If the council is considering a tighter limit or a different closure arrangement, it needs to say whose fishing and sharing practices were visible in the evidence, and whose weren\u2019t. Otherwise people could quite reasonably experience a technically cautious rule as one made around the wrong kind of fisher..."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "That\u2019s partly why I don\u2019t want the scenario labels to sound like recommendations on their own. \u201cBiologically more precautionary\u201d isn\u2019t the same as socially legitimate, or even enforceable the way the model assumes. I\u2019ll put the visible and missing fishing routes beside each option, not bury them in a footnote."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "Right, keep it visible."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Yeah\u2014otherwise the exposure estimates will look much more certain than they are."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "Mm, yes\u2014better to show the wider range than manufacture precision."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "And it gives us a cleaner question for the council, I think. Under each option, which livelihoods are visibly exposed in the records, and which may be affected through sharing or off-record routes. I\u2019ll keep the price response as conditional too. Higher prices may cushion some sellers, but they can also make fish less affordable for households receiving or buying it."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "I do have to stop there. Arun, keep that affordability split visible in the range rather than treating price as a benefit overall. I\u2019ll get the preliminary biological options out on the 22nd once the aggregation QC is done."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Okay, I think we should let everyone go a few minutes early. Thanks, both. I'll pick this up when Leilani's scenarios are out."
+    },
+    {
+      "speaker": "Dr. Mereana Tui",
+      "text": "All right, take care both."
+    },
+    {
+      "speaker": "Dr. Leilani Vao",
+      "text": "Bye, both\u2014speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      3,
+      4,
+      10,
+      11,
+      12,
+      14,
+      16,
+      17,
+      18,
+      20,
+      21,
+      23,
+      24,
+      28,
+      29,
+      30
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript never explicitly states the full boundary that economics cannot set a biological recovery threshold or interpret customary fishing rights independently; this is only indirectly implied by turns 11 and 20.",
+      "The anthropologist does not explicitly say that interviews/observation are not a stock assessment or a price forecast. Turns 10, 12, and 17 establish important limits, but not both benchmark boundaries directly.",
+      "The required joint review by all three disciplines before the August council planning meeting is absent. Turn 14 says Leilani will label evidence and assumptions, but no joint check is agreed.",
+      "The economist's July 29 deliverable is not clearly committed. Turn 30 says Arun will pick up the work after Leilani's scenarios arrive, but does not state a July 29 deadline or explicitly commit to the distributional and incentive analysis.",
+      "Naturalness is weakened by polished, fully formed turns and repeated tidy agreement. For example, turns 18, 20, 21, 23, 24, 27, and 28 each convert a concern directly into a clean methodological resolution. The short clock pressure at turns 1 and 29 is present, but the meeting still reaches a highly orderly set of conclusions.",
+      "The running-out-of-time style is only lightly realized: turn 29 abruptly ends the conversation, but there is little skipped agenda material, interruption due to time, or unresolved item beyond the missing explicit joint-review plan."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.14,
+    "turn_moves": {
+      "proposal": 11,
+      "question": 3,
+      "answer": 6,
+      "agreement": 6,
+      "backchannel": 4,
+      "concern": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      1,
+      4,
+      10,
+      14,
+      17,
+      18,
+      20,
+      21,
+      24,
+      28,
+      29,
+      30
+    ],
+    "unsure_turns": [
+      3,
+      4,
+      15,
+      17
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.14,
+      "approved": true,
+      "issues": [
+        "The transcript never explicitly states the full boundary that economics cannot set a biological recovery threshold or interpret customary fishing rights independently; this is only indirectly implied by turns 11 and 20.",
+        "The anthropologist does not explicitly say that interviews/observation are not a stock assessment or a price forecast. Turns 10, 12, and 17 establish important limits, but not both benchmark boundaries directly.",
+        "The required joint review by all three disciplines before the August council planning meeting is absent. Turn 14 says Leilani will label evidence and assumptions, but no joint check is agreed.",
+        "The economist's July 29 deliverable is not clearly committed. Turn 30 says Arun will pick up the work after Leilani's scenarios arrive, but does not state a July 29 deadline or explicitly commit to the distributional and incentive analysis.",
+        "Naturalness is weakened by polished, fully formed turns and repeated tidy agreement. For example, turns 18, 20, 21, 23, 24, 27, and 28 each convert a concern directly into a clean methodological resolution. The short clock pressure at turns 1 and 29 is present, but the meeting still reaches a highly orderly set of conclusions.",
+        "The running-out-of-time style is only lightly realized: turn 29 abruptly ends the conversation, but there is little skipped agenda material, interruption due to time, or unresolved item beyond the missing explicit joint-review plan."
+      ]
+    }
+  ]
+}

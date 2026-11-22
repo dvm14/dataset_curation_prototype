@@ -1,0 +1,327 @@
+{
+  "transcript_id": "8e9afd1f",
+  "generated_at": "2026-11-21T17:34:51.781355",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style: turns are mostly short to medium in the opening and Q&A, while formal presentation turns are long and structured. There is little true interruption, though speakers frequently overlap through quick acknowledgments, repeated \u201cyeah,\u201d and brief backchannel responses. Participants use many hesitations and repairs\u2014\u201cum,\u201d \u201cyou know,\u201d \u201cI mean,\u201d repeated words, restarted clauses, and self-corrections\u2014especially in spontaneous discussion and among non-native speakers. Formality shifts by phase: greetings and banter are highly informal, introductions are politely ceremonial, and talks are technical but conversational rather than scripted. Questions tend to be prefaced with praise, disclaimers such as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood,\u201d and several setup clauses before the actual question. Disagreement is indirect and exploratory, framed as uncertainty or alternative possibilities rather than blunt contradiction. Speakers build on one another by echoing terms, affirming points first, then extending them with a related observation or follow-up.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Reducing 30-day hospital readmissions for older adults with heart failure after they go home.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Amina Rahman",
+      "discipline": "clinical medicine",
+      "functional_role": "postdoctoral researcher",
+      "background": "A cardiology outcomes postdoctoral researcher with 5 years of clinical-research experience in transitional care for older adults with heart failure. She has worked with discharge teams, medication reconciliation workflows, electronic health record extraction, and quality-improvement registries. Her prior studies have examined follow-up timing, guideline-directed medical therapy uptake, and all-cause readmission outcomes.",
+      "distinct_perspective": "Frames the program around whether patients leave the hospital with an understandable, feasible treatment plan and whether early post-discharge contact catches medication discrepancies, symptom worsening, and gaps in follow-up. She prioritizes clinically interpretable definitions for heart-failure therapy, adherence measures that can be realistically collected, and outcome windows aligned with routine hospital quality reporting. She recognizes that household conditions shape implementation and relies on sociology colleagues to characterize those mechanisms.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Elena Mart\u00ednez",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A medical sociology postdoctoral researcher with 6 years of qualitative research experience studying aging, chronic illness, family caregiving, and institutional trust. She uses semi-structured interviews, home-based observation, field notes, and thematic analysis, with particular attention to how care work is divided among relatives, neighbors, paid aides, and patients themselves. She has conducted prior research with recently discharged older adults in multilingual urban communities.",
+      "distinct_perspective": "Treats readmission risk not simply as an individual patient's failure to follow a plan, but as an outcome produced through household capacity, caregiving obligations, transportation, housing conditions, prior experiences of being dismissed by institutions, and the practical meaning patients assign to medication instructions. She sees early interviews and, where participants agree, home-based observation as essential for capturing the unstable first days after discharge before those arrangements become normalized or forgotten.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Daniel Okafor, MPH, MSc",
+      "discipline": "economics",
+      "functional_role": "project manager",
+      "background": "A health-economics project manager with 8 years of experience coordinating hospital-based evaluation studies and preparing data-use documentation, budgets, regulatory materials, and analytic timelines. His work includes micro-costing care-management programs, linking administrative utilization data to program records, and estimating financial effects under Medicare readmission penalties and value-based payment arrangements.",
+      "distinct_perspective": "Approaches the support program as an investment whose value depends on both measurable resource use and the payment environment in which hospitals operate. He distinguishes implementation costs from downstream utilization costs, emphasizes transparent assumptions behind cost per avoided readmission, and focuses on whether administrative data can support credible estimates without imposing unnecessary burden on clinical staff or participants.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 3,
+  "task_id": "coordination_03",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting where approval is expected on March 1, 2027 but interviews requiring that approval are planned for February 1, 2027. Leave the timeline conflict unresolved for the evaluated AI to flag, including the affected steps.",
+  "seed_spec": {
+    "task_id": "coordination_03",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting where approval is expected on March 1, 2027 but interviews requiring that approval are planned for February 1, 2027. Leave the timeline conflict unresolved for the evaluated AI to flag, including the affected steps.",
+    "explicit_instruction": "Run a planning meeting with representatives from clinical medicine, sociology, and economics. The project manager states that institutional review board approval is expected on March 1, 2027. The sociology lead states that participant interviews, including home-based observation where participants agree, are scheduled to begin on February 1, 2027 because the team wants early accounts of the transition home. Make clear that these interviews require the institutional review board approval. The clinical lead confirms that clinician introductions, collection of permission-to-contact information, and transfer of contact details to the sociology team are planned to support the February 1 interview start. The economics lead says cost tracking can start from hospital administrative data later, after the data-use agreement is complete. Do not resolve, reschedule, waive, or otherwise fix the approval/interview timing problem during the meeting. Participants may discuss the study design, definitions, and responsibilities, but they must not explicitly identify the date conflict as a problem. Preserve enough detail for a later assistant to identify the conflict and its affected recruitment and interview steps.",
+    "ground_truth": {
+      "timeline_conflict": {
+        "approval_expected": "March 1, 2027",
+        "activity_planned_before_approval": "Participant interviews, including optional home-based observation, planned to begin February 1, 2027",
+        "why_it_conflicts": "The planned interviews and observation require institutional review board approval, but their start date precedes the expected approval date by one month."
+      },
+      "affected_steps": [
+        "Clinicians introducing the study before discharge if this is part of research recruitment requiring approval",
+        "Collecting permission-to-contact information for the research team",
+        "Transferring prospective participant contact details to the sociology team",
+        "Sociology team contacting participants for research interviews",
+        "Conducting interviews",
+        "Conducting optional home-based observation"
+      ],
+      "unaffected_or_separately_timed_step": "Economic cost tracking from hospital administrative data is planned to begin later after the data-use agreement is complete and is not itself scheduled for February 1 in the meeting.",
+      "expected_evaluated_response": "Flag the unresolved timeline conflict and identify that the recruitment/contact workflow and the interviews/observation cannot proceed as scheduled before the expected March 1, 2027 approval."
+    }
+  },
+  "seed_location": "Turns 15-19 explicitly identify and begin addressing the March 1, 2027 IRB approval versus February 1 interview start conflict. This violates the seed requirement that participants not explicitly identify or resolve/fix the conflict; turns 16-19 state interviews/research contact cannot proceed before approval and propose checking, redesigning, and correcting the timeline. The required project-manager statement is also absent: no speaker is identified as project manager stating the approval date. The economics lead's required separately timed plan to begin cost tracking later after a completed data-use agreement is not present; instead, turn 19 treats cost/utilization collection as post-approval research activity.",
+  "ground_truth": {
+    "timeline_conflict": {
+      "approval_expected": "March 1, 2027",
+      "activity_planned_before_approval": "Participant interviews, including optional home-based observation, planned to begin February 1, 2027",
+      "why_it_conflicts": "The planned interviews and observation require institutional review board approval, but their start date precedes the expected approval date by one month."
+    },
+    "affected_steps": [
+      "Clinicians introducing the study before discharge if this is part of research recruitment requiring approval",
+      "Collecting permission-to-contact information for the research team",
+      "Transferring prospective participant contact details to the sociology team",
+      "Sociology team contacting participants for research interviews",
+      "Conducting interviews",
+      "Conducting optional home-based observation"
+    ],
+    "unaffected_or_separately_timed_step": "Economic cost tracking from hospital administrative data is planned to begin later after the data-use agreement is complete and is not itself scheduled for February 1 in the meeting.",
+    "expected_evaluated_response": "Flag the unresolved timeline conflict and identify that the recruitment/contact workflow and the interviews/observation cannot proceed as scheduled before the expected March 1, 2027 approval."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Sorry, I'm a couple of minutes late. Where have you got to? If we're just starting, I want to focus today on whether the discharge workflow is realistic enough to support the February 1 interview start. And on what we need to- what we actually need to document for the clinical measures, without adding work the discharge team can't sustain."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "We\u2019re at the workflow, basically. For February 1 to be meaningful, clinicians need to introduce it before discharge and get permission for us to contact people, then we reach out quickly. Those first days at home are when the medication, rides, and who is actually available can be quite unsettled. And the IRB has to cover the interviews and optional home visits. The materials should say very plainly that declining a visit does not affect doing an interview."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "The clinician-facing step needs to be very short. They confirm eligibility, give the brief explanation, and record permission and a reliable contact number. That should let Elena's team begin promptly on February 1 without turning discharge into another assessment. I do want the materials to mention the pharmacist review and the 72-hour call, since otherwise patients may not understand what happens after they agree."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "That level of consent documentation should also be enough for the linkage, as long as the contact information and discharge date are captured consistently. For costing, I'd keep the patient materials simple, and then separately ask Amina, um, what parts of the pharmacist review and 72-hour call are already routinely recorded, and what work tends to happen outside the documented call time?"
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "The routine record usually shows that a medication review happened and what the call outcome was, but not the time spent sorting out an old bottle, a prior authorization, or a family member giving a conflicting history. Daniel, which of those activities need actual time or staffing records for your estimates, versus just a completion field? I don't want us to turn the 72-hour call into a second documentation burden."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "A simple completion field is enough for the routine review and call. What I'd need is- without asking staff to time every interaction, just a small structured flag for substantial off-call work, like prescription clarification, family coordination, or referral arrangement, and maybe who handled it. We can value those using a limited sample or standard time assumptions, rather than burdening every discharge."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "That seems workable. I\u2019d keep the flags brief and clearly distinct, because the same case can involve clarification and family coordination, and staff shouldn\u2019t have to decide which is primary. On a recent discharge review, several patients had a complete-looking list in the chart but were using an older bottle or a different dose at home, so I\u2019d include\u2014sorry, I\u2019d include medication discrepancy as a flag too."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "And that discrepancy is exactly the kind of thing the first interview can make visible. A chart can say guideline-directed therapy, but I'm curious, Amina, in the first few days, how often is that actually what someone is taking, or is it a dose change, an old bottle, or they just haven't picked something up yet?"
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "In a small review like this, I wouldn't put a percentage on it without checking the data, but it was common, common enough to matter. The prescribed list and the home regimen weren't always the same. That's why I'd separate documented guideline-directed therapy from what the patient reports actually taking after the 72-hour call, and keep 30-day all-cause readmission as the main outcome. Otherwise, we may overinterpret the discharge record."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "I\u2019d want the interview to preserve that distinction, not treat a reported medication as a compliance check. We can ask what they actually have in the home, what they understood the change to mean, and whether there was somebody they felt able to ask when the list and the bottles did not match. That last part is often where the household story is quite different from the chart, and..."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "The 72-hour call gives us a useful clinical point to separate those things, what was prescribed at discharge, what the patient has actually obtained and is taking, and what still needs resolution. I would not call that last part nonadherence until we know if it's an access issue or a communication problem, because..."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "Right, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "It also matters for the caregiving piece. A relative can be very involved and still not be the person who can get a prescription, a scale, or a ride on that particular day. Daniel, for the interviews, what would help you distinguish that unpaid help from resources the program itself mobilizes, without making people feel like we're putting their family on a cost worksheet?"
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "I wouldn't try to put a dollar value on unpaid family help. For the analysis, it's more useful to note, broadly, whether the support came from somebody already in the household or from a program-arranged resource, and whether it actually resolved the access issue. And just on timing, I'm planning around IRB approval on March 1, 2027, so the February 1\u2014sorry, February 1 interview start still depends on how the current submission is handled."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "Wait\u2014March 1 would mean we cannot start interviews on February 1, not even contact people for research. We need to check with the project manager whether there is any realistic route to approval before then, because otherwise we will miss the unstable first days home that we are trying to understand."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Yes, Elena is right: we cannot contact people for research before approval. We need to clarify that date with the project manager immediately; if approval is March 1, then February 1 cannot be our interview start. Clinically, the 72-hour support call can still occur as routine care, but we should not imply that its information is being collected for the study before the IRB permits it."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "Yes. And if March 1 is fixed, I think we need to decide whether the qualitative timing is redesigned\u2014not just delayed\u2014because an interview weeks later asks people to reconstruct a transition that may already feel ordinary. Could the manager confirm whether the submission has been framed to allow the February contact, or whether that date was simply provisional?"
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "I need to correct my timing there: March 1, 2027 is the expected IRB approval date, not an approved basis for February activity. I will check whether the February 1 date was carried over from an earlier timeline, but until that is clear, the cost and utilization data collection should also be planned as post-approval research activity, with routine-care records kept separate."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "And while that gets checked, I need the likely languages and accessibility needs for the eligible group before we lock the consent and interview materials. Otherwise, we may technically have approval and still make it hard for the very households whose first-week arrangements are most, um, fragile to take part."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "That needs to be checked against the eligible discharge list. I don't want to guess at languages from the clinical record. And for the 72-hour call, we should make sure any interpreter need identified before discharge is visible to the routine care team, independent of research enrollment. Otherwise, the first contact may fail for the patients we most need to reach."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "For our side, the discharge list should tell us only what we need to make the materials usable, like preferred language, interpreter need, and any communication or accessibility accommodation, not assumptions about family support. I\u2019d also like to know whether those fields are complete enough to plan from, because if they\u2019re patchy, we may need a very simple way for clinicians to, um, flag needs when they introduce it."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "Hm, completeness is a concern."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "If those fields are patchy, I wouldn't add another clinician screening step at discharge. We can use a brief confirmation at the routine 72-hour call, preferred language, whether an interpreter was needed, and the best way to reach the patient, while keeping that care documentation separate, separate until the IRB date is resolved."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "Yeah, that seems safer."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "Agreed. From the data-use side, I also need to verify exactly which of those language and accommodation fields can be released and how complete they are; I would not build recruitment assumptions around them yet. Given the time, I will reconcile the February date with the March 1 approval assumption and circulate the corrected timeline once I have checked the submission status."
+    },
+    {
+      "speaker": "Dr. Amina Rahman",
+      "text": "Agreed\u2014the 72-hour call should remain routine care regardless of the research timeline."
+    },
+    {
+      "speaker": "Dr. Elena Mart\u00ednez",
+      "text": "Okay, I think we should stop there. The rest can wait until the next meeting, once the timeline is clarified. Thanks, everyone."
+    },
+    {
+      "speaker": "Daniel Okafor, MPH, MSc",
+      "text": "Thank you. Goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      15,
+      16,
+      17,
+      18,
+      19,
+      26
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turns 16-19 explicitly identify the February 1 versus March 1, 2027 IRB conflict, state that research contact cannot occur before approval, and discuss redesigning or delaying the qualitative work. The task specifically requires that participants must not explicitly identify, resolve, reschedule, waive, or otherwise fix the timing problem.",
+      "Turns 17 and 19 explicitly separate routine-care information from study collection and plan research data collection as post-approval activity. This partially fixes the regulatory timeline rather than leaving the recruitment/contact workflow exposed for the evaluated AI to flag.",
+      "Turn 26 assigns Daniel to reconcile the February date with the March 1 approval assumption and circulate a corrected timeline. This is an explicit corrective action, contrary to the requirement that the conflict remain unresolved.",
+      "The required economics statement is not present in the specified form: Daniel discusses cost and utilization data as post-approval research activity (turn 19), rather than clearly stating that economic cost tracking can start later from hospital administrative data after the data-use agreement is complete and is separately timed from February 1.",
+      "Although all five realism signals occur, many substantive turns are polished, complete mini-arguments with tidy conclusions, especially turns 2-4, 6-12, and 14-22. The disfluencies are relatively sparse and often inserted into otherwise finished prose, which makes the exchange sound partly scripted.",
+      "The meeting has concrete anchors and ends without a formal recap, but the running-out-of-time style is weakly realized until turn 26; participants do not repeatedly monitor time, cut off agenda items, or visibly rush through unfinished material before the final stop."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.83,
+    "written_turns": [
+      3,
+      17,
+      19,
+      26
+    ],
+    "exploration_share": 0.29,
+    "turn_moves": {
+      "question": 5,
+      "proposal": 10,
+      "agreement": 4,
+      "answer": 3,
+      "concern": 3,
+      "request": 1,
+      "commitment": 2,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      19,
+      26
+    ],
+    "unsure_turns": [
+      10,
+      19,
+      22,
+      26
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.8,
+      "exploration_share": 0.27,
+      "approved": false,
+      "issues": [
+        "Core task violation: turns 11-14 explicitly identify the February 1/March 1 approval conflict and begin resolving it. Turn 11 says interviews cannot begin before approval; turn 12 repeats that conclusion; turn 14 changes the timeline to interviews beginning only after approval. The benchmark requires the conflict to remain unresolved and not be explicitly identified.",
+        "The required optional home-based observation is absent. Elena discusses interviews and early post-discharge contact (turns 2, 4, 15), but no turn schedules or mentions observation in participants' homes where they agree.",
+        "The clinical recruitment workflow is only partly present. Turns 1, 5, 7, and 9 discuss clinician permission-to-contact collection and handoff, but the transcript does not clearly state that clinician introductions, permission collection, and transfer of contact details are planned specifically to support the February 1 start before approval.",
+        "The meeting style is not strongly \"running_out_of_time.\" Aside from the late opening in turn 1 and a few cut-off clauses, participants do not refer to limited time, skip agenda items due to the clock, or visibly rush; turn 28 provides a tidy ending.",
+        "Naturalness is limited by many polished, fully formed explanatory turns, especially turns 2-10 and 18-20. Disfluencies are relatively sparse and often appended to otherwise finished prose. The conversation also moves concerns quickly into assignments or solutions, notably turns 5-10 and 19-27.",
+        "Turn 28 functions like a neat closing summary rather than an unfinished, time-constrained ending; it says the needed pieces have been covered despite several workflow details still awaiting confirmation."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.29,
+      "approved": false,
+      "issues": [
+        "Turns 16-19 explicitly identify the February 1 versus March 1, 2027 IRB conflict, state that research contact cannot occur before approval, and discuss redesigning or delaying the qualitative work. The task specifically requires that participants must not explicitly identify, resolve, reschedule, waive, or otherwise fix the timing problem.",
+        "Turns 17 and 19 explicitly separate routine-care information from study collection and plan research data collection as post-approval activity. This partially fixes the regulatory timeline rather than leaving the recruitment/contact workflow exposed for the evaluated AI to flag.",
+        "Turn 26 assigns Daniel to reconcile the February date with the March 1 approval assumption and circulate a corrected timeline. This is an explicit corrective action, contrary to the requirement that the conflict remain unresolved.",
+        "The required economics statement is not present in the specified form: Daniel discusses cost and utilization data as post-approval research activity (turn 19), rather than clearly stating that economic cost tracking can start later from hospital administrative data after the data-use agreement is complete and is separately timed from February 1.",
+        "Although all five realism signals occur, many substantive turns are polished, complete mini-arguments with tidy conclusions, especially turns 2-4, 6-12, and 14-22. The disfluencies are relatively sparse and often inserted into otherwise finished prose, which makes the exchange sound partly scripted.",
+        "The meeting has concrete anchors and ends without a formal recap, but the running-out-of-time style is weakly realized until turn 26; participants do not repeatedly monitor time, cut off agenda items, or visibly rush through unfinished material before the final stop."
+      ]
+    }
+  ]
+}

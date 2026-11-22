@@ -1,0 +1,609 @@
+{
+  "series_id": "aeee4b52",
+  "generated_at": "2026-11-22T02:08:20.127898",
+  "task_id": "integration_02",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.",
+  "input_type": "paired_meetings",
+  "research_id": "chw_blood_pressure",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "research_problem": "Determine whether the two described research meetings are cross-disciplinary by identifying the disciplines represented, while distinguishing genuinely separate disciplines from specialties within a single field.",
+  "project_context": "The materials contain two unrelated research-planning meetings. One concerns evaluation of a community health worker home-visit program for patients with uncontrolled hypertension; the other concerns neural mechanisms of working-memory maintenance in a laboratory study.",
+  "plan_document": null,
+  "ground_truth": {
+    "Meeting A \u2014 March 3, 2027": {
+      "disciplines_present": [
+        "clinical medicine",
+        "sociology",
+        "public health"
+      ],
+      "is_cross-disciplinary": true,
+      "reason": "The meeting combines three genuinely distinct disciplines with different objects of inquiry and methods: clinical outcomes and care design, sociological study of trust and home-visit practice, and public-health analysis of population reach, equity, and implementation (Meeting A)."
+    },
+    "Meeting B \u2014 March 10, 2027": {
+      "disciplines_present": [
+        "neuroscience"
+      ],
+      "specialties_present": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "is_cross-disciplinary": false,
+      "reason": "The participants use different specialties and methods, but both are within neuroscience and share its core training, concepts, and vocabulary concerning working memory, prefrontal representations, and neural activity (Meeting B)."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting A \u2014 March 3, 2027",
+      "disciplines": [
+        "clinical medicine",
+        "sociology",
+        "public health"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Elena Marquez",
+          "discipline": "clinical medicine",
+          "functional_role": "principal investigator",
+          "background": "Primary-care physician with 14 years of practice in a federally qualified health center and 8 years leading pragmatic hypertension-quality-improvement studies. She routinely uses electronic health record data, medication reconciliation, protocolized titration pathways, and chart review to assess blood-pressure control and treatment safety.",
+          "distinct_perspective": "Frames the program around whether it improves clinically meaningful blood-pressure control without creating missed medication problems or unsafe intensification. She wants a rollout design that permits credible comparison across sites and clear follow-up procedures for medication review and titration. She is wary of measures that are difficult to connect to patient outcomes or routine clinical decision-making.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Tariq Mensah",
+          "discipline": "sociology",
+          "functional_role": "project manager",
+          "background": "Medical sociologist with 11 years of qualitative research experience on chronic illness, care relationships, and household decision-making in under-resourced communities. His work combines semi-structured interviews, ethnographic observation, fieldnotes, and interpretive analysis of how institutions define patients, families, risk, and compliance.",
+          "distinct_perspective": "Treats the home visit as a social encounter rather than a neutral delivery mechanism. He examines how trust is built or withheld, how household members negotiate authority over treatment, and how community health workers manage competing expectations from families and clinics. He presses the team to observe visits and interview participants rather than infer these processes solely from utilization or blood-pressure data.",
+          "tone": "diplomatic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Priya Nanduri",
+          "discipline": "public health",
+          "functional_role": "principal investigator",
+          "background": "Public-health implementation researcher with 13 years of experience evaluating community-based cardiovascular prevention programs for municipal health departments and safety-net systems. She uses mixed methods, including service-population data, implementation dashboards, equity-stratified reach analyses, workforce assessments, and interviews with program administrators and funders.",
+          "distinct_perspective": "Focuses on whether the program can reach the people who need it across the whole service population, especially those missed by screening or follow-up systems. She asks whether staffing, referral workflows, supervision, and local financing make the model feasible and sustainable, and whether benefits and burdens are distributed equitably. She seeks measures that can link clinical and fieldwork findings to implementation decisions.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "The materials contain two unrelated research-planning meetings. One concerns evaluation of a community health worker home-visit program for patients with uncontrolled hypertension; the other concerns neural mechanisms of working-memory maintenance in a laboratory study.\n\nMeeting A \u2014 March 3, 2027. The hypertension evaluation team is aligning the clinical outcomes, fieldwork, and population-level implementation questions for a proposed community health worker home-visit program.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Three researchers participate: a primary-care physician, a medical sociologist, and a public-health implementation researcher. The physician states that the central clinical outcome should be blood-pressure control and proposes a stepped-wedge rollout with medication review and titration during follow-up visits. The sociologist says home visits should be studied as social encounters, raising trust between workers and families, disagreement over who in a household is treated as the patient, and interviews plus observation of visits. The public-health researcher focuses on program reach, equitable screening and follow-up across the service population, workforce capacity, and whether local funding can sustain the program. They agree that the evaluation should include these distinct questions, but do not settle the final measurement instrument or sampling plan. Nobody characterizes the meeting by its disciplinary status.",
+        "explicit_instruction": "Three researchers participate: a primary-care physician, a medical sociologist, and a public-health implementation researcher. The physician states that the central clinical outcome should be blood-pressure control and proposes a stepped-wedge rollout with medication review and titration during follow-up visits. The sociologist says home visits should be studied as social encounters, raising trust between workers and families, disagreement over who in a household is treated as the patient, and interviews plus observation of visits. The public-health researcher focuses on program reach, equitable screening and follow-up across the service population, workforce capacity, and whether local funding can sustain the program. They agree that the evaluation should include these distinct questions, but do not settle the final measurement instrument or sampling plan. Nobody characterizes the meeting by its disciplinary status.",
+        "ground_truth": {
+          "participants_and_fields": [
+            "A primary-care physician represents clinical medicine.",
+            "A medical sociologist represents sociology.",
+            "A public-health implementation researcher represents public health."
+          ],
+          "key_contributions": [
+            "Clinical medicine supplies blood-pressure outcomes, stepped-wedge evaluation, medication titration, and follow-up care.",
+            "Sociology examines trust, household definitions of the patient, and observed/interviewed home-visit practice.",
+            "Public health examines population reach, equity, workforce capacity, and sustainable funding."
+          ]
+        }
+      },
+      "ground_truth": {
+        "participants_and_fields": [
+          "A primary-care physician represents clinical medicine.",
+          "A medical sociologist represents sociology.",
+          "A public-health implementation researcher represents public health."
+        ],
+        "key_contributions": [
+          "Clinical medicine supplies blood-pressure outcomes, stepped-wedge evaluation, medication titration, and follow-up care.",
+          "Sociology examines trust, household definitions of the patient, and observed/interviewed home-visit practice.",
+          "Public health examines population reach, equity, workforce capacity, and sustainable funding."
+        ]
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "Morning. I\u2019m mostly hoping we leave with blood-pressure control as the main outcome, and a realistic sense of what follow-up the sites can actually support, especially medication review, not just outreach."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "And I want us to look at the denominator beyond the people who enroll, who gets screened, referred, reached, and then drops out. Elena, quick question, if a worker finds a medication problem at home, how much review or, um, titration can the primary-care teams realistically absorb?"
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "That\u2019s the piece I need to check site by site. A worker can flag a discrepancy, but if there isn\u2019t a clinician reviewing it promptly, and a path for titration when it\u2019s appropriate, we could identify problems we can\u2019t close. I don\u2019t yet know which sites have that capacity in each rollout period."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "That distinction matters because a discrepancy isn't automatically a safety event. It could be a charting artifact, or it could be the household's actual medication practice. Elena, what would routine care treat as actionable, versus something to, um, reconcile later? And alongside the flags, I'd want to observe a small number of visits. Otherwise we'll miss who is actually making those decisions at home."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "Mm, right."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "In routine care, I\u2019d call it actionable if it\u2019s a mismatch that could change what the patient takes, a side effect, or a pressure that stays high despite the listed regimen. A chart artifact can wait a little, but we still need the reconciliation documented. Otherwise, like in my recent reviews, we can\u2019t tell what actually improved."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "I\u2019d want the fieldwork to preserve that distinction, rather than coding every mismatch as nonadherence. The worker\u2019s explanation, and who in the household gets positioned as responsible for fixing it, may be part of why a clinically actionable issue is- or isn\u2019t actually resolved."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "Tariq, for the visits you observe, what would let us tell whether household responsibility or trust is driving nonresolution, or whether it\u2019s a slower referral handoff or simply a worker with too many cases? I\u2019m thinking about the neighborhood where screening is high but follow-up falls off, and staffing totals there look normal."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "I wouldn\u2019t try to infer that from the outcome record alone. We\u2019d need paired observation and short follow-up interviews around a purposive set of unresolved flags, with the worker, the patient, and, where appropriate, the person managing medicines. Then we could compare the interactional account with referral timestamps and caseload. Otherwise, trust becomes a residual category for, I\u2019m losing the thread, for everything the dashboard can\u2019t explain."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "For that neighborhood, I\u2019d also want the actual interval from referral to first contact, and from flag to clinical response, not just aggregate staffing. Comparable headcount can conceal a very different supervision or handoff setup. And yes, yes, that seems like the right way to avoid blaming households for a workflow failure."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "Those intervals are clinically important, yes. If a home-visit flag sits for a week or two, then the blood pressure outcome is partly measuring the site's, um, response capacity, not just the worker visit. Could we capture flag-to-clinician-review and flag-to-resolution separately?"
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "Mm-hm, separately, yes."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "And I\u2019d keep the denominator for each of those stages, how many flags were generated, reviewed, and resolved, stratified by neighborhood and patient, patient group. Otherwise a site can look efficient on resolution just because fewer people ever make it into the handoff."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "And for the unresolved subset, I\u2019d resist treating the denominator as just individual patients. We should note whether a medicine manager or another relative was there and involved, because the apparent handoff may be happening through a household arrangement the clinic record can\u2019t see. I need to check, though, what consent will let us record when other people are in the room..."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "That consent question affects feasibility too. If household involvement is central but we can\u2019t document it consistently, we need a lighter way to capture it. Maybe worker notes can record whether another decision-maker was present without identifying them, though I\u2019m not sure what the ethics constraints will allow."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "A nonidentifying field for \"another person involved in medication decisions\" could be useful, but I'd tie it to the flag and what happened next. The clinical record still needs to show whether the regimen was reviewed and resolved. Otherwise we'll have the context without knowing whether the patient's treatment was actually made safer, and..."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "I\u2019d be careful that the presence field doesn\u2019t become a proxy for involvement. Someone can be in the room and have no say, while the medication manager may be absent but directing decisions by phone or through routine. Maybe workers can note, briefly, who was consulted and whether they shaped the plan, without identifying them."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "That seems more useful than a presence checkbox. I\u2019d just want the worker note to end with something concrete for care. Was the regimen changed, was someone asked to contact the clinic, and did a clinician review it? Otherwise, we may collect a lot of household detail and not be able to connect it to whether the flag was resolved."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "Exactly. I\u2019m not proposing household detail as a separate narrative. The note needs to link the negotiated plan to the clinical pathway. But \u201csomeone was asked to contact the clinic\u201d is different from whether that person had the authority or the practical capacity to do it, and that may be why a flag remains open."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "For implementation, I\u2019d want a brief structured field that separates \u201ccontact was advised\u201d from whether the person who could act actually had the authority, time, phone access, whatever the barrier was. Then we can see if open flags cluster in a particular referral workflow or household circumstance instead of treating those as interchangeable."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "I\u2019d avoid making \u201cauthority, time, phone access\u201d a fixed menu too early. Those are useful prompts, but the account should leave room for the worker\u2019s own interpretation and the patient\u2019s too, because what looks like a phone-access barrier may be a phone- I mean, a decision not to involve the clinic at all. Could the structured field include an \u201cother/unclear\u201d pathway linked to a short note?"
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "A few prompts, then other/unclear with a short note, I think that\u2019s workable, rather than pretending we already know the barrier taxonomy. We can test whether workers use it consistently before we fix the instrument. I don\u2019t think we have enough operational detail to lock that down..."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "Hm, piloting is important."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "For the pilot, I'd want to see whether the note can still support a clear clinical disposition, reviewed, regimen changed, follow-up pending, or unresolved. And before we choose rollout periods, I need the sites to tell us which of those they can actually close within, say, a few days, rather than leaving flags open, because otherwise..."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "Before we set rollout periods, we need each site's actual closure capacity, not just whether they agree to receive flags. I'm also going to check the municipal funding cycle, because a model that depends on rapid clinician review and, um, supervision may be hard to sustain once the initial CHW funding ends."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "That funding check matters because if rapid review disappears after the grant period, I don't think we can interpret better pressures as a durable program effect. I'd still like to explore a stepped, stepped rollout, but only once we know which sites can meet the review-and-titration pathway in each period."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "Before we make rollout depend only on closure capacity, I'd want to know if the sites can support the observation and follow-up consent process too. Otherwise, we may pick the sites that are most clinically responsive and then have no way to see how the care pathway is being negotiated in the homes."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "Those are both readiness criteria, really, not just the clinical one. I'd rather map site capacity for timely review, CHW supervision, and the observation and consent workflow before we decide on rollout. Otherwise we may, may confuse a site's research infrastructure with whether the program can reach people equitably."
+        },
+        {
+          "speaker": "Dr. Tariq Mensah",
+          "text": "Right, that\u2019s a real concern."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "For me, readiness has to be recorded separately from the outcome. A site may not be able to support observation, but if it also can't get a medication flag reviewed and acted on promptly, it shouldn't go into a period where we expect a blood-pressure effect. I'll get the sites' actual review and, and titration capacity before we settle the stepped rollout."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "And alongside that, we should record why a site isn't ready, whether it's clinical response capacity, supervision, consent workflow, or funding uncertainty, instead of collapsing it into one readiness score. That'll matter when we interpret who was actually reached in the rollout, especially if the better-resourced sites enter first and..."
+        },
+        {
+          "speaker": "Dr. Elena Marquez",
+          "text": "Okay, I think we're at time. Let's pick this up once we have the site capacity information. Thanks, everyone."
+        },
+        {
+          "speaker": "Dr. Priya Nanduri",
+          "text": "Thanks, everyone. Bye."
+        }
+      ],
+      "seed_location": "Turns 1, 3, 6, 11, 16, 18, 24, 26, and 30 establish the physician's clinical-medicine focus on blood-pressure control, medication review/titration, follow-up, and a stepped rollout. Turns 4, 7, 9, 14, 17, 19, 21, and 27 establish the sociological focus on home visits as social interactions, household medication roles/authority, trust-related interpretation, and observation/interviews. Turns 2, 8, 10, 13, 20, 22, 25, 28, and 31 establish the public-health implementation focus on reach and equity across the service population, referral workflows, workforce/supervision capacity, and funding sustainability. Turns 22, 24-25, and 32 show agreement to pilot and gather capacity information while leaving the measurement instrument, sampling/observation details, and rollout plan unresolved. No participant characterizes the meeting by disciplinary status.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          8,
+          9,
+          11,
+          13,
+          14,
+          22,
+          24,
+          25,
+          26,
+          27,
+          28,
+          30,
+          31
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by the highly polished, agenda-driven construction of most substantive turns. For example, turns 8-11 and 13-22 repeatedly convert a concern into a precise measurement or design refinement, with unusually complete reasoning and clean handoffs.",
+          "The supplied meeting style is a rushed quick check-in with mostly one- or two-sentence status updates, but many turns are dense mini-paragraphs of 40-67 words (especially 8-11, 13-22, and 24-31). This makes the interaction feel more like a scripted design workshop than a rushed weekly check-in.",
+          "Disfluencies are often inserted into otherwise polished syntax rather than arising organically; examples include turns 2, 4, 9, 11, 16, 21, 25, 26, 28, and 30. The repair in turn 9 also uses the prohibited stock phrase \"I\u2019m losing the thread.\"",
+          "The conversation provides little off-agenda human texture or concrete situational anchoring beyond the research workflow. Turn 32 ends the meeting on time, but no participant has an imminent competing meeting or other check-in context that would help support the requested rushed style.",
+          "Although the team leaves the instrument and sampling/details open in turns 14-15 and 21-22, their shared agreement is somewhat implicit rather than directly stated. A brief, natural acknowledgment that the clinical, social, and implementation questions all remain in scope would make the required agreement easier to identify."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.93,
+        "written_turns": [
+          7,
+          20
+        ],
+        "exploration_share": 0.19,
+        "turn_moves": {
+          "proposal": 15,
+          "question": 4,
+          "concern": 1,
+          "backchannel": 2,
+          "answer": 2,
+          "request": 2,
+          "agreement": 4,
+          "idea": 1,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          25,
+          30
+        ],
+        "unsure_turns": [
+          3,
+          9,
+          14,
+          15,
+          22,
+          24
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 34,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.82,
+          "exploration_share": 0.29,
+          "approved": false,
+          "issues": [
+            "The required stepped-wedge rollout is not actually proposed in the dialogue. It appears only in the physician persona and seed; turns 1 and 30 mention a generic \u201crollout\u201d and \u201ceach stepped-wedge period,\u201d but no speaker states or proposes a stepped-wedge design.",
+            "The public-health sustainability requirement is absent from the meeting. Dr. Nanduri discusses reach, equity, staffing, workflow, and caseload in turns 3-5 and 16-29, but nobody addresses whether local funding can sustain the program.",
+            "The sociologist never explicitly proposes interviews plus observation of home visits as the study method. Interviews are suggested at turn 6 and observation at turn 13, but the transcript does not clearly establish the requested paired qualitative plan.",
+            "The team does not clearly agree that all three distinct evaluation questions will be included. There are local agreements about indicators and workflow (for example turns 18, 22, and 25), but no explicit agreement encompassing clinical, sociological, and implementation questions.",
+            "Naturalness is weakened by highly polished, dense, sequentially responsive turns. Most speakers immediately convert the prior point into a refined measurement or workflow proposal, especially turns 15-31, making the exchange sound engineered rather than like a rushed weekly check-in.",
+            "Turn 13 uses the prohibited stock phrase \u201cI\u2019ve lost my thread,\u201d despite the meeting-style instruction explicitly forbidding it.",
+            "The transcript conflicts with the requested quick-checkin style: 34 turns are dominated by long, carefully composed technical paragraphs and end with a tidy closing at turns 33-34 rather than stopping abruptly because someone must leave.",
+            "Speaker discipline is generally clear, but the physician does not visibly lead the key clinical design contribution required by the task; her central BP-control measure and medication-safety discussion are clear, while the stepped-wedge proposal is missing."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.93,
+          "exploration_share": 0.19,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by the highly polished, agenda-driven construction of most substantive turns. For example, turns 8-11 and 13-22 repeatedly convert a concern into a precise measurement or design refinement, with unusually complete reasoning and clean handoffs.",
+            "The supplied meeting style is a rushed quick check-in with mostly one- or two-sentence status updates, but many turns are dense mini-paragraphs of 40-67 words (especially 8-11, 13-22, and 24-31). This makes the interaction feel more like a scripted design workshop than a rushed weekly check-in.",
+            "Disfluencies are often inserted into otherwise polished syntax rather than arising organically; examples include turns 2, 4, 9, 11, 16, 21, 25, 26, 28, and 30. The repair in turn 9 also uses the prohibited stock phrase \"I\u2019m losing the thread.\"",
+            "The conversation provides little off-agenda human texture or concrete situational anchoring beyond the research workflow. Turn 32 ends the meeting on time, but no participant has an imminent competing meeting or other check-in context that would help support the requested rushed style.",
+            "Although the team leaves the instrument and sampling/details open in turns 14-15 and 21-22, their shared agreement is somewhat implicit rather than directly stated. A brief, natural acknowledgment that the clinical, social, and implementation questions all remain in scope would make the required agreement easier to identify."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting B \u2014 March 10, 2027",
+      "disciplines": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "cognitive neuroscience",
+          "functional_role": "research engineer",
+          "background": "Dr. Chen has 9 years of experience designing and running human cognitive-neuroscience experiments, including fMRI studies of attention, visual working memory, and oculomotor control. She manages task implementation, eye tracking, scanner-compatible behavioral hardware, preprocessing workflows, and multivoxel pattern-analysis pipelines for a university neuroimaging center. Her recent work has used delayed-saccade paradigms to ask how task goals and remembered spatial locations are represented in frontoparietal cortex.",
+          "distinct_perspective": "Chen treats the delayed-saccade task as a controlled behavioral assay for isolating maintenance of a spatial representation. She focuses on whether the experiment cleanly separates encoding, delay, distraction, and response processes; whether participants actually maintain the intended location; and whether prefrontal decoding provides interpretable evidence about the content of the maintained representation. She is especially attentive to the practical tradeoff between acquisition timing, trial structure, eye-movement artifacts, and the inferential limits of fMRI-based neural measures.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Rafael Okafor",
+          "discipline": "computational neuroscience",
+          "functional_role": "postdoctoral researcher",
+          "background": "Dr. Okafor is a postdoctoral researcher with 5 years of experience building and analyzing recurrent neural-network models of working memory, cognitive control, and distractor robustness. His work combines task-trained RNNs, representational similarity analysis, state-space methods, dynamical-systems analysis, and model-to-neural-data comparisons. He has collaborated on studies relating latent trajectories in artificial networks to population-level neural recordings and fMRI representational geometry.",
+          "distinct_perspective": "Okafor frames the central question in terms of candidate dynamical mechanisms: whether remembered location is supported by persistent activity, a low-dimensional attractor-like manifold, activity-silent coding, or a task-dependent trajectory that is perturbed and restored after distraction. He wants model fitting and comparison to generate falsifiable predictions about how representational geometry should change across the delay and following distractors. He is cautious about claiming correspondence between fast model dynamics and slow hemodynamic signals, and will emphasize observation models, temporal aggregation, and the need to define what features of the neural data can validly adjudicate among models.",
+          "tone": "formal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "The materials contain two unrelated research-planning meetings. One concerns evaluation of a community health worker home-visit program for patients with uncontrolled hypertension; the other concerns neural mechanisms of working-memory maintenance in a laboratory study.\n\nMeeting B \u2014 March 10, 2027. Two neuroscience researchers are planning a working-memory study on how prefrontal neural activity maintains a remembered visual location during a delay period.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Two researchers participate: a cognitive neuroscientist and a computational neuroscientist. The cognitive neuroscientist proposes a delayed-saccade task combined with fMRI and multivoxel pattern analysis to test whether remembered location can be decoded from prefrontal cortex during the delay. The computational neuroscientist proposes fitting recurrent neural-network models to the task and comparing model dynamics with the observed neural representations, including predictions about distractor-related changes. Both use the shared concepts of working memory, prefrontal representations, delay-period activity, and task performance. They discuss whether fMRI temporal resolution is sufficient for the planned comparison and leave the final acquisition sequence unresolved. Nobody characterizes the meeting by its disciplinary status.",
+        "explicit_instruction": "Two researchers participate: a cognitive neuroscientist and a computational neuroscientist. The cognitive neuroscientist proposes a delayed-saccade task combined with fMRI and multivoxel pattern analysis to test whether remembered location can be decoded from prefrontal cortex during the delay. The computational neuroscientist proposes fitting recurrent neural-network models to the task and comparing model dynamics with the observed neural representations, including predictions about distractor-related changes. Both use the shared concepts of working memory, prefrontal representations, delay-period activity, and task performance. They discuss whether fMRI temporal resolution is sufficient for the planned comparison and leave the final acquisition sequence unresolved. Nobody characterizes the meeting by its disciplinary status.",
+        "ground_truth": {
+          "participants_and_specialties": [
+            "A cognitive neuroscientist represents the cognitive neuroscience specialty.",
+            "A computational neuroscientist represents the computational neuroscience specialty."
+          ],
+          "key_contributions": [
+            "Cognitive neuroscience contributes behavioral task design, fMRI, and multivoxel decoding of delay-period representations.",
+            "Computational neuroscience contributes recurrent neural-network modeling and model-based predictions about neural dynamics.",
+            "Both participants share neuroscience training and vocabulary centered on working memory, prefrontal representations, and neural activity."
+          ]
+        }
+      },
+      "ground_truth": {
+        "participants_and_specialties": [
+          "A cognitive neuroscientist represents the cognitive neuroscience specialty.",
+          "A computational neuroscientist represents the computational neuroscience specialty."
+        ],
+        "key_contributions": [
+          "Cognitive neuroscience contributes behavioral task design, fMRI, and multivoxel decoding of delay-period representations.",
+          "Computational neuroscience contributes recurrent neural-network modeling and model-based predictions about neural dynamics.",
+          "Both participants share neuroscience training and vocabulary centered on working memory, prefrontal representations, and neural activity."
+        ]
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hey\u2014sorry, I\u2019m coming straight from the scanner schedule. What I need today is to pin down what kind of distractor-related\u2014what representational change would actually be diagnostic for the model before I lock the trial timing."
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "For the models, the useful contrast isn't just whether location information survives. It's whether the distractor produces a transient displacement in the location geometry and then a restoration. Could the timing give us, give us separable estimates for pre-distractor delay, the distractor epoch, and post-distractor delay, instead of one delay-averaged pattern?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Probably, but not at the resolution the model has in mind. I can give you pre- and post-distractor delay estimates if we leave enough spacing and jitter, but BOLD will smear the actual displacement and, sorry, the restoration. What feature would still count as a match once it's been convolved and averaged like that?"
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "I think the robust prediction is a difference in the pre- versus post-distractor representational geometry, after we apply the same hemodynamic convolution and trial averaging to the model. A restored-trajectory account should recover the original location geometry post-distractor, whereas a shifted representation should leave a systematic bias. But I need the, the candidate timing to see whether those estimates are really distinguishable."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "If I build, say, two delay windows with the distractor centered between them and jitter the onset across trials, we can test that pre- and post-distractor geometry directly. But I need to check the TR and total run length before I promise clean separation. And for the pilot's directional endpoint bias, would your shifted state predict that bias tracking the decoded post-distractor geometry, or could it just emerge at, um, readout?"
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "Either is possible. With a true shifted-state account, I'd expect the decoded post-distractor geometry and the endpoint bias to covary across locations or trials. But if the bias only shows up at readout, the latent location geometry could be restored while the output mapping is displaced. That distinction is useful, though with fMRI I'd want to put it at the condition level unless we have enough trials for reliable trialwise decoding."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That makes sense. I\u2019ll treat the endpoint bias as a separate behavioral readout, then\u2014maybe we should regress condition-level saccade error against the post-distractor decoding bias, rather than assume either one proves a shifted memory state. For the sequence, I need to see whether we can afford enough post-distractor delay to estimate that without the response-related signal bleeding back in."
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "I think that is the key tradeoff. If the response follows immediately, any apparent post-distractor shift could be entangled with motor preparation. So even a modestly longer post-distractor interval may be more valuable than a very fine-grained distractor estimate. Once you have a candidate sequence, I can convolve the model predictions against it and see whether the two mechanisms remain separable."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019m leaning toward protecting that post-distractor interval, even if it means fewer distractor conditions. I\u2019ll check the actual TR and run budget, but would a binary comparison, geometry returns to baseline versus it stays systematically displaced, be enough for your model test, rather than trying to recover the whole, whole transient?"
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "That binary comparison is the right primary test, as long as baseline means the pre-distractor geometry and not just an undifferentiated delay average. The caveat is, both of my simulated networks could look similar after broad delay averaging. I\u2019d want to- I\u2019d want the model predictions passed through the actual windowing and HRF first. If they still stay separable there, we don\u2019t need the full transient."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, that gives me a pretty concrete criterion. I\u2019ll sketch the sequence around distinct pre- and post-distractor windows, then send you the actual event timing once I\u2019ve checked the TR and run budget. If the convolved predictions still, still separate, we can keep the analysis deliberately simple."
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "Yes\u2014send the timing when you have it; the separability check should be straightforward."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Great. One thing I\u2019ll make explicit in the timing sheet is the response cue and the eye-tracking exclusion window, because if fixation breaks or people start planning the saccade early, that post-distractor estimate gets messy fast. I\u2019ll send the candidate windows once I know what the scanner schedule will tolerate."
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "That will help a lot. One small thing, could the eye-tracking sheet distinguish ordinary fixation breaks from tiny, tiny systematic drifts toward the distractor? I'm not sure what's reliable in your setup, but that could tell us whether an endpoint bias is already emerging during maintenance rather than only at the response."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "We can separate those. The scanner tracker should resolve small, sustained gaze offsets if we calibrate carefully, though I'd want to define a drift metric ahead of time and keep it distinct from microsaccades and the usual noise. If drift toward the distractor covaries with endpoint error, that'd be useful, useful, but fixation can look perfectly acceptable while there's still a subtle directional offset."
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "That's useful, because a sustained directional drift and a normal-looking fixation trace aren't the same thing mechanistically. If the drift predicts the eventual error while the post-distractor geometry is restored, that would make me more cautious about calling the neural representation shifted. It could be an oculomotor or readout contribution. I'd keep the drift metric as a, as a covariate rather than an exclusion criterion, if that's feasible."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Covariate rather than exclusion is the right default. I\u2019ll need to look at the tracker noise floor in the pilot before deciding how finely to bin it, but we can pre-register a sustained post-distractor directional offset and see whether it explains endpoint error beyond the decoded geometry, and then\u2014"
+        },
+        {
+          "speaker": "Dr. Rafael Okafor",
+          "text": "I should stop us there, we're out of time. Thanks, Maya. Once you send the timing, I'll look at it, and we can pick this up next week, if\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Sounds good\u2014talk next week."
+        }
+      ],
+      "seed_location": "The requested scenario is only partially evidenced. Turns 1-19 show two researchers jointly planning a delayed-saccade/distractor fMRI study, discussing pre-/post-distractor delay windows, BOLD/HRF temporal limitations, decoded representational geometry, behavioral endpoint bias, and an unresolved acquisition/timing sequence (especially turns 1-11 and 13-18). Turn 2 and turns 4, 8, 10-12 explicitly support computational model predictions, simulated networks, and convolution of model predictions. However, the transcript never explicitly identifies either speaker as a cognitive neuroscientist or computational neuroscientist, never explicitly mentions recurrent neural networks, multivoxel pattern analysis, prefrontal cortex, or working memory. Thus the full seed and ground-truth specialty/contribution claims cannot be fully verified from this transcript alone.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by highly polished, complete technical turns throughout, especially turns 2-11 and 14-16. Although there are repetitions and fillers, most turns cleanly state a claim, qualification, and next step rather than sounding like spontaneous rushed check-in speech.",
+          "The stated quick_checkin style calls for mostly one- or two-sentence short status updates and questions, but the transcript is dominated by 40-70 word analytic exchanges. This makes it read more like a carefully scripted protocol-design discussion than a rushed weekly check-in.",
+          "Disfluencies often feel inserted into otherwise finished prose, for example the repeated words in turns 2, 4, 9-11, 15-16. More partial thoughts, genuine uncertainty, or less fully resolved responses would improve realism.",
+          "Turn 18 ends with an artificial cut-off ('if\u2014') after an otherwise tidy meeting closure. The interruption is useful as a realism signal, but it would be more natural if the cutoff arose amid an unfinished substantive point rather than immediately after scheduling the next meeting."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.88,
+        "written_turns": [
+          6,
+          8
+        ],
+        "exploration_share": 0.16,
+        "turn_moves": {
+          "proposal": 5,
+          "question": 3,
+          "answer": 4,
+          "commitment": 3,
+          "agreement": 3,
+          "request": 1
+        },
+        "volunteer_turns": [
+          8,
+          9,
+          11,
+          13,
+          18
+        ],
+        "unsure_turns": [
+          4,
+          5,
+          7,
+          9,
+          14,
+          15,
+          17
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 19,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.88,
+          "exploration_share": 0.16,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by highly polished, complete technical turns throughout, especially turns 2-11 and 14-16. Although there are repetitions and fillers, most turns cleanly state a claim, qualification, and next step rather than sounding like spontaneous rushed check-in speech.",
+            "The stated quick_checkin style calls for mostly one- or two-sentence short status updates and questions, but the transcript is dominated by 40-70 word analytic exchanges. This makes it read more like a carefully scripted protocol-design discussion than a rushed weekly check-in.",
+            "Disfluencies often feel inserted into otherwise finished prose, for example the repeated words in turns 2, 4, 9-11, 15-16. More partial thoughts, genuine uncertainty, or less fully resolved responses would improve realism.",
+            "Turn 18 ends with an artificial cut-off ('if\u2014') after an otherwise tidy meeting closure. The interruption is useful as a realism signal, but it would be more natural if the cutoff arose amid an unfinished substantive point rather than immediately after scheduling the next meeting."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly medium-to-long turns once presentations begin, framed by very short, informal back-and-forth during setup and social chat. Interruptions are low during formal talks but common in the casual opening, with quick acknowledgments, overlapping greetings, and occasional unfinished or self-corrected phrasing. Speakers hedge frequently with \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d and \u201cit could be,\u201d especially when interpreting results or speculating. The tone is collegial and semi-formal: relaxed, friendly, and conversational, but technically precise during presentations and questions. Participants build on one another by praising the work, restating a point before asking a question, and linking it to their own experience; challenges are indirect and exploratory rather than confrontational. Speech contains many fillers, repetitions, false starts, repairs, and lightly fragmented sentences, particularly from non-native speakers and in live discussion. Questions are typically prefaced as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions, often bundled into multi-part prompts, while answers are expansive, qualified, and willing to acknowledge uncertainty or open directions.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

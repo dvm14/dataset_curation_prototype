@@ -1,0 +1,350 @@
+{
+  "transcript_id": "4facc678",
+  "generated_at": "2026-11-21T23:22:31.957610",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial academic-video-call style, with mostly short to medium turns outside the presentations and long, highly structured monologues during talks. There is frequent overlap at transitions, greetings, and quick reactions, plus occasional false starts, repetitions, and audio-related repairs. Speakers use many fillers and hedges\u2014\u201cum,\u201d \u201cyou know,\u201d \u201csort of,\u201d \u201cI think,\u201d \u201cmaybe,\u201d \u201cI guess\u201d\u2014especially when speculating or asking questions. The register is informal but professionally technical: participants are warm, complimentary, and first-name based, while presentations shift into organized explanatory language with signposting such as \u201cso,\u201d \u201call right,\u201d and \u201cwhat we think.\u201d Questions often begin with praise, self-deprecation (\u201cnaive question\u201d), or a broad framing before narrowing to a specific point. Challenges are indirect and exploratory rather than confrontational, phrased as alternative interpretations or requests for clarification; speakers generally validate the question before answering, acknowledge uncertainty, and invite follow-up or collaboration. Noticeable patterns include repeated words, unfinished clauses, conversational backchannels (\u201cyeah,\u201d \u201cright,\u201d \u201cokay\u201d), and loosely moderated handoffs between speakers.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Understanding how chronic sleep loss changes emotion regulation in teenagers, and whether later school start times help.",
+  "disciplines": [
+    "neuroscience",
+    "psychology",
+    "education"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "research engineer",
+      "background": "A cognitive-affective neuroscientist with 9 years of experience building adolescent sleep and neuroimaging studies. She oversees actigraphy pipelines, ecological diary integration, and fMRI quality control, with prior work on sleep restriction, amygdala-prefrontal connectivity, and emotion-regulation tasks in 14- to 18-year-olds. She is accustomed to designing feasible scan protocols around school calendars and participant burden.",
+      "distinct_perspective": "Frames the schedule change as a naturally occurring manipulation of students' sleep timing and duration, with particular interest in whether changes in sleep predict within-person changes in neural responses during emotion regulation. She prioritizes a clearly defined exposure group, repeated measurement, scan reliability, and protocol consistency, while recognizing that the educational meaning of exposure may extend beyond the students whose bell time changes.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Luis Alvarez",
+      "discipline": "psychology",
+      "functional_role": "domain expert",
+      "background": "A developmental psychologist with 12 years of experience studying adolescent emotion regulation, family routines, and daily stress using diary methods, questionnaires, and multilevel modeling. His recent work examines how sleep variability, sibling caregiving, and morning conflict relate to next-day irritability and coping among high-school students. He has partnered with schools but has not previously evaluated a district-wide schedule redesign.",
+      "distinct_perspective": "Treats emotion regulation as a developing capacity embedded in daily routines and relationships rather than as a trait measured only in the lab. He is attentive to the possibility that schedule changes alter household wake times, transportation demands, parental supervision, and sibling interactions, which could affect sleep and emotion even when a student's own school start time remains unchanged. He emphasizes separating sleep opportunity, sleep timing, and family-level disruption in the diaries and interpreting any effects in light of developmental context.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Aisha Patel",
+      "discipline": "education",
+      "functional_role": "domain expert",
+      "background": "An education policy researcher with 11 years of experience evaluating school schedule, attendance, and transportation-related reforms in public districts. She works with administrative records, implementation documents, quasi-experimental designs, and interviews with district operations staff. Her prior studies have examined attendance and course performance after bell-schedule changes, including cases where bus constraints produced uneven implementation across schools.",
+      "distinct_perspective": "Approaches the later start proposal as a policy whose practical treatment conditions depend on how schedules, transportation, and enrollment are ultimately organized. She focuses on the definition of the eligible student population, implementation timing, record linkage, and what comparison would support a credible claim about the policy rather than only about sleep. She sees attendance and grades as meaningful outcomes but also as measures shaped by grading practices, course schedules, and school-level changes that may accompany the start-time shift.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "sleep_adolescent_emotion",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 3,
+  "task_id": "assumptions_04",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+  "seed_spec": {
+    "task_id": "assumptions_04",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+    "explicit_instruction": "Hold a planning meeting with a neuroscientist, a developmental psychologist, and an education researcher. The education researcher reports that the district's planning document says the intervention will be evaluated using 'the affected students' after the proposed 45-minute high-school delay. The phrase is consequential but is not defined in the meeting. The neuroscientist treats affected students as students whose own school start time changes and proposes pre/post fMRI and actigraphy analyses within those high-school students. The psychologist notes that adolescents in households with younger siblings could experience altered wake times, transportation routines, and sleep even if their own start time does not change, and therefore understands affected students as all students exposed to the district-wide schedule and bus-route change. The education researcher says both readings are plausible because final bus routing and any middle-school schedule adjustment are pending. Do not resolve which interpretation is correct, do not claim that one discipline is mistaken, and do not have participants look up or obtain the missing district information during the meeting. Ensure the ambiguity remains central to the study's comparison group, recruitment frame, and causal interpretation. Include ordinary discussion of the planned measures and implementation constraints, but do not expose the benchmark task or tell participants to analyze assumptions.",
+    "ground_truth": {
+      "ambiguous_assumption": "What the district means by 'the affected students' in evaluating the later start-time intervention.",
+      "interpretation_1": {
+        "definition": "Only students whose own school start time is delayed, principally the high-school students receiving the 45-minute later start.",
+        "consequences": [
+          "The primary sample and comparison are defined around directly treated high-school students, with pre/post actigraphy, diaries, questionnaires, and the fMRI subsample focused on them.",
+          "The causal estimand is the effect of an individual's direct change in scheduled school start time.",
+          "Students in other grades or schools whose routines change indirectly would not be part of the primary treated population."
+        ]
+      },
+      "interpretation_2": {
+        "definition": "All students whose sleep or daily routine is altered by the district-wide schedule and bus-route reorganization, including students without a direct start-time delay.",
+        "consequences": [
+          "Recruitment and comparison groups must include potentially indirectly exposed students, such as middle-school students or students affected through household and transportation changes.",
+          "The causal estimand becomes the effect of the district schedule reorganization or broader exposure, rather than only a student's own later start time.",
+          "A direct-treatment-only fMRI subsample may not represent the full affected population, and indirect exposure must be measured or classified."
+        ]
+      },
+      "information_needed_to_resolve": [
+        "The district's operational definition of 'affected students' for the intervention evaluation.",
+        "The final start times for every school or grade and whether middle-school schedules will change.",
+        "Final bus routes, pickup-time changes, and which students share transportation or household schedules with directly treated students.",
+        "Whether the district intends the evaluation to estimate direct high-school start-time effects or effects of the district-wide scheduling change."
+      ],
+      "why_consequential": "The undefined population determines eligibility, the appropriate comparison group, exposure classification, power and fMRI recruitment, and whether observed changes can be interpreted as effects of a direct later start or of a wider schedule and transportation reorganization.",
+      "unresolved_status": "Neither interpretation is selected in the meeting; the district information required to decide remains unavailable."
+    }
+  },
+  "seed_location": "Turns 1-8 establish the undefined, consequential phrase \"affected students\" and two plausible interpretations: Alvarez describes indirect household/transportation exposure beyond students whose bell changes (turns 2, 5), while Chen favors students whose own bell time changes for the primary actigraphy and fMRI exposure (turns 3, 6, 8). Turns 7-10 and 15-26 discuss needed schedule, route, pickup, calendar, and implementation information and associated measurement/recruitment constraints. However, the seed condition is incomplete/not fully satisfied: the education researcher never states that the district planning document uses the phrase, neither participant explicitly frames the broader interpretation as all students exposed to a district-wide schedule and bus-route change, and the meeting plans to request/obtain missing district information rather than leaving it unavailable during the meeting. The ambiguity is not explicitly preserved as central to the final comparison group, recruitment frame, and causal estimand.",
+  "ground_truth": {
+    "ambiguous_assumption": "What the district means by 'the affected students' in evaluating the later start-time intervention.",
+    "interpretation_1": {
+      "definition": "Only students whose own school start time is delayed, principally the high-school students receiving the 45-minute later start.",
+      "consequences": [
+        "The primary sample and comparison are defined around directly treated high-school students, with pre/post actigraphy, diaries, questionnaires, and the fMRI subsample focused on them.",
+        "The causal estimand is the effect of an individual's direct change in scheduled school start time.",
+        "Students in other grades or schools whose routines change indirectly would not be part of the primary treated population."
+      ]
+    },
+    "interpretation_2": {
+      "definition": "All students whose sleep or daily routine is altered by the district-wide schedule and bus-route reorganization, including students without a direct start-time delay.",
+      "consequences": [
+        "Recruitment and comparison groups must include potentially indirectly exposed students, such as middle-school students or students affected through household and transportation changes.",
+        "The causal estimand becomes the effect of the district schedule reorganization or broader exposure, rather than only a student's own later start time.",
+        "A direct-treatment-only fMRI subsample may not represent the full affected population, and indirect exposure must be measured or classified."
+      ]
+    },
+    "information_needed_to_resolve": [
+      "The district's operational definition of 'affected students' for the intervention evaluation.",
+      "The final start times for every school or grade and whether middle-school schedules will change.",
+      "Final bus routes, pickup-time changes, and which students share transportation or household schedules with directly treated students.",
+      "Whether the district intends the evaluation to estimate direct high-school start-time effects or effects of the district-wide scheduling change."
+    ],
+    "why_consequential": "The undefined population determines eligibility, the appropriate comparison group, exposure classification, power and fMRI recruitment, and whether observed changes can be interpreted as effects of a direct later start or of a wider schedule and transportation reorganization.",
+    "unresolved_status": "Neither interpretation is selected in the meeting; the district information required to decide remains unavailable."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Hi, sorry, I missed the end of the last meeting. Could somebody give me the quick version of where we landed? I\u2019m especially hoping we can get clearer today on what the district means by \u201caffected students,\u201d because that really changes our primary comparison."
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "Yeah, the piece I keep getting stuck on is that \u201caffected\u201d may be wider than just whose bell changes. If buses or family wake-up routines shift, a middle-school student\u2014or a high-schooler with an unchanged ride\u2014could still have a real sleep and morning-conflict change. I don't know whether that belongs in the primary comparison, but we probably shouldn't assume the home routine... that it follows the bell time neatly."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s the part I want to separate, not erase. For the actigraphy, and especially the pre/post scans, the clean exposure is a student\u2019s own bell time moving. Otherwise we\u2019re trying to infer a fairly diffuse household intervention. Aisha, do you have a sense from prior changes whether those spillovers among students with unchanged schedules are common enough that we should- whether we should plan to measure them as a real comparison group?"
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "Mm, yeah."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "They can be pretty consequential, but I honestly can't say how common they are without seeing the routing plan. In one prior reform, the school with the smaller official shift had the bigger attendance change, and later we learned that route reliability and first-period staffing had changed differently. So I'd definitely want us to measure spillovers, but I'm not sure they should define the primary effect unless the district means the whole reorganization is the intervention."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That makes sense. I\u2019d keep the own-bell-time group as the primary exposure for the repeated sleep and imaging piece, then build in measures that let us characterize the spillover instead of pretending it isn\u2019t there. Actual pickup time, commute, maybe household wake time. The pilot already showed some kids waking earlier despite planning later bedtimes, so routing could, could really scramble the nominal 45 minutes."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "That\u2019s why I\u2019m a little wary of calling the planned 45 minutes the treatment itself. Could we get the final bell schedule, assigned route, scheduled pickup, and then actual commute or arrival reports for everyone in the administrative cohort? Maya, would that still give us a clean enough own-bell-time definition for the scan sample, or does the protocol need that fixed before we know any of it?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "It doesn't have to be fixed before recruitment, but we do need it fixed before we lock the pre/post scan protocol and the primary analysis. We can define the scan exposure from the finalized individual bell-time change, then keep route and actual commute as things that might explain why sleep doesn't move the way we'd expect. My bigger worry is practical. If the affected schools have different calendars or scan windows, getting comparable pre/post timing gets messy pretty fast..."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "And the calendar issue may be informative, not just noise. If one school's post window comes after a different amount of actual exposure, we need that in the file too. For the district agreement, could we ask for finalized bell times and calendars at the student-school level, along with route assignment and scheduled pickup, even if we later decide the primary group is only the own-bell-change students?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think we should ask for all of that. And could the calendar file include instructional days and major testing periods, not just term dates? For the scan subset, I\u2019d want the post scan anchored to roughly the same number of weeks after the individual schedule change, and not, um, say one group immediately after finals while another is in a normal week."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "And I'd add actual implementation dates if any school phases this in differently. For attendance and grades, the instructional-day and testing flags matter because otherwise a post-period difference could just be- could reflect a changed assessment calendar or course arrangement. Luis, is there a low-burden diary item that would capture whether the morning was disrupted by the route, like an unusually early pickup or a missed bus, without asking them to narrate the whole household?"
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "I think we can keep it pretty light. Each morning, a checkbox for whether the trip or pickup was different than usual, like an early pickup, late bus, missed connection, or other, and maybe one item on whether the morning at home felt more, more tense than usual. I\u2019d still want actual wake time and bedtime separately, because a disrupted morning can mean less sleep opportunity, but it can also mean the same sleep with more conflict."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "Oh, that's useful."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That distinction is actually useful for us. If we have wake time, bedtime, and the disruption checkbox, we can separate a shortened sleep opportunity from a morning that was just more, uh, chaotic. Then in the scan analyses, we can ask whether any neural change tracks the sleep change instead of assuming the bell-time shift did it directly. I\u2019d also want the diary prompt to flag weekends versus school days, obviously."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "We should keep the weekend flag, but I wouldn't treat weekends as just a control variable. If a later bell shifts weekday sleep and then kids catch up less on weekends, that's part of the policy story. On the district side, I'm still wondering if we can get daily attendance timestamps or- if it's only the usual present or absent record, because late arrival might be where the route problem shows up first."
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "Hm, that could matter."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "From the scan side, I don't need daily timestamps as the exposure definition, but they would help us interpret a null sleep change, whether students were still arriving late or having, um, unstable mornings. Aisha, do you know if the district's system even retains first-period tardy codes consistently across the high schools, or is that one of those school-by-school things?"
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "I don't know, honestly. It's often school by school, and even when the code exists, the threshold for marking a tardy can vary. I'd ask for a data dictionary and a few months of pre-change extracts by school before we make it an outcome we lean on. Otherwise, we may- present/absent may be the more comparable measure, with tardies as descriptive."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d keep tardies out of the primary model until we see that. For the imaging subset, could we use the pre-change extracts to check whether schools differ in baseline attendance coding and calendar rhythm? That would tell us whether a single post-scan window is realistic, or whether we need to match students by weeks of exposure rather than by a fixed district date. I\u2019m losing the thread a little, but the question is whether those differences are enough to make the district date unusable."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "That\u2019s probably the right way to use the extracts. I\u2019d want to see not just coding rates, but how days marked tardy or absent are distributed around holidays, testing, and weather, because schools can use the same code very differently. If those baseline rhythms really differ, it seems safer to match on weeks since each student\u2019s actual change than to call one district date post, doesn\u2019t it?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the scans, I\u2019d much rather define post as, say, a comparable number of instructional weeks after each student\u2019s actual implementation date. We could screen out testing and major breaks, instead of forcing everyone into one calendar window. But we\u2019d need to see whether that leaves enough feasible scan slots across schools, especially with ninth graders moving grades by the follow-up."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "And if ninth graders have changed buildings or course structures by follow-up, that\u2019s not just a scan logistics issue. It muddies the administrative outcomes too. I think we need the district to tell us whether the same students\u2019 bell times actually remain comparable across the two years, or whether we\u2019re really estimating an initial-year change only. Otherwise the cleanest pre/post group could shrink in ways we don\u2019t..."
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "And for the diary piece, I wonder if we should treat the first year as the cleanest window for the daily mechanism. Once students change grades or buildings, their household routine could change again for reasons that have nothing to do with the bell time. Do we know if the district can give us student-level projected bell times for the following fall, or do they only set that much later?"
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "I don't know when they lock those projections, but that's a very specific thing to ask them. We'd ask for projected and then final student-level school assignment and bell time for the following fall, and the date each one was finalized. If the projections are too unstable, we should probably be explicit that the primary administrative follow-up is the first implementation year."
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "That would also protect the diary interpretation. If the second fall brings a new building or a new sibling pickup arrangement, then a change in sleep timing could look like the policy effect when it\u2019s really a fresh household transition. I\u2019d be comfortable treating that first implementation year as the main daily-sleep- I mean, as the main window for daily sleep, and then seeing what the district can actually tell us about the following fall."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That works for me. The first implementation year is the defensible pre/post window for the diaries and scans. Before I commit the fMRI frame, I just need the district's projected versus final assignments and bell times because if too many of our baseline ninth graders have a new school context at follow-up, we may need to recruit the scan cohort with that- with that attrition in mind. We can pick that up once they answer the data request."
+    },
+    {
+      "speaker": "Dr. Aisha Patel",
+      "text": "That feels like the right place to pause, um, pending what the district can actually provide."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, I think we should let people go a few minutes early. Once we\u2019ve heard from the district, we can pick this- we\u2019ll pick this back up then. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Luis Alvarez",
+      "text": "Thanks, all. Bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central phrase from the seed and ground truth, \u201cthe affected students,\u201d is never stated as language from the district planning document. Turn 1 refers to what the district \u201cmeans\u201d by it, but no participant reports that the document says the intervention will be evaluated using that phrase, weakening the required source and ambiguity.",
+      "The transcript effectively chooses the direct-own-bell-time interpretation as the primary study definition. Maya proposes it in turn 6, specifies it as the scan exposure in turn 8, and the group repeatedly treats the first implementation year/direct change as the defensible primary pre/post window in turns 24-26. This violates the requirement not to resolve which interpretation is correct and leaves the broader district-reorganization interpretation secondary rather than genuinely unresolved.",
+      "The education researcher never explicitly states the required reason that both readings are plausible because final bus routing and any middle-school schedule adjustment are pending. Patel notes routing uncertainty (turn 5) and asks for future information, but she does not clearly connect a pending middle-school adjustment and pending final routes to the two competing definitions.",
+      "The broader interpretation is incompletely represented. Luis raises household and transportation spillovers in turn 2 and turn 23, but he does not clearly define \u201caffected students\u201d as all students exposed to a district-wide schedule-and-bus-route reorganization, nor does the meeting clearly establish middle-school students as a recruitment/comparison group.",
+      "The transcript says people will request district information after the meeting (turns 9, 24, 26-28), but it does not explicitly preserve the benchmark\u2019s needed unresolved contrast in recruitment frame, comparison group, and causal estimand. The later discussion shifts heavily into calendars, attendance coding, and scan logistics.",
+      "Naturalness is limited despite several conversational markers. Many substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and land on a concrete next step, especially turns 5-12 and 17-26. The discussion also becomes a tidy sequential planning exchange rather than a thinking-aloud brainstorm.",
+      "Turn 19 uses the prohibited stock phrase \u201cI\u2019m losing the thread a little,\u201d directly conflicting with the meeting-style instruction.",
+      "The close in turns 27-29 resembles a formal meeting wrap-up, and turn 28 cleanly recaps the deferment decision. It is not a full minutes-style recap, but it contributes to the scripted feel."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.36,
+    "turn_moves": {
+      "request": 3,
+      "idea": 1,
+      "question": 6,
+      "backchannel": 4,
+      "observation": 1,
+      "proposal": 9,
+      "answer": 2,
+      "concern": 1,
+      "agreement": 2
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [
+      2,
+      5,
+      18,
+      19,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "Turns 1-2 never state the required planning-document wording that the district will evaluate the intervention using \u201cthe affected students.\u201d The meeting instead refers generally to \u201caffected\u201d in the district sense, making the seed recoverable but less explicit than required.",
+        "The required 45-minute high-school delay is absent. Turns 2, 7, and 25 describe a later or moved high-school bell time, but no 45-minute amount is given.",
+        "The psychologist identifies sibling and bus-route mechanisms (turns 4, 8, 14), but never clearly states the broader interpretation that affected students includes all students exposed to a district-wide schedule and bus-route change, including middle-school students whose own start time may not change.",
+        "The education researcher says final routing is unresolved (turns 24-28), but does not explicitly say that a middle-school schedule adjustment is pending. This weakens evidence for the second interpretation and for the information needed to resolve the ambiguity.",
+        "Turn 28 proposes asking district officials for the missing information after the meeting. That does not resolve the ambiguity within the meeting, but it is more action-oriented than the seed's instruction not to have participants obtain missing district information during the meeting.",
+        "Naturalness is limited by the highly polished, sequential turn construction: most turns pose a concern and immediately advance a tidy design response. Despite filler words and cutoffs, the discussion reads more like carefully authored dialogue than a genuinely messy thinking-aloud brainstorm."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.36,
+      "approved": false,
+      "issues": [
+        "The central phrase from the seed and ground truth, \u201cthe affected students,\u201d is never stated as language from the district planning document. Turn 1 refers to what the district \u201cmeans\u201d by it, but no participant reports that the document says the intervention will be evaluated using that phrase, weakening the required source and ambiguity.",
+        "The transcript effectively chooses the direct-own-bell-time interpretation as the primary study definition. Maya proposes it in turn 6, specifies it as the scan exposure in turn 8, and the group repeatedly treats the first implementation year/direct change as the defensible primary pre/post window in turns 24-26. This violates the requirement not to resolve which interpretation is correct and leaves the broader district-reorganization interpretation secondary rather than genuinely unresolved.",
+        "The education researcher never explicitly states the required reason that both readings are plausible because final bus routing and any middle-school schedule adjustment are pending. Patel notes routing uncertainty (turn 5) and asks for future information, but she does not clearly connect a pending middle-school adjustment and pending final routes to the two competing definitions.",
+        "The broader interpretation is incompletely represented. Luis raises household and transportation spillovers in turn 2 and turn 23, but he does not clearly define \u201caffected students\u201d as all students exposed to a district-wide schedule-and-bus-route reorganization, nor does the meeting clearly establish middle-school students as a recruitment/comparison group.",
+        "The transcript says people will request district information after the meeting (turns 9, 24, 26-28), but it does not explicitly preserve the benchmark\u2019s needed unresolved contrast in recruitment frame, comparison group, and causal estimand. The later discussion shifts heavily into calendars, attendance coding, and scan logistics.",
+        "Naturalness is limited despite several conversational markers. Many substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and land on a concrete next step, especially turns 5-12 and 17-26. The discussion also becomes a tidy sequential planning exchange rather than a thinking-aloud brainstorm.",
+        "Turn 19 uses the prohibited stock phrase \u201cI\u2019m losing the thread a little,\u201d directly conflicting with the meeting-style instruction.",
+        "The close in turns 27-29 resembles a formal meeting wrap-up, and turn 28 cleanly recaps the deferment decision. It is not a full minutes-style recap, but it contributes to the scripted feel."
+      ]
+    }
+  ]
+}

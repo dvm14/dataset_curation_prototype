@@ -1,0 +1,385 @@
+{
+  "series_id": "e473fd38",
+  "generated_at": "2026-11-22T00:26:06.466137",
+  "task_id": "problem_02",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.",
+  "input_type": "plan_and_meeting",
+  "research_id": "wastewater_surveillance",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 5,
+  "research_problem": "How should Riverton establish a wastewater surveillance program for respiratory and enteric infections, and how should its data be governed and communicated so that it supports public-health action without misleading or stigmatizing neighborhoods?",
+  "project_context": "Riverton Public Health Department is partnering with Riverton University and the municipal Water Services Department to design a pilot wastewater-monitoring program for a city of roughly 280,000 residents. The team has completed an initial plan centered on citywide early warning and public reporting, but is revisiting that plan after receiving new operational and community information.",
+  "plan_document": "Riverton Wastewater Surveillance Planning Team \u2014 Existing Research Plan\n\nAim: Design a six-month pilot that determines whether wastewater measurements can provide useful early warning of selected infectious diseases in Riverton and establishes a credible approach for sharing the resulting information.\n\n1. Research question 1: Can weekly wastewater measurements at Riverton's two treatment plants detect changes in SARS-CoV-2, influenza A, and norovirus before corresponding changes appear in citywide clinical reporting?\n\n2. Research question 2: Which normalization and laboratory procedures produce sufficiently stable, interpretable trends across the two treatment-plant catchments, given variation in flow, rainfall, and population served?\n\n3. Research question 3: What public-facing reporting format allows residents and decision-makers to understand citywide wastewater trends and their uncertainty, while maintaining trust in the program?\n\nThe pilot will compare wastewater signals with aggregated citywide emergency-department and laboratory reports, not individual-level records. The initial geographic unit is the two treatment-plant catchments: North Plant and South Plant. Results will be treated as trend indicators rather than estimates of disease prevalence.\n\nTasks\n1. Dr. Maya Chen (epidemiology) will define lead-time metrics, obtain weekly aggregated clinical comparison data, and specify interpretation thresholds for SARS-CoV-2, influenza A, and norovirus.\n2. Luis Ortega (environmental engineering) will document the North and South catchments, select influent sampling points at both plants, assess flow and rainfall effects, and develop a 24-hour composite-sampling protocol.\n3. Priya Nair (environmental engineering) will validate RT-qPCR assays and compare normalization using pepper mild mottle virus and measured flow.\n4. Dr. Hannah Brooks (science and technology studies) will interview public-health staff, water-utility staff, and residents about confidence in citywide reporting, then draft a public dashboard and uncertainty language.\n5. Chen and Brooks will develop an escalation protocol linking sustained wastewater increases to internal public-health review and a public advisory when warranted.\n6. Ortega will prepare a sampling, laboratory, and data-transfer budget for the six-month pilot.",
+  "ground_truth": {
+    "old_questions": [
+      "Can weekly measurements at the North and South treatment plants detect changes in SARS-CoV-2, influenza A, and norovirus before citywide clinical reporting?",
+      "Which normalization and laboratory procedures yield stable, interpretable trends across the two treatment-plant catchments?",
+      "What public-facing reporting format can communicate citywide wastewater trends and uncertainty while maintaining trust?"
+    ],
+    "new_questions": [
+      "Can twice-weekly measurements at three defined trunk-sewer subcatchments produce technically interpretable signals for SARS-CoV-2 and influenza A under local flow and rainfall conditions?",
+      "How can subcatchment wastewater signals and aggregated citywide clinical data be used together for internal public-health situational awareness, without assuming that wastewater will consistently lead clinical reporting?",
+      "What governance process, community participation, and interpretation criteria are required before any localized wastewater findings could be released, and what citywide descriptive communication is appropriate during the pilot?"
+    ],
+    "what_changed_and_why": [
+      "The geographic and technical focus moves from two heterogeneous treatment-plant catchments to three stable trunk-sewer subcatchments because North Plant stormwater intrusion and broad mixed catchments make plant-level trends difficult to interpret. (Direction Review \u2014 March 18, 2027)",
+      "The pathogen scope drops norovirus because its recovery is too variable for reliable pilot interpretation; the pilot retains SARS-CoV-2 and influenza A. (Direction Review \u2014 March 18, 2027)",
+      "The aim changes from demonstrating citywide lead time and building a public dashboard to assessing internally useful localized signals with clinical data as contextual validation, because lead time cannot be promised under the revised design. (Direction Review \u2014 March 18, 2027)",
+      "Public disclosure is deferred and localized public reporting is prohibited during the pilot because community partners warned that neighborhood-level displays could stigmatize communities and be overinterpreted. (Direction Review \u2014 March 18, 2027)"
+    ],
+    "tasks_to_update": [
+      "Update Chen's task from defining lead-time metrics for three pathogens to defining internal situational-awareness and interpretation criteria for SARS-CoV-2 and influenza A, while retaining acquisition of aggregated citywide clinical data as contextual validation. (Direction Review \u2014 March 18, 2027)",
+      "Replace Ortega's two-treatment-plant sampling and 24-hour composite protocol with documentation of three trunk-sewer subcatchments and a twice-weekly time-weighted composite protocol; revise the associated operational budget. (Direction Review \u2014 March 18, 2027)",
+      "Revise Nair's validation task to focus on SARS-CoV-2 and influenza A at the new sampling sites, and remove norovirus from routine pilot validation. (Direction Review \u2014 March 18, 2027)",
+      "Replace Brooks's immediate public-dashboard task with convening or supporting a community advisory process, developing governance and interpretation criteria, and drafting only citywide descriptive communications for the pilot. (Direction Review \u2014 March 18, 2027)",
+      "Revise the Chen-Brooks escalation protocol so it governs internal review of subcatchment signals; do not tie it to automatic localized public advisories until governance criteria are established. (Direction Review \u2014 March 18, 2027)"
+    ],
+    "tasks_unchanged": [
+      "Continue collecting aggregated citywide clinical comparison data, although its role is now contextual validation rather than proof of lead time. (Existing Research Plan; Direction Review \u2014 March 18, 2027)",
+      "Continue assessing flow, rainfall, normalization, laboratory performance, and detection limits as necessary parts of interpreting wastewater trends. (Existing Research Plan; Direction Review \u2014 March 18, 2027)",
+      "Retain the six-month pilot planning and the need for a sampling, laboratory, and data-transfer budget, revised for the new sites and sampling schedule. (Existing Research Plan; Direction Review \u2014 March 18, 2027)"
+    ]
+  },
+  "meetings": [
+    {
+      "label": "Direction Review \u2014 March 18, 2027",
+      "disciplines": [
+        "epidemiology",
+        "science & technology studies",
+        "environmental engineering"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "epidemiology",
+          "functional_role": "research engineer",
+          "background": "Dr. Chen is an infectious-disease epidemiologist with 11 years of experience in municipal surveillance design, including respiratory-virus dashboards, syndromic surveillance, and evaluation of leading indicators against emergency-department and laboratory trends. At Riverton Public Health, she translates surveillance questions into measurable decision rules and works primarily with aggregated, privacy-protected data. She has led evaluations using time-series comparisons, lag analyses, and sensitivity checks rather than treating any single signal as definitive evidence.",
+          "distinct_perspective": "Chen frames wastewater surveillance as a decision-support system, not a direct count of infections. She will push the group to specify what public-health action a changing signal could credibly support, what uncertainty must accompany it, and how clinical data can provide context without being used as a simplistic gold standard. She is prepared to revise the original lead-time ambition when operational conditions make it untestable or when localized results cannot be interpreted safely.",
+          "tone": "informal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Dr. Hannah Brooks",
+          "discipline": "science & technology studies",
+          "functional_role": "postdoctoral researcher",
+          "background": "Dr. Brooks is a postdoctoral researcher in science and technology studies with 5 years of qualitative research experience on public-health data systems, environmental monitoring, and institutional trust. Her methods include semi-structured interviews, facilitated community workshops, document analysis, and observation of cross-agency planning processes. She has worked with neighborhood coalitions to examine how aggregate indicators can acquire social meaning when they are mapped, ranked, or attached to place names.",
+          "distinct_perspective": "Brooks treats data governance and communication as part of the surveillance system itself, rather than as an outreach step after technical work is complete. She will emphasize that a subcatchment is not merely a neutral analytic unit: releasing site-specific values can invite inferences about residents, businesses, or neighborhood behavior that the data cannot support. Her central question is what institutional safeguards, community participation, interpretive criteria, and release rules are needed before localized findings can be used or made public.",
+          "tone": "informal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Luis Ortega",
+          "discipline": "environmental engineering",
+          "functional_role": "project manager",
+          "background": "Luis Ortega is an environmental engineer with 14 years of experience in municipal collection systems, influent monitoring, wet-weather operations, and utility\u2013public-health coordination. As Water Services' project manager, he has overseen field crews, access permitting, sampling equipment deployment, chain-of-custody procedures, and flow-data quality reviews. His work has focused on how sewer hydraulics, industrial inputs, infiltration and inflow, and changing service populations affect what a sample can reasonably represent.",
+          "distinct_perspective": "Ortega begins with the physical system: what enters a sampling point, how stable that contributing area is, and whether the utility can collect comparable samples safely and reliably. He will challenge interpretations that exceed the hydraulic reality of the network, especially where stormwater intrusion and broad mixed catchments distort plant-level trends. He sees defined trunk-sewer sites and feasible repeatable sampling as a stronger foundation for a pilot, while remaining cautious about whether engineering measures alone can make a biological signal actionable.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        }
+      ],
+      "meeting_context": "Riverton Public Health Department is partnering with Riverton University and the municipal Water Services Department to design a pilot wastewater-monitoring program for a city of roughly 280,000 residents. The team has completed an initial plan centered on citywide early warning and public reporting, but is revisiting that plan after receiving new operational and community information.\n\nDirection Review \u2014 March 18, 2027. The Riverton wastewater surveillance planning team is meeting to revise the proposed pilot after Water Services reports operational constraints and community partners raise concerns about how localized results could be used. The group needs to decide what the pilot should learn first and which elements of the existing plan should be revised before launch.\n\nThe team's current research plan, which everyone has read:\nRiverton Wastewater Surveillance Planning Team \u2014 Existing Research Plan\n\nAim: Design a six-month pilot that determines whether wastewater measurements can provide useful early warning of selected infectious diseases in Riverton and establishes a credible approach for sharing the resulting information.\n\n1. Research question 1: Can weekly wastewater measurements at Riverton's two treatment plants detect changes in SARS-CoV-2, influenza A, and norovirus before corresponding changes appear in citywide clinical reporting?\n\n2. Research question 2: Which normalization and laboratory procedures produce sufficiently stable, interpretable trends across the two treatment-plant catchments, given variation in flow, rainfall, and population served?\n\n3. Research question 3: What public-facing reporting format allows residents and decision-makers to understand citywide wastewater trends and their uncertainty, while maintaining trust in the program?\n\nThe pilot will compare wastewater signals with aggregated citywide emergency-department and laboratory reports, not individual-level records. The initial geographic unit is the two treatment-plant catchments: North Plant and South Plant. Results will be treated as trend indicators rather than estimates of disease prevalence.\n\nTasks\n1. Dr. Maya Chen (epidemiology) will define lead-time metrics, obtain weekly aggregated clinical comparison data, and specify interpretation thresholds for SARS-CoV-2, influenza A, and norovirus.\n2. Luis Ortega (environmental engineering) will document the North and South catchments, select influent sampling points at both plants, assess flow and rainfall effects, and develop a 24-hour composite-sampling protocol.\n3. Priya Nair (environmental engineering) will validate RT-qPCR assays and compare normalization using pepper mild mottle virus and measured flow.\n4. Dr. Hannah Brooks (science and technology studies) will interview public-health staff, water-utility staff, and residents about confidence in citywide reporting, then draft a public dashboard and uncertainty language.\n5. Chen and Brooks will develop an escalation protocol linking sustained wastewater increases to internal public-health review and a public advisory when warranted.\n6. Ortega will prepare a sampling, laboratory, and data-transfer budget for the six-month pilot.",
+      "seed_spec": {
+        "task_id": "problem_02",
+        "benchmark_category": "Problem Formulation",
+        "benchmark_task": "Part 1 of 1 of a multi-part sample for this benchmark task: Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.\nJudge this transcript only on its own part: Maya Chen opens by noting that the original plan sought citywide early warning for three pathogens using the two treatment plants and comparison with aggregated clinical data. Luis Ortega reports that both treatment-plant influent streams combine large, heterogeneous areas and that stormwater intrusion at North Plant makes pathogen trends difficult to interpret at the plant level. He states that Water Services can support sampling at three stable trunk-sewer access points serving defined, mostly sanitary subcatchments, but cannot guarantee continuous 24-hour composite sampling at both plants during the pilot; twice-weekly time-weighted composites at the three trunk sites are feasible. Priya Nair states that preliminary method work indicates the assays are reliable for SARS-CoV-2 and influenza A, but norovirus recovery is too variable to support pilot interpretation without a separate method-development effort.\n\nHannah Brooks reports that neighborhood coalition representatives do not reject wastewater monitoring, but oppose a public dashboard displaying neighborhood-level pathogen values because such displays could stigmatize areas and invite unsupported claims about residents. They support a governance process in which a community advisory group helps determine interpretation and communications before any localized findings are released. The group decides to redirect the pilot toward understanding whether subcatchment signals are technically interpretable and operationally useful for internal, nonpublic public-health response. They retain citywide clinical comparison, but reframe it as contextual validation rather than a promise to demonstrate lead time. They agree that public reporting will be designed only after governance and interpretation criteria are established, and that any initial public communication will be citywide and descriptive rather than site-specific.\n\nThe team explicitly replaces the three-pathogen scope with SARS-CoV-2 and influenza A. They leave open whether localized data will ever be publicly released and do not settle final thresholds for operational action. The meeting identifies which plan tasks must be revised, paused, or retained; it does not resolve detailed budgets or final laboratory turnaround times.",
+        "explicit_instruction": "Maya Chen opens by noting that the original plan sought citywide early warning for three pathogens using the two treatment plants and comparison with aggregated clinical data. Luis Ortega reports that both treatment-plant influent streams combine large, heterogeneous areas and that stormwater intrusion at North Plant makes pathogen trends difficult to interpret at the plant level. He states that Water Services can support sampling at three stable trunk-sewer access points serving defined, mostly sanitary subcatchments, but cannot guarantee continuous 24-hour composite sampling at both plants during the pilot; twice-weekly time-weighted composites at the three trunk sites are feasible. Priya Nair states that preliminary method work indicates the assays are reliable for SARS-CoV-2 and influenza A, but norovirus recovery is too variable to support pilot interpretation without a separate method-development effort.\n\nHannah Brooks reports that neighborhood coalition representatives do not reject wastewater monitoring, but oppose a public dashboard displaying neighborhood-level pathogen values because such displays could stigmatize areas and invite unsupported claims about residents. They support a governance process in which a community advisory group helps determine interpretation and communications before any localized findings are released. The group decides to redirect the pilot toward understanding whether subcatchment signals are technically interpretable and operationally useful for internal, nonpublic public-health response. They retain citywide clinical comparison, but reframe it as contextual validation rather than a promise to demonstrate lead time. They agree that public reporting will be designed only after governance and interpretation criteria are established, and that any initial public communication will be citywide and descriptive rather than site-specific.\n\nThe team explicitly replaces the three-pathogen scope with SARS-CoV-2 and influenza A. They leave open whether localized data will ever be publicly released and do not settle final thresholds for operational action. The meeting identifies which plan tasks must be revised, paused, or retained; it does not resolve detailed budgets or final laboratory turnaround times.",
+        "ground_truth": {
+          "research_direction_decision": "The pilot shifts from treatment-plant-based citywide early warning and public reporting to evaluating interpretable, operationally useful signals from three defined trunk-sewer subcatchments for internal public-health use.",
+          "new_scope": "SARS-CoV-2 and influenza A remain in scope; norovirus is removed from the pilot because recovery is too variable.",
+          "governance_decision": "Site-level results will not be publicly displayed during the pilot; a community advisory group and interpretation criteria must be established before decisions about localized release.",
+          "method_change": "The feasible field design is twice-weekly time-weighted composite sampling at three trunk-sewer sites rather than continuous 24-hour composites at the two treatment plants.",
+          "clinical_data_role": "Aggregated citywide clinical data remain, but serve as contextual validation rather than the sole basis for demonstrating lead time."
+        }
+      },
+      "ground_truth": {
+        "research_direction_decision": "The pilot shifts from treatment-plant-based citywide early warning and public reporting to evaluating interpretable, operationally useful signals from three defined trunk-sewer subcatchments for internal public-health use.",
+        "new_scope": "SARS-CoV-2 and influenza A remain in scope; norovirus is removed from the pilot because recovery is too variable.",
+        "governance_decision": "Site-level results will not be publicly displayed during the pilot; a community advisory group and interpretation criteria must be established before decisions about localized release.",
+        "method_change": "The feasible field design is twice-weekly time-weighted composite sampling at three trunk-sewer sites rather than continuous 24-hour composites at the two treatment plants.",
+        "clinical_data_role": "Aggregated citywide clinical data remain, but serve as contextual validation rather than the sole basis for demonstrating lead time."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Morning\u2014it\u2019s doing that March thing again here, sunny and somehow still freezing. Um, I know we\u2019re all squeezed for time, so I wanted to use this to decide what the pilot can actually learn with the revised field setup. Whether the signals are interpretable enough for internal public-health review, rather than promising a clean lead-time result or a dashboard right away."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "It\u2019s cold at the plants too, which the crews are enjoying. I\u2019m glad we\u2019re narrowing it. The two plant influents can\u2019t- I don\u2019t think they can carry that promise, especially North in rain. We can do twice-weekly time-weighted composites at three trunk sites with much more defined contributing areas, but I need Maya\u2019s sense of what a repeated increase would actually trigger internally, not prove, just trigger."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "Hm, defined areas matters."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "A repeated increase could trigger an internal review. We'd look at it alongside the aggregated ED and lab trends and ask if there's anything operational we should be watching. But Luis, I need to know whether those trunk-site populations and drainage boundaries hold steady week to week. If they shift around, I can't write a meaningful review rule yet."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "Mostly, yes. The mapped drainage areas should be stable, and these aren\u2019t sites where we expect regular diversions. But I want to verify that in the field. One candidate had a much bigger flow jump than expected in the first moderate rain. Until we rule out an upstream inflow source or cross-connection, I\u2019d treat wet-weather samples there as potentially not comparable."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Then I\u2019d keep wet-weather samples out of any repeated-increase rule until you\u2019ve checked that site. If there\u2019s a dry-weather rise across the two collections, we could still pull the aggregated ED and lab context. But I don\u2019t want us to treat a rain-driven change like an epidemiologic signal."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "That uncertainty is part of the governance question for me. If a site has a rain-related jump or a boundary we\u2019re still verifying, I don\u2019t think it should be visible outside the internal review at all. People will read a mapped line as a statement about that area. Luis, besides rain, are there construction, industrial discharges, or routing changes that could alter who\u2019s effectively contributing to a trunk site?"
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "Construction is the main thing I'd watch. I don't know of any active routing changes at the three locations. Industrial inputs should be limited at the proposed trunks, but I need to verify the upstream users. And that unexpected rain response is exactly why I'm not ready to call one boundary stable yet. If Hannah's saying no external map while that's still open, that seems sensible."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, that\u2019s a concern."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "Even once the engineering checks are done, I\u2019d want a rule that a local signal isn\u2019t treated as a claim about infection in that service area. Maya, if the citywide clinical trend and one trunk signal don\u2019t- if they don\u2019t line up, how would you want staff to talk about that internally without treating one as the obvious \u201cwrong\u201d source?"
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "Yeah, that\u2019s tricky."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d say they\u2019re answering different questions, not competing measures. A trunk signal is a change in what\u2019s reaching that sewer at that point, and ED and labs reflect care-seeking and testing, with their own delays. Last winter, the ED timing moved just from backlog cleanup. So internally, I\u2019d write, \u201csignal increased, clinical context is rising, flat, or not yet informative,\u201d and then review possible explanations rather than say either one is wrong..."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "That framing helps, actually. It gives us language for the internal record that doesn't turn a mismatch into a failure or, worse, into a claim about the people upstream. I'd want the advisory group to see it and help shape it before we decide whether any local results are releasable."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, I'd like that."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "Before that group sees anything, I need to finish the boring physical checks. Access windows, power for the samplers, upstream users, and that rain response at the one site. If the advisory group ends up saying sewer boundaries still- if they still read as neighborhood labels, then even a technically stable trunk result may need to stay internal for this pilot."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "For the pilot, I think that means the public dashboard task pauses, but the internal review record and the citywide clinical feed stay in scope. I still need to check whether those weekly ED and lab extracts arrive consistently enough to be useful context. If they're backfilled unpredictably, then we should- we should label that, rather than pretending we can assess lead time."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "I\u2019d pause the dashboard task as it is now, not public-facing work altogether. I can redirect the interviews and workshops toward what an advisory group would need to decide, like who participates, what counts as interpretable enough, and what stays internal. I still need to ask the coalition whether they\u2019d rather nominate people or have an open process."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, let\u2019s see what they prefer."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "One thing I need from that advisory process is whether they see any use in us later publishing just a citywide combined trend, with no trunk-site results at all. The trunks would still be for our operational learning, but I don't want to build a reporting path around them if people are going to read that geography as neighborhood ranking."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "A later citywide combined trend is worth putting to them, but that needs to be separate from the question of releasing trunk results. For me, it would need very plain limits. This is a broad trend, not a map of where illness is. And we shouldn't promise it now while we're still learning whether the clinical context- whether it arrives on time."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "And physically, I\u2019d be careful calling it \u201ccitywide\u201d if we\u2019re combining three trunks\u2014 three trunk sites won\u2019t represent all of Riverton the same way the plants do. Maybe the advisory group can react to that distinction, but I think we need to be very explicit about what population a combined signal does and doesn\u2019t cover."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Exactly. If those three trunks don't have known, stable coverage of the whole city, I wouldn't combine them into something we call citywide. Maybe later we can report a pilot-level trend for the sampled system, but even that needs the denominator, or really, a clear statement of who isn't represented. Luis, do you have a rough sense of whether the three together miss a large part of Riverton?"
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "Right, that distinction is important."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "Roughly, yes, they miss a substantial share. I\u2019d rather not put a number on it until I rerun the service-area estimates, because the three areas aren\u2019t comparable sizes and that candidate site\u2019s boundary is still, still under question. They\u2019re good places to learn whether repeatable sampling and interpretation are possible, but they\u2019re not a surrogate for Riverton as a whole."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "Mm, then I don't think we should even float a public combined trend as \"citywide\" in the pilot. The people I spoke with were already much more wary once they saw a boundary on a map, and a partial-system trend with unclear coverage could be just as misleading, even without the map. I'd bring that exact distinction to the advisory conversations and see whether there's any, any public use they regard as meaningful."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d make the pilot\u2019s public commitment about governance and learning, not about publishing a trend. Trunk results stay internal, and we use the advisory process to decide what, if anything, could responsibly leave that setting later. I\u2019ll check the extract timing with the clinical-data teams this week because that determines how much comparison we can honestly build into the review record."
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "That works for me. I\u2019ll treat the three trunks as an internal feasibility set, not coverage for Riverton, and I\u2019ll come back once I\u2019ve checked access, power, upstream inputs, and that storm response\u2014rain response\u2014before we lock the sites."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Good. Until those checks are back, I\u2019ll revise my piece so it\u2019s not about lead-time metrics. I\u2019ll make it an internal review template with repeat signal, wet-weather status, site notes, and whatever clinical context is available that week. Once we\u2019ve seen a few weeks of actual operations, we can decide whether any threshold is defensible."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "That gives the advisory work something real to respond to, rather than a finished dashboard. I\u2019ll check with the coalition on nomination versus open recruitment, and we should make clear from the start that the group is setting release conditions. Not just commenting on wording after the fact."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, I think we can stop there. The rest can wait until next time. Thanks, both. I\u2019ll see you at the next check-in, and then we can\u2014"
+        },
+        {
+          "speaker": "Luis Ortega",
+          "text": "All right, take care, both."
+        },
+        {
+          "speaker": "Dr. Hannah Brooks",
+          "text": "Bye, both\u2014stay warm."
+        }
+      ],
+      "seed_location": "The requested direction-change content is substantially present across turns 1\u201329. Old versus new direction: Turn 1 frames the revised purpose as interpretable signals for internal public-health review rather than lead-time proof or an immediate dashboard; turns 16 and 28 explicitly pause lead-time metrics and revise the work to an internal review template. Field-method change: turn 2 specifies twice-weekly time-weighted composites at three defined trunk sites rather than relying on the two plant influents; turns 5, 15, and 27 retain/expand site-stability and feasibility checks. Clinical-data role: turns 4, 12, 16, 26, and 28 retain aggregated ED/lab data as contextual internal review information rather than proof of lead time. Governance/public reporting: turns 7\u20138, 13, 16\u201317, 25\u201326, and 29 keep trunk results internal, pause the dashboard, and establish advisory-group input and release conditions before any local release. Task updates: turns 16\u201317 and 26\u201329 identify paused dashboard work, redirected advisory work, retained clinical feed/internal review, and revised engineering/field tasks. However, the transcript does not explicitly state the original three-pathogen treatment-plant plan, does not mention SARS-CoV-2, influenza A, or norovirus, and therefore does not establish the required pathogen-scope decision removing norovirus. It also does not explicitly state the original North Plant stormwater-intrusion detail or the inability to guarantee continuous 24-hour composites at both plants.",
+      "qa_feedback": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          12,
+          13,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The required original-plan evidence is incomplete. Turn 1 mentions abandoning a lead-time result and dashboard, but never states that the old design used two treatment plants, covered three pathogens, or compared against aggregated clinical data as the original citywide early-warning plan.",
+          "The transcript never identifies norovirus or records the required assay finding that SARS-CoV-2 and influenza A are reliable while norovirus recovery is too variable. Priya Nair is entirely absent, so the explicit two-pathogen scope decision cannot be derived.",
+          "The required plant-level feasibility rationale is only partial. Turn 2 refers to two plant influents and North in rain, but does not clearly establish heterogeneous catchments, stormwater intrusion, or that continuous 24-hour composites at both plants cannot be guaranteed during the pilot.",
+          "The feasible trunk-site method is partially supported in turn 2, but the transcript does not explicitly establish that all three proposed trunk sites are stable, mostly sanitary subcatchments; later turns instead keep one candidate boundary unresolved (turns 5, 8, 24). That uncertainty is plausible but weakens compliance with the stated field-design condition.",
+          "The task requires retaining citywide clinical comparison as contextual validation. Turns 12, 16, and 26 describe aggregated ED/lab trends as context, but the transcript does not explicitly call this retained citywide clinical comparison or clearly distinguish it from a comparison intended to establish lead time until late in the discussion.",
+          "The transcript contradicts/weakens the required public-reporting direction by entertaining a later public combined trend from the three trunks (turns 19-25), then rejects calling it citywide. The benchmark requires that any initial public communication be citywide and descriptive rather than site-specific; this condition is not cleanly established.",
+          "Despite several natural speech markers, the central turns are highly polished, complete arguments that reliably turn each concern into a task assignment or consensus decision (for example turns 15-17 and 26-29). This triggers the polished-written-turn tell and limits naturalness to 3 or below.",
+          "The meeting is longer and more deliberative than the requested rushed quick check-in, and turn 30 functions as a tidy closing/summary rather than the conversation simply stopping because someone has another meeting."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.31,
+        "turn_moves": {
+          "proposal": 7,
+          "agreement": 5,
+          "question": 5,
+          "observation": 1,
+          "answer": 3,
+          "concern": 3,
+          "backchannel": 3,
+          "commitment": 5
+        },
+        "volunteer_turns": [
+          17,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "unsure_turns": [
+          2,
+          5,
+          8,
+          16,
+          17,
+          20,
+          24
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 35,
+          "scores": {
+            "seed_recoverable": 2,
+            "task_compliance": 2,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.21,
+          "approved": false,
+          "issues": [
+            "The required opening account of the old plan is incomplete. Turn 1 mentions avoiding promises of lead time and a public dashboard, but never explicitly states the original three-pathogen scope, use of two treatment plants, or comparison with aggregated clinical data.",
+            "Priya Nair is entirely absent. Consequently, there is no evidence that assays are reliable for SARS-CoV-2 and influenza A, no norovirus recovery problem, and no explicit removal of norovirus from the pilot. This makes the ground-truth new scope unrecoverable.",
+            "The transcript never explicitly makes the required research-direction decision to shift from treatment-plant citywide early warning to a three-subcatchment pilot for internal operational usefulness. It implies pieces of that change, especially in turns 8, 14, 26, and 32, but does not clearly record the overall decision.",
+            "Citywide clinical data are not clearly retained as contextual validation. Turns 2, 6-8, and 29 discuss possible geographically matched or local trend comparisons and defer lead-time analysis, but do not establish that aggregated citywide clinical data remain in the design with the specified contextual-validation role.",
+            "The community advisory group is missing. Hannah refers to coalition representatives and a coalition check (turns 13, 17-20), but the required governance mechanism is a community advisory group helping determine interpretation and communications before localized release.",
+            "Required task-management content is thin: the meeting does not explicitly identify plan tasks as revised, paused, or retained. Some actions are assigned, but no prior-plan task inventory is clearly updated.",
+            "For a rushed weekly check-in, many turns are polished, complete mini-arguments that move directly from a concern to a protocol solution, especially turns 14-18, 21-29, and 31-32. The conversation also ends with Luis effectively summarizing completion and next steps in turn 33, which reads more like meeting closure than a check-in that stops midstream.",
+            "Although false starts occur, they are frequently surface-level repetitions or cutoffs attached to otherwise polished prose (for example turns 5, 6, 9, 18, 24, and 31), reducing the realism of the disfluencies."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 32,
+          "scores": {
+            "seed_recoverable": 2,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.31,
+          "approved": false,
+          "issues": [
+            "The required original-plan evidence is incomplete. Turn 1 mentions abandoning a lead-time result and dashboard, but never states that the old design used two treatment plants, covered three pathogens, or compared against aggregated clinical data as the original citywide early-warning plan.",
+            "The transcript never identifies norovirus or records the required assay finding that SARS-CoV-2 and influenza A are reliable while norovirus recovery is too variable. Priya Nair is entirely absent, so the explicit two-pathogen scope decision cannot be derived.",
+            "The required plant-level feasibility rationale is only partial. Turn 2 refers to two plant influents and North in rain, but does not clearly establish heterogeneous catchments, stormwater intrusion, or that continuous 24-hour composites at both plants cannot be guaranteed during the pilot.",
+            "The feasible trunk-site method is partially supported in turn 2, but the transcript does not explicitly establish that all three proposed trunk sites are stable, mostly sanitary subcatchments; later turns instead keep one candidate boundary unresolved (turns 5, 8, 24). That uncertainty is plausible but weakens compliance with the stated field-design condition.",
+            "The task requires retaining citywide clinical comparison as contextual validation. Turns 12, 16, and 26 describe aggregated ED/lab trends as context, but the transcript does not explicitly call this retained citywide clinical comparison or clearly distinguish it from a comparison intended to establish lead time until late in the discussion.",
+            "The transcript contradicts/weakens the required public-reporting direction by entertaining a later public combined trend from the three trunks (turns 19-25), then rejects calling it citywide. The benchmark requires that any initial public communication be citywide and descriptive rather than site-specific; this condition is not cleanly established.",
+            "Despite several natural speech markers, the central turns are highly polished, complete arguments that reliably turn each concern into a task assignment or consensus decision (for example turns 15-17 and 26-29). This triggers the polished-written-turn tell and limits naturalness to 3 or below.",
+            "The meeting is longer and more deliberative than the requested rushed quick check-in, and turn 30 functions as a tidy closing/summary rather than the conversation simply stopping because someone has another meeting."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns in the opening and Q&A, contrasted with long, highly structured presentation turns. Participants overlap lightly and often use quick acknowledgments\u2014\u201cyeah,\u201d \u201cokay,\u201d \u201cright,\u201d \u201cgreat\u201d\u2014to signal attention or transition. Speech is informal and disfluent, with frequent fillers (\u201cum,\u201d \u201cuh\u201d), repetitions, self-corrections, false starts, and unfinished phrasing, especially among speakers thinking aloud or working across accents. Questions are usually prefaced politely (\u201cI have a quick question,\u201d \u201cnaive question,\u201d \u201ccan I ask\u201d), often ramble through context before reaching the point, and invite speculation rather than demand a definitive answer. Responses are generous and exploratory, using hedges such as \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d \u201cwe\u2019re interested in,\u201d and \u201cI don\u2019t know,\u201d with speakers validating questions before answering. Disagreement is indirect and framed as uncertainty, alternative interpretations, or open problems rather than blunt correction. Participants build rapport through greetings, side conversation, compliments, jokes, and references to future follow-up, while the host periodically shifts the group back into a more formal agenda-setting mode.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

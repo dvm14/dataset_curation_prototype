@@ -1,0 +1,360 @@
+{
+  "transcript_id": "560af57d",
+  "generated_at": "2026-11-21T20:56:07.567363",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly short to medium turns outside the formal presentations and long, structured monologues during talks. Early conversation is loose and overlapping, full of greetings, technical checks, side chatter, laughter-like affirmations, and frequent fillers such as \u201cyeah,\u201d \u201cum,\u201d \u201cokay,\u201d \u201cright,\u201d and repeated words or self-corrections. Speakers hedge often\u2014\u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cprobably,\u201d \u201cI guess,\u201d \u201cwe\u2019re interested in\u201d\u2014especially when interpreting results or speculating. The register is informal but professionally scientific: introductions and questions are courteous, while the talks themselves use dense technical explanation and signposting like \u201cso,\u201d \u201call right,\u201d and \u201cwhat we think is.\u201d Participants build on one another by praising the work before asking questions, restating part of the prior point, then extending it with a related concern; challenges are indirect and framed as curiosity rather than disagreement. Questions are usually prefaced with softeners (\u201cI have a quick question,\u201d \u201cthis may be naive,\u201d \u201cI\u2019m just curious\u201d) and can become rambling, with several reformulations before reaching the main point. The host keeps transitions brisk with brief acknowledgments, calls for more questions, and clear meeting-management remarks.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding whether a nurse-led walk-in diabetes clinic at a safety-net hospital is working and for whom.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "public health"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Elena Park",
+      "discipline": "clinical medicine",
+      "functional_role": "project manager",
+      "background": "An internist and health services researcher with 11 years of experience in safety-net outpatient care. She has led quality-improvement evaluations of diabetes management, urgent primary-care pathways, and medication-titration programs, using electronic health record extracts, chart review, and pragmatic pre/post analyses. She works closely with nursing leadership and is responsible for coordinating the data-access request and keeping the evaluation feasible within hospital operations.",
+      "distinct_perspective": "Frames the clinic first as a clinical service pathway whose performance should be visible in timely completed encounters and downstream care. She prioritizes measures such as completed walk-in visits, time from attempted presentation to a visit, no-show and leave-without-being-seen rates, HbA1c testing and treatment actions, follow-up completion, and short-term changes in glycemic control. She is attentive to whether the program reaches patients who otherwise miss routine diabetes care.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Malik Jones",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A medical sociologist in the second year of a postdoctoral fellowship, with prior ethnographic research on safety-net clinics, racialized patient experiences, and frontline bureaucratic decision-making. His methods include semi-structured interviews, participant observation, field notes, and interaction-focused analysis of reception, triage, and clinician-patient encounters. He has worked with community advisory groups but has limited experience embedding qualitative work in a rapid operational evaluation.",
+      "distinct_perspective": "Treats clinic use as socially organized rather than simply an individual choice or a recorded encounter. He is interested in how language, prior experiences of dismissal, housing instability, immigration-related fears, clinic rules, and staff discretion shape whether patients can make themselves legible as deserving of care and feel able to return. He wants interviews and observation to examine waiting-room dynamics, registration and triage interactions, stigma, trust, and the practical work patients do to navigate the service.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "discipline": "public health",
+      "functional_role": "PhD student",
+      "background": "A fourth-year public health PhD candidate focused on chronic-disease equity and health-care utilization. She has experience linking electronic health record data, referral records, and service-use data for evaluations of community-based diabetes programs. Her dissertation work uses stratified descriptive analyses, interrupted time-series methods, and mixed-methods integration to examine whether programs reduce disparities across insurance status, language preference, neighborhood deprivation, and prior patterns of care.",
+      "distinct_perspective": "Approaches the clinic as a population-level intervention whose benefits and burdens may be unevenly distributed. She wants to define a clear eligible population, examine uptake and outcomes by equity-relevant subgroups, and compare service patterns before and after implementation while accounting for secular changes in care. She emphasizes triangulating clinical, utilization, and interview findings so that apparent average improvement does not obscure groups who are not benefiting.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "walk_in_diabetes_clinic",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Create a natural planning meeting among Dr. Elena Park (clinical medicine), Dr. Malik Jones (sociology), and Dr. Priya Shah (public health). Dr. Park and Dr. Jones must each use the word \"access\" while discussing the clinic, but they must clearly mean different things without explicitly pausing to define the ambiguity. Dr. Park uses access to mean patients' ability to obtain and use the clinic as a health service, operationalized with measures such as completed walk-in visits, time to a visit, no-show rates, and follow-up completion. Dr. Jones uses access to mean the socially mediated ability to be recognized, welcomed, and able to navigate care without stigma or dismissal, to be examined through interviews and observations of waiting and staff-patient interactions. Their comments should provide enough evidence for a listener to infer both meanings and disciplines. Dr. Shah may contribute to the evaluation discussion but must not introduce a third distinct meaning of \"access.\" Keep the meeting focused on ordinary evaluation planning; do not mention this instruction, jargon, ambiguity, or a benchmark task.",
+    "ground_truth": {
+      "term": "access",
+      "meanings": [
+        {
+          "discipline": "clinical medicine",
+          "meaning": "Patients' practical use of and ability to obtain the clinic's services, reflected in service-utilization measures such as completed visits, time to being seen, no-show rates, and follow-up completion."
+        },
+        {
+          "discipline": "sociology",
+          "meaning": "Patients' socially shaped ability to be recognized, welcomed, and navigate care without stigma, dismissal, or exclusion, reflected in accounts and observations of waiting, interactions, and clinic culture."
+        }
+      ]
+    }
+  },
+  "seed_location": "The required cross-disciplinary use occurs in Dr. Malik Jones's turn 4 and Dr. Elena Park's turn 9. Jones (sociology) uses \"access\" to question whether a completed walk-in obscures redirection, waiting, difficult registration, and upstream gatekeeping; later turns 6, 12, 14, and 20 reinforce the interview/observation focus on stigma, reception interactions, and navigation. Park (clinical medicine) uses \"access\" in turn 9 to frame attempted or redirected access alongside completed visits in the service-use data; turns 1, 3, 5, 15, 17, and 22 provide the clinical operationalization through completed walk-in visits, timestamps, follow-up, scheduling, and documentation. Priya Shah also says the term in turns 8, 10, and 21, but does not introduce a third distinct meaning.",
+  "ground_truth": {
+    "term": "access",
+    "meanings": [
+      {
+        "discipline": "clinical medicine",
+        "meaning": "Patients' practical use of and ability to obtain the clinic's services, reflected in service-utilization measures such as completed visits, time to being seen, no-show rates, and follow-up completion."
+      },
+      {
+        "discipline": "sociology",
+        "meaning": "Patients' socially shaped ability to be recognized, welcomed, and navigate care without stigma, dismissal, or exclusion, reflected in accounts and observations of waiting, interactions, and clinic culture."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Sorry, I'm a couple of minutes late\u2014where have you all got to? Okay, great. I was hoping today we could get clear on the core outcomes before I put in the data-access request. Whether people actually get a completed walk-in visit, what happens clinically that day, and whether they make it into follow-up afterward. I also want to keep the extract realistic for the nursing and EHR teams, so we should probably distinguish- we need to distinguish what we want to know from what the system can genuinely show us."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I think we should separate the eligible population from clinic attendees right at the start. Otherwise, a completed walk-in visit can look good without telling us who never made it in. Could the extract include uncontrolled-diabetes patients with eligible encounters across sites, plus insurance, language, neighborhood deprivation, and prior diabetes-care use? And the comparison group, I\u2019m not sure that will hold up, but at least we can see the denominator and secular patterns."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "That denominator is important, especially prior diabetes-care use. We need to know whether this is reaching people who have been missing routine care rather than just moving established patients into a new slot. I can ask for cross-site eligible encounters and those covariates, but I want to check how cleanly we can identify walk-in attempts that never get fully\u2014 the front-desk and triage logs may be the only place those live."
+    },
+    {
+      "speaker": "Dr. Malik Jones",
+      "text": "This might be a dumb question, but when the record says a walk-in visit was completed, what do we actually see from the arrival sequence? Like, can we tell if somebody was redirected, waited and left, or had a difficult registration interaction before they got to the nurse? I worry a completed encounter makes access look frictionless, when the gatekeeping may be happening just upstream and may also shape whether people come back."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "No, that\u2019s exactly the right question. In the EHR extract, we\u2019ll probably see check-in and triage timestamps for people who get far enough. But redirection, and somebody leaving before registration, may be in the front-desk logs or nowhere reliable. Malik, interviews could tell us if the bottleneck is wait time, paperwork, language, or being sent somewhere else. The encounter data just won\u2019t distinguish those."
+    },
+    {
+      "speaker": "Dr. Malik Jones",
+      "text": "We should be careful not to treat those as interchangeable barriers. A long wait is one thing, but being told you need paperwork you don't have, or being spoken to in a way that makes you feel like you're not supposed to be there, can lead to the same missing record and a very different decision not to come back. I think patient interviews need to start before the nurse encounter. Why that day, what happened at the desk, and whether they considered coming back."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "For the quantitative side, those missing upstream steps aren't just noise. They change our denominator. Maybe we should keep a separate category for attempted or redirected access, even if it's incomplete, instead of coding everyone without a completed encounter as simply non-use. I'm also wondering if the front-desk logs have language fields at all. That could tell us whether the missingness is patterned, or..."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "I\u2019ll ask specifically whether those logs are retained, for what period, and whether language or interpreter need is captured. Even if they\u2019re patchy, I\u2019d rather have an attempted or redirected access field than let completed visits be the whole access story. We can, um, document the missingness instead of pretending it isn\u2019t there."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That would help a lot. I\u2019d also want to know whether the front-desk data can be linked, even imperfectly, to the EHR without making us collapse people into one clean pathway. The early extract already hints that patients from higher-deprivation neighborhoods have a lot of walk-in encounters but fewer documented referral completions, and I can\u2019t tell yet whether that\u2019s access after the visit, outside-network care, or just linkage\u2014linkage gaps."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Hm, that\u2019s concerning."
+    },
+    {
+      "speaker": "Dr. Malik Jones",
+      "text": "I\u2019d be wary of reading that too quickly as a post-visit referral problem. For someone who\u2019s housing-unstable, say, or worried about bills or documentation, \u201ccompletion\u201d may be a pretty poor proxy for whether the referral was usable. Could the interviews include people whose referrals are recorded as incomplete and ask what actually happened after they left?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I think that\u2019s important, and we should sample across that referral status instead of only recruiting people we can reach through completed follow-up. Maybe include people who came once and then had no further diabetes contact in the system. We\u2019d have to be careful, though, because no record could mean outside care, not disengagement. Malik, would that give you enough contrast to get at whether the referral was usable, or..."
+    },
+    {
+      "speaker": "Dr. Malik Jones",
+      "text": "I think so, especially if we recruit from the one-visit, no-further-system-contact group without presuming what that absence means. I'd want the interview to reconstruct the referral as a sequence. What they understood they were being asked to do, whether the destination felt reachable or safe, and whether something at the original visit shaped that. The contrast with documented completers could be really useful, though I'm not sure how many of the former- how many we can actually locate."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "That recruitment problem is useful to quantify too. For the extract, I\u2019d like a 30-day and maybe 90-day window for any in-system diabetes contact after the walk-in, not just the specific referral. Then we can separate documented follow-up from no observed contact without calling the latter failure. What I\u2019m still stuck on is the high same-day HbA1c completion but low scheduled follow-up. We need to know whether scheduling is actually- whether it\u2019s happening before we interpret that clinically."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "We need to pull the scheduling fields separately from the referral fields. So, order placed, appointment offered, appointment actually booked, and, um, no appointment available if that exists. Otherwise, low 30-day follow-up could look like a patient-level outcome when it\u2019s really a capacity or workflow issue. Elena, when the clinic is busy, do nurses reliably document the planned follow-up, or is that mostly in free text?"
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Not reliably enough to treat it as a complete structured field. The nurse may put a follow-up plan in the after-visit instructions or the note, and the scheduler's booking activity is in a different workflow. When it's busy, the plan can be there without an actual appointment record. So yes, let's request orders, scheduling offers, and bookings separately, and probably do a small chart review to see how often the note, sorry, how often the note fills in what the fields miss."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "The chart review could also give us a missingness estimate by language, insurance, and visit volume. If planned follow-up is least documented on the busiest days, that could distort the equity patterns pretty quickly. I wouldn\u2019t use the notes to recover every case, but they would tell us how cautious to be with the structured measures."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Exactly. I don't want the chart review to manufacture a definitive follow-up outcome. It's really a validation sample for the pathway fields, like was follow-up recommended, was an appointment actually available or booked, and where does the structured extract go blank. We should stratify those charts by clinic volume and probably by documented interpreter need, if that field is usable, and..."
+    },
+    {
+      "speaker": "Dr. Malik Jones",
+      "text": "Mm, and for the chart review, could we include a really small interactional piece, at least whether there's any trace of a registration or interpreter negotiation before triage? I know the notes won't capture the tone or the informal discretion, but if the blanks cluster after particular arrival pathways, that helps us decide whether brief observation is worth trying. I'd need to check what privacy would permit in reception, obviously."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I think that could be useful, particularly if it helps us interpret whether the attempted-access records are selectively missing. I\u2019d just keep the observation piece separate, separate from the validation chart sample in the request, since the chart review can tell us about documentation bias but probably not much about what happened at reception."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Separate makes sense. For this request, I\u2019ll keep the chart-review validation focused on clinical and scheduling documentation, and we can frame reception observation as a later, privacy-reviewed component if the attempted-access logs turn out too thin. I do want us to ask nursing leadership one basic thing before we finalize. On a busy day, who actually offers or books follow-up, because that may- that could explain the HbA1c/follow-up gap more than anything in the patient record."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "And that answer really matters for how we interpret the 30-day measure. If leadership says booking shifts to whoever's free, or it happens after the patient has left, then I think clinic-day volume and staffing should be contextual variables in the descriptive analysis, not things we just adjust away. Otherwise, a workflow constraint could show up as a disparity in patient follow-through."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "I\u2019ll add daily walk-in volume and nurse and scheduler staffing, if those rosters are available, as context rather than patient covariates. I need to jump too, but I\u2019ll check with nursing leadership on the booking workflow and with registration on what survives in the front-desk logs before I finalize the request, and then..."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Okay, I think we\u2019ve covered what we needed to today. Thanks, both, and let\u2019s reconnect once Elena\u2019s heard back on the logs and the workflow."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Great, thank you both. Talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      4,
+      5,
+      6,
+      9,
+      12,
+      20,
+      22
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 1-6, 12-18, and 21-24. Most speakers introduce a concern, qualify it, and arrive at a tidy proposal within one turn.",
+      "Disfluencies are present but often function as light surface decoration rather than genuinely disrupting thought; for example, turn 9's \u201cum\u201d and turns 17 and 24's repairs occur inside otherwise well-formed planning statements.",
+      "The discussion resolves nearly every concern immediately into a feasible next step or owner assignment. For example, the concerns in turns 15-16, 20-21, and 22-24 are converted quickly into requests, validation plans, or workflow checks, with little unresolved exploration.",
+      "Dr. Malik Jones is somewhat less distinct than he could be: although his interview, reception, stigma, and interactional framing are discipline-appropriate, several turns use broadly accessible health-services language rather than his stated high-jargon sociological style.",
+      "The closing in turns 24-26 is unusually clean and minute-like, with Elena listing all next checks and Priya formally declaring the meeting complete."
+    ],
+    "seed_uses": [
+      {
+        "turn": 1,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Uses data-access request, not the seed term's care meaning."
+      },
+      {
+        "turn": 2,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 4,
+        "sense": "sociology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Focuses on gatekeeping, interactions, and upstream exclusion."
+      },
+      {
+        "turn": 5,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 8,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Attempted or redirected access is treated as service use/encounter status."
+      },
+      {
+        "turn": 9,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Contrasts attempted access with completed visits in utilization data."
+      },
+      {
+        "turn": 10,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Discusses access after a visit in relation to referral completion."
+      },
+      {
+        "turn": 11,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 21,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to attempted-access records and their missingness."
+      },
+      {
+        "turn": 22,
+        "sense": "clinical medicine",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to attempted-access logs as data records."
+      },
+      {
+        "turn": 23,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.09,
+    "turn_moves": {
+      "proposal": 10,
+      "commitment": 4,
+      "question": 1,
+      "answer": 3,
+      "backchannel": 3,
+      "concern": 1,
+      "request": 2,
+      "agreement": 2
+    },
+    "volunteer_turns": [
+      3,
+      9,
+      17,
+      22,
+      24
+    ],
+    "unsure_turns": [
+      2,
+      10,
+      13,
+      14,
+      15,
+      20
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.09,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 1-6, 12-18, and 21-24. Most speakers introduce a concern, qualify it, and arrive at a tidy proposal within one turn.",
+        "Disfluencies are present but often function as light surface decoration rather than genuinely disrupting thought; for example, turn 9's \u201cum\u201d and turns 17 and 24's repairs occur inside otherwise well-formed planning statements.",
+        "The discussion resolves nearly every concern immediately into a feasible next step or owner assignment. For example, the concerns in turns 15-16, 20-21, and 22-24 are converted quickly into requests, validation plans, or workflow checks, with little unresolved exploration.",
+        "Dr. Malik Jones is somewhat less distinct than he could be: although his interview, reception, stigma, and interactional framing are discipline-appropriate, several turns use broadly accessible health-services language rather than his stated high-jargon sociological style.",
+        "The closing in turns 24-26 is unusually clean and minute-like, with Elena listing all next checks and Priya formally declaring the meeting complete."
+      ]
+    }
+  ]
+}

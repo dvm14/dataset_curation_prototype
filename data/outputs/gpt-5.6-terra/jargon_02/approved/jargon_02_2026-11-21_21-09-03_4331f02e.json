@@ -1,0 +1,360 @@
+{
+  "transcript_id": "4331f02e",
+  "generated_at": "2026-11-21T21:09:03.971310",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though presentations are long, structured monologues followed by extended technical answers. Before the formal session, participants use brief greetings, logistics checks, jokes, and light small talk, with frequent \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d and repeated words; the transcript also reflects many false starts, self-corrections, and non-native or imperfectly captured phrasing. Overlap and interruption are fairly common but friendly, usually appearing as quick acknowledgments, follow-up questions, or transitions rather than hostile cutoffs. Formality rises during introductions and talks, where speakers use polished framing and signposting, then relaxes again during Q&A. Questions are often prefaced with praise or hedging (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), and challenges are framed indirectly as possibilities or open questions rather than blunt disagreement. Participants build on prior remarks by restating part of the answer, adding adjacent examples, or proposing collaborations; uncertainty is openly marked with phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201csort of,\u201d \u201clikely,\u201d and \u201cwe don\u2019t know.\u201d\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Amina Imani",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "Dr. Imani is a cognitive neuroscientist with 11 years of experience studying developmental attention and self-regulation. She has led school-based EEG feasibility studies with children ages 7\u201312, using spectral power, event-related measures, and within-session device telemetry to examine changes in neural state. She has managed multi-site data-collection timelines and is accustomed to translating EEG protocols into procedures that school staff can carry out.",
+      "distinct_perspective": "She treats the program's central question as whether repeated neurofeedback sessions produce measurable changes in attention-related EEG patterns during use of the headband. She prioritizes pre-specified neural markers, session-by-session trajectories, artifact handling, and clear links between device logs and outcome analyses. She sees standardized acquisition and interpretable EEG-derived indicators as the most direct evidence that the intervention is affecting its intended mechanism.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Lian Chen",
+      "discipline": "education",
+      "functional_role": "principal investigator",
+      "background": "Dr. Chen is an educational researcher with 16 years of experience in elementary-school intervention evaluation, classroom observation, and teacher-mediated implementation studies. Her work combines structured engagement observations, curriculum-aligned learning measures, teacher logs, and mixed-methods analysis. She has served as principal investigator on district-partnered studies and regularly negotiates research procedures with principals, teachers, and family advisory groups.",
+      "distinct_perspective": "She frames the study around whether the program improves students' attention in the conditions that matter for schooling: staying engaged with instruction, persisting through independent work, following lesson routines, and participating over time. She prioritizes measures that are meaningful to teachers, feasible within normal classroom schedules, sensitive to variation in instructional context, and interpretable alongside implementation fidelity.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Engineer Mateo Alvarez",
+      "discipline": "biomedical engineering",
+      "functional_role": "project manager",
+      "background": "Engineer Alvarez has 9 years of experience developing and validating wearable biosensing systems, including dry-electrode EEG devices used in pediatric and consumer settings. He has overseen bench testing, field reliability studies, human-factors assessments, and device-support protocols for school and clinic deployments. His recent work focuses on electrode contact quality, motion artifact, battery performance, firmware logging, and fit across varied head sizes and hair types.",
+      "distinct_perspective": "He views the evaluation as dependent on whether the headband can generate safe, usable, and sufficiently reliable data under ordinary classroom conditions. He prioritizes fit checks, signal-quality thresholds, battery and connectivity logs, cleaning procedures, adverse-event reporting, and a practical escalation plan when sessions fail. He will press the team to distinguish intervention exposure from usable device data and to document technical missingness rather than treating it as random.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "jargon_02",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_02",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+    "explicit_instruction": "During the meeting, Dr. Imani (neuroscience) and Dr. Chen (education) must both use the term \"attention\" as though they are discussing the same primary outcome, without defining it or noticing any mismatch. Dr. Imani should describe attention in relation to EEG-derived neural markers during the headband sessions. Dr. Chen should describe attention in relation to observable classroom engagement and sustained participation in lessons. They should agree that attention will be central to evaluating the program, but no one should ask for clarification or resolve the differing meanings. Engineer Alvarez may discuss dry-electrode signal quality, child fit, safety, and battery reliability, but should not identify or repair the terminology issue. Keep the meeting focused on ordinary study planning; do not mention that this is a jargon test or signal that a misunderstanding exists.",
+    "ground_truth": {
+      "term": "attention",
+      "meanings": [
+        {
+          "discipline": "neuroscience",
+          "meaning": "A neural state or capacity inferred from EEG-derived markers during neurofeedback use, such as activity patterns associated with attentional control or sustained focus."
+        },
+        {
+          "discipline": "education",
+          "meaning": "Observable classroom engagement and sustained participation in instructional activities, such as staying on task, following lessons, and completing assigned work."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 10\u201311 and 13: Dr. Chen uses \"attention\" for observable classroom engagement/persistence in teacher-led and independent-work contexts (turn 10), while Dr. Imani uses it for an EEG-derived, attention-related neural state during headband sessions (turn 11) and an EEG \"attention marker\" (turn 13). They discuss linking these measures without defining or resolving the differing meanings. The required agreement that attention will be central to evaluating the program is only implicit rather than explicitly stated.",
+  "ground_truth": {
+    "term": "attention",
+    "meanings": [
+      {
+        "discipline": "neuroscience",
+        "meaning": "A neural state or capacity inferred from EEG-derived markers during neurofeedback use, such as activity patterns associated with attentional control or sustained focus."
+      },
+      {
+        "discipline": "education",
+        "meaning": "Observable classroom engagement and sustained participation in instructional activities, such as staying on task, following lessons, and completing assigned work."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Morning\u2014hope the school application deadline isn\u2019t colliding with too many other things for everyone. I\u2019ve got the measures sheet up. I\u2019d like us to leave today with a small, workable set of session-level EEG markers and, um, a matching plan for the classroom ratings, so the schools aren\u2019t carrying procedures they can\u2019t actually sustain."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "Morning. Before we make the EEG marker list too tight, I'd put a few device fields next to every session, like fit check, signal-quality pass rate, battery, and any Bluetooth dropouts. Otherwise a missed marker can look like a child-level result when it might just be poor electrode contact. Amina, what's your minimum usable-data threshold within a 15-minute, sorry, 15-minute session?"
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "I\u2019d set it provisionally at eight usable minutes, with usable defined after the same artifact rule for every child and session. That gives us enough segments to estimate a session marker without pretending a two-minute clean trace is meaningful. But before we lock that in, I want to check the feasibility logs. Mateo, do your quality flags behave similarly across hair texture and fit, or would eight minutes systematically exclude some children?"
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "Not necessarily, and I wouldn't assume the flag is neutral across children. Dry contact can be more sensitive to hair volume, placement, and headband tension, so I'd keep the eight-minute analytic threshold but record a session as technical-insufficient, not just missing, with the fit and quality fields attached. I can check the current validation data by hair and, and fit category before we freeze that."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I would want those technical-insufficient sessions visible in the classroom file as well, rather than disappearing from the longitudinal record. If a child has repeated fit failures, that affects what we can reasonably say about dose and implementation, and it may also fall disproportionately on particular classrooms or grades. Mateo, roughly how long would the fit check take at the start of a session under ordinary school conditions?"
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "It\u2019s about a minute if it\u2019s just a quick visual placement check and the app\u2019s contact readout. It\u2019s two or three minutes if we need to reseat it around hair or adjust the tension. I\u2019d budget three minutes in the schedule, though, because otherwise staff will rush it and we won\u2019t know if a bad trace is the device or the setup. Do you expect the children to stay seated for the full fifteen, Lian?"
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I would expect them to remain seated, but I would not assume they will be still, especially after lunch or with the younger grades. We should build a brief settling routine into the session and have staff note interruptions or departures; otherwise the fifteen minutes are not really comparable. I also need to check whether both schools can protect a consistent time of day, because that will matter for the classroom observations as much as for the device."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Mm, especially after lunch."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "And movement is probably the thing we need to separate from contact loss in the log. The app can tell us some of that, but not whether a child was fidgeting or, say, the band shifted under thick hair, so the staff note only needs a couple of codes\u2014three codes, interruption, obvious movement, or repositioning. I\u2019d avoid asking them to enforce stillness beyond the settling routine."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I'd keep the movement codes descriptive, rather than treating movement as noncompliance. For the classroom side, though, our attention measure should distinguish engagement during teacher-led instruction from persistence in independent work. Those were quite different in the pilot. Could the observers sample both contexts, both contexts, rather than produce one overall on-task rating?"
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "I think sampling both is better, as long as we code the instructional context rather than average them into one attention score. For the EEG side, the session marker is specifically attention-related state during the headband use, so I\u2019d want to see whether its trajectory lines up differently with teacher-led engagement versus independent-work persistence. Lian, how often could an observer realistically catch each context without changing the lesson?"
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Realistically, I'd plan two short observation windows per classroom visit, one during teacher-led instruction and one during independent work, maybe ten minutes each. We'd use momentary time sampling rather than a global rating. I do need to confirm the bell schedules, though. We should sample comparable points in the day across the two schools, or, um, keep time of day explicit in the observation file."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "That works for me, as long as we keep the context and time-of-day fields instead of trying to force visits into identical lessons. For the EEG trajectory, I want session time recorded too. Morning versus post-lunch could affect both the artifact rate and the attention marker. And before we specify the final marker, I need to run the feasibility traces through the proposed artifact rule. Two sessions a week may look ample\u2014 two sessions a week could stop looking ample once the rejected segments start accumulating."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "And the time-of-day field should sit with the device record too, not just observations. I need to verify what the current firmware exports for battery and sync events\u2014if school Wi-Fi changes the upload behavior, we could otherwise mistake a delayed log for a failed session. I\u2019d also add a cleaning-completed check and a very short discomfort or skin-irritation field; those are low burden but important in a twelve-week pediatric deployment."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Right, put that in."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I\u2019d add a brief teacher note on whether the session displaced core instruction or happened during a transition, because that will shape both uptake and what the classroom observations mean. And for discomfort, I\u2019d want an option for the child declining or, sorry, stopping the session, not folded into a generic incomplete session."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "Yes\u2014I'd split those at intake: child declined, child stopped for discomfort, absent or schedule-missed, and then technical failure after a started session. For the discomfort field, a simple none/mild/stop-session code plus free text is enough; we also need a clear escalation route if there\u2019s skin irritation, not just a checkbox."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "That distinction is important."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Analytically, those need to stay separate too. A child who declines or stops is not an artifact-heavy EEG session, and a technical-insufficient trace isn't evidence of low attention. I'd put all four dispositions as separate fields before the usable-minutes column. The repeated rejected segments in the feasibility run are exactly why I don't want them- why I don't want all that collapsed into one \"incomplete\" code."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "Exactly. In the backend, I'd make \u201ctechnical failure\u201d a little more granular. I mean, we'd- we'd separate fit/contact failure, connectivity or sync failure, battery shutdown, and device/app error, while the school-facing form can stay simple. If we see a cluster in one classroom, like we did in that pediatric deployment, those distinctions let us investigate it instead of calling it random missingness."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "I'd also add a separate rejected-segment percentage for every started session. Usable minutes alone won't tell us whether that late-session pattern in the feasibility run is worsening signal quality or just fewer recorded minutes. If the rejection rate rises while the marker changes, we need to be very cautious about calling that a neural change."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "I\u2019d put rejected-segment percentage next to usable minutes, but I\u2019d also retain a timestamped quality trace if the export supports it. Otherwise we can\u2019t tell whether it deteriorated late in the session or was poor from the first minute. I need to verify that in the current firmware export, along with whether sync delays on the school network preserve those timestamps."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "If that trace is available, I want to retain it even if we only analyze the session-level rejection percentage at first. The key question from the feasibility run is whether those late rejected segments cluster after a stable first half. That would make the apparent within-session improvement much harder to interpret. Mateo, once you confirm the export, I\u2019ll run the proposed artifact pipeline on those traces before we name the primary marker in the application."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "That\u2019s the right dependency. I\u2019ll verify whether we get timestamped contact-quality and sync-event exports, plus the battery-log format, before we promise that trace in the application. If the detailed trace isn\u2019t exportable, we should say upfront that we\u2019ll retain session-level usable minutes and rejection percentage, rather than imply we can reconstruct late-session, late-session degradation later."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Good. Then the application can state the conservative version. Every started session gets its disposition, usable minutes, and rejected-segment percentage, with the same artifact pipeline throughout. I\u2019ll hold the primary EEG marker wording until I see whether that pipeline leaves enough usable data across the feasibility sessions\u2014otherwise, we risk pre-specifying a trajectory we can\u2019t estimate reliably."
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "One small addition before we close, the application should say the session starts only after the fit check passes, and staff can reseat once before coding a contact failure. That makes the exposure clock less ambiguous. Otherwise, otherwise we may call it a 15-minute session when five minutes were troubleshooting. I\u2019ll check the export and the school-network sync question this week."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "That wording works. I\u2019d also make clear that we\u2019ll record the classroom observation dates and times alongside the session schedule, even if the visits can\u2019t be perfectly matched across schools. Otherwise the independent-work and teacher-led samples will be difficult to interpret. I\u2019ll check the two bell schedules\u2014 the two school bell schedules before we finalize that section."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "I\u2019ll revise the measures section so the EEG language stays conditional on that feasibility check, and I\u2019ll include the session dispositions, fit-pass start time, usable minutes, and rejection percentage. Once Mateo and Lian have those checks back, we can close the wording quickly instead of overclaiming in the application, and\u2014"
+    },
+    {
+      "speaker": "Engineer Mateo Alvarez",
+      "text": "I think we\u2019ve got what we needed for today. Thanks, both. I\u2019ll send the export check as soon as I\u2019ve confirmed it, and then we can close the language from there."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Thank you. Goodbye, both."
+    },
+    {
+      "speaker": "Dr. Amina Imani",
+      "text": "Thanks\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      10,
+      11,
+      13,
+      19
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by the highly polished, agenda-driven structure: most substantive turns, especially turns 2-7, 10-14, and 19-27, present a complete concern and an immediate actionable resolution rather than the partial, exploratory speech expected in a live working session.",
+      "The stated screen-share working-session style is weakly realized. Aside from turn 1 mentioning a measures sheet and occasional references to fields, columns, and wording, speakers rarely point to or navigate a specific on-screen document, figure, row, or spreadsheet item.",
+      "Turn 28 functions like a written-minutes recap of decisions and owners ('I\u2019ll revise... Once Mateo and Lian have those checks back...'), which is a realism tell under the rubric.",
+      "Disfluencies are present but often read as inserted surface markers in otherwise polished sentences\u2014for example turns 2, 12-13, 16, and 19\u2014rather than causing genuinely unfinished or uncertain reasoning.",
+      "The closing at turns 29-31 is unusually tidy and immediate after a comprehensive recap, reinforcing the scripted feel."
+    ],
+    "seed_uses": [
+      {
+        "turn": 10,
+        "sense": "education",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Classroom engagement and persistence are the proposed measure."
+      },
+      {
+        "turn": 11,
+        "sense": "both",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Contrasts classroom engagement with EEG attention-related state."
+      },
+      {
+        "turn": 12,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 13,
+        "sense": "neuroscience",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Refers to an EEG attention marker and artifact effects."
+      },
+      {
+        "turn": 14,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 19,
+        "sense": "neuroscience",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Low attention is discussed as an EEG-session interpretation."
+      },
+      {
+        "turn": 20,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 0.65,
+    "written_turns": [
+      3,
+      5,
+      7,
+      11,
+      17,
+      21,
+      22,
+      23,
+      25
+    ],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "proposal": 13,
+      "question": 5,
+      "answer": 2,
+      "backchannel": 3,
+      "request": 1,
+      "concern": 1,
+      "agreement": 2,
+      "commitment": 4
+    },
+    "volunteer_turns": [
+      4,
+      13,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "unsure_turns": [
+      7,
+      12,
+      14,
+      22
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.65,
+      "exploration_share": 0.21,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by the highly polished, agenda-driven structure: most substantive turns, especially turns 2-7, 10-14, and 19-27, present a complete concern and an immediate actionable resolution rather than the partial, exploratory speech expected in a live working session.",
+        "The stated screen-share working-session style is weakly realized. Aside from turn 1 mentioning a measures sheet and occasional references to fields, columns, and wording, speakers rarely point to or navigate a specific on-screen document, figure, row, or spreadsheet item.",
+        "Turn 28 functions like a written-minutes recap of decisions and owners ('I\u2019ll revise... Once Mateo and Lian have those checks back...'), which is a realism tell under the rubric.",
+        "Disfluencies are present but often read as inserted surface markers in otherwise polished sentences\u2014for example turns 2, 12-13, 16, and 19\u2014rather than causing genuinely unfinished or uncertain reasoning.",
+        "The closing at turns 29-31 is unusually tidy and immediate after a comprehensive recap, reinforcing the scripted feel."
+      ]
+    }
+  ]
+}

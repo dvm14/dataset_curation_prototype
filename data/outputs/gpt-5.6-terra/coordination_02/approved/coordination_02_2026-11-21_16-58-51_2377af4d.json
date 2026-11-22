@@ -1,0 +1,341 @@
+{
+  "transcript_id": "2377af4d",
+  "generated_at": "2026-11-21T16:58:51.093908",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly medium-to-long turns, with an informal pre-meeting chat made up of short, fragmented exchanges before shifting into highly structured presentation monologues and moderately extended Q&A responses. Interruptions are rare and overlap is light, though speakers occasionally jump in with brief acknowledgments or follow-up questions. The tone is collegial, casual, and academically professional: participants use first names, compliments, laughter-like reactions, and conversational fillers (\u201cyeah,\u201d \u201cum,\u201d \u201cokay,\u201d \u201cright\u201d), while still framing questions respectfully. Speech is noticeably spontaneous, with repetitions, self-corrections, false starts, unfinished clauses, and occasional reformulation\u2014especially among non-native speakers. Questions tend to begin gently (\u201cI have a question,\u201d \u201ccan I ask,\u201d \u201cdo you think\u201d), often contain several embedded subquestions, and invite speculation rather than demand a definitive answer. Disagreement is indirect and exploratory, expressed through uncertainty, caveats, alternative explanations, or requests for clarification rather than blunt contradiction. Participants commonly build on prior comments by praising the work, connecting it to related findings, then narrowing toward a specific methodological or interpretive point.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Building a wrist-worn sensor and model that flags irregular heart rhythm early enough for a clinic to follow up.",
+  "disciplines": [
+    "computer science",
+    "biomedical engineering",
+    "clinical medicine"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "computer science",
+      "functional_role": "PhD student",
+      "background": "A fifth-year PhD student in machine learning for wearable health sensing. She has spent four years building and evaluating time-series classifiers for PPG and inertial data, with particular experience in signal-quality indices, class-imbalanced learning, calibration, and retrospective validation against annotated ambulatory-monitor recordings. She is accustomed to working from fixed datasets and is alert to dataset shift between curated recordings and real-world use.",
+      "distinct_perspective": "Frames the problem as a selective-prediction and deployment-monitoring problem rather than simply an arrhythmia-classification task. She argues that the model should first identify whether a PPG segment is interpretable, use accelerometry as a motion/context signal, and abstain or label uncertainty when signal quality is inadequate. She sees the existing 120-participant dataset as suitable for initial model development and threshold trade-off analysis, but emphasizes that false-positive behavior, calibration, subgroup performance, and model drift will need measurement once the system encounters a prospective population and real usage patterns. She supports positioning outputs as higher-confidence screening alerts requiring clinical confirmation, not diagnostic determinations.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Luis Ortega",
+      "discipline": "biomedical engineering",
+      "functional_role": "project manager",
+      "background": "A biomedical engineer with 11 years of experience translating physiological-sensing prototypes into field studies, including optical pulse sensing, wearable form-factor testing, embedded firmware, and battery-constrained signal processing. He has managed multidisciplinary device-development work and has conducted usability and bench evaluations involving sensor placement, contact pressure, skin-interface variability, and motion-induced artifact. He is familiar with design controls and the practical relationship between intended-use claims, validation evidence, and regulatory planning.",
+      "distinct_perspective": "Treats the wrist as an unstable measurement environment rather than a neutral data source. He focuses on whether PPG waveforms remain physiologically interpretable across differences in fit, placement, skin contact, perfusion, wear behavior, and everyday arm motion. He favors combining PPG with accelerometry to screen or annotate motion-corrupted intervals, while repeatedly questioning the battery and on-device-compute consequences of any proposed approach. He regards intended-use wording as consequential: regulatory planning will depend on whether the device is framed as a screening aid with confirmatory testing versus a product making stronger rhythm claims, and on what validation evidence ultimately supports that framing.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "discipline": "clinical medicine",
+      "functional_role": "postdoctoral researcher",
+      "background": "A cardiology postdoctoral researcher with six years of clinical and research experience in ambulatory rhythm monitoring, atrial fibrillation screening, and chart-based follow-up studies. She has worked alongside electrophysiology and general-cardiology teams reviewing monitor reports, correlating symptoms with rhythm findings, and studying how incidental or low-specificity findings affect patient communication and clinic workload. She understands the current nurse-triage environment but is not responsible for operational clinic management.",
+      "distinct_perspective": "Frames the device as a potential entry point into a clinical pathway, not as an endpoint. She insists that an alert has value only if there is a recognizable recipient, a clinically appropriate confirmatory route, and communication that does not imply acute monitoring or emergency response. She is especially concerned that frequent nonactionable alerts could overload nurse triage, erode trust, and make a screening pilot unacceptable even if retrospective discrimination metrics look favorable. She supports business-hours follow-up as a plausible direction and wants the device messaging to avoid any suggestion that users should rely on it for urgent symptoms, while deferring to engineering and computational colleagues on sensor feasibility and model design.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "wearable_arrhythmia",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 1,
+  "task_id": "coordination_02",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting with a clear research direction but little explicit next-step planning. The evaluated AI must suggest appropriate next steps. Preserve the lack of an explicit complete action plan.",
+  "seed_spec": {
+    "task_id": "coordination_02",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting with a clear research direction but little explicit next-step planning. The evaluated AI must suggest appropriate next steps. Preserve the lack of an explicit complete action plan.",
+    "explicit_instruction": "Run a meeting among Dr. Maya Chen (computer science), Dr. Luis Ortega (biomedical engineering), and Dr. Priya Shah (clinical cardiology). They should reach a clear shared research direction: develop a screening prototype that uses wrist PPG plus accelerometry, suppresses or labels low-quality motion-corrupted segments, and sends only higher-confidence irregular-rhythm alerts for clinical confirmation rather than making diagnostic claims. Maya should explain that retrospective data can support an initial model and threshold analysis, while warning that false-positive rates and model drift must be measured after deployment. Luis should explain that placement, skin contact, and motion artifact are central technical risks, and note that regulatory planning depends on the final intended-use wording and validation evidence. Priya should state that alerts need a defined recipient and confirmatory pathway, and that an excessive false-alert burden would make the pilot unacceptable. The group may agree that clinic follow-up should occur during business hours and that urgent-symptom messaging must not be implied by the device. Keep discussion at the level of direction, constraints, and open questions. Do not have participants create a complete action plan, assign owners, commit to dates, finalize performance thresholds, select the prospective cohort, settle the alert-routing workflow, or specify the regulatory strategy. These omissions must remain evident for the evaluated AI to identify as appropriate next steps.",
+    "ground_truth": {
+      "shared_direction": "Develop a wrist-worn irregular-rhythm screening prototype using PPG and accelerometry, with signal-quality or motion-artifact handling, higher-confidence alerts, and clinical confirmation rather than device-based diagnosis.",
+      "key_constraints": [
+        "The model must balance sensitivity against false-positive burden.",
+        "Motion artifact, sensor placement, and skin contact can degrade PPG signal quality.",
+        "On-device compute and battery limit model complexity and continuous processing.",
+        "The deployed model requires monitoring for performance change or drift.",
+        "Clinic alert handling needs a recipient, review process, and confirmation pathway.",
+        "The device must not imply emergency or urgent symptom response; follow-up is limited to business-hour clinical operations.",
+        "Regulatory requirements depend on intended-use language and validation evidence."
+      ],
+      "unresolved_next_steps": [
+        "Define the prospective pilot cohort, recruitment approach, reference standard, and ground-truth annotation/confirmation process.",
+        "Analyze retrospective data to establish baseline performance across relevant subgroups and activity conditions, then propose candidate alert thresholds and acceptable false-positive burden.",
+        "Specify a signal-quality and motion-artifact evaluation protocol, including placement and wear-condition testing.",
+        "Benchmark candidate on-device models for accuracy, latency, compute, and battery use.",
+        "Design and test the clinical alert workflow: alert recipient, triage criteria, review timing, documentation, patient communication, and confirmatory testing.",
+        "Set a model-monitoring and drift-detection plan for the prospective deployment.",
+        "Clarify intended-use wording and obtain a regulatory assessment aligned with the pilot and eventual product claims.",
+        "Assign owners, dependencies, milestones, and decision points for the above work."
+      ],
+      "evidence_to_collect": [
+        "PPG and accelerometer performance during rest, daily activity, and high-motion periods.",
+        "Comparison of device alerts with an appropriate rhythm reference standard and clinical confirmation.",
+        "False-positive and false-negative rates, including the number of alerts requiring staff review.",
+        "Wearability, placement, contact, adherence, battery-life, and on-device computational measurements.",
+        "Clinic triage workload, turnaround time, follow-up completion, and clinician assessment of alert usefulness.",
+        "Performance stability over time and across the prospective cohort."
+      ]
+    }
+  },
+  "seed_location": "Turns 1-24 substantively satisfy the seed: the group converges on a wrist PPG-plus-accelerometry screening approach with quality/motion-related abstention or gating (1-12, 21-24), retrospective archive analysis for operating points and alert burden rather than a final threshold (10, 12, 14, 16, 21), concern about false alerts and triage burden (13-17), business-hours/non-urgent clinical handling and no diagnostic or urgent-response implication (17-22), and hardware/contact/placement plus battery, latency, and regulatory-adjacent intended-use constraints (4, 7-11, 18, 23). The transcript intentionally leaves major next steps incomplete: no finalized threshold, cohort, reference-standard protocol, alert workflow, regulatory strategy, owners, dates, or complete action plan. There are limited tentative follow-ups\u2014Priya says she will check triage capacity/ownership (22) and Luis will check hardware behavior (23)\u2014but these do not form a complete explicit action plan.",
+  "ground_truth": {
+    "shared_direction": "Develop a wrist-worn irregular-rhythm screening prototype using PPG and accelerometry, with signal-quality or motion-artifact handling, higher-confidence alerts, and clinical confirmation rather than device-based diagnosis.",
+    "key_constraints": [
+      "The model must balance sensitivity against false-positive burden.",
+      "Motion artifact, sensor placement, and skin contact can degrade PPG signal quality.",
+      "On-device compute and battery limit model complexity and continuous processing.",
+      "The deployed model requires monitoring for performance change or drift.",
+      "Clinic alert handling needs a recipient, review process, and confirmation pathway.",
+      "The device must not imply emergency or urgent symptom response; follow-up is limited to business-hour clinical operations.",
+      "Regulatory requirements depend on intended-use language and validation evidence."
+    ],
+    "unresolved_next_steps": [
+      "Define the prospective pilot cohort, recruitment approach, reference standard, and ground-truth annotation/confirmation process.",
+      "Analyze retrospective data to establish baseline performance across relevant subgroups and activity conditions, then propose candidate alert thresholds and acceptable false-positive burden.",
+      "Specify a signal-quality and motion-artifact evaluation protocol, including placement and wear-condition testing.",
+      "Benchmark candidate on-device models for accuracy, latency, compute, and battery use.",
+      "Design and test the clinical alert workflow: alert recipient, triage criteria, review timing, documentation, patient communication, and confirmatory testing.",
+      "Set a model-monitoring and drift-detection plan for the prospective deployment.",
+      "Clarify intended-use wording and obtain a regulatory assessment aligned with the pilot and eventual product claims.",
+      "Assign owners, dependencies, milestones, and decision points for the above work."
+    ],
+    "evidence_to_collect": [
+      "PPG and accelerometer performance during rest, daily activity, and high-motion periods.",
+      "Comparison of device alerts with an appropriate rhythm reference standard and clinical confirmation.",
+      "False-positive and false-negative rates, including the number of alerts requiring staff review.",
+      "Wearability, placement, contact, adherence, battery-life, and on-device computational measurements.",
+      "Clinic triage workload, turnaround time, follow-up completion, and clinician assessment of alert usefulness.",
+      "Performance stability over time and across the prospective cohort."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Before we get into it\u2014did anyone else see the campus VPN was down again this morning? I spent twenty minutes thinking my preprocessing job had died. Anyway, what I most want out of today is clarity on what kind of alert the clinic could actually act on, because I don't think we should treat this as just a binary rhythm classifier. The device needs permission to say, basically, this PPG window is not interpretable."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Yeah, and clinically, that abstention is probably safer than manufacturing certainty. Maya, I\u2019m curious what that looks like downstream. Does the user see an uninterpretable reading, or just no alert? Because if somebody gets repeated low-quality windows from motion or poor contact, they may, um, experience that as a concerning pattern even when it never reaches triage."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d default to no user-facing rhythm result for a rejected window, rather than showing a stream of \u201cuninterpretable\u201d events. Maybe, maybe the app gives a general wear-quality prompt only if it\u2019s persistent, like adjust fit, but that has to be separate from risk language. And low motion doesn\u2019t guarantee interpretability. We have some quiet windows with badly calibrated high-risk scores, probably from contact or perfusion effects, so the quality gate can\u2019t just be accelerometer magnitude."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That quiet-but-bad-signal case is exactly what I worry about at the wrist. In a short wear study, we saw PPG amplitude fade with almost no accelerometer change, then come back later. Tightening the strap didn't reliably solve it, and sometimes it just made people keep repositioning it. Maya, how sensitive is your gate to those contact or perfusion-driven morphology changes, or I should say, do they become an abstention pattern that might systematically exclude useful episodes?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Mm, that's clinically awkward."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "It\u2019s a real trade-off, and I don\u2019t know the sensitivity yet because I need to go back to the reference annotations around those rejected windows. Especially whether short episodes got labeled cleanly or were themselves uncertain. I\u2019d rather tune the gate jointly with the rhythm score and report coverage by subgroup and episode duration, not just declare contact-related morphology bad by definition. But if it\u2019s out of distribution, forcing a high-risk score is worse than missing it silently, I think."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I'd want us to make that visible in the analysis, though, not necessarily to the user. I mean, not just the aggregate abstention rate, but coverage conditional on wear state and maybe amplitude or morphology bands. Otherwise, a reassuring overall number could hide that the device goes quiet for exactly the people or times of day when wrist contact is less reliable."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Exactly. I'd stratify coverage not just by those bands, but by participant and by time of day where we can, because aggregate rejection can hide a really concentrated failure mode. Luis, do you have a sense of whether the amplitude fade has any recoverable precursor in the raw optical channels, or is it basically indistinguishable from physiologic low perfusion until it resolves?"
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Some, maybe, but I\u2019d be careful about calling it a precursor until we inspect the channels. In that wear set, a gradual DC-level drift or a falling pulsatile-to-DC ratio sometimes came before the usable waveform disappeared, but sometimes it just looked physiologic, cold hands, low perfusion, who knows. If this hardware gives us multiple optical channels, do we have those in the 120-person archive, or only the processed PPG..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think the archive is processed PPG plus accelerometry, not the raw multi-channel optical streams. But I need to verify that rather than assume it. If that\u2019s right, the 120-person set can still tell us whether amplitude- and morphology-derived quality features catch those fades, but it- it limits how confidently we can separate contact loss from genuine peripheral perfusion changes."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That distinction matters for us, actually. If we can't tell contact loss from peripheral perfusion in the archive, I wouldn't want the eventual patient-facing language to say a persistent wear-quality prompt is about fit alone. People may keep tightening or repositioning it and think they're fixing a clinical signal. And before we decide what reaches triage, I need to understand whether these abstentions cluster within particular users because repeated silence can generate calls too. I guess what I'm saying is, that matters before we decide what reaches triage."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And the 120-adult archive can at least tell us whether rejection is concentrated in a small set of people, rather than just giving us one pooled coverage number. I'd want a per-participant abstention distribution and, prospectively, some non-risk-language way to log persistent poor wear, so we can distinguish a usability problem from the model just having nothing interpretable to say."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "The prospective log matters because a persistent poor-wear prompt can change behavior and generate contacts, even if it never becomes a rhythm alert. The chart-review work is a little sobering on that point. Call volume did not map cleanly to how clinically consequential the finding was. Before we set any threshold, I\u2019d want at least a rough sense from triage of what volume they could absorb on an ordinary business day."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The 120-adult archive is enough to sweep operating points and estimate the implied alert burden under different definitions. Though that- I wouldn't translate it straight into a clinic staffing number, since it's only retrospective. Priya, when you say absorbable volume, is the main issue raw alerts per day, or the fraction that end up needing a nurse call or expedited confirmatory testing?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Probably both, but they\u2019re not interchangeable. You can have a low raw alert count and it can still be disruptive if every one creates an ambiguous patient message, a nurse call, and then the question of who orders or arranges confirmatory testing. Some alerts, though, might be something they can review in batches. I need to ask triage what the actual downstream fractions look like for their current monitor messages, because I don\u2019t think we can get that from the classifier alone."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s why I don\u2019t think the 120-adult archive can give us an acceptable threshold by itself. It can give us a curve, alerts per wear-day, coverage, calibration, sensitivity by episode duration, but the conversion from an alert to a nurse call or a confirmatory test is a workflow parameter we have to, have to learn prospectively. Could triage distinguish, even roughly, which current monitor messages get batch-reviewed versus immediately turned into outreach?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I think they probably can, but I don\u2019t know the answer yet. The current ambulatory-monitor messages already have some implicit urgency sorting, but this device would add this awkward middle category. It\u2019s a screening signal, not an urgent symptom report, and not yet a diagnostic result. I\u2019d ask them specifically whether that could sit in a business-hours batch review, and who owns the confirmation step when the person doesn\u2019t have an established cardiology clinician..."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I think that ownership question affects the device wording more than it might seem. If a positive screen lands in a business-hours batch and there isn't an established cardiology clinician, we really can't let the alert read like continuous or urgent monitoring. It needs to be very explicit that it's a screening finding that requires follow-up, and that symptoms still follow the usual urgent-care instructions. Priya, do you think that stays clinically, uh, sensible for alerts a person sees overnight or on a weekend?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah, that\u2019s the concern."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "It can be sensible if the overnight display is deliberately non-urgent. Something like, this is a screening finding, the clinic reviews these during business hours, and it does not assess new symptoms. But showing the same positive alert directly to the person before anyone has reviewed it\u2014especially when there\u2019s no established clinician\u2014I\u2019d be cautious about that, because it may generate exactly the anxious calls we\u2019re trying to avoid."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think that argues for keeping the patient-facing layer separate from the model event. An internal high-confidence screening flag can go to the business-hours queue first, with no real-time consumer alarm. We can use the 120-adult archive to see how often candidate alerts would occur under that design, but it still won't tell us how people react to a delayed notification or whether the queue actually clears them reliably, so..."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That separation feels like the safest place to start for the pilot. I\u2019d just want the internal queue to have a named reviewer and a documented confirmation route before we even call it an alert. Otherwise, it\u2019s- it\u2019s just an event sitting in a system, not clinical follow-up. I\u2019ll check what business-hours triage capacity and ownership look like, especially for participants without a cardiology clinician."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That feels like the right boundary for the pilot. From the device side, I'd avoid promising any particular real-time behavior until I've checked the actual duty cycle, inference latency, and battery draw on the target hardware. An internal queue gives us more room to be conservative about quality and still not turn the wrist into a constant alarm source, and then we'd\u2014"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah\u2014conservative quality gating is much easier to justify with the internal queue."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Okay, I think we're at time\u2014and somebody has to, uh, head out. I'll come back once I've spoken with triage. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Sounds good\u2014take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      3,
+      6,
+      7,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      21,
+      22,
+      23
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task-compliance violation: Dr. Priya Shah explicitly assigns herself a next step in turn 22 ('I\u2019ll check what business-hours triage capacity and ownership look like'). The seed requires the discussion to remain without assigned owners or a complete action plan; this is a concrete owner assignment for one unresolved workflow item.",
+      "Task-compliance gap: the transcript does not clearly surface model drift or a plan to monitor performance change after deployment. Maya notes that retrospective data cannot answer prospective behavior (turns 16 and 21), but drift itself is not explicitly raised as a deployment constraint.",
+      "Task-compliance gap: Luis discusses duty cycle, inference latency, and battery draw in turn 23, but does not clearly state that regulatory planning depends on intended-use wording and validation evidence. Intended-use wording is discussed in turn 18, but the regulatory dependency required by the seed is absent.",
+      "Naturalness is limited despite several realistic signals. Many medium-length turns are highly polished, complete technical arguments that neatly answer the prior question and advance a single agenda item, especially Maya's turns 3, 6, 8, 10, 12, 14, 16, and 21. The required tangent-heavy style is only minimally realized by the VPN remark in turn 1; the conversation immediately returns to agenda and never follows a tangent for several turns.",
+      "The ending in turns 22-26 becomes unusually tidy: Priya makes a concrete commitment, Luis names a device-check commitment, Maya endorses the design, and the meeting closes. This reads closer to a lightly disguised action-plan wrap-up than the requested open, direction-level discussion."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.36,
+    "turn_moves": {
+      "observation": 2,
+      "question": 6,
+      "proposal": 4,
+      "backchannel": 1,
+      "answer": 6,
+      "concern": 1,
+      "agreement": 5,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      22,
+      25
+    ],
+    "unsure_turns": [
+      6,
+      9,
+      10,
+      15,
+      17,
+      23
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.29,
+      "approved": false,
+      "issues": [
+        "Naturalness: despite several disfluencies, many substantive turns are polished, self-contained mini-arguments that cleanly state a concern, qualify it, and propose a resolution (for example turns 5, 8, 15, 19, 20, 24, and 25). This makes the exchange read more like authored dialogue than an unplanned meeting.",
+        "Naturalness/style: the requested tangent-heavy style is absent. The conversation stays tightly on the signal-quality and workflow agenda throughout; there is no realistic side topic, dropped tangent, or return to the main topic.",
+        "Task compliance: the seed requires Luis to note that regulatory planning depends on intended-use wording and validation evidence, but Luis never raises regulatory planning or validation evidence in that context. He does discuss intended-use framing in turn 27, but the regulatory constraint itself is missing.",
+        "Task compliance: the seed/ground truth includes on-device compute and battery as a technical constraint. Luis's persona foregrounds it, but the transcript never discusses compute, latency, continuous processing, or battery implications.",
+        "Task compliance: the meeting goes beyond direction and open questions by creating several concrete owner-assigned analysis tasks for Maya (turns 10, 12, 14, and 28), including a specific retrospective comparison setup. This is not a complete action plan, but it weakens the requested preservation of little explicit next-step planning.",
+        "Seed recoverability is slightly reduced because drift is mentioned only indirectly through Maya's prospective-performance concern (turn 25), rather than explicitly as post-deployment model-drift monitoring, and regulatory and battery/compute constraints cannot be recovered from the transcript."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.36,
+      "approved": true,
+      "issues": [
+        "Task-compliance violation: Dr. Priya Shah explicitly assigns herself a next step in turn 22 ('I\u2019ll check what business-hours triage capacity and ownership look like'). The seed requires the discussion to remain without assigned owners or a complete action plan; this is a concrete owner assignment for one unresolved workflow item.",
+        "Task-compliance gap: the transcript does not clearly surface model drift or a plan to monitor performance change after deployment. Maya notes that retrospective data cannot answer prospective behavior (turns 16 and 21), but drift itself is not explicitly raised as a deployment constraint.",
+        "Task-compliance gap: Luis discusses duty cycle, inference latency, and battery draw in turn 23, but does not clearly state that regulatory planning depends on intended-use wording and validation evidence. Intended-use wording is discussed in turn 18, but the regulatory dependency required by the seed is absent.",
+        "Naturalness is limited despite several realistic signals. Many medium-length turns are highly polished, complete technical arguments that neatly answer the prior question and advance a single agenda item, especially Maya's turns 3, 6, 8, 10, 12, 14, 16, and 21. The required tangent-heavy style is only minimally realized by the VPN remark in turn 1; the conversation immediately returns to agenda and never follows a tangent for several turns.",
+        "The ending in turns 22-26 becomes unusually tidy: Priya makes a concrete commitment, Luis names a device-check commitment, Maya endorses the design, and the meeting closes. This reads closer to a lightly disguised action-plan wrap-up than the requested open, direction-level discussion."
+      ]
+    }
+  ]
+}

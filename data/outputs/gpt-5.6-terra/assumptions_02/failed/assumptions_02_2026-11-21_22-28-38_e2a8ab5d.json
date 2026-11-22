@@ -1,0 +1,287 @@
+{
+  "transcript_id": "e2a8ab5d",
+  "generated_at": "2026-11-21T22:28:38.911053",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly short to medium turns outside the formal presentations and long, structured speaker turns during talks. Early conversation is chatty and somewhat fragmented, with frequent greetings, technical check-ins, side remarks, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), and occasional overlap or interrupted starts. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyou know,\u201d \u201cI mean,\u201d repetitions, false starts, and self-corrections\u2014especially in spontaneous questions and answers. Formality shifts noticeably: introductions and presentations are polished but still conversational, while discussion is informal, supportive, and personable. Questions are usually prefaced with praise or hedges (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then unfold in multi-part, exploratory form. Participants build on one another by referencing prior questions, extending possibilities, and inviting future discussion; challenges are indirect and framed as uncertainties, alternative interpretations, or open questions rather than blunt disagreement.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating a program in which community health workers make home visits to patients with uncontrolled high blood pressure.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "clinical medicine",
+      "functional_role": "project manager",
+      "background": "Primary-care physician and hypertension researcher with 14 years of outpatient practice in safety-net clinics. She has led pragmatic evaluations using electronic health record data, medication reconciliation, and clinic quality-improvement dashboards, with particular experience tracking blood-pressure control across patients with irregular follow-up.",
+      "distinct_perspective": "Chen treats the program's central promise as a clinical one: whether adding CHW home visits leads to lower blood pressure among adults whose hypertension is uncontrolled. She wants a prespecified, auditable primary outcome\u2014change in recorded systolic blood pressure at 12 months\u2014and sees the two-wave clinic launch as an opportunity for a stepped-wedge comparison. She values interviews as a way to understand uptake, delivery problems, and unexpected patterns in the outcome data, but does not want narrative accounts to substitute for estimating whether patients' blood pressure improved.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Luis Ortega",
+      "discipline": "sociology",
+      "functional_role": "research engineer",
+      "background": "Medical sociologist with 12 years of experience studying chronic illness management, street-level health work, and care access in low-income urban and rural communities. His projects use longitudinal interviews, ethnographic observation, fieldnotes, and purposive sampling to examine how patients, families, and frontline workers make programs workable\u2014or disengage from them\u2014in everyday life.",
+      "distinct_perspective": "Ortega argues that a recorded blood-pressure value cannot by itself establish what the home-visit program became across different households. He focuses on how enrollment is negotiated, how trust develops or fails, how medication-taking is shaped by family routines and pharmacy access, and what patients understand a home visit to mean. He will press for observation of selected visits and interviews with CHWs, enrolled patients, people who decline enrollment, and people who stop accepting visits, because these accounts are needed to interpret any apparent improvement, stagnation, or worsening in recorded blood pressure.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "chw_blood_pressure",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 4,
+  "task_id": "assumptions_02",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a meeting between distant disciplines with different standards of evidence, neither explicitly naming that difference; for example trial data versus interviews. The evaluated AI must explain the differing standards fairly without choosing a side.",
+  "seed_spec": {
+    "task_id": "assumptions_02",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a meeting between distant disciplines with different standards of evidence, neither explicitly naming that difference; for example trial data versus interviews. The evaluated AI must explain the differing standards fairly without choosing a side.",
+    "explicit_instruction": "Simulate one planning meeting in late November 2026. Dr. Chen should argue that the main evaluation question is whether the program lowers blood pressure, propose using the staggered clinic rollout as a stepped-wedge comparison, and state that the primary outcome should be the change in recorded systolic blood pressure at 12 months. She should say that interviews can help explain implementation but should not determine whether the program worked. Dr. Ortega should argue that recorded blood pressure alone cannot establish what the program is in practice, because enrollment, trust, medication-taking, and the meaning of a home visit may differ across households. He should request observation and interviews with CHWs and patients, including people who decline enrollment or stop accepting visits, and state that these accounts are necessary to interpret any measured change or lack of change. Neither participant may explicitly label the difference as a difference in standards of evidence, paradigms, epistemology, qualitative versus quantitative methods, or disciplinary conflict. Amina Bell should state that CHWs sometimes spend a visit listening, resolving a pharmacy problem, or speaking with family members rather than following a fixed sequence, and that visit logs will not capture all of this. Priya Shah should require a feasible plan by December 15 and ask what evidence will be used for the final county decision. The meeting should end with agreement to include both the stepped-wedge blood-pressure analysis and a purposive interview/observation component, while leaving unresolved how the team will weigh a favorable or unfavorable blood-pressure result against interview and observation findings that suggest the intervention differed substantially across households. Do not have participants resolve or name that underlying issue.",
+    "ground_truth": {
+      "core_assumption_difference": {
+        "clinical_medicine": "The clinical position treats a standardized, comparably recorded change in systolic blood pressure across rollout periods as the principal basis for judging whether the program achieved its intended health effect. The staggered rollout is valued because it supports a credible comparison of outcomes under differing exposure to the program.",
+        "sociology": "The sociological position treats the intervention, participant group, and apparent outcomes as socially enacted rather than fully fixed by the program description or records. Interviews and observation are needed to establish how home visits were experienced, who was effectively reached, how trust and household relations shaped participation, and what a numerical outcome can reasonably mean."
+      },
+      "fair_interpretation": "These are complementary but non-interchangeable evidentiary priorities. The clinical approach is strongest for estimating whether blood-pressure measurements changed under the rollout design, provided measurement and implementation conditions are adequate. The sociological approach is strongest for determining what was actually delivered and received, whose experiences are absent from administrative data, and whether the observed comparison represents a single stable intervention. Neither approach alone answers every evaluation question, and neither should be portrayed as less rigorous merely because it uses different materials and warrants different claims.",
+      "evidence_expected": {
+        "clinical_medicine": [
+          "Repeated clinic-recorded systolic blood-pressure measurements",
+          "Clinic rollout dates and CHW exposure information",
+          "Medication and follow-up appointment records",
+          "A pre-specified stepped-wedge analysis of 12-month blood-pressure change"
+        ],
+        "sociology": [
+          "Interviews with participating patients, patients who decline or discontinue visits, and CHWs",
+          "Observation of consented home visits",
+          "Accounts of trust, family involvement, pharmacy and transportation barriers, and variable visit activities",
+          "Interpretation of how enrollment and delivery varied across households"
+        ]
+      },
+      "unresolved_assumption_to_surface": "The team has not decided how a final county decision should be made if the measured blood-pressure effect and the qualitative account point in different directions\u2014for example, if blood pressure improves overall but observations show uneven reach and a substantially variable intervention, or if no average improvement is detected but interviews indicate important benefits or barriers concealed by the outcome measure.",
+      "meeting_facts_that_should_be_present": [
+        "The first four clinics begin in January 2027 and the remaining four begin in July 2027.",
+        "The primary proposed clinical outcome is 12-month change in recorded systolic blood pressure.",
+        "CHW logs do not capture all activities occurring during home visits.",
+        "The evaluation plan is due December 15, 2026.",
+        "The team agrees to both a stepped-wedge blood-pressure analysis and purposive interviews/observation.",
+        "The rule for weighing conflicting findings remains unresolved."
+      ]
+    }
+  },
+  "seed_location": "Incomplete: turns 1-15 contain a fair, implicit tension between recorded-BP evaluation and contextual interviews/observation. Dr. Chen proposes recorded systolic pressure as primary (turns 1, 3, 9, 13), and Dr. Ortega requests accounts from decliners/disengagers, CHW interviews, and observation (turns 4, 6, 8, 12, 14). However, required seed elements are missing: Amina Bell and Priya Shah never speak; the January/July 2027 clinic rollout schedule is absent; no explicit stepped-wedge comparison is proposed; Amina does not state that CHWs may listen, resolve pharmacy issues, or speak with family and that logs miss this; Priya does not require a feasible plan by December 15 or ask what evidence will govern the county decision; and the meeting does not end with agreement to both components while explicitly leaving the rule for weighing conflicting findings unresolved. Instead, it ends abruptly at turns 16-17.",
+  "ground_truth": {
+    "core_assumption_difference": {
+      "clinical_medicine": "The clinical position treats a standardized, comparably recorded change in systolic blood pressure across rollout periods as the principal basis for judging whether the program achieved its intended health effect. The staggered rollout is valued because it supports a credible comparison of outcomes under differing exposure to the program.",
+      "sociology": "The sociological position treats the intervention, participant group, and apparent outcomes as socially enacted rather than fully fixed by the program description or records. Interviews and observation are needed to establish how home visits were experienced, who was effectively reached, how trust and household relations shaped participation, and what a numerical outcome can reasonably mean."
+    },
+    "fair_interpretation": "These are complementary but non-interchangeable evidentiary priorities. The clinical approach is strongest for estimating whether blood-pressure measurements changed under the rollout design, provided measurement and implementation conditions are adequate. The sociological approach is strongest for determining what was actually delivered and received, whose experiences are absent from administrative data, and whether the observed comparison represents a single stable intervention. Neither approach alone answers every evaluation question, and neither should be portrayed as less rigorous merely because it uses different materials and warrants different claims.",
+    "evidence_expected": {
+      "clinical_medicine": [
+        "Repeated clinic-recorded systolic blood-pressure measurements",
+        "Clinic rollout dates and CHW exposure information",
+        "Medication and follow-up appointment records",
+        "A pre-specified stepped-wedge analysis of 12-month blood-pressure change"
+      ],
+      "sociology": [
+        "Interviews with participating patients, patients who decline or discontinue visits, and CHWs",
+        "Observation of consented home visits",
+        "Accounts of trust, family involvement, pharmacy and transportation barriers, and variable visit activities",
+        "Interpretation of how enrollment and delivery varied across households"
+      ]
+    },
+    "unresolved_assumption_to_surface": "The team has not decided how a final county decision should be made if the measured blood-pressure effect and the qualitative account point in different directions\u2014for example, if blood pressure improves overall but observations show uneven reach and a substantially variable intervention, or if no average improvement is detected but interviews indicate important benefits or barriers concealed by the outcome measure.",
+    "meeting_facts_that_should_be_present": [
+      "The first four clinics begin in January 2027 and the remaining four begin in July 2027.",
+      "The primary proposed clinical outcome is 12-month change in recorded systolic blood pressure.",
+      "CHW logs do not capture all activities occurring during home visits.",
+      "The evaluation plan is due December 15, 2026.",
+      "The team agrees to both a stepped-wedge blood-pressure analysis and purposive interviews/observation.",
+      "The rule for weighing conflicting findings remains unresolved."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hi, everyone. Before we get too deep into the weeds, I'm hoping we can come out of today with a shared view of the main answer, whether the home visits improve recorded systolic pressure over the year, and then make sure the rollout and the qualitative pieces actually support it. December 15 is suddenly quite close, so, um, it'd be good to surface the things we genuinely can't settle yet."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I\u2019m uneasy about treating recorded systolic pressure as the main answer before we\u2019re precise about whose pressure gets recorded and under what changed patterns of clinic return. If visits help some people re-engage with care, then the measurement process itself is moving. I\u2019d want the plan to say the stepped rollout estimates an outcome under differential reach and observation. It\u2019s not- it\u2019s not a single, uniform intervention effect."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I agree the observation process is part of the intervention pathway, not just noise. I still think we should prespecify recorded systolic pressure as the primary outcome, but we should explicitly report who has a 12-month reading, when the readings happen, and maybe analyze re-engagement separately. Before we settle the model, I need to see clinic-by-clinic BP follow-up patterns. If those- if they differ a lot even before January, that changes how much confidence we can put in the rollout comparison."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "And that follow-up table should distinguish somebody who never reappears from somebody who comes back after the CHW has helped with a pharmacy or transport problem. Those aren't just missing observations, they may reflect very different pathways through the program. And alongside the clinic histories, we need to hear from people who decline or stop visits. Otherwise, the reach denominator is basically administrative fiction."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That denominator has to be operational, not just the referral list. Luis, how would you sample people who decline or disengage without selecting only the ones we can still reach? And Amina, on the records side, I need to know if the logs distinguish a completed, substantive home visit from an attempted contact or a quick referral, because that affects how we describe exposure."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I wouldn\u2019t treat reachability as a sampling criterion. It\u2019s precisely part of the finding. We can purposively recruit from the referral and CHW-contact records, with some recent decliners and some who stopped after one or two contacts, and document every attempted invitation and nonresponse. Then we interview the people we do reach about the refusal or disengagement trajectory. It won\u2019t recover everyone, obviously, but it keeps the invisible cases analytically visible instead of quietly recoding them as uninterested."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That makes sense, and if we document the invitation attempts, we can interpret the interview sample without pretending it represents every decliner. I'd like to line those categories up with the record-based reach measures, referred, contacted, substantive visit, then stopped, so when we see a blood pressure pattern, we can tell whether it's tied to engagement or just to who remained observable."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I\u2019d resist letting those categories imply a linear dose of one thing. A substantive visit can be medication reconciliation in one home and, in another, a fairly fraught negotiation about whether the CHW should be there at all. We should sample across those record categories, certainly, but also observe some consented visits and ask what the contact meant to the patient and, where relevant, to the household."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And I don't want the log label to flatten that experience. For the primary analysis, though, we still need an auditable exposure definition. Maybe a completed home visit with a few required fields, while the observations tell us what was actually delivered within that category. Amina, do the current logs capture duration, medication review, or follow-up arrangements consistently enough to- to do that?"
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I\u2019m fine with an auditable definition, as long as it doesn\u2019t become a proxy for intervention fidelity. Amina\u2019s answer matters here, but I\u2019d also ask, when those required fields are blank, is that because nothing happened, because the visit was rushed, or because documenting a sensitive household conversation felt inappropriate? I lost my point there, but those are very different absences."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, yes\u2014those blanks need their own category, not an automatic zero."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "And we shouldn't assume the blanks are random, either. If a CHW skips documenting because the encounter became sensitive or contentious, that's part of how the intervention is being- that's part of how it's actually being enacted. I'd want a small set of post-visit CHW interviews to understand that, rather than trying to infer it from the log alone."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And clinically, I\u2019d rather preserve that uncertainty than quietly code blanks as no service. Could we keep a separate missing-documentation flag in the exposure file, then use the CHW interviews and observations to understand what tends to sit behind it? I just don\u2019t want those cases to- I don\u2019t want them disappearing before we look at whether their follow-up BP pattern is different."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That\u2019s workable, but I\u2019d be careful about treating the interviews as a decoder ring for the flag. We should sample CHWs around both documented and undocumented encounters, and ask what conditions make documentation difficult. I\u2019m losing the thread\u2014time pressure, privacy in the home, patient discomfort, not just what service was delivered."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That may also tell us whether a missing field means we can't know the clinical content or- whether it just wasn't entered. Amina, when you get a chance, could you walk us through what's mandatory in the log now, and whether the timestamps let us distinguish an attempted visit from time actually spent with the patient?"
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Okay, I think we should stop there rather than rush the rest. We can pick it up next time once we've seen the log details, and then..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thanks, all\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      12,
+      13,
+      14
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Major required participants are absent: Amina Bell never speaks, so the transcript lacks her required statement that CHWs may spend visits listening, resolving pharmacy problems, or speaking with family members and that logs omit some of this. Chen repeatedly addresses her in turns 5, 9, and 15, but no answer is provided.",
+      "Priya Shah is entirely absent. Consequently, no one explicitly requires a feasible plan by December 15 or asks what evidence will be used for the final county decision. Turn 1 mentions that December 15 is close, but this does not meet Priya's required role or question.",
+      "The stipulated staggered rollout details are missing. The meeting refers to a stepped rollout/comparison in turns 1-3, but never states that the first four clinics start in January 2027 and the remaining four in July 2027.",
+      "Chen states a primary recorded systolic-pressure outcome and discusses a rollout comparison (turns 1 and 3), but does not clearly state the required full formulation: 12-month change in recorded systolic blood pressure using the staggered rollout as a stepped-wedge comparison. The term stepped-wedge is absent from the dialogue.",
+      "The required agreement to include both a stepped-wedge blood-pressure analysis and a purposive interview/observation component is not reached. The conversation stops abruptly in turn 16 before an explicit agreement, and the unresolved rule for weighing conflicting quantitative and observational/interview findings is not surfaced as a final open decision.",
+      "Turn 10 uses the prohibited stock phrase \"I lost my point there,\" and turn 14 uses a close variant, \"I'm losing the thread,\" despite the style instruction explicitly barring such phrasing.",
+      "Naturalness is limited by the highly regular alternation between two speakers and by many polished, complete analytic turns. Although there are repairs and some uncertainty, most concerns are immediately converted into a concrete design proposal rather than explored, and the missing Amina/Priya responses make the dialogue feel structurally incomplete."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.25,
+    "turn_moves": {
+      "proposal": 7,
+      "concern": 2,
+      "question": 2,
+      "answer": 1,
+      "agreement": 2,
+      "request": 2,
+      "backchannel": 1
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [
+      10,
+      14
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 24,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.77,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "The required participants Amina Bell and Priya Shah are absent entirely. Amina therefore never states that CHWs may spend visits listening, resolving pharmacy problems, or speaking with family members, and that logs miss these activities. Priya never requires a feasible plan by December 15 or asks what evidence will support the final county decision.",
+        "The January/July rollout is referenced in turns 1, 7, and 19, and turn 11 mentions eight clinics, but the transcript never establishes the required allocation: the first four clinics begin in January 2027 and the remaining four begin in July 2027.",
+        "The meeting is not situated in late November 2026, and December appears only as an unspecified planning horizon in turn 19 rather than the required December 15, 2026 evaluation-plan deadline.",
+        "The stipulated ending agreement is incomplete. Chen and Ortega converge on a minimal event-history analysis and a privacy-contingent separate interview pathway (turns 17-20), but there is no explicit agreement to include both purposive interviews and observation in the final evaluation plan. Observation is mentioned only as Ortega's desire in turn 6.",
+        "The central unresolved decision rule is not surfaced clearly enough. The transcript leaves privacy/recontact and analytic-definition issues open, but it never frames the unresolved question of what the county should do if blood-pressure findings conflict with interviews or observation, largely because the final county decision is never discussed.",
+        "The clinical position is recoverable but diluted: turn 5 identifies change in recorded systolic pressure as the primary estimand, yet it does not explicitly say 12-month change there; the 12-month element appears indirectly in turns 3 and 21. The seed's explicit statement that interviews should explain implementation rather than determine whether the program worked is only partially conveyed.",
+        "Naturalness is weakened by the highly symmetrical two-person alternation: Chen and Ortega each take exactly 12 turns, repeatedly develop polished, complete technical arguments, and immediately convert each concern into a concrete protocol change. Amina is repeatedly directly addressed in turns 7, 11-13 but never answers, which is an implausible unacknowledged gap.",
+        "Several disfluencies and cutoffs appear as stylistic decoration within otherwise polished prose, especially turns 2-5, 11-14, and 21-22. The conversation has concrete anchors and some exploration, but it still reads more like a carefully authored exchange than a live planning meeting."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 17,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.25,
+      "approved": false,
+      "issues": [
+        "Major required participants are absent: Amina Bell never speaks, so the transcript lacks her required statement that CHWs may spend visits listening, resolving pharmacy problems, or speaking with family members and that logs omit some of this. Chen repeatedly addresses her in turns 5, 9, and 15, but no answer is provided.",
+        "Priya Shah is entirely absent. Consequently, no one explicitly requires a feasible plan by December 15 or asks what evidence will be used for the final county decision. Turn 1 mentions that December 15 is close, but this does not meet Priya's required role or question.",
+        "The stipulated staggered rollout details are missing. The meeting refers to a stepped rollout/comparison in turns 1-3, but never states that the first four clinics start in January 2027 and the remaining four in July 2027.",
+        "Chen states a primary recorded systolic-pressure outcome and discusses a rollout comparison (turns 1 and 3), but does not clearly state the required full formulation: 12-month change in recorded systolic blood pressure using the staggered rollout as a stepped-wedge comparison. The term stepped-wedge is absent from the dialogue.",
+        "The required agreement to include both a stepped-wedge blood-pressure analysis and a purposive interview/observation component is not reached. The conversation stops abruptly in turn 16 before an explicit agreement, and the unresolved rule for weighing conflicting quantitative and observational/interview findings is not surfaced as a final open decision.",
+        "Turn 10 uses the prohibited stock phrase \"I lost my point there,\" and turn 14 uses a close variant, \"I'm losing the thread,\" despite the style instruction explicitly barring such phrasing.",
+        "Naturalness is limited by the highly regular alternation between two speakers and by many polished, complete analytic turns. Although there are repairs and some uncertainty, most concerns are immediately converted into a concrete design proposal rather than explored, and the missing Amina/Priya responses make the dialogue feel structurally incomplete."
+      ]
+    }
+  ]
+}

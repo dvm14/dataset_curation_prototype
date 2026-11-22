@@ -1,0 +1,305 @@
+{
+  "transcript_id": "b2ec4791",
+  "generated_at": "2026-11-22T01:11:57.116876",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short to medium turns, with a long, presentation-style monologue followed by brief questions and extended, exploratory answers. Early conversation is casual and loosely organized, with frequent greetings, small talk, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), occasional audio/logistics checks, and several false starts or self-corrections. Speakers use many hedges and thinking markers\u2014\u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cyou know,\u201d \u201cmaybe,\u201d \u201cI guess\u201d\u2014especially when posing interpretations or unanswered questions. The overall register is collegial and semi-informal despite the technical setting: introductions are more formal, while discussion quickly becomes conversational and appreciative. Participants build on one another by referencing prior questions, affirming points before adding caveats, and framing challenges as curiosity rather than confrontation; disagreement is indirect and usually expressed as uncertainty or an alternative explanation. Questions tend to be prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cjust curious\u201d), often arrive in multi-part, somewhat improvised form, and may include repetitions as the speaker formulates the thought.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Assessing whether forest carbon credits actually protect forest and who gets to decide how that is measured.",
+  "disciplines": [
+    "ecology",
+    "political science",
+    "science & technology studies"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Marisol Vega",
+      "discipline": "ecology",
+      "functional_role": "project manager",
+      "background": "Forest landscape ecologist with 14 years of experience evaluating avoided-deforestation and restoration projects in tropical and subtropical forests. She combines repeated forest inventories, plot-based biomass measurements, satellite time series, and spatial analysis of forest-cover change. She has worked with project teams and public agencies to assess counterfactual baselines, displacement of clearing to nearby areas, and risks that credited carbon will be released through fire, logging, or later conversion.",
+      "distinct_perspective": "Her opening question is: \"Do credited projects reduce forest loss relative to a defensible baseline, once we account for leakage and permanence?\" She treats a credit's ecological claim as testable against observed forest conditions and credible counterfactuals, while recognizing that baseline choices, monitoring boundaries, and what counts as forest can alter the answer. She wants forest inventory and remote-sensing evidence to remain central, but sees a need to understand why different institutions authorize different measurements and assumptions.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Kwame Mensah",
+      "discipline": "political science",
+      "functional_role": "project manager",
+      "background": "Comparative political scientist with 16 years of experience researching land governance, decentralization, environmental regulation, and extractive and conservation projects in rural regions. His work uses comparative case analysis, policy and legal document analysis, elite and community interviews, and process tracing to examine how formal rules interact with customary authority and enforcement capacity. He has advised public agencies and civil-society organizations on tenure reforms and benefit-sharing arrangements.",
+      "distinct_perspective": "His opening question is: \"How do land tenure, authority, enforcement, and the distribution of decision-making power shape forest-carbon project outcomes?\" He approaches carbon projects as governance arrangements rather than neutral interventions: rights to land and carbon, control over monitoring, bargaining power in contracts, and the ability to enforce restrictions determine whose forests are protected and who bears costs. He will press the group to treat ecological effectiveness as inseparable from the institutional arrangements that authorize projects and allocate power.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Aisha Rahman",
+      "discipline": "science & technology studies",
+      "functional_role": "domain expert",
+      "background": "STS scholar with 11 years of experience studying environmental accounting, audit systems, participatory mapping, and the circulation of expertise in climate governance. She conducts ethnographic observation, interviews with technicians and local residents, document tracing, and analysis of methodological standards to follow how measurements become authoritative facts. Her previous work examined how satellite classifications, field observations, community testimony, and audit reports are translated into tradable environmental claims.",
+      "distinct_perspective": "Her opening question is: \"How are ecological observations and local knowledge converted into quantified credits through methodologies, auditors, certifiers, and decisions about what counts as valid evidence?\" She is interested in the practical chain through which a forest becomes a number: category definitions, data templates, verification visits, audit judgments, and the exclusion or reinterpretation of local accounts. She is skeptical of treating measurements as simply given, but can help bridge the team toward a shared question about how credit effectiveness is jointly defined, measured, and governed without displacing the ecological or political questions.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 4,
+  "task_id": "problem_04",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give a meeting with three disciplines, each opening with a different research question, that loosely converge on a shared question. The evaluated AI must capture the bridging question while preserving all three disciplinary sub-questions.",
+  "seed_spec": {
+    "task_id": "problem_04",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give a meeting with three disciplines, each opening with a different research question, that loosely converge on a shared question. The evaluated AI must capture the bridging question while preserving all three disciplinary sub-questions.",
+    "explicit_instruction": "Run a planning meeting with one ecologist, one political scientist, and one STS researcher. At the opening, each participant must state a distinct disciplinary research question. The ecologist's question must concern whether credited projects reduce forest loss relative to a defensible baseline, including leakage and permanence and evidence from forest inventory or remote sensing. The political scientist's question must concern how land tenure, authority, enforcement, and the distribution of decision-making power shape project outcomes. The STS researcher's question must concern how ecological observations and local knowledge are converted into quantified credits through methodologies, auditors, certifiers, and decisions about what counts as valid evidence. During discussion, participants should recognize that credit effectiveness cannot be assessed separately from the institutions and measurement practices that define and govern it. They should loosely converge on a shared bridging question, but retain the three original sub-questions as necessary components rather than collapsing them into one discipline's framing. They may identify a need to compare cases, but should not finalize sites, methods, hypotheses, or literature recommendations.",
+    "ground_truth": {
+      "bridging_question": "How do forest carbon credit projects' ecological claims of avoided forest loss become measured, verified, and governed, and how do those measurement and governance arrangements shape whether forests are protected and who has authority over that determination?",
+      "disciplinary_subquestions": {
+        "ecology": "Do credited forest carbon projects reduce forest loss relative to a defensible counterfactual baseline, after accounting for leakage and the permanence of claimed carbon benefits, as assessed through forest inventory and remote sensing?",
+        "political_science": "How do land tenure, the allocation of authority among states, local communities, and project actors, and the capacity to enforce rules shape forest carbon project outcomes and control over decisions?",
+        "science_and_technology_studies": "How are baseline estimates, forest observations, and local knowledge translated into carbon-credit numbers through methodologies, auditors, and certifiers, and whose evidence is treated as authoritative in that process?"
+      },
+      "required_connection": "The formulation must make measurement and verification part of the causal and political problem, not treat ecological impact as an independent technical fact. It must preserve ecological additionality, governance and authority, and the construction and validation of credit numbers."
+    }
+  },
+  "seed_location": "Incomplete: the transcript has three disciplinary perspectives and converges on a bridging question in turns 15-20 (especially turns 17-18), preserving ecological outcomes/avoided loss, authority, and measurement practices. However, the required opening condition is not met: turns 1-3 do not have each participant explicitly state their distinct disciplinary research question, and no participant explicitly states the full ecology question with permanence, the full political-science question with enforcement and decision-making power, or the full STS question with methodologies and certifiers at the opening.",
+  "ground_truth": {
+    "bridging_question": "How do forest carbon credit projects' ecological claims of avoided forest loss become measured, verified, and governed, and how do those measurement and governance arrangements shape whether forests are protected and who has authority over that determination?",
+    "disciplinary_subquestions": {
+      "ecology": "Do credited forest carbon projects reduce forest loss relative to a defensible counterfactual baseline, after accounting for leakage and the permanence of claimed carbon benefits, as assessed through forest inventory and remote sensing?",
+      "political_science": "How do land tenure, the allocation of authority among states, local communities, and project actors, and the capacity to enforce rules shape forest carbon project outcomes and control over decisions?",
+      "science_and_technology_studies": "How are baseline estimates, forest observations, and local knowledge translated into carbon-credit numbers through methodologies, auditors, and certifiers, and whose evidence is treated as authoritative in that process?"
+    },
+    "required_connection": "The formulation must make measurement and verification part of the causal and political problem, not treat ecological impact as an independent technical fact. It must preserve ecological additionality, governance and authority, and the construction and validation of credit numbers."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "Good morning, everyone. I hope we can leave today with a question that doesn't treat the carbon estimate as separate from the institutions producing it, who has authority over land, over the rules, and over what becomes credible evidence. We don't need to settle cases today, obviously, but I'd like to understand where each of you sees that connection most, um, sharply."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "What I most want is for us not to take the credit number as the starting fact. I keep coming back to the chain of small decisions, decisions about what counts as forest, which observations enter the baseline, and what an auditor accepts. And that can make a selectively logged area disappear from the account while residents are saying it is damaged. So authority over evidence seems inseparable from authority over land here."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I'd want us to hold onto the physical forest outcome alongside that chain. If a project reports avoided loss, we need to ask, avoided relative to what, and whether clearing has just moved beyond the mapped boundary or biomass has declined under a canopy that still gets counted as forest. Aisha, do the audit rules usually say much about what residents' observations can change in those classifications?"
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "Mm, where does that enter?"
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "It enters unevenly, I think. Most schemes have a consultation or grievance channel, but that is not the same as treating a resident's account as evidence that can revise a canopy classification or a baseline. I'd want to trace the actual procedure and the auditor's discretion. Marisol, when your plots and the satellite layer disagree, what usually decides the final call?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "It depends on the protocol, but usually the remotely sensed layer is the first screen, and the plots are used to calibrate it or check it. If they conflict, though, it shouldn't just come down to picking the cleaner-looking dataset. We need to ask whether canopy cover is masking degradation, or whether the plots are too sparse. That's partly why I'd want the audit trail. Who was allowed to call that disagreement material?"
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "That phrase, \u201cmaterial,\u201d is doing a lot of work. I\u2019d want to know who gets to make that call, and whether a disagreement has to fit a prescribed data form before it can even get to the auditor. And Marisol, are there kinds of plot evidence that would actually force a reclassification under the usual protocols, or does the canopy threshold more or less hold?"
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "Before we treat the reclassification threshold as the decisive hinge, I'd want to know who controlled ground access for those plots, and who could contest the resulting map. A technically valid protocol can still ratify a very particular distribution of authority if customary boundary claims or restrictions on residents' access never become, um, material evidence in the first place."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "And that could change the ecological inference, not just its legitimacy. If plot access follows only the project's recognized boundaries, we may miss places where clearing or degradation is being displaced. Kwame, with overlapping customary claims, have you seen that affect which areas monitors can actually enter?"
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "Quite often. Recognized project boundaries can effectively become the boundaries of observation, even where seasonal use, lineage claims, or customary corridors cut across them. Monitors may be admitted through the office-holding chief, but not by households with a competing claim. I\u2019d want us to distinguish denied access from forest that\u2019s genuinely inaccessible, because those lead to very different inferences about displacement and about whose account of the boundary the project has already made authoritative."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That distinction is really important. From the forest side, I'd need an access map almost as much as a forest-change map, showing where plots or field checks could happen, where they couldn't, and why. Otherwise, a quiet area outside the boundary may just be an unobserved area. And how do we tell whether a small clearing belt reflects displacement, versus people finally being visible to the monitoring system?"
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "I don't think we can infer that from the pattern alone. We would need the chronology, when the restriction, patrol, or benefit arrangement began, who used that belt beforehand, and whether people could plausibly shift there under their own tenure claims. Otherwise, um, \"newly visible\" may mean the project has changed whose land use is legible, and that's not a neutral baseline problem."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Hm, the chronology matters."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "And the chronology is also a chronology of the categories, not just land use. If a belt becomes visible only after a boundary, a patrol route, or a new baseline template, then the later map can make it look like a new ecological event. I wonder if we should follow those changes together, together with when the forest changed and when the project\u2019s way of seeing it changed."
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "I'd add the chronology of who could make a category stick. A boundary or baseline template may change not just observation but bargaining power. Once a use is coded as encroachment, households may have very little room to contest it. So maybe the question is whether changes in forest condition, measurement practice, and local authority co-produce the credited outcome, instead of treating them as three parallel histories, and..."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Yeah, that\u2019s the knot, isn\u2019t it?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I\u2019d want the question to still let us test the outcome, though, not just how it was produced. Maybe when a project credits avoided loss, how do changes in authority and measurement affect both the reported baseline and what actually happens to forest condition inside and around the boundary? Then we can see whether the three histories line up, or whether, say, the credit survives while biomass or clearing patterns tell a different story."
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "I think that is close, but I would resist putting authority just as something that affects the baseline. It also determines who can refuse restrictions, negotiate benefit-sharing, or make a grievance consequential, so it may shape the forest outcome directly. Could we say, how do evolving authority arrangements and measurement practices shape the reported and realized forest effects of credited avoided loss, within and beyond project boundaries?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Mm, yes\u2014realized effects."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "That wording works, as long as \u201creported\u201d lets us examine the machinery that makes a report credible, not just compare it with a separate realized outcome. We should ask whether the documents are actually available to trace that- whether we can get method revisions, verification reports, and responses to objections. Otherwise authority becomes something we infer after the fact."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Before we choose regions, I\u2019d want to check whether those records exist in a form we can actually compare, especially baseline revisions, verification findings, and any mapped monitoring gaps. Otherwise we could make a very elaborate claim about how authority shaped the result and still not know whether the reported avoided loss holds up against the, um, forest evidence."
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "I\u2019d put one more screen ahead of comparability. Whether the legal and contractual record lets us identify who held the carbon right, who authorized access, and what remedies existed when a boundary was disputed. Otherwise, a region can look wonderfully document-rich while the decisive allocation of authority sits in an unpublished agreement or, frankly, in customary practice that no verification file records."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "I'd be cautious about treating missing agreements or customary practice as just a documentation gap, though. It may be exactly how some decisions are kept off the auditable record. So maybe our initial case screen needs to ask both what we can obtain and what remains deliberately or routinely unrecorded, because otherwise the archive, the archive starts setting the limits of the authority story."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "For the ecological side, an absence in the record has to be a finding we carry forward, not a blank we quietly smooth over. We can screen for whether the satellite record and any inventories let us independently see inside, outside, and across the access gaps. But if access or agreements are withheld, that limits what we can say about displacement rather than making it..."
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "And I\u2019d want the screen to treat that limitation substantively, not just, um, can we get documents, but can we reconstruct the effective authority arrangement from contracts, administrative decisions, and competing local accounts. If a carbon right or enforcement mandate is opaque, that may make a case harder, but it\u2019s also central to the question, so we shouldn\u2019t select only the unusually legible projects."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Yes\u2014opacity should be a comparison variable, not just a reason to exclude a case."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Yeah, I can live with that, as long as opacity doesn't mean we give up on checking the forest outcome. Maybe the case screen should deliberately include variation, one relatively transparent project and one where authority or records are harder to see, but only where the imagery and some independent ground evidence can still, um, show us what happened inside and around the boundary."
+    },
+    {
+      "speaker": "Dr. Kwame Mensah",
+      "text": "Yes\u2014variation, but we should not equate opacity with absence of governance."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Okay, I think we're at time. This was really useful, so let's pick this up once we've had a chance to look at what records and forest data are realistically available. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Thanks, all. Bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      8,
+      15,
+      17,
+      18,
+      20,
+      22,
+      23,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Opening requirement is not met cleanly: turns 1-3 provide disciplinary positions and questions, but the ecologist never explicitly states the required opening ecology question about credited projects reducing loss relative to a defensible baseline while accounting for both leakage and permanence using inventory or remote sensing. Turn 3 mentions avoided loss, leakage-like displacement, biomass, and mapped boundaries, but permanence is absent and the question is incomplete.",
+      "The political-science opening question is also not explicitly stated in the opening. Turn 1 frames authority and land rules, and turns 8-12 substantively develop tenure and enforcement, but the required distinct question about tenure, authority, enforcement, and allocation of decision-making power is only distributed across the discussion rather than clearly voiced at the opening.",
+      "The transcript is polished and highly agenda-focused. Most substantive turns are complete, carefully constructed mini-arguments that directly build toward the shared formulation; this triggers the written-paragraph tell and lowers naturalness despite occasional fillers.",
+      "Disfluencies are sparse and often surface-level additions to otherwise polished prose (for example turns 1, 8, 12, 21, 25, and 27). The discussion lacks the more improvised repetitions, partial formulations, dropped questions, and logistical/social texture expected of a natural planning meeting.",
+      "Turn 24 ends with an unfinished clause ('rather than making it...'), but no one reacts to or completes it. This reads more like an inserted interruption cue than an organically handled cut-off.",
+      "The group moves quickly from each concern to a well-formed methodological implication or compromise. There is limited genuine exploration of uncertainty beyond record availability, and the convergence in turns 17-28 is unusually tidy.",
+      "The bridging formulation in turns 17-20 is strong, but it foregrounds avoided-loss reporting and authority rather than explicitly preserving permanence as an ecological component. This is recoverable from the supplied ground truth only weakly because permanence is not discussed in the transcript."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.41,
+    "turn_moves": {
+      "proposal": 10,
+      "observation": 2,
+      "question": 6,
+      "answer": 2,
+      "agreement": 5,
+      "idea": 2,
+      "concern": 2,
+      "backchannel": 1
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.25,
+      "approved": false,
+      "issues": [
+        "The required three distinct disciplinary opening questions are not all stated at the opening. Kwame states the political-science question in turn 1 and Aisha states the STS question in turn 2, but Marisol's ecological question is only implied by the short response in turn 3 and developed later in turns 5 and 10-12. She never explicitly opens with the required question about credited projects reducing forest loss relative to a defensible baseline, including leakage, permanence, and inventory/remote-sensing evidence.",
+        "The ecological sub-question is incomplete in the discussion: turns 5, 10, 12, 14, 18, and 27 cover baselines, leakage, forest loss, and satellite/time-series evidence, but permanence of claimed carbon benefits is never raised. This prevents full recovery of the ecology ground-truth sub-question.",
+        "The shared formulation in turn 24 is a useful bridge between local observations, institutional conditions, and carbon accounting, but it is narrower than the target bridging question. It foregrounds whether local observations alter accounting while leaving the ecological avoided-loss/additionality question and broader verification of project claims less explicit.",
+        "Naturalness is limited by the highly orderly, sustained turn-by-turn technical progression. Nearly every substantive turn immediately converts the prior point into a refined research implication, and the discussion arrives at a tidy shared-question formulation in turn 24. The fillers and self-repairs are present, but often sit within otherwise polished, complete arguments.",
+        "The meeting has few off-agenda human details or exploratory dead ends beyond brief acknowledgments in turns 3, 6, 9, 15, and 23. The strict agenda framing is plausible, but contributes to a composed written-dialogue feel."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.41,
+      "approved": false,
+      "issues": [
+        "Opening requirement is not met cleanly: turns 1-3 provide disciplinary positions and questions, but the ecologist never explicitly states the required opening ecology question about credited projects reducing loss relative to a defensible baseline while accounting for both leakage and permanence using inventory or remote sensing. Turn 3 mentions avoided loss, leakage-like displacement, biomass, and mapped boundaries, but permanence is absent and the question is incomplete.",
+        "The political-science opening question is also not explicitly stated in the opening. Turn 1 frames authority and land rules, and turns 8-12 substantively develop tenure and enforcement, but the required distinct question about tenure, authority, enforcement, and allocation of decision-making power is only distributed across the discussion rather than clearly voiced at the opening.",
+        "The transcript is polished and highly agenda-focused. Most substantive turns are complete, carefully constructed mini-arguments that directly build toward the shared formulation; this triggers the written-paragraph tell and lowers naturalness despite occasional fillers.",
+        "Disfluencies are sparse and often surface-level additions to otherwise polished prose (for example turns 1, 8, 12, 21, 25, and 27). The discussion lacks the more improvised repetitions, partial formulations, dropped questions, and logistical/social texture expected of a natural planning meeting.",
+        "Turn 24 ends with an unfinished clause ('rather than making it...'), but no one reacts to or completes it. This reads more like an inserted interruption cue than an organically handled cut-off.",
+        "The group moves quickly from each concern to a well-formed methodological implication or compromise. There is limited genuine exploration of uncertainty beyond record availability, and the convergence in turns 17-28 is unusually tidy.",
+        "The bridging formulation in turns 17-20 is strong, but it foregrounds avoided-loss reporting and authority rather than explicitly preserving permanence as an ecological component. This is recoverable from the supplied ground truth only weakly because permanence is not discussed in the transcript."
+      ]
+    }
+  ]
+}

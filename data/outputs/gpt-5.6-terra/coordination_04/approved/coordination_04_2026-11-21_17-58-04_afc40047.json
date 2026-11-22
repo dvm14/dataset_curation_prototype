@@ -1,0 +1,314 @@
+{
+  "transcript_id": "afc40047",
+  "generated_at": "2026-11-21T17:58:04.466166",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with short to medium conversational turns before and after much longer, structured presentation turns. There is frequent backchanneling (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), occasional overlap, and several false starts, repetitions, self-corrections, and audio-related interruptions, especially in informal chat and audience questions. Speakers use hedges heavily\u2014\u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d \u201cit could be\u201d\u2014even when making confident technical points, which keeps challenges indirect and collaborative rather than adversarial. Formality shifts by phase: introductions and talks are polished but still conversational, while discussion is highly informal, friendly, and exploratory. Questions are often prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question\u201d), then unfold in multi-part, somewhat winding form. Responses generally validate the question first, acknowledge uncertainty or limits, and build toward a tentative answer; participants extend one another\u2019s ideas rather than sharply disputing them.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Testing whether financial stress narrows how people weigh present against future payoffs, and what that means for program design.",
+  "disciplines": [
+    "neuroscience",
+    "economics",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Aisha Rahman",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "A cognitive neuroscientist with 11 years of experience coordinating multi-site studies of stress, reward valuation, and decision-making. She has led fMRI protocol development, saliva collection logistics, cortisol assay quality control, and preregistration workflows for laboratory experiments. In this project she manages the six-month planning timeline while leading the imaging and hormone components.",
+      "distinct_perspective": "Treats the laboratory manipulation as a tightly specified experimental input whose timing, control condition, and manipulation-check thresholds must be stable before neural or endocrine measures can be interpreted. She is attentive to scanner constraints, diurnal variation in saliva biomarkers, task timing, and the danger of treating a physiological correlate as evidence of a psychological construct without validated manipulation checks.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Mateo Silva",
+      "discipline": "economics",
+      "functional_role": "PhD student",
+      "background": "A fourth-year behavioral economics PhD student with prior work on cash-transfer design, present bias, and incentive-compatible elicitation of intertemporal preferences in low-income settings. He has experience building randomized field protocols, calculating welfare-relevant outcomes, and designing payment procedures that preserve consequential choice, but has limited direct experience translating laboratory stress manipulations into program interventions.",
+      "distinct_perspective": "Frames the question in terms of whether stress shifts discounting or choice under liquidity constraints in ways that alter welfare and the optimal design of payment schedules, commitment devices, or benefit timing. He is inclined to move quickly toward a field-ready treatment arm and measurable policy counterfactual, while recognizing that a credible intervention needs a reproducible laboratory basis rather than an attractive behavioral narrative alone.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Priya Nanduri",
+      "discipline": "psychology",
+      "functional_role": "PhD student",
+      "background": "A fifth-year social and health psychology PhD student studying financial threat, perceived scarcity, and self-regulation. She has run laboratory experiments using standardized stress inductions, validated self-report instruments, manipulation checks, and replication-oriented analysis plans. She will lead development of the financial-stress induction, neutral control, administration timing, and the pilot needed to establish whether the planned self-report stress scale detects the intended state change reliably.",
+      "distinct_perspective": "Approaches financial stress as a psychological state that must be operationalized and validated before downstream behavioral or biological interpretation is warranted. She emphasizes construct validity, equivalence between treatment and control materials, prespecified manipulation-check criteria, and replication decisions rather than assuming that exposure to financial content itself constitutes stress.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "scarcity_decisions",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 2,
+  "task_id": "coordination_04",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+  "seed_spec": {
+    "task_id": "coordination_04",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+    "explicit_instruction": "Run a planning meeting in which participants initially discuss the work in an impractical order. The economist should propose immediately finalizing the field experiment and selecting its program feature. The neuroscientist should say the fMRI and saliva protocol can be scheduled only after psychology has finalized the financial-stress manipulation, its neutral control, timing, and manipulation-check criteria, because those must be identical across laboratory studies. The psychologist should explain that the manipulation package is not yet finalized: it requires a small pilot and a replication decision using the agreed self-report stress scale. The economist should acknowledge that the field treatment cannot be selected until the psychology package is finalized and the neuroscience study has produced the pre-specified laboratory evidence about whether stress changes present-versus-future valuation. Ensure the meeting states the needed dependency facts, assigns the psychology pilot/finalization work, and leaves no ambiguity that field design is downstream. Do not have participants provide a polished dependency-ordered answer; leave the discussion containing the out-of-order proposals and the facts needed for the evaluated AI to order them.",
+    "ground_truth": {
+      "dependency_issue": "The proposed field experiment is being planned before its required upstream laboratory inputs exist. Its program feature must be chosen from pre-specified, reproducible evidence about the effect of the finalized financial-stress manipulation on present-versus-future valuation.",
+      "ordered_next_steps": [
+        {
+          "order": 1,
+          "step": "Psychology pilots the financial-stress manipulation and neutral control, applies the agreed self-report stress scale, and finalizes manipulation-check criteria and timing; psychology makes the replication decision and locks the shared manipulation package.",
+          "dependency": "The neuroscience session requires a fixed, shared manipulation, control condition, timing, and manipulation-check rules."
+        },
+        {
+          "order": 2,
+          "step": "Neuroscience implements the locked manipulation package in the saliva and fMRI valuation study, using the pre-specified hormone assay and imaging/behavioral protocol, and produces the planned laboratory evidence on stress and present-versus-future valuation.",
+          "dependency": "Economics needs this laboratory evidence, alongside a reproducible manipulation, before selecting the field intervention's program feature."
+        },
+        {
+          "order": 3,
+          "step": "Economics finalizes the incentive-compatible field experiment, welfare measures, and program feature to test, using the completed laboratory evidence; the field protocol can then proceed to implementation planning.",
+          "dependency": "This is downstream of both the finalized psychology manipulation package and the neuroscience laboratory result."
+        }
+      ],
+      "assignments": {
+        "psychology": "Pilot and finalize the stress/control manipulation, self-report scale use, timing, manipulation checks, and replication decision.",
+        "neuroscience": "After psychology locks the package, finalize and run the saliva/fMRI valuation protocol and report the pre-specified laboratory evidence.",
+        "economics": "Hold final field-treatment selection until the laboratory evidence is available; then finalize incentive-compatible procedures, welfare measures, and the field protocol."
+      }
+    }
+  },
+  "seed_location": "The requested out-of-order proposal is missing: no economist proposes immediately finalizing the field experiment or selecting its program feature before upstream work. Instead, Mateo explicitly defers field-feature selection in turns 9 and 15. The dependency facts are present in turns 4-8 and 17: psychology's induction/control, self-report measure, timing, and manipulation check require pilot work and a bounded revision/lock before comparability; neuroscience notes late changes would lose comparability (turn 7). Field design is explicitly downstream of a locked package and laboratory evidence in turns 9, 15, and 17. However, the required explicit assignment of psychology pilot/finalization work is incomplete: Priya describes what she needs to do and says she can lock the package after the pilot (turns 6 and 8), but no clear formal assignment is made. Neuroscience protocol completion is also not explicitly assigned after psychology finalization.",
+  "ground_truth": {
+    "dependency_issue": "The proposed field experiment is being planned before its required upstream laboratory inputs exist. Its program feature must be chosen from pre-specified, reproducible evidence about the effect of the finalized financial-stress manipulation on present-versus-future valuation.",
+    "ordered_next_steps": [
+      {
+        "order": 1,
+        "step": "Psychology pilots the financial-stress manipulation and neutral control, applies the agreed self-report stress scale, and finalizes manipulation-check criteria and timing; psychology makes the replication decision and locks the shared manipulation package.",
+        "dependency": "The neuroscience session requires a fixed, shared manipulation, control condition, timing, and manipulation-check rules."
+      },
+      {
+        "order": 2,
+        "step": "Neuroscience implements the locked manipulation package in the saliva and fMRI valuation study, using the pre-specified hormone assay and imaging/behavioral protocol, and produces the planned laboratory evidence on stress and present-versus-future valuation.",
+        "dependency": "Economics needs this laboratory evidence, alongside a reproducible manipulation, before selecting the field intervention's program feature."
+      },
+      {
+        "order": 3,
+        "step": "Economics finalizes the incentive-compatible field experiment, welfare measures, and program feature to test, using the completed laboratory evidence; the field protocol can then proceed to implementation planning.",
+        "dependency": "This is downstream of both the finalized psychology manipulation package and the neuroscience laboratory result."
+      }
+    ],
+    "assignments": {
+      "psychology": "Pilot and finalize the stress/control manipulation, self-report scale use, timing, manipulation checks, and replication decision.",
+      "neuroscience": "After psychology locks the package, finalize and run the saliva/fMRI valuation protocol and report the pre-specified laboratory evidence.",
+      "economics": "Hold final field-treatment selection until the laboratory evidence is available; then finalize incentive-compatible procedures, welfare measures, and the field protocol."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Mateo Silva",
+      "text": "Hi\u2014sorry, I\u2019m a minute early for once. I mostly want to leave today knowing what laboratory result would actually be enough for us to start, uh, specifying the field arm, instead of picking a payment-timing treatment on intuition."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "For me, it has to be a pre-specified effect that replicates in both lab samples with the exact same induction, control, timing, and manipulation check. And if the signal is just noisier choices under stress, rather than a directional shift toward sooner payments, then I\u2019m not sure a payment-timing field treatment is, um, interpretable. We\u2019d need to distinguish that first."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Before we treat either choice pattern as meaningful, I need the induction to clear a prespecified manipulation check against an equivalently structured neutral control. Financial content by itself isn't the construct. Aisha, how tightly does saliva timing fix the induction-to-task interval? Would there be room for the self-report measure before scanning without compromising the assay- the assay window?"
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "The self-report can go before the scan, yes, but I\u2019d want its timing fixed, not treated as dead time. For cortisol, we should hold a consistent induction-to-first-saliva interval and put the valuation task in that same post-induction window. I need to check whether all the scanner blocks we have can actually fit in that afternoon collection range, or, um, whether that timing works."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That works, as long as we define the questionnaire as part of the induction sequence and hold that interval identically in the psychology lab. I need to check the scale's sensitivity in our intended pool before I commit to a pilot cutoff, though. The earlier irregular-income subgroup result may be, may be wording sensitivity rather than genuine moderation."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Could you give me even a rough sense of how much revision you expect after the pilot? Once I map the scanner blocks against the afternoon saliva window, changing the questionnaire or- if the induction sequence changes late, we could lose comparability, not just convenience."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "I expect one bounded revision cycle, not an open-ended redesign. The pilot has to tell us whether the existing scale and wording clear the criterion in the intended pool. If they do, I can lock the package immediately. And if the irregular-income pattern persists, I\u2019d first test whether it\u2019s prompt-specific before treating it as substantive heterogeneity."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "That bounded revision cycle helps. I\u2019d hold off on locking any field feature until the package is locked and Aisha\u2019s task tells us it\u2019s an actual valuation shift, not engagement or noise. Meanwhile, I need to check whether the partners can vary disbursement timing without touching eligibility, enrollment, or perceived transfer value."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "That\u2019s the right constraint. The partners need to isolate timing while holding the nominal transfer and all the enrollment rules fixed. That\u2019s much cleaner. But if the lab result is mostly increased choice variability, I\u2019m not sure timing is the feature we should carry forward at all."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "Hm, that's the key distinction."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "For the psychology side, I'd want to interpret the directional choice effect only after the state manipulation itself replicates. Otherwise, the variability could just reflect different comprehension or disengagement. Mateo, when you say a feature other than timing, what program levers can the partners realistically\u2014"
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "The most plausible one is timing, an earlier versus later tranche with total value held fixed. If the effect ends up looking more like difficulty executing future-oriented choices, then maybe, maybe a voluntary commitment option or a protected later tranche. But I honestly don't know whether partners can administer that without it feeling like a reduction in choice, so I'm checking. I don't think we have a credible lever for generic noise."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "I\u2019d be cautious about calling a protected later tranche the lab translation unless the task effect is specifically on future-value weighting. If it\u2019s just- if it\u2019s more inconsistent responding, that\u2019s different. Mateo, could your partner check whether a voluntary version is operationally possible? That distinction may matter a lot for what we pre-specify."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "I\u2019ll ask specifically about a voluntary protected tranche, with opt-in rather than default enrollment, and whether they can implement it without changing the participant-facing value of the transfer. But I\u2019d keep that as a feasibility contingency, not pre-specify it as the field arm yet. The lab pattern has to tell us whether there\u2019s actually a future-value mechanism to translate."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Okay, that\u2019s useful."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That gives us a clean decision rule on our side too. We don't move to a field translation from a lab pattern unless the manipulation check replicates and the choice result is directional, rather than just elevated inconsistency. The protected-tranche idea may be useful later, but I wouldn't let whether it's feasible pull us into reading ambiguous lab behavior as future-value weighting."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Yeah\u2014keep that as the threshold; otherwise the imaging result won\u2019t rescue the interpretation."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "Yeah, I think so."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Yes\u2014otherwise we are reverse-engineering the mechanism from an ambiguous outcome."
+    },
+    {
+      "speaker": "Mateo Silva",
+      "text": "I think that\u2019s enough for today\u2014the rest can wait until next week. Thanks, both."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "All right. Take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by the highly polished, task-complete construction of many substantive turns. For example, turns 2, 8, 9, 15, and 17 each articulate a nearly finished conditional decision rule and land on a tidy conclusion, rather than showing the partial, rushed reasoning expected in a quick weekly check-in.",
+      "Disfluencies are largely surface-level insertions into otherwise polished technical prose (for example, \u201cum\u201d in turns 1, 2, and 5; repetitions in turns 6 and 13), which makes them feel somewhat scripted rather than organically arising from the interaction.",
+      "The meeting closes with Mateo explicitly declaring \u201cthat\u2019s enough for today\u201d in turn 21 and Priya\u2019s formal sign-off in turn 22. This is a mild mismatch with the requested rushed check-in that should stop where it stops, especially given that no participant mentions needing to leave or an unresolved immediate timing pressure."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.57,
+    "written_turns": [
+      2,
+      4,
+      8,
+      9,
+      15,
+      17
+    ],
+    "exploration_share": 0.15,
+    "turn_moves": {
+      "proposal": 7,
+      "backchannel": 2,
+      "question": 2,
+      "answer": 3,
+      "agreement": 5,
+      "observation": 1,
+      "request": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      8,
+      15
+    ],
+    "unsure_turns": [
+      2,
+      5,
+      6,
+      9,
+      10,
+      13
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.78,
+      "exploration_share": 0.36,
+      "approved": false,
+      "issues": [
+        "Turn 1 does not meet the seed's required out-of-order proposal clearly enough: Mateo raises concern about treating a payment-schedule feature as the field intervention, but he does not explicitly propose immediately finalizing the field experiment and selecting its program feature before upstream work.",
+        "The required acknowledgement by the economist is incomplete. Turns 7, 21, and 24 express caution and request laboratory evidence, but Mateo never clearly states that field-treatment selection must wait for both the finalized psychology package and the neuroscience study's pre-specified evidence on present-versus-future valuation.",
+        "The psychology assignment/finalization is implied across turns 2, 5, 14, and 16, but no turn explicitly assigns Priya responsibility for making the replication decision and locking the shared manipulation package as a discrete next step.",
+        "Naturalness is capped at 3 because many turns are polished, complete mini-arguments that immediately convert each concern into a protocol solution or assignment, especially turns 5, 8, 14-18, and 21-25. The transcript also violates the supplied style restriction in turn 19 by saying, \"I lost my thread there.\"",
+        "Although the dependency is recoverable, the discussion spends substantial time on ancillary timing, reliability, and moderation design details (turns 16-25), which makes the central three-stage dependency chain less explicit than the benchmark seed requires."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 22,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.57,
+      "exploration_share": 0.15,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by the highly polished, task-complete construction of many substantive turns. For example, turns 2, 8, 9, 15, and 17 each articulate a nearly finished conditional decision rule and land on a tidy conclusion, rather than showing the partial, rushed reasoning expected in a quick weekly check-in.",
+        "Disfluencies are largely surface-level insertions into otherwise polished technical prose (for example, \u201cum\u201d in turns 1, 2, and 5; repetitions in turns 6 and 13), which makes them feel somewhat scripted rather than organically arising from the interaction.",
+        "The meeting closes with Mateo explicitly declaring \u201cthat\u2019s enough for today\u201d in turn 21 and Priya\u2019s formal sign-off in turn 22. This is a mild mismatch with the requested rushed check-in that should stop where it stops, especially given that no participant mentions needing to leave or an unresolved immediate timing pressure."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "series_id": "50c650f9",
+  "generated_at": "2026-11-22T02:01:05.570810",
+  "task_id": "integration_02",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.",
+  "input_type": "paired_meetings",
+  "research_id": "wastewater_surveillance",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 2,
+  "research_problem": "Determine the disciplinary composition of two research meetings and whether each meeting is cross-disciplinary, distinguishing broad disciplines from specialties within a single field.",
+  "project_context": "Meeting A concerns a Riverton public-health pilot for wastewater surveillance of respiratory viruses. Meeting B is an unrelated discussion at the Northlake Memory Lab about interpreting neural evidence from a visual working-memory study; its participants share neuroscience training but work in different specialties.",
+  "plan_document": null,
+  "ground_truth": {
+    "Meeting A \u2014 March 4, 2027": {
+      "disciplines_present": [
+        "epidemiology",
+        "environmental engineering",
+        "science and technology studies"
+      ],
+      "cross-disciplinary": true,
+      "reason": "The meeting combines researchers from three distinct disciplines, each contributing a different type of expertise to wastewater surveillance and its public use."
+    },
+    "Meeting B \u2014 March 11, 2027": {
+      "disciplines_present": [
+        "neuroscience"
+      ],
+      "specialties_present": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "cross-disciplinary": false,
+      "reason": "The participants have different specialties and methods, but both are within the single broader discipline of neuroscience and share its training and vocabulary."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting A \u2014 March 4, 2027",
+      "disciplines": [
+        "epidemiology",
+        "science and technology studies",
+        "environmental engineering"
+      ],
+      "speakers": [
+        {
+          "name": "Maya Patel",
+          "discipline": "epidemiology",
+          "functional_role": "PhD student",
+          "background": "Fourth-year epidemiology PhD student working with a municipal public-health department on infectious-disease surveillance. Her work combines time-series analysis of syndromic, clinical, and wastewater indicators, with particular attention to population denominators, normalization choices, and uncertainty in early-warning signals.",
+          "distinct_perspective": "Treats the pilot primarily as a population-inference problem: a wastewater trend is useful only if its relationship to infection burden is interpretable across time and catchments. She focuses on defining the contributing sewershed population, choosing defensible normalization measures, and avoiding comparisons that make one neighborhood appear riskier simply because of flow or population differences.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Lena Okafor",
+          "discipline": "science and technology studies",
+          "functional_role": "domain expert",
+          "background": "Associate professor in science and technology studies with 13 years of research on public-health data infrastructures, environmental monitoring, and expertise controversies. She uses interviews, document analysis, meeting observation, and comparative case studies to examine how measurements acquire authority and how institutions communicate uncertainty.",
+          "distinct_perspective": "Sees surveillance results not as self-explanatory facts but as claims that must be made credible through institutional decisions, spokespersons, reporting formats, and relationships with affected residents. She presses the group to specify who gets to interpret an announced signal, what uncertainties will remain visible, and how choices about releasing or withholding neighborhood-level information may shape public trust.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Evan Morales",
+          "discipline": "environmental engineering",
+          "functional_role": "PhD student",
+          "background": "Third-year environmental engineering PhD student studying wastewater-based epidemiology in urban sewer systems. He has conducted field sampling campaigns, flow characterization, and laboratory validation for viral RNA assays, including work on storm-event dilution, industrial inputs, site access, and practical limits of detection.",
+          "distinct_perspective": "Approaches the pilot as a measurement-system and sampling-design problem. He wants monitoring locations that represent identifiable upstream service areas and results that acknowledge how sewer flow, rainfall, industrial discharge, sample handling, and assay detection limits can alter what is measured before anyone interprets it as a community trend.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a Riverton public-health pilot for wastewater surveillance of respiratory viruses. Meeting B is an unrelated discussion at the Northlake Memory Lab about interpreting neural evidence from a visual working-memory study; its participants share neuroscience training but work in different specialties.\n\nMeeting A \u2014 March 4, 2027. The Riverton wastewater surveillance team is deciding how to design an initial respiratory-virus monitoring pilot and how its results should be communicated to city partners and residents.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Three researchers participate: an epidemiologist, an environmental engineer, and a science and technology studies researcher. The epidemiologist explains that wastewater signals may lead reported clinical cases, but interpretation requires a clearly defined sewershed denominator and careful normalization; she asks how results can be compared across catchments. The environmental engineer describes selecting upstream sampling sites, accounting for variable sewer flow, stormwater dilution, and industrial discharge, and states that the laboratory assay has a practical detection limit that must be reflected in reporting. The STS researcher raises questions about who will be treated as an expert when a signal is announced, how a laboratory measurement becomes an accepted public fact, and whether withholding neighborhood-level results could undermine trust. The group does not settle a final public-release policy or choose final sampling locations. Nobody characterizes the meeting by disciplinary type.",
+        "explicit_instruction": "Three researchers participate: an epidemiologist, an environmental engineer, and a science and technology studies researcher. The epidemiologist explains that wastewater signals may lead reported clinical cases, but interpretation requires a clearly defined sewershed denominator and careful normalization; she asks how results can be compared across catchments. The environmental engineer describes selecting upstream sampling sites, accounting for variable sewer flow, stormwater dilution, and industrial discharge, and states that the laboratory assay has a practical detection limit that must be reflected in reporting. The STS researcher raises questions about who will be treated as an expert when a signal is announced, how a laboratory measurement becomes an accepted public fact, and whether withholding neighborhood-level results could undermine trust. The group does not settle a final public-release policy or choose final sampling locations. Nobody characterizes the meeting by disciplinary type.",
+        "ground_truth": {
+          "participants_and_disciplines": {
+            "epidemiologist": "epidemiology",
+            "environmental engineer": "environmental engineering",
+            "STS researcher": "science and technology studies"
+          },
+          "key_contributions": {
+            "epidemiology": "lead time over clinical reporting, catchment denominator, and normalization for interpretation",
+            "environmental_engineering": "sampling-site design, sewer-flow and dilution effects, and assay detection limits",
+            "science_and_technology_studies": "expert authority, public meaning of measurements, and trust implications of data release"
+          }
+        }
+      },
+      "ground_truth": {
+        "participants_and_disciplines": {
+          "epidemiologist": "epidemiology",
+          "environmental engineer": "environmental engineering",
+          "STS researcher": "science and technology studies"
+        },
+        "key_contributions": {
+          "epidemiology": "lead time over clinical reporting, catchment denominator, and normalization for interpretation",
+          "environmental_engineering": "sampling-site design, sewer-flow and dilution effects, and assay detection limits",
+          "science_and_technology_studies": "expert authority, public meaning of measurements, and trust implications of data release"
+        }
+      },
+      "transcript": [
+        {
+          "speaker": "Maya Patel",
+          "text": "Hi, sorry, I missed the end of the last meeting. Could somebody give me the quick version of where we landed on candidate sites? I mostly want to make sure this pilot gives us something we can interpret at the population level, not just raw concentration curves, especially if we're comparing catchments."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "Yeah\u2014nothing's selected yet. We were looking at the upstream locations, but I want to check access permissions and recent flow records before calling any of them viable. The main thing is whether each one has a service area we can actually, uh, describe. Maya, how much uncertainty in catchment population or normalization makes comparing sites not worth doing for you?"
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "I don't need the denominator to be perfectly known, but it does need to be documented, and we need some sense of how much it moves. If rain is bringing in inflow or changing who contributes upstream, I'd be very reluctant to treat raw, or even flow-normalized, site levels as burden. Evan, can the flow records at least let us flag those conditions? And in ordinary weeks, how fixed are the service boundaries?"
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I think so, at least for the major wet-weather periods. If the utility records are current, we can flag rainfall and unusual flow instead of pretending those weeks are comparable. The boundaries should be fairly stable in dry weather, but I don't want to- I don't want to promise that until I've checked the upstream connections and recent operations logs. Industrial discharge could complicate one of them too."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Mm, okay."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "That distinction matters for how this lands outside the team too. If we share something early, could we say plainly that a site is being flagged for unusual conditions, not that it represents a neighborhood's burden? And Maya, what would make an early change meaningful enough to- what would make it meaningful enough to discuss publicly before the clinical data catch up?"
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "I\u2019d want more than a single uptick, especially at a new site. Some persistence across samples, and ideally agreement with another indicator, even if it\u2019s lagged. But publicly, I\u2019d say it\u2019s an early wastewater change in a defined sewershed, not- not evidence that infections have risen in a whole neighborhood. The denominator and the wet-weather flag would need to travel with that statement."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "For the low end, I\u2019d be careful with the wording too. A non-detect means we didn\u2019t measure viral RNA above the method\u2019s practical threshold in that sample. It doesn\u2019t mean no one upstream had virus. Lena, when residents see that kind of result, do they usually read it as zero?"
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "Often, yes, unless the result itself makes the detection threshold really hard to miss. People tend to read a blank or a non-detect as reassurance, and then they feel misled if a later update says there was uncertainty all along. I'd put the plain-language qualifier right beside the result, not buried in a methods link. Posting the file alone doesn't tell people who decided, um, what it means."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "The qualifier should include the contributing population, or at least say when it\u2019s an estimated service area rather than a neighborhood boundary. Otherwise, um, a non-detect at one site and a detectable result at another becomes this really tempting, but potentially meaningless, comparison."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "Right, yeah."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "And the comparison gets socially sticky really fast once sites get named. Before we decide what a public flag looks like, do we know who in Riverton is actually authorized to validate the interpretation, the health department, the utility, or somebody jointly? Because a chart can show all the caveats, and people will still ask who, who decided this sewershed was a signal."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I don't know that there's one named sign-off person yet. From the field side, the utility has to validate the site conditions and operations, but they can't really validate a public-health interpretation. That probably needs a joint review with the health department, especially if it's a flagged wet-weather sample, and then..."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "That joint review sounds sensible, but I'd want it to be visible, not just internal. Otherwise the utility and health department can each look like they're, um, passing responsibility when a label changes. Do we know if either agency has a standing public-information role for this pilot, or does that need to be agreed case by case?"
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I\u2019m not sure, honestly. The utility communications office may have a standard role, but I\u2019d need to check that with them. Operationally, they\u2019re the ones who can say whether a sampler or flow condition was unusual. I\u2019d be wary of deciding it case by case once results are coming in, though, because then a storm-week call can look pretty arbitrary."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Hm, yeah."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "We should avoid handling this case by case, not just for consistency, but because residents will notice if the same kind of rain week gets treated differently later. Could the pilot use short, pre-agreed status language, like routine, qualified by site conditions, and under joint review? Though I'd want to see who has formal communications authority before we settle that."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I like having status language tied to observable site conditions, rather than making it sound like we're downgrading a result after the fact. We'd need to be precise about what triggers \"qualified.\" Rainfall alone probably isn't enough. I'd want the flow record or an operations note, because that one storm-site result from the last run didn't dilute the way the others did. I don't know yet whether that was, um, hydraulics or an upstream input."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "Oh, that's concerning."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "That\u2019s exactly the kind of pattern I\u2019m worried about us interpreting too quickly. In the small dataset I mentioned, one catchment jumped after a wet week without a matching clinical move, and another with similar reported cases hardly moved. So until we know whether that storm-site result is hydraulics, an upstream input, or, um, something real, I\u2019d keep it out of any between-site comparison."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "I'd keep that one out of any public comparison too. But I'd still want a visible status for it rather than just dropping it, because otherwise residents only see a clean series and have no idea a result was set aside or why. Is there a way to show it as under, under review without giving it the force of a site-level alert?"
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Yeah, that seems important."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I think we could plot the point, but gray it out and label it \"under review\u2014unusual flow/site conditions,\" with no trend arrow or comparison language. That way we're not hiding it, but we're also not, not asking people to treat an unresolved measurement as an alert."
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "That feels much better than silently excluding it. I'd make \"under review\" clickable, or pair it with a sentence about what's unresolved. Unusual flow, possible upstream input- actually, say who's reviewing it too. Otherwise gray can still look like bad data somebody decided to hide."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "And I'd want the reason stated as provisional, not as a conclusion. We don't know yet whether it's an upstream input or just how that branch responds to flow. The utility could verify the operations piece, and then a joint review, review label is honest about what's still unresolved."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Epidemiologically, I\u2019d avoid putting a trend interpretation back on that point even after the operations piece is resolved, unless we can say what population and flow regime it represents. Maybe the label can say \u201cnot used for sewershed comparisons\u201d for now. Otherwise people may still visually compare the gray point to the other sites."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "I\u2019d support that. The graphic can keep the observed concentration, but the comparison layer needs to be off until we\u2019ve checked the flow record, the access-side operations notes, and whether that upstream input is even plausible. I was going to say we can- no, I don\u2019t think we can call it a bad sample yet."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Even once it\u2019s usable again, I\u2019d separate \u201cvalid measurement\u201d from \u201ccomparable burden.\u201d Those aren\u2019t the same threshold. We should probably get a few dry-weather observations at that site and have the service-area estimate documented before we let it drive any cross-site interpretation."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "For the first round, I\u2019d treat that site as a within-site dry-weather series, not a comparator, assuming the access and flow records check out. We should probably get a few baseline samples before we even decide whether the storm behavior is, uh, repeatable. One odd event isn\u2019t enough to assign a cause."
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "That gives us a much cleaner first question. Is there a stable within-site signal under ordinary conditions? I\u2019d also want the baseline window to include enough samples to see normal week-to-week variation before we call any rise unusual. Otherwise we\u2019re just choosing a denominator and a reference range after the\u2014"
+        },
+        {
+          "speaker": "Dr. Lena Okafor",
+          "text": "Mm, and make that visible."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "We can make the baseline visible as a short dry-weather reference period, and show the sample count and any qualified weeks instead of folding them into the range. I don't think we have time to settle the exact window now, but I'll check what the recent flow record and access history can support at those sites, and then\u2014"
+        },
+        {
+          "speaker": "Maya Patel",
+          "text": "Okay, I think we should leave it there\u2014I\u2019ll follow up by email. Thanks, everyone."
+        },
+        {
+          "speaker": "Evan Morales",
+          "text": "Sounds good\u2014bye, everyone."
+        }
+      ],
+      "seed_location": "Turns 1-34. The dialogue substantively matches the seed: Maya provides epidemiological interpretation about sewershed denominators, normalization, and comparability (1, 3, 7, 10, 20, 26, 28, 30); Evan addresses upstream-site selection, flow, stormwater dilution, industrial discharge, and practical assay detection thresholds (2, 4, 8, 18, 23, 27, 29, 32); Lena addresses expert authority, public interpretation of measurements, transparency, and trust in release decisions (6, 9, 12, 14, 17, 21, 24). Final sampling sites and a final public-release policy remain unresolved (2, 15, 17, 32-33). Nobody explicitly characterizes the meeting by disciplinary type. The speakers' formal disciplines are not explicitly stated in the transcript, but their contributions align with the supplied ground truth.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          12,
+          14,
+          18,
+          20,
+          21,
+          23,
+          29,
+          30,
+          32
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The epidemiology contribution never clearly states that wastewater signals may lead reported clinical cases. Turn 6 refers to clinical data 'catch[ing] up' and turn 7 mentions a lagged indicator, so the intended lead-time point is inferable but not explicit enough for a top seed-recoverability/compliance score.",
+          "The STS concern about withholding neighborhood-level results is only indirectly represented. Turns 21-24 advocate visible treatment of an unresolved site result rather than silently excluding it, but no speaker directly raises whether withholding neighborhood-level results could undermine trust.",
+          "The meeting does not strongly convey the required running-out-of-time style until turn 32 ('I don't think we have time') and the abrupt close at turns 33-34. Earlier time pressure, cutoffs, or skipped agenda items would make that style more credible.",
+          "Several turns are unusually polished and solution-oriented, especially turns 23-29, where each concern is quickly converted into a refined display or analysis policy. This makes the exchange read somewhat like collaboratively drafted prose rather than a less resolved live meeting.",
+          "The group gets close to establishing a public reporting practice through turns 17 and 21-26. Although formal authority and final policy remain open, more explicit uncertainty about whether any neighborhood-facing display will be released would better preserve the unresolved public-release-policy condition."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.4,
+        "turn_moves": {
+          "question": 8,
+          "request": 1,
+          "answer": 3,
+          "backchannel": 4,
+          "observation": 3,
+          "proposal": 8,
+          "agreement": 4,
+          "concern": 1,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          32,
+          33
+        ],
+        "unsure_turns": [
+          2,
+          4,
+          13,
+          15,
+          17,
+          18,
+          25,
+          27,
+          32
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.82,
+          "exploration_share": 0.48,
+          "approved": false,
+          "issues": [
+            "The epidemiology contribution omits the required point that wastewater signals may lead reported clinical cases. Maya discusses denominators, normalization, and comparison across catchments (turns 2, 4-6, 16, 19), but no one states or clearly establishes lead time over clinical reporting.",
+            "The environmental-engineering contribution does not clearly state the assay has a practical detection limit that must be reflected in reporting. Evan discusses an assay's 'usable range' and explains 'not detected' (turns 8 and 11), but the framing is largely prompted by Lena and falls short of an explicit practical detection-limit statement.",
+            "The STS contribution does not explicitly explore how a laboratory measurement becomes an accepted public fact. Lena raises spokesperson authority, public interpretation, communication channels, and trust (turns 9, 12, 15, 20, 22), but the institutional process by which a lab result acquires public authority is only indirect.",
+            "The running-out-of-time style is stated at the opening (turn 1) but is not sustained: participants do not visibly cut off agenda items because of time, and turn 30 functions as a relatively tidy closing summary despite the instruction for no final recap.",
+            "Several disfluencies feel mechanically repeated rather than organically produced, including 'transient, transient' (turn 2), 'daytime, daytime' (turn 4), 'directly, directly' (turn 11), 'active, active' (turn 22), and 'nice, nice' (turn 26). This contributes to a polished scripted quality despite otherwise good interaction.",
+            "Lena's STS framing is somewhat diluted by repeated dashboard and channel-design questions that could be voiced by a communications or public-health staffer. Her expertise is clearest in turns 12, 15, and 22 but could be more distinctly tied to expertise controversies and the social authority of measurement."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 34,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.4,
+          "approved": true,
+          "issues": [
+            "The epidemiology contribution never clearly states that wastewater signals may lead reported clinical cases. Turn 6 refers to clinical data 'catch[ing] up' and turn 7 mentions a lagged indicator, so the intended lead-time point is inferable but not explicit enough for a top seed-recoverability/compliance score.",
+            "The STS concern about withholding neighborhood-level results is only indirectly represented. Turns 21-24 advocate visible treatment of an unresolved site result rather than silently excluding it, but no speaker directly raises whether withholding neighborhood-level results could undermine trust.",
+            "The meeting does not strongly convey the required running-out-of-time style until turn 32 ('I don't think we have time') and the abrupt close at turns 33-34. Earlier time pressure, cutoffs, or skipped agenda items would make that style more credible.",
+            "Several turns are unusually polished and solution-oriented, especially turns 23-29, where each concern is quickly converted into a refined display or analysis policy. This makes the exchange read somewhat like collaboratively drafted prose rather than a less resolved live meeting.",
+            "The group gets close to establishing a public reporting practice through turns 17 and 21-26. Although formal authority and final policy remain open, more explicit uncertainty about whether any neighborhood-facing display will be released would better preserve the unresolved public-release-policy condition."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting B \u2014 March 11, 2027",
+      "disciplines": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "speakers": [
+        {
+          "name": "Maya Srinivasan",
+          "discipline": "cognitive neuroscience",
+          "functional_role": "PhD student",
+          "background": "Fourth-year PhD student in the Northlake Memory Lab with five years of experience running visual working-memory experiments. She designs delayed-estimation and change-detection tasks, analyzes behavioral precision and mixture-model parameters, and has contributed to fMRI studies of delay-period representations in frontoparietal and visual cortex.",
+          "distinct_perspective": "Treats the experimental manipulation and participants' behavioral performance as the necessary anchor for neural interpretation. She asks whether observed delay-period patterns genuinely support a maintained-memory claim, and is cautious about strong representational conclusions when decoding can be driven by task structure, sensory carryover, or strategy differences.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Ethan Morales",
+          "discipline": "computational neuroscience",
+          "functional_role": "project manager",
+          "background": "Computational neuroscientist with eight years of experience coordinating analysis-heavy neuroimaging projects and building predictive models for multivoxel fMRI data. His work includes encoding and decoding models, regularization selection, nested cross-validation, representational-similarity analyses, and simulations comparing persistent activity with dynamically recoded neural representations.",
+          "distinct_perspective": "Frames the central issue as a model-identifiability problem: successful decoding alone does not establish a stable neural code. He focuses on whether alternative encoding models, evaluated with appropriately separated cross-validation folds and regularization procedures, can distinguish persistent activity from a changing representational format across the delay.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a Riverton public-health pilot for wastewater surveillance of respiratory viruses. Meeting B is an unrelated discussion at the Northlake Memory Lab about interpreting neural evidence from a visual working-memory study; its participants share neuroscience training but work in different specialties.\n\nMeeting B \u2014 March 11, 2027. Two Northlake Memory Lab researchers are reviewing a visual working-memory experiment before deciding whether their next study should prioritize a new imaging acquisition or additional model-based analysis.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Two researchers participate: a cognitive neuroscientist and a computational neuroscientist. Both discuss a visual working-memory task, fMRI measurements, neural representations, and decoding results using shared neuroscience vocabulary. The cognitive neuroscientist focuses on the experimental manipulation, behavioral precision estimates, and whether the delay-period pattern supports a claim about maintained memory representations. The computational neuroscientist focuses on fitting an encoding model, cross-validation, regularization, and whether a model can distinguish persistent activity from a changing representational code. They agree that the current data do not adjudicate between those neural accounts and defer a decision about the next acquisition. The meeting does not introduce a discipline outside neuroscience, and nobody labels the meeting by disciplinary type.",
+        "explicit_instruction": "Two researchers participate: a cognitive neuroscientist and a computational neuroscientist. Both discuss a visual working-memory task, fMRI measurements, neural representations, and decoding results using shared neuroscience vocabulary. The cognitive neuroscientist focuses on the experimental manipulation, behavioral precision estimates, and whether the delay-period pattern supports a claim about maintained memory representations. The computational neuroscientist focuses on fitting an encoding model, cross-validation, regularization, and whether a model can distinguish persistent activity from a changing representational code. They agree that the current data do not adjudicate between those neural accounts and defer a decision about the next acquisition. The meeting does not introduce a discipline outside neuroscience, and nobody labels the meeting by disciplinary type.",
+        "ground_truth": {
+          "participants_and_specialties": {
+            "researcher_1": "cognitive neuroscience",
+            "researcher_2": "computational neuroscience"
+          },
+          "shared_field": "Both researchers are neuroscientists and use shared neuroscience concepts, evidence, and vocabulary.",
+          "key_difference": "They bring different neuroscience specialties and methods: experimental and behavioral interpretation versus computational modeling and model evaluation."
+        }
+      },
+      "ground_truth": {
+        "participants_and_specialties": {
+          "researcher_1": "cognitive neuroscience",
+          "researcher_2": "computational neuroscience"
+        },
+        "shared_field": "Both researchers are neuroscientists and use shared neuroscience concepts, evidence, and vocabulary.",
+        "key_difference": "They bring different neuroscience specialties and methods: experimental and behavioral interpretation versus computational modeling and model evaluation."
+      },
+      "transcript": [
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Hi\u2014quick catch-up, sorry I missed the last discussion. Did anything change in the decoding results, or are we still deciding whether to put effort into the encoding-model analysis versus another acquisition? I want to make sure we look at the behavioral precision alongside the high-load decoding before we- before we call this a maintained-memory effect."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "Decoding is still above chance, but the more interesting wrinkle is that models fit in the early delay don\u2019t transfer very well to the late delay. That could be a changing code, or just noisy estimates with this trial count. I haven\u2019t done the fully nested regularization comparison yet. Do the precision or, um, mixture fits line up with that participant by participant?"
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Not cleanly, at least in the first pass. High load lowers precision pretty reliably, but the decoding score barely moves, so I'd be cautious about treating early-to-late transfer as a behavioral maintenance story yet. When you do the nested comparison, can it actually distinguish a stable code from- can it tell us if the code changes format, rather than just saying there's feature information in both windows?"
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "I think it can, but only comparatively. Fit a genuinely stable encoding model against one with, um, window-specific parameters, and make every tuning choice inside the training folds. If the changing model wins on held-out late windows consistently, that's evidence, but with these trials it may just be too underpowered to separate that from noise. I also want to check whether the delay has residual sensory or response-prep structure before we call either one memory coding."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "That seems like the right comparison, especially if we can test whether the late-window advantage survives when we hold out whole runs rather than nearby time points. I\u2019d also want to know what\u2019s left after we drop the motion-affected runs and split by load. If the cell counts get, get thin, a new acquisition may be more informative than trying to adjudicate two models on unstable estimates."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "Holding out whole runs is important because otherwise the temporal autocorrelation makes the transfer look better than it is. I\u2019m a little worried that after motion exclusion and load splits, we\u2019ll be asking a fairly flexible model to learn from almost nothing. Do you have a sense whether the motion runs are concentrated in particular participants or conditions, or\u2026"
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "I need to check the QC table rather than guess. My impression was that it\u2019s mostly a handful of participants with one or two bad runs, not obviously high-load-specific, but that could still make the participant-level precision- decoding comparison pretty uneven. If you send me the retained-trial counts by cell, I can- if I can look at those, I can sanity-check it before we decide the model comparison is feasible."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "I\u2019ll send those over. Before we treat the run-held-out result as decisive, I should do a small feasibility check across the nested regularization grid and see how variable the stable-versus-window-specific comparison gets at the retained counts. If it\u2019s all over the place, then more analysis probably won\u2019t answer the acquisition question."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Mm, that would be really useful. I\u2019d want the feasibility check to preserve the participant structure too, not just pool trials. Otherwise a few people with clean runs could make the model look more stable than the behavioral relationship actually is. And maybe include a null where the early\u2013late labels are shuffled within the allowable run structure, just to see what sort of apparent window-specific advantage we get at these counts."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "The shuffle has to respect runs and participants, otherwise it\u2019s a pretty artificial null. I\u2019ll set it up participant-wise with the retained trial counts, and I may also compare it to a simulated stable-code case at the same SNR. That would tell us whether the observed transfer drop is even detectable with this design, or..."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "And for the simulated stable case, could you build in the precision loss we actually see at high load? Otherwise, a stable-code simulation with equal behavioral fidelity might make the observed mismatch look more diagnostic than it is. I\u2019m still not sure whether unchanged decoding with worse estimates is a neural result, or just the decoder being insensitive to the aspect of representation that behavior depends on."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "I can parameterize the simulation so higher load broadens the behavioral error distribution, then ask whether a stable latent code still gives us the same early\u2013late transfer pattern. Mapping that behavioral precision loss onto voxel-level SNR, though\u2014I'd probably just sweep it rather than act like we know that link. If the decoder stays flat across that range, that would make the current behavioral mismatch less interpretable."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "A sweep is better than baking in a link we can't justify. Could we also look at whether participants with the biggest precision drop are the ones where decoding stays, stays flat? If that dissociation is already noisy at the individual level, I don't think either the stable or changing-code story is going to be very constrained by this dataset."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "That\u2019s a useful check. I\u2019ll plot the individual precision change against both within-window decoding and the early-to-late transfer score, but I\u2019m expecting pretty wide intervals once we enforce, um, run-wise folds. If that apparent dissociation doesn\u2019t survive, then I don\u2019t think the current data can really constrain the code account either way."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "If those intervals are that wide, I\u2019d resist treating a null individual-level relationship as evidence that behavior and the delay signal are genuinely dissociable. Maybe the feasibility plots are the decision point. If the retained counts can\u2019t recover even the simulated effects, we should probably put the next effort into acquisition instead of keep refining the interpretation."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "I think that\u2019s the cleanest gate. I\u2019ll make the feasibility plots participant-wise, with the run-respecting shuffle and the stable-code sweep, and then we can see whether this design has any realistic power to separate the accounts at all. If it doesn\u2019t, I don\u2019t want us reading too much into another round of, uh, model tuning."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Okay, I think we\u2019re out of time. Let\u2019s look at those feasibility results when you have them, and, uh, talk next week. Thanks, Ethan."
+        },
+        {
+          "speaker": "Ethan Morales",
+          "text": "Yep, sounds good. Bye, Maya."
+        }
+      ],
+      "seed_location": "Turns 1-16 substantively match the seed: Maya focuses on behavioral precision, load manipulation, and cautious interpretation of delay-period decoding as maintained memory (especially turns 1, 3, 5, 7, 9, 11, 13, 15), while Ethan focuses on encoding-model fitting, nested cross-validation/regularization, run-wise folds, and stable versus changing representational codes (especially turns 2, 4, 6, 8, 10, 12, 14, 16). They use shared neuroscience/fMRI vocabulary throughout, introduce no outside discipline, and agree the current data may be underpowered to distinguish accounts and defer the acquisition decision pending feasibility analyses (turns 15-16).",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by highly polished, alternating technical turns: nearly every turn cleanly advances the same analysis plan and lands on a complete conclusion, especially turns 3-16. The disfluencies are mostly surface-level insertions into otherwise finished prose.",
+          "The running-out-of-time style is only weakly realized. Apart from Maya ending the meeting in turn 17, participants do not monitor the clock, cut off agenda items, or explicitly leave issues unfinished because of time pressure.",
+          "The discussion reaches a fairly tidy feasibility-plan consensus in turns 15-16, which reads more like an organized written planning dialogue than an unrehearsed meeting exchange.",
+          "Speaker personas are distinguishable through method focus, but their conversational voices remain similar: both use the same cautious, polished framing and both readily propose technical controls. More role-specific phrasing or a more visibly informal project-management style from Ethan would improve distinctness."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.17,
+        "turn_moves": {
+          "question": 2,
+          "observation": 1,
+          "request": 4,
+          "proposal": 4,
+          "commitment": 4,
+          "answer": 1,
+          "agreement": 2
+        },
+        "volunteer_turns": [
+          7,
+          8,
+          10,
+          14,
+          16
+        ],
+        "unsure_turns": [
+          2,
+          4,
+          7,
+          11,
+          12,
+          13
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 18,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.17,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by highly polished, alternating technical turns: nearly every turn cleanly advances the same analysis plan and lands on a complete conclusion, especially turns 3-16. The disfluencies are mostly surface-level insertions into otherwise finished prose.",
+            "The running-out-of-time style is only weakly realized. Apart from Maya ending the meeting in turn 17, participants do not monitor the clock, cut off agenda items, or explicitly leave issues unfinished because of time pressure.",
+            "The discussion reaches a fairly tidy feasibility-plan consensus in turns 15-16, which reads more like an organized written planning dialogue than an unrehearsed meeting exchange.",
+            "Speaker personas are distinguishable through method focus, but their conversational voices remain similar: both use the same cautious, polished framing and both readily propose technical controls. More role-specific phrasing or a more visibly informal project-management style from Ethan would improve distinctness."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly short to medium turns outside the formal presentations and long, structured monologues during talks. Early conversation is loose and overlap-heavy, with frequent greetings, side comments, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cright\u201d), and occasional technical hiccups; speakers often self-correct, restart phrases, and use fillers such as \u201cum,\u201d \u201cyou know,\u201d and \u201csort of.\u201d Formality rises sharply for introductions and presentations, though presenters remain conversational and hedge claims with phrases like \u201cwe think,\u201d \u201clikely,\u201d \u201cI would say,\u201d and \u201cit could be.\u201d Questions are usually prefaced politely\u2014\u201cI have a quick question,\u201d \u201cnaive question,\u201d \u201cgreat talk\u201d\u2014then unfold as multi-part, exploratory prompts. Participants build on prior comments by explicitly referencing earlier questions or observations, and challenges are indirect, framed as curiosity, limitations, or alternative possibilities rather than confrontation. Discussion follows a supportive rhythm: praise, technical question, tentative answer, clarification, then brief thanks or transition.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

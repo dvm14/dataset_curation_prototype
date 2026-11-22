@@ -1,0 +1,406 @@
+{
+  "transcript_id": "5f4c04cf",
+  "generated_at": "2026-11-22T02:44:42.497436",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chatter followed by much longer, structured presentation turns and brief Q&A exchanges. Participants overlap lightly and often respond with quick acknowledgments such as \u201cyeah,\u201d \u201cokay,\u201d or \u201cgreat,\u201d while occasional interruptions arise from audio, login, or turn-taking issues. The tone is friendly, collegial, and technically professional but not polished or scripted; speakers use frequent fillers, repetitions, self-corrections, and false starts (\u201cum,\u201d \u201cyou know,\u201d repeated words, restarting clauses). Questions are usually prefaced gently\u2014\u201cI have a quick question,\u201d \u201cmaybe a naive question,\u201d \u201cdo you think\u201d\u2014and often become long, exploratory formulations rather than concise prompts. People build on prior remarks through agreement, praise, and extensions of the speaker\u2019s reasoning; challenges are indirect and framed as curiosity, caveats, or open questions rather than confrontation. Presenters regularly hedge with phrases like \u201cwe think,\u201d \u201clikely,\u201d \u201csort of,\u201d \u201cI would say,\u201d and \u201cas far as we know,\u201d especially when interpreting results or discussing future work.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Patel",
+      "discipline": "neuroscience",
+      "functional_role": "research engineer",
+      "background": "Dr. Patel is a cognitive neuroscientist with 9 years of experience designing EEG studies of sustained attention and self-regulation in children. She has worked with mobile and school-based EEG protocols, preprocessing artifact-prone recordings, and preregistered trials of computerized cognitive training. In the proposed pilot, she will help define a small set of prespecified attention-related EEG markers, design procedures to separate neurofeedback-specific effects from expectancy effects, and plan a six-week follow-up assessment.",
+      "distinct_perspective": "She treats the intervention as a test of a plausible neural mechanism rather than assuming that engaging with a headband demonstrates brain change. She wants the study to ask whether neurofeedback produces reliable changes in predefined EEG attention-related markers, whether any gains exceed credible expectancy or placebo explanations, and whether those changes persist after sessions stop. She is wary of relying on broad teacher impressions alone as evidence of mechanism, while recognizing that usable school outcomes are needed for the program to matter.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Elena Morales",
+      "discipline": "education",
+      "functional_role": "research engineer",
+      "background": "Dr. Morales is an educational researcher with 12 years of experience in elementary-school intervention studies and district research partnerships. Her work uses classroom observation protocols, teacher implementation logs, student-reported experience measures, and mixed-methods analyses of instructional feasibility and equity. She has led studies in grades 3\u20135 involving tiered supports, classroom technology, and accommodations for students with disabilities.",
+      "distinct_perspective": "She frames success in terms of whether the program improves attention as it is enacted in ordinary classrooms and whether any change is meaningful for learning-relevant outcomes. She will focus on classroom attention observations, brief student measures, teacher reports, selected learning indicators, implementation fidelity, lesson-time disruption, and participation equity across hair types, sensory needs, disability accommodations, and technology access. She expects effects to be interpreted in relation to local instructional ecology rather than as decontextualized individual performance alone, while deferring to neuroscience colleagues on the validity of particular EEG markers.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Aaron Kim",
+      "discipline": "biomedical engineering",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Kim is a biomedical engineer and postdoctoral researcher with 5 years of experience evaluating wearable biosensors for pediatric and community settings. He has conducted bench and field testing of dry-electrode EEG systems, including impedance and signal-quality checks, motion-artifact characterization, wireless transfer reliability, battery-life testing, fit assessments, and device-safety documentation. He has collaborated with schools and clinicians to adapt wearable-device procedures for comfort and accessibility.",
+      "distinct_perspective": "He approaches the headband as an enabling measurement-and-delivery tool whose performance must be established before substantive study claims can be trusted. He will benchmark dry-electrode recordings against a reference system during a short calibration session, document fit and comfort across children, verify charging and battery performance, inspect wireless data transfer, and complete safety checks before classroom deployment. He will report calibration failure rates and practical device issues as feasibility information, while leaving questions about attention, learning, and child outcomes to the neuroscience and education leads.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 4,
+  "task_id": "integration_03",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+  "seed_spec": {
+    "task_id": "integration_03",
+    "benchmark_category": "Integration/Perspectives",
+    "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+    "explicit_instruction": "In the meeting, the neuroscientist and education researcher each present a distinct research aim. The neuroscientist says the study should test whether neurofeedback changes prespecified EEG attention-related markers, whether improvements exceed expectancy/placebo effects, and whether changes remain at a six-week follow-up. The education researcher says the study should test whether the program improves classroom attention and learning-relevant outcomes, while examining teacher implementation burden, lesson-time disruption, and equitable participation. The biomedical engineer explains that their role is to validate the dry-electrode headband as a measurement and delivery tool: benchmark signal quality against a reference system during a short calibration session, document fit and comfort across children, verify battery performance, and complete device-safety checks. The engineer does not propose a separate substantive question about attention, learning, or child outcomes. The group decides that neuroscience and education are the two core research areas, while biomedical engineering is an enabling methodological role. The group also agrees that device validation must be completed before the pilot begins and that calibration failure rates will be reported as feasibility data. No final choice is made about the exact EEG marker or the specific learning assessment.",
+    "ground_truth": {
+      "core_research_areas": [
+        "neuroscience",
+        "education"
+      ],
+      "supporting_role": {
+        "discipline": "biomedical engineering",
+        "role": "Provides and validates the dry-electrode EEG headband and its operational feasibility as a measurement/neurofeedback delivery tool rather than pursuing an independent substantive research question.",
+        "supporting_tasks": [
+          "Compare dry-electrode signal quality with a reference system during calibration",
+          "Assess child fit and comfort",
+          "Verify battery performance",
+          "Conduct device-safety checks",
+          "Report calibration failure rates as feasibility data"
+        ],
+        "dependency": "Device validation must be completed before the classroom pilot begins."
+      },
+      "core_questions": {
+        "neuroscience": [
+          "Whether neurofeedback changes prespecified EEG attention-related markers",
+          "Whether effects exceed placebo or expectation effects",
+          "Whether changes persist at a six-week follow-up"
+        ],
+        "education": [
+          "Whether the program improves classroom attention and learning-relevant outcomes",
+          "Whether teachers can implement it without unacceptable burden or lesson disruption",
+          "Whether participation is equitable across students"
+        ]
+      },
+      "unresolved_items": [
+        "Exact EEG attention marker",
+        "Specific learning assessment"
+      ]
+    }
+  },
+  "seed_location": "Partially present, but key conditions are incomplete. Dr. Maya Patel (neuroscience) articulates EEG/mechanism concerns and six-week follow-up in turns 1, 4, 10, 14, 22, and 27; however, she does not explicitly state that neurofeedback effects must exceed expectancy/placebo effects. Dr. Elena Morales (education) raises classroom outcomes, implementation burden/disruption, and equity concerns in turns 5, 7, 11, 13, 16, 26, 28, and 31. Dr. Aaron Kim (biomedical engineering) consistently occupies an enabling device-validation role\u2014reference comparison/calibration and fit/comfort in turns 2, 6, 9, 12, 17, 19, 21, 24, and 30\u2014without proposing an independent substantive child-outcome research area. Battery/workflow testing is discussed in turns 17-21, and calibration/device feasibility remains a pre-design dependency in turns 24-25 and 30. However, the group never explicitly decides that neuroscience and education are the two core research areas, never explicitly says device validation must be completed before the pilot begins, and never explicitly agrees to report calibration failure rates as feasibility data. The exact EEG marker and learning assessment remain unresolved (turns 1, 2, 4, and 31).",
+  "ground_truth": {
+    "core_research_areas": [
+      "neuroscience",
+      "education"
+    ],
+    "supporting_role": {
+      "discipline": "biomedical engineering",
+      "role": "Provides and validates the dry-electrode EEG headband and its operational feasibility as a measurement/neurofeedback delivery tool rather than pursuing an independent substantive research question.",
+      "supporting_tasks": [
+        "Compare dry-electrode signal quality with a reference system during calibration",
+        "Assess child fit and comfort",
+        "Verify battery performance",
+        "Conduct device-safety checks",
+        "Report calibration failure rates as feasibility data"
+      ],
+      "dependency": "Device validation must be completed before the classroom pilot begins."
+    },
+    "core_questions": {
+      "neuroscience": [
+        "Whether neurofeedback changes prespecified EEG attention-related markers",
+        "Whether effects exceed placebo or expectation effects",
+        "Whether changes persist at a six-week follow-up"
+      ],
+      "education": [
+        "Whether the program improves classroom attention and learning-relevant outcomes",
+        "Whether teachers can implement it without unacceptable burden or lesson disruption",
+        "Whether participation is equitable across students"
+      ]
+    },
+    "unresolved_items": [
+      "Exact EEG attention marker",
+      "Specific learning assessment"
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "Hi, everyone. I know we only have ten minutes, so maybe today we can just get clear on what would make this a useful pilot. Not only whether the kids can use the headbands, but what evidence would actually persuade us that it changed attention. I\u2019m especially hoping we can talk through the classroom comparison and whether a short calibration can tell us which EEG signal is stable enough to preregister."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "Sorry, I missed the end of the last meeting. Are we still planning a separate short calibration before the ten-week sessions? For me, that needs to establish dry-electrode quality against a reference recording, and also fit and comfort, before we treat any feature as stable enough to preregister. Maya, what threshold would make a recording unusable for your analysis, and how much missingness can you tolerate?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Mm, and comfort too."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "I\u2019d rather set the cutoff from the calibration data than pretend we know it now, because movement and fit are going to vary a lot from child to child. For a primary EEG analysis, I\u2019d want enough clean data in both the baseline and post session to estimate the same marker reliably. If we\u2019re losing, say, a third of a child\u2019s usable recording, that starts to worry me. But Aaron, I\u2019d need to see what the actual failure pattern looks like first."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Losing a third isn't just an analysis problem for us. It may be patterned by hair, sensory tolerance, or who can sit through setup. Aaron, in the calibration, could we record- could we keep fit attempts, adjustment time, and child comfort separate from just a pass-fail signal-quality flag? That would tell us whether the usable-data rule is quietly excluding a particular group."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "I\u2019d log each contact attempt, adjustment time, comfort in a child-friendly rating, whether they stop or decline, and the accommodation used, not fold that into a single failure code. Then we can separate a, a signal problem from a procedure that just isn\u2019t acceptable for that child."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That separation is really important. Could the comfort and setup log also capture whether the child misses instructional time, and whether an adult has to leave the room or divert the teacher? A technically usable recording could still be pretty infeasible if the routine destabilizes the first fifteen minutes of math."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "Yeah, that could really matter."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "I can add timestamps for setup, removal, and when the child returns to the activity, plus whether it pulled in the teacher or another adult. I\u2019d want to distinguish calibration from the regular routine, though. If the reference setup takes longer, that\u2019s not necessarily what the ten-week sessions will cost."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "That distinction makes sense. For the EEG question, though, I'd want the calibration to use the same short, seated routine we can realistically repeat at baseline and post. Not the whole reference setup- otherwise, we may certify a marker under conditions we never have again. And the timestamps will help us see whether the comparison classrooms need some equivalent check-in, because adult attention alone can move a brief task score."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "For the 10-week comparison, I\u2019d make the check-in genuinely equivalent in time and adult contact, but not another attention intervention. Otherwise, otherwise, if teachers later say transitions or on-task behavior changed, we won\u2019t know whether that\u2019s neurofeedback or just a predictable one-to-one routine."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "On the device side, I\u2019d keep the comparison check-in separate from any calibration, because the reference recording is more equipment and more handling than either classroom should get routinely. Elena, could a short, repeatable check-in happen somewhere in the day without taking the child out of the lesson transition? I need to see whether the reference setup is- whether it\u2019s even workable in the available space and time."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I don\u2019t know the actual bell schedules yet, so I\u2019d need to check school by school. I\u2019d avoid arrival and the first instructional block entirely. For a ten-week pilot, a fixed midmorning pull-out during independent work or intervention time might be repeatable, although we need to see whether that- whether it ends up differentially taking students from services they need."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "I\u2019d be cautious about a fixed pull-out if some children lose intervention time and others don\u2019t, because that itself can affect the outcomes. Could the brief computerized task and the EEG baseline/post be scheduled in the same kind of window for both groups, with the comparison children getting that neutral adult contact? Then, then the second-visit improvement I\u2019ve seen before is less likely to be just practice or being singled out."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "Hm, the window matters."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "The window also determines what we can call an outcome. If sessions pull children from different kinds of instruction across schools, a ten-week effect on selected learning indicators is going to be almost impossible to interpret. I need to check the grade 3\u20135 schedules and see if there\u2019s a common non-core slot that isn\u2019t somebody\u2019s mandated service time, because otherwise..."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "From the hardware side, I\u2019d rather not assume there\u2019s a common slot until you\u2019ve checked that. The calibration needs a space that\u2019s quiet enough, and some privacy for the reference setup. And the multi-headband wireless transfers drew down batteries faster in the field check than in single-unit bench testing, so I need to test the actual room workflow. Not just whether a slot exists."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That field workflow test is important because, for a 10-week pilot, a battery or transfer failure isn't just a device issue. It becomes uneven exposure across children. And could you let us know once you've tested the room whether charging and wireless syncing can happen outside the student session window? I lost my- or whether staff would be troubleshooting in front of the class?"
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "That\u2019s the test I need to run before we promise a classroom workflow. I expect charging can happen overnight and syncing after sessions, but the faster drain under concurrent transfer means I don\u2019t want to assume that. I\u2019ll test several units in the actual room and log whether any staff intervention happens during the student window."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Yeah, and when you test that, could you flag whether failures cluster by classroom or by particular students? If one room has weaker connectivity, or a few children repeatedly lose sessions, the dosage difference could look like an attention effect, or sort of mask one. And teachers will experience that as unreliability, not just missing data."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "I can structure the workflow log at both levels, room-level connectivity and transfer failures, then device and session-level battery, sync, and any incomplete delivery. I\u2019m a little wary of calling a missed session a student-specific issue until we know whether it follows the headband, the room, or the timing, but in the field test we should be able to disentangle some of that..."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "For the analysis, we should keep the delivered-session count separate from usable EEG minutes. A child might complete every session and still have intermittent signal loss, or they might miss sessions because of a room-level failure. Those mean very different things when we're asking whether a null EEG result is evidence against the mechanism. I'd also want that same log carried through the six-week follow-up, not just the ten weeks."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Right, through follow-up too."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "Mm. I can keep that same device and workflow log through the six-week follow-up, including whether a unit was replaced or a session had to be rerun. The main thing I need before I lock the calibration plan is confirmation that the reference system can be set up in whatever school space Elena identifies; if it can\u2019t, I don\u2019t want to imply the benchmark is already solved."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "Mm, that\u2019s still an open dependency."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "And before we treat the reference recording as the gatekeeper, I'd want a fallback for children who reasonably can't tolerate it. They shouldn't have to lose access to the classroom-facing outcomes or get coded as nonparticipants because a calibration procedure is burdensome. We can still document feasibility and their attention measures separately. I'll check what spaces and schedules are actually available. Or rather, I'll check whether any of them create a service conflict too."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "I think that\u2019s the right fallback. We can keep the primary neural-mechanism analysis limited to children with repeatable usable recordings, but that shouldn\u2019t become the definition of whether the program was feasible or helpful in the classroom. And I\u2019d really like to hold the baseline, post, and six-week task procedure constant for everyone, otherwise practice effects are going to be hard to separate from anything else."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019d keep the classroom observation and teacher report available for every enrolled child at those same points, including children without analyzable EEG. Otherwise we could end up answering whether the headband works for the easiest-to-fit- whether it works only for the easiest-to-fit subgroup, which isn\u2019t really the district\u2019s question."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "Yeah, okay."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "Yeah\u2014if you find the windows, I\u2019ll confirm the reference setup and, uh, the room workflow before we lock anything in."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019ll come back with the schedule and space constraints, and I\u2019ll also check which existing learning indicator we can collect across grades without creating another testing block. Then we can see if this is actually\u2014 whether it\u2019s implementable, not just technically possible."
+    },
+    {
+      "speaker": "Dr. Maya Patel",
+      "text": "Okay, I think we should leave it there. There are a couple of real dependencies to check before we lock the design. I'll follow up by email. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Aaron Kim",
+      "text": "Thanks, everyone\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      5,
+      10,
+      11,
+      17,
+      19,
+      22,
+      24,
+      26,
+      27,
+      28,
+      31
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The group never explicitly decides that neuroscience and education are the two core research areas and biomedical engineering is an enabling methodological role. The distinction is strongly implied by Aaron's device-focused contributions (turns 2, 17, 19, 21, 24), but the required decision is not stated.",
+      "The neuroscientific core aim is incomplete: turn 1 discusses attention change, a stable EEG signal, and preregistration; turns 10, 22, and 27 address a comparison condition and six-week follow-up. However, nobody explicitly states that neurofeedback effects must exceed expectancy/placebo effects, and no clear commitment is made to prespecified EEG attention-related markers rather than merely selecting a marker after calibration.",
+      "The education aim is supported by implementation, disruption, and equity concerns (turns 5, 7, 11, 16, 18, 26, 28, 31), but classroom attention and learning-relevant outcomes are mostly discussed indirectly. A concise explicit statement of the educational research question would make the seed reliably recoverable.",
+      "The required device-safety checks are absent. Aaron discusses signal quality, fit, comfort, batteries, wireless transfer, and workflow, but no safety check or safety documentation is mentioned.",
+      "Calibration failure rates are not explicitly committed as reported feasibility data. The meeting discusses logs, failures, and feasibility, especially turns 6, 19, 21, and 24, but does not state that calibration failure rates will be reported as feasibility results.",
+      "The prerequisite that device validation be completed before the pilot begins is only partially conveyed. Aaron says he will test before promising or locking the workflow/plan (turns 19, 24, 30), but the group does not clearly agree that validation must be completed before classroom pilot deployment.",
+      "The transcript does not follow the requested one_voice_leads style. Speaking is nearly evenly distributed (Maya 10 turns, Aaron 11, Elena 12), and all three make repeated substantive contributions rather than having one person lead while others mostly provide short questions or acknowledgments.",
+      "Several turns are polished, highly complete argumentative units that immediately convert concerns into detailed procedural solutions, especially turns 5-7, 17-22, and 26-28. Despite real disfluencies, this makes the exchange feel more constructed than an unedited live meeting.",
+      "No concrete opening catch-up is requested by the person who missed the previous meeting. Aaron says he missed the end of the last meeting in turn 2, but immediately asks a substantive design question rather than asking for the requested quick catch-up."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.73,
+    "written_turns": [
+      1,
+      2,
+      7,
+      9,
+      10,
+      22,
+      27
+    ],
+    "exploration_share": 0.1,
+    "turn_moves": {
+      "proposal": 8,
+      "question": 1,
+      "backchannel": 3,
+      "answer": 2,
+      "request": 5,
+      "agreement": 4,
+      "commitment": 8,
+      "concern": 2
+    },
+    "volunteer_turns": [
+      9,
+      13,
+      16,
+      17,
+      19,
+      21,
+      24,
+      26,
+      30,
+      31,
+      32
+    ],
+    "unsure_turns": [
+      4,
+      12,
+      13,
+      16,
+      18,
+      19,
+      21,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.14,
+      "approved": false,
+      "issues": [
+        "The central classification decision is never made explicitly: no turn states that neuroscience and education are the two core research areas and biomedical engineering is an enabling methodological role. The distinction is inferable from Aaron's device-focused contributions, but it is not cleanly established.",
+        "The neuroscience core questions are substantially incomplete. Maya discusses a prespecified/possibly stable attention marker and repeat recordings (turns 5, 18, 25, 27), but nobody raises whether neurofeedback effects exceed expectancy/placebo effects or persist at a six-week follow-up.",
+        "The education core research aim is only partially represented. Elena clearly addresses implementation burden, transition/lesson disruption, accommodations, and equitable participation (turns 2, 6, 9, 14, 19, 21, 28), but does not state a question about improving classroom attention or learning-relevant outcomes, and no specific learning assessment is left unresolved.",
+        "Required supporting tasks are incomplete: Aaron covers reference calibration, fit/comfort, batteries, charging, and wireless workflow (turns 1, 4, 7, 20, 22), but no device-safety check is discussed.",
+        "The required dependency is not explicit. Aaron repeatedly says calibration and school walk-throughs must occur before procedures are locked (turns 20, 24, 26), but the meeting does not clearly decide that device validation must be completed before the classroom pilot begins.",
+        "Calibration failure rates are not explicitly committed as reported feasibility data. Aaron proposes stratifying calibration and completion rates by reason code (turn 20), which is related but does not fully establish the required reporting decision.",
+        "The exact EEG marker remains unresolved (turns 5 and 18), but the specific learning assessment is never discussed, so it is not demonstrably an unresolved item.",
+        "Naturalness is limited by highly polished, consecutive issue-resolution turns. Most speakers convert each concern directly into a concrete procedure or logging field, especially turns 9-21, and the closing in turns 28-29 reads like an orderly meeting wrap-up. The transcript also does not follow the requested one_voice_leads pattern: all three speakers contribute at nearly equal frequency and most turns are similarly substantial."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.73,
+      "exploration_share": 0.1,
+      "approved": false,
+      "issues": [
+        "The group never explicitly decides that neuroscience and education are the two core research areas and biomedical engineering is an enabling methodological role. The distinction is strongly implied by Aaron's device-focused contributions (turns 2, 17, 19, 21, 24), but the required decision is not stated.",
+        "The neuroscientific core aim is incomplete: turn 1 discusses attention change, a stable EEG signal, and preregistration; turns 10, 22, and 27 address a comparison condition and six-week follow-up. However, nobody explicitly states that neurofeedback effects must exceed expectancy/placebo effects, and no clear commitment is made to prespecified EEG attention-related markers rather than merely selecting a marker after calibration.",
+        "The education aim is supported by implementation, disruption, and equity concerns (turns 5, 7, 11, 16, 18, 26, 28, 31), but classroom attention and learning-relevant outcomes are mostly discussed indirectly. A concise explicit statement of the educational research question would make the seed reliably recoverable.",
+        "The required device-safety checks are absent. Aaron discusses signal quality, fit, comfort, batteries, wireless transfer, and workflow, but no safety check or safety documentation is mentioned.",
+        "Calibration failure rates are not explicitly committed as reported feasibility data. The meeting discusses logs, failures, and feasibility, especially turns 6, 19, 21, and 24, but does not state that calibration failure rates will be reported as feasibility results.",
+        "The prerequisite that device validation be completed before the pilot begins is only partially conveyed. Aaron says he will test before promising or locking the workflow/plan (turns 19, 24, 30), but the group does not clearly agree that validation must be completed before classroom pilot deployment.",
+        "The transcript does not follow the requested one_voice_leads style. Speaking is nearly evenly distributed (Maya 10 turns, Aaron 11, Elena 12), and all three make repeated substantive contributions rather than having one person lead while others mostly provide short questions or acknowledgments.",
+        "Several turns are polished, highly complete argumentative units that immediately convert concerns into detailed procedural solutions, especially turns 5-7, 17-22, and 26-28. Despite real disfluencies, this makes the exchange feel more constructed than an unedited live meeting.",
+        "No concrete opening catch-up is requested by the person who missed the previous meeting. Aaron says he missed the end of the last meeting in turn 2, but immediately asks a substantive design question rather than asking for the requested quick catch-up."
+      ]
+    }
+  ]
+}

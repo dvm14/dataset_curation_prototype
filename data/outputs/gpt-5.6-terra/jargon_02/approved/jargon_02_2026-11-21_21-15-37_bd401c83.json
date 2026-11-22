@@ -1,0 +1,343 @@
+{
+  "transcript_id": "bd401c83",
+  "generated_at": "2026-11-21T21:15:37.887569",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium conversational turns before and after longer, formal presentation segments. Openings are casual and chatty, with frequent greetings, side comments, laughter-like affirmations, and occasional technical hiccups; overlap and interruption are common but generally cooperative rather than disruptive. Speakers use many fillers and self-repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, restarts, and unfinished phrasing\u2014especially in questions from nonnative or spontaneous speakers. The overall register is collegial academic: presentations are structured and polished but still conversational, while discussion is warm, informal, and complimentary. Participants build on talks by first praising the work, then framing questions as \u201cquick,\u201d \u201cnaive,\u201d or tentative; challenges are indirect and curiosity-based, often phrased as possibilities or limitations rather than disagreement. Questions tend to be long, multi-part, and exploratory, with follow-up clarification when the respondent does not immediately address the intended point.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Leilani Faumuina",
+      "discipline": "ecology",
+      "functional_role": "principal investigator",
+      "background": "A reef-fish population ecologist with 14 years of field experience in Pacific community fisheries. She has led underwater visual census programs, spawning-aggregation monitoring, catch-per-unit-effort analyses, length-based stock assessments, and habitat-condition surveys across several island reef systems. Her recent work focuses on linking seasonal closures to juvenile survival and recruitment into fishable populations.",
+      "distinct_perspective": "Frames the recovery plan around population dynamics and biological reference points: spawning output, larval survival, juvenile density, size structure, fishing mortality, and recruitment into the surveyed stock. She wants monitoring designed to detect whether seasonal protections produce measurable rebuilding within three years, while remaining attentive to locally feasible sampling and enforcement.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Mateo R. Santos",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "A fisheries and rural-livelihoods research engineer with 8 years of experience building practical decision models for small-scale fisheries. He works with household catch diaries, market-price records, simple quota simulations, fuel-cost estimates, and surveys of seasonal work opportunities. Most of his projects translate economic scenarios into tools that local councils can discuss without needing technical training.",
+      "distinct_perspective": "Frames catch limits as a household-budget and incentive problem rather than only a harvest target. He wants to compare how different limits, closure dates, price changes, and alternative-income support packages affect food security, debt, market sales, and the likelihood that fishers will follow the rules. He is cautious about assuming standard quota models transfer neatly to customary, multi-household fishing systems.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Mereana Katoa",
+      "discipline": "anthropology",
+      "functional_role": "PhD student",
+      "background": "A doctoral researcher with 5 years of ethnographic and participatory research experience in coastal Pacific communities. Her work uses long-term observation, household interviews, kinship mapping, oral histories, fishing-trip accompaniment, and community-led workshops to study customary marine tenure, sharing networks, and intergenerational learning in fishing households. She has previously supported local councils in documenting how rules are interpreted across families and villages.",
+      "distinct_perspective": "Frames the fishery as a social institution embedded in tenure rights, kinship obligations, identity, and uneven authority. She wants the proposal to establish who is recognized locally as a fisher, how young people are recruited into household and crew roles, who bears the cost of closures, and whether council decisions will be seen as legitimate. She is skeptical of plans that treat households as independent units or assume formal compliance measures capture customary obligations.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 4,
+  "task_id": "jargon_02",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_02",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+    "explicit_instruction": "Run a planning meeting with an ecologist, an economist, and an anthropologist. The ecologist should describe the need to estimate recruitment from juvenile fish entering the surveyed population after the spawning-season protections. The anthropologist should separately say that the study must examine recruitment of fishers into fishing households and crews, including how young relatives are brought into customary fishing roles. Both speakers should use the word \"recruitment\" naturally and proceed as though they mean the same thing; nobody notices, asks for clarification, or resolves the mismatch. The economist may discuss catch-limit affordability and seasonal income but must not define or clarify recruitment. End with ordinary next steps for data collection, while the terminology issue remains unresolved.",
+    "ground_truth": {
+      "term": "recruitment",
+      "meanings": [
+        {
+          "discipline": "ecology",
+          "meaning": "The addition of young fish to the population or fishable stock, often estimated through juvenile abundance or survival into a surveyed age or size class."
+        },
+        {
+          "discipline": "anthropology",
+          "meaning": "The social process by which people, especially younger kin or household members, are drawn into fishing roles, crews, and customary fishing participation."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 11 and 30: Dr. Leilani Faumuina uses \"recruitment\" in the ecological sense of juvenile fish entering the surveyed stock. Turn 12: Mereana Katoa uses \"recruitment\" to mean young people entering fishing roles and crews. The meeting proceeds without anyone identifying or clarifying the differing meanings; turns 28-33 provide ordinary provisional data-collection next steps.",
+  "ground_truth": {
+    "term": "recruitment",
+    "meanings": [
+      {
+        "discipline": "ecology",
+        "meaning": "The addition of young fish to the population or fishable stock, often estimated through juvenile abundance or survival into a surveyed age or size class."
+      },
+      {
+        "discipline": "anthropology",
+        "meaning": "The social process by which people, especially younger kin or household members, are drawn into fishing roles, crews, and customary fishing participation."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Mereana Katoa",
+      "text": "Morning, everyone. Sorry I missed the end of the last meeting. Did we settle anything on when we're taking options to the council? Today I\u2019m hoping we can get clear on what we need to know before we ask \u201chousehold limits\u201d to do too much, because I\u2019m not convinced household membership and fishing responsibility line up neatly across Namoa."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Mm, yes, that's important."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "I've been going through the preliminary diaries and price sheets, and before we build any household-limit scenarios, I need to know whether fish kept for meals is recorded as reliably as fish sold. And how catch or cash moves beyond the boat crew, because otherwise the budget effects could be pretty\u2014 I mean, that could make the budget effects pretty misleading."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "On the biological side, I\u2019ve pulled the recent transect and aggregation records into a preliminary design, but we still need a current length-frequency baseline, CPUE by ground, juvenile density, and habitat covariates if we want to attribute any rebuilding to the closure. South Pass had more juvenile parrotfish than last wet season, although the large size classes are still very thin. Could be a cohort, or could just be habitat placement. Mereana, do landing families tend to stay on the same reef grounds, or does access move among kin groups?"
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "It varies, and I don't think we can assume the landing family maps onto the ground. Access is often through a senior kin line or village affiliation, but crews can include learners and relatives from elsewhere. I've already got two young men who fish twice a week, but their households don't count them as fishers. Before I can answer the ground question clearly, I need to check how each village is naming access and responsibility this time around."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "That matters for the model. If access and the crew cross household lines, I probably need the diary to capture the ground, the crew, and where the catch ends up, not just the named landing household. Otherwise a limit could look affordable on paper while it cuts food or cash for people we haven't counted, and..."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "I\u2019d also add a separate record for fish people receive through sharing, not just where the landed catch goes. A widow\u2019s food security, for example, might depend on a kin network rather than on any crew\u2019s income line. Mateo, can the diary distinguish that from cash earnings, or is that too much to ask of it?"
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "No, that's doable, and I think it's necessary. I'd keep three simple fields. Fish kept by the landing household, fish given or received through sharing, and cash from sales. Then we can value the food side without pretending shared fish is earnings. We should test it with a few households first, though. If the recall burden- if people can't keep up with it, the diary quality will just fall apart."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "That sounds workable, especially if \u201cgiven or received\u201d can name the relationship as well as the amount\u2014kin, neighbour, church group, whatever people themselves use. I\u2019d be cautious about piloting only with named fishing households, though; we need a few recipient households too, otherwise the sharing field will still make the network disappear."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "Right, include those households too."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "That pilot could also give us a much cleaner denominator for CPUE if we record the trip, crew, and ground, instead of attaching effort to a household. Biologically, I'd want that same ground-level linkage, because recruitment into the surveyed stock may differ sharply by access and habitat. Otherwise, the South Pass juvenile signal isn't interpretable."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "And the crew field needs to catch recruitment, not just a head count. Those young people who are learning may not claim fisher status, but a seasonal closure changes whether they can join trips, handle gear, and build the relationships that eventually give them access. I\u2019d want the pilot to ask who is teaching who- whom, and whether they expect to fish independently later."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "I can add that. I\u2019d keep it as a short checkbox, sorry, check box, plus an open note, rather than having people classify themselves too much. From the budget side, a learner who isn\u2019t earning much yet may still be relying on the trip for fish at home, so I\u2019d want to see whether closures affect that pathway too."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "For the biological record, I\u2019d add whether the learner is actually handling the gear or just observing, because otherwise effort standardization gets messy. And if closure exposure is different for apprentices, that could also change who is fishing when the protected aggregation sites reopen. I\u2019m not sure, though, how burdensome that would be in the pilot."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "I\u2019d separate that in the diary. Note whether the learner is handling gear, observing, and maybe give a rough trip role. For the budget model, I don\u2019t need a perfect effort measure, but I do need to know whether that person gets a share of the catch or cash, because that\u2019s where a closure could hit even before they\u2019re recognized as a fisher."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "We should leave room for somebody doing the same work without getting a formal share yet. Sometimes what they get back is instruction, future access, or meeting an obligation within the kin group. I\u2019m a little wary of having the diary decide who counts as a fisher before we\u2019ve asked the council and villages how they understand those roles."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Right. For the monitoring sheet, I think we can avoid a fisher-status label altogether: record trip role and gear handling as observed, then pair that with effort\u2014set duration, gear type, ground, crew\u2014so the CPUE denominator stays defensible. Mereana, would asking about anticipated future access be acceptable in the pilot, or does that get sensitive around the senior kin lines?"
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "I think it\u2019s acceptable if we do it indirectly, and not on the trip sheet itself. Something like asking who they expect will authorize their fishing in the future, and whether that\u2019s open to discuss. With some senior lines, a direct question about anticipated access can sound like we\u2019re asking them to declare, declare a claim. I\u2019d check the wording with village contacts and the council first, because the sensitivity may be quite uneven."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "Hm, wording really matters there."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "It affects the biological forms too. If village contacts can help us test the wording, I'd like to ask separately about usual grounds and seasonal shifts in access, not as a claim question, because we need to know whether repeat transects are actually sampling the same fishing exposure. Also, before we lock the dates, I still need confirmation that all six aggregation sites are safely reachable at peak spawning."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "I can check that with the village contacts when I test the access wording. And on reachability, it may be worth asking the crews, not just treating it as a weather question. Some sites are physically reachable but not equally available to every village or boat, and that could matter for both your transects and who experiences a closure."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Exactly. I need two reachability fields, really. One for safe access for the survey boat, and one for which fleets can actually fish each site in that season. Otherwise, an apparent reduction in site-specific fishing mortality could just be, um, unequal access, and we would misread the aggregation counts. If you can fold that into the contacts check, I can hold off on fixing the peak-spawning survey schedule."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "I can do that. I\u2019d frame it as who can ordinarily use the site in that season, and through whom, rather than \u201cwhich fleets.\u201d I\u2019ll ask village contacts about survey-boat safety and local fishing access separately because a crew may be able to reach a ground physically and still not be recognized as having permission to work it."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Good, that distinction is exactly what we need. Once you have that back, I can stratify the aggregation counts and CPUE by actual seasonal access instead of treating all six sites as equivalent. Until then, I'd keep the peak survey window provisional, because missing a site during spawning would badly weaken the spawning-output baseline."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "Mm, keep it provisional."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "Yeah\u2014without that access split, the closure-income scenarios would be pretty shaky too."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Exactly. I\u2019ll keep the biological design at a baseline stage, with length frequencies, juvenile-density and habitat covariates, plus repeat UVC and aggregation counts. But I won\u2019t assign final site weights or a peak-spawning calendar until we have that access and safety information. The three-year signal really depends on being able to revisit comparable exposure strata, not just the same GPS points, so if we can\u2019t..."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "Okay. I\u2019ll keep the economic scenarios provisional too, then\u2014especially the closure dates and which households are exposed. In the pilot, alongside the trip and sharing fields, I think we need monthly landing prices and fuel and ice costs; those two unusually high-price weeks may be scarcity, different buyers, or just thin diary coverage, and I can\u2019t really use them yet."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "Mm. And when we test those price and cost fields, let\u2019s include households that mainly receive fish instead of selling it. A high market price may mean very little to them, while a closure changes what comes through sharing. I\u2019ll take the access and wording questions to the contacts, then then we can see what the pilot categories are actually missing."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Yes\u2014without comparable access strata, the recruitment and spawning-output baselines won\u2019t hold."
+    },
+    {
+      "speaker": "Mereana Katoa",
+      "text": "Yes\u2014otherwise we risk sampling the formal geography, not the customary access relations."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Okay, I think we should let everyone go a few minutes early. Mereana, once you\u2019ve had those contact conversations, we can pick this back up\u2014thanks, both."
+    },
+    {
+      "speaker": "Mateo R. Santos",
+      "text": "Thanks, see you both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      11,
+      12,
+      30
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by the highly polished, agenda-driven construction of many turns. For example, turns 4, 8, 11, 17, 22, 24, 27, and 28 each present a complete concern, methodological rationale, and tidy next step rather than the partial, exploratory speech expected in a live meeting.",
+      "The meeting does not strongly follow the requested round-robin-updates feel. After the opening, it becomes an extended collaborative design discussion with nearly every turn advancing the protocol, rather than several relatively uninterrupted updates followed by brief clarification.",
+      "The final sequence is somewhat repetitive: turns 24, 27, and 30 repeat the need for comparable access strata, while turns 25, 26, 29, and 31 mostly affirm prior points. This is plausible in moderation but also makes the ending feel deliberately reinforced.",
+      "The terminology mismatch is well embedded but slightly more conspicuous than necessary because Mereana explicitly says the crew field needs to catch \u201crecruitment\u201d immediately after Leilani's CPUE/recruitment discussion in turn 11. The speakers do not clarify it, as required, but a less adjacent reuse could make the unnoticed mismatch more natural."
+    ],
+    "seed_uses": [
+      {
+        "turn": 11,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Recruitment into surveyed fish stock and juvenile signal."
+      },
+      {
+        "turn": 12,
+        "sense": "anthropology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Young people entering fishing roles, trips, and relationships."
+      },
+      {
+        "turn": 13,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 30,
+        "sense": "ecology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Recruitment baseline paired with spawning output and access strata."
+      },
+      {
+        "turn": 31,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 0.84,
+    "written_turns": [
+      4,
+      11,
+      17,
+      24
+    ],
+    "exploration_share": 0.19,
+    "turn_moves": {
+      "question": 2,
+      "agreement": 6,
+      "concern": 2,
+      "observation": 2,
+      "proposal": 12,
+      "request": 2,
+      "commitment": 6,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      13,
+      21,
+      23,
+      27,
+      28,
+      29
+    ],
+    "unsure_turns": [
+      5,
+      14,
+      18,
+      20,
+      28
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.84,
+      "exploration_share": 0.19,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by the highly polished, agenda-driven construction of many turns. For example, turns 4, 8, 11, 17, 22, 24, 27, and 28 each present a complete concern, methodological rationale, and tidy next step rather than the partial, exploratory speech expected in a live meeting.",
+        "The meeting does not strongly follow the requested round-robin-updates feel. After the opening, it becomes an extended collaborative design discussion with nearly every turn advancing the protocol, rather than several relatively uninterrupted updates followed by brief clarification.",
+        "The final sequence is somewhat repetitive: turns 24, 27, and 30 repeat the need for comparable access strata, while turns 25, 26, 29, and 31 mostly affirm prior points. This is plausible in moderation but also makes the ending feel deliberately reinforced.",
+        "The terminology mismatch is well embedded but slightly more conspicuous than necessary because Mereana explicitly says the crew field needs to catch \u201crecruitment\u201d immediately after Leilani's CPUE/recruitment discussion in turn 11. The speakers do not clarify it, as required, but a less adjacent reuse could make the unnoticed mismatch more natural."
+      ]
+    }
+  ]
+}

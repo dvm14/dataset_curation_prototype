@@ -1,0 +1,330 @@
+{
+  "transcript_id": "55b8063e",
+  "generated_at": "2026-11-21T21:27:39.459360",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly medium-to-long turns during presentations and very short turns in the opening chat, transitions, and acknowledgments. Overlap and interruptions are fairly common but usually friendly\u2014brief interjections, greetings, \u201cyeah\u201d responses, or attempts to jump in with a question\u2014rather than adversarial. Speakers use frequent fillers and self-repairs (\u201cum,\u201d \u201cuh,\u201d \u201cyou know,\u201d repeated starts, partial restatements), especially when asking questions or explaining uncertainty. Formality is mixed: introductions and talks are conventionally professional, while discussion is highly informal and personable, with joking, praise, and side comments. Questions tend to begin with compliments or framing disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then become exploratory and multi-part; answers are expansive, tentative, and openly acknowledge limits. Participants build on prior remarks by referring back to a previous question or result, and disagreement is indirect, framed as alternative interpretations, caveats, or \u201cI don\u2019t know\u201d rather than blunt correction.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Leilani Faumuina",
+      "discipline": "ecology",
+      "functional_role": "PhD student",
+      "background": "A fourth-year marine ecology PhD candidate with seven years of field and data-analysis experience in tropical reef fisheries. She has coordinated underwater visual censuses, mapped reproductive sites with fishers, and integrated landing records with reef-condition surveys to support stock assessments for grouper fisheries.",
+      "distinct_perspective": "Frames the recovery plan around the relationship between population status, reproductive timing, fishing mortality, and coral habitat. She emphasizes that a stock assessment estimates population status from catch and survey data, while reef-condition surveys track coral habitat relevant to fish recovery. She will press for monitoring that can detect whether the annual catch limit and seasonal closure are producing biological recovery, while translating ecological terms clearly for the joint recommendation.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Mateo R. Villanueva",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "A fisheries economist with 14 years of experience evaluating small-scale coastal livelihoods, market chains, and fisheries-management incentives across island communities. His work combines household income surveys, landing-value records, price-series analysis, and scenario modelling of catch rules and temporary closures.",
+      "distinct_perspective": "Assesses whether a two-year recovery plan can protect stocks without shifting disproportionate costs onto fishing families. He defines income diversification as adding non-fishing income sources and treats price variation as changes in the price fishers receive over time. He will examine livelihood support for active fishing households during the closure and identify compliance incentives as benefits or reduced costs that encourage adherence to agreed fishery rules.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Professor Anais T. Ratu",
+      "discipline": "anthropology",
+      "functional_role": "principal investigator",
+      "background": "A social anthropologist and principal investigator with 19 years of ethnographic research experience in customary marine tenure, household economies, and community-based resource governance. She has conducted long-term participant observation, oral-history work, kinship mapping, and facilitated consultations with tenure-holding groups in reef-fishing communities.",
+      "distinct_perspective": "Treats catch rules as social arrangements that must fit locally recognized rights, responsibilities, and decision-making authority. She explains customary tenure as locally recognized rights and responsibilities for access to named reef areas, including the authority of the relevant tenure-holding group to set local access conditions. She will ensure that the plan accounts for how kinship and sharing norms affect the distribution of catch and assistance within households and extended families, and that tenure-holding groups review the draft before the council meeting.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "jargon_03",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_03",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+    "explicit_instruction": "Hold a planning meeting with an ecologist, an economist, and an anthropologist. Early in the meeting, establish and record the following shared definitions, then use them consistently without introducing conflicting meanings or undefined technical shorthand: (1) \u201cannual catch limit\u201d means the total kilograms of blue-lined grouper that may be landed by all authorized community fishers during one calendar year; it is a fishery-wide ceiling, not an individual entitlement. (2) \u201cspawning aggregation\u201d means a predictable time and place where adult blue-lined grouper gather to reproduce; it is not a general label for any dense school of fish. (3) \u201ccustomary tenure\u201d means locally recognized rights and responsibilities for access to named reef areas, including the authority of the relevant tenure-holding group to set local access conditions. (4) \u201cactive fishing household\u201d means a household with at least one member who landed fish for sale or household consumption in at least six of the previous twelve months. (5) \u201ccompliance incentive\u201d means a benefit or reduced cost designed to encourage adherence to the agreed fishery rules; it is not a penalty. Discuss a coherent two-year plan: a temporary closure at the documented spawning aggregation during its November\u2013January season, an annual catch limit informed by stock assessment, monitoring of reef condition and bycatch, and livelihood support for active fishing households during the closure. The ecologist should explain that stock assessment estimates population status from catch and survey data, and that reef-condition surveys track coral habitat relevant to fish recovery. The economist should describe income diversification as adding non-fishing income sources and note that price variation means changes in the price fishers receive over time. The anthropologist should explain that kinship and sharing norms affect how catch and assistance are distributed within households and extended families. Participants may agree that the draft will use the shared definitions and will be reviewed with tenure-holding groups before the April 18 council meeting. Do not create a terminology dispute, ambiguity, inconsistent definition, or unexplained jargon. Do not ask participants to diagnose terminology problems; they should simply conduct the meeting normally.",
+    "ground_truth": {
+      "terminology_problems": [],
+      "reference_assessment": "No terminology problem should be flagged. All required technical terms are explicitly defined early and used consistently. The meeting contains no conflicting meanings, unexplained abbreviations, or discipline-specific terms used in a misleading way.",
+      "defined_terms": {
+        "annual catch limit": "The total kilograms of blue-lined grouper that may be landed by all authorized community fishers during one calendar year; a fishery-wide ceiling rather than an individual entitlement.",
+        "spawning aggregation": "A predictable time and place where adult blue-lined grouper gather to reproduce.",
+        "customary tenure": "Locally recognized rights and responsibilities for access to named reef areas, including tenure-holding-group authority to set local access conditions.",
+        "active fishing household": "A household with at least one member who landed fish for sale or household consumption in at least six of the previous twelve months.",
+        "compliance incentive": "A benefit or reduced cost designed to encourage adherence to agreed fishery rules."
+      }
+    }
+  },
+  "seed_location": "Control condition not satisfied: although several terms are defined consistently (spawning aggregation in turns 2/5, active fishing household in turn 3, annual catch limit in turn 12, customary tenure in turn 14, stock assessment/reef-condition surveys/bycatch in turn 15, and income diversification/price variation in turn 20), the required term \"compliance incentive\" is never defined or discussed. The requested coherent two-year plan, explicit livelihood support definition, and stated review before the April 18 council meeting are also incomplete or absent. There is no evidence of a terminology conflict, but the transcript does not fully meet the seed's all-required-terms-defined condition.",
+  "ground_truth": {
+    "terminology_problems": [],
+    "reference_assessment": "No terminology problem should be flagged. All required technical terms are explicitly defined early and used consistently. The meeting contains no conflicting meanings, unexplained abbreviations, or discipline-specific terms used in a misleading way.",
+    "defined_terms": {
+      "annual catch limit": "The total kilograms of blue-lined grouper that may be landed by all authorized community fishers during one calendar year; a fishery-wide ceiling rather than an individual entitlement.",
+      "spawning aggregation": "A predictable time and place where adult blue-lined grouper gather to reproduce.",
+      "customary tenure": "Locally recognized rights and responsibilities for access to named reef areas, including tenure-holding-group authority to set local access conditions.",
+      "active fishing household": "A household with at least one member who landed fish for sale or household consumption in at least six of the previous twelve months.",
+      "compliance incentive": "A benefit or reduced cost designed to encourage adherence to agreed fishery rules."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Good morning, everyone. I hope the rain has eased where you are. It made getting across campus pretty slow this morning. Before we get into the wording, I want us to be really careful that the ecological and livelihood language doesn't quietly make the reef into some generic community resource. We need a shared definition of customary tenure right at the outset, and then I want to understand what the evidence actually lets us say about the November\u2013January site and how support moves through kin networks."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "The rain has reached the north side too, and our transect team postponed this morning. On the ecological wording, we should separate the documented spawning aggregation, which is the predictable place and period where adults gather to reproduce, from any ordinary dense school. The north-reef surveys show more juveniles, but large adults remain scarce near that aggregation, and I cannot yet call that recovery rather than movement or visibility."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "It's grey here too, so at least the transect delay feels broadly shared. Leilani, how sensitive is the recovery outlook to keeping that November to January window specifically, if weather or market conditions already cut effort in some of those weeks? For the livelihood wording, I think we should define an active fishing household early. I mean, someone in the household landed fish, for sale or food, in at least six of the last twelve months, otherwise support gets very vague."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Mateo, I wouldn't have the active-fishing-household definition do too much work for us. It's useful for estimating exposure, certainly, but the interviews need to show us whether fish, cash, and any closure support stay there or move to sisters, parents, or other kin. And Leilani, before we call the site a spawning- before we call it a spawning aggregation in the recommendation, what in the catch and survey record shows reproduction rather than just seasonal concentration?"
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "It\u2019s stronger evidence than seasonal concentration alone. Fishers\u2019 mapped reports and repeated observations put mature adults at that same north-reef site during November\u2013January, and the field notes include ripe-condition observations. Still, I\u2019d call it a documented spawning aggregation, but not imply that we have direct reproductive output estimates. Mateo, on your question, weather-reduced effort isn\u2019t biologically equivalent to a closure if boats can still fish the site when conditions permit. The timing protects the aggregation during its reproductive window."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "That distinction is helpful, Leilani, and \u201cdocumented\u201d also leaves room for the limits you just named. I\u2019d pair it with wording that the November\u2013January access conditions are set through the relevant tenure holders, rather than describing the closure like it\u2019s imposed uniformly by an abstract community. I need to check the named-area histories against the meeting notes first, though, because the two groups described responsibility rather differently."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "For the economic side, I probably need to mirror that specificity. Support during the closure may reach an active fishing household directly, or it may be expected to circulate through kin. Anais, did people say which of those would be considered fair, or does it vary by named area? I don't want to price a household-level support package as though it maps neatly onto the tenure arrangements."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Mm, it may vary by area."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "It does vary, and I would resist treating that variation as a defect in the scheme. In the two consultations, one group located responsibility with household heads, while the other spoke of reef stewards and kin networks. I don't yet know whether that's a procedural difference or a deeper difference in practice. Mateo, did the interviews show whether cash or food assistance was actually retained by recipients, or redistributed- or passed onward?"
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "Not cleanly, I\u2019m afraid. The interview material tells us households drew on kin when catches or prices were poor, but it doesn\u2019t track a specific payment or food transfer far enough to say whether it stayed with the recipient. I think we should say that explicitly, rather than assume direct support is the relevant unit. And I need to check the landing-value records too because I\u2019m not yet sure\u2014because I\u2019m not yet sure blue-lined grouper is separated consistently from the other reef fish at every site."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Then the recommendation shouldn't imply a household payment is the same as household support, because we just don't have that evidence. I'd say assistance has to be designed with the relevant tenure-holding groups, since they can identify the obligations it may circulate through. Though I need to verify those groups against the named reef-area histories before we say who has that authority."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "That seems important, because the closure wording can't presume a single household is the unit that bears the cost or gets the benefit. For the ecological section, I'd keep the annual catch limit separate. It's the total kilograms of blue-lined grouper landed by all authorized fishers in a calendar year, not an individual allocation. I still need the final landing-record calibration against the survey series before I put a number beside it, so..."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "Yeah, that separation matters."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "And that is precisely why the annual limit cannot be described as if it simply distributes a common pool among interchangeable individual fishers. We should define customary tenure near the beginning as locally recognized rights and responsibilities for access to named reef areas, including the authority of the relevant tenure-holding group to set local access conditions. Then the limit can remain an aggregate ecological measure, while access and implementation are not, not flattened."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "For the monitoring language, I wouldn't let the aggregate limit stand alone. A stock assessment estimates population status from the landing and survey data, and the reef-condition surveys tell us about coral habitat that's relevant to recovery. We should also define bycatch plainly as unintentional catch of non-target animals, then track it alongside adult abundance at the aggregation. Otherwise we can't really tell what the two-year plan is doing biologically."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "The monitoring should also record which named reef area and which access conditions applied, not just the kilograms and survey indicators. Otherwise, if the plan changes fishing practice, we won't have a way to see whether that reflects the ecological rule itself or, um, different local arrangements for observing it."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "And from the income side, recording it by area may be the only way to tell whether it's a price drop or the closure that's actually creating the gap in food spending. Households with more than one income source were not reliably steadier when fish prices fell, so I'd avoid calling diversification a buffer unless we look at those conditions alongside the landing data."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Hm, that is not straightforward."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "No, and it's not just an analytical inconvenience. If food spending shifts differently across named areas and kin networks, then \u201cdiversification\u201d may conceal obligations people meet through sharing rather than income smoothing. I think the draft should keep that claim tentative and ask the tenure-holding groups whether those obligations change during the November\u2013January period."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "I think that\u2019s the right question to put back to them. For my wording, I\u2019d keep income diversification very literal, just adding non-fishing income sources, and say we do not yet know whether it reduces short-term food pressure during the closure, especially when received fish prices move around. And price variation should mean the changes in prices fishers actually actually receive over time, not retail prices."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "And when we take that back to the tenure-holding groups, I would ask about price variation and sharing together, rather than as separate matters. When prices fall during the closure, who is expected to absorb the shortfall, and does that differ by named reef area? That may tell us more, more than trying to infer resilience from the number of income sources."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "That question also matters for how we interpret the biological signal. If shortfalls during the closure shift effort onto other reefs or other gear, the landing records could make the north-reef aggregation look protected, while fishing mortality has simply moved. Could the consultation ask where people expect to fish instead during November\u2013January?"
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "That displacement is an economic question too, not just a monitoring nuisance. If people shift to another reef or gear, we need to ask whether the alternative catch actually earns enough after travel and costs, and whether it moves pressure onto households or areas that weren't, weren't carrying the closure cost before. I'd put that in the consultation questions, though I'm not sure the interviews can answer it retrospectively."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "And I\u2019d be careful that \u201cwhere will you fish instead?\u201d doesn\u2019t sound like everyone has an unrestricted choice among reefs. We should ask which alternative areas or gears are considered permissible, by whom, and what obligations follow if effort shifts there. Otherwise the consultation will reproduce the very flattening we\u2019re trying to avoid. The named-area histories need to sit alongside those questions, and\u2014"
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "Yes\u2014permissibility and the costs of shifting effort need to be asked together."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Right, that is the question."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Yes\u2014especially which alternative effort would affect grouper mortality elsewhere."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Precisely. Let's carry that as an open consultation question, along with who has authority to permit any such shift. I'll verify the named-area histories and tenure-holding groups before the draft goes out for their review. We shouldn't put a generic alternative-fishing assumption before the council on the 18th, because..."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "I think we've covered what we needed for today. Thank you both. I'll see you at the next check-in, and good luck getting across campus in the rain\u2014"
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "Thanks, both. Take care getting home."
+    },
+    {
+      "speaker": "Professor Anais T. Ratu",
+      "text": "Thank you. Goodbye, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      2,
+      3,
+      12,
+      14,
+      15,
+      20
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required definition of \u201ccompliance incentive\u201d is entirely absent. No turn defines it as a benefit or reduced cost intended to encourage adherence, nor establishes that it is not a penalty. This makes the no-terminology-problem ground truth unsupported and violates a required seed condition.",
+      "The shared definitions are not established early as a coordinated set. \u201cSpawning aggregation\u201d and \u201cactive fishing household\u201d appear in turns 2\u20133, but \u201ccustomary tenure\u201d is only fully defined in turn 14 and \u201cannual catch limit\u201d in turn 12. The transcript never explicitly records an agreed shared glossary or confirms that the draft will use all shared definitions.",
+      "The full annual-catch-limit definition is slightly incomplete in turn 12: it says \u201call authorized fishers,\u201d whereas the required definition specifies \u201call authorized community fishers.\u201d It is otherwise correctly framed as a calendar-year aggregate rather than an individual allocation.",
+      "Turn 29 closes the meeting as though the discussion has concluded, despite the supplied thinking-aloud meeting style specifying that nothing is decided. Several substantive points remain open, but the ending is a tidy written-meeting closure.",
+      "Although all five realism signals occur, the dialogue is often highly polished and solution-oriented. For example, turns 14\u201315 deliver near-complete formal definitions and monitoring prescriptions, and turns 24\u201328 rapidly convert a concern into a consolidated consultation question and assignment. This reads more like drafted deliberation than an exploratory brainstorm.",
+      "Some technical terms are introduced without definitions despite the control instruction against undefined technical shorthand/technical terminology, including \u201cripe-condition observations\u201d (turn 5), \u201clanding-record calibration\u201d (turn 12), \u201cfishing mortality\u201d (turn 22), and \u201cprice drop\u201d versus \u201cprice variation\u201d distinctions. These are not necessarily misleading, but their presence weakens the claim that every technical term is defined early."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.83,
+    "written_turns": [
+      2,
+      5,
+      14,
+      15
+    ],
+    "exploration_share": 0.24,
+    "turn_moves": {
+      "proposal": 12,
+      "observation": 2,
+      "question": 4,
+      "answer": 3,
+      "agreement": 5,
+      "concern": 1,
+      "request": 1,
+      "commitment": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      28
+    ],
+    "unsure_turns": [
+      2,
+      6,
+      9,
+      10,
+      11,
+      12,
+      20,
+      23
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "The required definition of \u201ccustomary tenure\u201d is never explicitly established. Turn 1 mentions it, and turn 14 discusses tenure holders and access authority, but neither gives the required full definition of locally recognized rights and responsibilities for access to named reef areas, including tenure-holder authority to set conditions.",
+        "The required definition of \u201cannual catch limit\u201d is incomplete. Turn 6 correctly calls it a fishery-wide ceiling and not a household allocation, but the transcript never states that it is the total kilograms of blue-lined grouper that all authorized community fishers may land during one calendar year.",
+        "The required definition of \u201cactive fishing household\u201d is incomplete in turn 3: it gives the six-of-twelve-month landing criterion and sale/home use, but omits the explicit requirement that it is a household with at least one member meeting that criterion.",
+        "\u201cCompliance incentive\u201d is entirely absent, including its required definition as a benefit or reduced cost encouraging adherence rather than a penalty.",
+        "The economist does not explicitly define income diversification as adding non-fishing income sources. Turns 26-27 discuss alternative work and diversification, but leave its meaning unstated.",
+        "The required explicit explanation that price variation means changes in the price fishers receive over time is not supplied. Mateo refers to prices received over time in turn 26, but does not define the term.",
+        "The transcript does not establish that the plan is a coherent two-year plan. Turn 25 refers to a two-year comparison, but no two-year plan is clearly framed.",
+        "The required commitment that the shared definitions will be used in the draft and that it will be reviewed with tenure-holding groups before the April 18 council meeting is missing. Turn 14 says tenure holders would review the draft before it goes to council, but gives no April 18 date and no shared-definition commitment.",
+        "Several technical terms are used without definition despite the control requirement against unexplained technical shorthand or terminology, including \u201cstock assessment,\u201d \u201creef-condition surveys,\u201d \u201ccatch per unit effort,\u201d \u201ctransect size structure,\u201d \u201csurvey-to-landing calibration,\u201d \u201cstructural complexity,\u201d and \u201cincidental catch\u201d (turns 16, 18, 22, 25).",
+        "Naturalness is limited by highly polished, completed argumentative turns throughout, especially turns 7-14 and 16-27. Repairs and fillers occur, but are largely inserted into otherwise carefully structured prose; this triggers the polished-dialogue tell and prevents a score above 3.",
+        "The meeting style says nothing is decided, but turns 9-10 and 19 explicitly settle draft wording and treatment of adult counts, creating tidy decisions rather than a wholly exploratory brainstorm."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "The required definition of \u201ccompliance incentive\u201d is entirely absent. No turn defines it as a benefit or reduced cost intended to encourage adherence, nor establishes that it is not a penalty. This makes the no-terminology-problem ground truth unsupported and violates a required seed condition.",
+        "The shared definitions are not established early as a coordinated set. \u201cSpawning aggregation\u201d and \u201cactive fishing household\u201d appear in turns 2\u20133, but \u201ccustomary tenure\u201d is only fully defined in turn 14 and \u201cannual catch limit\u201d in turn 12. The transcript never explicitly records an agreed shared glossary or confirms that the draft will use all shared definitions.",
+        "The full annual-catch-limit definition is slightly incomplete in turn 12: it says \u201call authorized fishers,\u201d whereas the required definition specifies \u201call authorized community fishers.\u201d It is otherwise correctly framed as a calendar-year aggregate rather than an individual allocation.",
+        "Turn 29 closes the meeting as though the discussion has concluded, despite the supplied thinking-aloud meeting style specifying that nothing is decided. Several substantive points remain open, but the ending is a tidy written-meeting closure.",
+        "Although all five realism signals occur, the dialogue is often highly polished and solution-oriented. For example, turns 14\u201315 deliver near-complete formal definitions and monitoring prescriptions, and turns 24\u201328 rapidly convert a concern into a consolidated consultation question and assignment. This reads more like drafted deliberation than an exploratory brainstorm.",
+        "Some technical terms are introduced without definitions despite the control instruction against undefined technical shorthand/technical terminology, including \u201cripe-condition observations\u201d (turn 5), \u201clanding-record calibration\u201d (turn 12), \u201cfishing mortality\u201d (turn 22), and \u201cprice drop\u201d versus \u201cprice variation\u201d distinctions. These are not necessarily misleading, but their presence weakens the claim that every technical term is defined early."
+      ]
+    }
+  ]
+}

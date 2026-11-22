@@ -1,0 +1,394 @@
+{
+  "transcript_id": "0f89719f",
+  "generated_at": "2026-11-21T16:47:37.854304",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short to medium turns, though speakers give long, structured presentation monologues. Before and between formal segments, participants use casual small talk, frequent greetings, light joking, and loosely connected follow-ups. Overlap and interruptions are fairly common but generally cooperative\u2014brief acknowledgments, \u201cyeah\u201ds, and quick interjections rather than aggressive interruptions. Speech is highly disfluent in places, with fillers (\u201cum,\u201d \u201cuh,\u201d \u201cyeah\u201d), repetitions, self-corrections, false starts, and unfinished phrasing, especially from non-native speakers. Formality shifts noticeably: introductions and presentations are semi-formal and appreciative, while discussion is conversational and permissive. Questions are often prefaced with praise, hedges, or self-deprecation (\u201cquick question,\u201d \u201cnaive question,\u201d \u201cI\u2019m curious\u201d), then develop into multi-part exploratory questions. Challenges are indirect and framed as curiosity or requests for clarification; speakers respond generously, admitting uncertainty and identifying open questions rather than asserting absolute conclusions. Participants build on prior comments by restating part of the previous point, connecting it to their own work, and offering future collaboration.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Leilani Faumuina",
+      "discipline": "ecology",
+      "functional_role": "PhD student",
+      "background": "Fourth-year marine ecology PhD candidate with five years of field experience in Indo-Pacific reef fisheries. Her work combines underwater visual census, spawning-aggregation observations, habitat transects, and fisher-assisted landing sampling to relate reef condition to population recovery. She has previously worked with community monitors but has not led a full catch-limit design process.",
+      "distinct_perspective": "Leilani treats catch limits as a biological safeguard that must be grounded in evidence about abundance, size structure, spawning timing, habitat condition, and fishing pressure across reefs. She will emphasize comparable May-July observations, a common landing-record format, and documentation of bycatch and fishing locations before drawing conclusions about stock status. She is wary of using incomplete market records as a proxy for total removals, and wants local tenure guidance before field teams enter sites or interpret differences among reefs.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Mateo R. Villanueva",
+      "discipline": "economics",
+      "functional_role": "PhD student",
+      "background": "Third-year environmental economics PhD candidate specializing in small-scale fisheries, household livelihoods, and policy incentives. He has designed stated-preference and household-budget modules in coastal communities and uses panel-style surveys, price-series analysis, and scenario modeling to estimate distributional effects of harvest rules. He is comfortable co-designing survey instruments with local partners and revising models when administrative data prove incomplete.",
+      "distinct_perspective": "Mateo sees a catch limit as a distributional and behavioral policy, not only a total-harvest number. He will ask which households rely on fishing income, food fish, reciprocal transfers, tourism, or farming; how catch and prices vary; and how alternative allocations affect both welfare and willingness to comply. He needs a usable dataset that separates sales, household use, and gifts, but accepts that who counts as a fisher and how household information can be collected must be established with community guidance before economic sampling begins.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Mereana Taukolo",
+      "discipline": "anthropology",
+      "functional_role": "domain expert",
+      "background": "Senior anthropologist with 16 years of research and advisory work on customary marine tenure, kinship, gendered labor, and participatory governance in Pacific island coastal communities. Her methods include long-form ethnographic observation, semi-structured interviews, genealogy-informed social mapping, and facilitated community discussions. She has supported fisheries projects but remains attentive to the ways technical surveys can misclassify people, rights, and obligations.",
+      "distinct_perspective": "Mereana approaches the fishery as a set of social relationships and rights rather than a simple list of boat owners or individual harvesters. She will prioritize mapping tenure groups, access authority, shore-based and kin-linked fishing labor, and sharing obligations that shape how fish and income circulate. She will insist that the team first establish locally acceptable definitions of participation and consent-sensitive procedures for household data collection, because those decisions determine valid sampling lists and whether proposed rules will be seen as legitimate.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 4,
+  "task_id": "coordination_01",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+  "seed_spec": {
+    "task_id": "coordination_01",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+    "explicit_instruction": "Hold a planning meeting with one ecologist, one economist, and one anthropologist. The group must agree on coordinated research next steps needed before an August 2027 community review, while keeping the proposed catch-limit design open. The ecologist explains that May-July spawning observations, standardized landing sampling, bycatch records, and reef-condition surveys are needed to estimate stock status and identify biologically sensitive places and periods. The economist explains that household income sources, catch and price variation, likely effects of alternative quota allocations, and incentives for compliance must be assessed; these estimates depend on a usable catch and household-use dataset. The anthropologist explains that the team must map customary tenure, determine who should be counted as participating in fishing and fishing-related labor, document sharing obligations, and establish acceptable ways to collect household data; this work must occur before finalizing sampling lists or household surveys. The participants should assign clear owners, dates, dependencies, and a method for integrating findings. They should decide that anthropology-led tenure and fisher-definition work begins first in May; ecology begins spawning and reef observations in May and uses locally validated site access information; economics co-designs a household and landing-data instrument with anthropology after initial definitions are validated, then begins data collection in June. Ecology and economics share a standardized landing record, but the group must not claim that existing market records are sufficient. The team should schedule a late-July synthesis session and prepare alternative catch-limit scenarios, rather than choosing a final limit during this meeting. No conflict is required: all participants accept the need for the dependencies and joint review.",
+    "ground_truth": {
+      "agreed_scope": "Develop evidence and alternative catch-limit scenarios for an August 2027 community review; do not select a final catch limit yet.",
+      "timeline": [
+        {
+          "date_or_period": "May 2027",
+          "task": "Map customary tenure, identify who is recognized as a fisher or fishing-related worker, document sharing obligations, and agree on acceptable household-data collection procedures.",
+          "lead_discipline": "anthropology",
+          "dependency_or_output": "Produces validated access, participant-definition, and consent guidance for ecological site work and economic sampling."
+        },
+        {
+          "date_or_period": "May-July 2027",
+          "task": "Observe spawning aggregations, conduct reef-condition surveys, and collect standardized landing and bycatch observations at sites whose access arrangements have been validated.",
+          "lead_discipline": "ecology",
+          "dependency_or_output": "Produces stock-status, spawning-period, bycatch, and reef-condition evidence; contributes catch records to the shared dataset."
+        },
+        {
+          "date_or_period": "Late May to June 2027",
+          "task": "Co-design and then implement household and landing-data collection covering income diversification, catch disposition including consumption and sharing, price variation, potential quota-allocation effects, and compliance incentives.",
+          "lead_discipline": "economics",
+          "supporting_discipline": "anthropology",
+          "dependency_or_output": "Instrument design follows initial validation of fisher definitions, tenure, and appropriate household approach; uses the standardized landing record shared with ecology."
+        },
+        {
+          "date_or_period": "Late July 2027",
+          "task": "Integrate ecological indicators, household and market evidence, and tenure/sharing findings into alternative catch-limit and allocation scenarios.",
+          "lead_discipline": "joint ecology, economics, and anthropology team",
+          "dependency_or_output": "Creates scenario materials for the community review."
+        },
+        {
+          "date_or_period": "August 2027",
+          "task": "Review the evidence and alternative scenarios with the community before the 1 September 2027 season.",
+          "lead_discipline": "joint team with community council",
+          "dependency_or_output": "Community input informs any final recommendation."
+        }
+      ],
+      "coordination_decisions": [
+        "Anthropology work precedes final sampling lists and household-survey implementation.",
+        "Ecology and economics use one standardized landing record that captures catches beyond the main market where feasible.",
+        "Existing main-market landing records are treated as incomplete and are not the sole basis for analysis.",
+        "Findings are integrated in a late-July synthesis, with catch-limit options retained as alternatives pending community review."
+      ]
+    }
+  },
+  "seed_location": "The target planning feature is only partially present. Turns 1-9 establish anthropology-led May work on tenure, fisher/fishing-related labor definitions, sharing obligations, permissions, and appropriate household-data collection before sampling frames or household instruments are finalized. Turns 10-14 and 21-24 assign ecology May-July-style landing/spawning/reef work, including species, size, gear, location, effort, bycatch, repeated spawning coverage, reef condition, and locally validated/sensitive site-access handling. Turns 11-12 establish a shared landing-and-household instrument after late-May category validation, beginning in June and continuing through July. Turns 15-19 support alternative, precautionary reef-specific catch-limit/allocation scenarios rather than selecting one final limit, with August community/council consideration implied. However, the meeting does not clearly assign owners and firm dates for all tasks, does not explicitly schedule a late-July synthesis session (it is mentioned as a desired use in turns 11 and 13), does not explicitly state that existing market records are incomplete/insufficient, and does not clearly confirm the August 2027 review or an integrated final coordination plan. Therefore the requested complete planning feature is incomplete.",
+  "ground_truth": {
+    "agreed_scope": "Develop evidence and alternative catch-limit scenarios for an August 2027 community review; do not select a final catch limit yet.",
+    "timeline": [
+      {
+        "date_or_period": "May 2027",
+        "task": "Map customary tenure, identify who is recognized as a fisher or fishing-related worker, document sharing obligations, and agree on acceptable household-data collection procedures.",
+        "lead_discipline": "anthropology",
+        "dependency_or_output": "Produces validated access, participant-definition, and consent guidance for ecological site work and economic sampling."
+      },
+      {
+        "date_or_period": "May-July 2027",
+        "task": "Observe spawning aggregations, conduct reef-condition surveys, and collect standardized landing and bycatch observations at sites whose access arrangements have been validated.",
+        "lead_discipline": "ecology",
+        "dependency_or_output": "Produces stock-status, spawning-period, bycatch, and reef-condition evidence; contributes catch records to the shared dataset."
+      },
+      {
+        "date_or_period": "Late May to June 2027",
+        "task": "Co-design and then implement household and landing-data collection covering income diversification, catch disposition including consumption and sharing, price variation, potential quota-allocation effects, and compliance incentives.",
+        "lead_discipline": "economics",
+        "supporting_discipline": "anthropology",
+        "dependency_or_output": "Instrument design follows initial validation of fisher definitions, tenure, and appropriate household approach; uses the standardized landing record shared with ecology."
+      },
+      {
+        "date_or_period": "Late July 2027",
+        "task": "Integrate ecological indicators, household and market evidence, and tenure/sharing findings into alternative catch-limit and allocation scenarios.",
+        "lead_discipline": "joint ecology, economics, and anthropology team",
+        "dependency_or_output": "Creates scenario materials for the community review."
+      },
+      {
+        "date_or_period": "August 2027",
+        "task": "Review the evidence and alternative scenarios with the community before the 1 September 2027 season.",
+        "lead_discipline": "joint team with community council",
+        "dependency_or_output": "Community input informs any final recommendation."
+      }
+    ],
+    "coordination_decisions": [
+      "Anthropology work precedes final sampling lists and household-survey implementation.",
+      "Ecology and economics use one standardized landing record that captures catches beyond the main market where feasible.",
+      "Existing main-market landing records are treated as incomplete and are not the sole basis for analysis.",
+      "Findings are integrated in a late-July synthesis, with catch-limit options retained as alternatives pending community review."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "Oh, apologies, I\u2019m a couple of minutes late\u2014where have we got to? Um, if we\u2019re just starting, I was hoping today we could work out the sequencing for May, particularly what has to be established with the tenure groups before anyone treats boat owners as a sampling frame."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "I think that has to come first. For the household side especially, I need to know whether the meaningful unit is a residence, a tenure-group household, or a wider kin network that shares fish and income. Otherwise we'll misread both dependence and who bears a lower limit. Mereana, what's the least intrusive way to establish that in May?"
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "Mm, yeah, that matters."
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "I\u2019d begin with separate, small conversations with the relevant tenure groups\u2014not a household enumeration yet. We need to ask who may authorize access, who they regard as contributing to fishing, and whether information about transfers or obligations can be held at group level; then we can build a provisional social map and have them correct it. I should check with the council first on the proper sequence, because convening the wrong people first can itself be read as taking a position."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "And that sequence also tells us whether repeated visits in June are even workable. Tourism shifts and farm work may make a conventional household panel pretty awkward. Once you've checked the council protocol, could we- could we ask in those early conversations what counts as an appropriate way to record fish that moves through kin, instead of treating every transfer as an individual household transaction?"
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "I'd frame that as a question about categories and permissions, not ask people to itemize every gift. Is fish given through particular relationships reportable at household level, aggregated for a tenure group, or just described qualitatively? And that same conversation needs to surface whether the shoreline work distinction I heard is broadly meaningful, household labour versus a tenure-group obligation, because that changes what your instrument is actually measuring, and..."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "That\u2019s not a small wording issue for us. If shoreline labour or kin obligations are part of the claim on a catch, then modeling allocation only around the person landing fish could shift costs onto people we never observe. Could the May conversations also tell us whether people would be comfortable separating fish for meals, gifts, and cash sale at all, or whether those categories blur in particular situations?"
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "We should ask, but not presume the meal, gift, sale distinction is the locally salient one. Fish may be caught for one purpose and then redistributed through an obligation, so the June instrument may need room for a pathway instead of forcing a single endpoint. I\u2019ll need the tenure-group conversations to tell us whether it\u2019s even appropriate to ask that at household level."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "A pathway field makes more sense than a destination variable. For the welfare model, I can still construct disposition measures later, but only if we record the sequence. It would be caught, then maybe first intended use, then what actually moved where. I was going to say that without implying a kin transfer is just an off-market sale. And I\u2019m also wondering whether the tenure groups will see price information as similarly sensitive, since the preliminary notes have this odd pattern where the biggest fish aren\u2019t consistently getting the highest price."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "That price pattern could be mixing sites and fishing methods too, not just buyer preferences. For the May to July sampling, I\u2019d want to record where it was caught, the species, size, and gear, alongside whatever people are comfortable saying about where the fish went. Otherwise, a large fish from a spawning site and one from another reef just end up in the same price column."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "The landing record has to carry those ecological covariates, otherwise any price estimate is doing too much work. If we can settle the permitted categories in late May, I'd like to have the joint landing-and-household instrument running in June. Then we can use the late-July synthesis to compare allocation scenarios instead of just proposing one aggregate cap."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "That timing sounds workable if the access conversations happen before we lock the sites in. I\u2019d want the same landing form running through June and July, though, not just June, because the spawning observations need repeated coverage across all three reefs. Otherwise we\u2019re trying to turn one month into a limit before 1 September. I still need to check staffing and, uh, tide windows for that."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "June and July is better, otherwise we'd miss both the seasonal catch composition and the price movement around the aggregations. Leilani, by late July, which biological indicators do you think will be stable enough to put alongside alternative caps or reef-specific allocations? I don't want the welfare scenarios to imply more precision than the ecology can support."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "Probably not a defensible stock number, honestly. By late July, we can compare relative abundance and size structure across the three reefs, and see whether the spawning groups are being hit. We can put that alongside habitat condition and reported effort, but I\u2019d use it as evidence for cautious scenarios, not a precise cap. That live-coral reef with fewer large fish is exactly why I don\u2019t want to assume habitat alone explains the\u2014"
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "That uncertainty matters for August. We shouldn't present a biologically exact ceiling and then ask the council to ratify it. If the alternatives are explicitly precautionary, could we frame them reef by reef? Could the access authorities then say whether a restriction is socially workable, as well as ecologically indicated?"
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "Reef by reef is the right way to show it, as long as we don't imply a reef is open to a particular rule before the tenure groups say how that would work. We can bring- actually, bring a few precautionary options tied to what we actually observe, especially protection during the spawning period and different levels of removal, not a single number dressed up as certainty."
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "The reef-by-reef approach may not line up neatly with the social unit that can deliberate or enforce. Before August, I need to know whether rights overlap across those reefs, and whether a seasonal closure of a spawning area puts a particular burden on people whose access is otherwise limited. We can present the ecological options spatially, but the council discussion may need to be organized through the relevant tenure- it may need to go through the relevant tenure authorities, rather than simply by reef."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "For the allocation scenarios, I probably shouldn\u2019t map a household to one reef just because that\u2019s where a landing was recorded. We may need to model the burden at the access-group level first, then ask how it distributes through households and shoreline labour. Otherwise a spatial closure looks equitable in the spreadsheet and is not, um, equitable in practice."
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "I\u2019d be careful even with \u201caccess group\u201d as if it\u2019s a settled analytic unit. It may be, but we need people to tell us whether rights, labour, and redistribution line up that way or cross-cut it. I can try to get that initial mapping validated before Mateo fixes those scenarios. Otherwise, we may make a very tidy model out of categories nobody..."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "Mm, let's not freeze it yet."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "Until that mapping is validated, I\u2019d keep the biological comparison separate from any claim about why the reefs differ. On the landing form, we can document location and effort, plus bycatch. But that coral-and-large-fish mismatch could be about access or fishing pressure, rather than reef condition. At this point, we just don\u2019t know."
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "Mm. That's why I'd avoid asking a respondent to explain the reef difference in the instrument itself. It can invite blame, especially where access is contested. We can record the locally accepted place and effort categories, but I need to find out first whether naming a particular reef or spawning area is sensitive. Or whether that information should sit with the tenure authority rather than travel on an individual landing form. I was going to say we can just record it, but that depends on whether it's sensitive first."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "If reef names or exact aggregation locations are sensitive, we can code the locations on the field sheets and keep the key with the authorized group, instead of putting that detail into the shared landing dataset. I just need enough consistent spatial resolution to tell whether the spawning observations and landings are coming from the same general area. Mereana, is that the kind of arrangement the council might accept?"
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "Possibly, yes, but I really can't promise it until I've asked the council how authority over those names and the resulting records is meant to sit. A coded sheet with the key controlled by the appropriate authority sounds like a useful starting proposal. I'd want to ask whether the code can be reported at a broader reef-sector level where an exact site would expose a tenure- where it would expose a tenure claim."
+    },
+    {
+      "speaker": "Mateo R. Villanueva",
+      "text": "I think we should leave it there before people have to run. I\u2019ll follow up by email once we\u2019ve got the council protocol piece a little clearer, and then we can\u2014"
+    },
+    {
+      "speaker": "Dr. Mereana Taukolo",
+      "text": "All right. Goodbye, both."
+    },
+    {
+      "speaker": "Leilani Faumuina",
+      "text": "Thanks\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      4,
+      10,
+      11,
+      12,
+      14,
+      15,
+      17,
+      19,
+      21,
+      22,
+      23,
+      24
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The core dates and owners are only partly explicit. Turn 1 frames May, turns 11-14 discuss June, July, late July, August, and 1 September, but nobody explicitly states the required August 2027 community review or that it is a joint team-and-council review before the 1 September 2027 season.",
+      "The meeting does not make a clear task assignment that anthropology begins the tenure and fisher-definition work in May. Mereana says she will check council protocol (turns 4, 17, 19, 24), but there is no explicit owner/date commitment covering tenure mapping, participation definitions, sharing obligations, and acceptable household-data procedures as a coordinated May deliverable.",
+      "Ecology is not clearly assigned the full May-July work package. Leilani identifies repeated June-July coverage, standardized landing fields, spawning observations, and bycatch (turns 10, 12, 14, 21), but reef-condition surveys are not planned as a concrete task and validated access is treated as an unresolved condition rather than an assigned dependency.",
+      "Economics does not explicitly cover several required elements: household income diversification and compliance incentives are absent, and alternative quota/allocation effects are mentioned as Mateo's modeling concern (turns 13 and 18) without a clear data-collection or analysis assignment. The household-and-landing instrument is discussed but not explicitly co-designed with anthropology after validation or assigned a late-May-to-June implementation start.",
+      "The shared standardized landing record is strongly supported by turns 10-12, but the transcript does not explicitly establish that existing market records are incomplete and cannot be the sole analytic basis. Mateo only refers to preliminary price notes in turn 9.",
+      "No explicit late-July synthesis session is scheduled or owned. Turn 11 says it could be used to compare scenarios, but the group does not make a clear joint integration decision spanning ecological, household/market, and tenure/sharing findings.",
+      "The catch-limit design remains open and alternatives are discussed in turns 14-16, but the meeting ends in turn 25 without confirming the planning decisions, owners, dependencies, or integration method. This weakens recoverability of the complete benchmark ground truth.",
+      "Despite containing several disfluencies, much of the middle discussion is highly polished: turns 4-24 repeatedly deliver complete, discipline-specific arguments and immediately convert concerns into proposed procedures. The required tangent-heavy style is essentially absent; apart from the late apology in turn 1, the discussion stays continuously on agenda."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.65,
+    "written_turns": [
+      4,
+      7,
+      8,
+      10,
+      11,
+      13,
+      15,
+      23
+    ],
+    "exploration_share": 0.28,
+    "turn_moves": {
+      "proposal": 12,
+      "question": 2,
+      "agreement": 2,
+      "request": 2,
+      "concern": 5,
+      "answer": 1,
+      "commitment": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      8,
+      19,
+      25
+    ],
+    "unsure_turns": [
+      2,
+      4,
+      8,
+      12,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.36,
+      "approved": false,
+      "issues": [
+        "The opening does not satisfy the requested style setup: turn 1 begins with Leilani rather than a participant apologizing for being a couple of minutes late and asking where the group has got to. Mateo does this only at turn 2.",
+        "The transcript never explicitly assigns clear owners for the full workplan. Mereana and Leilani describe their own responsibilities, but there is no explicit decision that anthropology leads the May work, ecology leads the May-July biological work, economics leads the late-May/June instrument and collection with anthropology, or that all three jointly own synthesis.",
+        "A late-July synthesis session is missing. Turns 13 and 24 mention an August review/summary, but no meeting or method is scheduled to integrate ecological, economic, and tenure findings in late July.",
+        "The group does not explicitly agree to prepare alternative catch-limit and allocation scenarios. It keeps the catch number open in turns 1 and 28, but that is weaker than the required decision to generate alternatives before the August review.",
+        "The August 2027 community review is not clearly scheduled as a joint review with the community council. Turns 24 and 27 discuss review of an August summary, but the timing, participants, and role in informing a final recommendation remain incomplete.",
+        "Required ecological evidence is incomplete: turns 15-16 establish spawning observations, effort/location, and a shared landing record, but bycatch records and explicit reef-condition surveys are never committed to.",
+        "Required economics content is incomplete. Mateo covers income diversification and catch disposition in turn 5 and reporting incentives in turns 18-21, but price variation and likely effects of alternative quota allocations are not addressed.",
+        "Although the main-market records are rightly treated as incomplete in turns 1-2, the transcript does not expressly commit to standardized landing sampling that reaches beyond the main market; it focuses instead on a June instrument and reporting/custody arrangements.",
+        "The meeting is not tangent-heavy as specified. It remains tightly focused on access, tenure, landing records, and data governance, with no off-topic drift or recovery to the agenda.",
+        "Naturalness is limited by highly polished, consistently substantive turns. Several turns are complete mini-arguments that neatly respond to and advance the prior point, especially turns 5-10 and 20-24. The few disfluencies are largely surface-level additions to otherwise polished prose.",
+        "Leilani's plain-language persona is only partly realized: turns 15, 16, and 26 use specialized framing such as catchability, aggregation timing, size structure, and reef-level patterns without the simpler explanatory style described for her persona."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.65,
+      "exploration_share": 0.28,
+      "approved": false,
+      "issues": [
+        "The core dates and owners are only partly explicit. Turn 1 frames May, turns 11-14 discuss June, July, late July, August, and 1 September, but nobody explicitly states the required August 2027 community review or that it is a joint team-and-council review before the 1 September 2027 season.",
+        "The meeting does not make a clear task assignment that anthropology begins the tenure and fisher-definition work in May. Mereana says she will check council protocol (turns 4, 17, 19, 24), but there is no explicit owner/date commitment covering tenure mapping, participation definitions, sharing obligations, and acceptable household-data procedures as a coordinated May deliverable.",
+        "Ecology is not clearly assigned the full May-July work package. Leilani identifies repeated June-July coverage, standardized landing fields, spawning observations, and bycatch (turns 10, 12, 14, 21), but reef-condition surveys are not planned as a concrete task and validated access is treated as an unresolved condition rather than an assigned dependency.",
+        "Economics does not explicitly cover several required elements: household income diversification and compliance incentives are absent, and alternative quota/allocation effects are mentioned as Mateo's modeling concern (turns 13 and 18) without a clear data-collection or analysis assignment. The household-and-landing instrument is discussed but not explicitly co-designed with anthropology after validation or assigned a late-May-to-June implementation start.",
+        "The shared standardized landing record is strongly supported by turns 10-12, but the transcript does not explicitly establish that existing market records are incomplete and cannot be the sole analytic basis. Mateo only refers to preliminary price notes in turn 9.",
+        "No explicit late-July synthesis session is scheduled or owned. Turn 11 says it could be used to compare scenarios, but the group does not make a clear joint integration decision spanning ecological, household/market, and tenure/sharing findings.",
+        "The catch-limit design remains open and alternatives are discussed in turns 14-16, but the meeting ends in turn 25 without confirming the planning decisions, owners, dependencies, or integration method. This weakens recoverability of the complete benchmark ground truth.",
+        "Despite containing several disfluencies, much of the middle discussion is highly polished: turns 4-24 repeatedly deliver complete, discipline-specific arguments and immediately convert concerns into proposed procedures. The required tangent-heavy style is essentially absent; apart from the late apology in turn 1, the discussion stays continuously on agenda."
+      ]
+    }
+  ]
+}

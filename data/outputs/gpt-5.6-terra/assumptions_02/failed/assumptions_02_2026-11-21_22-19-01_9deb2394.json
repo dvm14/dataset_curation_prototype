@@ -1,0 +1,305 @@
+{
+  "transcript_id": "9deb2394",
+  "generated_at": "2026-11-21T22:19:01.713151",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a warm, informal videoconference style, with mostly short-to-medium turns before and after the formal presentations and much longer, structured monologues during talks. Early conversation is loose and social, marked by greetings, technical checks, small talk, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), and occasional fragmented or overlapping speech. Participants hedge frequently with \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and self-corrections or restarts, especially in questions and answers. Formality rises during introductions and presentations, but speakers still use conversational signposting, rhetorical questions, and asides. Questions are usually polite and prefaced with praise or disclaimers such as \u201cquick question,\u201d \u201cnaive question,\u201d or \u201cgreat talk,\u201d then develop into multi-part exploratory prompts. Challenges are indirect and collaborative rather than adversarial, framed as follow-ups, alternative possibilities, or requests for clarification. Speakers often build on prior remarks by echoing key wording, adding examples, or connecting to their own work; answers are expansive, candid about uncertainty, and sometimes trail into future directions.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Reducing 30-day hospital readmissions for older adults with heart failure after they go home.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Elena Park",
+      "discipline": "clinical medicine",
+      "functional_role": "domain expert",
+      "background": "Cardiologist and clinical investigator with 14 years of post-fellowship experience caring for older adults with heart failure across inpatient and ambulatory settings. She has led pragmatic discharge-transition studies using electronic health record abstraction, medication reconciliation audits, guideline-directed medical therapy measures, and 30-day utilization outcomes. She routinely works with risk adjustment, prespecified endpoint definitions, and comparison-group designs.",
+      "distinct_perspective": "Frames the problem as a vulnerable post-discharge interval in which preventable decompensation may follow medication discrepancies, incomplete initiation or titration of guideline-directed therapy, poor adherence, and failed follow-up. She wants an operationally reproducible intervention and a clearly defined primary endpoint: 30-day all-cause readmission. She will push for a comparison group, prespecified secondary measures such as adherence and follow-up completion, and enough enrolled patients to distinguish an intervention signal from ordinary variation in a medically complex population.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Marcus Reed",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Medical sociologist in the fourth year of a postdoctoral fellowship studying care transitions, aging, and household health management. His fieldwork combines repeated semi-structured interviews, home-based observation, caregiver mapping, and longitudinal case analysis with older adults living with chronic illness. He has worked with community organizations on recruitment of people whose care arrangements, housing conditions, and relationships to institutions are often absent from clinical records.",
+      "distinct_perspective": "Treats discharge as a social reorganization rather than a discrete clinical handoff. He focuses on who actually obtains prescriptions, sorts and administers pills, interprets symptom changes, provides transportation, and decides when returning to the hospital feels necessary or safe. He will question whether medication lists and scheduled appointments capture medication access, unstable caregiving, household authority, or trust shaped by earlier encounters with health systems. He advocates a purposive set of repeated home interviews and observation with patients and caregivers, including people with and without readmissions, to trace how these arrangements unfold during the first month at home.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "assumptions_02",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a meeting between distant disciplines with different standards of evidence, neither explicitly naming that difference; for example trial data versus interviews. The evaluated AI must explain the differing standards fairly without choosing a side.",
+  "seed_spec": {
+    "task_id": "assumptions_02",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a meeting between distant disciplines with different standards of evidence, neither explicitly naming that difference; for example trial data versus interviews. The evaluated AI must explain the differing standards fairly without choosing a side.",
+    "explicit_instruction": "Hold a planning meeting with Dr. Elena Park, a cardiologist and clinical investigator; Dr. Marcus Reed, a sociologist; Priya Nair, a hospital readmissions analyst; and Rosa Alvarez, a community health-worker program manager. Dr. Park says the study should use 30-day all-cause readmission as the primary endpoint and should evaluate whether the intervention improves medication adherence and receipt of guideline-directed therapy. She argues that the intervention needs a comparison group, prespecified outcomes, and enough participants to determine whether any observed reduction is unlikely to be due to chance. Priya supports use of hospital data but notes that readmissions outside the hospital's network may be missed unless patients are contacted or linked to broader claims data. Dr. Reed says that medication lists and follow-up appointments will not show whether a patient can obtain medicines, who manages pills, whether caregiving is reliable, or whether prior treatment has shaped trust in discharge instructions. He proposes repeated home-based interviews and observation with a purposive sample of patients and caregivers, including people who do and do not return to the hospital, to identify how household arrangements and trust shape what happens after discharge. Rosa agrees that community health workers need this information to tailor support and notes that some patients may decline home visits or have no available caregiver. No participant should explicitly characterize either approach as having a different standard, hierarchy, or type of evidence. The meeting should end with a feasible mixed plan: 30-day all-cause readmission remains the primary outcome; medication adherence and follow-up completion are secondary measures; the team will seek a way to capture outside-network readmissions; and a purposive qualitative sample will examine household support, medication access, caregiving, and trust. The exact sampling targets and data-linkage availability remain unresolved for the protocol team to finalize.",
+    "ground_truth": {
+      "core_assumptions_to_identify": [
+        {
+          "discipline": "Clinical medicine",
+          "assumption": "A reduction in 30-day all-cause readmission is a meaningful and sufficiently standardized indicator of post-discharge success.",
+          "supporting_meeting_evidence": "Dr. Park proposes it as the primary endpoint, while Priya notes that incomplete capture of outside-network admissions could affect its measurement."
+        },
+        {
+          "discipline": "Clinical medicine",
+          "assumption": "A comparison group, prespecified outcomes, and adequate sample size are needed to judge whether the intervention itself likely caused an observed change.",
+          "supporting_meeting_evidence": "Dr. Park requests these design features before concluding that the intervention reduces readmissions."
+        },
+        {
+          "discipline": "Clinical medicine",
+          "assumption": "Medication adherence and receipt of guideline-directed therapy are measurable pathways through which the intervention may reduce readmission.",
+          "supporting_meeting_evidence": "Dr. Park proposes them as intervention-relevant measures alongside readmissions."
+        },
+        {
+          "discipline": "Sociology",
+          "assumption": "Household arrangements, caregiving, medication access, and trust are consequential mechanisms that administrative records and medication lists cannot adequately reveal.",
+          "supporting_meeting_evidence": "Dr. Reed proposes home-based interviews and observation because records do not show who manages pills, whether medicines are obtainable, or how prior care affects trust."
+        },
+        {
+          "discipline": "Sociology",
+          "assumption": "A purposive sample that includes both readmitted and non-readmitted patients and caregivers can reveal variation in post-discharge experience relevant to intervention design.",
+          "supporting_meeting_evidence": "Dr. Reed proposes purposive sampling across these experiences rather than relying only on aggregate outcome data."
+        }
+      ],
+      "fair_explanation": "The clinical approach is oriented toward estimating whether the intervention changes a defined outcome across participants and toward limiting alternative explanations through comparison, prespecification, and adequate sample size. The sociological approach is oriented toward understanding how discharge plans operate in varied home settings and how caregiving, access, and trust shape actions that outcome records may not capture. These approaches answer complementary questions: whether the program is associated with fewer readmissions and how or for whom it may work, fail, or be infeasible. Neither approach alone resolves all relevant uncertainties.",
+      "unresolved_items": [
+        "Whether broader claims linkage or patient follow-up can capture readmissions outside the hospital network.",
+        "The final size and recruitment strategy for the purposive interview and observation sample.",
+        "How to include patients who decline home visits or do not have an available caregiver."
+      ]
+    }
+  },
+  "seed_location": "Incomplete/missing conditions. Turns 1-16 include Dr. Park and Dr. Reed discussing 30-day readmission, comparison groups, adherence, household mechanisms, purposive sampling, and outside-network ascertainment. However, Priya Nair and Rosa Alvarez do not appear in the dialogue, so Priya does not provide the required hospital-data/linkage input and Rosa does not discuss CHW tailoring, home-visit refusal, or unavailable caregivers. The meeting also does not end with the required feasible mixed-plan summary or explicitly leave exact qualitative sampling targets and data-linkage availability for the protocol team.",
+  "ground_truth": {
+    "core_assumptions_to_identify": [
+      {
+        "discipline": "Clinical medicine",
+        "assumption": "A reduction in 30-day all-cause readmission is a meaningful and sufficiently standardized indicator of post-discharge success.",
+        "supporting_meeting_evidence": "Dr. Park proposes it as the primary endpoint, while Priya notes that incomplete capture of outside-network admissions could affect its measurement."
+      },
+      {
+        "discipline": "Clinical medicine",
+        "assumption": "A comparison group, prespecified outcomes, and adequate sample size are needed to judge whether the intervention itself likely caused an observed change.",
+        "supporting_meeting_evidence": "Dr. Park requests these design features before concluding that the intervention reduces readmissions."
+      },
+      {
+        "discipline": "Clinical medicine",
+        "assumption": "Medication adherence and receipt of guideline-directed therapy are measurable pathways through which the intervention may reduce readmission.",
+        "supporting_meeting_evidence": "Dr. Park proposes them as intervention-relevant measures alongside readmissions."
+      },
+      {
+        "discipline": "Sociology",
+        "assumption": "Household arrangements, caregiving, medication access, and trust are consequential mechanisms that administrative records and medication lists cannot adequately reveal.",
+        "supporting_meeting_evidence": "Dr. Reed proposes home-based interviews and observation because records do not show who manages pills, whether medicines are obtainable, or how prior care affects trust."
+      },
+      {
+        "discipline": "Sociology",
+        "assumption": "A purposive sample that includes both readmitted and non-readmitted patients and caregivers can reveal variation in post-discharge experience relevant to intervention design.",
+        "supporting_meeting_evidence": "Dr. Reed proposes purposive sampling across these experiences rather than relying only on aggregate outcome data."
+      }
+    ],
+    "fair_explanation": "The clinical approach is oriented toward estimating whether the intervention changes a defined outcome across participants and toward limiting alternative explanations through comparison, prespecification, and adequate sample size. The sociological approach is oriented toward understanding how discharge plans operate in varied home settings and how caregiving, access, and trust shape actions that outcome records may not capture. These approaches answer complementary questions: whether the program is associated with fewer readmissions and how or for whom it may work, fail, or be infeasible. Neither approach alone resolves all relevant uncertainties.",
+    "unresolved_items": [
+      "Whether broader claims linkage or patient follow-up can capture readmissions outside the hospital network.",
+      "The final size and recruitment strategy for the purposive interview and observation sample.",
+      "How to include patients who decline home visits or do not have an available caregiver."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Hi, everyone. I think half the hospital is trying to get this protocol out by Friday, so anyway, thanks for making time. Given how little time we have, I\u2019d like us to get clear today on the primary endpoint and especially what the comparison group actually is. Otherwise, the rest of the outline is going to stay pretty, uh, hand-wavy."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Hi\u2014sorry, I was just coming from another Friday-protocol panic. Apparently it\u2019s contagious. On the endpoint, I\u2019m fine with 30-day readmission as the primary outcome, but I\u2019d want to frame the comparison carefully. Usual discharge practice versus the bundled pathway, not just who did or didn\u2019t answer the follow-up call. The social arrangements that make the bundle usable are going to be pretty uneven."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "We need assignment at the pathway level, ideally with consecutive eligible discharges during an implementation period compared with a defined usual-care group. That could be concurrent units or a preimplementation cohort, depending on what operations will allow. And we should prespecify adjustment for prior utilization, comorbidity burden, and discharge disposition-related factors, because the patients flagged for a CHW are likely to be higher risk at baseline."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "And I\u2019d be cautious about treating the CHW flag as a stable risk variable, rather than as a product of somebody\u2019s judgment at discharge. Elena, would it be useful to capture whether a prescription was technically issued, but then the household, um, altered the regimen before that first follow-up? That\u2019s often where the record\u2019s medication reconciliation and the actual care arrangement diverge."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "I\u2019d make that a secondary process measure, discharge regimen versus what the patient or caregiver reports actually taking at, say, 72 hours and then again around day 30. The question is whether we have staff capacity for a consistent adherence audit rather than a really variable narrative note. And on the CHW flag, agreed, it should be documented as a referral decision and probably adjusted for cautiously, not treated as some objective baseline phenotype."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I worry an adherence audit will flatten the interesting part if it just asks whether they took it. Could it distinguish access failure from a negotiated household change, like someone rationing pills or a daughter stopping a diuretic because of the bathroom situation? We could keep the structured fields pretty tight and use the home interviews to understand the mechanism, but then..."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "I think that\u2019s workable. A small structured audit can code the discrepancy and a broad reason category, access, adverse effects, self-directed change, caregiver-directed change, or unclear, without pretending it captures the whole story. Then the home interviews can tell us what those categories actually, actually mean. We should check with Priya, though, whether 72-hour contact plus the day-30 contact is realistic for that."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "And I\u2019d keep refusal or noncompletion separate from \u201cunclear,\u201d if we can. Someone who declines a home visit, or doesn\u2019t take a 72-hour call, may still be managing care, and that refusal can reflect privacy, prior institutional encounters, or just who has authority in the household. It\u2019s not evidence of no support. Priya\u2019s capacity will determine the sample, but could the community partners recruit a purposive set of those, those cases as well?"
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Purposive sampling across completed contact, refusal, and noncompletion makes sense, as long as we don't let the qualitative cases stand in for outcome ascertainment. The primary outcome is still 30-day all-cause readmission, from discharge day through day 30. I'm more worried our hospital-only EHR will miss outside admissions. Priya, if we can't link claims, what patient-contact approach gives us a credible check on outside-network admissions without making follow-up too burdensome, because..."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Self-report at 30 days could catch outside admissions, but we should keep \u201cunable to reach\u201d distinct from \u201cnone reported,\u201d reported."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "For the primary analysis, \u201cunable to reach\u201d can\u2019t quietly become no event. We need that as its own ascertainment category, and probably a sensitivity analysis using hospital EHR alone versus EHR plus participant or caregiver report. Priya may have a low-burden script in mind, just asking about any overnight hospital stay since discharge, where it was, and the approximate date- dates, rather than trying to reconstruct the admission over the phone."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "And the script should ask who we're speaking with, not just treat a caregiver report like it's interchangeable with the patient's. An outside admission, or even whether somebody calls it an admission, can be something the household has different pieces of. That's analytically useful, though I know we can't make the outcome definition depend on it."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "We can record respondent type, whether it's the patient or caregiver or both, and keep the outcome definition to any unplanned overnight acute-care admission in the 30-day window, with the source documented. I'd rather not overcomplicate adjudication unless the report is ambiguous. Then we can ask for the facility and dates and try to verify it in the EHR if it's one of our affiliates, but\u2014"
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Mm, yes\u2014respondent type may itself matter for what the household recognizes as a readmission."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Exactly\u2014capture the respondent, but don\u2019t let that change the endpoint."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Right\u2014documenting whose account it is keeps that uncertainty visible."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Okay, we're at time. I'm sorry, I know there are still some loose edges here. Let's pick this- let's pick this back up before Friday. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Thanks, Elena\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task-compliance failure: Priya Nair and Rosa Alvarez, both required by the seed, never appear as speakers. Priya is repeatedly invoked in turns 7, 9, and 11, but does not provide the required analyst perspective on hospital data and outside-network capture; Rosa never appears at all.",
+      "The transcript therefore lacks Rosa's required contribution that CHWs need household-level information to tailor support and that some patients may decline home visits or lack an available caregiver. Turn 8 mentions refusal and capacity, but it is Dr. Reed, not Rosa, and it does not establish the program-manager perspective.",
+      "Dr. Park never explicitly addresses receipt of guideline-directed therapy as an intervention-relevant measure. Turns 3 and 5 discuss adjustment, medication reconciliation, and adherence, but the ground-truth item concerning guideline-directed therapy is only weakly recoverable.",
+      "The sociological proposal is only partly realized: turns 6-8 support home interviews and purposive sampling, but repeated home-based interviews and observation, and explicit inclusion of both readmitted and non-readmitted patients, are not clearly specified. Turn 9 substitutes categories of contact completion for readmission status.",
+      "The meeting has noticeable written-dialogue polish despite several disfluencies. Most substantive turns are compact, complete arguments that immediately convert concerns into a design solution, especially turns 3-13. This triggers the naturalness tell that turns read like finished written paragraphs.",
+      "The opening supplies deadline small talk and the ending leaves loose edges, which fit the intended running-out-of-time style, but the conversation does not include the required four-person meeting dynamics and remains an unusually orderly two-speaker alternation."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.93,
+    "written_turns": [
+      3
+    ],
+    "exploration_share": 0.18,
+    "turn_moves": {
+      "proposal": 11,
+      "question": 2,
+      "concern": 1,
+      "agreement": 3,
+      "backchannel": 1
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [
+      7,
+      9
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 25,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.2,
+      "approved": false,
+      "issues": [
+        "The required participants Priya Nair and Rosa Alvarez are absent. They are addressed in turns 4-5 and Priya is mentioned in turn 22, but neither contributes a turn. This removes the required readmissions-analyst and CHW-manager perspectives.",
+        "Because Priya never speaks, the outside-network ascertainment issue is raised by Dr. Park in turn 22 rather than being noted by the hospital readmissions analyst as required by the seed. The concern is recoverable, but the assigned role is missing.",
+        "Because Rosa never speaks, the required CHW perspective\u2014that CHWs need household/caregiving information to tailor support and that patients may decline home visits or lack caregivers\u2014is not explicitly supplied by the CHW manager. Dr. Reed and Dr. Park discuss these issues instead (turns 5-8, 11-17).",
+        "The transcript never states that medication adherence and receipt of guideline-directed therapy are secondary or intervention-relevant measures. Dr. Park mentions medication discrepancies and ability to obtain/take therapy in turn 2, but the ground-truth clinical assumption about guideline-directed therapy is only weakly supported.",
+        "The meeting does not reach the specified feasible mixed-plan conclusion. It ends in turn 24 before affirming medication adherence and follow-up completion as secondary measures, a plan to seek outside-network capture, and a purposive qualitative sample covering household support, medication access, caregiving, and trust. Several components are discussed, but the required plan is not established.",
+        "Turn 15 uses the prohibited stock phrase, \"I'm losing the thread,\" despite the instruction not to use variants of \u201clost my thread/train of thought/point.\u201d",
+        "Naturalness is undermined by highly polished, alternating 60-word turns in which nearly every concern immediately becomes a well-formed methodological refinement. The disfluencies are sparse and mostly inserted into otherwise finished prose; the exchange reads more like a scripted design discussion than an unguarded meeting.",
+        "The running-out-of-time style is only lightly realized. Turns 1 and 20-24 mention Friday or stopping, but participants do not meaningfully skip agenda items, cut discussion short under time pressure, or exhibit the recurring clock-awareness specified for the meeting style."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 18,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.93,
+      "exploration_share": 0.18,
+      "approved": false,
+      "issues": [
+        "Task-compliance failure: Priya Nair and Rosa Alvarez, both required by the seed, never appear as speakers. Priya is repeatedly invoked in turns 7, 9, and 11, but does not provide the required analyst perspective on hospital data and outside-network capture; Rosa never appears at all.",
+        "The transcript therefore lacks Rosa's required contribution that CHWs need household-level information to tailor support and that some patients may decline home visits or lack an available caregiver. Turn 8 mentions refusal and capacity, but it is Dr. Reed, not Rosa, and it does not establish the program-manager perspective.",
+        "Dr. Park never explicitly addresses receipt of guideline-directed therapy as an intervention-relevant measure. Turns 3 and 5 discuss adjustment, medication reconciliation, and adherence, but the ground-truth item concerning guideline-directed therapy is only weakly recoverable.",
+        "The sociological proposal is only partly realized: turns 6-8 support home interviews and purposive sampling, but repeated home-based interviews and observation, and explicit inclusion of both readmitted and non-readmitted patients, are not clearly specified. Turn 9 substitutes categories of contact completion for readmission status.",
+        "The meeting has noticeable written-dialogue polish despite several disfluencies. Most substantive turns are compact, complete arguments that immediately convert concerns into a design solution, especially turns 3-13. This triggers the naturalness tell that turns read like finished written paragraphs.",
+        "The opening supplies deadline small talk and the ending leaves loose edges, which fit the intended running-out-of-time style, but the conversation does not include the required four-person meeting dynamics and remains an unusually orderly two-speaker alternation."
+      ]
+    }
+  ]
+}

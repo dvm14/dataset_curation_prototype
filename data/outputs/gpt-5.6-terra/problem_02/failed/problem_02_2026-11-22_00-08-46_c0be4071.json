@@ -1,0 +1,347 @@
+{
+  "series_id": "c0be4071",
+  "generated_at": "2026-11-22T00:08:46.748064",
+  "task_id": "problem_02",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.",
+  "input_type": "plan_and_meeting",
+  "research_id": "chw_blood_pressure",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 3,
+  "research_problem": "How should the evaluation of a community health worker home-visit program for adults with uncontrolled hypertension be redesigned after new program data show that most enrolled participants do not receive the intended medication-management pathway?",
+  "project_context": "The Harbor City Hypertension Partnership includes clinicians from Eastside Family Health, sociologists from Harbor State University, and public-health staff from the city health department. The team is preparing a 12-month evaluation of the Home Blood Pressure Connect program, in which community health workers (CHWs) make home visits and link adults with uncontrolled hypertension to primary care.",
+  "plan_document": "The Harbor City Hypertension Partnership will evaluate Home Blood Pressure Connect, a city-funded program in which CHWs identify adults with uncontrolled hypertension, conduct home visits, support medication adherence, and connect patients to clinic-based medication review. The planned evaluation covers four Eastside Family Health clinics and their surrounding neighborhoods over 12 months. Clinics will begin the program in a stepped-wedge sequence, allowing comparison of blood-pressure outcomes before and after implementation.\n\nAims: (1) estimate whether the program improves blood-pressure control among enrolled adults; (2) understand how home visits influence trust, treatment decisions, and engagement with care; and (3) assess whether the program reaches residents with the greatest hypertension burden and can be sustained by the local workforce.\n\nResearch questions:\n1. Does CHW home visiting, followed by clinic medication review, increase the proportion of enrolled adults with controlled blood pressure at six months compared with usual care?\n2. How do patients, family members, CHWs, and clinicians describe trust, medication decisions, and the role of the home visit in hypertension care?\n3. Does program enrollment and six-month blood-pressure control differ by race and ethnicity, insurance status, neighborhood, language, and housing stability, and what staffing and funding would be required for scale-up?\n\nTasks:\n1. Dr. Maya Chen will finalize the stepped-wedge protocol, eligibility criteria, and six-month blood-pressure outcome definition.\n2. Dr. Chen and clinic pharmacist Luis Ortega will extract baseline and follow-up blood-pressure readings, medication lists, and medication-review visits from clinic records.\n3. Sociologist Dr. Amina Rahman will conduct observations of CHW home visits and interviews with 30 enrolled patients, 12 CHWs, selected family members, and clinicians.\n4. Public-health analyst Jordan Lee will map screening, enrollment, and six-month follow-up by demographic and neighborhood groups and calculate program reach.\n5. Jordan Lee and CHW supervisor Rosa Martinez will estimate CHW caseload, travel time, vacancies, and projected operating costs for scale-up.\n6. The full team will integrate outcome, interview, observational, equity, and workforce findings into recommendations for the city health department.",
+  "ground_truth": {
+    "old_questions": [
+      "Does CHW home visiting followed by clinic medication review increase six-month blood-pressure control among enrolled adults compared with usual care?",
+      "How do participants and staff describe trust, medication decisions, and the role of home visits in hypertension care?",
+      "Do enrollment and six-month blood-pressure control differ across demographic and social groups, and what workforce and funding are needed for scale-up?"
+    ],
+    "new_questions": [
+      "How effectively do CHWs connect screened or referred residents with uncontrolled hypertension to a usual source of care and sustained hypertension care, and what implementation conditions enable or impede that connection?",
+      "How do residents, families, CHWs, and clinics negotiate trust, eligibility, care linkage, and practical barriers during home-visit-based outreach?",
+      "Is access to screening, referral, enrollment, successful linkage, and continuing care equitable across demographic, neighborhood, language, insurance, and housing groups, and what workforce and funding are needed for scale-up?"
+    ],
+    "what_changed_and_why": "The original evaluation assumed a consistently delivered pathway of CHW home visits followed by clinic medication review, suitable for a stepped-wedge test of blood-pressure control. First-quarter data showed that only 38% of 286 enrollees completed medication review within 90 days because appointments were scarce and many residents lacked a usual primary-care clinician. CHWs were mainly performing navigation and barrier-resolution work, so the study shifts to implementation and care linkage; blood pressure becomes a secondary descriptive outcome.",
+    "tasks_to_update": [
+      "Stop finalizing the stepped-wedge protocol and retire six-month blood-pressure control as the primary outcome.",
+      "Revise clinical record extraction from medication-review-centered outcomes to linkage to a usual source of care, completed clinic visits, and continuity of care over six months; retain available blood-pressure readings descriptively.",
+      "Revise qualitative observations and interviews to examine eligibility, trust, linkage, and barriers rather than centering medication decisions.",
+      "Expand equity mapping to screening, referral, enrollment, unsuccessful linkage, and continuing care among screened or referred residents.",
+      "Expand workforce and cost analysis to account for navigation and barrier-resolution work, including unsuccessful linkage."
+    ],
+    "tasks_unchanged": [
+      "Continue observing CHW home visits and interviewing patients, family members, CHWs, and clinicians, although the analytic focus changes.",
+      "Continue equity analysis and workforce/funding assessment.",
+      "Continue integrating clinical, qualitative, equity, and operational findings into recommendations for the city health department."
+    ]
+  },
+  "meetings": [
+    {
+      "label": "Direction-Setting Meeting \u2014 March 18, 2027",
+      "disciplines": [
+        "clinical medicine",
+        "sociology",
+        "public health"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "clinical medicine",
+          "functional_role": "research engineer",
+          "background": "Family physician and clinical epidemiologist with 12 years of experience in safety-net primary care and pragmatic cardiovascular-care trials. She has led electronic health record\u2013based outcome extraction, developed hypertension registries, and designed cluster and stepped-wedge evaluations across community clinics. She works closely with pharmacists and CHW teams but is explicit that clinical records cannot fully capture home-based work or structural barriers to care.",
+          "distinct_perspective": "Maya initially evaluates the program through pathway fidelity and clinically meaningful endpoints: whether participants receive timely medication review, have treatment intensified when appropriate, and achieve durable blood-pressure control. Given the early data, she sees the core scientific problem as a mismatch between the intervention specified in the protocol and the intervention actually delivered. She will press to replace an underpowered or invalid causal efficacy claim with a clearly specified implementation evaluation, while retaining blood-pressure data as a secondary, incomplete clinical signal. She relies on public-health and sociological colleagues to define feasible linkage measures and interpret why care connection succeeds or fails.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "dominant",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Amina Rahman",
+          "discipline": "sociology",
+          "functional_role": "research engineer",
+          "background": "Medical sociologist at Harbor State University with 10 years of ethnographic and interview research on chronic illness, racialized access to care, and frontline health work. Her methods include sustained participant observation, narrative interviewing, institutional ethnography, and analysis of how eligibility rules and organizational routines shape care trajectories. She has previously studied CHW programs serving tenants in unstable housing and immigrant families navigating fragmented primary care.",
+          "distinct_perspective": "Amina treats the apparent implementation shortfall not simply as a fidelity defect but as evidence that the program's real intervention is being co-produced across households, CHWs, clinics, insurance systems, and housing conditions. She is wary of reducing trust or barriers to survey variables, or treating medication review as the sole mechanism of change. She will argue that observations and interviews should examine how residents and families negotiate referral, eligibility, legitimacy, continuity, and competing survival needs; how CHWs exercise discretion within scope limits; and how clinic scarcity redistributes work onto CHWs. She supports outcome measurement but challenges interpretations that detach linkage outcomes from institutional exclusion.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Jordan Lee",
+          "discipline": "public health",
+          "functional_role": "domain expert",
+          "background": "City health department public-health analyst with 8 years of experience in hypertension surveillance, community program monitoring, equity dashboards, and geospatial analysis. Jordan has managed linked referral and service-use datasets for neighborhood health initiatives and works with CHW supervisors to translate operational data into funding, staffing, and access recommendations. Their current analysis tracks the full early program flow from screening and referral through enrollment, clinic connection, and follow-up.",
+          "distinct_perspective": "Jordan frames the redesign around population reach, equity, and operational feasibility. The relevant denominator is not only enrolled participants but everyone screened or referred, because attrition and unequal access can occur before enrollment and during linkage. Jordan will focus on documenting where residents fall out of the pathway, whether those patterns differ by neighborhood, race and ethnicity, language, insurance, housing stability, and usual-care status, and what capacity constraints produce those patterns. They favor practical, auditable definitions for sustained connection to care, but defer to clinical colleagues on clinical validity and to sociological colleagues on what administrative measures miss about residents' lived barriers.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "The Harbor City Hypertension Partnership includes clinicians from Eastside Family Health, sociologists from Harbor State University, and public-health staff from the city health department. The team is preparing a 12-month evaluation of the Home Blood Pressure Connect program, in which community health workers (CHWs) make home visits and link adults with uncontrolled hypertension to primary care.\n\nDirection-Setting Meeting \u2014 March 18, 2027. The Harbor City Hypertension Partnership is reviewing early implementation information from Home Blood Pressure Connect before launching the planned stepped-wedge evaluation. The team needs to decide how the evaluation should proceed in light of the program's first-quarter operations.\n\nThe team's current research plan, which everyone has read:\nThe Harbor City Hypertension Partnership will evaluate Home Blood Pressure Connect, a city-funded program in which CHWs identify adults with uncontrolled hypertension, conduct home visits, support medication adherence, and connect patients to clinic-based medication review. The planned evaluation covers four Eastside Family Health clinics and their surrounding neighborhoods over 12 months. Clinics will begin the program in a stepped-wedge sequence, allowing comparison of blood-pressure outcomes before and after implementation.\n\nAims: (1) estimate whether the program improves blood-pressure control among enrolled adults; (2) understand how home visits influence trust, treatment decisions, and engagement with care; and (3) assess whether the program reaches residents with the greatest hypertension burden and can be sustained by the local workforce.\n\nResearch questions:\n1. Does CHW home visiting, followed by clinic medication review, increase the proportion of enrolled adults with controlled blood pressure at six months compared with usual care?\n2. How do patients, family members, CHWs, and clinicians describe trust, medication decisions, and the role of the home visit in hypertension care?\n3. Does program enrollment and six-month blood-pressure control differ by race and ethnicity, insurance status, neighborhood, language, and housing stability, and what staffing and funding would be required for scale-up?\n\nTasks:\n1. Dr. Maya Chen will finalize the stepped-wedge protocol, eligibility criteria, and six-month blood-pressure outcome definition.\n2. Dr. Chen and clinic pharmacist Luis Ortega will extract baseline and follow-up blood-pressure readings, medication lists, and medication-review visits from clinic records.\n3. Sociologist Dr. Amina Rahman will conduct observations of CHW home visits and interviews with 30 enrolled patients, 12 CHWs, selected family members, and clinicians.\n4. Public-health analyst Jordan Lee will map screening, enrollment, and six-month follow-up by demographic and neighborhood groups and calculate program reach.\n5. Jordan Lee and CHW supervisor Rosa Martinez will estimate CHW caseload, travel time, vacancies, and projected operating costs for scale-up.\n6. The full team will integrate outcome, interview, observational, equity, and workforce findings into recommendations for the city health department.",
+      "seed_spec": {
+        "task_id": "problem_02",
+        "benchmark_category": "Problem Formulation",
+        "benchmark_task": "Part 1 of 1 of a multi-part sample for this benchmark task: Provide an existing research plan and a new meeting that changes the research direction. The evaluated AI must identify old and new questions, explain changes, update relevant tasks and preserve the earlier direction.\nJudge this transcript only on its own part: Jordan Lee opens with first-quarter implementation data showing that CHWs enrolled 286 residents, but only 38% completed a clinic medication-review visit within 90 days; the principal reason is that clinic appointments are scarce and many residents lack a usual primary-care clinician. Rosa Martinez explains that CHWs have instead spent most home-visit time helping residents obtain blood-pressure cuffs, navigate insurance, schedule care, and address transport and housing-related barriers; medication titration is not within CHW scope. Dr. Maya Chen states that a stepped-wedge test of the intended home-visit-plus-medication-review pathway is no longer credible because that pathway is not being delivered consistently, and she proposes replacing the causal blood-pressure-control question with an implementation-focused question about whether CHWs can connect residents to sustained hypertension care and what conditions enable that connection. Dr. Amina Rahman argues that the qualitative work should retain attention to trust and observed home-visit practice but reframe it toward how residents, families, CHWs, and clinics negotiate eligibility, care linkage, and barriers rather than treating medication decisions as the central mechanism. The group agrees to preserve the equity and sustainability question, while broadening the population denominator beyond enrolled adults to include residents screened or referred by CHWs. They agree to stop finalizing the stepped-wedge protocol and not use six-month blood-pressure control as the primary endpoint. They revise clinical data work to measure linkage to a usual source of care, completed clinic visits, and continuity over six months, while retaining blood-pressure readings as a secondary descriptive measure where available. Jordan and Rosa will revise mapping and workforce analyses to include screening, referral, enrollment, unsuccessful linkage, and service barriers. The team leaves unresolved the final operational definition of sustained connection to care and whether six months is the appropriate follow-up interval; Maya and Jordan will bring options to the next meeting.",
+        "explicit_instruction": "Jordan Lee opens with first-quarter implementation data showing that CHWs enrolled 286 residents, but only 38% completed a clinic medication-review visit within 90 days; the principal reason is that clinic appointments are scarce and many residents lack a usual primary-care clinician. Rosa Martinez explains that CHWs have instead spent most home-visit time helping residents obtain blood-pressure cuffs, navigate insurance, schedule care, and address transport and housing-related barriers; medication titration is not within CHW scope. Dr. Maya Chen states that a stepped-wedge test of the intended home-visit-plus-medication-review pathway is no longer credible because that pathway is not being delivered consistently, and she proposes replacing the causal blood-pressure-control question with an implementation-focused question about whether CHWs can connect residents to sustained hypertension care and what conditions enable that connection. Dr. Amina Rahman argues that the qualitative work should retain attention to trust and observed home-visit practice but reframe it toward how residents, families, CHWs, and clinics negotiate eligibility, care linkage, and barriers rather than treating medication decisions as the central mechanism. The group agrees to preserve the equity and sustainability question, while broadening the population denominator beyond enrolled adults to include residents screened or referred by CHWs. They agree to stop finalizing the stepped-wedge protocol and not use six-month blood-pressure control as the primary endpoint. They revise clinical data work to measure linkage to a usual source of care, completed clinic visits, and continuity over six months, while retaining blood-pressure readings as a secondary descriptive measure where available. Jordan and Rosa will revise mapping and workforce analyses to include screening, referral, enrollment, unsuccessful linkage, and service barriers. The team leaves unresolved the final operational definition of sustained connection to care and whether six months is the appropriate follow-up interval; Maya and Jordan will bring options to the next meeting.",
+        "ground_truth": {
+          "new_information": "Only 38% of 286 enrolled residents completed a clinic medication-review visit within 90 days; limited appointment availability and lack of a usual primary-care clinician prevent consistent delivery of the planned pathway.",
+          "direction_decision": "The team replaces the stepped-wedge causal evaluation of home visits plus medication review and six-month blood-pressure control as the primary endpoint with an implementation-focused evaluation of CHW linkage to sustained hypertension care.",
+          "reframed_questions": "The experience question shifts from medication decisions as the central mechanism to trust, eligibility, care linkage, and barriers; the equity and sustainability question remains but uses the broader population of screened or referred residents rather than only enrollees.",
+          "task_changes_and_continuities": "The stepped-wedge protocol task is stopped; clinical extraction is revised to linkage, completed visits, and continuity, with blood pressure retained only as secondary descriptive data; qualitative observation and interviews continue with a revised focus; equity mapping and workforce/cost analysis continue but add screening, referral, unsuccessful linkage, and barriers."
+        }
+      },
+      "ground_truth": {
+        "new_information": "Only 38% of 286 enrolled residents completed a clinic medication-review visit within 90 days; limited appointment availability and lack of a usual primary-care clinician prevent consistent delivery of the planned pathway.",
+        "direction_decision": "The team replaces the stepped-wedge causal evaluation of home visits plus medication review and six-month blood-pressure control as the primary endpoint with an implementation-focused evaluation of CHW linkage to sustained hypertension care.",
+        "reframed_questions": "The experience question shifts from medication decisions as the central mechanism to trust, eligibility, care linkage, and barriers; the equity and sustainability question remains but uses the broader population of screened or referred residents rather than only enrollees.",
+        "task_changes_and_continuities": "The stepped-wedge protocol task is stopped; clinical extraction is revised to linkage, completed visits, and continuity, with blood pressure retained only as secondary descriptive data; qualitative observation and interviews continue with a revised focus; equity mapping and workforce/cost analysis continue but add screening, referral, unsuccessful linkage, and barriers."
+      },
+      "transcript": [
+        {
+          "speaker": "Jordan Lee",
+          "text": "Hi, everyone. Before we jump in, did anybody hear from Luis? I thought he said he might be coming straight from clinic. Anyway, I want us to use today to decide whether the first-quarter flow changes what we mean by evaluating the program, because the linkage numbers are pretty different from what the original stepped-wedge plan assumed."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Sorry, I missed the tail end of the last meeting. Could somebody give me the quick version of what the linkage numbers are showing? Because if the home visit is happening but the medication-review piece isn't, then the stepped-wedge- we need to stop treating it as an evaluation of that full clinical pathway."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "We enrolled 286 residents in the first quarter, but only 38 percent had a documented clinic medication-review visit within 90 days. The notes mostly point to scarce appointments and people not having an established primary-care clinician, so I think we need to follow the whole flow. Not just enrollment as the starting denominator, but screening and referral through enrollment, attempted linkage, completed care, and follow-up."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And 38 percent within 90 days, that's not enough delivery of the medication-management pathway to make six-month BP control our primary causal endpoint. Jordan, can your data actually separate a referral or a scheduled appointment from a completed visit, and then from any continuing care afterward? I'm asking because the medication lists in our registry are already a mess. Unchanged lists could mean no visit, outside care, or just reconciliation, uh, lag."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "Mm, that ambiguity matters."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "We can separate some of it. The CHW log has referral made, appointment offered or scheduled, and whether they report a barrier, and the EHR can confirm completed Eastside visits. Continuing care is the weak piece, especially if someone goes outside the system, so I wouldn't infer it from the medication list alone. We may need a deliberately modest, auditable linkage measure, then flag the unknowns rather than calling them failures."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That sounds like the right level of caution. I\u2019d want the primary evaluation to focus on implementation. Did people get a referral, did they actually complete an appointment, and what barriers interrupted that sequence? Then we call sustained connection only what we can observe. Amina, in the home visits, what do residents and CHWs themselves count as being, um, connected to care when they\u2019re using urgent care or moving between clinics?"
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "Residents may use \u201cconnected\u201d more provisionally than we do. Having a cuff, knowing which clinic will take them, or having a CHW who can help when coverage changes can make care feel newly, newly possible, even if they put off an appointment. But I wouldn\u2019t collapse that into sustained care. I\u2019d ask how that possibility gets interrupted by housing moves, eligibility rules, family obligations, or just no usable appointment, and observe what CHWs are actually authorized to do in those moments."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That distinction is really helpful. We can measure whether the program created a viable opening to care without pretending it delivered longitudinal clinical management. But for the evaluation, we need separate labels for that opening, for an observed completed visit, and for whatever sustained connection we can actually verify. Otherwise we\u2019ll end up calling a CHW\u2019s very real work a medication-management intervention when the clinic handoff- when it never actually occurred."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "I\u2019d keep the equity frame attached to each of those labels, not just to who enrolls. We already have one high-burden catchment with lots of referrals but relatively few completed enrollments, and I don\u2019t know yet whether that\u2019s outreach placement, bad contact information, language access, or clinic availability. If we start at enrollment, that whole pattern just disappears."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "A low completed-enrollment count in that catchment could look like resident disengagement when the referral itself was not actionable. Jordan, do the barrier fields preserve the sequence well enough to distinguish an unreachable person from someone who was repeatedly offered appointments they cannot use? That isn't just descriptive. It tells us where the institution is offloading coordination work onto CHWs and households."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That\u2019s an important distinction."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "Somewhat, but not cleanly enough yet. The logs can usually distinguish no contact, a stated barrier, and an appointment offered or scheduled. But the problem is, the free-text barrier notes are uneven. So \u201ccouldn\u2019t reach\u201d can mean disconnected phones, work schedules, or a resident deciding the offered slot was impossible. I think we need to code that sequence prospectively, not- rather than overread the first-quarter fields."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The prospective coding isn't just a side detail. It becomes part of the intervention evaluation. We need a small, usable set of reasons at each handoff, with an \"unknown\" option. Otherwise we'll turn bad documentation into a story about patient behavior. And that means I shouldn't keep finalizing the stepped-wedge BP protocol as though every enrolled person was offered the same clinical pathway."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "Hm, especially that unknown category."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "I'd want the unknowns reported too, not folded into a residual category, because they may cluster in exactly the places we're trying to understand. Could we keep the prospective codes short enough that CHWs can actually use them during a busy visit? Contact issue, appointment unavailable or unusable, coverage or eligibility, language or access need, resident declined, and unknown. And then, sorry, I lost my thread. Leave room for the narrative too."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "I'd keep \u201cresident declined\u201d analytically separate from a refusal of care, because it may mean they declined that appointment, under those conditions, at that point in a housing or work crisis. And the narrative field matters there, not as an optional anecdote, but so we can see whether the code is hiding a practically unusable offer or a boundary CHWs could not cross."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "From the clinical side, I\u2019d be very uncomfortable treating \u201cdeclined\u201d as a patient-level endpoint without that context. Declining an appointment that means missing a shift or arranging childcare is not declining hypertension care. Could the CHW log allow a primary code and then a brief structured qualifier, um, like time, transport, or a competing crisis, before the narrative? I don\u2019t know if that\u2019s too burdensome in their actual workflow."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "I think that\u2019s probably workable if we pilot it with Rosa and a couple of CHWs first, rather than just assume the categories fit their visit flow. We should also make clear that a qualifier can be, can be multiple things. An unusable appointment might be both an evening-shift conflict and no childcare, so we don\u2019t force one tidy explanation where there isn\u2019t one."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "We should be careful not to make the qualifier just a menu of individual obstacles detached from the encounter. A CHW may document work conflict and childcare, yes, but the observation can show whether the clinic's available slots, eligibility requirements, or scope boundaries made those constraints consequential. Otherwise, it looks like the household alone generated the barrier."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "For the dashboard, I can keep the structured qualifier as a description of what was recorded, not an attribution of cause, and pair it with the appointment facts, what was offered, when, and whether it was usable or completed. Then Amina's observations can tell us where those fields are, where they're flattening an institutional constraint into an individual-level code."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "Yes\u2014without imputing causality."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Exactly. Clinically, our BP data should sit alongside this as a secondary, descriptive signal. Who has an observed reading at follow-up, maybe whether it remains elevated. It shouldn't be evidence that the program caused control when the actual care pathway varies this much. I think we should formally recast the primary question around implementation of linkage, and pause the stepped-wedge efficacy protocol instead of quietly carrying it forward."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "I agree. I\u2019d pause it rather than try to salvage a causal BP comparison from a pathway that\u2019s only reaching a minority as intended. For the city, the more useful twelve-month question may be, at each step, who gets a viable route to care, who doesn\u2019t, and what clinic and CHW capacity would have to change to make that route real. And we\u2019d report follow-up readings as observed, with the missingness visible."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019m comfortable making that formal. I\u2019ll stop the stepped-wedge efficacy protocol work and revise the clinical-records piece around observed referral and visit completion. We\u2019ll report follow-up BP readings descriptively, with their missingness explicit. We should probably get Rosa\u2019s sign-off on the pilot codes before we lock any of this, but I think that gives the city an honest answer about what Home Blood Pressure Connect is actually delivering."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "That works for me. Rosa\u2019s input matters not just for burden, but for whether the codes capture what CHWs can actually know at that point. And I\u2019ll revise the reach and workforce piece so it follows screening through follow-up, including the documented unknowns and the capacity bottlenecks by catchment. Then we can see after the pilot whether six-month follow-up is even, even complete enough to keep as a useful descriptive window."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, I think we should stop there. Someone has a hard stop, and the rest can wait until we've had Rosa's pilot feedback. Thanks, everyone. This was really clarifying."
+        },
+        {
+          "speaker": "Jordan Lee",
+          "text": "Thanks, all. Talk soon."
+        },
+        {
+          "speaker": "Dr. Amina Rahman",
+          "text": "Goodbye, everyone."
+        }
+      ],
+      "seed_location": "Turns 3-4 provide the first-quarter data (286 enrolled; 38% completed medication review within 90 days) and identify scarce appointments/lack of primary care as barriers. Turns 7-9 and 23-25 formally reframe the evaluation from causal BP control/medication-management to implementation and observable linkage, while pausing/stopping the stepped-wedge protocol and retaining BP as secondary descriptive data. Turns 8, 17, and 20-22 preserve qualitative observation and trust/barrier work while shifting attention to eligibility, linkage, institutional constraints, and CHW scope. Turns 10-14 and 16-21 broaden the denominator and analysis to referrals, enrollment, linkage sequence, barriers, and unknowns, preserving the equity focus. Turn 26 updates reach/workforce analysis through screening and follow-up and leaves whether six-month follow-up is adequate unresolved. Rosa is not present in the dialogue, so her stated explanation of CHW activities and an explicit joint Jordan-and-Rosa task assignment are missing; the transcript instead defers code-pilot input to Rosa.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10,
+          13,
+          14,
+          17,
+          23,
+          24,
+          25,
+          26
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 16 uses the prohibited stock phrase \"I lost my thread,\" directly violating the supplied meeting-style instruction.",
+          "Rosa Martinez is absent despite being required to explain that CHWs spend home-visit time obtaining cuffs, navigating insurance, scheduling care, and addressing transport and housing barriers, and that medication titration is outside CHW scope. Jordan and Amina partially imply some of this, but the required participant contribution is missing.",
+          "The transcript does not explicitly preserve the sustainability question or identify a sustainability/workforce-cost analysis as a continuing task. Jordan mentions capacity bottlenecks and a city-facing twelve-month question in turns 24 and 26, but this is weaker than the required explicit continuity.",
+          "The revised clinical work is incomplete relative to the ground truth: turns 4, 6, 7, 23, and 25 cover referral, completed visits, and uncertain continuity, but no speaker explicitly commits to measuring linkage to a usual source of care and continuity over six months.",
+          "The unresolved definition of sustained connection is clear (turns 6-9, 23), and turn 26 questions whether six months is usable, but Maya and Jordan do not explicitly commit to bringing definition and interval options to the next meeting.",
+          "Although several realism signals occur, much of the central discussion consists of polished, complete argumentative turns that immediately convert concerns into decisions or implementation steps. The requested tangent-heavy style is not meaningfully present; the Luis mention in turn 1 is the only minor off-agenda moment and is immediately dropped."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.22,
+        "turn_moves": {
+          "question": 2,
+          "request": 2,
+          "observation": 3,
+          "agreement": 5,
+          "answer": 2,
+          "proposal": 10,
+          "concern": 1,
+          "commitment": 2,
+          "backchannel": 2
+        },
+        "volunteer_turns": [
+          21,
+          25,
+          26
+        ],
+        "unsure_turns": [
+          10,
+          18
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 24,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.36,
+          "approved": false,
+          "issues": [
+            "Missing required participant and evidence: Rosa Martinez never appears. Consequently, the transcript never establishes that CHWs primarily spent home-visit time obtaining BP cuffs, navigating insurance, scheduling care, or addressing transport and housing barriers, nor that medication titration is outside CHW scope.",
+            "The old research plan is only partly recoverable. Maya refers to a stepped-wedge efficacy analysis and six-month BP control (turns 8 and 20), but the intended home-visit-plus-medication-review pathway is not explicitly laid out as the prior plan in a way that cleanly supports comparison.",
+            "The required revised clinical work is incomplete: turns 10-12 discuss possible chart indicators, but no decision explicitly commits to measuring linkage to a usual source of care, completed clinic visits, and continuity over six months. The six-month interval is not explicitly left unresolved; it is only retained as a secondary BP signal in turn 20.",
+            "The required preservation of an explicit equity and sustainability question is absent. Jordan raises neighborhoods, housing stability, language, and broader denominators (turns 6-7, 16-21), but sustainability and workforce/cost analysis are never stated.",
+            "Jordan and Rosa do not receive the required mapping and workforce-analysis assignment because Rosa is absent. Jordan only offers a flow dashboard and checks on logs/permissions (turns 19 and 21).",
+            "The transcript does not explicitly agree to stop finalizing the stepped-wedge protocol. Maya advocates stopping the efficacy framing (turns 8 and 20), but the group does not make the protocol-task decision required by the ground truth.",
+            "Naturalness is weak despite several fillers: nearly every substantive turn is a polished, complete technical argument that cleanly advances the next design decision. The required tangent-heavy meeting style is absent; there are no genuine tangents, dropped threads, or informal off-agenda diversions.",
+            "The opening catch-up is partially met in turn 1, but it is Jordan's recap of the prior meeting rather than a participant directly asking for a quick catch-up after having missed it."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.22,
+          "approved": false,
+          "issues": [
+            "Turn 16 uses the prohibited stock phrase \"I lost my thread,\" directly violating the supplied meeting-style instruction.",
+            "Rosa Martinez is absent despite being required to explain that CHWs spend home-visit time obtaining cuffs, navigating insurance, scheduling care, and addressing transport and housing barriers, and that medication titration is outside CHW scope. Jordan and Amina partially imply some of this, but the required participant contribution is missing.",
+            "The transcript does not explicitly preserve the sustainability question or identify a sustainability/workforce-cost analysis as a continuing task. Jordan mentions capacity bottlenecks and a city-facing twelve-month question in turns 24 and 26, but this is weaker than the required explicit continuity.",
+            "The revised clinical work is incomplete relative to the ground truth: turns 4, 6, 7, 23, and 25 cover referral, completed visits, and uncertain continuity, but no speaker explicitly commits to measuring linkage to a usual source of care and continuity over six months.",
+            "The unresolved definition of sustained connection is clear (turns 6-9, 23), and turn 26 questions whether six months is usable, but Maya and Jordan do not explicitly commit to bringing definition and interval options to the next meeting.",
+            "Although several realism signals occur, much of the central discussion consists of polished, complete argumentative turns that immediately convert concerns into decisions or implementation steps. The requested tangent-heavy style is not meaningfully present; the Luis mention in turn 1 is the only minor off-agenda moment and is immediately dropped."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns in the informal pre-session chat, then long, highly structured presentation turns followed by medium-length technical questions and detailed answers. Overlap and interruptions are low; speakers generally wait their turn, though there are occasional quick acknowledgments, repeated \u201cyeah\u201ds, and slightly tangled handoffs. The tone is collegial, warm, and semi-formal: casual greetings, joking, and personal rapport sit alongside formal introductions and dense academic discussion. Participants hedge frequently with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d and \u201cI\u2019m not sure,\u201d especially when speculating; disagreement is indirect and framed as uncertainty, alternative explanations, or follow-up questions rather than blunt correction. Speakers build on one another by praising the talk, referencing a prior point, then narrowing to a question; answers often begin with a direct partial response before expanding into caveats and related possibilities. Notable patterns include filler words (\u201cum,\u201d \u201cuh,\u201d \u201cyou know\u201d), repetitions, false starts, self-corrections, and informal evaluative remarks such as \u201cgreat question\u201d or \u201cawesome talk.\u201d Questions are usually prefaced politely and often contain substantial setup, with several clauses and tentative phrasing rather than concise interrogatives.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

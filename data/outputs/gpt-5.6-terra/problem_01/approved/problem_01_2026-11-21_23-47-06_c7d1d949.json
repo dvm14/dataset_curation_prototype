@@ -1,0 +1,383 @@
+{
+  "transcript_id": "c7d1d949",
+  "generated_at": "2026-11-21T23:47:06.247172",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short to medium turns outside the presentations, including frequent greetings, technical check-ins, and light small talk. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections\u2014especially among non-native speakers, giving the exchange an unpolished, spontaneous feel. The formal presentation segments are long and structured, but still conversational, with frequent signposting (\u201call right,\u201d \u201cso,\u201d \u201cwhat we think is\u201d), hedged claims (\u201cwe think,\u201d \u201clikely,\u201d \u201csort of,\u201d \u201cI would say\u201d), and occasional invitations for feedback. Questions tend to begin softly (\u201cI have a question,\u201d \u201cmaybe a naive question,\u201d \u201cdo you think\u201d), often include extended setup, and are answered thoughtfully with caveats rather than certainty. Participants build on prior comments through praise and follow-up questions; disagreement is minimal and indirect, framed as uncertainty, alternative interpretations, or open questions. Overlap is occasional but not aggressive, mostly brief acknowledgments, clarification attempts, or conversational handoffs.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with one person already reading from, or referring to, a document the others have open.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding how to restore a degraded tidal marsh so it both recovers native vegetation and reduces storm-surge damage to nearby homes.",
+  "disciplines": [
+    "ecology",
+    "environmental engineering",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "ecology",
+      "functional_role": "domain expert",
+      "background": "Coastal wetland ecologist with 14 years of experience studying tidal-marsh recovery after hydrologic restoration along Atlantic estuaries. She combines elevation surveys, vegetation plots, porewater salinity monitoring, sediment-core analysis, and before-after/reference-site comparisons to evaluate native plant establishment and invasive Phragmites control.",
+      "distinct_perspective": "Frames Bayview as a living geomorphic and ecological system whose recovery depends on the interaction of marsh elevation, sediment condition, salinity, tidal inundation, and invasive-reed management. She emphasizes that reopening tidal exchange alone does not guarantee native vegetation recovery, and that nearby reference marshes are needed to establish realistic targets. She is prepared to state clearly that the vegetation trajectory after restoration remains uncertain and must be monitored rather than assumed.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Luis Romero",
+      "discipline": "environmental engineering",
+      "functional_role": "PhD student",
+      "background": "Fourth-year doctoral researcher in coastal environmental engineering, with prior consulting experience supporting flood-risk and nature-based shoreline projects. His work uses LiDAR-derived topography, bathymetric surveys, tidal gauges, storm-surge boundary conditions, and coupled hydrodynamic and wave models to estimate water levels, wave energy, and flooding under specified design storms.",
+      "distinct_perspective": "Treats the restoration alternatives as physical interventions that must be tested against measured site geometry and defined storm scenarios. He insists that Harbor Point protection cannot be inferred from marsh acreage or vegetation alone: the team needs elevations, bathymetry, tidal and storm-surge boundaries, and water-level/wave modeling for each option. He recognizes that reconnecting tides may improve marsh processes while temporarily changing water levels, so those tradeoffs require explicit evaluation.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "Environmental and public-finance economist with 11 years of experience evaluating coastal resilience, habitat restoration, and infrastructure investments for local governments. She develops transparent lifecycle cost-benefit analyses using restoration, maintenance, permitting, and monitoring costs alongside avoided flood damages, property exposure, funding arrangements, and distributional effects across households and public agencies.",
+      "distinct_perspective": "Frames the decision as a comparison of feasible alternatives over time, not simply a search for the lowest initial construction cost or the largest modeled flood reduction. She wants ecological outcomes and engineering risk estimates translated into a transparent decision framework that identifies avoided damages, ongoing obligations, uncertainty, and who pays versus who benefits\u2014especially the county, Harbor Point homeowners, and outside funders.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "tidal_wetland_restoration",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with one person already reading from, or referring to, a document the others have open.",
+  "sample_seed": 4,
+  "task_id": "problem_01",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give an interdisciplinary research discussion with an identifiable research problem. The evaluated AI must summarize the whole discussion and acknowledge the participating disciplines.",
+  "seed_spec": {
+    "task_id": "problem_01",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give an interdisciplinary research discussion with an identifiable research problem. The evaluated AI must summarize the whole discussion and acknowledge the participating disciplines.",
+    "explicit_instruction": "Conduct a focused planning discussion among Dr. Maya Chen (ecology), Luis Romero (environmental engineering), and Priya Nair (economics). The group must formulate an identifiable interdisciplinary research problem for Bayview marsh and agree that alternatives should be compared using both ecological recovery and household storm-surge risk reduction. Chen should explain that native vegetation recovery depends on elevation, sediment condition, salinity, tidal inundation, invasive-reed control, and comparison with nearby reference marshes; she should state that the expected vegetation trajectory after restoration is uncertain. Romero should explain that the team needs site elevations and bathymetry, tidal and storm-surge boundary conditions, and hydrodynamic/wave modeling to estimate attenuation at Harbor Point under defined design storms; he should note that reconnecting tides may improve marsh processes but could temporarily alter water levels and must be evaluated. Nair should explain that the comparison needs restoration, maintenance, and permitting costs alongside avoided flood damages, property exposure, and the distribution of costs and benefits among the county, homeowners, and other funders. The group should discuss three candidate approaches: (1) restoring tidal exchange and controlling invasive reeds, (2) that approach plus sediment placement to raise selected low areas, and (3) a hybrid marsh restoration with a nearshore wave-attenuation feature. They must not select a preferred alternative because site data, model results, permitting constraints, and credible cost estimates are not yet available. They should agree on a near-term research plan: ecology will survey elevations, vegetation, salinity, sediment, and reference sites; engineering will define design storms and model water levels and waves for each alternative; economics will build a transparent cost-benefit framework using the engineering flood-risk outputs and document who bears costs and receives benefits. The meeting should end with the unresolved decision framed as which feasible restoration design delivers sufficient native-marsh recovery and storm-surge protection for Harbor Point at acceptable lifecycle cost and with an acceptable distribution of costs and benefits.",
+    "ground_truth": {
+      "discussion_summary": "The meeting frames Bayview tidal-marsh restoration as an interdisciplinary decision problem: choose among tidal reconnection and invasive control, that option plus targeted sediment placement, or a hybrid marsh-and-wave-attenuation design. The alternatives must be assessed jointly for native vegetation recovery, storm-surge and wave-risk reduction for Harbor Point homes, feasibility, lifecycle cost, and the distribution of costs and benefits. No alternative is selected because key field, modeling, permitting, and cost evidence is still needed.",
+      "identifiable_research_problem": "Which feasible Bayview marsh restoration design can restore native tidal-marsh vegetation while reducing storm-surge damage risk to Harbor Point homes, at acceptable lifecycle cost and with an acceptable distribution of costs and benefits?",
+      "participating_disciplines_and_roles": {
+        "ecology": "Assesses vegetation composition, invasive-reed control, elevation, sediment, salinity, tidal inundation, recovery trajectories, and reference sites. It identifies uncertainty in how vegetation will recover after restoration.",
+        "environmental engineering": "Defines design storms and collects elevation, bathymetry, and boundary-condition inputs for hydrodynamic and wave models. It estimates water levels and wave attenuation for each alternative and evaluates feasibility and permitting implications.",
+        "economics": "Compares restoration, maintenance, and permitting costs with avoided flood damages and property exposure. It evaluates cost-benefit tradeoffs and who pays versus who receives benefits."
+      },
+      "candidate_alternatives": [
+        "Restore tidal exchange and control invasive reeds.",
+        "Restore tidal exchange and control invasive reeds, with sediment placement in selected low areas.",
+        "Construct a hybrid of marsh restoration and a nearshore wave-attenuation feature."
+      ],
+      "required_evidence_and_dependencies": [
+        "Ecological surveys of elevation, vegetation, salinity, sediment condition, tidal inundation, invasive extent, and nearby reference marshes.",
+        "Engineering definition of design storms plus hydrodynamic and wave modeling using site elevations, bathymetry, and tidal and storm-surge boundary conditions.",
+        "Economic estimates of capital, maintenance, and permitting costs; modeled changes in flood damage; property exposure; and the allocation of costs and benefits.",
+        "Permitting feasibility for tidal reconnection, sediment placement, and any wave-attenuation structure."
+      ],
+      "agreed_next_steps": [
+        "Ecology conducts baseline and reference-site surveys and develops plausible vegetation-recovery trajectories.",
+        "Environmental engineering develops storm scenarios and models water levels and wave attenuation for each alternative.",
+        "Economics creates a transparent cost-benefit framework using modeled risk changes and documents distributional effects."
+      ],
+      "unresolved_items": [
+        "Relative ecological performance of the alternatives.",
+        "Magnitude of storm-surge and wave attenuation at Harbor Point.",
+        "Whether temporary or localized water-level changes from tidal reconnection are acceptable.",
+        "Permitting constraints and credible lifecycle costs.",
+        "Which alternative offers the best overall tradeoff."
+      ]
+    }
+  },
+  "seed_location": "Partial fulfillment in turns 1-32. Turns 1-2 identify the three candidate alternatives and frame ecological recovery plus Harbor Point flood protection; turns 4, 7, 9, 11-13, 25, and 27 cover engineering data/model needs; turns 12, 17, 23, and 28 cover ecological elevation, salinity, sediment, invasive reeds, reference sites, and uncertain recovery; turns 6, 15, 21, 24, and 26 cover avoided damages, lifecycle/maintenance and permitting-related costs, and distributional uncertainty. However, the discussion does not fully formulate the required final research problem, does not explicitly agree to compare alternatives using both ecological recovery and household storm-surge risk reduction, does not discuss the hybrid wave-attenuation alternative beyond naming it in turn 1, does not clearly state that tidal reconnection may temporarily alter water levels, and does not end with the specified unresolved decision. The meeting instead ends abruptly in turns 33-34 with plans to reconvene.",
+  "ground_truth": {
+    "discussion_summary": "The meeting frames Bayview tidal-marsh restoration as an interdisciplinary decision problem: choose among tidal reconnection and invasive control, that option plus targeted sediment placement, or a hybrid marsh-and-wave-attenuation design. The alternatives must be assessed jointly for native vegetation recovery, storm-surge and wave-risk reduction for Harbor Point homes, feasibility, lifecycle cost, and the distribution of costs and benefits. No alternative is selected because key field, modeling, permitting, and cost evidence is still needed.",
+    "identifiable_research_problem": "Which feasible Bayview marsh restoration design can restore native tidal-marsh vegetation while reducing storm-surge damage risk to Harbor Point homes, at acceptable lifecycle cost and with an acceptable distribution of costs and benefits?",
+    "participating_disciplines_and_roles": {
+      "ecology": "Assesses vegetation composition, invasive-reed control, elevation, sediment, salinity, tidal inundation, recovery trajectories, and reference sites. It identifies uncertainty in how vegetation will recover after restoration.",
+      "environmental engineering": "Defines design storms and collects elevation, bathymetry, and boundary-condition inputs for hydrodynamic and wave models. It estimates water levels and wave attenuation for each alternative and evaluates feasibility and permitting implications.",
+      "economics": "Compares restoration, maintenance, and permitting costs with avoided flood damages and property exposure. It evaluates cost-benefit tradeoffs and who pays versus who receives benefits."
+    },
+    "candidate_alternatives": [
+      "Restore tidal exchange and control invasive reeds.",
+      "Restore tidal exchange and control invasive reeds, with sediment placement in selected low areas.",
+      "Construct a hybrid of marsh restoration and a nearshore wave-attenuation feature."
+    ],
+    "required_evidence_and_dependencies": [
+      "Ecological surveys of elevation, vegetation, salinity, sediment condition, tidal inundation, invasive extent, and nearby reference marshes.",
+      "Engineering definition of design storms plus hydrodynamic and wave modeling using site elevations, bathymetry, and tidal and storm-surge boundary conditions.",
+      "Economic estimates of capital, maintenance, and permitting costs; modeled changes in flood damage; property exposure; and the allocation of costs and benefits.",
+      "Permitting feasibility for tidal reconnection, sediment placement, and any wave-attenuation structure."
+    ],
+    "agreed_next_steps": [
+      "Ecology conducts baseline and reference-site surveys and develops plausible vegetation-recovery trajectories.",
+      "Environmental engineering develops storm scenarios and models water levels and wave attenuation for each alternative.",
+      "Economics creates a transparent cost-benefit framework using modeled risk changes and documents distributional effects."
+    ],
+    "unresolved_items": [
+      "Relative ecological performance of the alternatives.",
+      "Magnitude of storm-surge and wave attenuation at Harbor Point.",
+      "Whether temporary or localized water-level changes from tidal reconnection are acceptable.",
+      "Permitting constraints and credible lifecycle costs.",
+      "Which alternative offers the best overall tradeoff."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Luis Romero",
+      "text": "I was looking at the one-page scope the county sent around\u2014um, the little map is useful, but I don't think we should let the shaded marsh area stand in for flood protection. Before we get too far in, I'd like us to leave today with a comparison question that treats these as actual physical alternatives. Tidal reconnection and reed control, that plus targeted sediment, and then a hybrid with some nearshore wave attenuation. The key for me is what each does to water levels and waves at Harbor Point under defined storms. Not just whether the marsh looks healthier."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And I\u2019d want the comparison question to ask whether each alternative creates the conditions for a self-sustaining native marsh, not just initial planting or reed removal. Luis, what storm cases and water-level outputs would let us judge whether targeted elevation gains could make a meaningful difference at Harbor Point? I\u2019m thinking we need baseline elevation, salinity, and sediment data alongside that, and nearby reference marshes if we can find ones in the same range, but..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "For the storm side, I\u2019d start with the recent event for calibration, then run a small set of design cases, say a moderate coastal storm and a larger surge case, with tides and wave conditions specified together. The outputs should be peak water level, timing and depth of inundation behind the marsh, and wave energy at the Harbor Point edge. But I need to check whether the channel and marsh-edge bathymetry we have is current. That odd gauge difference in the last storm makes me wary of trusting the old terrain, the old terrain surface."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, that is concerning."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That affects the economic side too. I don't want us pricing avoided damages off a model surface we already think may be stale. Luis, once you've checked that, can the outputs separate reduced surge water level from reduced wave energy, and show how much of each actually reaches the homes instead of staying within the marsh?"
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "We can separate the mechanisms, but I\u2019d be careful about claiming what reaches individual homes from the first model runs. We can compare still-water level and current-driven flooding with waves off, then add the wave field and map wave height and overtopping along the neighborhood edge. And to get from there to houses, we need the local ground elevations and probably the drainage paths behind the marsh too. Otherwise, the lower wave signal can\u2014 it can look more protective than it really is."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "So the comparison needs to carry that uncertainty through, rather than turn those early maps into dollar estimates. I\u2019d also want the drainage pathways in the baseline, because if flooding is backing up from somewhere else, the county could pay for marsh work while the household benefit is much smaller than it appears, and then\u2014"
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Exactly. And drainage isn't a secondary detail here. It may be the thing that determines whether the marsh-side reduction translates into lower interior flooding. I'd want the baseline to include culverts, ditches, road grades, whatever outlets Harbor Point has, then we can test whether reconnection changes the timing of water in those pathways too\u2014"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And those drainage features matter ecologically too, actually. The old ditches may be moving water through the site in ways that bypass the marsh platform, so I'd want a current, current elevation surface and tidal-inundation mapping before we call reconnection the baseline alternative. Otherwise we may miss why the reed stands are persisting."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "That\u2019s why I think the elevation survey has to happen before we lock the model grid or call any of these a baseline. Maya, for a credible recovery trajectory, what elevation band and vegetation structure do you need us to represent? Not just where plants might come back for a season, but where the platform could persist. That changes where sediment placement is even physically sensible."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd resist giving one elevation band before we survey, because it has to be relative to the local tidal frame and the salinity regime, not just some absolute number. We should map platform elevations against the native zones at reference marshes, low marsh, high marsh, transition, and then ask whether the proposed fill areas would sit in a band that can persist instead of just establish plants briefly. I do need to check that the reference sites actually span Bayview's salinity range, though."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "That relative frame is what the model needs too. If the survey ties the marsh platform, channel, and Harbor Point grades to the same datum, we can test sediment footprints against those reference zones, then see what they do in the storm cases. I\u2019m a little uneasy about placing fill before we know if it blocks or redirects one of those drainage paths, though."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah, I share that concern."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "From the comparison side, sediment placement can't just be a capital-cost line item. We need to know if avoiding it now creates a recurring reed-control obligation, or if placing it creates drainage risk or higher permitting and monitoring costs. Maya, do you have a sense yet of how much the reed management would vary year to year under reconnection alone?"
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "That variability matters, yeah."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I don't have a reliable year-to-year range yet, no. Reconnection can shift the competitive balance, but it doesn't guarantee it. If the platform is too low, too saline, or the sediment is poor, Phragmites can remain a persistent management- can remain a persistent problem to manage. I'd want at least baseline stem density and porewater salinity across the reed patches, then probably frame reed-control needs as scenarios instead of promising a fixed annual cost."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Okay, scenarios makes sense."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "And those reed-control scenarios need to be tied to actual configurations, not just costs in a spreadsheet. If reconnection leaves water levels higher on parts of the platform, or changes the drainage timing near Harbor Point, that might be the same option with a different maintenance profile and a different flood outcome. I think the survey is really the first gate here, and then..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, survey first."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm. So the immediate comparison question is, given the survey, which of these configurations has a plausible ecological trajectory and reduces Harbor Point flooding, and at what lifecycle cost and risk? I\u2019ll need to check the grant match and eligible maintenance rules before we assume the county can carry- before we assume they can cover, say, ten years of reed control or monitoring."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Yeah, contingent on the survey."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd add that \"plausible ecological trajectory\" needs a time horizon. Native cover in year two isn't the same as a marsh that holds its elevation and keeps reeds from re-expanding over, say, a decade. We can define indicators now, but the actual trajectory should stay explicitly uncertain until we have the survey, the cores, and the reference-site- until we have that comparison."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I'd put a ten-year window around the comparison, but show the early years separately, since construction, establishment, and reed control won't be evenly spread. And we should keep the benefit side as ranges too, too, with avoided damage under each storm case, then later check who actually bears uninsured or underinsured losses in Harbor Point. Otherwise, a single net-benefit number will look much firmer than the evidence."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "And I\u2019d keep the avoided-damage ranges tied explicitly to the storm inputs. Those are scenario results, not a forecast of the next event. Before we put even preliminary benefit ranges on them, we need the new elevation and bathymetry work, including the Harbor Point drainage connections. Otherwise we can\u2019t tell whether a modeled reduction at the marsh edge actually lowers depth at the houses."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I\u2019d hold off on monetizing until that chain is credible. The marsh change, then neighborhood water depth, then damage. For now, could we at least agree the survey needs parcel-grade elevations, along with the marsh and drainage features? Otherwise, even the distributional piece- figuring out who sees a real reduction and who doesn\u2019t, is pretty speculative."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "Yes\u2014parcel-grade elevations, definitely, and they need to tie into the same vertical datum as the marsh and channel survey. Otherwise, we could be comparing a few centimeters of modeled change at the edge with house thresholds we don't- with thresholds at the houses that we don't actually know. I'd put that in the survey brief, along with culverts and road low points, and then we can decide whether the old bathymetry is sufficient or needs replacement."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the marsh piece, I\u2019d add enough elevation density across the reed stands to pick up the little depressions and ditch margins, not just a broad platform average. That\u2019s often where inundation and salinity split over really short distances, and it may explain why treatment response is patchy. If the survey brief can include sediment cores and porewater stations co-located with those transects, then the reference comparison will actually be..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, co-located makes sense."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "And I think that gives us a clean first field package, one tied-datum survey from the channel through Harbor Point, with dense marsh transects, plus the co-located cores and porewater work. I\u2019ll check the existing bathymetry coverage against that, and whether the gauge discrepancy could just be timing or a datum- or a datum issue. Then we\u2019ll know what has to be resurveyed before modeling."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, that\u2019s the right sequence."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, yes\u2014then I\u2019ll check the grant constraints once we have that field scope."
+    },
+    {
+      "speaker": "Luis Romero",
+      "text": "I think we\u2019re at time. Thanks, both. Once we\u2019ve checked the survey and grant-scope pieces\u2014 actually, let\u2019s reconnect then."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Thanks, bye both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      6,
+      7,
+      10,
+      12,
+      15,
+      17,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task-compliance gap: the three alternatives are introduced clearly in turn 1, but the hybrid nearshore wave-attenuation option is not substantively revisited in the later field, modeling, ecological, economic, or permitting discussion. This weakens evidence that all alternatives will receive the full planned comparison.",
+      "Task-compliance gap: Priya mentions grant eligibility and maintenance rules (turn 21) and Luis mentions permitting costs (turn 15), but there is no clear discussion of permitting feasibility specifically for tidal reconnection, sediment placement, and the wave-attenuation structure as required by the ground truth.",
+      "Task-compliance gap: the ending in turns 30-34 establishes a field package and grant-scope check, but it does not clearly assign the full near-term division of labor specified in the seed: ecology's complete baseline/reference survey and trajectory work, engineering's modeling of each alternative, and economics' transparent cost-benefit/distributional framework.",
+      "Seed recoverability is slightly reduced because the final unresolved decision is only implied through Priya's formulation in turn 21. The meeting does not close by explicitly framing the decision as selecting a feasible design that delivers sufficient native-marsh recovery and Harbor Point protection at acceptable lifecycle cost and distributional consequences.",
+      "Naturalness is capped at 3 despite several realism signals: many substantive turns are highly polished, complete mini-arguments that immediately convert the prior concern into a precise next step, especially turns 6-13, 15-17, and 21-28. The closing in turns 30-33 also reads somewhat like a tidy written recap of decisions and action items rather than an unstructured meeting ending.",
+      "The requested one-voice-leads style is only partially realized. Luis has the most turns and leads technically, but Priya and Maya contribute nearly as often and in similarly substantial turns; the interaction is more balanced than the supplied meeting style calls for."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "proposal": 11,
+      "question": 3,
+      "agreement": 8,
+      "answer": 3,
+      "concern": 4,
+      "request": 1,
+      "commitment": 3,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      27,
+      30,
+      32
+    ],
+    "unsure_turns": [
+      4,
+      12,
+      17,
+      21,
+      30
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "The three required candidate approaches are only partially and indirectly identifiable. Tidal reconnection plus reed control is explicit in turns 5-8, and sediment placement is discussed in turns 9-16, but no turn clearly defines the second alternative as reconnection/reed control plus targeted sediment placement. The nearshore wave-attenuation feature is mentioned only as a comparator in turns 13 and 21, not formulated as the required hybrid marsh-restoration alternative.",
+        "The required near-term plan is not explicitly agreed or assigned by discipline. Ecology's needed surveys are discussed in turns 7-10, engineering modeling in turns 3, 6, 21, and economics' framework in turns 11, 16, and 23, but the meeting closes in turn 25 without confirming owners or a shared plan.",
+        "The final unresolved decision is not explicitly framed in the required integrated form. Turns 21-24 establish conditional risk, geometry, and cost comparisons, but they do not clearly state the decision as selecting the feasible design that provides sufficient marsh recovery and Harbor Point protection at acceptable lifecycle cost with an acceptable distribution of costs and benefits.",
+        "Naturalness is weakened by highly orderly turn construction: most substantive turns make a complete technical point and immediately convert the prior concern into a specific next analytical step. The exchange contains some repairs, but the disfluencies are largely surface-level within otherwise polished prose.",
+        "The supplied one_voice_leads style is only partly reflected. Luis has the most turns and opens the discussion, but Priya and Maya each contribute many similarly substantial turns rather than appearing mainly as brief questions, acknowledgments, or occasional interventions."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.21,
+      "approved": true,
+      "issues": [
+        "Task-compliance gap: the three alternatives are introduced clearly in turn 1, but the hybrid nearshore wave-attenuation option is not substantively revisited in the later field, modeling, ecological, economic, or permitting discussion. This weakens evidence that all alternatives will receive the full planned comparison.",
+        "Task-compliance gap: Priya mentions grant eligibility and maintenance rules (turn 21) and Luis mentions permitting costs (turn 15), but there is no clear discussion of permitting feasibility specifically for tidal reconnection, sediment placement, and the wave-attenuation structure as required by the ground truth.",
+        "Task-compliance gap: the ending in turns 30-34 establishes a field package and grant-scope check, but it does not clearly assign the full near-term division of labor specified in the seed: ecology's complete baseline/reference survey and trajectory work, engineering's modeling of each alternative, and economics' transparent cost-benefit/distributional framework.",
+        "Seed recoverability is slightly reduced because the final unresolved decision is only implied through Priya's formulation in turn 21. The meeting does not close by explicitly framing the decision as selecting a feasible design that delivers sufficient native-marsh recovery and Harbor Point protection at acceptable lifecycle cost and distributional consequences.",
+        "Naturalness is capped at 3 despite several realism signals: many substantive turns are highly polished, complete mini-arguments that immediately convert the prior concern into a precise next step, especially turns 6-13, 15-17, and 21-28. The closing in turns 30-33 also reads somewhat like a tidy written recap of decisions and action items rather than an unstructured meeting ending.",
+        "The requested one-voice-leads style is only partially realized. Luis has the most turns and leads technically, but Priya and Maya contribute nearly as often and in similarly substantial turns; the interaction is more balanced than the supplied meeting style calls for."
+      ]
+    }
+  ]
+}

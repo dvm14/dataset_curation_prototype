@@ -1,0 +1,347 @@
+{
+  "transcript_id": "48d5f1c3",
+  "generated_at": "2026-11-22T13:46:32.033464",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short to medium turns, though presentations are long, highly structured monologues. Early chatter is informal and fragmented, with frequent greetings, side conversations, repetitions, filler words (\u201cum,\u201d \u201cyeah,\u201d \u201cokay\u201d), false starts, and occasional technical-check interruptions. Participants overlap lightly rather than aggressively, often entering with brief affirmations or follow-up questions. Questions tend to be prefaced politely\u2014\u201cI have a quick question,\u201d \u201cnaive question,\u201d \u201cif I can ask\u201d\u2014then unfold in exploratory, multi-part form. Speakers hedge often with phrases such as \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d and \u201cwe\u2019re interested in,\u201d especially when interpreting evidence. Feedback is generous and enthusiastic (\u201cgreat talk,\u201d \u201cbeautiful work\u201d), while challenges are indirect and framed as curiosity, extensions, or limitations rather than disagreement. Answers are expansive, self-correcting, and conversational, often acknowledging uncertainty before offering a tentative interpretation.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Assessing whether forest carbon credits actually protect forest and who gets to decide how that is measured.",
+  "disciplines": [
+    "ecology",
+    "political science",
+    "science & technology studies"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Marisol Vega",
+      "discipline": "ecology",
+      "functional_role": "domain expert",
+      "background": "Forest landscape ecologist with 14 years of experience in tropical forest monitoring across the Andean-Amazonian frontier. Her work combines Landsat and Sentinel time series, plot-based forest inventories, canopy-disturbance interpretation, and field verification of degradation and regrowth. She has previously advised REDD+ projects on leakage, permanence, and baseline assumptions, but has limited time available for extended field measurement in the Alto Verde study.",
+      "distinct_perspective": "Marisol tends to frame the problem in terms of forest-cover dynamics, degradation signals, spatial displacement of clearing, and counterfactual baselines. She knows the project maps, satellite products, and inventories could describe biophysical change, but accepts a household questionnaire as the sole field method because it is feasible within the September 2026 season and the available budget. She treats residents' observations as a practical way to assess whether protection is occurring.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Prof. Daniel Okoro",
+      "discipline": "political science",
+      "functional_role": "principal investigator",
+      "background": "Political scientist with 11 years of experience studying land governance, rural representation, and environmental policy implementation in decentralised forest regions. He has led mixed-methods projects involving household sampling, village-level surveys, and analysis of land-tenure categories, and is responsible for delivering the Alto Verde protocol before the grant milestone. His prior field teams have worked through local enumerators and translated consent procedures.",
+      "distinct_perspective": "Daniel frames Alto Verde as a question of whose views are represented in decisions about carbon-credit rules and whether project governance is seen as legitimate across different tenure positions. He prioritises a representative sample of 250 households inside and near the project boundary, stratified by village and land-tenure category. He sees a single September 2026 questionnaire as a clear, fundable way to determine whether credits protected forest while also documenting views on baseline authority, monitoring, and post-payment protection.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Aisha Rahman",
+      "discipline": "science & technology studies",
+      "functional_role": "research engineer",
+      "background": "STS researcher and research-methods designer with 7 years of experience examining how environmental metrics, audit systems, and digital mapping tools shape decisions in conservation projects. She has conducted interview-based studies with certifiers, community monitors, and local government staff, and has practical experience building tablet questionnaires, translation workflows, and secure field-data pipelines for multilingual research teams.",
+      "distinct_perspective": "Aisha focuses on measurement as a social and institutional process: baselines, monitoring rules, maps, and auditor statements do not merely record forests but organise whose knowledge counts. She wants the questionnaire to include open-ended prompts on auditors, certifiers, local ecological knowledge, and who should set the rules. Although she is interested in the politics embedded in project documentation, she supports the one-time survey as the shared method because it can be translated, administered consistently, and completed during the September field timetable.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 2,
+  "task_id": "methods_03",
+  "benchmark_category": "Methods",
+  "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+  "seed_spec": {
+    "task_id": "methods_03",
+    "benchmark_category": "Methods",
+    "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+    "explicit_instruction": "Simulate a planning meeting in which the team agrees to use a single cross-sectional questionnaire administered once in September 2026 to 250 households living inside and near the Alto Verde project boundary. The questionnaire will ask respondents whether they believe forest loss has decreased since credits began, whether they have observed displacement of clearing to other places, whether the forest will remain protected after credit payments end, and who they think should decide the baseline and monitoring rules. The ecologist should note that satellite maps and forest inventories exist but accept the questionnaire as the sole data-collection method because it is fast and fits the budget. The political scientist should support representative sampling across villages and land-tenure categories. The STS researcher should support open-ended questions about auditors, certifiers, and local knowledge. The group should explicitly decide not to collect before-project measurements, comparison-site data, longitudinal observations, or administrative enforcement data, while treating the survey as sufficient to determine whether the credits caused protection. No participant should identify or resolve the resulting method-question mismatch during the meeting. Include ordinary discussion of consent, translation, sampling, and the September fieldwork timetable.",
+    "ground_truth": {
+      "chosen_method": "A one-time, cross-sectional household questionnaire of 250 households conducted in September 2026, with closed and open-ended questions about perceived forest change, leakage, permanence, and authority over measurement.",
+      "research_question_the_method_is_claimed_to_answer": "Whether the Alto Verde carbon credits actually caused forest protection, including effects on deforestation, leakage, and permanence, and who gets to decide how those outcomes are measured.",
+      "why_the_method_is_incapable": [
+        "A single post-treatment perception survey cannot establish whether forest outcomes changed relative to conditions before credits began in January 2022.",
+        "It cannot identify a counterfactual: observed or perceived changes cannot be attributed to carbon credits rather than weather, markets, enforcement, migration, or other contemporaneous causes.",
+        "It cannot robustly measure ecological outcomes such as avoided deforestation, leakage, or permanence from respondent perceptions alone.",
+        "It cannot adequately assess governance and decision-making from household opinions alone, because relevant evidence includes project rules, baseline-setting records, contracts, audit and certification processes, tenure arrangements, and enforcement practices."
+      ],
+      "key_missing_design_elements": [
+        "Pre-project or historical forest-cover and carbon-stock data",
+        "Comparable non-project or differently treated comparison areas",
+        "Longitudinal or repeated outcome measurement",
+        "Remote-sensing and/or forest-inventory evidence",
+        "Spatial analysis of potential leakage beyond the project boundary",
+        "Document analysis and interviews or observation involving project developers, auditors, certifiers, state officials, and local governance actors",
+        "Evidence on enforcement and land-tenure arrangements"
+      ],
+      "suitable_design": "A mixed-methods, quasi-experimental design. Use remote sensing and available inventory data to construct pre- and post-2022 forest outcomes; compare the project area with credibly matched comparison areas using a difference-in-differences, synthetic-control, or matched-panel approach; analyze surrounding areas for leakage; and use repeated monitoring where feasible for persistence. Pair this with document analysis and semi-structured interviews across households, local leaders, forestry officials, project developers, auditors, and certifiers to trace how baselines and monitoring rules were selected, whose knowledge was included or excluded, and how tenure and enforcement shaped implementation. The September household survey could remain as one component for distributional experiences and perceptions, but not as the sole causal-outcome measure."
+    }
+  },
+  "seed_location": "The transcript discusses a questionnaire's content, sampling, timing anchors, translation, and governance questions (especially turns 1-28), but it does not complete the required seed conditions. It never explicitly agrees to a single September 2026 cross-sectional survey of 250 households as the sole data-collection method; it does not state that satellite maps/inventories exist and are being excluded; it does not explicitly reject pre-project measures, comparison sites, longitudinal observations, or enforcement data; and it does not claim the survey is sufficient to determine whether credits caused protection. Therefore the target method-question mismatch is not clearly instantiated.",
+  "ground_truth": {
+    "chosen_method": "A one-time, cross-sectional household questionnaire of 250 households conducted in September 2026, with closed and open-ended questions about perceived forest change, leakage, permanence, and authority over measurement.",
+    "research_question_the_method_is_claimed_to_answer": "Whether the Alto Verde carbon credits actually caused forest protection, including effects on deforestation, leakage, and permanence, and who gets to decide how those outcomes are measured.",
+    "why_the_method_is_incapable": [
+      "A single post-treatment perception survey cannot establish whether forest outcomes changed relative to conditions before credits began in January 2022.",
+      "It cannot identify a counterfactual: observed or perceived changes cannot be attributed to carbon credits rather than weather, markets, enforcement, migration, or other contemporaneous causes.",
+      "It cannot robustly measure ecological outcomes such as avoided deforestation, leakage, or permanence from respondent perceptions alone.",
+      "It cannot adequately assess governance and decision-making from household opinions alone, because relevant evidence includes project rules, baseline-setting records, contracts, audit and certification processes, tenure arrangements, and enforcement practices."
+    ],
+    "key_missing_design_elements": [
+      "Pre-project or historical forest-cover and carbon-stock data",
+      "Comparable non-project or differently treated comparison areas",
+      "Longitudinal or repeated outcome measurement",
+      "Remote-sensing and/or forest-inventory evidence",
+      "Spatial analysis of potential leakage beyond the project boundary",
+      "Document analysis and interviews or observation involving project developers, auditors, certifiers, state officials, and local governance actors",
+      "Evidence on enforcement and land-tenure arrangements"
+    ],
+    "suitable_design": "A mixed-methods, quasi-experimental design. Use remote sensing and available inventory data to construct pre- and post-2022 forest outcomes; compare the project area with credibly matched comparison areas using a difference-in-differences, synthetic-control, or matched-panel approach; analyze surrounding areas for leakage; and use repeated monitoring where feasible for persistence. Pair this with document analysis and semi-structured interviews across households, local leaders, forestry officials, project developers, auditors, and certifiers to trace how baselines and monitoring rules were selected, whose knowledge was included or excluded, and how tenure and enforcement shaped implementation. The September household survey could remain as one component for distributional experiences and perceptions, but not as the sole causal-outcome measure."
+  },
+  "transcript": [
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Before we start, did the revised village-list request ever come through from the regional office after last week? I haven't seen it. Either way, I'd like us to use today to test whether a September household questionnaire can give us a credible account of both forest protection and who people see as entitled to set the carbon rules, because\u2014"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did the regional office ever send the access note for the northern villages? I didn't see it either. On Daniel's question, I think a questionnaire can get at protection pretty directly if we ask users inside and just beyond the boundary whether clearing has fallen since 2022, and whether it has simply moved along those access roads\u2014access corridors, though I'm still wondering whether the household list catches people using agency-claimed forest without papers."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Mm, that is a concern."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Quick question, did anyone get the language-use note that was meant to come with the village list? On the unpapered users, I wonder if we should sample by reported forest use as well as tenure category, then ask where they actually, actually go across village boundaries. Otherwise, the questionnaire may quietly reproduce the agency's map of who counts."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Yeah, that could surface them."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the regional office ever send the household-list format from last week? I think Aisha's right. Tenure has to remain a sampling stratum, but reported forest use should be a screening measure, variable, so people using agency-claimed land don't disappear from the frame. Marisol, would it help to ask separately about nearby forest and more distant use areas, so accounts of shifted clearing are more comparable across villages?"
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Oh, separately, yes."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did anyone ever get the revised corridor map from last week? I'd separate them. Ask about the nearest routinely used forest, then any farther site where they've cleared, collected, or seen new clearing since 2022. That gives us a much cleaner read on possible displacement than just asking whether it moved \"somewhere else,\" and we can still anchor both locations against- relative to the project boundary."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the revised village-list request ever come through after last week? Marisol, that separation seems important, particularly because the boundary itself may not mean the same thing to every respondent. We should ask about the nearest routinely used forest and any farther use area, but also have them describe the place in their own, their own terms before we locate it against the project map."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did the travel note for the northern villages ever come through? I like having respondents name the place first. Then we can ask what changed there after 2022, less clearing, different kinds of disturbance, or new activity farther out, before we show any boundary reference. That should also help with those northern corridors, since I honestly can\u2019t yet tell whether the signal is road work or shifted smallholder activity- use."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the regional office ever send the household-list format after last week? I think that sequence works. Place first, then the change, and the map reference later. We should be careful not to make the map the authoritative answer, though. If someone says a place only became a boundary after payment meetings, that's itself evidence about how the project is being, um, understood."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the glossary draft from last week ever come through? I think we should leave room in the open responses for that point about a place becoming a boundary after the payment meetings. Ask who explained the line, whether people agree with it, and what they think it is for. And we should avoid saying \u201cmonitoring\u201d without unpacking it, because people may hear patrols, not measurement."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the translated consent draft ever come through from last week? Aisha, yes, rather than ask about \u201cmonitoring,\u201d we can ask who should check whether the forest is being protected, what evidence they should use, and who should be allowed to challenge it. With 250 households, we need those items to be fairly disciplined across languages, but I think we can leave a short open response after each."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the enumerator-language spreadsheet ever come through after last week? I like that wording, Daniel. I'd keep the open response short, but concrete. After \"what evidence,\" maybe ask what signs people themselves use when they say the forest is becoming thinner or- when they say it's recovering, rather than asking them to name technical conditions."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did the northern-village travel note ever come through? Aisha, I like asking about the signs people use, because they may distinguish fresh clearing from, um, a thinner canopy or recovery without us giving them those categories. Could we then ask whether those signs changed after the crediting began, and in the farther use area too?"
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the revised household-list format ever come through? I think we should ask about those locally recognized signs in both places, but make the timing explicit as January 2022, when crediting began. Otherwise, um, \"after the project\" could mean the earlier meetings or boundary discussions, rather than the period we're trying to assess."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the language-use note ever arrive with the revised list? January 2022 needs to be the anchor, but I'd phrase it as \"since credits began being issued\" and then, I was going to say, check in piloting whether that's a date people recognize. We can still separately ask when they first heard about the boundary or payments, because those may be the meaningful dates locally."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the current household-list file ever arrive, by the way? I agree, in piloting we should test whether \u201ccredits began being issued\u201d is a usable anchor, rather than assuming January 2022 carries meaning. We can keep the calendar date for analysis, but ask separately when people first heard about the boundary, payments, and any restrictions. Those different timelines may be pretty revealing."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Hm, useful distinction."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did the September travel update for the northern villages ever come in? On the timing, I think we should let respondents give us the landmark first, whether that's the first payment, the first restriction, whatever, and then have the enumerator line that up with the credit-issuance date. Otherwise, we may be asking them to remember our administrative timeline instead of the change they actually noticed."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the access note for the northern villages ever arrive? Let them start from their own landmark. That seems less leading. Then the enumerator can use a simple calendar probe, was it before or after credits began, and before or after the first payment or restriction, rather than trying to force an exact date\u2014 a precise date."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the pilot calendar prompt from last week ever get circulated? I think Daniel's version is probably the least burdensome. Respondents name the event, then we use before-or-after probes. I'd just want the script to say that credits, payments, restrictions, and the mapped line may be different things, so enumerators don't collapse them while recording\u2014coding the answer."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Did the access note for the northern villages ever come through? Yes, and on the forest-change questions, I'd keep the timelines- I'd keep them visibly separate in the instrument. What they observed, when they first heard of the boundary, and when any payment or restriction occurred. Otherwise an enumerator may code a decline in clearing after payment as post-crediting, even when the sequence is murkier."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Right, keep those apart."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the pilot-calendar prompt from last week ever come through? Yes, and I think we need to make that separation explicit in the questionnaire layout, not just in the enumerator guidance. Observed forest change, awareness of the boundary, and payments or restrictions should be three distinct sequences. Then we can ask the governance questions without implying any one of those events caused the others."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Mm, three separate tracks."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the revised glossary ever get circulated after last week? Mm, and for the governance part, I think we need a fourth little space alongside those tracks. Not just what changed and when, but who respondents think had the right to define or verify it. Otherwise the map and the project's categories can sort of\u2014 they can answer that question for us."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "Did the consent translation schedule ever come through? Aisha, yes, I'd put that fourth space right after the three timelines. Who had the right to set the line, who should decide what counts as forest change, and who may question the result. I don't want the questionnaire to assume that agency authority is- just because its claim appears on the map, that it's settled."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "text": "Did the final protocol template ever come through? I think we should just leave it there. I'll follow up by email, and thanks, thanks everyone."
+    },
+    {
+      "speaker": "Prof. Daniel Okoro",
+      "text": "All right. Goodbye, everyone."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Okay, take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 3,
+    "evidence_turns": [
+      1,
+      2,
+      6,
+      8,
+      13,
+      15,
+      16,
+      17,
+      20,
+      25,
+      27,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Core causal-method mismatch is only partially recoverable. Turns 1, 2, 15, and 16 establish a questionnaire about perceived changes since January 2022, but no turn clearly states that the team treats this survey as sufficient to determine whether credits caused protection. The target causal claim is therefore weaker and more inferential than required.",
+      "The required one-time September 2026 cross-sectional design is incomplete. Turn 1 mentions a September household questionnaire and turn 13 specifies 250 households, but the meeting never clearly says it will be administered once in September 2026 or explicitly labels it cross-sectional.",
+      "The ecologist does not mention that satellite maps and forest inventories exist, nor explicitly accept the questionnaire as the sole data-collection method because it is fast and fits the budget. This is a required seed element and an important contrast for the benchmark.",
+      "The transcript never explicitly decides not to collect before-project measurements, comparison-site data, longitudinal observations, or administrative enforcement data. In fact, turns 20-25 emphasize several distinct timelines, which may make the dialogue sound more methodologically cautious without supplying the required explicit exclusions.",
+      "The questionnaire content is incomplete: turns 2, 8, and 15 cover perceived forest change and displacement; turns 13 and 27-28 cover authority over monitoring and rules. But no turn asks whether respondents believe protection will remain after credit payments end, and auditors and certifiers are never raised despite being required STS content.",
+      "The political-science sampling requirement is only partly met. Daniel supports tenure strata and discusses the household frame in turns 6 and 13, but representative sampling across villages and land-tenure categories is not plainly decided.",
+      "Consent, translation, and ordinary September fieldwork timetable discussion are largely absent. Consent and translation appear only as repeated status-check references in turns 13 and 28, not as substantive planning; September is mentioned only in turn 1 and a travel update in turn 20.",
+      "Naturalness is substantially harmed by the repeated, formulaic opening question in nearly every substantive turn (for example turns 1, 2, 4, 6, 8, 9, 10, 11, 12, 13, and onward). The same unresolved file-status question is repeatedly restarted rather than acknowledged once, making the dialogue look generated.",
+      "Despite the requested exploratory style, the discussion becomes a polished sequential questionnaire-design exercise. Many turns immediately convert the prior concern into a settled wording or layout decision (especially turns 20-28), and turn 29 abruptly closes the meeting despite the stated style requirement that nothing be decided.",
+      "Speaker roles are generally recognizable, but Daniel's frequent scripted repetitions and Aisha's repeated file questions blur voice differentiation. Marisol uses ecology-relevant concepts such as clearing, corridors, canopy, and project boundaries, while Aisha contributes measurement-politics concerns; nevertheless, the actual substantive content is narrower than their personas require."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.15,
+    "turn_moves": {
+      "question": 3,
+      "concern": 1,
+      "agreement": 3,
+      "proposal": 18,
+      "request": 1,
+      "backchannel": 4,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      29
+    ],
+    "unsure_turns": [
+      2,
+      10
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 3
+      },
+      "spoken_share": 0.75,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The core causal claim is never clearly made. The transcript discusses asking whether forest change, displacement, and future protection are perceived, but it never explicitly says that the one-time questionnaire will determine whether Alto Verde credits caused protection. This makes the intended method-question mismatch only weakly recoverable (especially turns 14, 20-25, and 29).",
+        "The required explicit decision not to collect before-project measurements, comparison-site data, longitudinal observations, administrative enforcement data, remote-sensing evidence, or inventory evidence is absent. Marisol instead refers to maps and observations throughout (turns 2, 10, 21, 25), without stating that satellite maps and forest inventories exist but will not be used as data-collection or analytic evidence.",
+        "The September 2026 timing is not established. September is mentioned as a design/instrument timetable in turns 1 and 29, but the transcript does not say the questionnaire will be administered once in September 2026.",
+        "The questionnaire is not explicitly agreed as the sole data-collection method. The discussion remains provisional and exploratory, and turn 29 says the team must verify materials before locking anything in, contrary to the seed\u2019s required group agreement.",
+        "The governance question is only partially represented. Turns 16-19 address who should decide protection and monitoring-related rules, but baseline-setting authority is not clearly named; auditors appear only as possible categories rather than in a broader inquiry into certification or project documentation.",
+        "Turn 27 uses the prohibited stock phrase \"I lost my thread there,\" directly violating the style instruction.",
+        "Naturalness is undermined by the repeated, implausibly formulaic opening questions about whether a different document \"ever came through\" or \"arrive\" in nearly every substantive turn (turns 1-2, 7-8, 10-14, 16-17, 19-25, 27-30). This repetition reads generated rather than like an actual meeting.",
+        "Despite several disfluencies, many substantive turns are polished mini-arguments that identify a concern, propose an exact solution, and resolve it neatly (for example turns 20-25). This triggers the written-dialogue tell and conflicts with the requested thinking-aloud, nothing-decided meeting style.",
+        "Dialogue flow is locally coherent around questionnaire construction, but the continuing document-status refrains repeatedly interrupt the substantive progression and create an artificial rhythm rather than natural side chatter.",
+        "Daniel and Aisha are reasonably distinct in emphasis, but Aisha\u2019s contribution is more questionnaire-design and consent focused than a clearly developed STS concern with auditors, certifiers, documents, and institutional rule-making. Marisol also accepts survey observations but does not explicitly acknowledge existing satellite and inventory evidence or the decision to set it aside."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 3
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.15,
+      "approved": false,
+      "issues": [
+        "Core causal-method mismatch is only partially recoverable. Turns 1, 2, 15, and 16 establish a questionnaire about perceived changes since January 2022, but no turn clearly states that the team treats this survey as sufficient to determine whether credits caused protection. The target causal claim is therefore weaker and more inferential than required.",
+        "The required one-time September 2026 cross-sectional design is incomplete. Turn 1 mentions a September household questionnaire and turn 13 specifies 250 households, but the meeting never clearly says it will be administered once in September 2026 or explicitly labels it cross-sectional.",
+        "The ecologist does not mention that satellite maps and forest inventories exist, nor explicitly accept the questionnaire as the sole data-collection method because it is fast and fits the budget. This is a required seed element and an important contrast for the benchmark.",
+        "The transcript never explicitly decides not to collect before-project measurements, comparison-site data, longitudinal observations, or administrative enforcement data. In fact, turns 20-25 emphasize several distinct timelines, which may make the dialogue sound more methodologically cautious without supplying the required explicit exclusions.",
+        "The questionnaire content is incomplete: turns 2, 8, and 15 cover perceived forest change and displacement; turns 13 and 27-28 cover authority over monitoring and rules. But no turn asks whether respondents believe protection will remain after credit payments end, and auditors and certifiers are never raised despite being required STS content.",
+        "The political-science sampling requirement is only partly met. Daniel supports tenure strata and discusses the household frame in turns 6 and 13, but representative sampling across villages and land-tenure categories is not plainly decided.",
+        "Consent, translation, and ordinary September fieldwork timetable discussion are largely absent. Consent and translation appear only as repeated status-check references in turns 13 and 28, not as substantive planning; September is mentioned only in turn 1 and a travel update in turn 20.",
+        "Naturalness is substantially harmed by the repeated, formulaic opening question in nearly every substantive turn (for example turns 1, 2, 4, 6, 8, 9, 10, 11, 12, 13, and onward). The same unresolved file-status question is repeatedly restarted rather than acknowledged once, making the dialogue look generated.",
+        "Despite the requested exploratory style, the discussion becomes a polished sequential questionnaire-design exercise. Many turns immediately convert the prior concern into a settled wording or layout decision (especially turns 20-28), and turn 29 abruptly closes the meeting despite the stated style requirement that nothing be decided.",
+        "Speaker roles are generally recognizable, but Daniel's frequent scripted repetitions and Aisha's repeated file questions blur voice differentiation. Marisol uses ecology-relevant concepts such as clearing, corridors, canopy, and project boundaries, while Aisha contributes measurement-politics concerns; nevertheless, the actual substantive content is narrower than their personas require."
+      ]
+    }
+  ]
+}

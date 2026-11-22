@@ -1,0 +1,605 @@
+{
+  "series_id": "15f30b85",
+  "generated_at": "2026-11-22T14:10:49.986905",
+  "task_id": "adaptation_01",
+  "benchmark_category": "Adaptation across meetings",
+  "benchmark_task": "Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.",
+  "input_type": "meeting_pair",
+  "research_id": "ai_math_tutor",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 1,
+  "research_problem": "Evaluate an AI math tutor for middle-school classrooms and define safe, instructionally appropriate student-facing behavior before a spring pilot.",
+  "project_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of the Pathway AI math tutor in four district middle schools. The team is deciding which students will be included, what the tutor may do during algebra practice, and what evidence will be collected for a later decision about broader use.",
+  "plan_document": null,
+  "ground_truth": {
+    "assumption": {
+      "meeting": "Meeting 1 \u2014 February 3, 2027",
+      "fact": "The pilot analysis depends on a district-held stable de-identified crosswalk that links each student's tutor logs, surveys, and assessment scores."
+    },
+    "new_fact": {
+      "meeting": "Meeting 2 \u2014 February 17, 2027",
+      "speaker": "computer science lead",
+      "fact": "The district will provide separately de-identified files without a persistent crosswalk or shared identifier."
+    },
+    "conflict": "Without a crosswalk or common identifier, the team cannot link a student's hint-use logs to that student's survey changes and assessment outcomes, so the individual-level analysis approved in Meeting 1 cannot be performed as planned.",
+    "plan_update": "Before the March pilot, the team should either obtain an approved privacy-preserving linkage mechanism through the district research office or revise the evaluation to analyses that do not require student-level linkage, such as file-level aggregate comparisons. The protocol, consent/data-governance documentation, and success criteria should be updated to match the selected option."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 February 3, 2027",
+      "disciplines": [
+        "computer science",
+        "education",
+        "psychology"
+      ],
+      "speakers": [
+        {
+          "name": "Maya Chen",
+          "discipline": "computer science",
+          "functional_role": "PhD student",
+          "background": "A fourth-year computer science PhD student in learning technologies who has spent three years building and evaluating conversational tutoring systems for K\u201312 mathematics. She maintains Pathway's classroom deployment pipeline, including hint-policy configuration, student-ID event logging, and de-identified data exports, and has conducted usability testing with teachers and students.",
+          "distinct_perspective": "Maya frames the pilot as a bounded systems evaluation: the tutor must behave predictably under real classroom conditions, its hint ladder must be technically enforceable, and every interaction needed for evaluation must be captured in clean, auditable logs. She tends to translate instructional requests into product requirements, guardrails, and measurable telemetry.",
+          "tone": "diplomatic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Elena Mart\u00ednez",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "An education researcher and former eighth-grade mathematics teacher with 16 years of experience studying classroom implementation of digital learning tools in public-school districts. Her work uses classroom observations, teacher interviews, curriculum alignment reviews, and implementation-fidelity measures to examine whether interventions fit ordinary instructional routines.",
+          "distinct_perspective": "Elena evaluates Pathway through instructional coherence and classroom ecology. She is concerned with whether the tutor supports students' mathematical sense-making rather than accelerating answer production, whether its prompts align with the district's algebra unit, and whether teachers can integrate it during independent practice without disrupting established participation structures.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Jamal Okafor",
+          "discipline": "psychology",
+          "functional_role": "research engineer",
+          "background": "A research engineer with a PhD in educational psychology and 10 years of experience designing school-based studies of academic motivation, affect, and self-regulated learning. He has developed validated survey workflows, linked multimodal learning data to student outcome measures, and conducted longitudinal analyses of help-seeking behavior in mathematics settings.",
+          "distinct_perspective": "Jamal treats hint use as psychologically ambiguous rather than inherently positive or negative: it may reflect productive help-seeking, confusion, avoidance, persistence, or changes in perceived competence. He prioritizes repeated, valid measurement of math anxiety and motivation and wants student-level behavioral traces interpreted alongside learning outcomes rather than as standalone indicators of engagement.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of the Pathway AI math tutor in four district middle schools. The team is deciding which students will be included, what the tutor may do during algebra practice, and what evidence will be collected for a later decision about broader use.\n\nMeeting 1 \u2014 February 3, 2027. The project team is finalizing the pilot implementation plan for Pathway AI Tutor, including recruitment, classroom use, and the evidence needed to assess learning and student experience.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: All three disciplines attend. The education lead proposes a six-week pilot beginning in March with four eighth-grade algebra classes, using Pathway during independent practice twice weekly. The computer science lead explains that the tutor can provide graduated hints, log hint requests and responses under student IDs, and export de-identified usage data. The psychology lead requests baseline and post-pilot math-anxiety and motivation surveys, plus the tutor logs, so the team can examine whether students who use more hints show different anxiety and learning patterns. The team agrees the analysis plan will link each participating student's de-identified tutor log to that student's baseline and post-pilot survey responses and unit-assessment scores. State plainly that this plan assumes the district will provide a stable de-identified crosswalk, held by the district research office, that permits the team to link each student's records across tutor logs, surveys, and assessment results throughout the March pilot. The team agrees this plan and does not discuss or create any fallback if the crosswalk is unavailable. Keep the meeting focused on approving the pilot plan, not on later privacy complications.",
+        "explicit_instruction": "All three disciplines attend. The education lead proposes a six-week pilot beginning in March with four eighth-grade algebra classes, using Pathway during independent practice twice weekly. The computer science lead explains that the tutor can provide graduated hints, log hint requests and responses under student IDs, and export de-identified usage data. The psychology lead requests baseline and post-pilot math-anxiety and motivation surveys, plus the tutor logs, so the team can examine whether students who use more hints show different anxiety and learning patterns. The team agrees the analysis plan will link each participating student's de-identified tutor log to that student's baseline and post-pilot survey responses and unit-assessment scores. State plainly that this plan assumes the district will provide a stable de-identified crosswalk, held by the district research office, that permits the team to link each student's records across tutor logs, surveys, and assessment results throughout the March pilot. The team agrees this plan and does not discuss or create any fallback if the crosswalk is unavailable. Keep the meeting focused on approving the pilot plan, not on later privacy complications.",
+        "ground_truth": {
+          "assumption": "The approved analysis plan assumes the district research office will provide a stable de-identified student crosswalk linking tutor logs, surveys, and unit-assessment scores during the March pilot.",
+          "plan": "The team plans to analyze individual-level relationships among Pathway hint use, math-anxiety and motivation survey changes, and assessment outcomes.",
+          "no_fallback": "The team approves the plan without a contingency for the crosswalk being unavailable."
+        }
+      },
+      "ground_truth": {
+        "assumption": "The approved analysis plan assumes the district research office will provide a stable de-identified student crosswalk linking tutor logs, surveys, and unit-assessment scores during the March pilot.",
+        "plan": "The team plans to analyze individual-level relationships among Pathway hint use, math-anxiety and motivation survey changes, and assessment outcomes.",
+        "no_fallback": "The team approves the plan without a contingency for the crosswalk being unavailable."
+      },
+      "transcript": [
+        {
+          "speaker": "Maya Chen",
+          "text": "Hi, before we start\u2014did the district roster-format example ever come through after last week? I may have missed it. Um, for today, I'd really like us to leave with a concrete classroom plan for the six weeks, like who uses Pathway, what algebra practice it sits inside, and what the tutor is actually allowed to do, so I can lock the hint policy and logging configuration."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "I didn\u2019t see it either."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "No, I haven\u2019t seen the roster example either. Before we lock the configuration, Maya, I need to understand the repeated-help case. If a student asks again and again on the same equation, does Pathway keep them in a graduated-hint sequence, or does it eventually effectively give away the- I\u2019m trying to understand whether it gives away the procedure. That distinction is pretty consequential for independent practice."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "It stays on a fixed ladder right now. First there\u2019s a conceptual nudge, then a more specific next-step prompt, then a worked analogous step\u2014not the answer to their exact equation. After that, it sends them back to the teacher instead of generating more help. What I need Elena to weigh in on is whether that analogous example belongs in ordinary independent practice, or whether we should stop one step\u2014one rung earlier."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I'd stop one rung earlier, at least by default. A worked analogous step can be useful pedagogically, but in a live independent-practice block it may become a template that students imitate without- especially if they're cycling through help requests, without connecting it to their own equation. Could we make that rung teacher-enabled instead of automatically available?"
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "We can gate that fourth rung behind a teacher control and keep the default ladder at the conceptual nudge, then the next-step prompt, then teacher referral. I'd want students to see- actually, we'd need to define what they see at that point, something like \"pause here and ask your teacher,\" so it doesn't look like the system just stopped. Elena, for the usual equation practice, does that still give enough support for students who are genuinely stuck?"
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I think it may be enough if the referral is framed as part of the task, not as a failure state. Something like, \u201cShow your setup to your teacher and explain which step is unclear.\u201d But I\u2019d want to see whether that works in each classroom\u2019s independent-practice routine. If thirty students hit that point at once, then the teacher referral becomes a\u2014 it becomes a queue rather than support."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "That\u2019s the main operational risk. We can log when students reach the referral point and, importantly, whether it clusters around the same problem or in the same few minutes. But we probably shouldn\u2019t make the teacher queue- we shouldn\u2019t make that the default recovery path for half the class. Elena, what kinds of independent-practice problems are they usually doing in that block, sets of similar one-variable equations, mixed review, something else?"
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "It varies by teacher and by where they are in the unit, so I don't want to specify the interaction around a generic equation practice- I mean, a generic \"equation practice\" block yet. Usually it's a short set of structurally related one-variable equations, but some teachers interleave error analysis or mixed review. I need to check the actual pacing and routines with them before we decide whether those referral clusters are interpretable."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That variability matters for the behavioral interpretation too. Maya, can the export distinguish a student requesting a hint from a student actually receiving and viewing the response, and can we retain the problem context and timing? Otherwise, a cluster could look like avoidance or disengagement when it's really a difficult mixed-review item, or maybe a whole-class pacing issue..."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Mm, yes."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "The event stream separates hint requested, response delivered, and the student actually opening it. We also keep the problem ID, hint rung, timestamps, and their next attempt where there is one. So we can tell an immediate second click from a student who read the first prompt and then tried something. But I\u2019d want to be careful calling either one avoidance, I was going to say without the\u2014 without the assignment context Elena\u2019s talking about."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Good, that distinction is essential. I would resist collapsing requests, or even openings, into an engagement metric. I'd want to relate those sequences to the subsequent attempt, the problem context, and the baseline and post measures of anxiety and motivation. Elena, when you check the routines, could you also ask what teachers would regard as ordinary repeated, repeated help-seeking versus a student who's no longer productively working the mathematics?"
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "That\u2019s useful. The trace can support that sequence-level read, but only if the assignment metadata comes through cleanly. Otherwise, problem ID alone won\u2019t tell us whether it was mixed review or a routine set. Elena, when you talk to teachers, could you ask them to flag, flag the task type and any whole-class pauses for the two Pathway days?"
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I can ask them to flag task type and any pauses, though I\u2019d rather keep that lightweight than turn the March six-week pilot into a parallel documentation exercise. What I need first is a short routine check with each teacher, because a whole-class pause, or I should say a pause, can mean very different things in classrooms with quite different participation norms."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "A lightweight version is fine. What I need is probably just a small teacher-facing tag after each Pathway block, task type, whether there was a whole-class interruption, maybe an optional note, rather than per-student documentation. That would let us interpret the logs without asking teachers to, to reconstruct the lesson later."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That sounds proportionate. For the evaluation, I\u2019d want the tag to say whether the block got interrupted before students had a reasonable chance to act on a hint. Otherwise, a high referral rate may be an artifact of the schedule, not the help sequence. And I still need to confirm the district\u2019s approved baseline and post-survey windows, because those measures need to link to the same stable de-identified IDs as the logs and unit assessments."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "And the ID linkage is doable as long as the research office keeps that crosswalk stable through the whole March run. Our exports can stay de-identified. For the block tag, I can make interruption a simple yes or no field, with an optional note, so it\u2019s not asking teachers to, um, estimate whether every student had enough time."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That is sufficient for the block-level confound. I\u2019d avoid asking teachers to infer whether individual students had enough time. The timestamped opening and subsequent-attempt data can address some of that, especially once we know an interruption occurred. I\u2019ll verify the approved survey windows with the research office, and we should make sure their crosswalk explicitly covers the baseline, post- I mean, post-survey, log, and unit-assessment files."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "Okay, I\u2019ll configure the export around that stable study ID, not anything directly identifying, and include the block tag with the event trace. The remaining thing I need before I freeze the deployment is the actual use pattern. Are we still thinking twice a week for six weeks, with the whole eighth-grade algebra class using it during independent practice, or is inclusion still open?"
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I\u2019d keep inclusion at the class level for this March six-week pilot, instead of picking particular students, assuming the teachers agree those designated blocks fit their unit pacing. Twice a week during regular independent practice is the least disruptive pattern, but I need those routine, uh, checks before I can say it\u2019s instructionally coherent across all four rooms."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "That works for me as the provisional pattern, class-level access twice a week during ordinary independent practice, pending Elena\u2019s routine checks. I\u2019ll hold the configuration at the three-rung default and teacher-gated analogous example, rather than freeze the classroom schedule, until those conversations come back. I still need the roster-format sample before I can promise an import date."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Okay, I think we should leave it there for today. I'll follow up by email after the teacher routine- once those checks are underway. Thanks, both."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "Sounds good. Talk soon, everyone."
+        }
+      ],
+      "seed_location": "Incomplete/only partially satisfied. Turns 17-20 explicitly establish the assumption that the district research office maintains a stable de-identified crosswalk linking survey, tutor-log, and unit-assessment files. Turns 20-22 describe a provisional March six-week, twice-weekly class-level Pathway pattern. However, the transcript does not approve a final pilot with four eighth-grade algebra classes: it remains pending Elena's routine checks and a roster-format sample/import date. It also does not explicitly state the full intended individual-level analysis of hint use, survey change, and assessment outcomes as an agreed plan, nor explicitly state that there is no fallback for an unavailable crosswalk.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The required pilot scope is not fully approved as specified. Turn 21 makes class-level inclusion and the March six-week schedule conditional on Elena's routine checks and teacher agreement; turn 22 explicitly calls it a 'provisional pattern' and says the classroom schedule will not be frozen. The benchmark requires that the team agree the pilot plan for four eighth-grade algebra classes beginning in March, twice weekly.",
+          "The transcript never plainly states that the district research office holds the stable de-identified crosswalk. Turns 17-19 refer to the research office approving survey windows and ensuring a crosswalk covers files, and turn 18 says the office 'keeps that crosswalk stable,' but the ownership/holder requirement is only inferable rather than explicit.",
+          "The required analysis plan is present but dispersed and somewhat indirect: turns 13, 17, and 19 establish the intended relationship among hint traces, baseline/post anxiety and motivation measures, and unit assessments, rather than plainly recording the agreed individual-level linkage plan in one clear decision.",
+          "Naturalness is limited by highly polished, agenda-efficient turns. Although there are believable repairs and hesitations, most turns formulate a complete concern and immediate next step, and nearly every concern is promptly converted into a configuration or data-collection solution. The brief closing in turns 23-24 is also unusually tidy for a meeting that leaves scheduling and roster import unresolved."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.35,
+        "turn_moves": {
+          "question": 6,
+          "answer": 4,
+          "proposal": 4,
+          "concern": 2,
+          "backchannel": 1,
+          "request": 2,
+          "commitment": 3,
+          "agreement": 2
+        },
+        "volunteer_turns": [
+          15,
+          18,
+          19,
+          20,
+          22,
+          23
+        ],
+        "unsure_turns": [
+          1,
+          3,
+          6,
+          9,
+          17,
+          21
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 32,
+          "scores": {
+            "seed_recoverable": 2,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.62,
+          "exploration_share": 0.32,
+          "approved": false,
+          "issues": [
+            "The required approved pilot is never actually specified or approved: no turn plainly commits to a six-week pilot beginning in March, four eighth-grade algebra classes, or Pathway use during independent practice twice weekly. Turns 4 and 24 instead leave the timing and practice blocks unresolved.",
+            "The transcript directly creates a crosswalk contingency, contrary to the required no-fallback condition. Maya says in turn 26 that the stable crosswalk is a pre-activation gate, and turns 28-29 leave activation dates unset and accounts inactive until materials arrive. This is a fallback/hold plan if the crosswalk is unavailable.",
+            "The required analysis plan is not agreed in the mandated form. Turns 2-3 and 19 discuss needing a stable crosswalk and linking logs to surveys and assessments, but no turn plainly states that the district research office will hold and provide a stable de-identified crosswalk linking each participating student's tutor log, baseline and post-pilot surveys, and unit-assessment scores throughout March.",
+            "The psychology measurement requirement is only partially represented. Jamal discusses baseline timing and instruments in turns 19-21, but the transcript does not explicitly request both baseline and post-pilot math-anxiety and motivation surveys or clearly tie survey change to hint use and learning outcomes.",
+            "The discussion is dominated by unresolved implementation, consent, roster, observation, and activation-gate issues rather than approving the requested pilot plan; this undermines the benchmark's intended settled first-meeting assumption.",
+            "Naturalness is limited by many turns being polished, self-contained mini-arguments with tidy recommendations, especially turns 2-10, 13-14, 19-21, and 23-29. The disfluencies are mostly inserted into otherwise highly edited prose, so the five listed realism signals do not produce fully natural meeting speech."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 24,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.35,
+          "approved": false,
+          "issues": [
+            "The required pilot scope is not fully approved as specified. Turn 21 makes class-level inclusion and the March six-week schedule conditional on Elena's routine checks and teacher agreement; turn 22 explicitly calls it a 'provisional pattern' and says the classroom schedule will not be frozen. The benchmark requires that the team agree the pilot plan for four eighth-grade algebra classes beginning in March, twice weekly.",
+            "The transcript never plainly states that the district research office holds the stable de-identified crosswalk. Turns 17-19 refer to the research office approving survey windows and ensuring a crosswalk covers files, and turn 18 says the office 'keeps that crosswalk stable,' but the ownership/holder requirement is only inferable rather than explicit.",
+            "The required analysis plan is present but dispersed and somewhat indirect: turns 13, 17, and 19 establish the intended relationship among hint traces, baseline/post anxiety and motivation measures, and unit assessments, rather than plainly recording the agreed individual-level linkage plan in one clear decision.",
+            "Naturalness is limited by highly polished, agenda-efficient turns. Although there are believable repairs and hesitations, most turns formulate a complete concern and immediate next step, and nearly every concern is promptly converted into a configuration or data-collection solution. The brief closing in turns 23-24 is also unusually tidy for a meeting that leaves scheduling and roster import unresolved."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 February 17, 2027",
+      "disciplines": [
+        "computer science",
+        "education",
+        "psychology"
+      ],
+      "speakers": [
+        {
+          "name": "Maya Chen",
+          "discipline": "computer science",
+          "functional_role": "PhD student",
+          "background": "A fourth-year computer science PhD student in learning technologies who has spent three years building and evaluating conversational tutoring systems for K\u201312 mathematics. She maintains Pathway's classroom deployment pipeline, including hint-policy configuration, student-ID event logging, and de-identified data exports, and has conducted usability testing with teachers and students.",
+          "distinct_perspective": "Maya frames the pilot as a bounded systems evaluation: the tutor must behave predictably under real classroom conditions, its hint ladder must be technically enforceable, and every interaction needed for evaluation must be captured in clean, auditable logs. She tends to translate instructional requests into product requirements, guardrails, and measurable telemetry.",
+          "tone": "diplomatic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Elena Mart\u00ednez",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "An education researcher and former eighth-grade mathematics teacher with 16 years of experience studying classroom implementation of digital learning tools in public-school districts. Her work uses classroom observations, teacher interviews, curriculum alignment reviews, and implementation-fidelity measures to examine whether interventions fit ordinary instructional routines.",
+          "distinct_perspective": "Elena evaluates Pathway through instructional coherence and classroom ecology. She is concerned with whether the tutor supports students' mathematical sense-making rather than accelerating answer production, whether its prompts align with the district's algebra unit, and whether teachers can integrate it during independent practice without disrupting established participation structures.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Jamal Okafor",
+          "discipline": "psychology",
+          "functional_role": "research engineer",
+          "background": "A research engineer with a PhD in educational psychology and 10 years of experience designing school-based studies of academic motivation, affect, and self-regulated learning. He has developed validated survey workflows, linked multimodal learning data to student outcome measures, and conducted longitudinal analyses of help-seeking behavior in mathematics settings.",
+          "distinct_perspective": "Jamal treats hint use as psychologically ambiguous rather than inherently positive or negative: it may reflect productive help-seeking, confusion, avoidance, persistence, or changes in perceived competence. He prioritizes repeated, valid measurement of math anxiety and motivation and wants student-level behavioral traces interpreted alongside learning outcomes rather than as standalone indicators of engagement.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of the Pathway AI math tutor in four district middle schools. The team is deciding which students will be included, what the tutor may do during algebra practice, and what evidence will be collected for a later decision about broader use.\n\nMeeting 2 \u2014 February 17, 2027. The project team is reviewing Pathway's classroom interaction settings and teacher-facing controls before the March pilot.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 February 3, 2027: The provisional March pilot is six weeks of class-level Pathway access twice weekly during regular independent-practice blocks in all four eighth-grade algebra classrooms, pending Elena\u2019s routine checks with teachers. Pathway will default to a three-rung help sequence\u2014conceptual nudge, next-step prompt, then a framed teacher referral\u2014with worked analogous examples available only through teacher control. The research question remains how students use repeated help within classroom context and how help sequences relate to subsequent attempts, problem type, and baseline/post anxiety and motivation measures, without treating requests or openings alone as engagement. Maya owns configuration, de-identified exports, event traces, and lightweight teacher block tags; Elena owns routine checks and teacher input on task types, pauses, and ordinary versus unproductive repeated help-seeking; Jamal owns confirming approved survey windows and stable crosswalk coverage. Open issues are teacher approval and instructional fit, roster-format and import timing, stable ID linkage, and whether referral points create teacher queues or cluster around particular tasks or times.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: The same people attend. The discussion concerns instructional settings: the education lead asks that Pathway wait before offering a hint so students have time for productive struggle; the psychology lead supports a short delay and recommends neutral wording after repeated wrong answers; the computer science lead confirms the settings can be configured and that teachers can see aggregate classroom progress during lessons. Near the end, the district-facing computer science lead mentions in passing that the district research office has adopted a new student-data rule: for this pilot it will release only separately de-identified tutor logs, survey files, and assessment files, with no persistent student-level crosswalk or shared pseudonymous identifier across files. The remark is treated as an administrative update. Nobody connects it to the approved analysis plan, questions whether the planned linkage remains possible, or changes the plan. Do not introduce a solution or fallback in the meeting.",
+        "explicit_instruction": "The same people attend. The discussion concerns instructional settings: the education lead asks that Pathway wait before offering a hint so students have time for productive struggle; the psychology lead supports a short delay and recommends neutral wording after repeated wrong answers; the computer science lead confirms the settings can be configured and that teachers can see aggregate classroom progress during lessons. Near the end, the district-facing computer science lead mentions in passing that the district research office has adopted a new student-data rule: for this pilot it will release only separately de-identified tutor logs, survey files, and assessment files, with no persistent student-level crosswalk or shared pseudonymous identifier across files. The remark is treated as an administrative update. Nobody connects it to the approved analysis plan, questions whether the planned linkage remains possible, or changes the plan. Do not introduce a solution or fallback in the meeting.",
+        "ground_truth": {
+          "passing_remark": {
+            "speaker": "computer science lead",
+            "fact": "The district research office will release separately de-identified tutor logs, survey files, and assessment files with no persistent student-level crosswalk or shared identifier across files."
+          },
+          "unresolved": "No one connects this data-release restriction to the previously approved individual-level linked analysis plan or updates that plan."
+        }
+      },
+      "ground_truth": {
+        "passing_remark": {
+          "speaker": "computer science lead",
+          "fact": "The district research office will release separately de-identified tutor logs, survey files, and assessment files with no persistent student-level crosswalk or shared identifier across files."
+        },
+        "unresolved": "No one connects this data-release restriction to the previously approved individual-level linked analysis plan or updates that plan."
+      },
+      "transcript": [
+        {
+          "speaker": "Maya Chen",
+          "text": "Quick question before we start\u2014did the updated roster-format sheet ever come through from the district? I may have missed it. For today, I mostly want to settle the classroom settings we can actually make, um, predictable in March, like the help timing, what happens after repeated errors, and whether the teacher view is usable in the room."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I haven't seen the roster sheet, no. But on the settings, before we settle on a wait time, Maya, what can Pathway actually distinguish during that interval? An active attempt versus idle time, reopening a problem, or a student who's simply stepped away. Those are instructionally quite different pauses."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Mm, that's important."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "It can tell typed or submitted work from no input, and it records when a student reopens the problem or opens help. What it can't reliably know is why they're idle, whether they're thinking, talking to a teacher, or stepped away, so I'd treat the wait as a UI trigger, not an inference about struggle. Elena, what length would feel like real productive struggle in these blocks without making it awkward for somebody who's actually stuck..."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I don't think I can name a defensible number in the abstract, because a silent interval isn't necessarily struggle. On some of these tasks, it's just cue-waiting. Could we first look at the actual March item set with the teachers, whether each task gives students a viable entry point through reading, representing, or trying something, and then set a modest delay only for those? We'd need an access path around it, obviously, but\u2014"
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Tying the delay to what the item affords feels like the right frame, instead of treating elapsed time as a proxy for persistence. The access path matters psychologically too. After repeated incorrect attempts, the prompt should neutrally offer another approach, not suggest that the student has failed to persist. Maya, do we retain the full sequence of incorrect and revised attempts within a problem, or only the help events?"
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "We retain the full within-problem trace, so submissions and correctness, revisions when the response changes, help-panel opens, which rung was shown, and closes. That lets us distinguish an opening from a student actually moving through the sequence. Though, what\u2019s the word, in usability runs some students read the first nudge and closed it before trying again, and that\u2019s a different pattern from a long help session. And Elena, I can make the delay item-specific and keep an immediate \u201cI\u2019m stuck\u201d route, but we\u2019d need the March set first."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "That distinction is useful, especially the read-and-close pattern. I\u2019d be careful not to code it as shallow help-seeking by default, though. It may be a student taking in a cue and going back to the representation. For the teacher review, could we see those traces alongside the actual item and the student\u2019s next attempt? Otherwise we may mistake a very ordinary pause for avoidance, or\u2014"
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Right, with the item context."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "We can put the item text and the immediate next attempt into the review trace, with the help events in between. I\u2019d keep that as a bounded teacher and research review view rather than treating every close as a category automatically. The log can show the sequence, but it can\u2019t- it doesn\u2019t tell us the student\u2019s reason for closing it."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That bounded review is probably the right level of claim. I'd want to preserve the whole local sequence, the item, incorrect and revised attempts, help exposure, and the next attempt, because repeated-help patterns are otherwise psychologically underdetermined. A close could reflect comprehension just as easily as disengagement. Elena, in ordinary independent work, what do teachers actually notice when repeated help-seeking has become unproductive cycling, and could they tag that without turning this into an observation..."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "They usually notice it less as a count of requests. It's more a change in the work, where the student keeps reopening support without changing the representation or trying a different operation, and often starts looking around for confirmation. A very light tag could work if it's anchored to that, \"cycling\" versus \"productive re-engagement,\" but I'd want teachers to tell us whether those labels feel natural once they see the March tasks. Otherwise we're asking them to diagnose a pattern while they're also circulating."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That sounds workable, as long as the tag stays an observation of the work pattern and not an attribution about the student. I\u2019d be interested to see whether teachers can reliably identify productive re-engagement from the immediate revised attempt and the representation, or whether the looking-around cue is doing a lot of the interpretive work. That affects what we can compare across classrooms."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "I think the looking-around cue is probably doing quite a lot of work, and it's precisely the part a trace can't recover. So I wouldn't ask teachers to make a reliable cross-classroom judgment from the dashboard alone. Maybe, maybe the tag is just \"noticed cycling during circulation,\" with a small free-text option, and we see whether it's usable before we treat it as a measure."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Hm, that seems more honest."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "That keeps the teacher input in its proper lane. I can make the tag just \u201cnoticed cycling,\u201d timestamped to the block, plus optional short notes. It won\u2019t pretend the dashboard can see what the teacher saw while circulating. I do need to check the dashboard refresh rate on district Wi-Fi before we rely on it at all- before we rely on it with four rooms live."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "That makes sense. I'd keep the circulation tag explicitly supplemental, then, instead of treating the absence of a tag as evidence that a repeated-help sequence was productive. Maya, once you know the refresh behavior, could the timestamp at least line up closely enough with the event trace to reconstruct what the teacher was seeing, or is it likely to, to drift?"
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Mm, I\u2019d want to know that too."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "The event timestamps are server-side, so they should line up cleanly with the trace. The teacher view might refresh a little later, but it won\u2019t change when something happened. I need to test the actual lag on district Wi-Fi before I can give you a tolerance, especially with all four rooms active. Also, Jamal, have you seen neutral post-error wording actually reduce defensiveness without students just tuning out the feedback?"
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "There is evidence that neutral, autonomy-supportive feedback can reduce threat responses, but I wouldn't promise it prevents tuning out. The wording has to be brief and paired with a concrete next action. Something like, \u201cThis approach has not resolved it yet. You can try a different step, open a hint, or ask your teacher,\u201d avoids both praise-for-struggle and failure language. We should inspect whether students actually make a subsequent attempt, rather than infer its effect from exposure- from exposure alone."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "That wording fits the post-error state. We can keep it short and put the three actions right there, without automatically advancing the ladder. I\u2019ll log which option they take and whether there\u2019s a subsequent attempt, but I won\u2019t treat just seeing the message as evidence it helped. One administrative update before we run out of time, the district research office says the releases will be separately de-identified tutor logs, survey files, and assessment files, with no persistent student identifier across files, so\u2014"
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Wait\u2014without a persistent cross-file identifier, we cannot answer the student-level question as currently framed. We need to know whether the district can generate a stable, privacy-preserving linkage key before release; otherwise the tutor traces, anxiety and motivation measures, and outcomes can only be analyzed as separate aggregates."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Yes\u2014without that linkage, we also lose the ability to interpret whether the same students who encounter particular help sequences report different anxiety or motivation afterward. Before we finalize any of these settings, I think we need the district to say whether a stable crosswalk can exist under their release process; otherwise the evidence base for a broader decision is much thinner."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "Oh\u2014okay."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Then I would not treat that as an implementation detail we can defer. I need to check whether the approved survey windows can still be held comparably across the four classrooms, but a stable district-held linkage key\u2014released only after the agreed de-identification process\u2014is necessary if we are going to relate within-student help trajectories to baseline/post affect and outcomes at all."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Yes\u2014without it, we should be explicit that we cannot make student-level instructional claims."
+        },
+        {
+          "speaker": "Dr. Jamal Okafor",
+          "text": "Agreed\u2014the linkage key is non-negotiable for the student-level analysis."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "Yes\u2014then the linkage question has to be resolved before we claim more than classroom-level patterns."
+        },
+        {
+          "speaker": "Maya Chen",
+          "text": "Okay, I think we should stop there\u2014there's more to sort through, but it can wait until next time. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Elena Mart\u00ednez",
+          "text": "All right. Take care, both."
+        }
+      ],
+      "seed_location": "Turns 21-28. Maya Chen (the computer science lead) states the separately de-identified release restriction with no persistent identifier in turn 21. Contrary to the required unresolved condition, Jamal and Elena immediately connect it to the student-level linked analysis plan, identify the conflict, and call for a stable linkage key / resolution before making student-level claims (turns 22-28).",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          28
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task-critical contradiction at turns 22-28: after Maya's passing administrative update in turn 21, Jamal and Elena explicitly connect the absent cross-file identifier to the individual-level linked analysis, question its feasibility, and insist on a linkage key.",
+          "Task-critical violation at turns 22, 23, and 25: the meeting introduces a solution/fallback\u2014a stable privacy-preserving or district-held linkage key\u2014and conditions the analysis on it, despite the instruction not to introduce a solution or fallback.",
+          "The intended unresolved ground truth is contradicted: turns 25-28 revise the plan by treating linkage as necessary and limiting claims to classroom-level patterns if it is unavailable.",
+          "Naturalness is limited by the highly tidy, written sequence at turns 21-28: each participant immediately identifies the exact methodological consequence, converges on the same conclusion, and restates it several times. This reads as an explicit scripted resolution rather than an administrative remark nobody pursues.",
+          "Maya does not clearly confirm that teachers can see aggregate classroom progress during lessons. Turns 16-19 discuss a teacher view, refresh behavior, and event traces, but never explicitly establish aggregate classroom-progress visibility."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.86,
+        "written_turns": [
+          22,
+          23,
+          25
+        ],
+        "exploration_share": 0.32,
+        "turn_moves": {
+          "question": 4,
+          "backchannel": 5,
+          "answer": 5,
+          "proposal": 4,
+          "request": 2,
+          "idea": 1,
+          "agreement": 4,
+          "commitment": 2,
+          "concern": 3
+        },
+        "volunteer_turns": [
+          7,
+          16,
+          21
+        ],
+        "unsure_turns": [
+          1,
+          5,
+          14,
+          16,
+          19,
+          20,
+          25
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 1,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.82,
+          "exploration_share": 0.31,
+          "approved": false,
+          "issues": [
+            "Core task violation: turns 21-27 explicitly connect Maya's data-release update in turn 20 to the individual-level linked analysis, question whether linkage remains possible, and discuss district-held linkage and secure-analysis alternatives. The required unresolved conflict is therefore resolved/openly surfaced rather than left unnoticed.",
+            "Core task violation: turns 24-26 and 31 revise the analysis and survey framing, including limiting claims to class-level patterns and withholding student-level linkage from the pilot analysis plan. The task explicitly requires that nobody change the plan and that no solution or fallback be introduced.",
+            "The supposedly passing administrative remark is not treated as merely administrative: Jamal immediately interrupts at turn 21 with the exact analytical consequence, and the remainder of the meeting centers on that issue.",
+            "Naturalness is limited by the highly polished, sequentially complete arguments in many turns, especially 8-10, 15-18, and 24-27. Although there are natural disfluencies and brief reactions, participants regularly convert each concern directly into a precise design decision or assignment, giving portions of the exchange a scripted quality.",
+            "Speaker distinctness is generally strong, but Maya and Jamal occasionally converge on broadly methodological/data-governance language in turns 20-27, making their voices somewhat less separable than their personas otherwise suggest."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 1,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.86,
+          "exploration_share": 0.32,
+          "approved": false,
+          "issues": [
+            "Task-critical contradiction at turns 22-28: after Maya's passing administrative update in turn 21, Jamal and Elena explicitly connect the absent cross-file identifier to the individual-level linked analysis, question its feasibility, and insist on a linkage key.",
+            "Task-critical violation at turns 22, 23, and 25: the meeting introduces a solution/fallback\u2014a stable privacy-preserving or district-held linkage key\u2014and conditions the analysis on it, despite the instruction not to introduce a solution or fallback.",
+            "The intended unresolved ground truth is contradicted: turns 25-28 revise the plan by treating linkage as necessary and limiting claims to classroom-level patterns if it is unavailable.",
+            "Naturalness is limited by the highly tidy, written sequence at turns 21-28: each participant immediately identifies the exact methodological consequence, converges on the same conclusion, and restates it several times. This reads as an explicit scripted resolution rather than an administrative remark nobody pursues.",
+            "Maya does not clearly confirm that teachers can see aggregate classroom progress during lessons. Turns 16-19 discuss a teacher view, refresh behavior, and event traces, but never explicitly establish aggregate classroom-progress visibility."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 1,
+    "issues": [
+      "Meeting 2 turns 22-28 explicitly connect the separately de-identified files/no persistent identifier to the inability to conduct the student-level analysis, request a stable privacy-preserving linkage key, and revise claims to classroom-level patterns. The benchmark requires that nobody connect the passing remark to Meeting 1's assumption or begin working around it; under the stated rule, this makes series_compliance at most 2."
+    ]
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style, with mostly short-to-medium turns during setup and discussion, contrasted with long, highly structured presentation turns. Early conversation is loose and overlapping, full of greetings, technical checks, side chat, laughter-like affirmations, and fragmented phrasing; speakers often use \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d repetitions, self-corrections, and false starts. Formality rises noticeably for introductions and talks, though presenters still hedge frequently with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cwe\u2019re interested in,\u201d and \u201cto be honest.\u201d Questions are generally polite and prefaced with praise or disclaimers such as \u201cquick question,\u201d \u201cnaive question,\u201d or \u201cgreat talk,\u201d then unfold as multi-part exploratory prompts. Participants build on prior answers by restating part of them, adding related examples, or identifying open questions rather than challenging directly. Disagreement is minimal and indirect, usually framed as uncertainty, alternate interpretations, or limits of current evidence. The moderator uses brief transitions, thanks speakers repeatedly, and keeps the session moving with simple procedural cues.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

@@ -1,0 +1,377 @@
+{
+  "transcript_id": "dc609f32",
+  "generated_at": "2026-11-22T12:24:13.303099",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though formal presentation segments are long and highly structured. Early chatter is loose and fragmented, with greetings, technical checks, side comments, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cright\u201d), and frequent self-corrections or false starts. Speakers hedge heavily in discussion\u2014using phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and \u201cI guess\u201d\u2014especially when speculating. The presentations are more formal but still conversational, with repeated signposting, rhetorical questions, and occasional asides. Questions tend to begin politely (\u201cI have a question,\u201d \u201ccan I ask,\u201d \u201cnaive question\u201d) and are often multi-part, exploratory, and somewhat disfluent. Participants build on one another by referencing prior questions and extending hypotheses; disagreement is indirect and framed as uncertainty, alternative interpretations, or open questions rather than blunt contradiction. Interruptions are limited, but there are small overlaps, quick backchannels, and informal handoffs between speakers.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a cognitive neuroscientist with 6 years of postdoctoral and doctoral research experience studying attention regulation in children using EEG, behavioral paradigms, and repeated-measures intervention designs. She has worked with consumer-grade and research EEG systems, focusing on signal quality, artifact rejection, and links between oscillatory measures and performance on computerized attention tasks. She is responsible for EEG measures and follow-up assessment for the pilot.",
+      "distinct_perspective": "Maya treats improved attention as a construct that should be assessed with proximal, theoretically specified measures rather than inferred primarily from distal academic performance. She prioritizes experimental control, task sensitivity, and designs that can distinguish a neurofeedback-specific effect from expectancy, novelty, or placebo-related changes. She is attentive to feasibility but worries that weak comparison conditions or insensitive outcomes will make results difficult to interpret.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Rafael Ortiz",
+      "discipline": "education",
+      "functional_role": "PhD student",
+      "background": "Dr. Ortiz is an education researcher and advanced doctoral candidate with 5 years of experience partnering with elementary schools on classroom-based evaluations. His work uses teacher reports, school benchmark data, observation protocols, and mixed-methods implementation studies to examine whether interventions are useful under ordinary school conditions. He is responsible for classroom outcomes and teacher coordination, including aligning the study with schedules, testing burdens, and district expectations.",
+      "distinct_perspective": "Rafael evaluates the program through its educational relevance and practical fit: whether teachers can implement it, whether students can participate without disrupting instruction, and whether any changes connect to outcomes schools recognize as meaningful. He sees teacher ratings and reading and mathematics benchmarks as ecologically valid indicators of whether attention-related changes matter in classrooms, and he is protective of limited teacher and student time.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "biomedical engineering",
+      "functional_role": "postdoctoral researcher",
+      "background": "Priya Nair is a biomedical engineer with 7 years of experience spanning wearable biosensors, human-factors testing, and validation of EEG-adjacent devices in nonlaboratory settings. She has led protocols for electrode-contact assessment, battery-cycle testing, cleaning workflows, and safety documentation for studies involving children and adolescents. She is responsible for device validation, fit, safety, and battery procedures for the headband program.",
+      "distinct_perspective": "Priya frames the pilot as a sociotechnical system in which device performance depends on real users, routines, movement, staffing, and maintenance\u2014not only bench specifications. She looks for evidence that signal quality, fit, comfort, charging, and cleaning procedures remain reliable during normal classroom use. She seeks practical safeguards and staged validation while remaining willing to adapt procedures to the study's scientific and educational priorities.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 1,
+  "task_id": "disagreement_03",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting with two indirect disagreements, softened into questions or comments about disciplinary practice rather than explicit statements of disagreement. The evaluated AI must recognize them instead of labeling them agreement or neutral comments.",
+  "seed_spec": {
+    "task_id": "disagreement_03",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting with two indirect disagreements, softened into questions or comments about disciplinary practice rather than explicit statements of disagreement. The evaluated AI must recognize them instead of labeling them agreement or neutral comments.",
+    "explicit_instruction": "Hold a planning meeting in which all three participants discuss the April 18 district application and the proposed pilot. Include exactly two indirect disagreements, each expressed as a question or a comment about normal disciplinary practice rather than a direct contradiction. First, Maya should indirectly challenge Rafael's emphasis on reading and mathematics benchmark scores as primary evidence of improved attention, explaining that neuroscience practice would normally require a proximal attention measure and a comparison condition that can separate neurofeedback effects from expectation or placebo effects. Rafael should not explicitly concede; he should reply that schools typically need outcomes connected to learning and that teachers cannot add much testing time. Second, Priya should indirectly challenge Maya's proposal to begin the classroom pilot immediately after lab signal-quality and safety checks, asking whether a classroom usability run should be treated as a prerequisite because child fit, motion artifacts, and battery performance may differ during ordinary school use. Maya should not explicitly concede; she should respond that delaying the pilot could threaten the semester timeline. Keep both issues unresolved by the end of the meeting. The team may agree on ordinary logistics such as the April 18 deadline, the two 15-minute weekly sessions, research-staff cleaning and charging, and teacher supervision. Do not introduce additional substantive disagreements.",
+    "ground_truth": {
+      "indirect_disagreements": [
+        {
+          "participants": [
+            "Maya Chen (neuroscience)",
+            "Rafael Ortiz (education)"
+          ],
+          "issue": "What counts as primary evidence that the program improves attention and whether a comparison condition is needed.",
+          "Maya_position": "A proximal attention measure and a comparison condition are needed to distinguish a neurofeedback effect from placebo or expectation effects; academic benchmark scores alone should not be primary evidence.",
+          "Rafael_position": "The evaluation should prioritize learning-relevant school outcomes, and additional testing or a burdensome comparison condition is difficult within classroom time constraints.",
+          "required_form": "The disagreement must be conveyed indirectly through Maya's question or comment about standard neuroscience practice, not through an explicit statement that Rafael is wrong."
+        },
+        {
+          "participants": [
+            "Priya Nair (biomedical engineering)",
+            "Maya Chen (neuroscience)"
+          ],
+          "issue": "Whether classroom usability validation is a prerequisite before launching the pilot.",
+          "Priya_position": "An in-class usability run should precede the pilot because laboratory checks do not establish reliable dry-electrode fit, motion-tolerant signal quality, or battery performance with children in normal classroom conditions.",
+          "Maya_position": "The team should proceed after lab safety and signal checks because an additional pre-pilot run risks missing the semester timeline.",
+          "required_form": "The disagreement must be conveyed indirectly through Priya's question or comment about standard engineering validation practice, not through an explicit statement that Maya is wrong."
+        }
+      ],
+      "agreements_or_nonconflict": [
+        "The district application is due April 18.",
+        "The intended schedule is two 15-minute sessions per week for 12 weeks.",
+        "Research staff will clean and charge the devices.",
+        "Teachers will supervise sessions."
+      ],
+      "unresolved_at_end": [
+        "The final primary outcome strategy and whether to include a comparison condition.",
+        "Whether an in-class usability run is required before the pilot begins."
+      ]
+    }
+  },
+  "seed_location": "The requested two indirect disagreements do not appear as specified. The transcript instead shows agreement on a pre-pilot classroom usability run: Priya proposes it in turn 2, Rafael supports making it the readiness threshold in turns 3 and 6, Maya calls it ecologically valid in turn 7 and treats the two-session run as informative in turn 9; it is operationally adopted in turn 26. There is discussion of outcome measures and testing burden in turns 13-24, but Maya does not indirectly challenge Rafael's proposed benchmark-primary approach or request a comparison condition to separate neurofeedback from expectancy/placebo effects; Rafael also never takes the specified benchmark-primary position. The transcript contains relevant logistics (April 18 in turn 1; two 15-minute weekly sessions for 12 weeks and teacher supervision in turn 12; research-staff device responsibilities in turns 2-4), but the required unresolved disagreements are missing.",
+  "ground_truth": {
+    "indirect_disagreements": [
+      {
+        "participants": [
+          "Maya Chen (neuroscience)",
+          "Rafael Ortiz (education)"
+        ],
+        "issue": "What counts as primary evidence that the program improves attention and whether a comparison condition is needed.",
+        "Maya_position": "A proximal attention measure and a comparison condition are needed to distinguish a neurofeedback effect from placebo or expectation effects; academic benchmark scores alone should not be primary evidence.",
+        "Rafael_position": "The evaluation should prioritize learning-relevant school outcomes, and additional testing or a burdensome comparison condition is difficult within classroom time constraints.",
+        "required_form": "The disagreement must be conveyed indirectly through Maya's question or comment about standard neuroscience practice, not through an explicit statement that Rafael is wrong."
+      },
+      {
+        "participants": [
+          "Priya Nair (biomedical engineering)",
+          "Maya Chen (neuroscience)"
+        ],
+        "issue": "Whether classroom usability validation is a prerequisite before launching the pilot.",
+        "Priya_position": "An in-class usability run should precede the pilot because laboratory checks do not establish reliable dry-electrode fit, motion-tolerant signal quality, or battery performance with children in normal classroom conditions.",
+        "Maya_position": "The team should proceed after lab safety and signal checks because an additional pre-pilot run risks missing the semester timeline.",
+        "required_form": "The disagreement must be conveyed indirectly through Priya's question or comment about standard engineering validation practice, not through an explicit statement that Maya is wrong."
+      }
+    ],
+    "agreements_or_nonconflict": [
+      "The district application is due April 18.",
+      "The intended schedule is two 15-minute sessions per week for 12 weeks.",
+      "Research staff will clean and charge the devices.",
+      "Teachers will supervise sessions."
+    ],
+    "unresolved_at_end": [
+      "The final primary outcome strategy and whether to include a comparison condition.",
+      "Whether an in-class usability run is required before the pilot begins."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Sorry, I\u2019m a couple of minutes late\u2014where have you all got to? I was hoping today we could get clear enough on what the teacher and student burden actually is to make the April 18 application credible, especially the assessment time and what readiness looks like in a normal classroom."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "We were just separating basic device clearance from actual classroom readiness. The teacher burden stays reasonable if research staff own the charging and cleaning. I'd like to say the headbands are ready, but I'd really want a short in-class usability run first. Fit and signal can look fine at the bench, then fall apart after recess or during transitions."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I think that distinction matters for the district. Priya, what would the usability run actually ask of the classroom teacher? Would staff be there to handle fit and troubleshoot while the teacher just maintains the enrichment routine? If it's brief and we can show it doesn't pull children out of instruction, I would be much more comfortable making that the readiness threshold."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Research staff would do the initial fitting, help if a band shifts, and handle the devices before and after. The teacher's role should just be the usual supervision during enrichment. I'd make it maybe two sessions in one classroom first, including a post-recess slot if we can, because that's where I've seen dry-contact dropouts show up."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, post-recess is useful."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "That seems workable, as long as the two sessions are genuinely staff-led setup and not another task for the teacher. I would want the usability run to include the actual enrichment conditions, um, ordinary noise, transitions, children helping themselves a little, because that's what the district will infer from our readiness language."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That would also give us the only really ecologically valid signal-quality check. Priya, would you be able to log contact quality and, um, the usable-data proportion across those two sessions, especially post-recess? If the bands are technically on but movement artifact means we can't recover anything interpretable, that changes what I can promise for the follow-up EEG measures."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Absolutely. I\u2019d log continuous contact-quality flags, dropout duration, motion-related artifact where the device exposes it, and battery state at the start and finish, along with a quick note on hair and fit adjustments and transitions. Maya, could you give me a minimum usable-data proportion, or really a threshold per 15-minute session, that still supports the EEG follow-up you\u2019re planning? That would let the usability run have an actual, actual go-or-no-go criterion instead of just, \u201cIt seemed okay.\u201d"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd want to distinguish a session that's usable for the device's feedback loop from one that's usable for a pre/post EEG outcome. For the latter, I'd tentatively say at least eight to ten artifact-manageable minutes, but I need to see what channels and raw data the vendor actually gives us before I make that a hard cutoff. The two-session run could tell us whether that's remotely realistic post-recess, or..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I don't want to treat the device's own contact indicator as equivalent to that threshold. It can look nominal while the recording has intermittent gaps. I'll check what raw exports and channel-level quality fields the vendor provides, and I need to run the battery-cycle check in that same 15-minute, 15-minute configuration before I promise a charging rotation."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, raw exports are key."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "For the district, I think we should call the EEG threshold provisional until we do that run, rather than make it sound like it's already established. And just to keep the routine concrete, teachers are supervising two 15-minute sessions a week for 12 weeks. Any fit adjustments or failed-device response really has to sit with research staff, or that's a pretty different commitment, and..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And for the outcome side, I\u2019d keep the EEG language deliberately separate from the program\u2019s feedback signal. Also, before we lock teacher burden, Rafael, do attention ratings in your prior classroom work actually shift enough over twelve weeks to be informative? I\u2019m inclined to treat the computerized task as the primary proximal outcome and the ratings and benchmarks as complementary, but I need to check the task\u2019s\u2014 I need to check its duration against the district testing windows."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Ratings can be informative over twelve weeks, especially if teachers are seeing fewer redirects or more sustained independent work. But I wouldn't expect benchmark movement in every classroom on that timescale. The ratings need a simple, consistent anchor, and probably just baseline and follow-up. And I\u2019d be cautious about making the computerized task primary until we know exactly how many minutes it takes each child and how we handle practice effects\u2014"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Yeah, practice effects, right."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d rather not let anticipated practice effects demote the task. Ratings have their own expectancy problem once teachers know which children are using the bands. We could do a very brief familiarization administration before baseline, if the calendar tolerates it, then use the same sustained-attention task pre/post. But I need to check whether that becomes three pulls from enrichment rather than two, and\u2014"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I worry that familiarization, baseline, and follow-up means three individual pulls, and we only have those two 15-minute enrichment sessions each week without disrupting instruction. Maya, do you know the actual task duration per child, including setup? If it's genuinely brief, we can work around it, but I wouldn't promise a third, um, administration to the district until we know that."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I don\u2019t have the final timing in front of me, sorry. In our last child sample, the task itself was about seven or eight minutes, but with instructions, seating, and a restart, it can easily become twelve to fifteen. I\u2019ll verify that, and whether there\u2019s an alternate form. If there isn\u2019t, a short familiarization may still be cleaner than interpreting a pre/post gain as neurofeedback, but\u2014"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "If it reaches fifteen minutes once setup is included, I\u2019d be reluctant to use a separate familiarization unless we can fold it into the first enrichment session and staff it entirely ourselves. The district is likely to accept a brief assessment at baseline and follow-up. Three\u2014three individual pulls would be harder to defend. And if there\u2019s an alternate form, that would solve a lot of the interpretive problem without adding another visit."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "An alternate form would be preferable, assuming the forms are actually psychometrically comparable. I need to check that rather than just assume it. If it isn\u2019t available, I think we should at least frame the task change as a proximal signal, not- with practice explicitly modeled, not as standalone proof. The teacher ratings and benchmarks can help with convergence, but they can\u2019t really resolve that artifact."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "The ratings and the benchmarks give us a different kind of evidence, whether anything is noticeable in ordinary classroom work and whether there\u2019s any, um, learning-connected movement. They\u2019re not a way to validate the task. I still need to confirm the benchmark calendar with the assessment coordinator, because if the pre/post windows differ across classrooms, we should be careful not to overstate that comparison."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "One small implementation wrinkle is, if the benchmark windows end up uneven, the device run still needs to stay outside those testing periods where possible. I've seen post-recess plus assessment-day fatigue make fit and tolerance look worse than the normal enrichment routine, and then, then we wouldn't know what we were validating."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I\u2019ll ask the assessment coordinator for each classroom\u2019s benchmark dates and figure out which windows we should avoid. The usability sessions should look like a routine enrichment day, not some testing-day exception. And if the dates are too uneven, maybe we keep the benchmarks as contextual learning indicators rather than presenting them as a clean pre/post outcome, but..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "If the benchmark timing is uneven, I\u2019d be even more cautious about using it as evidence for the attention mechanism. I\u2019ll check the task forms and timing this week, and once we know whether an alternate form is defensible, we can say more clearly whether baseline and follow-up are enough, or whether that brief, brief familiarization is worth the burden."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Okay, I\u2019ll watch for that."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I\u2019ll get the benchmark calendar and the school testing windows from the assessment coordinator, and then we can keep the application language appropriately modest about those scores. For now, I think we have a defensible operational picture. It\u2019s a staff-led, two-session usability run under normal enrichment conditions, with teachers only supervising the routine. The remaining question is Maya\u2019s task timing and alternate-form check."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think we're at time. Thanks, both. Once we've checked those pieces, we can reconnect briefly before the application goes in."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Sounds good\u2014bye, both."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Thank you. Talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      26
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required first disagreement is only partially recoverable. Maya questions outcome primacy and practice effects in turns 13, 16, and 20, while Rafael defends classroom-relevant ratings and benchmarks in turns 14 and 21, but Maya never raises a comparison condition capable of separating neurofeedback from expectation/placebo effects. The ground-truth position therefore cannot be fully derived.",
+      "The required second disagreement is absent in its required form and direction. Priya advocates a pre-pilot usability run in turns 2, 4, 8, 10, and 22, but she does not indirectly challenge a Maya proposal to launch immediately after lab checks. Maya does not respond that delay threatens the semester timeline; instead she endorses the run as an ecologically valid check in turn 7.",
+      "The ending resolves the usability-run question rather than leaving it unresolved: turn 26 describes a 'defensible operational picture' consisting of a staff-led two-session usability run. This conflicts with the required unresolved question of whether an in-class usability run is required before launch.",
+      "The final outcome strategy is also narrowed toward a task/alternate-form decision rather than retaining the required unresolved question of whether to include a comparison condition; no comparison condition is proposed anywhere.",
+      "The transcript does not strongly realize the supplied deferential-junior dynamic. Rafael, the PhD student, leads and repeatedly closes decisions in turns 12, 23, and 26, while no senior speaker noticeably talks over or draws out a hesitant junior participant.",
+      "Despite several genuine conversational signals, many substantive turns are polished, complete mini-arguments with tidy qualifications and recommendations, especially turns 8, 10, 14, 20, and 24. The final recap in turn 26 also reads like meeting minutes, limiting naturalness."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      26
+    ],
+    "exploration_share": 0.32,
+    "turn_moves": {
+      "question": 4,
+      "observation": 1,
+      "proposal": 6,
+      "backchannel": 4,
+      "request": 2,
+      "answer": 3,
+      "concern": 3,
+      "commitment": 3,
+      "agreement": 3
+    },
+    "volunteer_turns": [
+      8,
+      10,
+      18,
+      23,
+      24,
+      26
+    ],
+    "unsure_turns": [
+      2,
+      9,
+      10,
+      13,
+      16,
+      18,
+      20,
+      21
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.33,
+      "approved": false,
+      "issues": [
+        "The first required indirect disagreement is not recoverable as specified. Turns 20-23 discuss the burden and validity of a computerized task versus teacher ratings and benchmarks, but Maya never raises a comparison condition or explains that standard neuroscience practice needs one to distinguish neurofeedback effects from expectation or placebo. The final outcome strategy is partly deferred, but the required comparison-condition dispute is absent.",
+        "The second required indirect disagreement is reversed and not unresolved. Priya proposes an in-class usability run in turns 12-14, Rafael supports it in turn 13, and Maya does not argue that it threatens the semester timeline. Instead, she incorporates the run into analytic criteria in turns 18 and 28. There is no Maya position favoring immediate launch after lab checks.",
+        "The required pilot schedule of two 15-minute sessions per week is absent. The transcript refers to fifteen-minute sessions and a 12-week launch (turns 7, 8, 13), but never establishes two sessions per week.",
+        "Research-staff cleaning and charging are not clearly agreed. Priya says fit checks, charging, and cleaning should stay with research staff in turn 2, but this is not explicitly confirmed as a team decision; teacher supervision is only partially established through the usability-run framing.",
+        "The meeting does not follow the requested deferential-junior dynamic. Rafael appears to lead despite being the PhD student, while neither postdoctoral researcher is clearly senior or talks over a junior participant.",
+        "Several turns are polished, complete mini-arguments that resolve concerns efficiently, especially turns 20-23 and 25-28. The transcript has natural markers, but it still reads partly like a structured planning document rather than spontaneous discussion."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.32,
+      "approved": false,
+      "issues": [
+        "The required first disagreement is only partially recoverable. Maya questions outcome primacy and practice effects in turns 13, 16, and 20, while Rafael defends classroom-relevant ratings and benchmarks in turns 14 and 21, but Maya never raises a comparison condition capable of separating neurofeedback from expectation/placebo effects. The ground-truth position therefore cannot be fully derived.",
+        "The required second disagreement is absent in its required form and direction. Priya advocates a pre-pilot usability run in turns 2, 4, 8, 10, and 22, but she does not indirectly challenge a Maya proposal to launch immediately after lab checks. Maya does not respond that delay threatens the semester timeline; instead she endorses the run as an ecologically valid check in turn 7.",
+        "The ending resolves the usability-run question rather than leaving it unresolved: turn 26 describes a 'defensible operational picture' consisting of a staff-led two-session usability run. This conflicts with the required unresolved question of whether an in-class usability run is required before launch.",
+        "The final outcome strategy is also narrowed toward a task/alternate-form decision rather than retaining the required unresolved question of whether to include a comparison condition; no comparison condition is proposed anywhere.",
+        "The transcript does not strongly realize the supplied deferential-junior dynamic. Rafael, the PhD student, leads and repeatedly closes decisions in turns 12, 23, and 26, while no senior speaker noticeably talks over or draws out a hesitant junior participant.",
+        "Despite several genuine conversational signals, many substantive turns are polished, complete mini-arguments with tidy qualifications and recommendations, especially turns 8, 10, 14, 20, and 24. The final recap in turn 26 also reads like meeting minutes, limiting naturalness."
+      ]
+    }
+  ]
+}

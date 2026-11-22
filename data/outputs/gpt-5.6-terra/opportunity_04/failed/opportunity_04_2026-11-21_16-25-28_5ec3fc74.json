@@ -1,0 +1,367 @@
+{
+  "transcript_id": "5ec3fc74",
+  "generated_at": "2026-11-21T16:25:28.884779",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style: turns are mostly short to medium outside the presentations, with long, uninterrupted speaker turns during formal talks. The opening contains frequent overlap, greetings, audio/login checks, and loosely connected small talk, with many fillers and repairs (\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, self-corrections) that give it an unpolished live feel. Formality shifts noticeably: hosts use brief structured announcements and introductions, while discussion remains friendly and conversational. Questions are often prefaced with praise or hedges (\u201cgreat talk,\u201d \u201cI have a naive question,\u201d \u201cI\u2019m just curious\u201d), then develop through several follow-ups. Participants build on answers by paraphrasing, testing interpretations, and linking to related work rather than sharply challenging claims. Disagreement or uncertainty is indirect and softened through phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d and admissions that something is unclear or still early. Responses are explanatory and collaborative, often acknowledging limits before offering an interpretation; the meeting closes with quick thanks, logistical reminders, and informal sign-offs.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Assessing whether forest carbon credits actually protect forest and who gets to decide how that is measured.",
+  "disciplines": [
+    "ecology",
+    "political science",
+    "science & technology studies"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Imani Rao",
+      "discipline": "ecology",
+      "functional_role": "project manager",
+      "background": "A forest landscape ecologist with 14 years of experience evaluating deforestation, regeneration, and carbon-stock change in tropical and subtropical forests. Her work combines permanent forest-inventory plots, biomass allometry, satellite-based land-cover and disturbance products, and spatial comparison designs. She has advised conservation projects on counterfactual baselines, leakage risk, and long-term vulnerability to fire, drought, and renewed clearing.",
+      "distinct_perspective": "Rao treats a credit claim as a testable ecological proposition: did forest loss or degradation differ from a credible reference scenario, and is the resulting carbon benefit likely to endure? She will lead synthesis of project design documents, inventory records, and remote-sensing change maps to examine baseline assumptions, project-boundary effects, displacement of clearing, and permanence. She emphasizes transparent uncertainty ranges and is prepared to revise interpretations when governance or accounting evidence changes what a biophysical pattern means.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Prof. Mateo Alvarez",
+      "discipline": "political science",
+      "functional_role": "project manager",
+      "background": "A comparative political scientist with 17 years of research on environmental governance, decentralization, land administration, and enforcement in forest-frontier regions. He uses comparative case studies, institutional process tracing, document analysis, administrative-record review, and interviews with public officials, local authorities, and land users. His prior work has examined how formal tenure law, informal claims, and uneven state capacity shape conservation outcomes.",
+      "distinct_perspective": "Alvarez approaches forest protection as an institutional and distributive problem rather than an outcome that can be inferred from forest cover alone. He will lead analysis of tenure records, enforcement records, and interviews to identify who holds de jure and de facto authority, how rules are enforced, and whether benefits and restrictions are allocated through legitimate and durable arrangements. He is especially attentive to multi-level governance, implementation gaps, and the ways local political power can alter project effects across otherwise similar sites.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Elise Chen",
+      "discipline": "science & technology studies",
+      "functional_role": "principal investigator",
+      "background": "An STS scholar with 12 years of experience studying environmental measurement systems, carbon-market infrastructure, and expert review. She conducts ethnographic interviewing, document and standards analysis, audit-trail reconstruction, and comparative studies of how models, protocols, and verification practices travel across institutions. Her recent research follows the translation of field observations and satellite products into standardized climate claims.",
+      "distinct_perspective": "Chen examines carbon credits as produced claims, tracing how observations, models, project documents, verification audits, and certification rules are assembled into a number that can be issued and traded. She will lead analysis of credit quantification, auditing and certification, and knowledge-authority processes: whose observations count, which uncertainties are rendered acceptable, who can challenge a baseline or boundary, and how measurement decisions become authoritative. She will ensure the comparative design connects accounting choices to both ecological evidence and the governance arrangements that authorize them.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 5,
+  "task_id": "opportunity_04",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+  "seed_spec": {
+    "task_id": "opportunity_04",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+    "explicit_instruction": "Run a design workshop involving all three named participants. Rao should establish that the ecological assessment can address baselines, leakage, forest inventory and remote sensing, and permanence using the listed evidence. Alvarez should establish that the governance assessment can address enforcement, land tenure, and the distribution of authority between state and local actors. Chen should establish that the study can examine credit quantification, auditing and certification, and whose knowledge is accepted in measurement decisions. The group should agree to integrate these perspectives in one comparative design, assign Rao to lead biophysical evidence synthesis, Alvarez to lead governance and tenure analysis, and Chen to lead analysis of accounting, audit, and knowledge-authority processes. No participant should identify a missing disciplinary perspective, recommend recruiting another field, or leave a required analytic domain uncovered.",
+    "ground_truth": {
+      "missing_perspectives": [],
+      "reference_answer": "No additional disciplinary perspectives are missing. Ecology, political science, and science and technology studies collectively cover the required biophysical, governance, and measurement/knowledge-authority dimensions of the research problem.",
+      "covered_dimensions": {
+        "ecology": [
+          "baselines",
+          "leakage",
+          "forest inventory and remote sensing",
+          "permanence"
+        ],
+        "political_science": [
+          "governance and enforcement",
+          "land tenure",
+          "state versus local authority"
+        ],
+        "science_and_technology_studies": [
+          "conversion of measurements into credits",
+          "auditors and certifiers",
+          "whose knowledge counts"
+        ]
+      },
+      "agreed_assignments": {
+        "ecology": "Lead synthesis of biophysical evidence on baseline construction, forest change, leakage, and permanence.",
+        "political_science": "Lead analysis of tenure, enforcement, and authority allocation.",
+        "science_and_technology_studies": "Lead analysis of carbon-accounting practices, verification/certification, and knowledge authority."
+      }
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not satisfied. The transcript includes all three participants and substantively covers the required domains: Rao addresses baselines, potential leakage, forest inventory/remote sensing, and risks to durability (turns 1, 4, 7, 9, 14); Alvarez addresses tenure, enforcement, and state/local authority (turns 2, 11, 17, 19, 23, 26); Chen addresses credit/accounting decisions, auditing/certification, and whose knowledge is accepted (turns 6, 8, 10, 13, 16, 22, 24, 28). No participant identifies a missing disciplinary perspective or recommends another field. However, the group does not explicitly agree on one comparative design or explicitly assign Rao, Alvarez, and Chen their specified lead responsibilities, so the requested seed is not fully established.",
+  "ground_truth": {
+    "missing_perspectives": [],
+    "reference_answer": "No additional disciplinary perspectives are missing. Ecology, political science, and science and technology studies collectively cover the required biophysical, governance, and measurement/knowledge-authority dimensions of the research problem.",
+    "covered_dimensions": {
+      "ecology": [
+        "baselines",
+        "leakage",
+        "forest inventory and remote sensing",
+        "permanence"
+      ],
+      "political_science": [
+        "governance and enforcement",
+        "land tenure",
+        "state versus local authority"
+      ],
+      "science_and_technology_studies": [
+        "conversion of measurements into credits",
+        "auditors and certifiers",
+        "whose knowledge counts"
+      ]
+    },
+    "agreed_assignments": {
+      "ecology": "Lead synthesis of biophysical evidence on baseline construction, forest change, leakage, and permanence.",
+      "political_science": "Lead analysis of tenure, enforcement, and authority allocation.",
+      "science_and_technology_studies": "Lead analysis of carbon-accounting practices, verification/certification, and knowledge authority."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Hi\u2014before we start, did the updated inventory spreadsheet I sent after last week's call actually come through? I'm asking because the plot dates are a little, uh, messy. We're already tight for time, so I'd like today to get us to a common way to compare forest outcomes across the three sites. Not just reported credits, but the baseline, clearing or degradation inside and around the boundary, and what could undo gains later."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "I did get it, yes, though I haven\u2019t reconciled the plot dates against the tenure files yet. On the common comparison, I\u2019d want us not to treat the boundary as just spatial. Near settlements and roads, where it sits may determine whose access is restricted and which clearing becomes, um, administratively visible. Imani, how sensitive are your change estimates to those edge decisions?"
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "Mm, that's a good question."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "They\u2019re quite sensitive, especially if we use a simple inside-versus-outside comparison. I\u2019d want matched comparison areas with the same road access, slope, forest type, and settlement pressure, because otherwise the boundary can make it look like there\u2019s a project effect. The preliminary map does show more disturbance just outside one boundary, but there\u2019s a new road there too, so I can\u2019t call that leakage yet."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "Right, that\u2019s hard to disentangle."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "That distinction needs to stay visible in the credit file, I think. If disturbance outside gets attributed to leakage, or- if we dismiss it because of the road, what evidence and what rule authorize that judgment? Imani, when the plots and the satellite product disagree around an edge like that, what would make one persuasive enough to carry into the credited estimate?"
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "I wouldn't treat either one as automatically decisive. The plots tell us what's on the ground at particular dates, including biomass and degradation the satellite may miss, and the imagery tells us whether that pattern extends across the edge. If they disagree, I'd first check the timing, cloud or classification error, and whether the plots actually sample the disturbance. Then I'd carry that disagreement as an uncertainty, rather than quietly choosing the source that makes the credit estimate cleaner."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "That gives us a useful rule for the comparison. Not just which source was used, but whether the disagreement was retained, quantified, or effectively made to disappear before verification. I'm wondering whether the certification files let us see that chain at all, especially the monitoring-method revision I found in one project. The final audit barely says what it did to the estimate, and I- whether we can trace that through the files."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "That revision is exactly where I'd want the before-and-after method, the inputs, and the uncertainty table, not just the final number. A monitoring change can alter what counts as disturbance or biomass loss, so we should flag every revision and ask whether the reprocessed historical maps and inventories were made comparable. Or whether the baseline was effectively- whether it was moving."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "And I\u2019d add a version question. Who approved the change, and was there any chance for the verifier, regulator, or affected communities to question it before credits were issued? I need to check whether the other two files preserve draft reports and reviewer comments, because if we only have the final audit, we may be seeing the decision after all the contestable parts have been... after they\u2019ve been smoothed out."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "That matters for the governance side too, because a method revision can reclassify the very places where people's access or use is being regulated. Elise, if the draft trail is thin, could the interviews tell us who was actually consulted or notified? I'd want to distinguish formal sign-off from a meaningful capacity to contest the revision."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Mm, possibly, yes."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "Possibly, but I wouldn't assume interviews can cleanly reconstruct the technical decision. People may remember being told that a map or method changed without ever seeing the inputs, and that gap is important in itself. So we should ask separately who was consulted, what materials they could actually inspect, and whether anyone tried to object."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "And on the ecological side, we shouldn't let an interview fill in a missing uncertainty calculation. By the 18 March 2027 workshop, I need to know whether the image dates, cloud cover, and inventory cycles- whether they line up enough to define the same comparison windows across sites. Otherwise, we're asking people to explain differences that may partly be measurement timing."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "Hm, timing could be a problem."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "And the timing issue is also an accounting issue. If a project's monitoring window shifts relative to its baseline period, I want us to record whether that was disclosed and how the verifier treated it, rather than treating the resulting estimate as directly comparable. We may need a simple chronology for each case. The observations, the method changes, the review, and then issuance."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "For each chronology, I think we also need a parallel institutional one, like when the boundary or method changed, which authority had jurisdiction, who held the relevant tenure claim, and whether enforcement was actually reconfigured. Otherwise, a shifted monitoring window can look technical when it changes the practical distribution of restrictions. I\u2019m still checking whether the enforcement records even use comparable units across the three sites, so I wouldn\u2019t make that an indicator yet."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "I agree, let\u2019s not force enforcement into a cross-case metric until we know what those records actually contain. For the June 2027 fieldwork, though, it would help me to have even a rough indication of where patrols or complaints, complaints cluster, because that may explain a boundary pattern without proving an ecological effect. Mateo, do the files distinguish patrol activity from sanctions or reported complaints at all?"
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "In the first site, not cleanly. The apparent increase is mostly a mix of patrol entries, incident reports, and what look like administrative follow-ups. Citations are separate, but the categories may have changed when local committees were brought in. And the interview notes say fewer state visits, so I don't think we can read the count as more state presence without checking- without checking who filed the entries and where."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "That makes sense, so an enforcement count is really an administrative trace, not a measure of deterrence. For the maps, I'd use it cautiously as context for where access or reporting may have changed, and keep patrols, complaints, and sanctions as separate, separate fields instead of collapsing them. The road-side disturbance could look very different once we know which of those was happening there."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "Yeah, that\u2019s a useful distinction."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "For my trace, I\u2019d keep those administrative records separate from the claim they may support. A patrol entry can later become evidence that a boundary was enforced, or that leakage was addressed, but we need to see who made that conversion and whether anyone could contest it. I\u2019ll put that alongside the method-change chronology, if the files are rich enough..."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "And we should be careful not to let the committee arrangement vanish into just a generic \"local participation\" label. If local committees generated the patrol entries, I want to know whether they had delegated authority, were reporting informally, or were effectively carrying restrictions without any authority over benefits or appeals. That may explain both the records and the fewer visible state visits."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "I\u2019d resist calling those entries community participation until we know what they could actually do with them. Could a committee member challenge a boundary decision, or were they only feeding observations upward? That distinction should sit in the audit trail too, because the same local record can be treated as evidence for compliance without giving its producers any, uh, standing in the certification process."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "And for us, that means the entries can't stand in for an ecological mechanism on their own. I'd like the field interviews to ask, very concretely, whether a reported observation led to any response on the ground, like an access restriction, warning, sanction, or nothing, and whether that differed inside the boundary versus along the new road. Otherwise we may be linking a paperwork trail to the disturbance map after the fact."
+    },
+    {
+      "speaker": "Prof. Mateo Alvarez",
+      "text": "I'd add who made the response and under what authority. A warning from a committee, a visit from a state officer, and a sanction through the formal land agency could all follow the same report, but they mean very different things for de facto control. We can leave that open in the interview guide instead of acting like the administrative entries settle it."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "I need that same location detail for the ecological interpretation, where the report was made, where any response occurred, and when, relative to the image date. Otherwise, especially along that road, we risk treating a response somewhere else as if it explains the mapped disturbance. I\u2019ll check the date alignment before we lock the interview locations, and then\u2014"
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "Mm, and when you check that alignment, could we also note which locations ever make it into the project\u2019s formal monitoring record? The gap between a locally reported event, an image-visible event, and one accepted in verification may be where the credited claim gets narrowed. I don\u2019t yet know whether the files will let us follow that all the way through."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Okay, I think we have to leave it there\u2014I'll follow up by email once I've checked, checked the date alignment. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Elise Chen",
+      "text": "All right, speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      4,
+      7,
+      9,
+      10,
+      11,
+      14,
+      17,
+      19,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required integrated comparative-design agreement is not stated. The participants coordinate related evidence streams, but no turn explicitly says that ecology, governance, and accounting/knowledge-authority will be integrated in one comparative design.",
+      "The required lead assignments are incomplete. Rao informally says she will check date alignment (turn 27), Chen says she will add items to her trace (turn 22), and Alvarez describes what he wants to examine, but there is no explicit assignment of Rao to lead biophysical synthesis, Alvarez to lead governance and tenure analysis, and Chen to lead accounting, audit, and knowledge-authority analysis.",
+      "Rao does not explicitly establish all required ecological scope: baseline, leakage, forest inventory/remote sensing are clear in turns 1, 4, and 7, but permanence is only alluded to as 'what could undo gains later' in turn 1 and is never developed as an analytic domain.",
+      "The transcript is highly polished despite repairs and fillers. Many substantive turns are complete, carefully structured mini-arguments that resolve into a precise methodological implication, especially turns 6-10, 16-20, and 22-28. This written-dialogue construction warrants a naturalness score no higher than 3.",
+      "The meeting opens with the requested prior-week file question and ends without a formal recap, but it does not strongly convey the specified running-out-of-time dynamic beyond Rao saying they are tight for time in turn 1 and abruptly closing in turn 29. More clock pressure, skipped items, or cut-off discussion would make the style more credible.",
+      "No participant identifies a missing discipline or recruits another field, which is correct for the control, but the absence-based ground-truth conclusion still requires synthesizing distributed evidence because the group never plainly states that all required perspectives are already covered."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.75,
+    "written_turns": [
+      4,
+      7,
+      13,
+      16,
+      23,
+      25
+    ],
+    "exploration_share": 0.32,
+    "turn_moves": {
+      "question": 5,
+      "answer": 5,
+      "backchannel": 2,
+      "agreement": 3,
+      "idea": 1,
+      "proposal": 8,
+      "concern": 3,
+      "commitment": 2,
+      "request": 1
+    },
+    "volunteer_turns": [
+      22,
+      27,
+      29
+    ],
+    "unsure_turns": [
+      2,
+      4,
+      8,
+      10,
+      12,
+      14,
+      17,
+      19,
+      22,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.22,
+      "approved": false,
+      "issues": [
+        "Task-compliance gap: Alvarez never receives an explicit assignment to lead governance and tenure analysis. He substantively develops enforcement, tenure, and authority questions in turns 3, 5, 7, 9, 15, and 23, but no turn assigns him ownership comparable to Rao's explicit lead in turns 12 and 27 or Chen's ownership in turns 13 and 21.",
+        "Task-compliance gap: permanence is not clearly established as part of the ecological assessment. Rao covers baseline construction, leakage/displacement, inventories, biomass equations, satellite inputs, and forest-change timing (turns 4, 6, 12, 25, 27), but does not address enduring carbon benefits, reversal risk, fire/drought, or renewed clearing.",
+        "Naturalness is weakened by highly polished, complete argumentative turns throughout, especially turns 3-10 and 18-27. Speakers consistently state a concern, qualify it, propose a method, and land on a tidy implication, which reads more like scripted interdisciplinary prose than live discussion.",
+        "The stated running-out-of-time style is only lightly realized. Turn 1 says they are squeezed, and several turns trail off, but the group still conducts an extensive, orderly discussion and reaches a polished shared plan; turn 27 functions as a broad recap despite the style instruction's 'No final recap' requirement.",
+        "Seed evidence is strong for all three perspectives being represented, but the conclusion that no further discipline is needed remains implicit rather than being directly agreed or stated."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.75,
+      "exploration_share": 0.32,
+      "approved": false,
+      "issues": [
+        "The required integrated comparative-design agreement is not stated. The participants coordinate related evidence streams, but no turn explicitly says that ecology, governance, and accounting/knowledge-authority will be integrated in one comparative design.",
+        "The required lead assignments are incomplete. Rao informally says she will check date alignment (turn 27), Chen says she will add items to her trace (turn 22), and Alvarez describes what he wants to examine, but there is no explicit assignment of Rao to lead biophysical synthesis, Alvarez to lead governance and tenure analysis, and Chen to lead accounting, audit, and knowledge-authority analysis.",
+        "Rao does not explicitly establish all required ecological scope: baseline, leakage, forest inventory/remote sensing are clear in turns 1, 4, and 7, but permanence is only alluded to as 'what could undo gains later' in turn 1 and is never developed as an analytic domain.",
+        "The transcript is highly polished despite repairs and fillers. Many substantive turns are complete, carefully structured mini-arguments that resolve into a precise methodological implication, especially turns 6-10, 16-20, and 22-28. This written-dialogue construction warrants a naturalness score no higher than 3.",
+        "The meeting opens with the requested prior-week file question and ends without a formal recap, but it does not strongly convey the specified running-out-of-time dynamic beyond Rao saying they are tight for time in turn 1 and abruptly closing in turn 29. More clock pressure, skipped items, or cut-off discussion would make the style more credible.",
+        "No participant identifies a missing discipline or recruits another field, which is correct for the control, but the absence-based ground-truth conclusion still requires synthesizing distributed evidence because the group never plainly states that all required perspectives are already covered."
+      ]
+    }
+  ]
+}

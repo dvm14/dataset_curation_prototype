@@ -1,0 +1,363 @@
+{
+  "transcript_id": "17d4a37b",
+  "generated_at": "2026-11-22T00:37:20.604940",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with a long, highly structured presentation followed by brief moderator transitions and extended but conversational Q&A. Early small talk is informal, overlapping, and somewhat fragmented, with frequent greetings, repetitions, false starts, \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d and self-corrections; speakers often talk through technical or connection issues without much polish. Once the formal session begins, introductions are ceremonious but still lightly improvised, while presentations use a clear explanatory cadence, repeated signposting (\u201cso,\u201d \u201call right,\u201d \u201cas I mentioned\u201d), rhetorical questions, and audience-oriented checks. Questions tend to be prefaced with praise or hedging (\u201cI have a quick question,\u201d \u201cmaybe,\u201d \u201cI\u2019m not sure\u201d), then unfold in several clauses rather than being sharply framed. Participants build on prior remarks through affirmations and follow-up questions, and disagreement is almost entirely indirect\u2014phrased as uncertainty, alternative possibilities, or requests for clarification rather than contradiction. The overall register is collegial academic Zoom talk: technically formal in substance, but relaxed, supportive, and full of spontaneous spoken disfluencies.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Choosing which retrofits to fund so older apartment buildings stay safe during multi-day heat waves. What each field brings: environmental engineering: indoor temperature modeling, insulation and cooling options, grid load; public health: heat illness risk by age, cooling-center use, emergency visits; economics: cost per avoided illness, landlord incentives, who pays the electric bill",
+  "disciplines": [
+    "environmental engineering",
+    "public health",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mei Chen",
+      "discipline": "environmental engineering",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a postdoctoral researcher with six years of experience in building science and urban energy modeling. Her work combines EnergyPlus-style whole-building simulation, calibrated utility-data analysis, and microclimate/weather-file development for heat-wave conditions. She has studied prewar and mid-century multifamily buildings, with particular attention to roof assemblies, solar gains, air leakage, room air-conditioner performance, and coincident neighborhood electricity demand.",
+      "distinct_perspective": "Chen frames the funding choice as a constrained thermal-resilience design problem: identify retrofit packages that change indoor operative temperatures over consecutive hot days without creating unacceptable coincident electric demand. She emphasizes heterogeneity across building archetypes, orientations, top-floor units, and resident cooling behavior. She is cautious about treating insulation as unambiguously protective in summer, especially where apartments lack active cooling, and wants assumptions about window operation and air-conditioner availability made explicit.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Sofia Alvarez",
+      "discipline": "public health",
+      "functional_role": "project manager",
+      "background": "Dr. Alvarez is a public-health project manager with nine years of experience directing heat-health surveillance and community intervention studies for municipal and academic partnerships. She has worked with syndromic emergency-department data, heat-warning protocols, vulnerability indices, and outreach programs for older adults and medically vulnerable renters. Her prior work has examined barriers to cooling-center attendance, including mobility limitations, caregiving responsibilities, safety concerns, and distrust of unfamiliar public spaces.",
+      "distinct_perspective": "Alvarez treats indoor heat as an unequal exposure with clinically meaningful risk concentrated among residents whose age, chronic conditions, mobility, social isolation, or housing conditions limit their ability to cool themselves. She presses the group to define a heat-safety threshold that is credible for priority residents rather than relying only on building-average temperatures. She distinguishes between an intervention that lowers exposure inside homes and one that requires residents to travel to and use a cooling space, and she is careful not to infer causal reductions in emergency visits from aggregated data alone.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Daniel Morgan",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "Dr. Morgan is a research engineer with eight years of experience in applied energy economics and housing-policy evaluation. He builds retrofit cost models using contractor estimates, equipment lifetimes, utility tariffs, and administrative housing data, and has analyzed split incentives in rental buildings where owners purchase capital improvements while tenants pay marginal electricity costs. He routinely translates technical retrofit scenarios into budget impacts, distributional effects, and implementation feasibility for local agencies.",
+      "distinct_perspective": "Morgan frames retrofit selection around incentives, incidence, and decision relevance: a technically effective measure may still fail if landlords cannot recover costs, tenants face higher electricity bills, or operating responsibilities are ambiguous. He wants the pilot to report capital costs, operating costs, and resident bill implications alongside modeled performance, while distinguishing those descriptive implementation findings from a full estimate of cost per avoided illness. He sees payment arrangements as central to adoption and equity, but recognizes that they require evidence beyond available building and weather records.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "heat_resilient_housing",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "problem_03",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+  "seed_spec": {
+    "task_id": "problem_03",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+    "explicit_instruction": "Run a planning meeting in which the group explicitly considers four candidate research questions. Dr. Chen introduces: (1) which package of envelope measures, shading, and efficient room air conditioning keeps apartments below a specified heat-safety threshold during a three-day heat wave while avoiding unacceptable neighborhood peak-load increases; and (2) whether roof insulation can worsen summertime indoor temperatures when residents lack air conditioning. Dr. Alvarez introduces: (3) whether providing common-area cooling rooms reduces heat-related emergency visits among older residents compared with in-unit cooling retrofits, including the role of cooling-center use. Dr. Morgan introduces: (4) how landlord incentives and tenant-versus-landlord electricity payment arrangements affect adoption of in-unit cooling retrofits and the cost per avoided heat illness. The participants must choose question (1) as the single primary research question for the two-year pilot because it directly supports the agency's immediate retrofit-funding decision and can use the available building and weather data. They should define its intended comparison at a practical level: retrofit packages versus the existing building condition, assessed across representative older-building types during a three-day heat wave, with indoor safety and peak electricity demand as outcomes. They may decide that public-health input will be used to select the heat-safety threshold and priority resident groups, and economics will be used to report implementation and resident electricity-cost implications, but these are supporting components rather than separate primary questions. Do not resolve questions (2), (3), or (4). Record them as unresolved future questions, including the uncertainty about insulation without air conditioning, the comparative health effect of cooling rooms versus in-unit cooling and cooling-center use, and the incentive/bill-payer mechanisms affecting adoption and cost per avoided illness. Do not claim that any intervention is already superior or that causal health effects can be estimated from the currently described data.",
+    "ground_truth": {
+      "chosen_primary_research_question": "Among representative pre-1980 apartment-building types, which package of envelope measures, window shading, and efficient room air conditioning, compared with the existing building condition, keeps apartments below a heat-safety threshold during a three-day heat wave while avoiding unacceptable neighborhood peak electricity-demand increases?",
+      "decision_rationale": "This question directly informs the near-term retrofit-funding decision and is feasible for the two-year pilot using available building characteristics and weather data, with modeling of indoor temperatures and electricity demand.",
+      "defined_scope": {
+        "comparison": "Candidate retrofit packages versus existing building condition.",
+        "population_and_setting": "Representative pre-1980 apartment-building types in the city pilot.",
+        "heat_event": "A three-day heat wave.",
+        "primary_outcomes": "Indoor heat safety relative to a threshold and neighborhood peak electricity demand.",
+        "supporting_public_health_role": "Use public-health expertise to select the heat-safety threshold and identify priority resident groups, particularly older residents.",
+        "supporting_economics_role": "Report implementation costs and implications for resident electricity costs and payment arrangements; these do not become a separate primary causal question."
+      },
+      "unresolved_alternatives": [
+        {
+          "question": "Can roof insulation worsen summertime indoor temperatures when residents lack air conditioning?",
+          "status": "Unresolved future question; it is not answered or incorporated as a separately selected primary question in this meeting."
+        },
+        {
+          "question": "Do common-area cooling rooms reduce heat-related emergency visits among older residents more than in-unit cooling retrofits, and how does cooling-center use affect that comparison?",
+          "status": "Unresolved future question; the meeting does not establish comparative health effects from the available information."
+        },
+        {
+          "question": "How do landlord incentives and tenant-versus-landlord electricity payment arrangements affect adoption of in-unit cooling retrofits and cost per avoided heat illness?",
+          "status": "Unresolved future question; the meeting does not determine these mechanisms or estimates."
+        }
+      ],
+      "not_supported_by_current_meeting": "No retrofit is declared superior, and no causal reduction in heat illness or emergency visits is claimed from the currently available data."
+    }
+  },
+  "seed_location": "Incomplete: turns 1-27 discuss the heat-safety/retrofit-package comparison and preserve uncertainty around insulation without AC (11-16), cooling-room uptake and lack of ED causal evidence (17-23), and billing/adoption issues without cost-per-avoided-illness claims (24-27). However, the group never explicitly considers all four candidate research questions as distinct questions, never explicitly selects question (1) as the single primary question for the two-year pilot, and never records questions (2), (3), and (4) as unresolved future questions. The conversation ends without the required final choice (28-30).",
+  "ground_truth": {
+    "chosen_primary_research_question": "Among representative pre-1980 apartment-building types, which package of envelope measures, window shading, and efficient room air conditioning, compared with the existing building condition, keeps apartments below a heat-safety threshold during a three-day heat wave while avoiding unacceptable neighborhood peak electricity-demand increases?",
+    "decision_rationale": "This question directly informs the near-term retrofit-funding decision and is feasible for the two-year pilot using available building characteristics and weather data, with modeling of indoor temperatures and electricity demand.",
+    "defined_scope": {
+      "comparison": "Candidate retrofit packages versus existing building condition.",
+      "population_and_setting": "Representative pre-1980 apartment-building types in the city pilot.",
+      "heat_event": "A three-day heat wave.",
+      "primary_outcomes": "Indoor heat safety relative to a threshold and neighborhood peak electricity demand.",
+      "supporting_public_health_role": "Use public-health expertise to select the heat-safety threshold and identify priority resident groups, particularly older residents.",
+      "supporting_economics_role": "Report implementation costs and implications for resident electricity costs and payment arrangements; these do not become a separate primary causal question."
+    },
+    "unresolved_alternatives": [
+      {
+        "question": "Can roof insulation worsen summertime indoor temperatures when residents lack air conditioning?",
+        "status": "Unresolved future question; it is not answered or incorporated as a separately selected primary question in this meeting."
+      },
+      {
+        "question": "Do common-area cooling rooms reduce heat-related emergency visits among older residents more than in-unit cooling retrofits, and how does cooling-center use affect that comparison?",
+        "status": "Unresolved future question; the meeting does not establish comparative health effects from the available information."
+      },
+      {
+        "question": "How do landlord incentives and tenant-versus-landlord electricity payment arrangements affect adoption of in-unit cooling retrofits and cost per avoided heat illness?",
+        "status": "Unresolved future question; the meeting does not determine these mechanisms or estimates."
+      }
+    ],
+    "not_supported_by_current_meeting": "No retrofit is declared superior, and no causal reduction in heat illness or emergency visits is claimed from the currently available data."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Good morning, everyone. It's already uncomfortably warm on campus, which feels a little too on-theme for this meeting. I know we've got six weeks to turn this into something the agency can actually use, so I was hoping we could get clear today on what we mean by heat safety during a three-day event. And then whether the candidate packages can- whether we can compare them on both indoor temperatures and coincident electricity demand."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "It\u2019s one of those mornings. On heat safety, I\u2019d be cautious about using a building-average maximum as the endpoint. For the residents we\u2019re worried about, um, it\u2019s the sustained exposure over the second and third day, especially in top-floor units, that may matter a lot more than a short peak. Mei, can your model resolve consecutive-day conditions at the apartment level, or at least identify the hotter unit types?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I can run unit-level simulations, or at least by archetype, floor, and orientation, through the full three-day sequence and keep the overnight recovery. That's probably the important part here. I wouldn't want to claim a single occupant behavior case, though. We should bracket window opening and room-AC availability because those can change who remains hot on day two and three."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "That bracketing is useful for the cost side too. The room-AC quotes themselves have been pretty stable, but projected resident bills- I\u2019m losing the thread there. They move around a lot with billing arrangements and with how many units run AC at once. Mei, how sensitive is your coincident peak to that simultaneous-operation assumption across apartments?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "It can be pretty sensitive, especially on the late afternoon peak. In the initial archetypes, moving from staggered to broadly simultaneous operation can shift the building peak materially, although I'd need the actual AC saturation and thermostat assumptions to put a credible range on it. I think we should report both an apartment-level heat-safety result and a neighborhood coincident-demand range, rather than burying that behavior uncertainty in one estimate."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "For me, that means we probably shouldn't attach a single resident-bill number to an AC package. We can show a range by billing arrangement and simultaneous-use case. Otherwise, a package can look cheap in the capital budget while shifting a pretty unpredictable- unpredictable operating cost onto tenants."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "And the tariff question matters before I translate those runs into bills. Daniel, with only the utility billing arrangements we have now, is it defensible to use a small set of representative residential tariffs, or do we need to wait for the participating-building list? I can keep the physical result separate, peak kilowatts under each AC-use case, but the tenant-cost range depends on that choice."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "I think representative tariffs are defensible for planning, as long as we label them as scenarios, not building-specific bills. We\u2019ve got the billing arrangement, which is the bigger, bigger divide at first, tenant-metered versus owner-paid or master-metered. But I\u2019d want the eventual building list before making any claim about actual resident dollar impacts."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That seems workable. I\u2019d keep the tariff scenarios explicitly downstream of the thermal modeling. First, identify which packages keep the vulnerable unit types from accumulating heat through night two and three, and then separately show what their peak-demand and bill exposure look like. Sofia, for the health endpoint, do you need a duration-above-threshold measure rather than just the daily maximum?"
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "I think we need duration, though I don't want to name a cutoff today before I check the current heat-health guidance. For this population, I'd want hours above a defensible indoor threshold across the full event, including whether the unit recovers overnight. A daily maximum could make a pretty dangerous three-day accumulation look acceptable."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That is helpful. I can carry hours above whatever threshold you settle on, plus an overnight recovery metric, for each floor-and-orientation archetype. One thing I don't want us to assume away is roof insulation in apartments without usable AC. Its summer effect may differ quite a bit by roof assembly, leakage, and solar exposure, so I think that needs to remain a distinct scenario rather than an automatic safety benefit..."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "I\u2019m glad you flagged that. From the health side, I\u2019d be uncomfortable treating insulation as protective just because it changes the modeled daytime maximum. If it slows nighttime cooling in those top-floor units without AC, that could be exactly the exposure pattern we need to see. Could you keep that as a separate no-AC case instead of averaging it into the package result?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I\u2019ll keep roof insulation as its own no-AC branch and look at the full diurnal profile, not just the afternoon maximum. I\u2019ve seen enough variation in those mid-century top-floor cases that I wouldn\u2019t infer the nighttime result from insulation level alone. We need the roof construction, leakage, and solar conditions in the archetype definition. And the- actually, that\u2019s exactly why I\u2019ll keep it separate."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "And from the cost side, that separate no-AC branch matters a lot. Insulation could have a reasonable capital case but still not deliver the exposure reduction we'd be using to justify it. Sofia, when you settle on the threshold, is it the cumulative hours above it that you'd want us to carry? I was going to ask about a lower average temperature across the three days, but is that less important?"
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "I'd carry cumulative hours above the threshold as the main exposure measure, but alongside overnight recovery, not instead of it. A three-day average can smooth out the part that worries me clinically, whether someone's apartment stays unsafe enough overnight that they start the next day without recovering. I need to review the guidance before I can say exactly how we define that threshold and duration."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That gives the simulations a clearer target. I\u2019ll preserve both measures for each archetype, and I think we should also keep the cooling-room case separate from in-unit AC. A cooling room may reduce risk only if residents can and will leave the apartment, which the indoor exposure model by itself can\u2019t, um, assume."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "And I\u2019d keep that distinction visible in the eventual question. A cooling room is not equivalent to reducing exposure in the apartment. We know mobility, caregiving, safety, and just reluctance to use an unfamiliar shared space can all constrain use, especially overnight. Do we have any plausible way to parameterize uptake, or would Mei need to treat it as a separate set of attendance scenarios, scenarios?"
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "Yeah, attendance scenarios."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I can treat cooling-room attendance as an external scenario. So, no uptake, daytime-only attendance, and sustained attendance, rather than saying it changes apartment temperatures. Sofia, when you review the guidance, is there evidence we can use to bound those scenarios for older residents, or should we be quite explicit that the health benefit is contingent on uptake?"
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "I\u2019ll check what the current guidance and the cooling-center literature can actually support, but I suspect we should be explicit that uptake is uncertain, rather than pretend we have a clean estimate for this population. The aggregated ED pattern after days two and three is suggestive of cumulative risk. It\u2019s not evidence that people who attended\u2014 or didn\u2019t attend\u2014 a cooling room had different outcomes, so I\u2019d frame those attendance cases as assumptions we test."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That makes sense. For the cooling-room branch, I can report apartment conditions unchanged and model avoided exposure only under clearly labeled attendance schedules. I wouldn't- rather than fold that into the envelope or AC result, I'd keep it separate. The main comparison is still which in-unit package keeps the highest-risk archetypes safe through the third day without an unacceptable coincident peak, and the cooling room is a separate option that depends on uptake."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "That separation works for me. I\u2019d just want the primary result reported for the hotter archetypes and priority residents, not for a package that looks safe on average while top-floor, no-AC units are still accumulating exposure overnight. The cooling-room comparison can stay explicitly conditional on attendance. With the data we have, I don\u2019t think we can responsibly turn that into an ED-outcome claim."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "I\u2019d keep the economic outputs alongside that primary comparison, rather than roll them into a cost-per-avoided-illness claim. We can give the agency capital cost, expected equipment life, and resident-versus-owner electricity-cost ranges by billing arrangement. The adoption question is still open for the pilot, whether owners actually choose in-unit AC when tenants pay the marginal bill."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "For the physical comparison, I\u2019d keep the result as a distribution across the hotter unit archetypes, not a building average, and then attach Daniel\u2019s owner-versus-tenant cost scenarios alongside it. That lets the agency see where a package is thermally robust but may, may face an adoption problem, without claiming a precise illness count before the pilot data exist."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "Mm, useful distinction."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "That makes the question more honest. Which packages reduce cumulative indoor heat exposure for the hotter, priority-unit archetypes through a three-day event, with demand and cost consequences shown separately. I'll come back quickly on the threshold and overnight-recovery definition, but I'd keep the cooling-room option as a conditional comparison, not evidence of avoided ED visits."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I think we should stop there rather than rush through the rest. Once Sofia has had a chance to review the threshold guidance, we can- let's pick this up then. Thank you, both."
+    },
+    {
+      "speaker": "Dr. Daniel Morgan",
+      "text": "Thanks, everybody. Talk soon."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Okay, take care, everyone. Bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      9,
+      10,
+      11,
+      17,
+      20,
+      22,
+      24,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript never explicitly introduces or enumerates all four candidate research questions as required. Question (1) is only partially represented through package comparisons in turns 1, 9, 22, and 27; question (2) appears as a scenario concern in turns 11-13; questions (3) and (4) are discussed only as components or uncertainties rather than clearly stated candidate research questions.",
+      "There is no explicit selection of question (1) as the single primary research question for the two-year pilot. Turn 22 calls the in-unit-package comparison the \u201cmain comparison,\u201d and turn 27 formulates a likely question, but neither records a decision to choose it over the other three alternatives.",
+      "The required rationale for selection is incomplete. The meeting never says that the selected question is feasible using available building characteristics and weather data, nor does it explicitly tie the choice to the agency\u2019s immediate retrofit-funding decision. Turn 1 mentions an agency-useful product and a six-week deadline, but this is not the required two-year-pilot decision rationale.",
+      "The practical scope omits key anchors from the ground truth: the existing-building-condition comparator is not stated, the building stock is not identified as representative pre-1980 city-pilot apartment types, and the package is not explicitly defined as envelope measures, window shading, and efficient room AC. Turns 3, 11, and 22 mention portions of this scope, but not the complete defined comparison.",
+      "The unresolved alternatives are not recorded as unresolved future questions. Roof insulation is retained as a separate modeled no-AC branch in turns 11-13, which risks incorporating question (2) into the active analysis rather than preserving it as an unresolved alternative. Cooling rooms are framed as a separate conditional comparison in turns 17-23, but not explicitly deferred as a future question. Adoption is called open for the pilot in turn 24, but the cost-per-avoided-illness question is not clearly recorded as unresolved.",
+      "Turn 4 violates the supplied meeting-style prohibition by saying, \u201cI\u2019m losing the thread there,\u201d which closely uses a banned stock phrase (\u201clost my thread\u201d).",
+      "Naturalness is limited despite several surface realism signals. Most substantive turns are polished, complete mini-arguments that identify a concern, qualify it, and land on a clear recommendation or assignment; this makes the meeting read more like an authored planning memo than spontaneous round-robin updates. Disfluencies such as \u201cum,\u201d repetitions, and cutoffs are largely inserted into otherwise polished sentences.",
+      "The stated round_robin_updates style is weakly reflected. Rather than speakers giving discrete updates followed by a few clarifications, nearly every turn is a tightly coordinated question-and-response exchange, and the group repeatedly reaches immediate, tidy formulations of each concern."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.8,
+    "written_turns": [
+      5,
+      9,
+      23,
+      24,
+      27
+    ],
+    "exploration_share": 0.27,
+    "turn_moves": {
+      "proposal": 9,
+      "request": 2,
+      "answer": 4,
+      "question": 6,
+      "concern": 1,
+      "commitment": 3,
+      "backchannel": 4,
+      "agreement": 1
+    },
+    "volunteer_turns": [
+      13,
+      21,
+      27
+    ],
+    "unsure_turns": [
+      4,
+      5,
+      10,
+      16,
+      21,
+      23
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.73,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The meeting never explicitly introduces or enumerates all four candidate research questions, as required. Chen discusses package performance and AC assumptions (turns 2, 20), Alvarez discusses common rooms and health limitations (turns 12-19), and Morgan discusses payment scenarios (turns 9-10, 25), but the alternatives are not framed as four questions under consideration.",
+        "The group does not explicitly choose question (1) as the single primary research question for a two-year pilot. Turns 19-20 formulate a likely core comparison, but no decision states that it is selected over the other candidate questions, nor that it is for a two-year pilot.",
+        "The stated rationale is incomplete: no turn says the chosen question directly supports the agency's immediate retrofit-funding decision or is feasible because of available building-characteristics and weather data. Turn 26 mentions handing an agency a pilot question, but this is not a clear funding-decision rationale.",
+        "The required practical scope is incomplete. The transcript lacks an explicit comparison against the existing building condition, does not specify representative pre-1980/city-pilot building types, and does not specify a three-day heat wave. It instead refers generally to archetypes and consecutive hot days (turns 2, 20).",
+        "Question (2), roof insulation potentially worsening summer indoor temperatures without AC, is not preserved as an unresolved future question. Chen mentions that roof results could reverse under AC/window assumptions (turn 20), but no explicit insulation-without-AC question remains open.",
+        "Question (3) is not retained in its required comparative form: whether common-area cooling rooms reduce heat-related emergency visits among older residents compared with in-unit retrofits, including cooling-center use. The group appropriately avoids causal claims (turns 19, 22, 25), but it never records this comparison as an unresolved future question.",
+        "Question (4) is not preserved as an unresolved question about landlord incentives, bill-payer arrangements, adoption, and cost per avoided illness. Payment incidence is treated as a reporting scenario (turn 10) and costs are supporting outputs (turn 25), but adoption mechanisms and the unresolved cost-per-avoided-illness question are not explicitly recorded.",
+        "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 17-20 and 22-26. Nearly every concern immediately becomes a clean methodological resolution or assignment, with little genuine exploration. The isolated disfluencies are mostly embedded in otherwise polished prose.",
+        "Turn 6 uses the stock phrase 'I lost my thought there,' which is effectively prohibited by the meeting-style instruction against 'lost my thread/train of thought/point.'"
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.8,
+      "exploration_share": 0.27,
+      "approved": false,
+      "issues": [
+        "The transcript never explicitly introduces or enumerates all four candidate research questions as required. Question (1) is only partially represented through package comparisons in turns 1, 9, 22, and 27; question (2) appears as a scenario concern in turns 11-13; questions (3) and (4) are discussed only as components or uncertainties rather than clearly stated candidate research questions.",
+        "There is no explicit selection of question (1) as the single primary research question for the two-year pilot. Turn 22 calls the in-unit-package comparison the \u201cmain comparison,\u201d and turn 27 formulates a likely question, but neither records a decision to choose it over the other three alternatives.",
+        "The required rationale for selection is incomplete. The meeting never says that the selected question is feasible using available building characteristics and weather data, nor does it explicitly tie the choice to the agency\u2019s immediate retrofit-funding decision. Turn 1 mentions an agency-useful product and a six-week deadline, but this is not the required two-year-pilot decision rationale.",
+        "The practical scope omits key anchors from the ground truth: the existing-building-condition comparator is not stated, the building stock is not identified as representative pre-1980 city-pilot apartment types, and the package is not explicitly defined as envelope measures, window shading, and efficient room AC. Turns 3, 11, and 22 mention portions of this scope, but not the complete defined comparison.",
+        "The unresolved alternatives are not recorded as unresolved future questions. Roof insulation is retained as a separate modeled no-AC branch in turns 11-13, which risks incorporating question (2) into the active analysis rather than preserving it as an unresolved alternative. Cooling rooms are framed as a separate conditional comparison in turns 17-23, but not explicitly deferred as a future question. Adoption is called open for the pilot in turn 24, but the cost-per-avoided-illness question is not clearly recorded as unresolved.",
+        "Turn 4 violates the supplied meeting-style prohibition by saying, \u201cI\u2019m losing the thread there,\u201d which closely uses a banned stock phrase (\u201clost my thread\u201d).",
+        "Naturalness is limited despite several surface realism signals. Most substantive turns are polished, complete mini-arguments that identify a concern, qualify it, and land on a clear recommendation or assignment; this makes the meeting read more like an authored planning memo than spontaneous round-robin updates. Disfluencies such as \u201cum,\u201d repetitions, and cutoffs are largely inserted into otherwise polished sentences.",
+        "The stated round_robin_updates style is weakly reflected. Rather than speakers giving discrete updates followed by a few clarifications, nearly every turn is a tightly coordinated question-and-response exchange, and the group repeatedly reaches immediate, tidy formulations of each concern."
+      ]
+    }
+  ]
+}

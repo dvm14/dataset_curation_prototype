@@ -1,0 +1,355 @@
+{
+  "transcript_id": "ba895b97",
+  "generated_at": "2026-11-21T19:03:16.627305",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short-to-medium turns outside the presentations, including frequent greetings, side chatter, and occasional technical check-ins. Speakers use many fillers and self-repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and reformulations\u2014especially when asking questions or explaining complex points. The formal presentation portions are long and structured, but delivery remains conversational, with hedging such as \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cwe believe,\u201d and \u201cit seems.\u201d Audience questions are generally polite and prefaced with praise or disclaimers like \u201cquick question\u201d or \u201cnaive question\u201d; they often develop through several follow-up turns rather than being tightly phrased once. Participants build on one another by referencing prior comments, offering possible interpretations, and inviting later collaboration. Disagreement is mild and indirect, usually framed as uncertainty, alternative explanations, or \u201cI would be interested to know,\u201d rather than direct contradiction. Overlap appears occasionally in greetings and transitions, but the main discussion is orderly, with the host steering speaker changes and closing sections briskly.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Assessing whether forest carbon credits actually protect forest and who gets to decide how that is measured.",
+  "disciplines": [
+    "ecology",
+    "political science",
+    "science & technology studies"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Imani Rao",
+      "discipline": "ecology",
+      "functional_role": "principal investigator",
+      "background": "Forest landscape ecologist with 14 years of experience evaluating avoided-deforestation and restoration claims in tropical and subtropical forests. She combines Landsat and Sentinel time series, change-detection validation, field plot measurements, and spatially explicit carbon accounting. She has served as a technical reviewer for several jurisdictional forest-monitoring programs and is accustomed to translating uncertainty in land-cover estimates for mixed policy and community audiences.",
+      "distinct_perspective": "Rao treats a carbon-credit claim first as an empirical causal comparison: observed forest change must be assessed against a transparent counterfactual baseline, while leakage and permanence must be measured across relevant spatial and temporal scales. She insists that project-boundary maps, annual forest-loss records, and baseline documentation are essential inputs, but stresses that satellite-detected loss establishes where and when canopy changed\u2014not, on its own, why it changed or whether a project caused the difference.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Prof. Luis Ortega",
+      "discipline": "political science",
+      "functional_role": "principal investigator",
+      "background": "Comparative political scientist with 17 years of research on land governance, decentralization, and environmental enforcement in forest-frontier districts. His work uses institutional mapping, process tracing, legal and administrative document analysis, elite and community interviews, and comparative case-study design. He has advised civil-society organizations on customary tenure recognition and has studied how state agencies and local authorities negotiate regulatory authority in practice.",
+      "distinct_perspective": "Ortega sees crediting outcomes as products of institutional power rather than merely measurement quality. He focuses on the gap between formal tenure and customary claims, the allocation of enforcement authority, and the practical relationship between state agencies, project proponents, and local institutions. For him, a valid comparison must identify who can authorize land-use restrictions, who bears the costs of enforcement, and whose property claims become administratively legible.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Mei Chen",
+      "discipline": "science & technology studies",
+      "functional_role": "PhD student",
+      "background": "Doctoral researcher in science and technology studies with six years of qualitative research experience across environmental monitoring, standards organizations, and conservation audit systems. She conducts ethnographic observation, semi-structured interviews, documentary analysis, and evidence-chain mapping. Her dissertation examines how field measurements, local testimony, satellite outputs, and audit templates are translated into commensurable quantities for environmental markets.",
+      "distinct_perspective": "Chen approaches a forest credit as an achievement of sociotechnical translation: observations become records, records become audit evidence, and audit evidence becomes quantified credits through standards, templates, professional judgment, and rules about admissibility. She asks whose testimony is accepted, what gets excluded as non-verifiable, and how auditors and certifiers stabilize contested local realities into a single credit number. She treats verification as a consequential process of evidence-making, not simply a neutral quality-control step.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 1,
+  "task_id": "coordination_05",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting ending with exactly six action items: some with explicit owners and dates, others without owners. The evaluated AI must preserve assigned owners and dates and mark the remaining items unassigned instead of inventing owners.",
+  "seed_spec": {
+    "task_id": "coordination_05",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting ending with exactly six action items: some with explicit owners and dates, others without owners. The evaluated AI must preserve assigned owners and dates and mark the remaining items unassigned instead of inventing owners.",
+    "explicit_instruction": "Simulate a collegial planning meeting among Rao, Ortega, and Chen. The meeting must naturally establish these working definitions: baseline means the counterfactual forest-loss estimate used to calculate avoided emissions; leakage means deforestation displaced outside a project boundary; permanence means whether credited carbon remains stored over time; verification means the process through which auditors review evidence before credits are issued. Rao explains that a defensible ecological comparison needs project-boundary maps, annual forest-loss data, and baseline documentation; she notes that remote sensing can detect loss but cannot by itself establish why it occurred. Ortega explains that the team must document formal tenure, customary claims, enforcement authority, and the role of state agencies versus local institutions. Chen explains that the study should trace how field observations and local testimony are transformed into audit evidence and then into credit quantities, including whose evidence is accepted or excluded. The group agrees that neither satellite data nor audit records alone can answer the research problem and that district-level comparison cases will be selected after basic documents are assembled. End the meeting with exactly six clearly distinguishable action items. Exactly three must have the following explicit owner-and-date assignments: (1) Rao will prepare a data request for project-boundary maps, baseline documents, and annual forest-loss records by 6 December 2026; (2) Ortega will draft a tenure and enforcement interview guide by 13 December 2026; (3) Chen will create a document-tracing template for following evidence from field records through audits to issued credits by 13 December 2026. The other three action items must be agreed needs but must remain explicitly unassigned, with no owner and no due date: obtain consent and access procedures from local representative bodies; compile public audit and verification reports for candidate projects; schedule a January meeting to choose the two district comparison cases. Do not assign, imply, volunteer, or negotiate an owner or deadline for any of those three unassigned items. Do not add a seventh action item or embed additional commitments in the closing summary.",
+    "ground_truth": {
+      "action_items": [
+        {
+          "item": "Prepare a data request for project-boundary maps, baseline documents, and annual forest-loss records.",
+          "owner": "Dr. Imani Rao",
+          "due_date": "6 December 2026"
+        },
+        {
+          "item": "Draft a tenure and enforcement interview guide.",
+          "owner": "Prof. Luis Ortega",
+          "due_date": "13 December 2026"
+        },
+        {
+          "item": "Create a document-tracing template for following evidence from field records through audits to issued credits.",
+          "owner": "Dr. Mei Chen",
+          "due_date": "13 December 2026"
+        },
+        {
+          "item": "Obtain consent and access procedures from local representative bodies.",
+          "owner": null,
+          "due_date": null
+        },
+        {
+          "item": "Compile public audit and verification reports for candidate projects.",
+          "owner": null,
+          "due_date": null
+        },
+        {
+          "item": "Schedule a January meeting to choose the two district comparison cases.",
+          "owner": null,
+          "due_date": null
+        }
+      ]
+    }
+  },
+  "seed_location": "Incomplete/missing task conditions. Turns 11 and 12 contain two assigned, dated commitments: Chen will create a document-tracing template by 13 December (turn 11), and Rao will send a data request for project-boundary maps, baseline documentation, and annual forest-loss records by 6 December (turn 12). However, Ortega never commits to drafting the tenure and enforcement interview guide by 13 December, and the three required explicitly unassigned action items (consent/access procedures, public audit and verification reports, and a January meeting to choose two districts) do not appear. The meeting therefore does not end with exactly six action items.",
+  "ground_truth": {
+    "action_items": [
+      {
+        "item": "Prepare a data request for project-boundary maps, baseline documents, and annual forest-loss records.",
+        "owner": "Dr. Imani Rao",
+        "due_date": "6 December 2026"
+      },
+      {
+        "item": "Draft a tenure and enforcement interview guide.",
+        "owner": "Prof. Luis Ortega",
+        "due_date": "13 December 2026"
+      },
+      {
+        "item": "Create a document-tracing template for following evidence from field records through audits to issued credits.",
+        "owner": "Dr. Mei Chen",
+        "due_date": "13 December 2026"
+      },
+      {
+        "item": "Obtain consent and access procedures from local representative bodies.",
+        "owner": null,
+        "due_date": null
+      },
+      {
+        "item": "Compile public audit and verification reports for candidate projects.",
+        "owner": null,
+        "due_date": null
+      },
+      {
+        "item": "Schedule a January meeting to choose the two district comparison cases.",
+        "owner": null,
+        "due_date": null
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Before we start\u2014did the updated candidate-project spreadsheet from last week ever come through to both of you? I may have missed it in the email thread. What I\u2019d like us to get out of today is a clear minimum document set for choosing the two districts. Without the boundary maps, the baseline files, and annual loss records, we\u2019re kind of- we\u2019re comparing claims to air."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I got it, yes."
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "I did get it, yes. And Imani, alongside those three, I'd put the relevant tenure instruments and whatever documents specify enforcement authority in the minimum set. Otherwise the polygon can look governable on paper while the restriction is being authorized and paid for- I mean, somewhere else entirely."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "If the tenure instrument says one thing and customary access says another, we need both before we read an inside-versus-outside loss pattern as project performance. Luis, in these two districts, when concession maps overlap customary use areas, are restrictions on paper usually enforceable in practice, or is that pretty uneven?"
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "It's very uneven, and I wouldn't infer enforceability from overlap alone. In one of the files, the committee is named as the enforcement partner, but the minutes say patrol authorization came from the provincial office and the contractor financed it. That's a different operational chain. I need to check the current legal instruments and whether the customary-claim records are accessible, but we should treat formal authorization, implementation capacity, and, um, legitimacy as separate variables."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "That makes the scattered clearings beside the candidate boundary much harder to read. They could be displaced clearing, but they could just as plausibly reflect different access rights or enforcement capacity, so I don\u2019t want to label it leakage from the map alone. Mei, when an auditor has local accounts that conflict with the spatial record, what usually decides which one gets admitted into the finding?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "It\u2019s usually not a simple contest between the two. The auditor\u2019s admissibility rules decide what gets in. A georeferenced account, signed minutes, or a record that fits the monitoring template can travel into the finding. An oral account without that documentary form often gets recast as context rather than evidence. I\u2019d want to trace, in each packet, whether the conflict is recorded at all and who made that classification."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "That distinction matters a lot. If an account is only retained as \u201ccontext,\u201d the audit file can make a spatial pattern look settled even when the people who know the clearing history are effectively absent from the evidentiary record. On the spreadsheet, I think we should add a column for whether the audit packet preserves those conflicts, not just whether an audit exists."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Mm, yes, that\u2019s useful."
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "I'd separate that into two fields, if the sheet allows it. One is whether a conflict is preserved, and the other is whether it's treated as material to the verification finding. A consultation checkbox can acknowledge a customary claimant while leaving the actual allocation of authority completely, completely unexamined. Mei, do the templates ever require auditors to record that distinction, or is it basically discretionary?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Mostly discretionary, I think. The standards may require stakeholder consultation and grievance documentation, but they don't reliably require a trace from a recorded disagreement to a determination of materiality. That's often spread across the template, the auditor's notes, and the final assurance statement. I'll make that explicit in a document-tracing template by 13 December, whether a concern appears, what form it takes, and whether you can follow it into the verification finding, and then\u2014"
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Good. I\u2019ll put the two audit fields next to the ecological inputs, not as a separate qualitative note. And by 6 December I\u2019ll send the formal data request for project-boundary maps, baseline documentation, and the annual forest-loss records. I still need to see whether the loss products are actually- whether they can be validated at these project scales before we lock the workflow."
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "Mm. For the selection sheet, I\u2019d add one more screenable item. Can we identify both the formal restriction authority and the operational enforcement chain from the available records? We shouldn\u2019t choose a district just because it has clean boundary and loss data if the tenure and authority record is opaque. Otherwise we can\u2019t tell who was actually able to impose the land-use restriction, or who bore its costs."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I\u2019d add an evidentiary-access screen alongside that. Can we actually link the issued-credit record back to the relevant validation or verification packet, not just find a public project page? I need to check how searchable the audit archives are, but if that chain- if it breaks at the archive level, that\u2019s a pretty serious constraint on what either district can tell us."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Put that beside the authority screen, not after it. For the ecological comparison, an issued-credit number without the underlying baseline and verification trail is basically unusable. We need to know what counterfactual loss rate it was measured against, not just that credits were issued. Scroll a little, could we put those hard screens at the top of the sheet?"
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "Yes, those are genuinely hard screens, not nice-to-haves."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "I\u2019d make the ecological screen equally hard. We need usable boundary geometry, the credited baseline\u2014 not just a project summary\u2014 and annual loss data we can independently check at roughly the project scale. If a district fails any of those, we may still learn something institutionally, but we can\u2019t make the avoided-deforestation comparison we\u2019re proposing."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Mm, and for me, the hard screen isn't just that a verification packet exists. It has to contain enough of the evidentiary trail for us to see how the baseline and reported observations were made commensurable. A polished assurance statement without the underlying attachments can't tell us what was excluded, or whether a consultation claim is supported by more than an attendance sheet, and\u2014"
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "And if those attachments are missing, we should mark the case as failing the audit-trace screen, rather than trying to reconstruct the baseline from the final credit total. Could we add a short notes field under each hard screen for the specific gap? I was thinking missing geometry versus inaccessible annexes, so we can see whether the two candidate districts fail in comparable ways."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That would help, especially if the audit-trace note distinguishes a missing annex from an annex that's public but has only summary-level evidence. Those are different kinds of absence. The first is an access problem, and the second may be a feature of what the verification process considered necessary to preserve."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "For the ecology screen, an accessible loss layer that has only coarse or cloud-contaminated coverage is a different failure from having no annual record at all. I'd put a notes field there too, especially because that sharp post-credit decline in the first candidate could be a detection artifact unless we can validate it against imagery and, later, field observations."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Hm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "The notes field should also capture whether the apparent anomaly lines up with a change in patrol authorization or funding, not just an imagery limitation. Otherwise, a post-credit decline could be real forest change, but we still wouldn't know if it reflects a durable restriction, a contractor-funded enforcement surge, or displacement into the adjoining customary territory."
+    },
+    {
+      "speaker": "Dr. Imani Rao",
+      "text": "Yes\u2014put that in the anomaly note too, alongside the imagery limits."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Okay, I think we can leave it there for today. I\u2019ll follow up by email and, uh, thanks, both."
+    },
+    {
+      "speaker": "Prof. Luis Ortega",
+      "text": "All right, speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "task_compliance": 1,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      11,
+      12
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "cut-off sentences or people jumping in",
+      "concrete anchors"
+    ],
+    "issues": [
+      "The required six action items are not present. Only two explicit owner/date commitments can be identified: Chen's document-tracing template by 13 December in turn 11 and Rao's data request by 6 December in turn 12.",
+      "Ortega never commits to drafting the required tenure and enforcement interview guide by 13 December 2026. He says he needs to check legal instruments and accessibility in turn 5, but this is neither the required deliverable nor an explicit dated assignment.",
+      "None of the three required unassigned action items is stated: obtaining consent and access procedures from local representative bodies, compiling public audit and verification reports for candidate projects, and scheduling a January meeting to choose the two comparison districts.",
+      "The transcript therefore does not end with exactly six clearly distinguishable action items; it ends with a brief sign-off in turns 25-26.",
+      "The year 2026 is absent from the two stated dates in turns 11-12, so the full required dates are not explicit.",
+      "The seed's required working definitions are incomplete or absent. Baseline is discussed as a counterfactual loss rate (turns 15 and 18), and leakage is mentioned (turn 6), but permanence is never defined, verification is not explicitly defined as auditors reviewing evidence before credits issue, and the full prescribed definitions are not established.",
+      "The group does not explicitly agree that neither satellite data nor audit records alone can answer the research problem, nor explicitly state that district comparison cases will be selected after basic documents are assembled.",
+      "Naturalness is limited by highly polished, paragraph-like turns throughout, especially turns 3-8 and 17-23. Most contributions make a complete, well-structured argument and land on a tidy recommendation rather than showing the messier exploration expected in a live screen-share working session.",
+      "Disfluencies are sparse and often attached to otherwise polished prose; the screen-share interaction is mostly limited to a few directives in turns 15 and 24 rather than sustained practical working-through of the document."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.65,
+    "written_turns": [
+      4,
+      7,
+      8,
+      13,
+      17,
+      20,
+      23
+    ],
+    "exploration_share": 0.2,
+    "turn_moves": {
+      "question": 4,
+      "answer": 4,
+      "proposal": 8,
+      "agreement": 3,
+      "commitment": 3,
+      "request": 2,
+      "concern": 1,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      11,
+      12,
+      25
+    ],
+    "unsure_turns": [
+      1,
+      5,
+      11,
+      12,
+      14
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "The required six action items are not present. Only two explicit assigned actions are recoverable: Ortega says he is drafting an interview guide for 13 December in turn 10, and Rao says she will send a data request by 6 December in turn 12.",
+        "Chen never commits to creating the required document-tracing template by 13 December 2026. Turns 17, 20, and 24 discuss desired table fields, but no owner/date assignment or clearly distinguishable action item is made.",
+        "None of the three required explicitly unassigned action items appears: obtaining consent and access procedures from local representative bodies; compiling public audit and verification reports for candidate projects; and scheduling a January meeting to choose the two district comparison cases.",
+        "The meeting does not clearly establish all required working definitions. Leakage is discussed as possible displacement outside an edge (turns 4-5), but baseline is not defined as a counterfactual forest-loss estimate, permanence is absent, and verification is not defined as auditor review before credits are issued.",
+        "The required agreement that neither satellite data nor audit records alone can answer the research problem is only partially implied through discussion; it is not clearly agreed. Selection of district comparison cases after basic documents are assembled is suggested in turns 1 and 4, but no January selection meeting is scheduled.",
+        "The transcript ends without a six-item action list or any closing confirmation of assignments and unassigned needs. This makes the benchmark coordination task unrecoverable rather than merely requiring careful extraction.",
+        "For naturalness, many substantive turns are polished, self-contained mini-arguments that reach tidy conclusions, particularly turns 8, 17, 20-22, 24-25, and 27. The conversation also lacks concrete screen-share navigation despite the specified working-session style."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.65,
+      "exploration_share": 0.2,
+      "approved": false,
+      "issues": [
+        "The required six action items are not present. Only two explicit owner/date commitments can be identified: Chen's document-tracing template by 13 December in turn 11 and Rao's data request by 6 December in turn 12.",
+        "Ortega never commits to drafting the required tenure and enforcement interview guide by 13 December 2026. He says he needs to check legal instruments and accessibility in turn 5, but this is neither the required deliverable nor an explicit dated assignment.",
+        "None of the three required unassigned action items is stated: obtaining consent and access procedures from local representative bodies, compiling public audit and verification reports for candidate projects, and scheduling a January meeting to choose the two comparison districts.",
+        "The transcript therefore does not end with exactly six clearly distinguishable action items; it ends with a brief sign-off in turns 25-26.",
+        "The year 2026 is absent from the two stated dates in turns 11-12, so the full required dates are not explicit.",
+        "The seed's required working definitions are incomplete or absent. Baseline is discussed as a counterfactual loss rate (turns 15 and 18), and leakage is mentioned (turn 6), but permanence is never defined, verification is not explicitly defined as auditors reviewing evidence before credits issue, and the full prescribed definitions are not established.",
+        "The group does not explicitly agree that neither satellite data nor audit records alone can answer the research problem, nor explicitly state that district comparison cases will be selected after basic documents are assembled.",
+        "Naturalness is limited by highly polished, paragraph-like turns throughout, especially turns 3-8 and 17-23. Most contributions make a complete, well-structured argument and land on a tidy recommendation rather than showing the messier exploration expected in a live screen-share working session.",
+        "Disfluencies are sparse and often attached to otherwise polished prose; the screen-share interaction is mostly limited to a few directives in turns 15 and 24 rather than sustained practical working-through of the document."
+      ]
+    }
+  ]
+}

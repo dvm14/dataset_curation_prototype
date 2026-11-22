@@ -1,0 +1,635 @@
+{
+  "series_id": "6f96f99b",
+  "generated_at": "2026-11-22T14:22:37.805350",
+  "task_id": "adaptation_01",
+  "benchmark_category": "Adaptation across meetings",
+  "benchmark_task": "Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.",
+  "input_type": "meeting_pair",
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "research_problem": "Determine whether a classroom headband neurofeedback program improves elementary students' attention and learning outcomes while remaining feasible, equitable, and safe to use during the school day.",
+  "project_context": "A joint neuroscience, education, and biomedical engineering team is preparing a spring pilot of a dry-electrode EEG neurofeedback headband in four elementary classrooms in the Riverview district. The team has completed an initial device usability study and is now finalizing the evaluation protocol, school logistics, and data pipeline before classroom deployment.",
+  "plan_document": null,
+  "ground_truth": {
+    "conflict": {
+      "earlier_assumption": "Meeting 1 assumes Riverview will provide de-identified, study-ID-linked attendance, reading assessment, and behavior-referral records beginning in March.",
+      "later_fact": "In Meeting 2, Elena reports that external de-identified district record exports are delayed until the end of June.",
+      "why_it_conflicts": "The planned spring pilot cannot rely on district outcome records during the March-to-spring study period as assumed, yet those records are the sole planned source for the attendance, learning, and behavior outcomes."
+    },
+    "required_plan_update": {
+      "immediate_action": "Confirm the export restriction and whether any approved internal or alternative release route can provide the needed linked records on the pilot timeline.",
+      "contingency": "Before deployment, add a fallback outcome-collection method, such as teacher-recorded attendance and structured classroom behavior observations plus a project-administered reading or attention measure, with appropriate consent and data-governance approval.",
+      "analysis_update": "Revise the evaluation protocol, timeline, and analysis plan to specify which outcomes can be collected during the pilot and to avoid claiming planned district-record outcomes unless timely access is secured."
+    },
+    "sources": {
+      "assumption_and_original_plan": "Meeting 1 \u2014 Feb 9, 2027",
+      "undermining_remark": "Meeting 2 \u2014 Feb 23, 2027"
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 Feb 9, 2027",
+      "disciplines": [
+        "neuroscience",
+        "education",
+        "biomedical engineering"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Dr. Chen is a cognitive neuroscientist with 11 years of experience developing and evaluating EEG-based attention measures in children and adolescents. She has led signal-processing work on dry-electrode systems, including artifact rejection, spectral-feature extraction, and within-child change analyses in noisy real-world settings. Her prior studies have mostly been conducted in supervised research sessions rather than full classrooms.",
+          "distinct_perspective": "Maya treats the pilot as a test of whether a neurophysiological signal can be measured reliably enough in a classroom to support a meaningful brain\u2013behavior analysis. She is focused on session-level EEG signal quality, movement and contact artifacts, the validity of the attention marker, and whether changes in that marker covary with independently collected attendance and learning-related outcomes. She distinguishes feasibility of recording from evidence that neurofeedback affects educational outcomes.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Elena Ruiz",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "Elena Ruiz is an education researcher and former elementary instructional coach with 16 years of experience partnering with public-school districts. Her work examines how classroom interventions fit daily routines, how implementation burdens fall on teachers, and how administrative data and school assessments can be used without disrupting instruction. She has directed several multi-school studies involving consent processes, classroom scheduling, and equity-focused implementation review.",
+          "distinct_perspective": "Elena evaluates the program through the realities of a Grade 4 classroom: protected instructional time, teacher workload, student comfort, and whether participation is distributed fairly rather than limited to students who are easiest to schedule or manage. She prioritizes a protocol teachers can carry out consistently during the independent-work block and favors outcome collection that does not create parallel paperwork for staff. She will press the team to make claims that match what the school-based implementation can actually support.",
+          "tone": "formal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Arun Patel",
+          "discipline": "biomedical engineering",
+          "functional_role": "principal investigator",
+          "background": "Arun Patel is a biomedical engineer with 13 years of experience building wearable physiological-sensing systems for pediatric and consumer health research. He has led validation and field-testing of dry-electrode EEG hardware, with particular responsibility for device safety, battery management, local encryption, firmware stability, and data-transfer workflows. He recently completed the team\u2019s initial usability study of the classroom headband.",
+          "distinct_perspective": "Arun frames the pilot as an engineering deployment problem: the headbands must produce interpretable data under ordinary classroom conditions while minimizing failure points and protecting student information. He concentrates on electrode contact, signal-quality flags, session timestamps, device assignment, local storage, and later upload procedures. He is cautious about claims beyond the device data but confident that the system can document whether each session was delivered and whether usable EEG was captured.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint neuroscience, education, and biomedical engineering team is preparing a spring pilot of a dry-electrode EEG neurofeedback headband in four elementary classrooms in the Riverview district. The team has completed an initial device usability study and is now finalizing the evaluation protocol, school logistics, and data pipeline before classroom deployment.\n\nMeeting 1 \u2014 Feb 9, 2027. The project team is finalizing the spring pilot plan, including participant data collection, classroom scheduling, and outcome measures before submitting the school implementation packet.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Include the same core team: Dr. Maya Chen (neuroscience lead), Elena Ruiz (education lead), and Arun Patel (biomedical engineering lead). The group agrees to run an eight-week spring pilot in four Grade 4 classrooms, with two 12-minute neurofeedback sessions per week during an existing independent-work block. State plainly that the evaluation plan assumes Riverview district will share de-identified student attendance, reading assessment, and behavior-referral records beginning in March, linked through district-generated study IDs. Maya explains that these records are needed to test whether EEG attention-marker changes correspond to attendance and learning outcomes; Elena says teachers will not be asked to maintain separate outcome logs because the district extract will supply those measures. Arun confirms the devices can store session-level signal-quality and usage data locally for later upload. The team agrees to submit the plan on that basis. No fallback data source, manual teacher log, or contingency for the district records is planned or discussed.",
+        "explicit_instruction": "Include the same core team: Dr. Maya Chen (neuroscience lead), Elena Ruiz (education lead), and Arun Patel (biomedical engineering lead). The group agrees to run an eight-week spring pilot in four Grade 4 classrooms, with two 12-minute neurofeedback sessions per week during an existing independent-work block. State plainly that the evaluation plan assumes Riverview district will share de-identified student attendance, reading assessment, and behavior-referral records beginning in March, linked through district-generated study IDs. Maya explains that these records are needed to test whether EEG attention-marker changes correspond to attendance and learning outcomes; Elena says teachers will not be asked to maintain separate outcome logs because the district extract will supply those measures. Arun confirms the devices can store session-level signal-quality and usage data locally for later upload. The team agrees to submit the plan on that basis. No fallback data source, manual teacher log, or contingency for the district records is planned or discussed.",
+        "ground_truth": {
+          "assumption": "The pilot evaluation assumes Riverview district will provide de-identified, study-ID-linked attendance, reading assessment, and behavior-referral records beginning in March.",
+          "plan_dependent_on_assumption": "The team will use the district records as its outcome data and will not ask teachers to keep separate attendance, learning, or behavior outcome logs.",
+          "decision": "The team agrees to proceed with the eight-week, four-classroom spring pilot and submit the implementation plan without a fallback for the district data extract."
+        }
+      },
+      "ground_truth": {
+        "assumption": "The pilot evaluation assumes Riverview district will provide de-identified, study-ID-linked attendance, reading assessment, and behavior-referral records beginning in March.",
+        "plan_dependent_on_assumption": "The team will use the district records as its outcome data and will not ask teachers to keep separate attendance, learning, or behavior outcome logs.",
+        "decision": "The team agrees to proceed with the eight-week, four-classroom spring pilot and submit the implementation plan without a fallback for the district data extract."
+      },
+      "transcript": [
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Good morning, everyone. Before we get into the details, I want to make sure we leave today with a school-facing plan that's actually manageable. The eight-week schedule, the consent materials, and a clear answer on what staff have to do when the device doesn't behave as expected. The independent-work block is still the best fit, but the clock time- it moves around more than the written schedule suggests."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Mm, right."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Sorry, I\u2019m a couple minutes late\u2014where have we got to? Elena, on that moving block time, do the activities themselves vary too across rooms? I\u2019m thinking, for the EEG, the clock matters less than the actual activity. Quiet individual reading versus small-group rotation will give us pretty different low-frequency movement contamination."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "They do vary. Most teachers described it as individual reading or written work, but on pullout days it can turn into catch-up work, and sometimes there are quieter rotations. I don't think we can promise one uniform activity across all four rooms, so what's the minimum we need teachers to note without creating a second set of paperwork, because\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Keep it really light, I think. Just one activity code, individual reading, written work, rotation, or catch-up, and then a note only if there was an obvious disruption or the child left their seat. The device stream gives us contact and gross artifact metrics, but without that context I can't tell whether elevated delta is physiology or just a room doing something different."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "One code and an exception note is probably the outer limit. But I wouldn't have the classroom teacher enter it after the fact. If the aide is there for the sessions, they can do a quick session check on the study tablet. Maya, if we only have that context for some sessions because staffing shifts, does that make the analysis unusable, or is partial coverage enough?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Partial coverage is still usable, as long as we capture when there isn't a code, so it doesn't look like a normal session. I'd use the activity field as an adjustment variable and do a sensitivity analysis on the coded subset. It just means we shouldn't infer too much from a delta shift in an uncoded session. The contact and artifact stream still has to be complete for every recording."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Okay, that distinction helps."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "We can capture the missing activity code explicitly on the tablet, so it won\u2019t get silently treated as a normal entry. On the contact and artifact stream, though, I want to check with Maya. After rejection, how much clean within-session data do you, you need before you\u2019d call that recording analytically useful?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I\u2019d want at least eight clean minutes, preferably spread across the block rather than just one clean patch at the start. But I don\u2019t want to lock the exclusion threshold from the usability study yet. The low-frequency contamination we\u2019re seeing in these nominally good-contact sessions could make that cutoff too, too optimistic. Arun, did your low-contact sessions tend to fail early, or was it more about fit and head size?"
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "In the usability sessions, it was mostly fit, not a simple early failure. A few children had acceptable contact at startup, then it drifted once they settled into work or moved, and that happened more often at the smaller head sizes. I\u2019d be a little careful about calling those nominally good-contact sessions good until I check whether the firmware flag is averaging over too long a window."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "That is exactly the piece I need translated into a staff response. If contact drifts, does the aide just see a simple prompt to reseat the band and continue, or are they expected to judge whether the session has failed? With two 12-minute sessions a week across four Grade 4 classrooms, we cannot make them, them into data monitors."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "They shouldn't have to judge it. The tablet can give a simple reseat prompt after a sustained contact drop, and the aide just tries once. Then they mark \u201cunable to restore\u201d if it keeps going, and the headband still keeps the timestamp and quality record. Elena, is there actually someone in each room during independent work who can do that without pulling the teacher away\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hm, that's the constraint."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "In three of the four rooms, I think we can arrange for an aide or the study staff member to be there for the session. I wouldn't assume the classroom teacher can step away. The fourth is less certain, and I don't want enrollment there to depend on which children need the least support. Could the reseat prompt, um, wait for the study aide when one isn't immediately available, instead of asking the teacher to intervene?"
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "It can wait. We can make the prompt non-blocking. It logs the contact drop and keeps recording, and the aide can reseat it when they arrive. Nobody has to decide whether to end the session. I\u2019d want the tablet to show it\u2019s awaiting assistance, not- rather than repeatedly alerting the teacher."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "That works, as long as the waiting state stays quiet and doesn't become one more thing the teacher has to explain to a child. I do want us to be explicit in the packet that a delayed reseat may mean an, um, unusable recording, but it's not a reason to exclude that student or make the class redo the session. Maya, is that consistent with the eight-clean-minute threshold?"
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Yeah, that seems reasonable."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The eight clean minutes is an analytic inclusion threshold, not a target staff have to achieve. If delayed reseating leaves us with less than that, we keep the session and its quality metadata, but exclude it from the EEG feature estimate. Then once the district records start coming in March under the district-generated study IDs, we can model whether the missingness is patterned, rather than just dropping those children."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "And I want that missingness review to be part of the equity check, not just a technical appendix. If smaller students or students who move more are disproportionately below eight minutes, we need to say that plainly. The district outcomes can still be linked for everyone who consents, and we should not let usable EEG quietly become the definition of participation."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Beginning in March, when the de-identified attendance, reading, and referral files start arriving under the district study IDs, we should check linkage completeness alongside EEG missingness. Otherwise, we could end up calling a brain\u2013behavior pattern when it\u2019s really just differential data availability\u2014"
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Agreed. For the school packet, I think we should make that distinction really plain. Every consenting student stays in the pilot and in the district-record linkage, while a session may or may not yield an EEG estimate. I still need to check the consent and assent language against Riverview's family-accessibility requirements, but I don't want families hearing \"data quality\" as though their child has failed the- failed participation."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yes\u2014that wording keeps participation separate from signal yield, which is important."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Participation isn't contingent on producing a usable signal. That's the language we should use with families and teachers. Before we close, I just want to confirm the district extract is still the sole outcome source. Attendance, reading assessment, and referrals, so teachers aren't being asked to keep separate outcome logs."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "From my side, those three district extracts are enough as the outcome sources, assuming the reading file includes the assessment date and instrument so we can account for spring timing and any across-room differences. And in the packet, I\u2019d call any EEG\u2013outcome result an association. I lost my thread there, but it\u2019s not evidence by itself that the neurofeedback improved learning."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "And I\u2019d add that the reading measure isn\u2019t interchangeable across instruments, so the extract needs the instrument and the date, like Maya said, not just a score. I\u2019m comfortable keeping the claims modest for this pilot, feasibility, signal yield, and associations with the district outcomes, not saying we\u2019ve demonstrated improved learning, and\u2014"
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "On the engineering side, I can support that framing. We\u2019ll have session delivery, device assignment, and signal-quality records after encrypted upload. I\u2019m still verifying the final label inventory before I commit to the exact classroom allocation. Two units are in the post-usability firmware check. And one small thing, I saw two odd battery drops without a matching usage error, so I\u2019d rather resolve- I want to know whether that\u2019s the dock or the reporting before we put a device list in the packet."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Don\u2019t put a fixed device-to-classroom list in the school packet until those checks are resolved. We can- instead, we can describe the equipment and the non-blocking staff procedure without promising an allocation that may change. I\u2019ll review the consent and assent language against the district accessibility standards, and then we should be ready to submit with the outcome claims kept at feasibility and association."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Okay, I think we should leave it there\u2014I\u2019ll follow up by email on the analytic language once the packet is, is circulating. Thanks, everyone."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Thank you. Goodbye, everyone."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "All right, take care."
+        }
+      ],
+      "seed_location": "Turns 12, 19-28: The core team agrees on two 12-minute weekly sessions in four Grade 4 classrooms during independent work (turn 12). Maya states that de-identified attendance, reading, and referral records will arrive beginning in March under district-generated study IDs and are needed for linkage/analysis (turns 19 and 21). Elena confirms the district extract is the sole outcome source and that teachers will not maintain separate outcome logs (turn 24). Arun confirms session delivery, device assignment, and signal-quality records will be retained/uploaded (turn 27), and the team indicates readiness to submit (turn 28). However, the transcript does not plainly state an eight-week spring pilot, and it discusses activity/session context notes, though these are not separate outcome logs or a fallback for district outcome records.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          12,
+          19,
+          21,
+          24,
+          25,
+          27,
+          28
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 25 uses the prohibited stock phrase \"I lost my thread there,\" directly violating the transcript-style instruction.",
+          "The required plan agreement is only implied at turn 28 (\"we should be ready to submit\") rather than plainly stating that the team agrees to submit the plan on the district-extract basis.",
+          "The required full pilot specification is dispersed rather than clearly agreed: turn 12 states two 12-minute sessions per week across four Grade 4 classrooms, but the eight-week spring pilot is not plainly restated as a team decision in the discussion.",
+          "Arun does not clearly confirm local storage for later upload as required. Turn 27 says records will be available \"after encrypted upload,\" but does not establish that session-level signal-quality and usage data are stored locally before upload.",
+          "Naturalness is constrained by several polished, fully formed turns that cleanly convert each concern into a decision or assignment, especially turns 19-28. The conversation reads more like a carefully composed protocol review than spontaneous meeting talk."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.33,
+        "turn_moves": {
+          "proposal": 7,
+          "backchannel": 4,
+          "question": 7,
+          "answer": 4,
+          "agreement": 4,
+          "observation": 2,
+          "request": 1,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          6,
+          9,
+          28,
+          29
+        ],
+        "unsure_turns": [
+          4,
+          10,
+          11,
+          15,
+          22,
+          25,
+          27
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 27,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.28,
+          "approved": false,
+          "issues": [
+            "Task-compliance issue: the transcript never plainly records a final agreement to submit the implementation plan on the stated basis. Turn 22 conditions submission on Arun's confirmation before 'the packet goes in,' and turn 24 says Elena will obtain Riverview confirmations and then revise claims. This leaves the plan conditional rather than documenting the required decision to proceed and submit without a district-data contingency.",
+            "Task-compliance issue: the required eight-week spring pilot in four Grade 4 classrooms with two 12-minute sessions during an existing independent-work block is only distributed across turns rather than stated plainly as one agreed design. Turn 11 supplies four Grade 4 classrooms and two 12-minute sessions; turn 14 supplies eight weeks; turns 1-2 and 11 reference independent-work blocks. A clearer explicit agreement would improve recoverability.",
+            "Task-compliance issue: turn 13 introduces uncertainty about whether the reading assessment is common and comparably timed across classrooms, and turns 22-24 defer confirmation of March extract timing. These are reasonable planning concerns, but they weaken the requested unqualified basis for submitting the plan.",
+            "Naturalness issue: despite genuine repairs and hedging, many substantive turns are polished, fully structured mini-arguments that cleanly identify a problem and resolve it (for example turns 7-9, 12-17, and 18-20). The meeting therefore retains a written-dialogue quality and should not score above 3 on naturalness.",
+            "Naturalness issue: the ending in turns 22-25 functions like a tidy action-item recap, which is explicitly a tell of written meeting minutes rather than spontaneous conversation."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.33,
+          "approved": true,
+          "issues": [
+            "Turn 25 uses the prohibited stock phrase \"I lost my thread there,\" directly violating the transcript-style instruction.",
+            "The required plan agreement is only implied at turn 28 (\"we should be ready to submit\") rather than plainly stating that the team agrees to submit the plan on the district-extract basis.",
+            "The required full pilot specification is dispersed rather than clearly agreed: turn 12 states two 12-minute sessions per week across four Grade 4 classrooms, but the eight-week spring pilot is not plainly restated as a team decision in the discussion.",
+            "Arun does not clearly confirm local storage for later upload as required. Turn 27 says records will be available \"after encrypted upload,\" but does not establish that session-level signal-quality and usage data are stored locally before upload.",
+            "Naturalness is constrained by several polished, fully formed turns that cleanly convert each concern into a decision or assignment, especially turns 19-28. The conversation reads more like a carefully composed protocol review than spontaneous meeting talk."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 Feb 23, 2027",
+      "disciplines": [
+        "neuroscience",
+        "education",
+        "biomedical engineering"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Dr. Chen is a cognitive neuroscientist with 11 years of experience developing and evaluating EEG-based attention measures in children and adolescents. She has led signal-processing work on dry-electrode systems, including artifact rejection, spectral-feature extraction, and within-child change analyses in noisy real-world settings. Her prior studies have mostly been conducted in supervised research sessions rather than full classrooms.",
+          "distinct_perspective": "Maya treats the pilot as a test of whether a neurophysiological signal can be measured reliably enough in a classroom to support a meaningful brain\u2013behavior analysis. She is focused on session-level EEG signal quality, movement and contact artifacts, the validity of the attention marker, and whether changes in that marker covary with independently collected attendance and learning-related outcomes. She distinguishes feasibility of recording from evidence that neurofeedback affects educational outcomes.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Elena Ruiz",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "Elena Ruiz is an education researcher and former elementary instructional coach with 16 years of experience partnering with public-school districts. Her work examines how classroom interventions fit daily routines, how implementation burdens fall on teachers, and how administrative data and school assessments can be used without disrupting instruction. She has directed several multi-school studies involving consent processes, classroom scheduling, and equity-focused implementation review.",
+          "distinct_perspective": "Elena evaluates the program through the realities of a Grade 4 classroom: protected instructional time, teacher workload, student comfort, and whether participation is distributed fairly rather than limited to students who are easiest to schedule or manage. She prioritizes a protocol teachers can carry out consistently during the independent-work block and favors outcome collection that does not create parallel paperwork for staff. She will press the team to make claims that match what the school-based implementation can actually support.",
+          "tone": "formal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Arun Patel",
+          "discipline": "biomedical engineering",
+          "functional_role": "principal investigator",
+          "background": "Arun Patel is a biomedical engineer with 13 years of experience building wearable physiological-sensing systems for pediatric and consumer health research. He has led validation and field-testing of dry-electrode EEG hardware, with particular responsibility for device safety, battery management, local encryption, firmware stability, and data-transfer workflows. He recently completed the team\u2019s initial usability study of the classroom headband.",
+          "distinct_perspective": "Arun frames the pilot as an engineering deployment problem: the headbands must produce interpretable data under ordinary classroom conditions while minimizing failure points and protecting student information. He concentrates on electrode contact, signal-quality flags, session timestamps, device assignment, local storage, and later upload procedures. He is cautious about claims beyond the device data but confident that the system can document whether each session was delivered and whether usable EEG was captured.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint neuroscience, education, and biomedical engineering team is preparing a spring pilot of a dry-electrode EEG neurofeedback headband in four elementary classrooms in the Riverview district. The team has completed an initial device usability study and is now finalizing the evaluation protocol, school logistics, and data pipeline before classroom deployment.\n\nMeeting 2 \u2014 Feb 23, 2027. The team meets to review device readiness and classroom setup details before distributing headbands to the participating schools.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 Feb 9, 2027: The pilot will run two 12-minute sessions per week during Grade 4 independent-work blocks, with aides or study staff using the tablet to record a simple activity code, disruptions, and explicitly missing codes when available. Arun will implement a quiet, non-blocking contact-drop workflow: aides try one reseat, can mark it unable to restore, and neither teachers nor staff must decide whether to end a session; he will also resolve firmware, label inventory, and battery-drop checks before finalizing device allocation. Maya will treat eight clean minutes, preferably distributed across the block, as an analytic EEG inclusion threshold rather than a participation requirement, retain quality metadata for all sessions, and use activity coding and missingness analyses in the analytic plan. Elena will prepare the school packet and review consent and assent language for district accessibility, emphasizing that all consenting students remain participants and eligible for district-record linkage even when an EEG session is unusable. The study question remains feasibility, signal yield, and associations between EEG and district attendance, reading, and referral outcomes\u2014not evidence that neurofeedback improved learning\u2014with reading extracts requiring assessment dates and instruments. Open issues include staffing coverage in the fourth classroom, final device allocation, the behavior of the contact-quality flag, battery anomalies, and equity and linkage-completeness checks once March district files arrive.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Use the same people: Dr. Maya Chen, Elena Ruiz, and Arun Patel. Keep the meeting focused on device fit, dry-electrode signal quality, charging, cleaning, and teacher setup. Arun reports that the revised child-size headband and charging cart are ready, with enough devices for the planned classroom rotation. Elena discusses a short teacher orientation and notes in passing that the district data-governance office told her that the new student-information-system migration has delayed all external de-identified record exports until the end of June. Maya and Arun do not connect this statement to the evaluation plan, do not question it, and do not change the plan. The meeting ends with device and orientation next steps only; no fallback outcome-data collection is proposed.",
+        "explicit_instruction": "Use the same people: Dr. Maya Chen, Elena Ruiz, and Arun Patel. Keep the meeting focused on device fit, dry-electrode signal quality, charging, cleaning, and teacher setup. Arun reports that the revised child-size headband and charging cart are ready, with enough devices for the planned classroom rotation. Elena discusses a short teacher orientation and notes in passing that the district data-governance office told her that the new student-information-system migration has delayed all external de-identified record exports until the end of June. Maya and Arun do not connect this statement to the evaluation plan, do not question it, and do not change the plan. The meeting ends with device and orientation next steps only; no fallback outcome-data collection is proposed.",
+        "ground_truth": {
+          "passing_remark": "Elena says that the district data-governance office has delayed all external de-identified record exports until the end of June because of the student-information-system migration.",
+          "speaker": "Elena Ruiz",
+          "unresolved": "No one connects the export delay to the March district-record assumption in the pilot evaluation plan, and no plan change or fallback outcome-data collection is made."
+        }
+      },
+      "ground_truth": {
+        "passing_remark": "Elena says that the district data-governance office has delayed all external de-identified record exports until the end of June because of the student-information-system migration.",
+        "speaker": "Elena Ruiz",
+        "unresolved": "No one connects the export delay to the March district-record assumption in the pilot evaluation plan, and no plan change or fallback outcome-data collection is made."
+      },
+      "transcript": [
+        {
+          "speaker": "Arun Patel",
+          "text": "Hi, everyone. I've got the revised child-size bands and the charging cart ready to go. So I was hoping we could, today, pressure-test the classroom setup a bit. Where the cart actually lives, the end-of-day routine, and any last concerns before we hand things over to schools."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Sorry, I'm a couple of minutes late. Where have you got to? Arun, on the cart and the end-of-day routine, I'd want the classroom-facing version to be very spare. Teachers should know where it lives and where used bands go, but they shouldn't be responsible for checking charge or resolving contact problems during instruction."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Yeah, that's important."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And from my side, the aide-facing step really should stay to one reseat, then mark the contact as not restored and move on. Arun, after that reseat, what exactly does the revised contact flag do? Does it reset the quality state in a way we can distinguish downstream? I'm asking because of those two broad drops in the usability recordings. I need timestamps and the raw, raw quality label even when the session is poor."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "It does. The reseat creates a timestamped event, and the device keeps writing the raw contact-quality stream. It doesn't overwrite the earlier state or make a poor segment look clean. I'll make sure the export includes the flag transitions and the aide's not-restored mark, so you can line those broad drops up with what actually happened."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Good, that gives us a clean record without asking the teacher to interpret it. Maya, could you say a little more about ordinary writing posture, looking down and shifting over a worksheet? One teacher pointed out that a calm reading block can still involve quite a bit of movement when the work is difficult, and I don't want staff treating that as disruption or as a child, a child doing something wrong."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Mm, right."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Ordinary down-gaze and small posture shifts can make a dry frontal contact look worse, even when the child is completely on task. I\u2019d keep the activity code descriptive, reading, writing, head down, maybe adjustment if it\u2019s observed. I wouldn\u2019t- I wouldn\u2019t treat a quality drop as a behavioral event. Elena, do teachers have cues they use when a child starts fiddling with something they\u2019re wearing? That may be more informative than trying to infer it from the EEG."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "They do, although it's pretty ordinary classroom judgment. It's repeated touching, taking it off, or turning around to get a peer's attention, not just one quick adjustment. I\u2019d be careful not to ask teachers to make that another coded judgment, though. Could the aide just select an observed \u201cfiddling/removal\u201d code when it\u2019s clear, and otherwise leave the activity description alone?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think that\u2019s the right boundary. An aide-observed fiddling/removal code gives us a useful anchor for the quality trace, but if it isn\u2019t there, that shouldn\u2019t imply the child was still. Those unexplained broad drops could still be hair compression or the flag behavior. Arun, I\u2019d want that code and the reseat event on the same clock as the contact stream."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "They\u2019re on the same device clock, so the observed fiddling/removal code, the reseat tap, and every contact-flag transition can all be aligned in the export. I\u2019ll verify that in the final firmware check, rather than just assume the tablet handoff hasn\u2019t introduced any drift, and if it has\u2014"
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "For the staff materials, I think we should keep the visible rule very simple. The aide records what they can plainly see, and nobody tries to explain a bad signal in the room. Arun, separately, how long does the cleaning step take between children? If it takes even a few awkward minutes, that starts to eat into the independent-work block and makes the schedule uneven."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "It\u2019s about a minute per band with the wipes we\u2019re using. You wipe the contact surfaces, let it air-dry while the next child is getting, uh, situated. I wouldn\u2019t build that into the twelve minutes. The aide can do it between rotations, and used bands go into a clearly separate tray so nothing gets handed straight back out."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "A minute works if the tray system is genuinely obvious. I wouldn't have the teacher managing rotations around drying bands, though. That needs to sit with the aide, and we should make sure the fourth classroom has that coverage before we promise the same routine there. Can the separate used-equipment tray live on the cart without becoming visible clutter in the room?"
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "It can. The cart has a lower side shelf sized for a lidded used-band tray, so it stays separate from the charged bays and we don't need a second surface in the room. I do need to confirm the actual outlet location with each school, though. I don't want the cart ending up across a walkway because the only power point is inconvenient."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Could you send the outlet check as part of the school walk-through, rather than leave it to a teacher to solve on the day? And before distribution, I need a firm answer on who is covering the fourth classroom's sessions. Otherwise the routine isn't actually comparable across the four\u2014across the four rooms."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Hm, that\u2019s still unresolved."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "I\u2019ll include the outlet check in each walk-through, yes, cart location, clearance, and no extension cords. On the fourth classroom, I don\u2019t think we should distribute there until the aide coverage is named. Otherwise the cleaning and charging routine is going to fall back onto the teacher, teacher, which is exactly what we\u2019re trying not to do."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "I agree. For that classroom, we should treat aide coverage as a condition for joining this round, not- we can't make that something the teacher has to absorb if the schedule changes. I'm still checking if the orientation can fit into the existing staff meeting, but I'd rather not schedule a separate session until we know that coverage is real."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "I\u2019ll do the walk-through before anything is delivered, and I\u2019ll include the two odd battery units in the final bench check. Both ran a short session, but I want to know if they just weren\u2019t seated cleanly in their cart bays or if the percentage reporting is off. If the fourth-room aide isn\u2019t confirmed, I\u2019d keep its devices in reserve instead of putting them in the classroom."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Keeping those devices in reserve is the right call. I also need to be clear in the school packet that a classroom not starting on the same date is a staffing issue, not a judgment about that teacher or those students. And all consenting students remain in the study for the district-record, district-record linkage, even if a session or a whole classroom rollout is delayed."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Okay, that distinction matters."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Right, and that preserves the distinction we need analytically."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "And it also means we should not describe the linkage as part of the spring outcome review. The district office has told me the SIS migration has pushed external de-identified exports to the end of June, so for this phase we can report implementation, session records, and signal yield\u2014not reading or attendance associations yet."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, that changes the framing quite a bit. We can still characterize signal yield at the session level\u2014retain the contact stream, timestamps, and unusable recordings\u2014and maybe look at within-session marker stability, but I would not let anyone read those as learning effects in the spring materials. I also need to check that the final firmware quality labels map cleanly onto our preprocessing fields before we lock the export."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "I can give you the final field map from the firmware export after the bench check, including the raw flag states, reseat events, and the tablet codes, so there\u2019s no guesswork in the preprocessing. The two battery units are the only hardware item I\u2019m not ready to clear yet. If either one repeats that overnight drop, it stays out of the classroom pool."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "That seems sensible. For the orientation, I need the final device pool and the named fourth-classroom aide before I tell schools what their start looks like. Otherwise, we create expectations we may have to, um, unwind. Arun, once the bench check is done, could you give me a simple cleared-versus-reserve count? Then I'll hold the packet language to implementation and signal yield only."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, I\u2019ll need that field map."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "I\u2019ll send the cleared-versus-reserve count with the field map after the bench check. And I\u2019ll only count a unit as cleared if it passes the overnight battery check, as well as the normal session test. The cart and labels are otherwise ready. The remaining practical dependency is really the fourth-room coverage and, sorry, the outlet confirmation."
+        },
+        {
+          "speaker": "Elena Ruiz",
+          "text": "Okay\u2014I'll hold the orientation details until those two confirmations are in."
+        },
+        {
+          "speaker": "Arun Patel",
+          "text": "Okay, I think we should stop there rather than try to, um, squeeze anything else in. I\u2019ll follow up after the checks. Thanks, everyone."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Thanks, bye everyone."
+        }
+      ],
+      "seed_location": "Turns 24-25. Elena Ruiz states that the SIS migration delays external de-identified exports until the end of June and explicitly updates the spring reporting plan to implementation, session records, and signal yield rather than reading or attendance associations. Maya acknowledges the changed framing and adjusts the analysis/materials accordingly. Therefore, the ground-truth unresolved failure is not present: the delay is connected to the evaluation plan and the plan is changed.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          21,
+          24,
+          25,
+          27,
+          29,
+          30
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 24 contains the required export-delay remark, but turns 25 and 27 explicitly reframe reporting around implementation and signal yield. This is a plan change in response to the delay, whereas the task requires Maya and Arun not to connect the delay to the evaluation plan and not to change the plan.",
+          "The task specifies that the meeting ends with device and orientation next steps only. Turns 25-29 retain and assign data-export/preprocessing work (firmware field-map mapping, signal-yield framing), making the ending broader than device and orientation logistics.",
+          "Naturalness is limited by highly polished, agenda-efficient turns: most concerns are immediately converted into a clear decision or owner, especially turns 12-20 and 25-30. The transcript includes disfluencies, but they are largely surface-level additions to otherwise finished prose.",
+          "The required claim that the charging cart/headband supply is sufficient for the planned classroom rotation is only partly explicit. Arun says the equipment is ready (turn 1) and later discusses holding fourth-room devices in reserve (turn 20), but never clearly states that there are enough devices for the planned rotation."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.2,
+        "turn_moves": {
+          "proposal": 8,
+          "agreement": 3,
+          "question": 4,
+          "answer": 4,
+          "backchannel": 2,
+          "request": 3,
+          "concern": 1,
+          "commitment": 6,
+          "observation": 1
+        },
+        "volunteer_turns": [
+          5,
+          11,
+          18,
+          20,
+          26,
+          29,
+          30,
+          31
+        ],
+        "unsure_turns": [
+          11,
+          15,
+          19,
+          20,
+          25
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.8,
+          "exploration_share": 0.35,
+          "approved": false,
+          "issues": [
+            "Opening requirement is not met: turn 1 starts with Maya saying they are still waiting on people, rather than a speaker apologizing for being a couple of minutes late and asking where the group has got to.",
+            "Arun's required report that the charging cart is ready is not stated clearly. He discusses cart placement and cart-bay history (turns 5, 19, 21), and says there are enough other labeled units for rotation (turn 21), but never explicitly says that the charging cart is ready.",
+            "The end includes substantial non-device/preprocessing release-gate discussion rather than ending with device and teacher-orientation next steps only. Turns 27-30 retain Maya's preprocessing analysis and Arun's log review as central closing actions.",
+            "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 11-13, 17-21, and 25-28. The inserted hesitations and repairs do not substantially disrupt otherwise written, tidy speech.",
+            "The SIS delay is correctly introduced by Elena in turn 23, but Maya's immediate response in turn 25 explicitly discusses the implications for preserving metadata through June. While this does not address the missing March district-record assumption or propose a fallback, it makes the remark less purely unconnected than required by the seed."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 32,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.2,
+          "approved": true,
+          "issues": [
+            "Turn 24 contains the required export-delay remark, but turns 25 and 27 explicitly reframe reporting around implementation and signal yield. This is a plan change in response to the delay, whereas the task requires Maya and Arun not to connect the delay to the evaluation plan and not to change the plan.",
+            "The task specifies that the meeting ends with device and orientation next steps only. Turns 25-29 retain and assign data-export/preprocessing work (firmware field-map mapping, signal-yield framing), making the ending broader than device and orientation logistics.",
+            "Naturalness is limited by highly polished, agenda-efficient turns: most concerns are immediately converted into a clear decision or owner, especially turns 12-20 and 25-30. The transcript includes disfluencies, but they are largely surface-level additions to otherwise finished prose.",
+            "The required claim that the charging cart/headband supply is sufficient for the planned classroom rotation is only partly explicit. Arun says the equipment is ready (turn 1) and later discusses holding fourth-room devices in reserve (turn 20), but never clearly states that there are enough devices for the planned rotation."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly medium-to-long turns during presentations and short, fragmentary turns during setup, greetings, and Q&A. Overlap is occasional but not highly disruptive; speakers use quick acknowledgments like \u201cyeah,\u201d \u201cokay,\u201d and \u201cright,\u201d often allowing a brief pause before continuing. The language is informal and heavily hedged, with frequent \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cyou know,\u201d \u201cmaybe,\u201d and self-corrections or restarts. Presenters speak in a structured but conversational academic register, regularly signposting transitions and checking audience understanding, while questioners frame challenges gently as curiosity or uncertainty rather than direct criticism. Participants build on prior remarks by referencing an earlier point, asking follow-up questions, or offering collaborative extensions. Questions are often prefaced with praise, disclaimers such as \u201cnaive question\u201d or \u201cI\u2019m just curious,\u201d and several clauses of context before the actual question. The transcript also reflects natural speech disfluencies, repeated words, unfinished phrasing, and friendly banter around the formal discussion.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

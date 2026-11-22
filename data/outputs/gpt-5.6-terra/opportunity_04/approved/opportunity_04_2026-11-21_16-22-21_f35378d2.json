@@ -1,0 +1,298 @@
+{
+  "transcript_id": "f35378d2",
+  "generated_at": "2026-11-21T16:22:21.943857",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though presentations are long, structured monologues followed by brief question-and-answer exchanges. Informal pre-meeting chatter includes greetings, technical checks, personal asides, repeated acknowledgments, and occasional joking. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cyou know,\u201d repeated words, false starts, and self-corrections\u2014especially among nonnative speakers. Interruption is low during formal talks but overlap and quick backchanneling are common in conversation (\u201cyeah,\u201d \u201cright,\u201d \u201cgreat\u201d), with questions often prefaced modestly as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions. Challenges are indirect and collaborative: participants frame alternatives as curiosity, uncertainty, or extensions rather than blunt disagreement, and presenters respond generously by validating questions before qualifying their answers. Formal introductions and closing remarks are more polished, while the rest remains relaxed, appreciative, and technically conversational.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Designing payments to coastal landowners to keep mangroves standing instead of converting them to shrimp ponds.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Nila Sen",
+      "discipline": "ecology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A coastal wetland ecologist with 6 years of field and remote-sensing research in tropical estuaries. She has mapped above- and below-ground blue-carbon stocks, juvenile fish use of mangrove channels, canopy disturbance, and natural regeneration across the three pilot villages using plot inventories, drone imagery, and hydrological surveys.",
+      "distinct_perspective": "Frames the payment design around ecological additionality and avoided thresholds: parcels near conversion fronts or regeneration tipping points may yield disproportionately large carbon, nursery-habitat, and connectivity benefits if retained. She will distinguish intact stands from recoverable degraded areas, caution that simple area-based payments can miss hydrological condition and edge effects, and advocate monitoring indicators that capture canopy persistence, recruitment, and disturbance rather than planting counts alone.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Mateo Ruiz",
+      "discipline": "economics",
+      "functional_role": "project manager",
+      "background": "An environmental economist and program manager with 11 years of experience designing conservation-incentive pilots in coastal and agricultural landscapes. He has assembled parcel-level models of expected shrimp-pond returns, landowners' stated willingness to accept, probability of conversion, contract administration costs, and verification expenses, drawing on surveys, local price data, and sensitivity analysis.",
+      "distinct_perspective": "Treats the pilot as a constrained incentive and implementation problem: payments should be high enough to alter credible conversion decisions, targeted where conservation is likely to be additional, and structured so transaction and enforcement costs do not consume the budget. He will press for a transparent initial payment rule, practical contract lengths, and monitoring requirements proportionate to risk, while making uncertainty in profit estimates explicit in plain operational terms.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Lestari Ahmad",
+      "discipline": "anthropology",
+      "functional_role": "research engineer",
+      "background": "A legal and economic anthropologist with 9 years of applied research on customary coastal tenure, lineage-based resource claims, and development-program trust in Southeast Asian fishing communities. For this pilot she conducted repeated household interviews, kinship mapping, participant observation, and discussions with customary authorities and women who harvest mangrove-associated products.",
+      "distinct_perspective": "Interprets a payment not simply as an individual price signal but as a social intervention in a plural tenure regime. She will examine who has de facto authority to prevent pond conversion, who bears foregone access, and whether paying titled parcel holders would violate local norms of collective usufruct and lineage responsibility. She will emphasize procedural legitimacy, recipient selection, grievance channels, and the historical credibility of NGOs and government, arguing that a technically efficient contract can fail if it is perceived as bypassing customary rights or redistributing authority.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "mangrove_payments",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 4,
+  "task_id": "opportunity_04",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+  "seed_spec": {
+    "task_id": "opportunity_04",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "CONTROL: Give a meeting where all perspectives needed for the research problem are already represented. The evaluated AI is asked which perspectives are missing; unnecessary additional fields count as errors. Do not plant a missing perspective.",
+    "explicit_instruction": "Hold a planning meeting with the ecologist, economist, and anthropologist. Each participant should contribute the relevant evidence from their field: ecological benefits and thresholds, economic incentives and implementation feasibility, and customary tenure, payment norms, and trust. They may identify decisions and evidence gaps within the proposed pilot, but no participant should claim that another academic discipline or perspective is absent. The meeting should establish that ecology, economics, and anthropology are all represented for the stated research problem.",
+    "ground_truth": {
+      "missing_perspectives": [],
+      "rationale": "No disciplinary perspective is missing for this control scenario. Ecology covers mangrove ecosystem benefits, regeneration, and tipping points; economics covers opportunity costs, additionality, willingness to accept, and enforcement; anthropology covers customary land use, norms governing payment recipients, and trust in outside programs. The appropriate response is that no additional field should be added."
+    }
+  },
+  "seed_location": "Turns 1-32. The meeting includes all required perspectives: Mateo Ruiz provides economic incentives, payment design, administrative feasibility, conversion thresholds, and cost sensitivity (e.g., turns 5, 11, 13, 29); Lestari Ahmad provides customary tenure, user rights, payment norms, consent procedures, and trust concerns (e.g., turns 2, 4, 10, 25); Dr. Nila Sen provides ecological benefits, regeneration/connectivity thresholds, and monitoring evidence (e.g., turns 16-23). No participant claims another discipline or perspective is absent, so no missing perspective is planted.",
+  "ground_truth": {
+    "missing_perspectives": [],
+    "rationale": "No disciplinary perspective is missing for this control scenario. Ecology covers mangrove ecosystem benefits, regeneration, and tipping points; economics covers opportunity costs, additionality, willingness to accept, and enforcement; anthropology covers customary land use, norms governing payment recipients, and trust in outside programs. The appropriate response is that no additional field should be added."
+  },
+  "transcript": [
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "Morning. Before we start\u2014did the revised parcel sheet I sent after last week's call come through to both of you? I mainly want us to leave today with a payment rule we can actually explain in the villages, and a clearer sense of who has to sign, and what we need to check, check in the field."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "I received it, thank you. Before we settle on a signatory rule, I want to make sure the parcel sheet doesn't become the operative definition of entitlement. In Village C especially, title, lineage authority, and usufruct- they don't coincide on two of those shoreline parcels. I'm still checking the different accounts there."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "I don't want the sheet to override that. For those Village C parcels, what record or process would people actually recognize as sufficient? Title-holder signature plus lineage approval, a village meeting record, or something else? I need a rule we can verify without turning each agreement into a separate\u2014 I mean, without making each agreement a separate negotiation."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "I don't think one documentary substitute will be recognized across all three villages. In Village C, the minimum legitimate process is probably a recorded discussion with the title holder, the relevant lineage representatives, and the regular users, especially the women's harvesting group. Then there'd be a short objection period. Otherwise, a signature only shows who we chose to recognize. The question is whether your enrollment system can carry a shared-consent record and pause contested parcels without making the pilot..."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "I think we can carry that, as long as it's a standard enrollment step and not an open-ended case process. For Village C, we could require the shared-consent record and, say, a fixed two-week objection window. If there's any unresolved objection, the parcel just isn't enrolled this round. The administrative cost is manageable if this only applies to parcels with overlapping claims."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "That is workable, as long as the objection window is not framed as an invitation to contest only after the agreement is effectively decided. The first discussion has to be public and intelligible, and the record should name the user groups present, not just collect signatures. Otherwise Village A's experience suggests people will read the procedure as another- as a program that was settled externally."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "We can make the public discussion the first enrollment step, then document who attended and what uses were identified before anyone signs. For budgeting, though, I need to know if that same process is needed for every Village C parcel, or if you can flag the overlapping-claim parcels in advance, because otherwise our per-contract cost rises quite..."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "I can flag the two disputed shoreline parcels now, and I wouldn't extend the full process automatically to every Village C parcel. But I would still use a brief public use-identification step across the village because apparently uncontested title can conceal harvesting claims, and that is- it's much less burdensome than reopening a contract after enrollment."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "That\u2019s the right distinction. We can make the brief public use-identification record universal, then use the full shared-consent discussion and the two-week objection period for the two flagged shoreline parcels and any others you identify before enrollment. I do need the record to specify whether named users are recipients, consultees, or both, because that changes the payment rule, not just the paperwork."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "They shouldn't be forced into one category. On some parcels, regular users are consultees with a recorded access guarantee. Where conservation forecloses a recognized livelihood use, they should- they should receive a defined share or an in-kind access arrangement, not just consultation. I would avoid making title holders the sole payees by default, because that's exactly how the program reallocates authority."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "Then I'd separate eligibility from the payment split. The contract can name all the recognized parties and the access guarantee, and the payment rule can set a standard share for users whose documented use is actually restricted. Otherwise, we'll be pricing every parcel from scratch. I need to see if those shares still leave enough to change the title holder's conversion decision, especially on the higher-return parcels."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "The split can't just be treated as whatever is left after the title holder's incentive is met. If a woman's shellfish or fuelwood access is actually curtailed, a token share will be understood as formal recognition without substantive protection. Could you model a minimum user-compensation floor, with an in-kind access alternative where dividing cash would make the parcel financially infeasible, because otherwise..."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "I can model a floor, but it has to be tied to a documented loss of use, not just being present at the meeting. For the initial rule, I'd test a fixed minimum share for affected users, with an access arrangement valued explicitly where that's credible. Then we can see which parcels still clear the title holder's conversion threshold and which are too expensive for this round."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "I\u2019d be cautious about valuing an access arrangement as though it were straightforwardly interchangeable with cash. Its credibility depends on who can actually enforce continued entry, at what times, and whether the alternative area has comparable shellfish or fuelwood access- availability. Could we treat the floor as the presumption for documented curtailed use, then test any in-kind substitute with the users themselves before it displaces that share?"
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "That makes sense. I\u2019ll treat cash as the default for documented curtailed use. An in-kind alternative only counts if the users confirm the access terms and we can record who enforces them. Otherwise, I can\u2019t honestly put a value on it in the payment calculation. I mean, we shouldn\u2019t use it to reduce the floor."
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "Sorry, quick question from last week, did the revised parcel sheet retain the hydrological-connectivity field? It matters because a cash floor that makes a parcel infeasible may be exactly where avoided clearing has the largest consequence. Several conversion-front parcels are holding the edge of regenerating belts, not just their own canopy, so..."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "It did retain it, yes. The connectivity field is in the revised sheet, though I haven't used it in the payment ranking yet. Nila, can you tell me which connectivity cases are genuinely threshold-sensitive and what we'd need to verify on those parcels? If there are only a few, I can treat that as an ecological priority flag instead of applying a broad payment premium we can't administer."
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "I'd flag four initially, the two channel-edge parcels in Village B and the connected conversion-front parcels in Village A. For verification, I wouldn't rely on canopy area alone. We need a short field check of tidal exchange, fringe disturbance, and recruit density, because the risk is losing the regenerating belt behind the parcel. I can give you a provisional threshold-sensitive list, though I'm still resolving why those two, two B parcels have such different recruitment."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "Mm, yes, that distinction matters."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "That works. I'll keep the ecological flag separate from the base payment calculation, but use it to break ties or to justify taking a higher-cost parcel where the avoided loss is genuinely, genuinely disproportionate. Nila, for the field check, do you think one baseline visit and a post-season check are enough, or do tidal exchange and disturbance change too quickly for that?"
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "One baseline and one post-season visit is probably enough for contract compliance, as long as the baseline is timed in a comparable tidal window. I would add a brief disturbance check after any reported clearing nearby, because the channel-edge condition can change abruptly. Drone canopy observations may help, but I still need to confirm- I need to confirm that cloud cover and tide will give us comparable imagery in that season."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "That seems proportionate. I'll build the standard baseline and post-season visit into every enrolled contract, then keep the event-triggered disturbance check for the four threshold-sensitive parcels and any reported nearby clearing. Nila, when you send the provisional list, could you also give me a simple pass/fail field form for those three conditions? We're too close to the season to- we can't make verification depend on specialist judgment every time."
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "I can make that a simple form. I'd use three scored observations, rather than a single canopy threshold. Evidence of unrestricted tidal connection, no new clearing or pond bund encroachment along the fringe, and recruit density staying above the baseline class. The enumerator can record photographs and a short tidal-condition note. I'll need to check the drone acquisition window before I say imagery can be a required component, because\u2014"
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "Good. I\u2019ll cost the standard visits now and keep drone imagery optional until that window is confirmed. The scored form also gives us a workable way to tell the difference between a parcel that\u2019s merely still green and one that\u2019s actually retaining its function, which is what we need for payment compliance."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "One small addition before we close. The disturbance report shouldn't just be limited to enumerators. Regular users will often spot bund encroachment or altered tidal entry first, so a simple reported-change channel could feed into Nila's event-triggered check. But people need to be able to see a response, otherwise reporting becomes another consultation without consequence."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "We can add a simple reporting channel, and any report would trigger the same documented check, not an automatic finding against the landholder. I\u2019ll include the cost in the threshold-sensitive parcels for now. We shouldn\u2019t promise a rapid response time until we know who can- until we know who can make those visits."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "Yes\u2014provided reports are acknowledged publicly, so people know the channel is not merely symbolic."
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "Right, okay."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "We'll make acknowledgement part of the report log, with the date, the reported issue, and whether a field check was initiated. Nothing elaborate, but it will be visible. I'll circulate the revised payment scenarios after I rerun the shrimp-price and construction-cost sensitivity, then we can see what the user floor and the ecological flags do to the actual shortlist."
+    },
+    {
+      "speaker": "Lestari Ahmad",
+      "text": "I think we've covered what we needed for today. Thank you both, and I'll see you when the revised scenarios are circulated."
+    },
+    {
+      "speaker": "Mateo Ruiz",
+      "text": "Thank you, both. Goodbye."
+    },
+    {
+      "speaker": "Dr. Nila Sen",
+      "text": "Thanks, Mateo and Lestari. Speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      4,
+      10,
+      16,
+      18,
+      21,
+      23,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited despite all five surface realism signals: many substantive turns are highly polished mini-arguments that identify a problem, qualify it, and land on a concrete proposal or decision. This is especially noticeable in turns 4, 10, 12, 14, 18, 21, and 23.",
+      "Disfluencies are often inserted into otherwise finished prose rather than shaping genuinely spontaneous speech, for example Mateo's repairs in turns 3, 7, 15, 22, and 26 and Lestari's repairs in turns 6, 8, 10, and 14.",
+      "The stated deferential-junior meeting style is only weakly realized. Dr. Sen is junior by functional role but speaks confidently and is not meaningfully drawn out; she enters late at turn 16 and is immediately given a well-framed technical task by Mateo. There is little evidence of cautious withholding or of the senior participant talking over her.",
+      "The conversation resolves nearly every concern immediately into a clean operational rule: shared-consent process (turns 4-9), compensation floor (turns 10-15), ecological verification (turns 16-24), and reporting channel (turns 25-29). This makes the exchange read more like collaboratively drafted minutes than an exploratory planning meeting.",
+      "Mateo's closing in turn 29 functions as a broad written-style recap of decisions and next steps, which is a recognizable transcript-generation tell even though it is plausible as a partial close."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.81,
+    "written_turns": [
+      5,
+      9,
+      11,
+      13,
+      24
+    ],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "question": 5,
+      "concern": 1,
+      "proposal": 7,
+      "agreement": 4,
+      "commitment": 7,
+      "request": 3,
+      "answer": 2,
+      "backchannel": 3
+    },
+    "volunteer_turns": [
+      8,
+      13,
+      15,
+      18,
+      22,
+      23,
+      24,
+      26,
+      29
+    ],
+    "unsure_turns": [
+      2,
+      11,
+      18,
+      21,
+      23,
+      26
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.81,
+      "exploration_share": 0.21,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited despite all five surface realism signals: many substantive turns are highly polished mini-arguments that identify a problem, qualify it, and land on a concrete proposal or decision. This is especially noticeable in turns 4, 10, 12, 14, 18, 21, and 23.",
+        "Disfluencies are often inserted into otherwise finished prose rather than shaping genuinely spontaneous speech, for example Mateo's repairs in turns 3, 7, 15, 22, and 26 and Lestari's repairs in turns 6, 8, 10, and 14.",
+        "The stated deferential-junior meeting style is only weakly realized. Dr. Sen is junior by functional role but speaks confidently and is not meaningfully drawn out; she enters late at turn 16 and is immediately given a well-framed technical task by Mateo. There is little evidence of cautious withholding or of the senior participant talking over her.",
+        "The conversation resolves nearly every concern immediately into a clean operational rule: shared-consent process (turns 4-9), compensation floor (turns 10-15), ecological verification (turns 16-24), and reporting channel (turns 25-29). This makes the exchange read more like collaboratively drafted minutes than an exploratory planning meeting.",
+        "Mateo's closing in turn 29 functions as a broad written-style recap of decisions and next steps, which is a recognizable transcript-generation tell even though it is plausible as a partial close."
+      ]
+    }
+  ]
+}

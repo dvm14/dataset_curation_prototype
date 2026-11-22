@@ -1,0 +1,404 @@
+{
+  "transcript_id": "e5ea4e4f",
+  "generated_at": "2026-11-21T21:33:04.314484",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial academic-video-call feel, with mostly medium-to-long turns during presentations and brief, informal exchanges before and between talks. Overlap and interruptions are low during formal speaking but common in greetings, technical setup, and follow-up questions; speakers often use quick acknowledgments like \u201cyeah,\u201d \u201cokay,\u201d and \u201cright.\u201d Language is moderately informal, with frequent fillers, repetitions, self-corrections, and false starts, especially from non-native speakers or when framing questions. Presenters speak in structured but conversational monologues, repeatedly signposting claims and limitations with phrases such as \u201cwhat we think,\u201d \u201cI would say,\u201d \u201csort of,\u201d and \u201cof course.\u201d Questions are polite and exploratory, often prefaced with praise, caveats, or self-deprecation (\u201cquick question,\u201d \u201cnaive question\u201d), then developed into multi-part thoughts. Challenges are indirect and framed as extensions, alternative explanations, or requests for clarification rather than confrontation. Participants build rapport through light joking, compliments, and references to future offline discussion, while transitions are handled briskly with appreciative thanks and simple moderator prompts.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Protecting outdoor workers from wildfire smoke when air-quality alerts arrive after the shift has already started.",
+  "disciplines": [
+    "environmental science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "environmental science",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a postdoctoral researcher with four years of experience in wildfire-smoke exposure assessment after completing a PhD in atmospheric and environmental science. She has operated and evaluated community PM2.5 monitoring networks, compared fixed-site and portable sensor measurements with regulatory monitors, and used short-range smoke-transport models during fire events. Her recent work examines how building ventilation and filtration affect smoke entry into work sites.",
+      "distinct_perspective": "Chen treats the problem as one of time-sensitive exposure characterization: a protocol must specify what environmental evidence triggers action, how quickly conditions can change locally, and whether an indoor alternative actually reduces exposure. She will push for a transparent, operational trigger that combines measurement and near-term prediction, while being careful not to imply that a single device reading represents every work location.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Luis Romero",
+      "discipline": "epidemiology",
+      "functional_role": "project manager",
+      "background": "Dr. Romero is an occupational epidemiologist and project manager with eleven years of experience designing applied studies with agricultural, construction, and service-sector workers. He has led prospective cohort and quasi-experimental evaluations of heat and air-pollution protections, managed linkage of workplace records to urgent-care and emergency-department data, and developed pre-specified health-outcome definitions and weather-adjustment plans. He is experienced in coordinating multi-partner protocols under seasonal deadlines.",
+      "distinct_perspective": "Romero frames the pilot around causal inference and implementation-ready outcome measurement. He will insist that the team define the exposure window, health outcome, and analytic plan before fieldwork so that the effects of the protocol can be distinguished from weather, workload, and other factors. He also sees feasibility measures\u2014whether protections were offered, accepted, and sustained\u2014as necessary evidence alongside respiratory outcomes.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Amina Patel",
+      "discipline": "sociology",
+      "functional_role": "research engineer",
+      "background": "Dr. Patel is a sociologist and research engineer with eight years of experience building mixed-methods data systems for labor, migration, and occupational-health studies. Her work combines worker interviews, employer process mapping, survey design, and participatory review with community organizations serving agricultural and landscaping workers. She has studied how scheduling insecurity, payroll status, language access, and supervisory practices shape whether nominal workplace protections are usable in practice.",
+      "distinct_perspective": "Patel approaches the protocol as a workplace power and access problem, not only an exposure-control problem. She will examine whether workers can safely request protections, whether employers have practical or financial reasons to follow the protocol, and whether materials are understandable and usable across formal and informal work arrangements. She will advocate for worker-partner review so that the protocol captures the conditions under which protections become real rather than merely available on paper.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "wildfire_smoke_workers",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "task_id": "jargon_03",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_03",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+    "explicit_instruction": "Run a planning meeting in which the participants establish a small shared glossary at the start and then use those definitions consistently. Dr. Chen defines PM2.5 as airborne particles with a diameter of 2.5 micrometers or less; a sensor reading as the PM2.5 measurement from a specified monitoring device; a plume forecast as a prediction of where wildfire smoke will travel over the next several hours; and infiltration as the fraction of outdoor PM2.5 that enters an indoor work space. Dr. Romero defines short-term exposure as PM2.5 encountered during the current work shift; a respiratory visit as an urgent-care or emergency-department encounter coded for an acute respiratory condition; confounding by heat as the possibility that hot weather affects both PM2.5 conditions and respiratory outcomes, making the smoke effect harder to isolate; and case definition as the pre-specified rule for deciding which respiratory visits count in the study. Dr. Patel defines informal worker as a worker paid outside a standard payroll arrangement; day laborer as a worker hired for a single day or short period, whether or not payroll is used; employer incentive as a cost, benefit, or pressure that may affect whether an employer follows the protocol; language access as providing protocol information in a language and format workers can understand; and fear of losing shifts as concern that reporting symptoms or requesting protections could reduce future work opportunities. The group should agree that the pilot alert protocol will use a sensor reading and plume forecast together, record whether indoor relocation is feasible based on infiltration, collect worker-facing materials in English and Spanish, and document both paid and informal work arrangements. They should decide that Dr. Chen will draft the environmental trigger by March 26, Dr. Romero will draft the outcome and heat-adjustment plan by April 2, and Dr. Patel will arrange worker-partner review of language-access materials by April 9. No participant should introduce competing definitions, ambiguous abbreviations, or terminology disputes. The meeting should remain a coherent control case with no terminology problem to flag.",
+    "ground_truth": {
+      "terminology_problems": [],
+      "reference_assessment": "No terminology confusion is present. Technical terms are defined early, distinctions such as informal worker versus day laborer are explicit, and the agreed definitions are used consistently.",
+      "agreed_definitions": {
+        "PM2.5": "Airborne particles with a diameter of 2.5 micrometers or less.",
+        "sensor_reading": "The PM2.5 measurement from a specified monitoring device.",
+        "plume_forecast": "A prediction of where wildfire smoke will travel over the next several hours.",
+        "infiltration": "The fraction of outdoor PM2.5 that enters an indoor work space.",
+        "short_term_exposure": "PM2.5 encountered during the current work shift.",
+        "respiratory_visit": "An urgent-care or emergency-department encounter coded for an acute respiratory condition.",
+        "confounding_by_heat": "The possibility that hot weather affects both PM2.5 conditions and respiratory outcomes, making the smoke effect harder to isolate.",
+        "case_definition": "The pre-specified rule for deciding which respiratory visits count in the study.",
+        "informal_worker": "A worker paid outside a standard payroll arrangement.",
+        "day_laborer": "A worker hired for a single day or short period, whether or not payroll is used.",
+        "employer_incentive": "A cost, benefit, or pressure that may affect whether an employer follows the protocol.",
+        "language_access": "Providing protocol information in a language and format workers can understand.",
+        "fear_of_losing_shifts": "Concern that reporting symptoms or requesting protections could reduce future work opportunities."
+      },
+      "decisions": {
+        "alert_protocol": "Use a sensor reading and plume forecast together.",
+        "indoor_relocation": "Record whether it is feasible based on infiltration.",
+        "worker_materials": "Provide materials in English and Spanish.",
+        "work_arrangements": "Document both paid and informal work arrangements."
+      },
+      "assignments": [
+        {
+          "owner": "Dr. Maya Chen",
+          "deliverable": "Draft the environmental trigger.",
+          "due_date": "2026-03-26"
+        },
+        {
+          "owner": "Dr. Luis Romero",
+          "deliverable": "Draft the respiratory outcome and heat-adjustment plan.",
+          "due_date": "2026-04-02"
+        },
+        {
+          "owner": "Dr. Amina Patel",
+          "deliverable": "Arrange worker-partner review of language-access materials.",
+          "due_date": "2026-04-09"
+        }
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not satisfied: the transcript contains no early shared glossary or explicit definitions for the required technical terms. It does include several consistent distinctions and decisions\u2014e.g., PM2.5 sensor/plume trigger (turns 2, 21), day laborer versus informal status (turn 15), English/Spanish materials (turns 8, 11, 17), and the listed assignments (turns 10, 11, 21)\u2014but it does not establish the full requested definitions, including PM2.5, sensor reading, plume forecast, infiltration, short-term exposure, respiratory visit, confounding by heat, case definition, informal worker, employer incentive, language access, or fear of losing shifts.",
+  "ground_truth": {
+    "terminology_problems": [],
+    "reference_assessment": "No terminology confusion is present. Technical terms are defined early, distinctions such as informal worker versus day laborer are explicit, and the agreed definitions are used consistently.",
+    "agreed_definitions": {
+      "PM2.5": "Airborne particles with a diameter of 2.5 micrometers or less.",
+      "sensor_reading": "The PM2.5 measurement from a specified monitoring device.",
+      "plume_forecast": "A prediction of where wildfire smoke will travel over the next several hours.",
+      "infiltration": "The fraction of outdoor PM2.5 that enters an indoor work space.",
+      "short_term_exposure": "PM2.5 encountered during the current work shift.",
+      "respiratory_visit": "An urgent-care or emergency-department encounter coded for an acute respiratory condition.",
+      "confounding_by_heat": "The possibility that hot weather affects both PM2.5 conditions and respiratory outcomes, making the smoke effect harder to isolate.",
+      "case_definition": "The pre-specified rule for deciding which respiratory visits count in the study.",
+      "informal_worker": "A worker paid outside a standard payroll arrangement.",
+      "day_laborer": "A worker hired for a single day or short period, whether or not payroll is used.",
+      "employer_incentive": "A cost, benefit, or pressure that may affect whether an employer follows the protocol.",
+      "language_access": "Providing protocol information in a language and format workers can understand.",
+      "fear_of_losing_shifts": "Concern that reporting symptoms or requesting protections could reduce future work opportunities."
+    },
+    "decisions": {
+      "alert_protocol": "Use a sensor reading and plume forecast together.",
+      "indoor_relocation": "Record whether it is feasible based on infiltration.",
+      "worker_materials": "Provide materials in English and Spanish.",
+      "work_arrangements": "Document both paid and informal work arrangements."
+    },
+    "assignments": [
+      {
+        "owner": "Dr. Maya Chen",
+        "deliverable": "Draft the environmental trigger.",
+        "due_date": "2026-03-26"
+      },
+      {
+        "owner": "Dr. Luis Romero",
+        "deliverable": "Draft the respiratory outcome and heat-adjustment plan.",
+        "due_date": "2026-04-02"
+      },
+      {
+        "owner": "Dr. Amina Patel",
+        "deliverable": "Arrange worker-partner review of language-access materials.",
+        "due_date": "2026-04-09"
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "Hi, everyone. I\u2019m coming straight out of another call, so I\u2019m glad we could make this quick. What I most want today is a workable first pass on the alert protocol. It can\u2019t- we can\u2019t assume everyone is on standard payroll or can safely ask for a protection mid-shift."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "On the environmental side, I think the trigger should be a named local PM2.5 sensor reading and a short plume forecast for the next few hours. Either one by itself can be misleading in the middle of a shift, and we should be clear that one sensor does not represent the whole county."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "And for the evaluation, I need those two signals timestamped, plus when the employer gets the alert and what happens after that. Maya, over the two or three hours that matter, how stable is that combined trigger? And what event record could- what could capture a local change without pretending the sensor represents the whole county?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Over two or three hours, it can change quite a lot, especially at the edge of a plume, so I wouldn't treat the trigger as stable once it fires. Maybe the record- I'd have it include the named sensor, its timestamp and recent trend, the forecast issue time, and then a repeat check every hour. That gives us local evidence without claiming it covers every crew location."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "And the hourly recheck needs a version people can actually use, not just the event log. Maya, if a crew gets moved indoors because infiltration is acceptable, what can a supervisor or worker actually see- what tells them in the moment that room is still a safer space?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "A closed-door policy alone doesn't reliably tell them that. We'd need a pre-checked room with a simple indoor-outdoor comparison, and then during an event, probably that same hourly check. Last summer I saw two apparently similar rooms behave very differently. I need to check which candidate sites can actually support that setup."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "That affects what we call an indoor relocation in the study. I'd want it recorded as offered separately from actually sustained for, say, the rest of that exposure window. Otherwise, a room that turns out not to be- that isn't meaningfully cleaner gets counted as a protection. Amina, what's the lightest way to verify workers really had that option, rather than it just appearing in the supervisor log?"
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "I'd keep it very light. Do a brief worker check-in separately, not through the supervisor. Was an option explained, which option, could you actually take it, and did taking it affect pay or your next shift? We should collect that in English and Spanish, but I'd want worker partners to review the wording before we treat it as usable. I need to check their April availability."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, the pay question matters."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "For the evaluation, I\u2019d keep that separate from whether the option was technically offered. Pay or next-shift risk is exactly what may determine whether it was usable. I\u2019ll draft the respiratory outcome and heat-adjustment plan by April 2, but I need to check first whether the urgent-care and ED linkage can be timely enough, and whether the codes support a clean, um, acute-respiratory case definition."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "Luis, could the worker check-in capture symptoms that didn\u2019t result in urgent or emergency care? I\u2019m thinking fear of losing shifts may shape both reporting and, um, seeking care. And I can aim to get the English and Spanish materials through worker-partner review by April 9, assuming I can confirm their availability before the employers lock site procedures."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "I think we should capture symptoms, but not make them compete with the care-visit outcome. A very short end-of-shift check-in could give us acute symptoms and whether they sought care. And urgent-care and ED encounters would still be the more specific outcome. We\u2019ll need to be careful about the language so it doesn\u2019t feel like it\u2019s reporting to the employer."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "Exactly, and I\u2019d avoid collecting it on a device or through a link the supervisor controls. We may need a low-burden anonymous route, though I\u2019m not sure yet what\u2019s feasible with day labor crews. Some of the workers I\u2019ve spoken with are scheduled like regular employees but paid through an intermediary, so the employer\u2019s payroll categories won\u2019t tell us who can safely answer, and..."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "That makes sense. From the study side, we should not use payroll status as our sampling frame for the check-in. We need a crew-level count of who was present when the alert fired, including intermediary workers, and then an independent way to offer the survey. Otherwise, otherwise we'll mistake missing responses for no symptoms or no access."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "And that crew count should separate how long someone was hired for from how they\u2019re paid. A day laborer doesn\u2019t necessarily mean informal, and vice versa. Could we hand out or explain the independent invitation at the alert instead of relying on a roster, so people paid through an intermediary aren\u2019t invisible from the start?"
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "That\u2019s better than a roster-only route. We still need a denominator for response and exposure, so maybe the alert record- maybe we just use a simple headcount by crew and work location. Then the invitation goes directly to everyone present and doesn\u2019t ask about payment arrangement up front. Would a paper card with a QR option create problems for the crews you\u2019re thinking of?"
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "A paper card plus QR is probably useful, but it can't be QR-only. Phones, data, and literacy are uneven, and a card handed out by the supervisor may not feel independent. Could we give workers a short Spanish/English card at the alert with a phone or paper-return route outside the employer chain? I'll ask the worker partners what would, what would actually feel safe."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "That works for me, as long as the card has the alert date, the approximate crew location, and a nonidentifying code. Then we can connect it to that shift without collecting names. I\u2019d avoid asking about payment arrangement in the first check-in too, since we don\u2019t need it to measure whether the protection was actually available."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "I\u2019d still ask payment arrangement later, with a clear \u201cprefer not to answer,\u201d because it may be the mechanism behind whether an option was, um, actually usable. But not at the alert moment. The first card should just make clear that the response isn\u2019t shared with the supervisor or used to affect pay or future shifts, if we can honestly guarantee that."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "Mm, only if we can guarantee that."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And on the alert side, I\u2019ll draft the environmental trigger by March 26, including the named sensor, forecast, hourly recheck, and a way to flag that the reading is local evidence, not county-wide, rather than a county-wide condition."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "Good. One thing for the environmental materials, the worker-facing version needs to say what the alert means in plain language, not just name a sensor or an AQ value. I\u2019ll bring that into the partner review, whether \u201cmove inside\u201d is, um, intelligible if the room has only been pre-checked rather than visibly monitored in front of them."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "And from my side, the plain-language alert should also say when the exposure window starts, basically this shift from the alert onward, so the worker check-in and the event record refer to the same period. Maya, for an indoor space that was pre-checked but not continuously monitored, do we have a simple way to label that uncertainty, uncertainty in the log?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah\u2014maybe three labels. Pre-checked with a documented indoor-outdoor comparison, pre-checked but no event-time confirmation, and not verified. I wouldn't call that second one protective with the same confidence, especially if doors are opening or the ventilation changes. The log could also note those obvious conditions."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "Those labels let us preserve the uncertainty instead of flattening it. For analysis, I\u2019d treat the event-time-confirmed rooms separately from the pre-checked-only rooms, and record how long people were actually there after the alert. Otherwise, \u201cindoors\u201d becomes too broad an exposure category."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Right, duration is important."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "And the duration has to be worker-reported too, I think. Someone can be nominally relocated but then pulled back indoors\u2014outside for loading or cleanup. The check-in can just ask whether they stayed in the alternative space or task for the rest of that alert window, without making them adjudicate the air quality."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "And I\u2019d make that a separate implementation measure. Reported time in the alternative space or lighter task, not just the supervisor\u2019s stated duration. We can line it up with the alert timestamp and hourly rechecks, and then- though I\u2019m not sure workers will reasonably be that precise about minutes."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Approximate blocks of time are probably enough, and the environmental log can give us the finer timing."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "Yeah, time blocks are probably the right compromise."
+    },
+    {
+      "speaker": "Dr. Amina Patel",
+      "text": "Okay, I think we\u2019re at time. I\u2019ll be in touch once I\u2019ve checked the partner-review timing\u2014thanks, both."
+    },
+    {
+      "speaker": "Dr. Luis Romero",
+      "text": "Thanks, Amina. Talk soon, Maya."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, bye\u2014take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "task_compliance": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      4,
+      7,
+      8,
+      10,
+      13,
+      15,
+      21,
+      24
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central control requirement is not met: the meeting never establishes a shared glossary at the start. Turn 2 uses PM2.5, sensor reading, and plume forecast without defining them; turn 5 uses infiltration without its required definition; turn 10 uses case definition without defining it.",
+      "Most required ground-truth definitions are absent rather than merely implicit. No turn defines PM2.5 as particles of diameter 2.5 micrometers or less, sensor reading as a measurement from a specified device, plume forecast as predicted smoke travel, infiltration as the fraction entering indoors, short-term exposure, respiratory visit, confounding by heat, or case definition.",
+      "Patel does not define informal worker, day laborer, employer incentive, language access, or fear of losing shifts as required. Turn 15 gives only a partial distinction between day labor and informal work, while turns 13 and 19 discuss payroll and lost shifts without shared definitions.",
+      "The decision to document both paid and informal work arrangements is not cleanly supported and is partly undermined. Turns 18-19 explicitly avoid asking about payment arrangement in the first check-in and postpone it; the transcript does not establish a decision to document both arrangement types.",
+      "The indoor-relocation decision is not stated in the required terms: turns 5-6 and 24 discuss indoor-outdoor comparisons and verification, but do not decide to record feasibility based on the defined concept of infiltration.",
+      "Although the conversation has several realism signals, it is more polished and systematically progressive than a rushed weekly check-in. Many medium-length turns convert each concern directly into a detailed protocol solution or assignment, especially turns 3-8, 14-18, and 21-29."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.81,
+    "written_turns": [
+      2,
+      8,
+      18,
+      21,
+      25
+    ],
+    "exploration_share": 0.19,
+    "turn_moves": {
+      "proposal": 13,
+      "question": 5,
+      "answer": 3,
+      "agreement": 4,
+      "commitment": 3,
+      "request": 2,
+      "concern": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      10,
+      11,
+      17,
+      21,
+      22,
+      31
+    ],
+    "unsure_turns": [
+      6,
+      8,
+      10,
+      11,
+      13,
+      28,
+      31
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.77,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "The core control requirement is missing: no small shared glossary is established at the start, and none of the required technical definitions is stated. For example, turns 3-5 use \u201ccurrent-shift PM2.5,\u201d \u201crespiratory visits,\u201d \u201cheat,\u201d \u201csensor,\u201d \u201cplume forecast,\u201d and \u201cinfiltration\u201d without defining them.",
+        "Required ground-truth definitions are absent throughout: PM2.5, sensor reading, plume forecast, infiltration, short-term exposure, respiratory visit, confounding by heat, case definition, informal worker, day laborer, employer incentive, language access, and fear of losing shifts are not explicitly defined as specified.",
+        "Turn 2 distinguishes payroll status from day-labor status, but does not define informal worker or day laborer according to the required definitions. It also uses \u201cday-labor status\u201d rather than establishing the intended glossary term.",
+        "Turn 3 mentions current-shift PM2.5, respiratory visits, and adjusting for heat, but does not define any of these terms or define the required case definition. This prevents the benchmark answer from reliably concluding that terminology was defined early and consistently.",
+        "Turn 17 and turn 20 introduce potentially ambiguous operational language such as \u201cspecified sensor,\u201d \u201csite reading,\u201d \u201cportable and fixed sites,\u201d and \u201ccutoff\u201d without the required glossary definitions, so the transcript cannot serve as a clean no-terminology-problem control.",
+        "Turn 20 contains the prohibited stock phrase fragment \u201cI lost my-,\u201d evidently an attempted version of \u201clost my thread,\u201d and the sentence is garbled: \u201cI lost my- rather than presenting it as a definitive exposure threshold.\u201d Nobody reacts to or repairs the incomplete statement.",
+        "The meeting reads more like a polished protocol-design discussion than a rushed weekly check-in: many medium-length turns develop complete arguments and immediately turn concerns into specified logging fields or assignments. This triggers the naturalness warning that turns are built as finished written paragraphs.",
+        "Although the required dates and owners are present (turns 11, 12, 17, and 31), the transcript does not explicitly decide to document both paid and informal work arrangements; it instead contrasts paid employment/payroll with day labor (turns 2 and 16), leaving the required informal-worker terminology and decision unsupported."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.81,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "The central control requirement is not met: the meeting never establishes a shared glossary at the start. Turn 2 uses PM2.5, sensor reading, and plume forecast without defining them; turn 5 uses infiltration without its required definition; turn 10 uses case definition without defining it.",
+        "Most required ground-truth definitions are absent rather than merely implicit. No turn defines PM2.5 as particles of diameter 2.5 micrometers or less, sensor reading as a measurement from a specified device, plume forecast as predicted smoke travel, infiltration as the fraction entering indoors, short-term exposure, respiratory visit, confounding by heat, or case definition.",
+        "Patel does not define informal worker, day laborer, employer incentive, language access, or fear of losing shifts as required. Turn 15 gives only a partial distinction between day labor and informal work, while turns 13 and 19 discuss payroll and lost shifts without shared definitions.",
+        "The decision to document both paid and informal work arrangements is not cleanly supported and is partly undermined. Turns 18-19 explicitly avoid asking about payment arrangement in the first check-in and postpone it; the transcript does not establish a decision to document both arrangement types.",
+        "The indoor-relocation decision is not stated in the required terms: turns 5-6 and 24 discuss indoor-outdoor comparisons and verification, but do not decide to record feasibility based on the defined concept of infiltration.",
+        "Although the conversation has several realism signals, it is more polished and systematically progressive than a rushed weekly check-in. Many medium-length turns convert each concern directly into a detailed protocol solution or assignment, especially turns 3-8, 14-18, and 21-29."
+      ]
+    }
+  ]
+}

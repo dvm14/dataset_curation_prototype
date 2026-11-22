@@ -1,0 +1,301 @@
+{
+  "transcript_id": "06bf303b",
+  "generated_at": "2026-11-22T15:17:06.569516",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns outside the formal presentations, including frequent greetings, side chat, and technical check-ins. Overlap and interruptions are light but common at transitions, with speakers often starting before the previous thought fully closes. Participants use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections\u2014especially in spontaneous questions from non-native speakers. The tone is friendly and informal, though introductions and talks shift into a more polished academic register. Questions tend to begin cautiously (\u201cI have a quick question,\u201d \u201cmaybe a naive question\u201d) and unfold as multi-part, exploratory prompts rather than tightly phrased challenges. Disagreement is indirect: people frame alternatives as uncertainty, acknowledge limitations, and ask whether another interpretation might apply. Speakers build rapport through praise, agreement tokens, and references to future discussion; answers are expansive, hedged, and often openly identify unresolved issues.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Designing payments to coastal landowners to keep mangroves standing instead of converting them to shrimp ponds.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Suryanto",
+      "discipline": "ecology",
+      "functional_role": "project manager",
+      "background": "A coastal wetland ecologist with 11 years of experience in mangrove condition assessment, blue-carbon field sampling, and fisheries-habitat surveys across Southeast Asian estuaries. She has managed multidisciplinary field campaigns using drone imagery, plot-based vegetation measurements, canopy and hydrology indicators, and local fishers' observations to classify mangrove condition and likely recovery trajectories after disturbance.",
+      "distinct_perspective": "Maya treats mangroves as spatially variable ecological systems whose carbon storage, nursery function, and regeneration prospects depend on stand condition, hydrology, species composition, and disturbance history. Her maps can identify parcels or zones with high ecological value or heightened vulnerability, but she is explicit that ecological boundaries do not establish ownership, legitimate recipients, household authority, or acceptable program rules. She needs parcel identifiers and access arrangements from fieldwork, plus information on proposed pond-conversion patterns, to align ecological observations with decision-relevant locations.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Daniel Okafor",
+      "discipline": "economics",
+      "functional_role": "principal investigator",
+      "background": "An environmental and resource economist with 14 years of experience evaluating conservation incentives, land-use opportunity costs, and monitoring arrangements for voluntary programs. His work combines enterprise-budget analysis, stated-preference interviews, sensitivity analysis, and transaction-cost accounting, with particular attention to how aquaculture profitability varies by site, capital access, disease risk, and market conditions.",
+      "distinct_perspective": "Daniel frames the proposed program as a comparison between the credible net returns from conversion and the compensation, compliance burden, and monitoring costs associated with conservation. He will estimate ranges rather than a single definitive payment level, because expected shrimp-pond returns and willingness to accept must be measured in the villages. He emphasizes that an economically feasible payment cannot by itself identify the rightful recipient, prove local trust, or validate customary tenure. He needs ecological condition classes and parcel identifiers to test how opportunity costs vary across sites, and tenure and decision-process findings to interpret whose participation and consent would be meaningful.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Lila Fernandes",
+      "discipline": "anthropology",
+      "functional_role": "project manager",
+      "background": "A social anthropologist with 9 years of fieldwork experience on coastal livelihoods, customary land and water claims, and the local politics of conservation and development projects. She uses participant observation, household histories, semi-structured interviews, kinship and decision-network mapping, and facilitated small-group discussions to understand how formal titles, customary claims, labor arrangements, and benefit-sharing expectations operate in practice.",
+      "distinct_perspective": "Lila approaches a payment program as a social arrangement rather than simply a contract with an individual parcel holder. She will document who is recognized as having claims, who actually makes conversion decisions, how women and extended-family members participate, and how prior outside projects have shaped trust and expectations about benefits. Her findings can clarify socially legitimate processes for identifying participants and sharing benefits, but they cannot estimate carbon stocks, predict regeneration, or determine a financially viable payment level. She needs the ecological team\u2019s parcel references and condition descriptions as discussion prompts, while keeping interview accounts and consent procedures separate from ecological data collection.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "mangrove_payments",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 3,
+  "task_id": "other_01",
+  "benchmark_category": "Other",
+  "benchmark_task": "CONTROL: Give a productive exchange where researchers use different approaches but understand their respective roles and limitations. The evaluated AI must recognize that intervention is unnecessary, without inventing disagreement or forcing integration.",
+  "seed_spec": {
+    "task_id": "other_01",
+    "benchmark_category": "Other",
+    "benchmark_task": "CONTROL: Give a productive exchange where researchers use different approaches but understand their respective roles and limitations. The evaluated AI must recognize that intervention is unnecessary, without inventing disagreement or forcing integration.",
+    "explicit_instruction": "Run a routine planning meeting with the ecology lead, economics lead, anthropology lead, and project coordinator. Each discipline should clearly state its distinct contribution, the limits of what it can infer, and the data it needs from the others or from fieldwork. They should agree that ecological maps can identify high-value or vulnerable mangrove areas but cannot determine socially legitimate recipients; economic estimates can compare payments with conversion opportunity costs but cannot establish tenure or trust; and anthropological findings can clarify customary claims and acceptable benefit-sharing processes but cannot estimate carbon stocks or set a financially viable payment level alone. The coordinator should assign a shared village-visit schedule and a short list of data handoffs: parcel identifiers and condition classes from ecology, conversion-return and monitoring-cost assumptions from economics, and tenure/decision-process notes from anthropology. The group should explicitly retain separate methods and outputs for the scoping phase rather than demand a single integrated model. No participant should express conflict, confusion, disciplinary disrespect, or a need for mediation. No unresolved substantive disagreement should be introduced; the only ordinary uncertainty is that field evidence is still to be collected before a program design decision.",
+    "ground_truth": {
+      "reference_assessment": "No intervention is necessary. The meeting is a productive, coherent interdisciplinary planning exchange rather than a conflict or integration failure.",
+      "evidence_to_recognize": [
+        "The disciplines have complementary, explicitly bounded roles: ecology assesses biophysical condition and benefits; economics assesses opportunity costs, payment feasibility, additionality, and monitoring; anthropology assesses customary tenure, benefit-sharing norms, and trust.",
+        "Participants understand that no single discipline can determine payment design on its own.",
+        "The team uses practical coordination mechanisms, including a shared field schedule and planned data handoffs.",
+        "The team appropriately preserves distinct methods and outputs during the scoping phase instead of forcing premature methodological integration.",
+        "The remaining uncertainty concerns evidence that must be gathered in fieldwork, not disagreement among participants."
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not fully satisfied. The transcript has ecology (Maya), economics (Daniel), and anthropology (Lila) clearly articulating complementary roles, limits, data needs, separate methods, and fieldwork uncertainty (especially turns 3-6, 11-20, and 22-26). It also contains no conflict or need for mediation. However, the required project coordinator is absent, and no coordinator assigns a shared three-village visit schedule or the specified short list of data handoffs. The schedule remains provisional rather than assigned (turns 19, 22, 24-26), and the explicit scoping-phase agreement to retain separate methods and outputs is only implicit rather than clearly stated.",
+  "ground_truth": {
+    "reference_assessment": "No intervention is necessary. The meeting is a productive, coherent interdisciplinary planning exchange rather than a conflict or integration failure.",
+    "evidence_to_recognize": [
+      "The disciplines have complementary, explicitly bounded roles: ecology assesses biophysical condition and benefits; economics assesses opportunity costs, payment feasibility, additionality, and monitoring; anthropology assesses customary tenure, benefit-sharing norms, and trust.",
+      "Participants understand that no single discipline can determine payment design on its own.",
+      "The team uses practical coordination mechanisms, including a shared field schedule and planned data handoffs.",
+      "The team appropriately preserves distinct methods and outputs during the scoping phase instead of forcing premature methodological integration.",
+      "The remaining uncertainty concerns evidence that must be gathered in fieldwork, not disagreement among participants."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Hi, everyone. Before we get into the schedule, I missed the end of the last discussion. Was there any change to the three-village visit sequence, or are we still working from the draft on screen? Today I'd like us to get a workable shared field window, especially for parcel references and access, without collapsing the ecology, interview, and enterprise work into..."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "We're still on the draft sequence, as far as I have it. I'm fine with coordinated village windows, but I'd want household interviews and consent handled separately from the parcel and ecology work. Otherwise people may read the mapping team as already deciding whose land counts. Maya, could the condition labels in the sheet be phrased plainly enough to use as prompts without making those boundaries sound like ownership, I mean, ownership boundaries?"
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "I\u2019d keep them very plain, things like dense canopy, open fringe, disturbed edge, or likely slow recovery. Those are- I mean, they\u2019re observations of the stand, not parcel or tenure categories. And I wouldn\u2019t use them as interview prompts until your consent process says that\u2019s appropriate. We can share the same parcel reference quietly, but the labels don\u2019t need to lead the conversation."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "That works for me. I need the shared parcel reference and Maya's condition class, but I\u2019d keep- I\u2019d leave both out of the initial enterprise interviews unless the household themselves connects them. Otherwise we risk implying that a condition label determines eligibility or value. Maya, which of those classes are actually stable across the visit window, and which ones will move around with tide or season?"
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "The broad classes are stable enough for this six-month scoping window, but what we observe behind them isn't all equally stable. Canopy density and dominant species will hold. Fish use, inundation, and even the visible extent of an open fringe shift with tide, so I'd record tide and survey time alongside that column. And I'm not convinced canopy alone captures nursery value\u2014the sparse fringe on the reconnaissance transect had a lot of juveniles at high tide\u2014so I'd keep a separate, provisional nursery indicator, but..."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "For the economics file, I\u2019d treat canopy and dominant species as the relatively fixed stratifiers, and I\u2019d flag tide-sensitive observations instead of folding them into a parcel\u2019s opportunity-cost class. The nursery indicator may matter a great deal for the conservation side, obviously, but I don\u2019t want a high-tide snapshot to silently drive an inferred payment differential."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "Mm, okay."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "The next practical question is where the actual conversion pressure sits. Daniel, in the enterprise data, how would you separate a pond proposal that's genuinely financially and logistically live from something more speculative? I need that before we design the plot and flight coverage as if every stand has the same risk."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "I\u2019d separate stated interest from a conversion option that\u2019s actually live. We\u2019d need evidence of site control, access and water feasibility, a real capital pathway, and at least a rough stocking or construction timetable. Then I\u2019d ask about prior disease losses too, because two operators can quote the same sale price and have completely different expected net returns. I wouldn\u2019t call it financially live based on verbal intention alone."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Right, site control especially."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "And site control may not be just one person, even if somebody presents it that way. I'd want to ask who else has to agree before clearing can actually happen, siblings, a spouse, lineage elders, maybe the people who work the site, because a live business plan can still be socially blocked, or the costs and payment expectations may, may sit across several households."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "That\u2019s exactly the distinction I need Lila\u2019s work to resolve before I treat any reported conversion return as a household-level alternative. In the enterprise interview, I can ask who provides capital, bears a disease loss, and receives harvest revenue, but I shouldn\u2019t infer decision authority from those answers. Could your interviews tell us what kind of family or community discussion people would regard as, um, a real authorization?"
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "Yes, I think so, though I'd separate what people say is the proper authorization from the actual sequence when a pond gets proposed. I can trace who gets consulted, who can object, who controls labor or cash, and whether women's agreement is treated as formal, informal, or just assumed. But I'll need to see whether that varies by village and, and kin group. The village discussions may establish the public norm, then household histories can show where practice departs from it."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "Yeah, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "That\u2019s useful, because on the field sheet I shouldn\u2019t put \u201cdecision-maker\u201d next to a parcel reference like it\u2019s a verified fact. Lila, what\u2019s the least intrusive way to connect a locally named place or family history to the neutral parcel code, especially before anyone agrees that the code corresponds to a particular household?"
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "I'd keep that link in a separate, access-controlled crosswalk, and only create it after the person agrees to discuss that place or history. On the field sheet, maybe just use a neutral place reference and a confidence note, like \"locally named area, claim holders not discussed,\" rather than a family name. But I need to check in the first village whether people themselves treat those place names as sensitive. Sometimes the name already tells everyone whose claim is being talked about."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Let's treat the place name itself as potentially sensitive, not just the family link. For the first visit, I'd rather map using neutral temporary references and an access and consent status. Then we only reconcile those with our parcel codes where Lila's process says it's okay. Otherwise, the drone flight plan can cover a broad stand without us acting like we know its social boundaries..."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "That\u2019s better. On my side, the access status can\u2019t mean consent to discuss claims or household arrangements. It just tells us what contact has happened. I also need to check whether we can hold the village-level discussion on a different day from the household interviews, because fishing, market, and religious schedules could make that apparently tidy sequence pretty awkward."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "That affects the visit order more than I'd allowed for. Let's keep the first village window flexible. We can do a broad drone and habitat pass under whatever access is in place, then plots only where access is confirmed, while Lila checks those separate discussion dates. I still need to verify the tidal and cloud window before I put fixed flight days against all three villages."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "That sequencing is sensible. On the enterprise side, the first window should be exploratory too. I need to find out whether prospective operators will actually share construction costs, stocking, finance terms, disease history, and harvest assumptions. Without that, a gross-revenue figure is not a defensible conversion return. And I\u2019d rather not attach any payment range to Village One before we know what information people are willing to- before we know what they\u2019re willing to discuss."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "On the social side, I\u2019d avoid a payment discussion in that first round too, except maybe asking about prior projects in general terms. People may hear even a hypothetical range as a promise, and I\u2019m still trying to understand why the earlier project is described as \u201cfair\u201d despite uneven benefits. Whether that was about selection, amounts, or how disputes got handled."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Agreed. On the schedule on screen, I\u2019m going to leave Village One as reconnaissance and consent and access setup, with no payment framing and no promise that a mapped stand is an enrollment unit. I\u2019ll check the tide and cloud forecasts before I fix the flight dates. If the imagery window is poor, we can still do the habitat pass and, um, defer the repeat flight rather than force a bad comparison."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "And in that reconnaissance window, I\u2019d keep my questions on existing or contemplated pond operations, not compensation. I\u2019d ask about cost categories, credit arrangements, and what shocks they think matter. That lets us test whether the very different profit expectations are, are finance or disease driven, without turning the visit into a negotiation."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Good. I\u2019ll mark Village One\u2019s enterprise interviews as exploratory in the shared schedule, alongside the broad habitat pass, instead of tying them to any particular mapped unit. Lila, once you\u2019ve checked the local calendar, could we get even a rough sense of whether the village discussion needs to happen before the household visits, or whether they can run on separate days in the same window, or..."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "I can give you a rough indication after the initial local contacts, but I wouldn\u2019t assume one order across all three villages. My hunch is, is that the village discussion should come before household histories where there\u2019s a strong public process around claims. Though I need to check that it won\u2019t make people feel like they have to give the approved version later. I\u2019ll come back with that, plus the fishing, market, and religious constraints, before we lock the window."
+    },
+    {
+      "speaker": "Dr. Maya Suryanto",
+      "text": "Okay, that\u2019s enough to keep Village One provisional for now. I\u2019ll leave the window unpinned until you\u2019ve checked the local calendar and I\u2019ve done my tide and cloud check. And we\u2019ll treat the temporary stand references as ecology and access references only. We should stop there before somebody has to run."
+    },
+    {
+      "speaker": "Dr. Lila Fernandes",
+      "text": "Okay, I think we've covered what we needed for today. Thanks, both. I'll come back once I've checked those local timing questions, and then..."
+    },
+    {
+      "speaker": "Dr. Daniel Okafor",
+      "text": "All right, speak soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task-compliance gap: the seed requires a project coordinator to assign a shared village-visit schedule and a short list of explicit data handoffs. Maya acts as coordinator in practice (turns 19, 22, 24, 26), but no distinct coordinator role is present and the handoffs are only partially explicit. Ecology inputs and field constraints are clear, but economics never explicitly hands off monitoring-cost assumptions, and anthropology never explicitly commits to a defined tenure/decision-process notes deliverable.",
+      "Task-compliance gap: the required bounded-role statements are strongly implicit in the interaction but not fully stated in the requested form. Ecology clearly disclaims ownership inference (turns 3, 17), and economics disclaims authority inference (turn 12), but anthropology does not explicitly state that its work cannot estimate carbon stocks or independently set a financially viable payment level.",
+      "Naturalness is limited by polished construction: many substantive turns are compact, complete arguments that introduce a concern, specify a method, and land on a tidy operational conclusion (especially turns 3, 5, 9, 12, 13, 16, 20, and 25). The disfluencies are present but often feel inserted into otherwise highly composed prose.",
+      "The screen-share working-session style is only lightly realized. There are references to the draft, sheet, column, schedule, and screen (turns 1, 2, 5, 22), but there is little audible scrolling, reading, correcting, or practical document navigation expected of that format."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.92,
+    "written_turns": [
+      6,
+      9
+    ],
+    "exploration_share": 0.35,
+    "turn_moves": {
+      "question": 4,
+      "request": 3,
+      "proposal": 6,
+      "observation": 1,
+      "backchannel": 2,
+      "answer": 2,
+      "agreement": 2,
+      "concern": 4,
+      "commitment": 4
+    },
+    "volunteer_turns": [
+      13,
+      19,
+      22,
+      25,
+      26,
+      27
+    ],
+    "unsure_turns": [
+      13,
+      16,
+      18,
+      19,
+      20,
+      21,
+      25
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.92,
+      "exploration_share": 0.35,
+      "approved": true,
+      "issues": [
+        "Task-compliance gap: the seed requires a project coordinator to assign a shared village-visit schedule and a short list of explicit data handoffs. Maya acts as coordinator in practice (turns 19, 22, 24, 26), but no distinct coordinator role is present and the handoffs are only partially explicit. Ecology inputs and field constraints are clear, but economics never explicitly hands off monitoring-cost assumptions, and anthropology never explicitly commits to a defined tenure/decision-process notes deliverable.",
+        "Task-compliance gap: the required bounded-role statements are strongly implicit in the interaction but not fully stated in the requested form. Ecology clearly disclaims ownership inference (turns 3, 17), and economics disclaims authority inference (turn 12), but anthropology does not explicitly state that its work cannot estimate carbon stocks or independently set a financially viable payment level.",
+        "Naturalness is limited by polished construction: many substantive turns are compact, complete arguments that introduce a concern, specify a method, and land on a tidy operational conclusion (especially turns 3, 5, 9, 12, 13, 16, 20, and 25). The disfluencies are present but often feel inserted into otherwise highly composed prose.",
+        "The screen-share working-session style is only lightly realized. There are references to the draft, sheet, column, schedule, and screen (turns 1, 2, 5, 22), but there is little audible scrolling, reading, correcting, or practical document navigation expected of that format."
+      ]
+    }
+  ]
+}

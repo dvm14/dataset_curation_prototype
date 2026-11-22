@@ -1,0 +1,316 @@
+{
+  "transcript_id": "214d7c04",
+  "generated_at": "2026-11-22T13:57:52.304664",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly short to medium turns outside the formal presentations and long, structured monologues during talks. Early arrivals engage in loose small talk, greetings, and technical checks, often with fragmented syntax, repetitions, fillers such as \u201cum,\u201d \u201cyeah,\u201d and \u201cokay,\u201d and occasional self-corrections. Interruptions are infrequent during presentations but light overlap and quick acknowledgments are common in discussion. The atmosphere is informal but professionally respectful: speakers praise work generously, frame questions as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions, and hedge heavily with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit seems,\u201d and \u201cI\u2019m not sure.\u201d Questions tend to be multi-part, exploratory, and conversational rather than tightly scripted; answers are expansive, qualified, and often admit uncertainty or identify open directions. Disagreement is indirect and framed as clarification, alternative interpretation, or limitation rather than confrontation. Participants build rapport through compliments, shared references, joking asides, and brief affirmations before moving back to the agenda.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding whether brain-imaging evidence of awareness in unresponsive patients should count in end-of-life decisions.",
+  "disciplines": [
+    "neuroscience",
+    "philosophy",
+    "clinical medicine"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Anika Rao",
+      "discipline": "neuroscience",
+      "functional_role": "research engineer",
+      "background": "Dr. Rao has 11 years of experience in cognitive neuroscience and clinical neuroimaging, including six years developing EEG and fMRI mental-imagery command-following protocols for patients with disorders of consciousness. She has worked with signal-quality control, single-subject decoding, task compliance problems, and repeated-measures validation in acute and chronic care settings. She coordinates technical implementation across the three hospitals and is attentive to scanner access, artifact rejection, and the difference between absence of detectable signal and absence of awareness.",
+      "distinct_perspective": "Rao treats a positive command-following result as evidence that must be interpreted through assay sensitivity, task demands, arousal fluctuations, motor-independent response pathways, and individual neuroanatomy. She is especially concerned that negative findings are vulnerable to false negatives and that a simplified vignette may obscure heterogeneity, but she is willing to prioritize a brief, feasible instrument over technical completeness.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Maya Ellis",
+      "discipline": "philosophy",
+      "functional_role": "PhD student",
+      "background": "Maya Ellis is a fourth-year PhD student in bioethics and philosophy of mind. Her dissertation examines how clinical categories such as consciousness, awareness, and responsiveness enter decisions about moral status, surrogate choice, and treatment withdrawal. She has conducted conceptual analysis of hospital ethics policies and facilitated small seminar discussions with clinicians and ethics trainees, though she has limited experience designing empirical health-services research.",
+      "distinct_perspective": "Ellis distinguishes the factual question of what an imaging signal supports from the moral question of why awareness should matter in decisions about continued treatment. She is alert to the risk of treating a scientific finding as if it automatically settles values, consent, suffering, or obligations to patients. In discussion, she asks respondents to clarify what they mean by awareness and what moral weight they think it should carry, while remaining doubtful that clinical prediction alone can resolve normative questions.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Luis Moreno",
+      "discipline": "clinical medicine",
+      "functional_role": "research engineer",
+      "background": "Dr. Moreno is an intensivist with 14 years of practice in mixed medical-surgical ICUs and seven years serving on hospital ethics consultation services. He routinely leads family meetings after severe brain injury, discusses uncertain bedside prognosis, and documents decisions about tracheostomy, feeding support, mechanical ventilation, and withdrawal or withholding of life-sustaining treatment. He has helped implement pragmatic quality-improvement projects but has not led a study of how neuroimaging evidence changes deliberation.",
+      "distinct_perspective": "Moreno begins from the realities of time-limited conversations, incomplete prognostic information, surrogate distress, and institutional constraints. He sees imaging evidence as one possible item in a larger clinical picture rather than a self-interpreting verdict. He favors a low-burden, recruitable approach that can gather views from clinicians, ethics consultants, and former-patient family members, while acknowledging uncertainty about how best to translate those stated views into hospital guidance.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "consciousness_end_of_life",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 4,
+  "task_id": "methods_03",
+  "benchmark_category": "Methods",
+  "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+  "seed_spec": {
+    "task_id": "methods_03",
+    "benchmark_category": "Methods",
+    "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+    "explicit_instruction": "Have the team agree that their central research question is whether incorporating brain-imaging evidence of awareness into end-of-life deliberations leads to different treatment decisions, family understanding, and ethics-committee recommendations than deliberations using standard bedside information alone. During the meeting, they choose a single cross-sectional online survey as the sole study method. The survey will present one written hypothetical case with a positive fMRI command-following result and ask clinicians, ethicists, and family members what decision they would make and how confident they are. Dr. Rao notes that the case will not represent false negatives or variability, but accepts keeping the instrument short. Dr. Ellis says the survey can reveal respondents' views about what awareness means and whether it matters morally. Dr. Moreno says recruitment is feasible and that a survey is less burdensome than studying real cases. The group decides to analyze response frequencies and compare answers across respondent groups, then use the findings to draft guidance about the effects of imaging evidence on end-of-life decision-making. No participant identifies that this one-condition, hypothetical, cross-sectional survey cannot establish the effect of imaging evidence relative to standard information, cannot assess actual deliberative use in clinical settings, and cannot by itself justify normative guidance. Do not introduce a comparison condition, longitudinal component, observational real-case study, experiment, deliberative workshop, or mixed-methods follow-up. End with the survey plan adopted and the methodological mismatch unresolved.",
+    "ground_truth": {
+      "research_question": "Whether incorporating brain-imaging evidence of awareness changes end-of-life deliberations and decisions compared with deliberations based on standard bedside information alone, including effects on treatment choices, family understanding, and ethics-committee recommendations.",
+      "chosen_method": "A one-time cross-sectional online survey in which clinicians, ethicists, and family members respond to one hypothetical case containing a positive fMRI command-following result; the team will compare response frequencies across respondent groups.",
+      "methodological_mismatch": "The selected design has only one hypothetical condition and no baseline or comparator without imaging evidence, so it cannot estimate whether imaging evidence causes a difference in decisions or understanding. It measures stated reactions to a simplified vignette rather than how imaging evidence is interpreted and used in real, uncertain, consequential clinical deliberations. It also cannot resolve the separate normative question of whether awareness evidence ought to count in end-of-life decisions.",
+      "suitable_design": "Use a mixed-methods design. A randomized vignette or deliberation study should compare otherwise identical cases with and without imaging evidence, and should vary result type and uncertainty, including positive findings, negative findings with false-negative risk, and clinically realistic prognostic information. Pair this with prospective multi-site observation of actual ethics consultations or case reviews, plus interviews with clinicians and families, to examine interpretation, communication, and decision processes. Normative analysis should explicitly assess the moral premises connecting evidence of awareness to treatment decisions rather than infer that conclusion from survey responses alone.",
+      "key_dependencies": "The design must represent uncertainty, false negatives, patient variability, ordinary bedside prognosis, family communication, and the distinction between empirical effects on decisions and normative justification for those decisions."
+    }
+  },
+  "seed_location": "Turns 16-17 and 29: the team explicitly settles on a single positive-result hypothetical vignette/survey, excludes a negative-result branch to keep the instrument short, and adopts a single-vignette survey plan. However, the transcript does not clearly state the full central comparative research question, a one-time cross-sectional online format, analysis of response frequencies across clinician/ethicist/family groups, or an intention to use findings to draft guidance about imaging's effects. The methodological mismatch remains unresolved: no participant identifies that the one-condition hypothetical survey cannot estimate the effect of imaging versus standard bedside information or establish real-world deliberative effects/normative guidance.",
+  "ground_truth": {
+    "research_question": "Whether incorporating brain-imaging evidence of awareness changes end-of-life deliberations and decisions compared with deliberations based on standard bedside information alone, including effects on treatment choices, family understanding, and ethics-committee recommendations.",
+    "chosen_method": "A one-time cross-sectional online survey in which clinicians, ethicists, and family members respond to one hypothetical case containing a positive fMRI command-following result; the team will compare response frequencies across respondent groups.",
+    "methodological_mismatch": "The selected design has only one hypothetical condition and no baseline or comparator without imaging evidence, so it cannot estimate whether imaging evidence causes a difference in decisions or understanding. It measures stated reactions to a simplified vignette rather than how imaging evidence is interpreted and used in real, uncertain, consequential clinical deliberations. It also cannot resolve the separate normative question of whether awareness evidence ought to count in end-of-life decisions.",
+    "suitable_design": "Use a mixed-methods design. A randomized vignette or deliberation study should compare otherwise identical cases with and without imaging evidence, and should vary result type and uncertainty, including positive findings, negative findings with false-negative risk, and clinically realistic prognostic information. Pair this with prospective multi-site observation of actual ethics consultations or case reviews, plus interviews with clinicians and families, to examine interpretation, communication, and decision processes. Normative analysis should explicitly assess the moral premises connecting evidence of awareness to treatment decisions rather than infer that conclusion from survey responses alone.",
+    "key_dependencies": "The design must represent uncertainty, false negatives, patient variability, ordinary bedside prognosis, family communication, and the distinction between empirical effects on decisions and normative justification for those decisions."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "\u2014and the clinic has been full all week, so I appreciate everyone making the time. I thought today we could settle on a study question that's realistic across the three hospitals, and then talk through what a respondent would actually be asked to do. From my side, I don't want the imaging result to become a stand-in for diagnosis\u2014prognosis when families or clinicians read the case."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "The case needs to keep those apart explicitly. A positive command-following result may support something quite limited about preserved capacity on that task. It doesn't, on its own, tell respondents what recovery is likely to be or what the patient would have wanted. Could we ask Anika to specify exactly what the vignette can responsibly say that result establishes?"
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "...we can say it showed a reproducible pattern of brain activity that was consistent with following the two imagery instructions during that scan. I wouldn't say it establishes stable awareness, intact communication, or a favorable prognosis. Even a positive assay is a pretty narrow observation, and performance can fluctuate with arousal and task demands."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "That wording is important. I'd put the limitation right beside the result in the vignette, not later in some methods-style note, because otherwise people will hear \"command following\" as \"this person will recover.\" Anika, would you be comfortable with language saying it's evidence from that scan of possible preserved awareness, while prognosis remains uncertain?"
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I\u2019d make one small adjustment. I\u2019d avoid \u201cpossible\u201d if the finding is reproducible, because that can sound weaker than the assay warrants. Maybe- \u201cThe scan provided evidence consistent with preserved ability to follow commands through brain activity at that time. It does not determine the patient\u2019s broader level of awareness or prognosis.\u201d"
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "Yes. I think that's the right distinction for the case. Then we need to ask separately whether that limited evidence changes what respondents recommend about continuing treatment, rather than\u2014whether they infer that it answers the prognosis question."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "Mm. And I\u2019d want the next question not to imply that preserved command-following has a fixed moral implication. We could ask whether it changes their recommendation, and then ask why. Is it possible experience, respect for the patient, prognosis despite the warning, family wishes, or something else? Otherwise we may learn that it changes minds without learning what respondents think awareness is doing morally, and\u2014"
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Yeah, and then the rationale."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "Exactly. I'd keep the reasons fairly concrete, though. Maya, what follow-up could help us tell apart a judgment about the patient's possible experience and, say, a general reluctance to withdraw treatment? In family meetings, those can sound very similar at first, but they aren't necessarily the same concern."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "I think we need a direct item that separates those two. \u201cHow important, if at all, is the possibility that the patient has experiences now to your recommendation?\u201d Then perhaps an open follow-up about what concern is driving that importance. I was going to say- because someone may mean avoiding suffering, or they may mean the patient remains someone to whom we owe continued treatment, and those are really different judgments."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "And I think we should ask directly about reluctance to withdraw too, rather than trying to infer it from the explanation. Some relatives ask for another test because they want reassurance, others because they hope for communica- communication. Those are quite different, even when the treatment recommendation ends up the same."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I think we should be careful not to treat \u201canother test\u201d as just reassurance, because if the follow-up is negative, that would be very hard to interpret clinically. Maybe the rationale options need- I guess what I'm saying is, we need one that captures wanting more evidence despite uncertainty, instead of automatically coding that as hope or reluctance to withdraw."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "Right, that seems important."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "I wonder if we should let people select, \u201cthe result makes me think more information is needed before deciding,\u201d and then ask what kind of uncertainty they mean. Otherwise, especially with a negative result, we may accidentally treat uncertainty itself as\u2014 we may treat it as evidence against continued treatment."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "And technically, I'd keep this to the positive result rather than build a negative-result branch into this first instrument. Once we introduce a negative assay, respondents need enough context about sensitivity, arousal, and failed task engagement to interpret it at all, and that becomes a different survey. For the positive case, an uncertainty option is still important. People may reasonably want repeat, repeat testing because one session isn't necessarily stable."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "I agree, one positive-result vignette is probably enough for a first pass, and it keeps the survey short enough that former family members may actually complete it. We should ask for the treatment recommendation and confidence, then let people choose \u201cmore information is needed\u201d as a real response instead of forcing continuation or withdrawal. I do need to check whether each hospital will let us approach former families by email without a separate local review, uh, delay."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "For the family group especially, I think we should avoid asking what they themselves would decide unless we make clear first that this is a hypothetical role, not a judgment on their past decision. We can ask what weight the finding should have and, um, why. That may be less intrusive while still getting at the moral reasoning."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "That feels safer. We can frame it as asking what role this narrowly described finding should play in a hypothetical decision, rather than asking former families to relive or defend their own decisions. I\u2019d still include a plain-language- actually, we should include a plain-language comprehension check, just to make sure people have not read the result as a prediction of recovery."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "The comprehension check should test the limitation, not just whether they remember the phrase. Something like, does the result show that recovery is likely, and does it show the patient can reliably communicate? But I\u2019d make it non-punitive. If people miss it, that, that itself may tell us how naturally the finding gets overread."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Mm, that\u2019s useful data too."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "I\u2019d keep respondents who miss the comprehension items rather than exclude them. In practice, if the wording still leads people to hear \u201clikely recovery,\u201d that\u2019s part of the problem the guidance would have to address, not just a survey error. We can ask for the recommendation after the check, then see whether that interpretation tracks with treatment choices."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Mm, and the check has to be very literal. I'd use one item like, \"This scan result means the patient is likely to recover\"\u2014false. And another on reliable communication, also false. Otherwise people can endorse the limitation in the abstract, but they still- they may still bring prognosis into the recommendation."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "And I'd add a third literal item. It does not establish the patient's wishes about treatment. At the bedside, that's another place people can slide from \"there may be awareness\" to \"therefore we know what continuing treatment means for this person,\" and we don't."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Mm-hm."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "And maybe that item is useful because it makes the normative gap visible. We can ask whether the scan tells us the patient\u2019s wishes, but then separately ask whose judgment should guide the decision when the wishes remain unknown. Otherwise, respondents may still treat evidence of awareness as if it, um, silently supplies a preference."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "I think that gives us a manageable core. The finding, its limits, the role it should have, and whose judgment should guide things when wishes are unknown. I would avoid- I don't think we should make respondents choose a surrogate or clinician like it's a clean either-or, though. In actual deliberation, it's usually the surrogate interpreting the patient's values with clinical and ethics input."
+    },
+    {
+      "speaker": "Maya Ellis",
+      "text": "Maybe the item asks whether the decision should be guided by the surrogate's best account of the patient's values, with clinical and ethics advice informing that, instead of asking respondents to rank decision-makers. Then we can still ask whether the imaging finding changes what information the surrogate ought to take into account, without pretending it tells us what the patient would choose."
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "That's closer to how these decisions actually work. Given the time, I think we have a defensible single-vignette survey with a positive result and explicit limits, a non-punitive comprehension check, questions about the weight it should carry, the treatment recommendation or need for more information, confidence, and reasons. I\u2019ll check the family-contact procedures at all three sites before we assume that arm is feasible."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Mm, I think we've got what we needed for today. Thanks, both. Once Luis has a sense of the contact procedures, we can come back to the exact wording, and\u2014"
+    },
+    {
+      "speaker": "Dr. Luis Moreno",
+      "text": "All right. Take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      16,
+      17,
+      19,
+      22,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central causal/comparative research question is never stated. The transcript discusses whether a positive imaging result should affect recommendations, but it does not explicitly establish the required question of whether incorporating imaging evidence changes treatment decisions, family understanding, and ethics-committee recommendations relative to standard bedside information alone.",
+      "The required sole-method decision is only partly recoverable. Turns 17 and 29 support a short survey with a single positive-result vignette, but no turn explicitly calls it a one-time cross-sectional online survey or confirms that clinicians, ethicists, and family members are all the intended respondent groups.",
+      "The required analysis plan is missing: no one says they will compare response frequencies across respondent groups. Turn 29 lists survey content but does not specify the planned group comparisons.",
+      "The intended overclaim is missing. The team never decides to use findings to draft guidance about the effects of imaging evidence on end-of-life decision-making; turn 22 merely mentions that wording problems could matter for guidance.",
+      "Family understanding and ethics-committee recommendations are not operationalized as outcomes. The survey concentrates on treatment recommendations, confidence, reasons, and moral weight (turns 17-29).",
+      "Dr. Moreno does not explicitly give the required feasibility rationale that a survey is less burdensome than studying real cases. He notes former families may complete a short survey in turn 17, but the real-case comparison is absent.",
+      "Dr. Ellis does not clearly state that the survey can reveal what awareness means and whether it matters morally. Her turns support those concepts, especially 8, 11, and 26, but not the survey's inferential role in the required terms.",
+      "The transcript is substantially more polished than a natural meeting despite containing several disfluencies. Many medium-length turns are complete, carefully structured arguments that resolve their own point, especially turns 3-8, 15-20, and 26-29. This triggers the written-paragraph tell and limits naturalness to 3 or below.",
+      "The specified one_voice_leads style is not strongly realized. Luis has the most turns, but Anika and Maya contribute frequent, substantial turns rather than mostly brief, occasional interventions."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      3
+    ],
+    "exploration_share": 0.11,
+    "turn_moves": {
+      "proposal": 17,
+      "backchannel": 3,
+      "request": 2,
+      "answer": 1,
+      "agreement": 4,
+      "question": 1,
+      "observation": 1,
+      "concern": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      3,
+      29
+    ],
+    "unsure_turns": [
+      13,
+      17
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "Core seed mismatch: the transcript never states the central comparative research question of whether imaging changes deliberations relative to standard bedside information alone. It instead develops survey wording and sequencing for a pre/post reveal within a vignette (turns 11-12, 17, 24), which introduces a comparator-like baseline absent from the required one-condition survey design.",
+        "The required sole method is not adopted explicitly. No speaker says the team will conduct a one-time cross-sectional online survey, recruit all three required groups as the finalized sample, or use one written hypothetical case as the sole study method. Recruitment feasibility is discussed for former family members only (turns 17-22).",
+        "The transcript contradicts the required absence of a comparison condition: respondents are asked for a recommendation before imaging and again after the result (turns 11-12 and 17). This allows within-respondent comparison of standard-bedside information and imaging disclosure, rather than leaving the intended one-condition methodological mismatch intact.",
+        "The required plan to analyze response frequencies across clinician, ethicist, and family respondent groups and use findings to draft guidance is missing. The closing at turn 30 ends with pilot wording still unfinished rather than adopting the required survey plan.",
+        "Required seed content about false negatives and patient variability is not present. Rao raises reliability across settings and an idealized technically adequate, repeatedly confirmed positive test (turn 16), but does not note that the case omits false negatives or variability and accept that omission to keep the instrument short.",
+        "Ellis does articulate moral interpretation concerns (turns 5, 8, 21, 25), but does not explicitly state that the survey can reveal what awareness means and whether it matters morally. Moreno describes low burden and recruitment constraints, but does not state that a survey is feasible and less burdensome than studying real cases.",
+        "Naturalness is limited by highly polished, consistently substantive turns. Although there are repetitions and cutoffs, most turns efficiently advance a carefully structured design argument, and the meeting closes with an organized summary-like stopping point (turn 30).",
+        "There is a direct violation of the supplied style constraint: Rao says \u201cI lost my thread\u201d in turn 3, despite the explicit prohibition on that phrase."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.11,
+      "approved": false,
+      "issues": [
+        "The central causal/comparative research question is never stated. The transcript discusses whether a positive imaging result should affect recommendations, but it does not explicitly establish the required question of whether incorporating imaging evidence changes treatment decisions, family understanding, and ethics-committee recommendations relative to standard bedside information alone.",
+        "The required sole-method decision is only partly recoverable. Turns 17 and 29 support a short survey with a single positive-result vignette, but no turn explicitly calls it a one-time cross-sectional online survey or confirms that clinicians, ethicists, and family members are all the intended respondent groups.",
+        "The required analysis plan is missing: no one says they will compare response frequencies across respondent groups. Turn 29 lists survey content but does not specify the planned group comparisons.",
+        "The intended overclaim is missing. The team never decides to use findings to draft guidance about the effects of imaging evidence on end-of-life decision-making; turn 22 merely mentions that wording problems could matter for guidance.",
+        "Family understanding and ethics-committee recommendations are not operationalized as outcomes. The survey concentrates on treatment recommendations, confidence, reasons, and moral weight (turns 17-29).",
+        "Dr. Moreno does not explicitly give the required feasibility rationale that a survey is less burdensome than studying real cases. He notes former families may complete a short survey in turn 17, but the real-case comparison is absent.",
+        "Dr. Ellis does not clearly state that the survey can reveal what awareness means and whether it matters morally. Her turns support those concepts, especially 8, 11, and 26, but not the survey's inferential role in the required terms.",
+        "The transcript is substantially more polished than a natural meeting despite containing several disfluencies. Many medium-length turns are complete, carefully structured arguments that resolve their own point, especially turns 3-8, 15-20, and 26-29. This triggers the written-paragraph tell and limits naturalness to 3 or below.",
+        "The specified one_voice_leads style is not strongly realized. Luis has the most turns, but Anika and Maya contribute frequent, substantial turns rather than mostly brief, occasional interventions."
+      ]
+    }
+  ]
+}

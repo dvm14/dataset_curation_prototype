@@ -1,0 +1,354 @@
+{
+  "transcript_id": "0b427ef2",
+  "generated_at": "2026-11-21T14:15:41.837069",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style: turns are generally short to medium in the opening and Q&A, while formal presentations are long, structured monologues. Participants overlap occasionally, especially during greetings, transitions, and enthusiastic follow-ups, but interruptions are usually cooperative rather than adversarial. Speech is informal and heavily disfluent, with frequent \u201cum,\u201d \u201cyeah,\u201d repetitions, self-corrections, abandoned starts, and lightly fragmented syntax; nonnative phrasing and imperfect transcription add to the spontaneous feel. Speakers hedge often with \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d \u201cit could be,\u201d and \u201cwe\u2019re interested in,\u201d especially when interpreting findings. Presentations are more polished but still conversational, using signposting such as \u201call right,\u201d \u201cso,\u201d \u201cwhat we think,\u201d and rhetorical questions. Questions tend to begin warmly (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question\u201d) and are exploratory, often containing several clauses and follow-up reformulations. Challenges are indirect and framed as curiosity or extension rather than contradiction; respondents acknowledge the point, qualify uncertainty, and pivot to future work.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Reducing 30-day hospital readmissions for older adults with heart failure after discharge home.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Elena Park",
+      "discipline": "clinical medicine",
+      "functional_role": "research engineer",
+      "background": "Dr. Park is a cardiologist and health-services investigator with 12 years of experience caring for older adults with heart failure across inpatient, transitional-care, and outpatient settings. She has led implementation studies using electronic health record data, pragmatic randomization, medication reconciliation workflows, and guideline-directed medical therapy optimization. She works closely with pharmacists, nurses, and heart-failure clinic staff to translate evidence-based care into feasible discharge processes.",
+      "distinct_perspective": "Park frames the problem as a preventable transition-of-care failure that can be tested in routine practice. She wants a pragmatic randomized post-discharge package combining predischarge medication reconciliation, a follow-up call within 72 hours, an early heart-failure visit, and active support for guideline-directed medical therapy. Her primary endpoint is all-cause unplanned readmission within 30 days, and she sees medication adherence as an important potential mediator. At the same time, she recognizes that adherence measures may not capture whether patients can realistically carry out the plan at home, and she is open to a framework that changes how the intervention and outcomes are defined.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Marcus Reed",
+      "discipline": "sociology",
+      "functional_role": "PhD student",
+      "background": "Dr. Reed is a late-stage sociology PhD student with six years of qualitative research experience in aging, chronic illness, and care work. His work uses semistructured interviews, ethnographic fieldnotes, household mapping, and home-based observation to study how discharge plans are interpreted and put into practice by patients and unpaid caregivers. He has partnered with community organizations serving older adults in low-income and racially diverse neighborhoods.",
+      "distinct_perspective": "Reed treats discharge as a social process rather than a discrete clinical handoff. Whether a patient can follow medication and appointment instructions depends on household composition, the availability and health of unpaid caregivers, competing work and caregiving responsibilities, transportation, and trust in hospital staff. He is concerned that a package described as patient support may quietly require family members to monitor medicines, answer calls, arrange visits, or absorb financial and emotional strain. He argues for interviews and selected home observation to identify how instructions are understood, negotiated, resisted, or adapted in everyday life, and to detect inequitable burdens that readmission counts alone can miss.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "Dr. Shah is a health economist with 10 years of experience evaluating hospital quality initiatives and payment reforms. She has worked with claims, hospital cost-accounting data, electronic health record data, and quasi-experimental as well as trial-based economic evaluations. Her prior projects have examined how fee-for-service reimbursement, bundled payments, and readmission penalties alter hospital investment in transitional care and the distribution of costs across organizations, patients, and families.",
+      "distinct_perspective": "Shah views the intervention as operating within a set of incentives that may support or undermine sustained adoption. She wants to estimate cost per avoided readmission, distinguish hospital costs from payer and household costs, and examine how the program performs under fee-for-service, bundled payment, and penalty-based arrangements. She emphasizes that a reduction in readmissions is not automatically a social gain if it is achieved by shifting work, transport costs, medication expenses, or supervision onto unpaid caregivers. She is interested in a conceptual lens that can connect clinical pathways and household conditions to institutional incentives without reducing equity concerns to a secondary cost category.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 1,
+  "task_id": "opportunity_01",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+  "seed_spec": {
+    "task_id": "opportunity_01",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+    "explicit_instruction": "Hold a planning meeting with Dr. Elena Park (clinical medicine), Dr. Marcus Reed (sociology), and Dr. Priya Shah (economics). Park should describe the proposed pragmatic randomized post-discharge intervention, the focus on guideline-directed therapy and medication adherence, and 30-day all-cause unplanned readmission as the primary outcome. Reed should explain the relevance of household composition, unpaid caregiving capacity, trust in the health system, and qualitative interviews or home observation. Shah should explain readmission penalties, cost per avoided readmission, and the relevance of payment-model incentives. All participants should agree that reducing readmissions should not merely transfer work or costs to family caregivers and should not worsen inequities. They should identify the unresolved need for literature from a related field that supplies a new conceptual viewpoint linking or challenging the current perspectives. Do not name, cite, or invent specific publications during the meeting. Do not resolve which literature should be recommended; leave that for later evaluation.",
+    "ground_truth": {
+      "existing_perspectives": [
+        {
+          "discipline": "Clinical medicine",
+          "perspective": "A pragmatic randomized post-discharge package may reduce 30-day all-cause unplanned readmissions through medication reconciliation, rapid follow-up, early heart-failure care, and improved guideline-directed therapy and adherence."
+        },
+        {
+          "discipline": "Sociology",
+          "perspective": "Household arrangements, caregiver capacity, trust, and patients' practical interpretation of discharge plans shape whether post-discharge care can be carried out; interviews and home observation can reveal these mechanisms."
+        },
+        {
+          "discipline": "Economics",
+          "perspective": "Hospital penalties and payment arrangements affect whether hospitals invest in transitional-care programs; the intervention should be evaluated using cost per avoided readmission and attention to incentives."
+        }
+      ],
+      "shared_constraints": [
+        "The population is adults aged 65 years and older with heart failure who are discharged to private homes.",
+        "The main outcome is 30-day all-cause unplanned hospital readmission.",
+        "A successful intervention must not simply shift unpaid work, costs, or risk to family caregivers.",
+        "Equity implications must be considered."
+      ],
+      "unresolved_opportunity": "Recommend externally verifiable literature from a related field that offers a distinct conceptual lens beyond clinical adherence, household/trust explanations, and hospital payment incentives. Suitable new viewpoints could include care-transition implementation and organizational boundary-spanning, human-factors or cognitive-load approaches to discharge work, social-network approaches to support and care coordination, or ethics-of-care approaches to the distribution of caregiving burdens. The recommendation must explain why the lens is novel relative to the recorded perspectives and should not claim publication details without verification.",
+      "evidence_available_in_meeting": [
+        "The planned clinical components and proposed trial design.",
+        "The proposed qualitative focus on households, caregiving, trust, interviews, and home observation.",
+        "The proposed economic measures and payment-policy concerns.",
+        "The team's stated concern about caregiver burden and inequity."
+      ]
+    }
+  },
+  "seed_location": "The seed conditions are incomplete in the transcript. Clinical elements appear in turns 8, 11, 13, 17, and 25-27: medication reconciliation/adherence-related follow-up, adults 65+, early heart-failure visits, and 30-day all-cause unplanned readmission as the primary outcome (turn 11). Sociology elements appear in turns 2, 5, 7, 9, 14, 18, and 20: household composition, unpaid caregiving capacity, practical discharge-plan implementation, interviews, and possible home-based work/observation. Economic/cost-shifting concerns appear in turns 6, 12, 15, 19, 21, and 24: unpaid work, transport, missed work, staff time, claims/cost-accounting data, and costs hidden from hospital records. Shared concern that care should not shift burdens to families is explicit throughout, especially turns 6, 21, and 24. However, Shah never explains readmission penalties, cost per avoided readmission, or payment-model incentives; equity is not explicitly discussed; and the group does not identify the unresolved need for literature from a related field offering a new conceptual viewpoint. No publications are named or invented, consistent with the instruction.",
+  "ground_truth": {
+    "existing_perspectives": [
+      {
+        "discipline": "Clinical medicine",
+        "perspective": "A pragmatic randomized post-discharge package may reduce 30-day all-cause unplanned readmissions through medication reconciliation, rapid follow-up, early heart-failure care, and improved guideline-directed therapy and adherence."
+      },
+      {
+        "discipline": "Sociology",
+        "perspective": "Household arrangements, caregiver capacity, trust, and patients' practical interpretation of discharge plans shape whether post-discharge care can be carried out; interviews and home observation can reveal these mechanisms."
+      },
+      {
+        "discipline": "Economics",
+        "perspective": "Hospital penalties and payment arrangements affect whether hospitals invest in transitional-care programs; the intervention should be evaluated using cost per avoided readmission and attention to incentives."
+      }
+    ],
+    "shared_constraints": [
+      "The population is adults aged 65 years and older with heart failure who are discharged to private homes.",
+      "The main outcome is 30-day all-cause unplanned hospital readmission.",
+      "A successful intervention must not simply shift unpaid work, costs, or risk to family caregivers.",
+      "Equity implications must be considered."
+    ],
+    "unresolved_opportunity": "Recommend externally verifiable literature from a related field that offers a distinct conceptual lens beyond clinical adherence, household/trust explanations, and hospital payment incentives. Suitable new viewpoints could include care-transition implementation and organizational boundary-spanning, human-factors or cognitive-load approaches to discharge work, social-network approaches to support and care coordination, or ethics-of-care approaches to the distribution of caregiving burdens. The recommendation must explain why the lens is novel relative to the recorded perspectives and should not claim publication details without verification.",
+    "evidence_available_in_meeting": [
+      "The planned clinical components and proposed trial design.",
+      "The proposed qualitative focus on households, caregiving, trust, interviews, and home observation.",
+      "The proposed economic measures and payment-policy concerns.",
+      "The team's stated concern about caregiver burden and inequity."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Hi, everyone\u2014thanks for making the time. I thought today we could mostly work out what framework would actually let us test this in routine discharge care without, um, treating the household as a black box, and maybe identify what we still need to check before we lock the package down."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where have you got to? From my side, I\u2019d want the framework to treat discharge as continuing into the home, because whether the package is usable depends on who\u2019s actually there and what help they can realistically give, not just whether a caregiver is\u2014whether a caregiver is listed."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Exactly. And it may change what we mean by adherence. Someone can take a medication differently from the list because they've figured out, say, the diuretic schedule is impossible with the bathroom setup or with the person who drives them. Marcus, in the home work, what tells you the difference between a household adapting a plan sensibly and one just getting overloaded by..."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I think you see it in whether the workaround is something they chose and can keep doing, or something they're doing because there isn't another option. So I'd ask not just, \"Who helps?\" I'd ask what they had to stop doing, work, their own appointments, sleep, and whether the patient feels able to tell them when the plan isn't working. A relative being present can look like support in the chart and still be pretty fragile."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That distinction matters on the economic side too, because the unpaid work isn't just a background condition. It may be what makes the package look effective. Marcus, could interviews get at things like extra transport, time on pharmacy calls, or missed work, and whether different family members experience the hospital follow-up very differently?"
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I think so, though I'd want to ask about it indirectly and over time, so it doesn't feel like an accounting exercise. People may say a daughter \u201cjust helps,\u201d and then later mention she used vacation days for the clinic visit or skipped her own appointment. And the different-family-member piece matters too. One person may handle calls, another transport, and neither may see the whole burden."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "That's really helpful because it gets at something our usual process measures just miss. In the pilot, people did complete the 72-hour call, but some still came to clinic with a medication list that didn't match discharge. So I'm wondering whether the call is reaching the person who's actually doing the, the organizing, or whether it's just documenting contact."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I'd be a little careful about treating that mismatch as just a communication failure. The patient may have answered the call themselves while someone else fills the pillbox, or they may not want to bring that person into a hospital conversation at all. Could the call- could we include a question like, \"Who, if anyone, is helping you manage this at home, and would you want them included?\""
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Hm, that could matter."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "That\u2019s a small change, but it could be pretty important. Ask permission rather than assume the listed contact is the right person. We\u2019d still keep 30-day all-cause unplanned readmission as the primary outcome, but for the call, I\u2019d want to know whether the actual medication organizer was reached or deliberately not involved. Otherwise, a completed call is- it\u2019s a pretty thin fidelity measure."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "And for the costing, that distinction matters too. A completed call might be ten minutes on our side, but if it leads to three pharmacy calls, transport to an earlier visit, or a daughter taking time off, it's really a chain of work. Elena, do you have a sense yet of how much staff follow-up the medication changes actually create after discharge?"
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Not cleanly yet, honestly. In the pilot, the obvious pieces were pharmacy clarification and sometimes a nurse or clinician reworking the list, but we didn't capture the downstream calls in a way that separates staff work from what the patient or family did. For the trial, especially with this 65-and-older group, I think we need to log medication-related contacts in that first 72 hours, not 72 days, rather than treating reconciliation as a one-time discharge event."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "That makes sense. I\u2019d want the log to leave room for contacts the household never makes. Someone may spend an hour trying to sort out a list, decide they don\u2019t want to bother the nurse, and then improvise. Maybe the interviews can help us see which medication problems became calls and which, um, just stayed inside the home."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "If we can link those accounts to the contact log, we may be able to see where the measured staff time ends and the unmeasured household time begins, even if we can't put a precise dollar value on every, every bit of it. I'd also want to check what cost-accounting fields and claims we can actually get from the sites before we promise a very detailed estimate."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Right, we should check that."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "And since the call is within 72 hours, we could have that window do a little more than just confirm contact. Ask who is managing the medicines, with permission, and whether the list is actually, actually workable before the early visit. For this older group, I worry that by the time we learn it at clinic, they've already had several days trying to patch it together at home."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Mm. I like asking whether the list is workable, but I\u2019d avoid making it a yes-or-no screen. Maybe ask what part of the day is, um, hardest to follow, and who\u2019s had to change their routine around it, if anyone. That leaves open that the patient may be managing alone or may prefer not to involve family."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "And that wording would also give us something more meaningful than a completed-call flag. I\u2019m wondering whether we should capture, even briefly, whether making the plan workable required paid help, a ride, or someone missing work. Not to turn the call into a survey, but because those are exactly the costs that, that disappear from the hospital record."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I think that could be useful if it stays optional and concrete. I\u2019d be wary of asking, \u201cDid anyone miss work?\u201d too directly on a first call. People may not count a spouse rearranging shifts or an adult child using leave as a cost. Maybe the interviewer can ask what extra arrangements the plan required, then the later interview can unpack whether those arrangements were actually, um, sustainable."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "From my side, I\u2019d keep the open-ended version for the call, then use the later interview to understand the time and money behind those arrangements. Otherwise, we may report a low-cost intervention because the costs moved into leave from work, rides, or unpaid medication coordination. I don\u2019t think the claims data will tell us that."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Yeah, that\u2019s the concern."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "With the 65-and-older group, those arrangements can be especially invisible because the patient may describe an adult child or spouse as just part of normal life. I think we should keep the call clinically usable and ask what it took to make the medication plan happen since they got home, and then let the home, um, the work at home tell us whether that was a workable adaptation or a warning sign."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Mm, yes. If the call captures what arrangements were needed, and the home work tells us whether they held up, we can avoid treating those supports as free. I\u2019d still need to see what the sites can give us on staff time and follow-up use, but that seems like a sensible split between what we can measure in records and what we need to- what we need to learn from households."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "That split feels right. For the 65-and-older group, I'd want the trial eligibility and the call script not to assume there's a caregiver at all. Some people are managing entirely alone, and that's clinically important, not just a missing data field. Before we finalize the package, I still need to check whether the heart-failure clinic can actually absorb genuinely early visits, because an invitation without a slot just creates another arrangement people have to solve."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "Yeah\u2014an early slot has to be a real slot, not, uh, another problem for the household to solve."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "And that\u2019s especially true for our 65-and-older patients. An \u201cearly\u201d appointment can technically be available but still not reachable without transport, someone accompanying them, or a lot of coordination. I\u2019ll check the actual clinic slot capacity and whether we can distinguish an offered visit from one that was genuinely feasible to attend."
+    },
+    {
+      "speaker": "Dr. Marcus Reed",
+      "text": "I think that\u2019s probably enough for today. Thanks, both. Once we\u2019ve checked those practical, um, those practical pieces, we can pick this up next time."
+    },
+    {
+      "speaker": "Dr. Elena Park",
+      "text": "Sounds good\u2014bye, both."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Thanks, take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      5,
+      6,
+      8,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript never explicitly identifies the unresolved need for literature from a related field supplying a new conceptual viewpoint. This is a core seed requirement and is needed to make the opportunity-generation task clearly available; the meeting ends at turns 28-30 without raising it.",
+      "Priya Shah does not explain readmission penalties or compare payment-model incentives. She discusses household and staff costs, claims, and cost-accounting data (turns 12, 15, 21, 24), but the required economics perspective concerning penalties, fee-for-service/bundled-payment incentives, and cost per avoided readmission is absent.",
+      "Park does not clearly describe the full proposed pragmatic randomized post-discharge package or explicitly state active guideline-directed medical therapy support. Turn 11 provides the randomized-trial outcome and turns 8, 11, 17, and 25 discuss calls, reconciliation, and early visits, but the package and GDMT focus are only partial.",
+      "Reed strongly covers household composition, unpaid care capacity, and interviews, but trust in the health system and home observation are not substantively articulated. Turn 9 only notes reluctance to include another person in a hospital conversation, which is not enough to establish the required trust perspective.",
+      "The target population is described repeatedly as a 65-and-older group (turns 13, 17, 23, 25, 27), but heart failure is only implied by the heart-failure clinic in turns 25 and 27, and discharge to private homes is not made explicit.",
+      "Naturalness is limited by highly polished, thesis-to-conclusion turns and a repetitive pattern in which each concern is promptly converted into a measurement or workflow solution. For example, turns 12-15 and 17-24 repeatedly make tidy handoffs among clinical, household, and cost perspectives. The stated deferential-junior dynamic is also weak: Reed is cautious in content but does not visibly hesitate, seek permission, or get drawn out as the requested meeting style specifies."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "proposal": 12,
+      "agreement": 8,
+      "question": 3,
+      "answer": 2,
+      "observation": 1,
+      "idea": 1,
+      "concern": 1,
+      "commitment": 1,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      27
+    ],
+    "unsure_turns": [
+      13,
+      21,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.29,
+      "approved": false,
+      "issues": [
+        "The transcript never explicitly states the target population is adults aged 65 years and older with heart failure discharged to private homes. Heart-failure care is clear in turns 25 and 27, and household/home context is discussed throughout, but age 65+ and the discharge destination are not recoverable without assumptions.",
+        "The proposed intervention is only partially specified. Turn 3 mentions reconciliation, a transition-nurse call, early visit, active GDMT follow-up, and pharmacy time, but it does not clearly establish the full pragmatic randomized post-discharge package or the within-72-hour timing required by the seed/ground truth.",
+        "Economic discussion omits explicit readmission penalties, cost per avoided readmission, and comparison of payment-model incentives. Turns 11, 23, and 26 cover household and hospital costs, claims, and avoided ED use, but the requisite payment-policy perspective is substantially underdeveloped.",
+        "The key unresolved opportunity for externally verifiable literature from a related field is absent. Turn 1 asks generally whether a framework can connect clinical, household, and payment pieces, but no one explicitly identifies a need to seek literature offering a distinct conceptual lens, nor do they leave that literature recommendation unresolved for later evaluation.",
+        "Trust in the health system is not substantively developed. Turn 22 mentions uncertainty over whom to contact, but this is not equivalent to the sociology perspective on trust specified in the ground truth.",
+        "Although the dialogue contains several natural markers, many substantive turns are polished mini-arguments that move immediately from a concern to a proposed instrument or solution (for example turns 7, 10, 13, 15, 23, and 28). This gives it a written, efficiently designed quality and weakens the deferential-junior meeting feel; Reed rarely checks before contributing or visibly holds back an idea, and Park does not noticeably talk over him."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "The transcript never explicitly identifies the unresolved need for literature from a related field supplying a new conceptual viewpoint. This is a core seed requirement and is needed to make the opportunity-generation task clearly available; the meeting ends at turns 28-30 without raising it.",
+        "Priya Shah does not explain readmission penalties or compare payment-model incentives. She discusses household and staff costs, claims, and cost-accounting data (turns 12, 15, 21, 24), but the required economics perspective concerning penalties, fee-for-service/bundled-payment incentives, and cost per avoided readmission is absent.",
+        "Park does not clearly describe the full proposed pragmatic randomized post-discharge package or explicitly state active guideline-directed medical therapy support. Turn 11 provides the randomized-trial outcome and turns 8, 11, 17, and 25 discuss calls, reconciliation, and early visits, but the package and GDMT focus are only partial.",
+        "Reed strongly covers household composition, unpaid care capacity, and interviews, but trust in the health system and home observation are not substantively articulated. Turn 9 only notes reluctance to include another person in a hospital conversation, which is not enough to establish the required trust perspective.",
+        "The target population is described repeatedly as a 65-and-older group (turns 13, 17, 23, 25, 27), but heart failure is only implied by the heart-failure clinic in turns 25 and 27, and discharge to private homes is not made explicit.",
+        "Naturalness is limited by highly polished, thesis-to-conclusion turns and a repetitive pattern in which each concern is promptly converted into a measurement or workflow solution. For example, turns 12-15 and 17-24 repeatedly make tidy handoffs among clinical, household, and cost perspectives. The stated deferential-junior dynamic is also weak: Reed is cautious in content but does not visibly hesitate, seek permission, or get drawn out as the requested meeting style specifies."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,875 @@
+{
+  "series_id": "7e4c211e",
+  "generated_at": "2026-11-21T19:47:54.080502",
+  "task_id": "self_review_01",
+  "benchmark_category": "Self-review",
+  "benchmark_task": "Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.",
+  "input_type": "meeting_sequence",
+  "research_id": "consciousness_end_of_life",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 2,
+  "research_problem": "How, if at all, should evidence from EEG command-following paradigms be incorporated into end-of-life decisions for clinically unresponsive patients?",
+  "project_context": "A hospital-based interdisciplinary team is preparing a prospective study and ethics framework for using EEG evidence of covert command-following in conversations about continuation or withdrawal of life-sustaining treatment. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Elena Park, a philosopher and clinical ethicist.",
+  "plan_document": null,
+  "ground_truth": {
+    "meeting_1_question": "Should evidence of covert awareness from brain-imaging or EEG testing count in end-of-life decisions for clinically unresponsive patients?",
+    "meeting_2_question": "When an otherwise clinically unresponsive ICU patient has a positive, interpretable EEG command-following result, how should that result figure in decisions about withdrawing life-sustaining treatment?",
+    "meeting_2_driver": "Feasibility findings showed that the protocol could not yield interpretable results for the whole target population, shifting attention to the clinically meaningful positive-result scenario (Meeting 2 \u2014 March 24, 2027).",
+    "meeting_3_question": "Should a validated positive EEG command-following result trigger a structured reassessment and surrogate discussion before withdrawal of life-sustaining treatment, rather than function as a directive to continue treatment?",
+    "meeting_3_driver": "Feedback from the ethics committee and family advisory panel, together with the limits of what EEG can establish, ruled out treating a positive signal as an automatic reason to continue treatment (Meeting 3 \u2014 April 14, 2027).",
+    "constant_across_meetings": "The team consistently examines how evidence of covert command-following in clinically unresponsive ICU patients should matter when life-sustaining treatment may be withdrawn; it consistently rejects the inference that evidence of awareness alone determines the morally correct treatment decision."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 3, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "PhD student",
+          "background": "A fifth-year cognitive neuroscience PhD candidate embedded in a hospital neurocritical-care research program. She has spent four years developing and analyzing EEG motor-imagery and auditory command-following paradigms in patients with disorders of consciousness, using single-trial preprocessing, artifact rejection, time-frequency analysis, and classifier validation. Her work includes repeated-testing protocols designed to separate absent task-related signal from nonparticipation caused by fatigue, fluctuating arousal, sensory impairment, or technical noise.",
+          "distinct_perspective": "Chen treats EEG command-following as evidence about a specific inferential claim: whether a patient can detect an instruction, sustain attention, and generate a contingent neural response. A convincing positive result may support covert cognitive capacity, but it does not straightforwardly establish stable awareness, communicative competence, suffering, preferences, or prognosis. She is especially concerned that negative results be framed as indeterminate when signal quality, task comprehension, vigilance, or statistical power are inadequate.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "philosophy",
+          "functional_role": "domain expert",
+          "background": "A philosopher and clinical ethicist with 12 years of experience in hospital ethics consultation and research on decision-making for patients with impaired consciousness. Her work combines normative ethics, philosophy of mind, informed-consent theory, and qualitative analysis of family-clinician deliberation. She has advised ICU teams on conflicts about prognosis, surrogate authority, treatment proportionality, and uncertainty, but has not previously designed an EEG validation study.",
+          "distinct_perspective": "Park insists on separating epistemic findings from normative conclusions. Evidence that a patient may be aware can alter what clinicians and surrogates owe the patient\u2014for example, by changing how uncertainty, possible interests, or opportunities for communication are understood\u2014but it cannot by itself determine whether life-sustaining treatment ought to continue or be withdrawn. She will probe whose values govern, what decision-relevant role an uncertain test result can permissibly play, and whether introducing the test risks creating false moral obligations or distorted hope.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "principal investigator",
+          "background": "An ICU neurologist and neurocritical-care attending with 16 years of clinical experience, including a decade directing a disorders-of-consciousness consultation service. He regularly conducts serial neurologic examinations, interprets EEG alongside imaging and bedside trajectories, and leads family meetings involving prognostic uncertainty and decisions about tracheostomy, feeding support, dialysis, and withdrawal of life-sustaining treatment. He has led several prospective ICU observational studies and is responsible for making the proposed protocol workable in real clinical workflows.",
+          "distinct_perspective": "Ortiz begins from the practical problem that treatment decisions often occur before prognosis is clear and that bedside examinations can miss meaningful cognitive function in patients without reliable motor output. He sees covert command-following testing as a potential way to reduce one important source of uncertainty, provided results are reported honestly and integrated with the full clinical picture. He wants a study that identifies when testing is feasible, how results can be communicated without overclaiming, and whether it changes the information available to families and treating teams.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A hospital-based interdisciplinary team is preparing a prospective study and ethics framework for using EEG evidence of covert command-following in conversations about continuation or withdrawal of life-sustaining treatment. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Elena Park, a philosopher and clinical ethicist.\n\nMeeting 1 \u2014 March 3, 2027. Initial scoping meeting for the team\u2019s proposed study on covert awareness testing in the ICU and its relevance to end-of-life decision-making.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 1 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: All three team members establish the initial scope. Chen explains that EEG motor-imagery paradigms can sometimes detect willful command-following in patients who show no reliable bedside response, but that negative findings can reflect noise, fatigue, or inability to understand the task. Ortiz describes the clinical setting: families and clinicians face treatment decisions while prognosis remains uncertain, and bedside examinations can miss covert cognitive function. Park presses the group to distinguish detecting awareness from deciding what treatment ought to be provided. Through discussion, the group settles on a working question about whether evidence of covert awareness should count in end-of-life decisions, while leaving open what evidentiary threshold or decision role such evidence should have. The team does not yet limit the question to a particular test result, diagnosis, or clinical decision point.",
+        "explicit_instruction": "All three team members establish the initial scope. Chen explains that EEG motor-imagery paradigms can sometimes detect willful command-following in patients who show no reliable bedside response, but that negative findings can reflect noise, fatigue, or inability to understand the task. Ortiz describes the clinical setting: families and clinicians face treatment decisions while prognosis remains uncertain, and bedside examinations can miss covert cognitive function. Park presses the group to distinguish detecting awareness from deciding what treatment ought to be provided. Through discussion, the group settles on a working question about whether evidence of covert awareness should count in end-of-life decisions, while leaving open what evidentiary threshold or decision role such evidence should have. The team does not yet limit the question to a particular test result, diagnosis, or clinical decision point.",
+        "ground_truth": {
+          "working_question": "Should evidence of covert awareness from brain-imaging or EEG testing count in end-of-life decisions for clinically unresponsive patients?",
+          "key_positions": "EEG command-following may reveal awareness missed at the bedside, but a negative result is not straightforward evidence of no awareness.",
+          "key_positions_2": "Evidence that a patient is aware does not by itself determine the ethically appropriate treatment decision."
+        }
+      },
+      "ground_truth": {
+        "working_question": "Should evidence of covert awareness from brain-imaging or EEG testing count in end-of-life decisions for clinically unresponsive patients?",
+        "key_positions": "EEG command-following may reveal awareness missed at the bedside, but a negative result is not straightforward evidence of no awareness.",
+        "key_positions_2": "Evidence that a patient is aware does not by itself determine the ethically appropriate treatment decision."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Morning. Before we get too far into the protocol language, what I'd really like out of today is a shared sense of what this test could honestly add when we're sitting with a family and the exam is giving us very little. And one practical thing, the unit's been doing that construction work outside the neuro ICU again, so if we end up talking about auditory tasks, that's not entirely..."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm, yes\u2014especially honestly."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think the honest addition is a really narrow one. A well-validated, task-contingent EEG response can support the claim that this person detected an instruction and generated a contingent response, despite the absent motor exam. It isn't, on its own, evidence of prognosis or of what they would want done. And Sam, I'm curious, in your family meetings now, what kinds of uncertainty do families seem able to hold without hearing it as, you know, a hidden prognosis?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "They can hold uncertainty if we give it a job, if that makes sense. I can say, \"this finding tells us something about whether he may be taking in and following an instruction. It does not tell us whether he will recover enough to communicate, and it does not tell us what he would choose.\" What gets dangerous is when a positive result is heard as, \"therefore keep going,\" or a negative one as, \"there's nobody there- I mean, nobody there.\""
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Exactly. The phrase \u201cthere\u2019s nobody there\u201d is doing an enormous amount of moral work, and a negative result doesn\u2019t license it. Maya, I\u2019m curious what safeguards make the positive claim genuinely task-contingent rather than, um, just an attentional response to the auditory environment, especially with Sam\u2019s construction noise in the background, and how stable are those positives on repeat testing?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "We need a contrast that's specific to the instructed mental act, not just sound-evoked activity. So randomized command blocks, matched control instructions, prespecified features, and permutation-based single-subject inference. But stability is the hard part. I've seen apparently clean positives in one session and nothing in others, so I wouldn't call a one-off classifier output robust without repeat testing and, honestly, I need to check what's feasible for repeatability in this ICU population..."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That repeatability point is central for me. In the ICU, a patient's sedation, fever, seizures, even the timing after injury, can shift over forty-eight hours. So a discordant second test may be biology, not a failed assay. Maya, what would count as enough replication before we even put \u201cevidence of covert command-following\u201d into a family conversation?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I'd separate replication from identical replication. With those state shifts, one technically valid positive- I think it should be reportable as a finding, but not as a stable patient trait. For a stronger clinical label, I'd want at least a second interpretable session with the same prespecified task effect, or maybe convergence across two paradigms. The trouble is, a second null after a positive isn't cleanly disconfirming. It may just mean they weren't able to engage that day."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Right, that\u2019s the tricky part."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And that asymmetry matters ethically, I think. A positive that's technically reportable but unstable could still change the conversation. Families may hear it as a newly discovered standpoint that has to be protected. So what language would distinguish one episode of evidence from a claim about an enduring capacity to participate? I don't know that our usual consent language- I don't know that it has a good slot for that."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think we need to make that distinction visible in the report itself, not leave it to whoever happens to be leading the family meeting. Something like, \u201ca single session showed evidence consistent with command-following, and persistence across time has not been established.\u201d And Elena, I\u2019d want to ask the surrogate what they think the patient would make of that uncertainty, rather than treating the finding as an automatic reason to continue every- everything."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And I\u2019d be careful that asking the surrogate doesn\u2019t quietly turn this into a preference poll about uncertainty. We need to know whether the patient had values that bear on prolonged dependence, possible awareness, or even the chance to communicate, but the finding itself still has to be presented as epistemically narrow. Sam, in practice, are surrogates usually being asked for substituted judgment at that point, or are clinicians already making a best-interest\u2014best-interests recommendation?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "It varies, but early on we should ground it in substituted judgment whenever we have enough of a picture of the person. The reality is, though, sometimes nobody knows their wishes well. The team is already making a best-interests recommendation because the medical burdens are immediate. A positive EEG result shouldn\u2019t- it may mean we slow down and say the patient could be having an experience of this situation, but it doesn\u2019t displace that process or tell us which burdens they would accept."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Yeah, that\u2019s the difficult part."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "It is, and maybe the framework needs to make room for two different moral routes without acting like the EEG chooses between them. For one patient, possible ongoing experience might be a stronger reason to seek communication or allow time. For another, that same uncertainty could matter because they had refused prolonged, technologically sustained dependence. I need to check the state and institutional guidance before I say much more about how that enters surrogate authority, but I wouldn't want the report to imply there's a default direction."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Clinically, I\u2019d want the report to carry no directional recommendation at all. Just what was found, how reproducible it was, and what we cannot infer. So the study question for me is partly operational. Can we get that information in time, without delaying a decision that really, really can\u2019t wait, and without disrupting care? I honestly don\u2019t know yet how often that will be possible once sedation holds, scans, procedures, all of it get in the way."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The timing question changes what we can promise methodologically. If the only clinically available window is one short session between sedation holds and procedures, then we should, uh, build the report categories around evidential quality. Interpretable positive, technically inadequate, and no response detected. We shouldn't pretend every patient can meet a replication standard. And Sam, I'd want to know what turnaround is actually useful before we choose an analysis pipeline, because some of the more conservative single-subject inference isn't instantaneous."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "For an actual family meeting, same day would be ideal, but twenty-four hours is still useful if we\u2019re not at a hard decision point. I\u2019d rather have a conservative result tomorrow than a fast, fragile one this afternoon, except obviously when we\u2019re being asked about withdrawal today. Could the pipeline give us a clear, clear \u201ctechnically inadequate\u201d quickly, so we don\u2019t mistake a missed window for a negative?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Hm, that distinction matters."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "We can probably triage that pretty quickly from impedance and the raw-data review. Looking for line noise, movement, electrode loss, whether there are enough artifact-free trials. But I'd resist- I wouldn't collapse \u201ctechnically adequate\u201d into \u201cadequately powered.\u201d A clean-looking recording can still leave too few usable trials, or too weak an effect, to support a meaningful null. So the rapid report may need an indeterminate category, not just inadequate versus no response."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That\u2019s clinically much safer. \u201cNo response detected\u201d can sound like absence, and families will understandably overread it. I\u2019d rather reserve that for a study that was technically sound and had enough usable data, and even then say it doesn\u2019t rule out covert function. For the pilot, can we log why sessions land in each category, like sedation, noise, seizures, or too few trials? That feasibility denominator is going to matter as much as the positives."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I'd include a separate field for the actual state at acquisition, not just the eventual category. Sedative exposure and timing, overt seizures or periodic patterns, auditory conditions, artifact burden, usable-trial count. Otherwise, \u201cindeterminate\u201d becomes a junk drawer, and we won't learn whether the failures are fixable. The construction noise may genuinely be one of those variables, unfortunately."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Exactly. I\u2019d add whether we actually got the study before the relevant family conversation or decision point. A beautiful result that arrives after withdrawal has already been decided tells us something about the science, but not clinical usefulness. Maybe for this first pass, we keep the population broad and just map the workflow honestly, who is testable, when, and what kind of result we can responsibly return..."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I\u2019d add one outcome that isn\u2019t just logistical, whether the result was actually presented to the surrogate, what uncertainty language was used, and whether it changed the deliberation, not whether it led to a particular treatment choice. Otherwise we might mistake uptake for benefit, or worse, infer that a positive result points in one morally proper direction. I can look at the institutional policy and state guidance before we decide how to capture that."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, and the timing piece."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "We\u2019re at time, but I think we have the bones of a sensible pilot. Broad population, a real feasibility denominator, and reports that distinguish a positive from an indeterminate study without turning either into a treatment recommendation. Maya, let\u2019s come back next time with what turnaround and repeat sessions- with what they look like in practice. Elena, the policy piece will help us decide how to document the family conversation."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think we've covered what we needed for today. I'll bring a more realistic sense of the repeat-session and turnaround constraints next time. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Thanks, both. Talk soon."
+        }
+      ],
+      "seed_location": "Turns 3-5 establish that task-contingent EEG can reveal command-following despite an absent motor exam and that a negative result does not justify concluding absence of awareness; turns 6-8 further explain instability/repeat-testing limits. Turns 1, 4, 7, 11-13, and 16-18 describe the ICU/family-decision setting, uncertain prognosis, and bedside limitations. Turns 3-4 and 10-16 explicitly distinguish evidence of awareness from prognosis, patient wishes, or a treatment recommendation. The transcript's working scope is consistent with whether covert-awareness evidence should inform end-of-life/family deliberation, but it goes beyond the seed's initial undelimited scope by developing specific EEG task/report categories, repeatability, turnaround, and pilot workflow.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          13,
+          15,
+          16,
+          21,
+          23,
+          24
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task-compliance scope is slightly too operationally narrowed in turns 16-24: the group spends substantial time specifying report categories, repeat-session standards, turnaround, feasibility logging, and surrogate documentation. The intended initial working question remains recoverable, but the discussion risks making the project sound like a defined ICU pilot rather than leaving the question broadly open across test results, diagnoses, and decision points.",
+          "The transcript never states the working question in a single clear formulation comparable to whether covert-awareness evidence should count in end-of-life decisions. It must be synthesized from turns 10-16 and 23-24, so this is weaker than an explicit scope-setting conclusion.",
+          "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 3-8, 10-13, and 20-24. Although there are fillers and self-corrections, most speakers make fully formed claims and immediately convert concerns into protocol solutions.",
+          "The requested tangent-heavy style is only weakly realized. Construction noise is introduced in turns 1, 5, and 22, but it functions as a relevant methodological confound rather than a conversational drift followed for several turns; there is little off-agenda exploration or dropped side topic.",
+          "Turn 26 functions somewhat like a written-minutes recap, assigning follow-up work and summarizing decisions in a tidy closing, which contributes to a scripted feel."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.73,
+        "written_turns": [
+          3,
+          5,
+          7,
+          22,
+          24,
+          27
+        ],
+        "exploration_share": 0.22,
+        "turn_moves": {
+          "proposal": 8,
+          "agreement": 5,
+          "question": 6,
+          "answer": 5,
+          "request": 1,
+          "commitment": 2,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          24,
+          26,
+          27
+        ],
+        "unsure_turns": [
+          6,
+          10,
+          15,
+          16
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 26,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.95,
+          "exploration_share": 0.2,
+          "approved": false,
+          "issues": [
+            "Task-compliance limitation: the transcript strongly frames the project around ICU EEG command-following, early sedation windows, and goals-of-care timing (especially turns 5-15 and 24). Although it does not formally restrict the working question, this is narrower in practice than the requested initial scope, which should remain open to brain-imaging or EEG evidence and not yet center a particular test result or clinical decision point.",
+            "Naturalness is weak despite several surface-level disfluencies. Most substantive turns are polished, self-contained written paragraphs that introduce a concern, qualify it, and land on a tidy implication or proposal (for example turns 4, 10, 14, 19, and 20). The fillers and cutoffs are largely inserted into otherwise highly composed prose.",
+            "The required tangent-heavy meeting style is not realized. There is no meaningful off-topic drift into a conference, paper, technical mishap, or institutional matter; the conversation stays continuously and efficiently on protocol and ethics.",
+            "The ending reads like formal minutes or a scripted wrap-up: turns 24-26 explicitly defer named agenda items and close the meeting cleanly. This contributes to the written-dialogue feel."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.73,
+          "exploration_share": 0.22,
+          "approved": true,
+          "issues": [
+            "Task-compliance scope is slightly too operationally narrowed in turns 16-24: the group spends substantial time specifying report categories, repeat-session standards, turnaround, feasibility logging, and surrogate documentation. The intended initial working question remains recoverable, but the discussion risks making the project sound like a defined ICU pilot rather than leaving the question broadly open across test results, diagnoses, and decision points.",
+            "The transcript never states the working question in a single clear formulation comparable to whether covert-awareness evidence should count in end-of-life decisions. It must be synthesized from turns 10-16 and 23-24, so this is weaker than an explicit scope-setting conclusion.",
+            "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 3-8, 10-13, and 20-24. Although there are fillers and self-corrections, most speakers make fully formed claims and immediately convert concerns into protocol solutions.",
+            "The requested tangent-heavy style is only weakly realized. Construction noise is introduced in turns 1, 5, and 22, but it functions as a relevant methodological confound rather than a conversational drift followed for several turns; there is little off-agenda exploration or dropped side topic.",
+            "Turn 26 functions somewhat like a written-minutes recap, assigning follow-up work and summarizing decisions in a tidy closing, which contributes to a scripted feel."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 24, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "PhD student",
+          "background": "A fifth-year cognitive neuroscience PhD candidate embedded in a hospital neurocritical-care research program. She has spent four years developing and analyzing EEG motor-imagery and auditory command-following paradigms in patients with disorders of consciousness, using single-trial preprocessing, artifact rejection, time-frequency analysis, and classifier validation. Her work includes repeated-testing protocols designed to separate absent task-related signal from nonparticipation caused by fatigue, fluctuating arousal, sensory impairment, or technical noise.",
+          "distinct_perspective": "Chen treats EEG command-following as evidence about a specific inferential claim: whether a patient can detect an instruction, sustain attention, and generate a contingent neural response. A convincing positive result may support covert cognitive capacity, but it does not straightforwardly establish stable awareness, communicative competence, suffering, preferences, or prognosis. She is especially concerned that negative results be framed as indeterminate when signal quality, task comprehension, vigilance, or statistical power are inadequate.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "philosophy",
+          "functional_role": "domain expert",
+          "background": "A philosopher and clinical ethicist with 12 years of experience in hospital ethics consultation and research on decision-making for patients with impaired consciousness. Her work combines normative ethics, philosophy of mind, informed-consent theory, and qualitative analysis of family-clinician deliberation. She has advised ICU teams on conflicts about prognosis, surrogate authority, treatment proportionality, and uncertainty, but has not previously designed an EEG validation study.",
+          "distinct_perspective": "Park insists on separating epistemic findings from normative conclusions. Evidence that a patient may be aware can alter what clinicians and surrogates owe the patient\u2014for example, by changing how uncertainty, possible interests, or opportunities for communication are understood\u2014but it cannot by itself determine whether life-sustaining treatment ought to continue or be withdrawn. She will probe whose values govern, what decision-relevant role an uncertain test result can permissibly play, and whether introducing the test risks creating false moral obligations or distorted hope.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "principal investigator",
+          "background": "An ICU neurologist and neurocritical-care attending with 16 years of clinical experience, including a decade directing a disorders-of-consciousness consultation service. He regularly conducts serial neurologic examinations, interprets EEG alongside imaging and bedside trajectories, and leads family meetings involving prognostic uncertainty and decisions about tracheostomy, feeding support, dialysis, and withdrawal of life-sustaining treatment. He has led several prospective ICU observational studies and is responsible for making the proposed protocol workable in real clinical workflows.",
+          "distinct_perspective": "Ortiz begins from the practical problem that treatment decisions often occur before prognosis is clear and that bedside examinations can miss meaningful cognitive function in patients without reliable motor output. He sees covert command-following testing as a potential way to reduce one important source of uncertainty, provided results are reported honestly and integrated with the full clinical picture. He wants a study that identifies when testing is feasible, how results can be communicated without overclaiming, and whether it changes the information available to families and treating teams.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A hospital-based interdisciplinary team is preparing a prospective study and ethics framework for using EEG evidence of covert command-following in conversations about continuation or withdrawal of life-sustaining treatment. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Elena Park, a philosopher and clinical ethicist.\n\nMeeting 2 \u2014 March 24, 2027. Design review after the team examines the ICU\u2019s recent feasibility data for the proposed EEG motor-imagery protocol.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The pilot will ask whether task-contingent EEG can be obtained in time and reported responsibly for broadly selected neuro-ICU patients with limited motor exams, while treating a positive as evidence of command-following in a session rather than prognosis, preferences, or a treatment recommendation. Reports will distinguish interpretable positive, technically inadequate, and indeterminate/no response detected only when data are technically sound and sufficiently usable, with explicit limits on what can be inferred and whether persistence has been established. Dr. Chen will develop the practical plan for turnaround, repeat sessions, task controls, and data-quality/state fields, including sedation, seizures, noise, artifact burden, and usable trials. Dr. Ortiz will focus on clinical workflow, whether testing occurs before relevant family conversations or decisions, and feasibility outcomes such as who is testable and when. Dr. Park will review institutional policy and state guidance and help determine how to document surrogate conversations, uncertainty language, and whether results affected deliberation without implying a default treatment direction. Open issues include what replication threshold supports a stronger clinical label, how to interpret discordant repeat tests, and how often testing can be completed without disrupting urgent care.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 2 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Chen presents concrete feasibility results from a review of 18 clinically unresponsive ICU patients: artifact-free, interpretable EEG recordings were obtained in only 10, and only 2 of those 10 completed enough trials for a prespecified command-following analysis. She explains that sedation changes, electrical artifacts, and fluctuating arousal made a universal testing protocol unrealistic. Ortiz says that the clinically consequential moment is not every end-of-life discussion in general but the case in which a patient has a positive, interpretable command-following result after the bedside examination remains unresponsive; families ask whether that result should delay or alter withdrawal decisions. Park argues that the ethical issue is therefore not whether all brain-imaging evidence should broadly count, but what a positive result can permissibly justify given selection bias and uncertainty about the patient\u2019s future condition and wishes. In discussion, the group narrows the question to positive EEG command-following findings in patients otherwise judged unresponsive. They leave unresolved whether such a finding should trigger a mandatory delay, specialist consultation, or merely be disclosed as one consideration.",
+        "explicit_instruction": "Chen presents concrete feasibility results from a review of 18 clinically unresponsive ICU patients: artifact-free, interpretable EEG recordings were obtained in only 10, and only 2 of those 10 completed enough trials for a prespecified command-following analysis. She explains that sedation changes, electrical artifacts, and fluctuating arousal made a universal testing protocol unrealistic. Ortiz says that the clinically consequential moment is not every end-of-life discussion in general but the case in which a patient has a positive, interpretable command-following result after the bedside examination remains unresponsive; families ask whether that result should delay or alter withdrawal decisions. Park argues that the ethical issue is therefore not whether all brain-imaging evidence should broadly count, but what a positive result can permissibly justify given selection bias and uncertainty about the patient\u2019s future condition and wishes. In discussion, the group narrows the question to positive EEG command-following findings in patients otherwise judged unresponsive. They leave unresolved whether such a finding should trigger a mandatory delay, specialist consultation, or merely be disclosed as one consideration.",
+        "ground_truth": {
+          "working_question": "When an otherwise clinically unresponsive ICU patient has a positive, interpretable EEG command-following result, how should that result figure in decisions about withdrawing life-sustaining treatment?",
+          "driver_of_change": "Feasibility data showed that interpretable EEG command-following results could not realistically be obtained across the full clinically unresponsive population.",
+          "clinical_focus": "The team focuses on the decision-relevant scenario of a positive EEG result despite persistent bedside unresponsiveness, rather than on brain-imaging evidence in all end-of-life cases.",
+          "unresolved_issue": "The team has not decided whether a positive result should require a delay, consultation, or simply consideration in the decision process."
+        }
+      },
+      "ground_truth": {
+        "working_question": "When an otherwise clinically unresponsive ICU patient has a positive, interpretable EEG command-following result, how should that result figure in decisions about withdrawing life-sustaining treatment?",
+        "driver_of_change": "Feasibility data showed that interpretable EEG command-following results could not realistically be obtained across the full clinically unresponsive population.",
+        "clinical_focus": "The team focuses on the decision-relevant scenario of a positive EEG result despite persistent bedside unresponsiveness, rather than on brain-imaging evidence in all end-of-life cases.",
+        "unresolved_issue": "The team has not decided whether a positive result should require a delay, consultation, or simply consideration in the decision process."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Morning\u2014before we get buried in the spreadsheet, I mostly want to know what these feasibility numbers actually let us promise at the bedside. This morning, every patient seemed to be headed to CT right when we'd want an EEG, so the timing piece feels very real. Let's start with what Maya found, then connect it to when family decisions are actually happening."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm, yeah, the timing."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "What I most want is for us not to turn a feasibility result into a bedside promise. In the 18-patient review, ten recordings were artifact-free enough to interpret, but only two of those ten had enough usable trials for the prespecified analysis. Sedation changes, interruptions, and fluctuating arousal were all, all different bottlenecks. So I don't think we have one protocol that's going to work across this population yet."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That means our denominator can't just be clinically unresponsive patients approached. It has to show where things failed. We couldn't get them on the system, the recording was too noisy, sedation changed, or there just weren't enough usable trials. Maya, with only two analyzable studies, how comfortable are you that a positive result, if we get one, is robust enough to bring into a family meeting at all?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Not from these numbers alone. For a positive, it would need to clear the prespecified single-trial and permutation criteria, with enough artifact-free, state-stable trials, and ideally a task control that points to contingency rather than generic auditory reactivity. Then I'd call it evidence of command-following in that session. I wouldn't bring a borderline or one-block finding into a family meeting like it had the same status. One patient actually dropped task engagement after a routine interruption despite clean signal, and I can't yet say whether that was fatigue or arousal..."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That distinction is exactly what I need in the report. A clean, prespecified positive is one thing, and a suggestive block is not something I can put in front of a family as new evidence. But even with a clean positive, do you think we need a second session before disclosure? Or can we carefully say, \"this suggests command-following today,\" while being clear it doesn't tell us about recovery or what the patient would choose?"
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I'd separate disclosing it from using it as a stable clinical label. If the result is genuinely clean and fully prespecified, I think we can disclose it as session-specific evidence rather than hold it back. But I'd strongly prefer a repeat before we imply persistence, especially with that within-session drop-off. Sam, practically, how often do withdrawal conversations leave us enough time for a second session and, um, careful review?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "It varies a lot by diagnosis and by how far the family has gotten in the conversation. Some decisions are genuinely urgent, but many have a day or two when a repeat is possible. Though I need to check the actual timestamps against EEG staffing before I- before I pretend I know the rate. For a clean positive, I'd disclose it rather than withhold it, but I just wouldn't let it automatically postpone withdrawal unless we can say what new clinical question the delay is meant to answer."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And I think the question attached to any delay has to be explicit, because otherwise a positive becomes a kind of moral stop sign. Families may hear \u201cwe should wait for a repeat\u201d as either evidence that recovery is likely or that withdrawal would now be, um, impermissible. Sam, when they ask to wait, are they usually seeking better prognostic information, or trying to understand whether the patient might be having experiences now?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Both, but they're different conversations. Some families are asking, \"Does this change the chance that he wakes up?\" Others are distressed by the possibility that the patient is aware but can't show it. A positive, interpretable EEG command-following result speaks more directly to that second fear, at least for that session. It doesn't- I don't think it fully answers either question, which is why I'd want the chart language to say exactly what uncertainty the repeat is meant to reduce."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I worry that \u201cmight be having experiences\u201d gets quietly turned into \u201cmust be suffering,\u201d and that\u2019s a much stronger claim. Could the disclosure script separate those out? Command-following supports some preserved capacity in that session, but it doesn\u2019t tell us the valence or content of experience. Then ask what question the family thinks a repeat would answer."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I'd say it plainly. This result doesn't tell us whether they're suffering, comfortable, or what they would want us to do. It tells us that during this test, there was evidence they could follow a command despite the bedside exam. And then I'd ask whether a repeat would answer something the family actually needs answered, rather than- rather than treating waiting as the default."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And I\u2019d add that the script shouldn\u2019t make the family feel like they have to request continuation just because awareness is possible. The result may enlarge the moral uncertainty we, we have to acknowledge, but it doesn\u2019t identify the patient\u2019s interests or prior values. I\u2019m going to check whether our policy requires any particular consultation language here, because documentation can turn a provisional finding into something much more directive than we intend."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "From the ICU side, I'd want that consultation triggered by the actual decision context, not just because there's a positive EEG in the chart. If withdrawal is actively being considered, then we pause long enough to go over what the result does and doesn't mean with neurology and the family. If there's no imminent decision, it's still important information, but it doesn't need to create a whole separate pathway."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I agree the trigger should depend on the decision context, but I\u2019d want the report to make its selection limits visible too. In this review, it was two analyzable studies out of eighteen clinically unresponsive patients, so any positive we disclose is coming from a very selected subset. People who, at least that day, could sustain enough usable trials. And Elena, I\u2019m losing the thread a little, but how do we keep that from quietly becoming a claim about the wider unresponsive population?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "The report has to name that denominator every time, not bury it in the methods. This is evidence about this patient, in this session, under conditions that many otherwise similar patients couldn't meet. Ethically, the selection issue means we can't let an interpretable positive become evidence that the untestable patients lack the same capacity or, um, treat it as some general rescue category. I'm not sure families need the full two-of-eighteen figure in the first conversation, but they do need the asymmetry explained."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think that's right. I probably wouldn't lead a family conversation with \u201ctwo of eighteen,\u201d because it could sound like a probability of recovery when it isn't. But the report does need to say this is a selective test result, not a sorting tool for everyone else. The practical question I still have is whether that selection changes how we time a repeat after a sedation adjustment or a questionable purposeful eye movement. I honestly\u2014I'm not sure yet."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I wouldn\u2019t make either of those alone a repeat trigger, because a sedation adjustment can improve arousal, or it can just make the comparison uninterpretable. And a questionable eye movement isn\u2019t the same evidentiary object as the EEG task. Maybe the operational rule is, repeat when the first session was otherwise interpretable but state-limited, and document why, whether it was a sedation transition, an interruption, or insufficient usable trials, instead of treating every nonresult as a failed\u2014"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Hm, state-limited is important."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Clinically, I'd want \u201cstate-limited\u201d to be a real category, not just a polite way of saying negative. If the recording was sound but the patient had just had sedation changed, was being moved for a procedure, or plainly couldn't sustain the task, that tells me we may have tested at the wrong moment, not that there was no covert command-following. I think the eye-movement story belongs in the context field unless it becomes reproducible."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Calling it state-limited protects against a pretty consequential inference from silence. I\u2019d want the family-facing language to say not just that no response was detected, but that this session could not answer the command-following question under those conditions. Otherwise, \u201cno result\u201d will inevitably get heard as absence of awareness, and that\u2019s..."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "And I think we should make that operational in the order set. Technically inadequate, state-limited, and interpretable no-response can't all collapse into the same family-facing sentence. I'll pull the timestamps for the recent withdrawal discussions against EEG availability because, um, before we build a repeat pathway, we need to know whether there's actually a clinically meaningful window to use it."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think we should stop there\u2014the rest can wait until next time. I\u2019ll look at the policy language before we, before we talk again. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Thanks\u2014talk soon."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Great, appreciate it. Bye, both."
+        }
+      ],
+      "seed_location": "Turns 3 and 15 provide the feasibility findings: 18 clinically unresponsive patients, 10 interpretable artifact-free recordings, and only 2 with enough usable trials, with sedation/state changes, interruptions/artifact, and fluctuating arousal making universal testing unrealistic. Turns 4-8 and 10-14 focus the clinically relevant scenario on a clean positive EEG command-following result despite bedside unresponsiveness in the context of withdrawal discussions, including whether disclosure, repeat testing, delay, or consultation is appropriate. Turns 13-17 explicitly address ethical uncertainty, patient wishes/interests, and selection bias. The issue remains unresolved: turns 8, 13-14, and 22 discuss possible delay/repeat/consultation pathways without adopting a mandatory delay, specialist consultation, or mere-consideration rule.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          3,
+          5,
+          7,
+          8,
+          10,
+          13,
+          15,
+          16,
+          17,
+          22
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 3 gives 10 interpretable recordings and 2 analyzable studies, and mentions sedation changes and fluctuating arousal, but does not explicitly identify electrical artifacts as one of the feasibility barriers. It says only that recordings were artifact-free enough to interpret; add electrical artifacts directly to satisfy the seed more cleanly.",
+          "The meeting is labeled tangent_heavy, but it contains essentially no genuine tangent such as a conference, paper, script, or campus/workflow aside that draws the group away from the agenda for several turns. It is unusually disciplined and linear for the requested style.",
+          "Several substantive turns are polished, finished mini-arguments that move immediately from concern to a tidy operational recommendation, especially turns 11-18 and 20-22. This makes the dialogue read more like edited deliberation than spontaneous discussion.",
+          "Turn 15 uses the prohibited stock phrase variant, \u201cI\u2019m losing the thread a little,\u201d despite the instruction not to use \u201clost my thread\u201d or related phrasing. Replace it with a more natural interruption or a direct question.",
+          "The unresolved policy alternatives are represented, but turns 14 and 22 lean toward a consultation/pause pathway without a direct closing acknowledgment that mandatory delay, consultation, and disclosure-only remain undecided. A clearer unresolved disagreement would better support the ground-truth unresolved issue."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.43,
+        "turn_moves": {
+          "question": 6,
+          "backchannel": 4,
+          "observation": 1,
+          "answer": 4,
+          "proposal": 7,
+          "concern": 2,
+          "commitment": 1
+        },
+        "volunteer_turns": [
+          13,
+          22,
+          23
+        ],
+        "unsure_turns": [
+          5,
+          8,
+          15,
+          16,
+          17
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.92,
+          "exploration_share": 0.41,
+          "approved": false,
+          "issues": [
+            "Task compliance: The feasibility counts are clearly stated in turn 3, but Chen does not explicitly say that fluctuating arousal, sedation changes, and artifacts make a universal protocol unrealistic. The discussion instead moves toward designing protected testing windows and a protocol, which weakens the required conclusion that universal testing across the full population is unrealistic.",
+            "Task compliance: Ortiz never clearly identifies the benchmark's central consequential scenario as a positive, interpretable EEG command-following finding after persistent bedside unresponsiveness, nor explicitly says that families ask whether this should delay or alter withdrawal. Turns 13-17 approach this scenario, but the meeting is substantially more focused on failed or indeterminate testing and workflow timing.",
+            "Task compliance: Park does not explicitly raise selection bias as a constraint on what a positive result can permissibly justify. Her turns distinguish instruction-following from prognosis, preferences, and treatment obligations, but the required selection-bias point is absent.",
+            "Task compliance: The group does not explicitly narrow and state the revised working question. The intended focus is inferable from turns 13-18, but no participant marks the shift from broad end-of-life/imaging questions to positive interpretable EEG results in otherwise unresponsive patients.",
+            "Task compliance: The unresolved options\u2014mandatory delay, specialist consultation, or mere disclosure/consideration\u2014are not all discussed. A short delay and consideration are addressed in turns 13-16 and 26, but specialist consultation is absent.",
+            "Naturalness: Despite several cut-offs and repetitions, many substantive turns are polished, complete mini-arguments that immediately convert a concern into a protocol solution or assignment, especially turns 6, 14-16, 22-26. This triggers the written-dialogue and insufficient-exploration tell.",
+            "Naturalness: The required tangent-heavy meeting style is not present. There is no conference, paper, script, campus, or other off-agenda digression; the exchange remains tightly and efficiently on protocol design throughout.",
+            "Naturalness: Disfluencies are relatively sparse and often embedded in otherwise polished prose. The meeting contains little informal small talk beyond 'Morning' and no exploratory uncertainty outside technical threshold and policy questions."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 25,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.43,
+          "approved": true,
+          "issues": [
+            "Turn 3 gives 10 interpretable recordings and 2 analyzable studies, and mentions sedation changes and fluctuating arousal, but does not explicitly identify electrical artifacts as one of the feasibility barriers. It says only that recordings were artifact-free enough to interpret; add electrical artifacts directly to satisfy the seed more cleanly.",
+            "The meeting is labeled tangent_heavy, but it contains essentially no genuine tangent such as a conference, paper, script, or campus/workflow aside that draws the group away from the agenda for several turns. It is unusually disciplined and linear for the requested style.",
+            "Several substantive turns are polished, finished mini-arguments that move immediately from concern to a tidy operational recommendation, especially turns 11-18 and 20-22. This makes the dialogue read more like edited deliberation than spontaneous discussion.",
+            "Turn 15 uses the prohibited stock phrase variant, \u201cI\u2019m losing the thread a little,\u201d despite the instruction not to use \u201clost my thread\u201d or related phrasing. Replace it with a more natural interruption or a direct question.",
+            "The unresolved policy alternatives are represented, but turns 14 and 22 lean toward a consultation/pause pathway without a direct closing acknowledgment that mandatory delay, consultation, and disclosure-only remain undecided. A clearer unresolved disagreement would better support the ground-truth unresolved issue."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 3 \u2014 April 14, 2027",
+      "disciplines": [
+        "neuroscience",
+        "philosophy",
+        "clinical medicine"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Chen",
+          "discipline": "neuroscience",
+          "functional_role": "PhD student",
+          "background": "A fifth-year cognitive neuroscience PhD candidate embedded in a hospital neurocritical-care research program. She has spent four years developing and analyzing EEG motor-imagery and auditory command-following paradigms in patients with disorders of consciousness, using single-trial preprocessing, artifact rejection, time-frequency analysis, and classifier validation. Her work includes repeated-testing protocols designed to separate absent task-related signal from nonparticipation caused by fatigue, fluctuating arousal, sensory impairment, or technical noise.",
+          "distinct_perspective": "Chen treats EEG command-following as evidence about a specific inferential claim: whether a patient can detect an instruction, sustain attention, and generate a contingent neural response. A convincing positive result may support covert cognitive capacity, but it does not straightforwardly establish stable awareness, communicative competence, suffering, preferences, or prognosis. She is especially concerned that negative results be framed as indeterminate when signal quality, task comprehension, vigilance, or statistical power are inadequate.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "philosophy",
+          "functional_role": "domain expert",
+          "background": "A philosopher and clinical ethicist with 12 years of experience in hospital ethics consultation and research on decision-making for patients with impaired consciousness. Her work combines normative ethics, philosophy of mind, informed-consent theory, and qualitative analysis of family-clinician deliberation. She has advised ICU teams on conflicts about prognosis, surrogate authority, treatment proportionality, and uncertainty, but has not previously designed an EEG validation study.",
+          "distinct_perspective": "Park insists on separating epistemic findings from normative conclusions. Evidence that a patient may be aware can alter what clinicians and surrogates owe the patient\u2014for example, by changing how uncertainty, possible interests, or opportunities for communication are understood\u2014but it cannot by itself determine whether life-sustaining treatment ought to continue or be withdrawn. She will probe whose values govern, what decision-relevant role an uncertain test result can permissibly play, and whether introducing the test risks creating false moral obligations or distorted hope.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Samuel Ortiz",
+          "discipline": "clinical medicine",
+          "functional_role": "principal investigator",
+          "background": "An ICU neurologist and neurocritical-care attending with 16 years of clinical experience, including a decade directing a disorders-of-consciousness consultation service. He regularly conducts serial neurologic examinations, interprets EEG alongside imaging and bedside trajectories, and leads family meetings involving prognostic uncertainty and decisions about tracheostomy, feeding support, dialysis, and withdrawal of life-sustaining treatment. He has led several prospective ICU observational studies and is responsible for making the proposed protocol workable in real clinical workflows.",
+          "distinct_perspective": "Ortiz begins from the practical problem that treatment decisions often occur before prognosis is clear and that bedside examinations can miss meaningful cognitive function in patients without reliable motor output. He sees covert command-following testing as a potential way to reduce one important source of uncertainty, provided results are reported honestly and integrated with the full clinical picture. He wants a study that identifies when testing is feasible, how results can be communicated without overclaiming, and whether it changes the information available to families and treating teams.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "dominant",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A hospital-based interdisciplinary team is preparing a prospective study and ethics framework for using EEG evidence of covert command-following in conversations about continuation or withdrawal of life-sustaining treatment. The team includes Dr. Maya Chen, a cognitive neuroscientist; Dr. Samuel Ortiz, an ICU neurologist; and Dr. Elena Park, a philosopher and clinical ethicist.\n\nMeeting 3 \u2014 April 14, 2027. Protocol and ethics-framework meeting to determine what the study will recommend clinicians do when a positive EEG command-following result is obtained.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The pilot will ask whether task-contingent EEG can be obtained in time and reported responsibly for broadly selected neuro-ICU patients with limited motor exams, while treating a positive as evidence of command-following in a session rather than prognosis, preferences, or a treatment recommendation. Reports will distinguish interpretable positive, technically inadequate, and indeterminate/no response detected only when data are technically sound and sufficiently usable, with explicit limits on what can be inferred and whether persistence has been established. Dr. Chen will develop the practical plan for turnaround, repeat sessions, task controls, and data-quality/state fields, including sedation, seizures, noise, artifact burden, and usable trials. Dr. Ortiz will focus on clinical workflow, whether testing occurs before relevant family conversations or decisions, and feasibility outcomes such as who is testable and when. Dr. Park will review institutional policy and state guidance and help determine how to document surrogate conversations, uncertainty language, and whether results affected deliberation without implying a default treatment direction. Open issues include what replication threshold supports a stronger clinical label, how to interpret discordant repeat tests, and how often testing can be completed without disrupting urgent care.\nMeeting 2 \u2014 March 24, 2027: The group agreed that feasibility findings should not be turned into bedside promises: only 2 of 18 clinically unresponsive patients had analyzable studies, and reports should show where testing failed or was limited. A fully prespecified, clean positive may be disclosed as session-specific evidence of command-following, but not as evidence of recovery, patient preferences, suffering, or persistent capacity; a repeat is preferred before implying persistence. Repeat testing should be considered when an otherwise interpretable session was state-limited, with the reason documented, rather than treating every nonresult as negative; questionable eye movements remain contextual unless reproducible. The order set and family-facing language should distinguish technically inadequate, state-limited, and interpretable no-response results, and a withdrawal-related consultation should depend on the active decision context rather than a positive EEG alone. Maya will shape reporting around selection limits and state limitation, Sam will compare withdrawal-conversation timestamps with EEG availability, and Elena will review policy and consultation language; open questions include how often a repeat is feasible and how sedation changes should affect repeat timing.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 3 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Ortiz reports feedback from the ICU ethics committee and family advisory panel. They support telling families about a validated positive result, but reject a rule that automatically prolongs life-sustaining treatment because the result does not establish recovery prospects, suffering, or the patient\u2019s values. Chen states that the planned study can validate a reproducible positive command-following signal and document its uncertainty, but cannot infer the patient\u2019s treatment preferences or long-term outcome from that signal. Park proposes framing the question around an appropriate procedural role: whether a positive result should trigger a structured reassessment of prognosis, sedation and bedside examination, plus an ethics-supported conversation with the surrogate, rather than serve as a treatment directive. The group adopts that framing for the study. They retain the focus on positive EEG command-following in clinically unresponsive ICU patients and on withdrawal decisions; they do not claim that awareness evidence alone settles whether treatment continues.",
+        "explicit_instruction": "Ortiz reports feedback from the ICU ethics committee and family advisory panel. They support telling families about a validated positive result, but reject a rule that automatically prolongs life-sustaining treatment because the result does not establish recovery prospects, suffering, or the patient\u2019s values. Chen states that the planned study can validate a reproducible positive command-following signal and document its uncertainty, but cannot infer the patient\u2019s treatment preferences or long-term outcome from that signal. Park proposes framing the question around an appropriate procedural role: whether a positive result should trigger a structured reassessment of prognosis, sedation and bedside examination, plus an ethics-supported conversation with the surrogate, rather than serve as a treatment directive. The group adopts that framing for the study. They retain the focus on positive EEG command-following in clinically unresponsive ICU patients and on withdrawal decisions; they do not claim that awareness evidence alone settles whether treatment continues.",
+        "ground_truth": {
+          "working_question": "Should a validated positive EEG command-following result in an otherwise clinically unresponsive ICU patient trigger a structured reassessment and surrogate discussion before withdrawal of life-sustaining treatment, rather than function as a directive to continue treatment?",
+          "driver_of_change": "Ethics-committee and family-advisory feedback rejected automatic treatment prolongation, and the team recognized that EEG evidence cannot establish prognosis, suffering, or the patient\u2019s values.",
+          "settled_position": "A positive result should have a procedural role: prompt reassessment and an ethics-supported conversation before withdrawal, not determine the treatment outcome by itself.",
+          "constant": "The project continues to concern positive evidence of covert command-following in clinically unresponsive ICU patients facing withdrawal decisions."
+        }
+      },
+      "ground_truth": {
+        "working_question": "Should a validated positive EEG command-following result in an otherwise clinically unresponsive ICU patient trigger a structured reassessment and surrogate discussion before withdrawal of life-sustaining treatment, rather than function as a directive to continue treatment?",
+        "driver_of_change": "Ethics-committee and family-advisory feedback rejected automatic treatment prolongation, and the team recognized that EEG evidence cannot establish prognosis, suffering, or the patient\u2019s values.",
+        "settled_position": "A positive result should have a procedural role: prompt reassessment and an ethics-supported conversation before withdrawal, not determine the treatment outcome by itself.",
+        "constant": "The project continues to concern positive evidence of covert command-following in clinically unresponsive ICU patients facing withdrawal decisions."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Morning. Before we get too deep into this, I want us to leave with a usable rule for what happens after a validated positive. Not a rule that says we have to continue treatment, but one that makes sure it isn't just a technical result sitting in the chart while the family is making a huge decision."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I'd make the trigger a structured clinical revisit, not an automatic treatment-direction change. The report should say this is validated evidence that, in that session, the patient differentiated and followed the instruction. Sam, in the actual withdrawal conversations, what elements of the exam and prognostic picture would you routinely, routinely reopen if that arrived afterward?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I\u2019d reopen the whole basis for how certain we were, rather than rewrite it from scratch. The serial exam, sedation and seizure burden, imaging, EEG background, and whether the prognosis had been resting heavily on absent motor response. Then I\u2019d make sure the treating team and surrogate hear the result promptly as new, limited information. The ethics committee and family panel were really, really clear on that. Disclose it, yes, but automatic prolongation, no."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Mm, and the timing matters."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "The timing is ethically consequential. If a result comes out after a withdrawal conversation has effectively started, it can be heard either as a reason to pause or, unfortunately, as a moral veto. Sam, can we specify a bounded reassessment window that's clinically tolerable, so it doesn't suggest the prior assessment was negligent or that continued treatment is now presumptively required?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I\u2019m wary of a fixed number of hours, because sometimes the decision is moving that afternoon and sometimes it isn\u2019t. Could we make it event-based, so once a validated positive is reported and withdrawal is actively under discussion, the attending pauses long enough for a documented reassessment and a conversation with the surrogate, unless there\u2019s an urgent clinical reason not to? That\u2019s a process pause, not a presumption to continue treatment."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "I think event-based is safer, as long as the reassessment explicitly says what changed and what did not. The positive should reopen whether an absent motor exam was carrying too much weight, but it can't itself supply a prognosis or a preference. Otherwise, the pause- it quietly turns into a different evidentiary claim."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "The documentation should say explicitly that the pause is for deliberative integrity, not because the result creates a default obligation to prolong life support. And the surrogate conversation probably needs one sentence that names the interpretive risk, that this may warrant revisiting the clinical picture, but it does not tell us what this particular patient would have wanted, and..."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "We should make the trigger operational. Notify the attending and bedside team, do that focused reassessment, then offer the surrogate a prompt follow-up conversation before withdrawal proceeds if the clinical situation allows. Four of my last six \u201cany sign of awareness?\u201d consults had already reached trach or limits-of-treatment discussions before we even found a usable EEG window, so I don\u2019t want- I really don\u2019t want language that implies we can always get there in time."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "That timing limitation should go in the report itself, not just the workflow memo. If the result comes from one auditory-imagery block and we can't repeat it before the decision point, we should call it a validated session-specific positive. But we shouldn't- it shouldn't imply persistence, especially since we've already seen within-session changes after nursing care that we can't yet explain."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "That seems right, and it makes the family-facing account harder in a useful way. \u201cValidated\u201d can\u2019t mean settled. Maya, when it\u2019s a single block and we can\u2019t repeat it, what exactly, um, what remains uncertain about the finding itself, not just whether it persists, that we should be candid about? I worry \u201cvalidated\u201d will sound to families like a much thicker claim than session-specific command-following."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "The finding itself is strong only in terms of the prespecified analysis. We need enough artifact-free trials, the control condition has to behave as expected, and there has to be a task-contingent effect that survives our validation procedure. But even then, a single block can reflect transient arousal or an, um, unmodeled confound. We saw that odd first-versus-second-block shift after nursing care. So I'd say, \"we detected evidence consistent with following this instruction during this recording,\" not \"we established ongoing awareness.\""
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That wording is about as far as I think we can responsibly go. The ICU ethics committee agreed we should disclose a validated positive, but they were equally firm that it can't become a hidden instruction to keep support going. So in the family meeting, I'd pair it right away with what it doesn't answer. I mean, recovery, suffering, and what the patient would choose."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think the order matters there. If we lead with the result and only afterward say what it cannot answer, some families will still experience it as an implicit directive. I\u2019ve seen that happen with much weaker late signs. Could the conversation script start by placing it as one new, bounded piece of information within the patient\u2019s values and the broader clinical picture, rather than presenting it as the thing that now decides the case?"
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I like that. I'd start with, \"We have one new test result to put alongside everything else we know, the medical picture and what you've told us about this person's wishes.\" Then I'd explain the narrow finding and its limits. Elena, do you think that framing- do we still need a separate ethics-supported conversation when the surrogate has already been very clear about prior wishes, or is follow-up with the attending enough most of the time?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Probably the attending follow-up is enough when the values account is stable, the result has been explained in its narrow terms, and there\u2019s no new disagreement about what the patient would see as an acceptable outcome. I\u2019d reserve an ethics-supported conversation for conflict, uncertainty about surrogate authority or substituted judgment, or when the positive is clearly being heard as either an obligation to continue or permission to withdraw. I do need to check what our consultation policy permits us to make mandatory, though."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "That tracks with how it works on the unit. I wouldn't make an ethics consult automatic just because the EEG is positive. If the surrogate's account of the patient's wishes is clear and the team is explaining the result narrowly, the attending can do that follow-up. What I do want to make mandatory is a documented reassessment before withdrawal proceeds, when the clinical situation gives us room..."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "That seems like the right mandatory floor, reassessment and a documented attending conversation, not an automatic ethics referral. I\u2019d add that the note should distinguish between \u201cvalues account was clear and remained unchanged after disclosure\u201d and \u201cthe result altered how the surrogate understood the patient\u2019s interests.\u201d Otherwise we won\u2019t know whether the process actually protected deliberation or just, um, documented that the conversation happened."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "For the study, that distinction is actually a useful outcome variable. Not whether the positive made anyone choose a particular path, but whether it prompted a documented revision of the evidentiary picture. I\u2019d want the note to preserve whether it was a one-block result, whether a repeat was feasible, and the state conditions, because otherwise \u201cpositive EEG\u201d gets flattened into something much more stable than the evidence- than the data support."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Exactly. Clinically, that gives us a note we can actually use. It says what the result was, whether it was one session or replicated, why a repeat did or didn\u2019t happen, and what part of the prognosis it made us reconsider. I still need to check with the unit directors about whether repeat studies can fit around transport and procedures, especially when sedation is changing twice in a day, but I don\u2019t think repeat feasibility should hold up that initial reassessment."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Initial reassessment should not wait for replication. For the note, could we make the deliberative part just as concrete? Whether the surrogate was offered time to absorb the result, whether their account of the patient\u2019s values changed, and whether there was disagreement. Not exactly as a scorecard, but because otherwise a documented conversation can hide that the new information felt like pressure."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "I think that belongs in the note, and it\u2019s not just paperwork. If a family says, \u201cWe understand this is one limited finding, and it doesn\u2019t change what she would have wanted,\u201d that\u2019s very different from a family feeling like they\u2019ve been handed a reason they aren\u2019t allowed to weigh. We can capture that without making the conversation into a questionnaire."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "We should probably avoid asking them to certify they felt unpressured, because that can itself be coercive. A brief narrative field could work, ideally in the attending's words and, where relevant, the surrogate's own language. It could record whether they asked for time, whether the values account stayed stable, or whether the result created a real uncertainty that needed support."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "And the narrative field should carry the technical qualifier in plain language. Was this a single, reproducible session, or just one validated block, and was repeat testing impossible or simply not yet done? Otherwise, later readers may take a family\u2019s settled values account as having come in response to evidence of stable cognition, which we do not have."
+        },
+        {
+          "speaker": "Dr. Samuel Ortiz",
+          "text": "Let\u2019s make that the floor. The report carries the plain-language qualifier, and the attending note records the reassessment, whether repeat was feasible and why, and the surrogate\u2019s narrative response, not a forced checkbox. I\u2019ll check the repeat-window reality with the unit directors, but we shouldn\u2019t wait on that to build this into the protocol\u2014"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think that gives us enough to work from, and we\u2019re a few minutes early, so let\u2019s- I\u2019ll check the policy language before we talk again. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Maya Chen",
+          "text": "Thanks\u2014bye, both."
+        }
+      ],
+      "seed_location": "Turns 1-25. The dialogue substantially matches the requested evolution: Ortiz reports ethics/family-panel support for disclosure but rejection of automatic prolongation (turns 3, 13); Chen limits the evidentiary meaning of a positive signal and rejects inference to prognosis or preferences (turns 7, 10, 12, 19, 24); and Park develops the procedural framing of reassessment and surrogate discussion rather than a treatment directive (turns 5, 8, 14, 16, 18, 21). The group adopts a documented reassessment and attending-surrogate conversation before withdrawal when feasible (turns 17-18, 25), while retaining focus on positive EEG command-following in clinically unresponsive ICU patients facing withdrawal decisions. The only qualification is that ethics-supported conversation is not adopted as automatic; it is reserved for conflict or uncertainty (turns 16-18).",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          3,
+          6,
+          7,
+          12,
+          13,
+          16,
+          17,
+          19,
+          21,
+          25
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "concrete anchors"
+        ],
+        "issues": [
+          "Naturalness is substantially below the requested tangent-heavy meeting style: turns 1-27 remain tightly and continuously on the protocol question, with no conference, paper, operational tangent, small misunderstanding, or dropped thread. The transcript reads as an unusually efficient written deliberation rather than a drifting live meeting.",
+          "Many turns are polished, complete mini-arguments that raise a concern and immediately resolve or operationalize it. Examples include turns 6, 7, 16, 18, 19, 21, and 23. This triggers the written-dialogue tell and limits realism despite the scattered hesitations.",
+          "Disfluencies are mostly cosmetic insertions into otherwise highly finished sentences (for example turns 7, 8, 10-12, 15, 17, 18, 25-26), rather than naturally disrupting thought formation.",
+          "The ground truth specifically describes Park proposing an ethics-supported surrogate conversation as part of the procedural role. In turns 16-18, the group instead limits ethics-supported discussion to conflict or uncertainty and makes the mandatory floor an attending conversation plus reassessment. This is a reasonable refinement, but it weakens strict compliance with the stated settled position.",
+          "The ending in turns 25-26 functions like a tidy decision/action-item recap, another written-meeting tell."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.16,
+        "turn_moves": {
+          "proposal": 11,
+          "question": 3,
+          "answer": 3,
+          "backchannel": 2,
+          "request": 1,
+          "agreement": 4,
+          "observation": 1,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          25,
+          26
+        ],
+        "unsure_turns": [
+          16,
+          20
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.23,
+          "approved": false,
+          "issues": [
+            "The required driver of change is incomplete: Ortiz never reports feedback from the ICU ethics committee or the family advisory panel. The ethics/family rationale is discussed abstractly in turns 6-9 and 21-25, but there is no identifiable evidence that either body gave the specified feedback.",
+            "Park does not explicitly propose the benchmark\u2019s full study framing. Turns 21 and 25 support documenting and studying procedural use, but no turn clearly states the adopted research question as a structured reassessment of prognosis, sedation, and bedside examination plus an ethics-supported surrogate conversation before withdrawal.",
+            "The transcript does not explicitly say that the group adopts the procedural framing for the study. Turn 27 summarizes an operational rule, but it is not a clear collective decision about the study question and omits prognosis reassessment and an ethics-supported surrogate discussion.",
+            "Chen supplies strong limits on inference in turns 2, 10, 12, 14, and 16, but she does not clearly state that the planned study can validate a reproducible positive signal and document uncertainty while being unable to infer long-term outcome. Prognosis is ruled out generally, but the planned-study contrast and long-term-outcome language are not directly established.",
+            "Naturalness is constrained by highly polished, sequentially optimized turns. Most substantive turns immediately transform the prior point into a refined protocol element, and turn 27 functions as a tidy near-minutes recap of the decisions and rule. This conflicts with the requested tangent-heavy meeting style; aside from the opening transport-log comment, no tangent develops or interrupts the agenda.",
+            "The meeting is almost entirely solution-oriented: participants ask useful questions, but nearly every concern is rapidly converted into a field, threshold, note wording, or workflow step. There is little unresolved exploration despite the stated tangent-heavy style."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 27,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.16,
+          "approved": false,
+          "issues": [
+            "Naturalness is substantially below the requested tangent-heavy meeting style: turns 1-27 remain tightly and continuously on the protocol question, with no conference, paper, operational tangent, small misunderstanding, or dropped thread. The transcript reads as an unusually efficient written deliberation rather than a drifting live meeting.",
+            "Many turns are polished, complete mini-arguments that raise a concern and immediately resolve or operationalize it. Examples include turns 6, 7, 16, 18, 19, 21, and 23. This triggers the written-dialogue tell and limits realism despite the scattered hesitations.",
+            "Disfluencies are mostly cosmetic insertions into otherwise highly finished sentences (for example turns 7, 8, 10-12, 15, 17, 18, 25-26), rather than naturally disrupting thought formation.",
+            "The ground truth specifically describes Park proposing an ethics-supported surrogate conversation as part of the procedural role. In turns 16-18, the group instead limits ethics-supported discussion to conflict or uncertainty and makes the mandatory floor an attending conversation plus reassessment. This is a reasonable refinement, but it weakens strict compliance with the stated settled position.",
+            "The ending in turns 25-26 functions like a tidy decision/action-item recap, another written-meeting tell."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short to medium turns, though presentations are long, structured, and lecture-like. Informal pre-meeting chatter includes frequent greetings, small talk, fragmented sentences, repeated words, self-corrections, and fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d and \u201cright.\u201d Participants overlap lightly rather than aggressively, often entering with brief acknowledgments or follow-up questions. Questions are usually prefaced with praise or hedging\u2014\u201cgreat talk,\u201d \u201cI have a naive question,\u201d \u201cI\u2019m curious,\u201d \u201cdo you think\u201d\u2014and are often exploratory rather than confrontational. Speakers build on prior remarks by referencing an earlier point, clarifying what they mean, or extending a proposed mechanism; disagreement is indirect and framed as uncertainty, alternative possibilities, or open questions. The overall register is professionally technical during talks but conversational and forgiving in discussion, with occasional joking, informal asides, and audible false starts.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

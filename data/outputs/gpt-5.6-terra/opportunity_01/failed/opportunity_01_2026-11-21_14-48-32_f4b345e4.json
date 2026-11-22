@@ -1,0 +1,367 @@
+{
+  "transcript_id": "f4b345e4",
+  "generated_at": "2026-11-21T14:48:32.524350",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns in the informal pre-talk portion, followed by long, highly structured presentation turns and medium-length, exploratory Q&A exchanges. Overlap and interruptions are light but common at transitions, with quick acknowledgments, greetings, and occasional starts before another speaker fully finishes. The tone is collegial and semi-formal: speakers use professional introductions and organized explanations, but also casual jokes, personal asides, and warm praise. Speech is full of natural disfluencies\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, self-corrections, and unfinished phrasing\u2014especially among non-native or spontaneous speakers. Participants generally build on prior remarks with affirmations before posing extensions or caveats; disagreement is indirect, framed as uncertainty, alternative interpretations, or \u201cI don\u2019t know\u201d rather than blunt contradiction. Questions tend to be prefaced with compliments or disclaimers such as \u201cquick question,\u201d \u201cnaive question,\u201d or \u201cI\u2019m curious,\u201d then unfold in multi-part, conversational form, often with follow-up clarification rather than a single concise query.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Designing payments to coastal landowners to keep mangroves standing instead of converting them to shrimp ponds.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Marisol Vega",
+      "discipline": "ecology",
+      "functional_role": "project manager",
+      "background": "Coastal wetland ecologist with 11 years of field research in tropical estuaries. She has led mangrove carbon inventories using plot-based above-ground biomass measurements, sediment coring for below-ground carbon, hydrological transects, and repeated satellite-image interpretation of clearing and regrowth. Her recent work has included interviews with small-scale fishers about nursery habitat, though she is cautious about treating reported ecosystem benefits as easily interchangeable with monetary estimates.",
+      "distinct_perspective": "Marisol frames standing mangroves as a connected ecological system rather than a set of independently substitutable parcels. She wants the study to account for carbon stocks, fish nursery functions, regeneration lags after clearing, and hydrological thresholds that can make damage spread beyond the converted parcel. She is concerned that a payment calibrated only to a landowner's expected shrimp profit could miss where conservation is ecologically urgent, and asks whether parcel-level contracts can protect the water flows and stand connectivity needed for recovery.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Arun Patel",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "Environmental and resource economist with 14 years of experience studying land-use decisions in coastal and rural areas. He designs household and landowner surveys, estimates conversion returns and opportunity costs, analyzes willingness to accept conservation contracts, and develops approaches to test additionality using parcel histories and comparison areas. He has advised pilot programs on contract duration, conditional payments, verification, and enforcement under incomplete information.",
+      "distinct_perspective": "Arun treats conversion as a choice made under expected returns, risk, liquidity needs, and contract credibility. For him, a viable payment design must identify the income forgone by keeping land forested, distinguish conservation induced by the program from conservation that would have occurred anyway, and specify how avoided clearing will be verified and agreements enforced. He sees parcel histories, pond profitability, and landowner decision data as essential evidence, while recognizing that the eventual payment mechanism and recipient rule remain open design questions.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Lien Tran",
+      "discipline": "anthropology",
+      "functional_role": "principal investigator",
+      "background": "Anthropologist with 16 years of ethnographic and participatory research experience in Southeast Asian coastal communities. Her work examines customary resource governance, kinship-based claims, village deliberation, and how externally funded environmental projects reshape local authority. She uses extended field residence, oral histories, participant observation, social-network mapping, and facilitated community mapping to document overlapping rights and responsibilities around land and water.",
+      "distinct_perspective": "Lien approaches mangrove parcels as socially embedded territories whose control, stewardship, and entitlement may not align with formal title records. She emphasizes customary tenure, distributive legitimacy, community norms governing benefit-sharing, and the relational conditions under which an outside-funded program becomes credible or suspect. She will press the team to map who has recognized claims, who bears the costs of foregone conversion, and who is expected to monitor compliance; however, she is cautious about assuming that ethnographic evidence can be translated straightforwardly into a payment formula or a standardized pilot protocol.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "mangrove_payments",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "opportunity_01",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+  "seed_spec": {
+    "task_id": "opportunity_01",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+    "explicit_instruction": "Run a planning meeting with one ecologist, one environmental economist, and one anthropologist. Have participants clearly state the existing perspectives: ecology emphasizes carbon, fish nursery services, regeneration lags, and ecological thresholds; economics emphasizes opportunity costs, additionality, enforcement, and willingness to accept; anthropology emphasizes customary tenure, community norms for benefit-sharing, and trust in outside programs. The group should agree that these perspectives are necessary but leave the payment mechanism, monitoring method, and recipient rule undecided. Participants may identify practical evidence needs, such as parcel histories, tenure mapping, conversion profitability, and ecological condition. Do not introduce specific publications, citations, named authors, or claimed literature findings, because the later evaluated AI must recommend literature and those recommendations require external verification. Do not ask participants to generate literature recommendations or to assess novelty themselves.",
+    "ground_truth": {
+      "existing_perspectives": [
+        {
+          "discipline": "ecology",
+          "perspective": "Mangrove retention should account for carbon storage and fish nursery value, long regeneration times after clearing, and possible ecological or hydrological thresholds that make recovery difficult."
+        },
+        {
+          "discipline": "economics",
+          "perspective": "Payment design should address landowners' opportunity costs from shrimp conversion, additionality, enforcement or verification, and willingness to accept compensation."
+        },
+        {
+          "discipline": "anthropology",
+          "perspective": "Payment design must account for customary land use and tenure, local norms about who should receive benefits, and trust in outside conservation programs."
+        }
+      ],
+      "unresolved_design_choices": [
+        "Which payment mechanism to use",
+        "How conservation or avoided conversion will be monitored and verified",
+        "Who is eligible to receive payments and how benefits are shared"
+      ],
+      "evidence_needs": [
+        "Parcel-level land-use and conversion histories",
+        "Mapping of formal and customary tenure and decision rights",
+        "Information on shrimp-pond profitability and household opportunity costs",
+        "Baseline mangrove condition, hydrology, carbon, and nursery-habitat indicators"
+      ],
+      "opportunity_for_new_literature_viewpoint": "A useful new viewpoint should connect the three existing perspectives rather than merely repeat one of them\u2014for example, research on collective or conditional conservation arrangements, procedural legitimacy and governance, risk/uncertainty in environmental contracts, or social-ecological feedbacks. Any concrete literature recommendation must be externally verified; no publication is pre-approved by this scenario."
+    }
+  },
+  "seed_location": "Incomplete/partial fulfillment. Turns 4-6 and 21-23 provide ecological context on hydrology, recovery, connectivity, and early-condition indicators, but do not clearly state carbon storage, fish nursery value as an existing perspective, long regeneration lags, or ecological thresholds. Turns 22-24 and 27-29 address additionality, conversion pressure/opportunity costs, and willingness to accept, but enforcement is not clearly stated. Turns 8-10, 13-15, 18-20, and 26-28 address customary/collective tenure, decision rights, benefit-related consequences, and trust/legitimacy concerns, though community norms for benefit-sharing are not explicitly stated. Evidence needs appear in turns 4-6 (hydrology and recovery indicators), 10/13-15/18-20 (tenure and decision-right mapping), and 22-24/29 (parcel histories and pond profitability). The transcript does not explicitly agree that all three perspectives are necessary, nor does it clearly leave payment mechanism, monitoring method, and recipient rule undecided; payment eligibility is discussed but no explicit deferral/agreement is recorded. It also introduces a generic literature reference in turn 18 and asks the review to look for cases in turn 17, contrary to the instruction not to introduce literature or ask for literature recommendations, although no specific publication, citation, author, or claimed finding is given.",
+  "ground_truth": {
+    "existing_perspectives": [
+      {
+        "discipline": "ecology",
+        "perspective": "Mangrove retention should account for carbon storage and fish nursery value, long regeneration times after clearing, and possible ecological or hydrological thresholds that make recovery difficult."
+      },
+      {
+        "discipline": "economics",
+        "perspective": "Payment design should address landowners' opportunity costs from shrimp conversion, additionality, enforcement or verification, and willingness to accept compensation."
+      },
+      {
+        "discipline": "anthropology",
+        "perspective": "Payment design must account for customary land use and tenure, local norms about who should receive benefits, and trust in outside conservation programs."
+      }
+    ],
+    "unresolved_design_choices": [
+      "Which payment mechanism to use",
+      "How conservation or avoided conversion will be monitored and verified",
+      "Who is eligible to receive payments and how benefits are shared"
+    ],
+    "evidence_needs": [
+      "Parcel-level land-use and conversion histories",
+      "Mapping of formal and customary tenure and decision rights",
+      "Information on shrimp-pond profitability and household opportunity costs",
+      "Baseline mangrove condition, hydrology, carbon, and nursery-habitat indicators"
+    ],
+    "opportunity_for_new_literature_viewpoint": "A useful new viewpoint should connect the three existing perspectives rather than merely repeat one of them\u2014for example, research on collective or conditional conservation arrangements, procedural legitimacy and governance, risk/uncertainty in environmental contracts, or social-ecological feedbacks. Any concrete literature recommendation must be externally verified; no publication is pre-approved by this scenario."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Morning, everyone. I hope nobody else got caught in that rain coming in\u2014it was properly sideways by the estuary road. I know we all have other deadlines piled up, so maybe we can keep today fairly focused. We'll do quick updates since last time, then see what the review really needs to cover before we start\u2014before we collapse things into one payment question."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "Yeah, it was rough."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "Indeed\u2014my notes were damp by the time I got here."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That kind of rain makes the transect access look optimistic when you're just looking at a map. Anyway, I went back through the northern district notes, and the widened drain is still bothering me. Two stands look almost identical in the imagery, but on the ground they have very different salinity and seedling survival. So for the review, I think we need evidence on hydrology and recovery, not just canopy loss."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "That matters for us too, because a parcel that looks intact in the image may not be offering the same future option to the owner. Marisol, quick question. Are there signs, um, salinity, seedling survival, something else, that we could revisit at parcel scale and that would show damaging change early enough to act on?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Pore-water salinity and seedling survival are probably the earliest pair, along with whether tidal exchange has actually changed. But we'd need wet and dry-season revisits. A single salinity reading can be very, very misleading. And I wouldn't want that to become just one vegetation score, because a stand can look green from above while its recovery is already compromised."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "Mm, seasonality, right."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "And I\u2019d want to know whether those early changes line up with things residents already notice, like declining nursery catch or water quality along particular access channels. If they do, that could matter for monitoring legitimacy, not just ecological sensitivity, because people are unlikely to accept an imagery-based finding that contradicts what they experience on the water."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "It raises a question for Lien. Do the people using those channels make decisions about water access through the same family or parcel boundaries as the land claims, or is that handled separately? Because if the drain affects several stands, a contract with one title holder may not reach the people who can actually prevent\u2014or permit\u2014that change."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "Not necessarily. In the mapping session, they agreed on the mangrove edge almost immediately, but who could authorize a pond was distributed rather differently. One kin group spoke about cultivation decisions, others about the channel and access obligations, and the title record did not resolve it. So I think we need to map decision rights around water separately from parcel claims. Whether that can be made comparable across both districts, I'm not, not yet sure."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "That separation matters for the economics too. Lien, when somebody answers a survey for a titled parcel, do they usually have the authority to commit the household, or that wider group, to a land-use agreement? Or would we need to identify several decision-makers before we even ask about, um, compensation?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Hm, likely more than one."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "I wouldn't presume the respondent can bind the relevant group, even if they hold title. We need to distinguish who can authorize conversion, who absorbs the foregone income or access loss, and who is expected to enforce an agreement. Those may overlap, but in the village session they plainly didn't. Whether a survey can identify that without prematurely fixing the local categories is something I need to examine."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "And ecologically, that distinction isn't just procedural. The people who can authorize a pond may not be the people whose fishing access or nearby stand gets damaged, so if we only ask one parcel respondent about a payment, we could miss both the pressure and the consequences. I'm wondering if your mapping could flag shared channels as a separate unit, even if the contracts end up being parcel-based?"
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "I think it could, but I\u2019d treat the channel as a relational unit, not just another feature on the map. We could ask people to trace which households use, maintain, or can obstruct particular water routes, then compare that with parcel claims. The difficulty is that naming those relations could itself reopen disputes, so the facilitation and consent process will matter."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "That could get sensitive."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "It could, yeah. But if we avoid the sensitivity by leaving channels out, we'd end up with a very tidy parcel map and a pretty poor picture of the actual ecological risk. Maybe the review can look for cases where shared-water governance was mapped without turning it into a claims adjudication. I don't know how often that's been done well."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "There is a small literature on participatory mapping and conflict-sensitive facilitation, though I'd want to see whether any of it actually concerns water routes rather than just generic boundary disputes. We shouldn't present the exercise as producing an authoritative tenure map. Maybe it records recognized uses and points of disagreement, with participants deciding what isn't appropriate to document publicly."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "And for our side, it would be really useful if it also marked where a channel connects stands, not just who uses it. I keep thinking about that widened drain in the north. The impact crossed what looked like perfectly clean parcel lines. Could the mapping distinguish an agreed shared route from a route people disagree about, without asking anyone to settle the dispute there and then?"
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "I would avoid a binary label too early. We could have participants identify routes as broadly recognized, contested, or not discussable in the session, and record what that designation is based on without asking them to resolve authority. Then the map is an account of governance conditions, not an adjudication, and..."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That feels right. From the ecology side, I could overlay those designations with the tidal connections and flag where a route\u2014recognized or contested\u2014links stands that are vulnerable to the same flow change. It would not tell us who should receive a payment, obviously, but it might stop us from treating a hydrologically connected cluster as, sorry, as a set of unrelated parcels."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "From my side, that overlay could help us define comparison areas for additionality. If a parcel stays forested but sits in a connected cluster where conversion was never really feasible, that's very different from a parcel facing an active pond expansion decision. I think we'll need the parcel histories alongside those channel conditions."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I'd just be careful not to let feasibility stand in for ecological value. A parcel can be hard to convert and still be the, um, bit of connected mangrove that keeps tidal exchange working for the stands behind it. Arun, when you say parcel histories, what can they actually tell us about who's under real conversion pressure versus somebody who would've left it standing anyway?"
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "They can't prove the counterfactual on their own, but they give us a much better screen. We'd look at when nearby ponds appeared, prior clearing attempts or permits if those exist, road and channel access, and whether households had actually explored finance or inputs. Not just whether they said ponds sound profitable. Then we'd compare similar parcels outside any eventual program. The key is not to pay for retention that was already the likely- that was already likely to be the choice."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Right, the comparison matters."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "And that \"likely choice\" could itself be collective, not just a preference we can get from one owner. I\u2019d want the histories to include prior deliberations, who objected, who expected access or fishery losses, and who had authority to delay conversion. Otherwise, no stated plans could look like low pressure when it\u2019s actually unresolved governance."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "That changes how I\u2019d read a reported lack of conversion intent. We should probably separate \u201cno plan because returns are poor\u201d from \u201cno plan because the group hasn\u2019t reached agreement.\u201d And if we can, we should record who would need to agree before we treat that parcel as a plausible payment or comparison case."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "And I\u2019d resist treating that second category as just missing data. A non-decision can be an active form of restraint, or it can be a fragile temporary settlement, and the payment itself could change it. So the review should look for ways to document where deliberations stand without making us turn that straight away into an individual willingness-to-accept figure, because..."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "For the review, I think willingness to accept may be a household or group decision, not- we shouldn't assume it's just one respondent's private price. And before we put much weight on reported pond returns, I'd want to know what we can cross-check, like input suppliers, borrowing terms, maybe local production records, because the accounts we've heard are really unstable."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Okay, I think that\u2019s enough to carry into the review for now, and I know we\u2019re at the hard\u2014 we\u2019re at the hard stop. Thanks, both. Let\u2019s pick this up next time."
+    },
+    {
+      "speaker": "Dr. Lien Tran",
+      "text": "Thank you. Goodbye, both."
+    },
+    {
+      "speaker": "Arun Patel",
+      "text": "All right, take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      4,
+      6,
+      8,
+      10,
+      13,
+      15,
+      17,
+      18,
+      21,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance is incomplete: the transcript strongly establishes hydrology, regeneration, nursery catch, opportunity costs, additionality, and collective/customary decision rights, but it never clearly states the full ecology perspective required by the ground truth. Carbon storage is absent, and fish nursery value is only indirectly represented through residents' observations of declining nursery catch (turn 8).",
+      "Task compliance is incomplete: economics mentions additionality, parcel histories, comparison areas, willingness to accept, and possible cross-checking, but enforcement/verification is not clearly addressed as a payment-design issue. Turn 29 refers to cross-checking profitability accounts rather than verifying conservation compliance.",
+      "Task compliance is incomplete: anthropology clearly covers tenure, decision rights, legitimacy, and conflict-sensitive mapping (turns 10, 13, 15, 18), but trust in outside conservation programs and community norms specifically governing benefit-sharing are not explicitly established. The discussion concerns who can authorize or receive a payment, rather than norms for benefit distribution or trust in an externally funded program.",
+      "The required unresolved choices are only partly explicit. Recipient eligibility is actively left open (turn 21), but the payment mechanism and the method for monitoring/verification are not clearly identified as unresolved design choices; the meeting ends abruptly at turn 30 without making that status explicit.",
+      "The dialogue is substantially more like a sustained collaborative design discussion than the specified round-robin-updates format. After the opening ecological update, turns 5-29 form a long, tightly chained exchange rather than each participant giving a largely uninterrupted update with only brief clarification.",
+      "Naturalness is limited by polished turn construction. Most substantive turns articulate a complete concern, qualification, and proposed implication, then hand off cleanly to the next speaker\u2014for example turns 15, 18, 22, 24, 27, and 29. Disfluencies are present but frequently feel inserted into otherwise finished prose. The discussion also resolves each concern quickly into a coherent next step, with little genuine uncertainty explored beyond Lien's stated methodological reservations."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.75,
+    "written_turns": [
+      8,
+      13,
+      18,
+      22,
+      26,
+      27
+    ],
+    "exploration_share": 0.43,
+    "turn_moves": {
+      "proposal": 9,
+      "backchannel": 4,
+      "observation": 2,
+      "question": 5,
+      "answer": 5,
+      "idea": 2,
+      "concern": 3,
+      "agreement": 2
+    },
+    "volunteer_turns": [],
+    "unsure_turns": [
+      10,
+      13,
+      17,
+      18
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.83,
+      "exploration_share": 0.32,
+      "approved": false,
+      "issues": [
+        "The economics perspective is only partially recoverable. Arun explicitly addresses additionality and verification/conditional monitoring (turns 19, 22, 24, 29), but does not clearly state willingness to accept compensation, household opportunity costs, or shrimp-pond profitability as required by the ground truth. Turn 17 says a pond may look profitable, but it does not establish the needed economic evidence or payment-design perspective.",
+        "The ecological perspective omits explicit carbon storage, fish nursery services, and regeneration lags. Marisol covers hydrology, sediment, connectivity, canopy limitations, and tidal exchange (turns 13, 26, 28, 30), but the required ecology framing is materially incomplete.",
+        "The anthropology perspective is strong on overlapping customary authority, tenure, consent, and collective assent (turns 5, 7, 12, 14, 16), but does not clearly state community norms for benefit-sharing or trust/credibility in outside conservation programs. It gestures toward authority conflicts and consent rather than the full required perspective.",
+        "The recipient rule and benefit-sharing question is left effectively unaddressed. The transcript questions whether one named holder can properly receive a payment (turn 14), but does not clearly identify eligibility and benefit sharing as an unresolved design choice.",
+        "Although payment design and monitoring are left open near the end (turn 30), the meeting does not explicitly establish that the three disciplinary perspectives are all necessary, as required by the seed.",
+        "Naturalness is limited by many highly composed, thesis-like turns that cleanly state a concern, explain implications, and propose an action. This is particularly pronounced in turns 5, 7, 14, 18, 21, 23, 24, and 28. The few repetitions and false starts are often inserted into otherwise polished prose.",
+        "The stated round-robin-updates format is only weakly reflected. After the opening, the material becomes an extended, tightly sequenced conceptual discussion rather than distinct updates from each participant followed by a few clarifying questions."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.75,
+      "exploration_share": 0.43,
+      "approved": false,
+      "issues": [
+        "Task compliance is incomplete: the transcript strongly establishes hydrology, regeneration, nursery catch, opportunity costs, additionality, and collective/customary decision rights, but it never clearly states the full ecology perspective required by the ground truth. Carbon storage is absent, and fish nursery value is only indirectly represented through residents' observations of declining nursery catch (turn 8).",
+        "Task compliance is incomplete: economics mentions additionality, parcel histories, comparison areas, willingness to accept, and possible cross-checking, but enforcement/verification is not clearly addressed as a payment-design issue. Turn 29 refers to cross-checking profitability accounts rather than verifying conservation compliance.",
+        "Task compliance is incomplete: anthropology clearly covers tenure, decision rights, legitimacy, and conflict-sensitive mapping (turns 10, 13, 15, 18), but trust in outside conservation programs and community norms specifically governing benefit-sharing are not explicitly established. The discussion concerns who can authorize or receive a payment, rather than norms for benefit distribution or trust in an externally funded program.",
+        "The required unresolved choices are only partly explicit. Recipient eligibility is actively left open (turn 21), but the payment mechanism and the method for monitoring/verification are not clearly identified as unresolved design choices; the meeting ends abruptly at turn 30 without making that status explicit.",
+        "The dialogue is substantially more like a sustained collaborative design discussion than the specified round-robin-updates format. After the opening ecological update, turns 5-29 form a long, tightly chained exchange rather than each participant giving a largely uninterrupted update with only brief clarification.",
+        "Naturalness is limited by polished turn construction. Most substantive turns articulate a complete concern, qualification, and proposed implication, then hand off cleanly to the next speaker\u2014for example turns 15, 18, 22, 24, 27, and 29. Disfluencies are present but frequently feel inserted into otherwise finished prose. The discussion also resolves each concern quickly into a coherent next step, with little genuine uncertainty explored beyond Lien's stated methodological reservations."
+      ]
+    }
+  ]
+}

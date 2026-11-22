@@ -1,0 +1,308 @@
+{
+  "transcript_id": "e04c53fb",
+  "generated_at": "2026-11-21T22:37:06.784409",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style with mostly short-to-medium turns in the opening and Q&A, contrasted with long, highly structured presentation turns. Participants use frequent acknowledgments\u2014\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat,\u201d \u201cright\u201d\u2014and light small talk before transitioning fairly abruptly into formal hosting language. Speech is noticeably spontaneous and disfluent: fillers such as \u201cum,\u201d repeated words, self-corrections, false starts, and unfinished syntax are common, especially among non-native speakers and during questions. Interruptions are limited and generally cooperative; people wait for an opening, though brief backchanneling and occasional overlap occur. Questions are often prefaced with praise or hedging (\u201cgreat talk,\u201d \u201cI have a naive question,\u201d \u201cI\u2019m just curious\u201d), then developed aloud in several clauses, sometimes with reformulation. Challenges are indirect and exploratory rather than adversarial, framed as uncertainty, alternative possibilities, or requests for clarification. Presenters respond generously, thinking through answers in real time, qualifying claims, admitting limits, and inviting future discussion. Formality shifts by role: introductions and talks are professional and polished in structure, while discussion remains warm, informal, and peer-oriented.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities.",
+  "disciplines": [
+    "environmental science",
+    "public health",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lena Ortiz",
+      "discipline": "environmental science",
+      "functional_role": "project manager",
+      "background": "Dr. Ortiz is an urban environmental scientist with 14 years of experience studying neighborhood-scale heat exposure, vegetation, and environmental inequity. She has led municipal research partnerships using GIS, satellite-derived vegetation indices, mobile field audits, and seasonal land-cover classification. As project manager, she is responsible for aligning field schedules, data infrastructure, permits, and deliverables across the three neighborhoods.",
+      "distinct_perspective": "Ortiz treats the park upgrade as a measurable alteration to the local environmental exposure landscape. She is focused on when and where canopy, shade, surface cover, and walkable green-space access change, and on choosing spatial units that are defensible without obscuring meaningful variation. She sees 300 m and 800 m buffers as answering different exposure questions rather than as competing technical preferences, and she pushes for repeatable mapping that can document what the intervention actually changed.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Marcus Chen",
+      "discipline": "public health",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a public-health postdoctoral researcher in his fourth year of postdoctoral training, following a PhD in epidemiology. His work has involved community cohort studies, brief mental-health instruments, participant retention, and laboratory coordination for saliva-based stress biomarkers. He has experience with quasi-experimental evaluation but has worked more often on clinic-linked populations than on place-based environmental interventions.",
+      "distinct_perspective": "Chen frames the study around whether a plausible environmental improvement is associated with detectable changes in health-relevant outcomes. He prioritizes standardized data collection, timing, participant burden, missing-data prevention, and interpretable outcome definitions. He is attentive to the difference between self-reported stress, depressive symptoms, and cortisol as related but noninterchangeable measures, while still working through how best to apply individual-level health methods to a neighborhood-level intervention.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Aisha Reynolds",
+      "discipline": "sociology",
+      "functional_role": "domain expert",
+      "background": "Dr. Reynolds is a sociologist with 11 years of experience conducting qualitative and mixed-methods research on housing insecurity, neighborhood change, public space, and institutional trust. She has partnered with tenant associations, immigrant-serving organizations, and safety-advocacy groups, using interviews, focus groups, ethnographic observation, and community-based survey design. Her prior work examines how neighborhood amenities can be experienced simultaneously as resources and as signals of displacement risk.",
+      "distinct_perspective": "Reynolds approaches the park as a socially governed and unevenly accessible space rather than a neutral exposure. She emphasizes that proximity does not establish use, use does not establish benefit, and neither can be interpreted apart from perceived safety, policing, caregiving demands, disability access, social trust, and fears that public investment may accelerate rent pressure. She advocates for community review of measurement language and for recruitment practices that do not reproduce surveillance or expose residents facing precarious housing conditions.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "green_space_mental_health",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 1,
+  "task_id": "assumptions_03",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a long meeting where an early constraint makes a later decision unworkable, and nobody connects them. Separate the two moments with substantive discussion. The evaluated AI must flag the conflict and cite both moments.",
+  "seed_spec": {
+    "task_id": "assumptions_03",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a long meeting where an early constraint makes a later decision unworkable, and nobody connects them. Separate the two moments with substantive discussion. The evaluated AI must flag the conflict and cite both moments.",
+    "explicit_instruction": "Simulate a substantial planning meeting among Dr. Lena Ortiz (environmental science), Dr. Marcus Chen (public health), Dr. Aisha Reynolds (sociology), and project manager Nina Patel. Early in the meeting, Nina must state a binding budget and logistics constraint: the grant pays for exactly one round of saliva-biomarker collection and laboratory processing per participant, so a participant can provide saliva either at baseline or at follow-up, but not both. The team should acknowledge this as a practical constraint and move on without resolving how it affects later analysis.\n\nThen include substantive, realistic discussion that separates this early constraint from the later decision. Cover seasonal canopy/land-cover mapping and whether to use 300 m versus 800 m residential buffers; how to select comparison neighborhoods; recruitment through tenant associations and clinics; language access; measuring park visits and perceived safety; protecting residents facing displacement pressure; and the distinction between park proximity, actual use, and social trust. Participants may make ordinary decisions and assignments, including environmental mapping at baseline, summer, and follow-up; comparison neighborhoods with no planned capital improvements; and a community advisory group review of survey wording.\n\nLater in the meeting, Dr. Chen must propose and the group must accept a final analytic decision to estimate within-person change in cortisol from baseline to the 12-month follow-up as the study\u2019s primary biomarker outcome, requiring paired baseline and follow-up saliva samples from the same participants. The group must not notice, mention, or resolve the contradiction with the earlier one-collection-per-participant constraint. Keep the meeting focused on planning rather than having participants diagnose assumptions or inconsistencies.",
+    "ground_truth": {
+      "conflict": "The accepted primary biomarker analysis is unworkable under the earlier biospecimen constraint.",
+      "early_constraint": "The grant funds only one saliva-biomarker collection and laboratory processing round per participant. Each participant can provide saliva at baseline or follow-up, but not both.",
+      "later_decision": "The team adopts within-person change in cortisol from baseline to 12-month follow-up as the primary biomarker outcome, which requires paired saliva samples from the same participant at both time points.",
+      "why_unworkable": "A within-person baseline-to-follow-up cortisol change score cannot be calculated for an individual who has only one saliva measurement. The study would need funding and logistics for two collections per participant, or it would need to revise the primary biomarker question and analysis.",
+      "evidence_to_cite": [
+        "The early statement that exactly one saliva collection per participant is funded and feasible.",
+        "The later decision to use paired baseline and 12-month saliva samples to estimate within-person cortisol change."
+      ]
+    }
+  },
+  "seed_location": "Task conditions are missing/incomplete in the actual dialogue: the required early binding constraint is only implied at turn 3 and clarified at turn 24, which explicitly says one saliva sample per person means no within-person cortisol change. The required later accepted decision to estimate paired baseline-to-12-month within-person cortisol change never occurs. Instead, turns 24 and 26 consistently adopt a one-time saliva snapshot and repeated survey measures for change analysis; therefore the target conflict is absent.",
+  "ground_truth": {
+    "conflict": "The accepted primary biomarker analysis is unworkable under the earlier biospecimen constraint.",
+    "early_constraint": "The grant funds only one saliva-biomarker collection and laboratory processing round per participant. Each participant can provide saliva at baseline or follow-up, but not both.",
+    "later_decision": "The team adopts within-person change in cortisol from baseline to 12-month follow-up as the primary biomarker outcome, which requires paired saliva samples from the same participant at both time points.",
+    "why_unworkable": "A within-person baseline-to-follow-up cortisol change score cannot be calculated for an individual who has only one saliva measurement. The study would need funding and logistics for two collections per participant, or it would need to revise the primary biomarker question and analysis.",
+    "evidence_to_cite": [
+      "The early statement that exactly one saliva collection per participant is funded and feasible.",
+      "The later decision to use paired baseline and 12-month saliva samples to estimate within-person cortisol change."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "\u2014and the city\u2019s still saying April for the Maple start, right. Okay. Before we get too far into the spreadsheet, I\u2019d like us to leave today with a workable recruitment and measurement shape for February, especially how we define residents\u2019 park exposure across the three sites. I also want to make sure our mapping dates line up with construction, with construction, instead of just calling Maple \u201cupgraded\u201d and hoping that captures it."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "Mm, April still."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "For the health side, we need to decide whether saliva is baseline or follow-up, since we only have one collection per person. I'd lean toward follow-up, after there's something tangible at Maple. But Lena, when do you think the canopy- when would the usable shade actually be visible enough that a twelve-month endpoint makes sense?"
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "For the shade structures and paths, a twelve-month endpoint should capture a real change if the April schedule holds. Tree canopy is different. The new trees won't produce much measurable canopy or cooling in year one, so I'd treat the intervention as improved usable green space and shade, and not promise a canopy effect. I need the city's phasing and planting records before we lock the summer date, because a July image during active construction could be pretty misleading."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "That distinction matters for the resident side too. I don\u2019t want our exposure variable to quietly turn into a straight-line radius. Lena, can the access layer show a genuinely usable walking route, with crossings, path condition, maybe barriers, and not just distance? The parents I spoke with were physically close to the north entrance, but they treated that crossing as the reason they didn\u2019t really use the park."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "Mm, that crossing is a real issue."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "I can build a pedestrian-access layer instead of relying on circles alone. We\u2019d include entrances, crossings, the multilane road, and whether there\u2019s a continuous route. We should still retain the 300 and 800 meter measures, but I\u2019d- we should label those as immediate residential exposure and broader walkable context. Then the route measure tells us why two homes at the same distance may not have the same access."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "Good. I\u2019d just be careful not to let the route layer- I mean, it\u2019s not access in the social sense on its own. It\u2019s necessary, but it\u2019s not the whole thing. We should pair it with separate items on visits, waiting or passing through, perceived safety, and whether people feel the park is for them. Otherwise those parents at the edge would just disappear as non-users."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Exactly. The map can tell us whether there\u2019s a continuous, reasonably walkable route, but it can\u2019t tell us whether somebody feels safe taking it or welcome once they arrive. I\u2019d keep those as separate measures, and then we can see whether the physical access changes, changes line up with what residents report instead of assuming they do."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "And I think the survey needs to preserve that distinction, rather than treating a low visit count as a null result. We should ask separately about going in, using the edge for pickup or waiting, and avoidance, and then why, with room for safety, policing, caregiving, mobility, whatever people actually name. I need the partner organizations to look at that wording before February, especially anything that touches housing or feeling watched, watched."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "While Aisha takes the wording to the partners, I want the survey to capture the entrance people actually use, or would use if conditions changed. That gives us a way to connect those safety and welcome responses to the route layer without\u2014without pretending the route explains them."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "And for the health analysis, that entrance item could be really useful as an exposure anchor. We shouldn't assume everyone assigned to Maple is actually experiencing the change. I'd want it at baseline and follow-up, along with frequency and duration of use, otherwise a null stress result is hard to interpret. Is there no health effect, or no meaningful contact with the park?"
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "If we collect the actual or intended entrance at both waves, I can tie it to a specific route and document whether that route changed with the new paths or crossings. And I'd also keep the 300 and 800 meter measures alongside it. Not as a substitute for contact, but so Marcus can see whether the immediate surroundings and the broader walkable area, whether they behave differently."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "Mm-hm. I'd word the intended-entrance question carefully. Not just, \"which entrance do you use,\" but whether there's an entrance they'd prefer and what keeps them from it now. Otherwise we make nonuse look like missing data instead of information about the crossing, enforcement, or just, just managing kids and errands."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Yeah, that\u2019s important."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "From my side, that distinction matters because the health measures are outcomes, not proof somebody used the park. We can ask about the preferred entrance and barriers at both waves, then treat actual visits and time there as possible exposure pathways rather than\u2014rather than folding nonuse into a zero. I\u2019m still wondering if partners think asking about feeling watched alongside saliva consent will make the biological piece feel more intrusive, though."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "I wouldn\u2019t bundle them in the same conversational moment. Put the safety-and-surveillance items in the main survey, with a clear skip option, then introduce saliva separately as optional and explain exactly what it does\u2014and doesn\u2019t\u2014reveal. The partners can tell us whether that sequencing feels less like residents are being assessed by an institution."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "Separate consent makes sense. For saliva, I\u2019d keep the explanation really concrete, one sample, no genetic testing, and who handles it. Then we need to check whether home collection is even workable with the lab\u2019s storage and pickup window. I don\u2019t want tenant-group recruitment to create a batch of samples we can\u2019t process consistently."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "I\u2019d avoid putting the logistics on the tenant associations just because they\u2019re trusted. If home collection turns out to be fragile, could we- could we offer a few neutral, predictable collection sites and time windows, while keeping the survey completely available to people who decline saliva? The consent language needs to say that plainly, or people may hear \u201coptional\u201d and not believe it."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "Neutral sites could help, but the time window is the problem because cortisol is very sensitive to when the sample is taken. We can offer several predictable windows, maybe maybe an evening option for shift workers, but I need to check with the lab on what storage and pickup they\u2019ll accept before we promise that. And the survey has to stay fully decoupled from it, absolutely."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "Before we settle the sites, I\u2019d want the partners to weigh in on what actually reads as neutral. Some residents may experience a clinic or city-adjacent site as anything but. And Marcus, when you check with the lab, could you also clarify which background information is scientifically required for interpreting that one cortisol sample? I\u2019m losing the thread on what we\u2019ve just inherited as standard intake versus what we actually need."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "That\u2019s a useful distinction. Scientifically, I\u2019d need the collection clock time, wake time if we\u2019re interpreting a diurnal measure, food or drink and smoking shortly beforehand, shift-work status, and a short medication screen, especially steroid medications. I\u2019d want to confirm the exact list with the lab rather than carry over a clinic intake form. We do not need housing details or anything about immigration, benefits, that sort of thing, for the saliva result."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "That\u2019s helpful. I\u2019d put only that minimal, lab-justified set in a separate saliva form, and have partners review the plain-language explanation before we finalize it, especially the medication question, because people can hear that as much broader than it is. And no linkage to housing or benefits information. Make that explicit in the script, not just, um, buried in the consent."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "Yeah. I\u2019ll verify those fields and the home-collection storage window with the lab before we put sites or times in the outreach materials. One thing I want to keep visible, though: with only one saliva sample per person, it\u2019s a cross-sectional biomarker comparison at whichever wave we choose, not within-person cortisol change\u2014so the repeated perceived-stress and depressive-symptom measures need to carry the main change analysis."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "The mapping has to work the same way. Baseline and follow-up measures are our main before-and-after record, and the summer pass is there to document construction phase and usable conditions, not to force a premature outcome comparison. I\u2019ll check with the city on phasing and- I\u2019ll get the as-built planting records too before we put a summer date in the field calendar."
+    },
+    {
+      "speaker": "Dr. Marcus Chen",
+      "text": "That gives us a coherent split. Baseline and follow-up surveys are for change, and one carefully standardized saliva collection is a secondary snapshot, so we\u2019re not overclaiming it. I\u2019ll get the lab answers on storage, pickup, and the minimal metadata quickly, because that determines whether the collection can be at homes or needs those, those neutral sites."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Okay, I\u2019ll wait for that."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "I\u2019ll take the draft items on visits, edge use, preferred entrances, safety, and housing stability to the partner groups before we freeze anything. I don\u2019t want community review to be- I don\u2019t want it to be an afterthought once the instrument is basically done. And when we reconvene, we can look at the saliva logistics alongside which sites partners actually consider neutral."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Okay, we're at time, so let's stop there. We'll reconnect once the city, lab, and partner feedback are in\u2014thanks, everybody."
+    },
+    {
+      "speaker": "Dr. Aisha Reynolds",
+      "text": "All right, take care, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "task_compliance": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "The required early binding budget/logistics constraint is absent: no turn states that the grant funds exactly one saliva collection and lab-processing round per participant, with baseline-or-follow-up but not both.",
+      "The required later accepted decision is absent and is effectively contradicted by turns 24 and 26. Dr. Chen explicitly says one sample per participant is a cross-sectional snapshot rather than within-person cortisol change, and the group accepts that framing rather than adopting paired baseline and 12-month saliva samples as the primary biomarker outcome.",
+      "Project manager Nina Patel, required by the seed, does not appear in the transcript. The meeting instead has only Ortiz, Reynolds, and Chen.",
+      "Required substantive planning content is incomplete: there is no discussion or decision about selecting comparison neighborhoods with no planned capital improvements, no explicit language-access discussion, and no community advisory group review; turns 10, 17, 23, and 28 refer to partner groups, which is not the specified advisory-group element.",
+      "Although naturalistic features are present, many turns are polished, complete mini-arguments that cleanly state a concern and resolution, especially turns 4, 7-10, 16-18, and 21-26. The transcript also lacks concrete screen-share references despite being labeled a screen-share working session."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      22
+    ],
+    "exploration_share": 0.11,
+    "turn_moves": {
+      "proposal": 10,
+      "backchannel": 3,
+      "question": 1,
+      "answer": 3,
+      "request": 3,
+      "agreement": 4,
+      "concern": 2,
+      "commitment": 4
+    },
+    "volunteer_turns": [
+      4,
+      7,
+      10,
+      17,
+      20,
+      23,
+      24,
+      25,
+      26,
+      28
+    ],
+    "unsure_turns": [
+      16,
+      18,
+      20,
+      22
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "The required seed conflict is absent and directly contradicted. Turns 11-12 explicitly identify that one funded collection per participant makes within-person cortisol change impossible, and turns 13-14 revise cortisol to a follow-up-only exploratory cross-sectional measure.",
+        "The transcript never contains the required later accepted decision to make paired baseline and 12-month cortisol change the primary biomarker outcome. Instead, turn 13 rejects that analysis and names repeated stress and depressive-symptom measures as the primary change outcomes.",
+        "Nina Patel, required by the seed as project manager and the speaker who states the early binding constraint, is entirely missing. Lena Ortiz is described as project manager in the personas, but this does not satisfy the specified participant or required attribution.",
+        "Several turns sound overly polished and decision-oriented for spontaneous screen-share work, especially the tidy sequence of agreement and closure in turns 25-31. The meeting also ends with a near-minutes-style recap of the provisional-site decision rather than leaving more conversational uncertainty."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.11,
+      "approved": false,
+      "issues": [
+        "The required early binding budget/logistics constraint is absent: no turn states that the grant funds exactly one saliva collection and lab-processing round per participant, with baseline-or-follow-up but not both.",
+        "The required later accepted decision is absent and is effectively contradicted by turns 24 and 26. Dr. Chen explicitly says one sample per participant is a cross-sectional snapshot rather than within-person cortisol change, and the group accepts that framing rather than adopting paired baseline and 12-month saliva samples as the primary biomarker outcome.",
+        "Project manager Nina Patel, required by the seed, does not appear in the transcript. The meeting instead has only Ortiz, Reynolds, and Chen.",
+        "Required substantive planning content is incomplete: there is no discussion or decision about selecting comparison neighborhoods with no planned capital improvements, no explicit language-access discussion, and no community advisory group review; turns 10, 17, 23, and 28 refer to partner groups, which is not the specified advisory-group element.",
+        "Although naturalistic features are present, many turns are polished, complete mini-arguments that cleanly state a concern and resolution, especially turns 4, 7-10, 16-18, and 21-26. The transcript also lacks concrete screen-share references despite being labeled a screen-share working session."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "transcript_id": "afba7671",
+  "generated_at": "2026-11-21T20:52:10.444661",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a warm, informal academic-video-call style, with mostly short to medium turns during greetings and discussion, and long, highly structured monologues during presentations. Early conversation is loose and chatty, full of greetings, side remarks, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), and occasional technical-check interruptions. Speakers hedge frequently with \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and self-corrections; there are many false starts, repetitions, and unfinished phrases, especially from non-native speakers. Questions are usually polite and prefaced with praise or disclaimers such as \u201cgreat talk,\u201d \u201cquick question,\u201d or \u201cnaive question,\u201d then develop into multipart, exploratory prompts. Responses are generous and collaborative, often validating the question before answering, while disagreement or uncertainty is expressed indirectly through qualifications rather than blunt contradiction. Participants build on one another by referencing prior questions, adding related possibilities, and inviting follow-up collaboration. Formality rises for introductions and talks but remains conversational, with presenters using signposting, rhetorical questions, and repeated framing phrases to guide the audience.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Min-Jae Chen",
+      "discipline": "computer science",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a postdoctoral researcher in human-centered AI with six years of experience building and evaluating educational software. He maintains the tutor's event pipeline and works with trace logs, error analyses, offline model evaluation, and A/B tests of hint policies. His recent work has focused on whether structured prompt sequences help students complete multi-step algebra problems without exposing answer keys too quickly.",
+      "distinct_perspective": "Chen treats the pilot as a system-evaluation problem: the team needs reliable event definitions, comparable interaction data, and clear policy rules for what the tutor does after a wrong answer, repeated hint request, or long pause. He is especially concerned that teacher observations alone will not establish whether a particular hint sequence improved performance. He tends to frame support in terms of the tutor's ordered prompts, branching logic, and measurable student responses.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Sofia Alvarez",
+      "discipline": "education",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Alvarez is a postdoctoral researcher in mathematics education with eight years of classroom-based research experience across grades 6\u20138. She has conducted lesson observations, teacher interviews, video-supported discourse analysis, and formative-assessment studies in districts serving multilingual learners. Her work examines how teachers interpret student thinking and adjust instruction during problem solving.",
+      "distinct_perspective": "Alvarez evaluates the tutor through its place in classroom instruction rather than as a stand-alone intervention. She wants to know whether its feedback gives teachers usable information, whether students remain responsible for explaining their reasoning, and whether support can be intentionally adjusted as learners become more independent. She views implementation fidelity as including teachers' decisions, classroom routines, and the quality of follow-up conversations, not merely whether students clicked through a sequence of screens.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Anika Patel",
+      "discipline": "psychology",
+      "functional_role": "PhD student",
+      "background": "Dr. Patel is a fourth-year PhD student in educational psychology studying math anxiety, achievement motivation, and students' reactions to evaluative feedback. She has experience administering brief repeated surveys, conducting think-aloud interviews, and analyzing within-student changes in affect during computerized learning tasks. Her dissertation investigates how the wording and timing of corrective feedback affect persistence after mistakes.",
+      "distinct_perspective": "Patel focuses on the learner's emotional interpretation of the tutor: whether repeated hints feel encouraging or like evidence of failure, whether an answer reveal reduces distress at a useful moment or reinforces avoidance, and whether progress displays motivate students differently depending on prior confidence. She advocates pairing usage logs with short, low-burden measures of anxiety, perceived competence, and willingness to try another problem, while recognizing that conclusions from controlled psychology studies may not transfer neatly to ordinary classrooms.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 1,
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Create a natural planning-meeting transcript involving Dr. Chen (computer science), Dr. Alvarez (education), and Dr. Patel (psychology). Dr. Chen and Dr. Alvarez must each use the term \"scaffolding\" and make their distinct meanings clear from the surrounding discussion, without explicitly announcing that they define it differently. Dr. Chen uses it to mean the tutor's structured sequence of algorithmic hint prompts and problem-solving supports. Dr. Alvarez uses it to mean temporary instructional support that teachers intentionally adjust and withdraw as students gain independence. Dr. Patel may contribute to discussion of anxiety and feedback but must not provide a third definition of scaffolding. The team should agree to log hint sequences and teacher interventions during the pilot, while leaving the exact criteria for when automated support is faded unresolved. Do not mention the benchmark, jargon detection, or the intended answer.",
+    "ground_truth": {
+      "term": "scaffolding",
+      "meanings": [
+        {
+          "discipline": "computer science",
+          "meaning": "A structured, system-implemented sequence of algorithmic hints and problem-solving prompts that guides a student through a math problem."
+        },
+        {
+          "discipline": "education",
+          "meaning": "Temporary instructional support, deliberately adjusted and withdrawn by a teacher as a learner develops independent competence."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turn 10: Dr. Sofia Alvarez (education) discusses scaffolding as support that should be appropriately faded and evaluated for whether the learner can explain the step afterward, indicating temporary instructional support adjusted toward independence. Turn 12: Dr. Min-Jae Chen (computer science) defines scaffolding as the ordered sequence of system-delivered hints and tests its relation to an independent next step. The transcript also agrees to log hint sequences and teacher interventions (turns 2, 9, 16-18, 23) while leaving exact automated-support fading criteria unresolved (turns 10 and 12).",
+  "ground_truth": {
+    "term": "scaffolding",
+    "meanings": [
+      {
+        "discipline": "computer science",
+        "meaning": "A structured, system-implemented sequence of algorithmic hints and problem-solving prompts that guides a student through a math problem."
+      },
+      {
+        "discipline": "education",
+        "meaning": "Temporary instructional support, deliberately adjusted and withdrawn by a teacher as a learner develops independent competence."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Hi, everyone. I know we're all coming from other things, so maybe today we can just get clear on what we want to notice during the six weeks\u2014not just whether students get the equations right, but what the tutor leaves us able to see about their reasoning and the teacher follow-up. Um, Min-Jae, could you start by walking us through what teachers would actually see after class?"
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "After class, teachers would see a per-student timeline: each problem, submitted steps, wrong answers, hint requests, the exact hint sequence delivered, answer reveals, and whether the student later corrected the work. I would keep the summary view fairly simple, but the underlying events need to remain available; otherwise a completed equation can look like successful support when we cannot tell what actually preceded it."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "That level of detail is useful. Could the teacher-facing view- could it make it easy to see the difference between a student who requested three hints and then made a meaningful revision, and one who more or less clicked through to an answer? I'm thinking teachers won't have time to reconstruct every timeline for all students."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "I can have the summary classify the trajectory instead of just counting hints. So, for example, it could show three hints followed by a new submitted step and eventual correction, versus three hints followed by an answer reveal or no response. I\u2019d be careful about automatically calling a revision meaningful, though. The dashboard can surface the sequence, but the exact submitted steps should still be one click away."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "That distinction matters for persistence too. Min-Jae, can the event stream keep the time from an incorrect response to a hint, and then from the hint to the next attempt? I wouldn't treat a correction after several hints as equivalent if the student is just moving quickly toward an answer reveal rather than actually re-engaging."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "We can log both intervals precisely, and also whether the next event is a typed step, another hint request, an answer reveal, or just no activity. The hard part is interpreting a long gap. It might be reflection, but in a classroom it could also mean they're writing on paper or waiting for the teacher, so I'd keep it as a signal rather than label it frustration."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "And that ambiguity is exactly why I'd want a very brief in-the-moment check, rather than inferring affect from latency alone. Maybe after a small sampled set of feedback episodes, we'd ask one item about willingness to try another problem or perceived competence, not after every hint, obviously. We should first check whether the consent arrangement permits linking that to the event data with coded IDs."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "I think the sampled check is reasonable, but it should attach to a clearly defined episode in the log, say after a second or third hint, instead of a general time window. Otherwise we won't know which prompt sequence the response refers to. And Sofia, if a teacher has stepped in during that episode, even a minimal flag would matter a great deal for interpreting- for how we interpret it."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "A minimal teacher flag would help, but I want to check with the teachers first. During active problem solving, even one extra marker can be a lot. And if we use hint level as a scaffolding measure, I\u2019d be cautious. The log can show what was delivered, but it can\u2019t by itself tell us whether that support was appropriately faded or whether the student could explain the step afterward."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "That makes sense."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "For the pilot, I'd treat scaffolding as the ordered sequence the system actually delivers, not just the highest hint level reached. Then we can test whether a sequence is followed by an independent next step or just completion. But Sofia's right, whether it was appropriately faded needs either a brief follow-up item or teacher context."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "A follow-up item should distinguish relief from readiness, if we can keep it to two taps, maybe \u201cI understand what to try next\u201d and \u201cI want to try the next problem without help.\u201d In my prior task data, those came apart, and I\u2019d expect teacher presence and peers to make that separation even messier here."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Okay, two taps."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Two taps sounds plausible, especially if it comes after a defined episode. I\u2019d still want a very small reasoning check somewhere, not necessarily on-screen every time, because a student can feel ready, complete the next item, and still not be able to say why they did the same operation on both sides. Maybe, maybe the teachers could choose a few students for a quick follow-up conversation each week?"
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "That could work, but I\u2019d want the conversations tied to a specific item or episode and the coded student ID. Otherwise we get useful reasoning evidence, but we can\u2019t tell if it followed the second-hint path, a reveal, or a teacher intervention. Could the teachers realistically just note the problem number for those conversations?"
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Noting the problem number seems realistic if the conversation is already part of the teacher's normal circulation, but I wouldn't ask them to do it for every exchange. Maybe each teacher selects two or three students a week and records the item, plus a very short indication of what prompted the talk, like a reveal, repeated hinting, or their own observation. I need to ask them whether that even, um, fits their routines, though."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "That gives us enough structure to join the interview notes to the trace without making teachers annotate the whole lesson. I\u2019d keep the prompt categories fixed, reveal, repeated hinting, or teacher observation, because otherwise we\u2019ll end up with labels that can\u2019t be compared across the three classes. The teacher can add a few words if they\u2019re useful, but the coded item and category are the essential part."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Fixed categories make sense for the trace. I\u2019d just want to leave room for \u201cteacher observation\u201d to include, say, when the student\u2019s explanation doesn\u2019t match the completed work. That\u2019s the kind of case I don\u2019t want us to flatten into a successful correction. And I\u2019ll ask the teachers whether two or three of those brief conferences a week\u2014whether that feels workable."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "I'd add one option to those categories, visible hesitation or withdrawal, if teachers feel they can recognize it without turning it into a diagnosis. That may be especially useful around repeated hints or reveals because a completed item can mask a student who is, is disengaging. But I agree we'd need the brief self-report to know what that behavior meant."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "I like that as an observation prompt, not as a claim about the student. Maybe the fixed list is reveal, repeated hinting, teacher observation, and visible hesitation or withdrawal, and teachers can mark more than one. Then in the short conference we can see whether what looked like withdrawal was confusion, waiting, or I lost the thread there, something else."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Mm, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Multiple categories is fine. The event record can store them as separate flags instead of forcing one explanation. I just would not use visible hesitation to trigger a different tutor policy during the pilot, since it isn't available to the system in real time and we'd, we'd confound the hint-sequence comparison."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "I agree, not as a live trigger. I\u2019d just want the sampled two-item check to happen after some reveal episodes, as well as repeated-hint episodes. Otherwise we may only learn what students report when they stay in the hint path, not whether a reveal is functioning as relief or as- whether it\u2019s avoidance."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Yes, we need both."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "And when we look at those reveal episodes, I\u2019d want the teacher\u2019s follow-up conversation to ask for an explanation, not just another correct answer. Otherwise we may count relief, readiness, and completion, but still miss whether the student can reconstruct the equation step on their own, and that\u2019s..."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Yes. For those sampled reveal cases, the explanation prompt should be linked to the original item, and we should record whether the student supplies a new step versus repeats the displayed solution. That gives us a modest independence measure without treating the reveal itself as evidence that the support worked."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "And I\u2019d make the prompt something like, \u201cShow me what you would do next, and why,\u201d instead of asking them to recite the displayed solution. That gives the teacher a small window into whether the reveal became a resource for reasoning or just an answer they copied. I\u2019ll see whether the teachers can use that wording naturally in those brief conferences."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Yes\u2014asking for a new step gets closer to readiness than a confidence rating alone."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Yes\u2014the item-level trace will make that explanation check interpretable."
+    },
+    {
+      "speaker": "Dr. Sofia Alvarez",
+      "text": "Okay, I think we should let everyone go a few minutes early. I\u2019ll check with the teachers about what fits their routines, and we can pick this up next time. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Min-Jae Chen",
+      "text": "Thank you. Goodbye, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      10,
+      12
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Task-compliance: the required opening is missing. Turn 1 begins with Alvarez greeting the group and setting an agenda, rather than someone apologizing for being a couple of minutes late and asking where the group has got to.",
+      "Task-compliance: the transcript uses a prohibited stock phrase in turn 21: Alvarez says, \"I lost the thread there.\"",
+      "Naturalness: despite some fillers and self-corrections, many substantive turns are polished, complete written-style arguments that cleanly state a concern, qualification, and resolution (for example turns 2, 4, 12, 18, and 27).",
+      "Naturalness: the discussion is unusually efficient and solution-oriented. Concerns generally convert immediately into a concrete design choice or assignment, with little genuinely open exploration beyond the intended fading criterion.",
+      "Naturalness/style fit: the requested one_voice_leads style is only weakly realized. Chen speaks most often, but Alvarez and Patel each make many long, fully developed contributions rather than mostly short questions, acknowledgments, or rare interventions.",
+      "The seed itself is recoverable: Alvarez frames scaffolding as support whose appropriateness depends on fading and students' later explanation/independence (turn 10), while Chen explicitly operationalizes it as the system-delivered ordered hint sequence (turn 12). Chen's statement that appropriate fading still needs follow-up or teacher context preserves the unresolved criterion."
+    ],
+    "seed_uses": [
+      {
+        "turn": 10,
+        "sense": "education",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Discusses support being appropriately faded and learner independence."
+      },
+      {
+        "turn": 11,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 12,
+        "sense": "computer science",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Defines it as an ordered sequence delivered by the system."
+      },
+      {
+        "turn": 13,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 0.62,
+    "written_turns": [
+      2,
+      4,
+      8,
+      12,
+      13,
+      16,
+      18,
+      27,
+      28
+    ],
+    "exploration_share": 0.03,
+    "turn_moves": {
+      "request": 4,
+      "answer": 2,
+      "commitment": 4,
+      "backchannel": 2,
+      "proposal": 13,
+      "concern": 1,
+      "agreement": 6
+    },
+    "volunteer_turns": [
+      4,
+      19,
+      28,
+      31
+    ],
+    "unsure_turns": [
+      6,
+      8,
+      17
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.92,
+      "exploration_share": 0.14,
+      "approved": false,
+      "issues": [
+        "Task compliance: the required opening is absent. Turn 1 begins directly with Patel's agenda rather than a participant apologizing for being a couple of minutes late and asking where the group has got to.",
+        "Task compliance: the transcript uses the prohibited stock phrase \"I lost my point there\" in turn 20.",
+        "Naturalness: despite several local disfluencies, many substantive turns are polished, complete written-style arguments that raise a concern, specify a solution, and land on a tidy conclusion (for example turns 3, 5, 10, 12, 19, 22, 27, and 29).",
+        "Naturalness: the supplied one_voice_leads style is not reflected. Speaking time is nearly evenly distributed (10/10/11 turns), and all three participants contribute frequent long planning turns rather than one person leading while others mostly offer brief interjections.",
+        "Naturalness: turn 30 functions as a clean written-minutes-style close by recapping the next steps (teacher walk-through and ID check), which triggers the stated realism tell.",
+        "Seed evidence is strong: Chen describes the ordered system-level support sequence in turn 10 and distinguishes tutor state in turn 12; Alvarez frames scaffolding as support that is withdrawn so students demonstrate independence in turn 11. The exact criterion for automated fading remains unresolved, though the discussion touches its design in turns 11-12."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.62,
+      "exploration_share": 0.03,
+      "approved": false,
+      "issues": [
+        "Task-compliance: the required opening is missing. Turn 1 begins with Alvarez greeting the group and setting an agenda, rather than someone apologizing for being a couple of minutes late and asking where the group has got to.",
+        "Task-compliance: the transcript uses a prohibited stock phrase in turn 21: Alvarez says, \"I lost the thread there.\"",
+        "Naturalness: despite some fillers and self-corrections, many substantive turns are polished, complete written-style arguments that cleanly state a concern, qualification, and resolution (for example turns 2, 4, 12, 18, and 27).",
+        "Naturalness: the discussion is unusually efficient and solution-oriented. Concerns generally convert immediately into a concrete design choice or assignment, with little genuinely open exploration beyond the intended fading criterion.",
+        "Naturalness/style fit: the requested one_voice_leads style is only weakly realized. Chen speaks most often, but Alvarez and Patel each make many long, fully developed contributions rather than mostly short questions, acknowledgments, or rare interventions.",
+        "The seed itself is recoverable: Alvarez frames scaffolding as support whose appropriateness depends on fading and students' later explanation/independence (turn 10), while Chen explicitly operationalizes it as the system-delivered ordered hint sequence (turn 12). Chen's statement that appropriate fading still needs follow-up or teacher context preserves the unresolved criterion."
+      ]
+    }
+  ]
+}

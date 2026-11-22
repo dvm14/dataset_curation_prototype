@@ -1,0 +1,357 @@
+{
+  "transcript_id": "b7e1319e",
+  "generated_at": "2026-11-22T03:23:44.429049",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with mostly short-to-medium turns before and after the formal presentations and much longer, highly structured monologues during talks. Participants frequently overlap lightly through quick acknowledgments, greetings, laughter-like reactions, and brief interjections, though questions generally wait until a speaker finishes. Speech is informal and disfluent, with repeated words, self-corrections, false starts, fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cyou know,\u201d and \u201csort of,\u201d plus occasional unfinished phrasing. Social chat is warm and teasing, while scientific discussion is respectful and exploratory: people frame challenges as curiosity (\u201chave you looked at\u2026,\u201d \u201cdo you think\u2026,\u201d \u201cwhat makes\u2026\u201d), hedge claims with \u201cI think,\u201d \u201cmaybe,\u201d \u201clikely,\u201d and \u201cit could be,\u201d and speakers often concede uncertainty directly. Questions tend to be prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cquick question\u201d), then develop into multipart follow-ups. Disagreement is indirect and collaborative, expressed by proposing alternative interpretations or limitations rather than blunt contradiction.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Working out why wild bee numbers on farms did not recover after wildflower strips were planted along field edges.",
+  "disciplines": [
+    "ecology",
+    "biology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "ecology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a landscape ecologist with 7 years of postdoctoral and field-research experience studying pollinator responses to agri-environment schemes. She has designed repeated transect and pan-trap surveys across mixed farming landscapes and routinely analyzes hierarchical occupancy and abundance models using habitat quality, floral phenology, nesting substrates, and connectivity metrics. She coordinates the ecological data curation for the 24-farm study.",
+      "distinct_perspective": "Maya treats the apparent non-recovery as a scale and timing problem rather than a simple failure of planting. She is interested in whether strip age, maintenance quality, seasonal floral continuity, nesting-resource limitation, and functional connectivity jointly constrain colonization. She favors the complete longitudinal ecological panel because consistent repeated measurement is necessary to separate delayed response, seasonal variation, and persistently low abundance before attributing mechanisms.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Luis Ortega",
+      "discipline": "biology",
+      "functional_role": "project manager",
+      "background": "Dr. Ortega is a conservation biologist and research operations manager with 12 years of experience in insect biodiversity monitoring, specimen-based identification workflows, and multi-site field studies. His work has included wild bee trait databases, foraging-range inference, quality assurance for species identifications, and coordination of seasonal survey teams. He manages survey metadata, taxonomic consistency checks, and the practical integration of pesticide and species-level variables.",
+      "distinct_perspective": "Luis frames the result through population and community biology: aggregate abundance can conceal species turnover, differential detectability, or slow recovery among particular nesting guilds and foraging strategies. He prioritizes repeated surveys because they permit comparison of trajectories across seasons and years, and because the panel can later be connected to species identities, life-history traits, and pesticide exposure once data quality has been verified.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Priya Shah",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Priya Shah is an agricultural and environmental economist with 6 years of research experience on conservation-program participation, farm heterogeneity, and the distributional effects of environmental subsidies. She uses linked administrative and farm-account data, causal-inference designs, missing-data diagnostics, and cost-effectiveness analysis to study how liquidity constraints, labor availability, and program rules shape land-management decisions. She is preparing the financial-record and subsidy linkage assessment for this project.",
+      "distinct_perspective": "Priya views strip maintenance as an endogenous management decision shaped by costs, credit constraints, risk, and uneven access to subsidy support, rather than as a purely ecological covariate. She is alert to sample-selection bias when farms with incomplete surveys or records differ systematically by income or maintenance burden. She presses the team to preserve a pathway for testing whether financial constraints and program design help explain inadequate upkeep and, consequently, weak bee recovery.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "pollinator_strips",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 1,
+  "task_id": "disagreement_02",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+  "seed_spec": {
+    "task_id": "disagreement_02",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+    "explicit_instruction": "Hold a planning meeting with Dr. Maya Chen (ecology), Dr. Luis Ortega (biology), and Priya Shah (economics). The team must choose a dataset for the first integrated analysis. Maya proposes using the complete 2021-2024 ecological panel dataset for all 24 farms: repeated bee surveys, strip establishment and upkeep records, landscape connectivity, and nesting-resource observations. Luis supports this choice because repeated surveys can distinguish delayed recovery from persistently low abundance and can be linked to bee species and foraging-range information later. Priya objects once: the ecological panel excludes 6 farms that lack complete multi-year survey coverage, and those farms are disproportionately low-income operations with higher strip-maintenance costs; she says the first analysis could therefore miss whether financial constraints and subsidy design explain poor strip upkeep and non-recovery. The group nevertheless decides to begin with Maya's 24-farm ecological panel because it is the only dataset currently cleaned and consistently measured across four years. Priya does not speak again about the dataset decision after making that objection. Maya assigns Luis to check species-identification consistency and pesticide-variable availability, and Priya to prepare a linkage assessment for the financial and subsidy records. The group sets a specific revisit trigger: revisit the dataset choice before model finalization if the linkage assessment shows that financial records can be matched for at least 80% of the 24 panel farms and that missing financial data are not concentrated in a single farm-income group, or if model diagnostics indicate systematic residual differences by farm income or strip-maintenance level. Do not have anyone claim the choice is unanimous, resolved without reservation, or supported by Priya.",
+    "ground_truth": {
+      "decision": "The team chooses the complete 2021-2024 ecological panel dataset for the first integrated analysis, covering 24 farms with repeated bee surveys, strip establishment and upkeep records, landscape connectivity, and nesting-resource observations.",
+      "decision_rationale": "It is currently the only dataset that is cleaned and consistently measured across four years, enabling an initial analysis of delayed versus persistently low bee abundance.",
+      "dissent": {
+        "member": "Priya Shah",
+        "discipline": "economics",
+        "position": "Objects to relying initially on the ecological panel alone.",
+        "reason": "Six farms without complete multi-year survey coverage are excluded, and those farms are disproportionately low-income operations with higher strip-maintenance costs. Excluding them could obscure financial constraints and subsidy-design effects on maintenance and bee non-recovery."
+      },
+      "supporting_viewpoints": [
+        {
+          "member": "Maya Chen",
+          "discipline": "ecology",
+          "position": "Proposes the ecological panel because its repeated measures and ecological covariates are ready for analysis."
+        },
+        {
+          "member": "Luis Ortega",
+          "discipline": "biology",
+          "position": "Supports the ecological panel because repeated surveys can separate delayed recovery from persistent low abundance and can later be connected to species and foraging-range information."
+        }
+      ],
+      "not_unanimous": true,
+      "revisit_trigger": "Revisit the dataset choice before model finalization if financial and subsidy records can be linked for at least 80% of the 24 panel farms and missing financial data are not concentrated in one farm-income group, or if model diagnostics show systematic residual differences by farm income or strip-maintenance level.",
+      "assignments": [
+        {
+          "member": "Luis Ortega",
+          "task": "Check species-identification consistency and pesticide-variable availability."
+        },
+        {
+          "member": "Priya Shah",
+          "task": "Prepare a linkage assessment for the financial and subsidy records."
+        }
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not preserved. Priya's objection and reason appear in turn 2, but she speaks again about financial linkage and its implications in turns 9, 11, and 23, contrary to the instruction that she not speak again about the dataset decision after objecting. The team does not choose Maya's specified complete 2021\u20132024 24-farm ecological panel; instead, turns 19\u201322 adopt an unbalanced retained set including four of the six previously excluded farms (with one additional gap case) based on usable repeated counts. The required explicit revisit trigger\u201480% financial-record linkage across 24 panel farms with non-concentrated missingness, or systematic residual differences by income/maintenance before model finalization\u2014is absent. Luis's required pesticide-variable assignment is also absent, though species-ID consistency is assigned in turns 17 and 21; Priya's linkage assessment is assigned in turns 22\u201323. No one calls the decision unanimous or claims Priya supports it.",
+  "ground_truth": {
+    "decision": "The team chooses the complete 2021-2024 ecological panel dataset for the first integrated analysis, covering 24 farms with repeated bee surveys, strip establishment and upkeep records, landscape connectivity, and nesting-resource observations.",
+    "decision_rationale": "It is currently the only dataset that is cleaned and consistently measured across four years, enabling an initial analysis of delayed versus persistently low bee abundance.",
+    "dissent": {
+      "member": "Priya Shah",
+      "discipline": "economics",
+      "position": "Objects to relying initially on the ecological panel alone.",
+      "reason": "Six farms without complete multi-year survey coverage are excluded, and those farms are disproportionately low-income operations with higher strip-maintenance costs. Excluding them could obscure financial constraints and subsidy-design effects on maintenance and bee non-recovery."
+    },
+    "supporting_viewpoints": [
+      {
+        "member": "Maya Chen",
+        "discipline": "ecology",
+        "position": "Proposes the ecological panel because its repeated measures and ecological covariates are ready for analysis."
+      },
+      {
+        "member": "Luis Ortega",
+        "discipline": "biology",
+        "position": "Supports the ecological panel because repeated surveys can separate delayed recovery from persistent low abundance and can later be connected to species and foraging-range information."
+      }
+    ],
+    "not_unanimous": true,
+    "revisit_trigger": "Revisit the dataset choice before model finalization if financial and subsidy records can be linked for at least 80% of the 24 panel farms and missing financial data are not concentrated in one farm-income group, or if model diagnostics show systematic residual differences by farm income or strip-maintenance level.",
+    "assignments": [
+      {
+        "member": "Luis Ortega",
+        "task": "Check species-identification consistency and pesticide-variable availability."
+      },
+      {
+        "member": "Priya Shah",
+        "task": "Prepare a linkage assessment for the financial and subsidy records."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Sorry, I\u2019m a couple of minutes late\u2014where have you got to? I was hoping we could use today to settle the first analysis dataset, just enough to distinguish a delayed colonization signal from a genuinely flat, flat response."
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "We're just at that choice. I want to flag that if we start with the ecological panel alone, we drop six farms with incomplete multi-year coverage. They're disproportionately lower-income, higher-maintenance-cost operations. That's a pretty consequential selection mechanism if upkeep and financing are part of why the response is flat. I'd rather not make the restricted panel our first integrated dataset, because\u2014"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, that\u2019s important, and I don\u2019t want the complete-case panel to quietly become a higher-resource-farm analysis. Are the six missing whole years, or is it particular seasons, or the establishment and maintenance fields? Because if the repeated counts are there but, um, upkeep is patchy, we may be able to retain them in an observation model instead of defining them out at the start."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Before we settle on a complete-case panel, I need to separate missing counts from missing covariates. If those six farms still have enough spring and summer survey observations, we should keep the ecological trajectories and flag the maintenance fields as incomplete instead of discarding the farms. And Maya, do the survey dates line up closely enough with strip phenology that we can treat the seasonal contrast as biological rather than a scheduling artifact?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mostly, yes. The spring rounds are within about a two-week window, and summer is within three, but I need to check the actual flowering-stage field notes before we treat season as clean phenology, especially for the 2021 plantings. Could you scroll to the missingness sheet for a second? I want to see if those six have counts across both rounds and if the establishment dates are complete enough to calculate strip age."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "While that is up, I\u2019d separate the missingness into counts, survey conditions, and covariates. If a farm has both seasonal counts in at least two years, I\u2019d keep it in the initial panel. Strip age can be partial, not a reason to exclude it. The species-ID fields for those farms matter too, because the 2024 common-species shift is showing up at edge and interior sites."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The 2024 shift makes me nervous about treating species-level turnover as ecology before we know it isn't an identification change. Luis, are the IDs consistent enough across years that we could later derive guilds or foraging-range classes without building a taxonomic artefact? And on this sheet, do those six still have both seasonal count rounds in at least two years\u2014"
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Not yet. I'd want to verify that rather than promise it. The later teams used the current species list, but I need to check whether the 2021 reference specimens were reconciled under the same taxonomic standard. Until then, I'd keep the first model at counts and treat species composition as a subsequent layer. On the sheet, I need the count columns expanded before I can tell you about the six farms."
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "While Luis is checking that, Maya, can I ask about the upkeep fields? Do they actually separate reseeding, mowing, weed control, and when the labor happened, or are they pretty broad compliance entries? It changes a lot whether I can link the financial records to a plausible maintenance burden instead of just a reported total."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "They\u2019re fairly granular, actually. We have reseeding and mowing dates in most cases, weed-control type, and usually a rough labor window, not just a compliance tick-box. The weak bit is a few farms record labor as seasonal totals, so I wouldn\u2019t infer timing too precisely there. But would that be enough for your linkage assessment if we keep maintenance as a time-varying, partly observed covariate?"
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "That\u2019s enough to start, as long as the dates and labor windows carry farm IDs cleanly. I need to check the identifier crosswalk before I promise much. The accounts, subsidy claims, and ecology file may not match one-to-one where tenancy or names changed, and the preliminary cost totals are already behaving oddly against cash flow. But the activity-level fields let me distinguish a genuinely expensive upkeep regime from just a high reported number."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That activity detail is useful, but I wouldn't make the financial linkage the gatekeeper for the first pass. We can keep all the farms with usable repeated counts and model the count trajectories with maintenance observations where they exist, then add the cost layer after Priya has checked that crosswalk. Otherwise, we risk replacing ecological missingness with administrative missingness."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Usable repeated counts are the inclusion criterion for the first pass, not a complete finance file or even complete maintenance reporting. I\u2019d still want establishment date completeness visible in the sheet, because strip age is doing real biological work here. Could we add a missingness flag rather than dropping those farms? The midsummer floral-cover pattern is already suggesting that age and connectivity may matter more than flower abundance\u2014 more than flower abundance alone. If that pattern changes once the linkage crosswalk is checked, we should revisit it."
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "The visible flag is important. I\u2019d put survey-condition completeness next to strip age too, because if the 2024 decline is concentrated in records with unusual weather or observer changes, we shouldn\u2019t let the trajectory model read that as a farm effect. The counts are the core dataset, but those fields need to travel with them."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Put weather, observer, and survey-duration completeness in that same retained panel, not in a side file. Then we can ask whether the low midsummer edge counts persist after detectability is accounted for. Because those high-floral-cover strips near no semi-natural habitat are the- those are the ones I\u2019m most reluctant to call planting failures yet."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I\u2019d also retain the edge/interior indicator explicitly, rather than pooling it into farm-year totals. If the apparent decline is parallel in both locations after observer, weather, and duration are accounted for, that points us somewhere different than a strip-edge-specific failure. I\u2019ll check the 2021 reference material against the later taxonomy before we let the species fields drive any interpretation."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That contrast is exactly why I want the site-position term kept, kept separate rather than aggregated. If edge and interior move together, we\u2019re looking at something broader than strip attraction. If the edge deficit is specific, then strip age, maintenance, and connectivity become much more interpretable. Luis, when you expand those columns, could you also say whether the missing farms have at least two years with paired edge/interior counts?"
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I'm reading them now. Four of the six have paired edge and interior counts in at least two years, including both seasons. One is missing an entire 2022 round, and one has only a single paired year. So I'd retain the four in the trajectory analysis, treat the 2022 gap as missing observation data rather than an exclusion, and hold the single-year farm out of the longitudinal model."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, so that gives us a defensible retained set. The four with two years of paired seasonal observations, plus the farm with the 2022 gap as an unbalanced panel. I\u2019d keep the single-year farm in the descriptive map, but I wouldn\u2019t let it inform the longitudinal slope. And we\u2019ll carry strip-age, maintenance, and survey-condition missingness as explicit flags rather than- rather than pretending those covariates are complete."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That is workable. I would keep the single-year farm in the descriptive material only if we label it clearly, since it cannot distinguish post-planting change from a site-specific count. For the retained panel, I'll make the taxonomy reconciliation a separate, separate QA check, so the count model isn't delayed by the species fields."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019ll make the retained ecological file explicitly unbalanced, with edge and interior counts, weather, observer, duration, establishment date or its flag, and the maintenance, nesting, and connectivity fields alongside it. Priya, if you can come back with whether the farm-ID crosswalk is credible for a later finance linkage, that- that keeps us from overreading the better-resourced farms in this first model."
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "I\u2019ll check whether the crosswalk survives the name and tenancy changes, and I\u2019ll report match rates and any systematic nonmatches rather than treating linkage failure as random. The cash-flow discrepancy may just be subsidy timing or debt service, but I need to see the underlying coding before I- before I read it as a constraint signal."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, I think we should stop there and leave the rest for next time. Thanks, both. This was really useful."
+    },
+    {
+      "speaker": "Priya Shah",
+      "text": "Thanks, bye both."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "All right, take care. Speak next week."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      4,
+      12,
+      13,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required decision is not made as specified. Rather than choosing Maya's complete 2021-2024 ecological panel for all 24 farms, turns 19-20 redefine the retained longitudinal set around five of the six incomplete farms and a single-year exclusion. The transcript never clearly states that the first integrated analysis uses the complete 24-farm panel.",
+      "The required rationale that the 24-farm ecological panel is the only currently cleaned and consistently measured four-year dataset is absent. Turns 19-20 instead make paired observations in at least two years the operative inclusion criterion.",
+      "Priya does not remain silent about the dataset decision after her objection. After objecting in turn 2, she revisits the linkage and implications of the dataset choice in turns 9, 11, and 23. This violates the explicit one-objection-then-silence requirement.",
+      "The specific revisit trigger is missing. Turn 13 says to revisit if a pattern changes after the crosswalk is checked, but it does not state the required pre-finalization trigger, the 80% match threshold, the income-group concentration condition, or residual differences by income or maintenance level.",
+      "Luis is assigned a taxonomy/species-ID QA task in turns 17 and 21, but no one assigns him to check pesticide-variable availability, as required.",
+      "The transcript never clearly preserves the non-unanimous status of the decision because the required decision itself is not explicitly stated; it also shifts from the seeded complete-case choice toward retaining incomplete farms.",
+      "Naturalness is limited by highly polished, densely technical turns that repeatedly convert each concern directly into a concrete modeling solution. The screen-share setting is present, but much of the dialogue reads like a carefully authored methodological discussion rather than spontaneous working-session speech."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.74,
+    "written_turns": [
+      4,
+      6,
+      12,
+      15,
+      17,
+      19
+    ],
+    "exploration_share": 0.3,
+    "turn_moves": {
+      "question": 5,
+      "concern": 2,
+      "request": 1,
+      "proposal": 7,
+      "answer": 4,
+      "backchannel": 3,
+      "agreement": 2,
+      "commitment": 2
+    },
+    "volunteer_turns": [
+      17,
+      21,
+      22,
+      23
+    ],
+    "unsure_turns": [
+      5,
+      8,
+      11,
+      23
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 24,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "Opening-style requirement is missed: turn 1 begins with Maya thanking everyone rather than a participant apologizing for being a couple of minutes late and asking where the group has got to.",
+        "The precise dataset decision is somewhat muddled. Turn 4 describes the 24-farm panel while also saying the six incomplete-coverage farms should be kept visible, even though the seed/ground truth requires that those six are excluded from the complete ecological panel. The transcript never cleanly states that the team is choosing the complete, cleaned 24-farm 2021\u20132024 panel because it is the only currently cleaned and consistently measured four-year dataset.",
+        "The required alternative revisit condition is absent: no turn says to revisit if model diagnostics show systematic residual differences by farm income or strip-maintenance level. Turn 15 supplies only a linkage-based threshold, and it also omits the subsidy-record component.",
+        "Priya does not explicitly raise subsidy design as part of her objection or linkage assessment. Her concerns in turns 2, 10, 16, and 19 focus on income, maintenance costs, and financial records, leaving the required subsidy-design pathway under-specified.",
+        "Priya continues discussing the implications and handling of the chosen panel after her initial objection (turns 10, 16, and 19). Although these later remarks do not plainly repeat an objection, they weaken compliance with the instruction that she not speak again about the dataset decision after making it.",
+        "Naturalness is limited despite several surface-level disfluencies. Most substantive turns are polished, self-contained mini-arguments that state a concern, qualify it, and end in a tidy proposed action or question; the working-session screen-share style is not strongly realized through concrete on-screen navigation or pauses."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.74,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "The required decision is not made as specified. Rather than choosing Maya's complete 2021-2024 ecological panel for all 24 farms, turns 19-20 redefine the retained longitudinal set around five of the six incomplete farms and a single-year exclusion. The transcript never clearly states that the first integrated analysis uses the complete 24-farm panel.",
+        "The required rationale that the 24-farm ecological panel is the only currently cleaned and consistently measured four-year dataset is absent. Turns 19-20 instead make paired observations in at least two years the operative inclusion criterion.",
+        "Priya does not remain silent about the dataset decision after her objection. After objecting in turn 2, she revisits the linkage and implications of the dataset choice in turns 9, 11, and 23. This violates the explicit one-objection-then-silence requirement.",
+        "The specific revisit trigger is missing. Turn 13 says to revisit if a pattern changes after the crosswalk is checked, but it does not state the required pre-finalization trigger, the 80% match threshold, the income-group concentration condition, or residual differences by income or maintenance level.",
+        "Luis is assigned a taxonomy/species-ID QA task in turns 17 and 21, but no one assigns him to check pesticide-variable availability, as required.",
+        "The transcript never clearly preserves the non-unanimous status of the decision because the required decision itself is not explicitly stated; it also shifts from the seeded complete-case choice toward retaining incomplete farms.",
+        "Naturalness is limited by highly polished, densely technical turns that repeatedly convert each concern directly into a concrete modeling solution. The screen-share setting is present, but much of the dialogue reads like a carefully authored methodological discussion rather than spontaneous working-session speech."
+      ]
+    }
+  ]
+}

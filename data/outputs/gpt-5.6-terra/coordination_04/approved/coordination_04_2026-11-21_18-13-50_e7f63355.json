@@ -1,0 +1,338 @@
+{
+  "transcript_id": "e7f63355",
+  "generated_at": "2026-11-21T18:13:50.982898",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with mostly short-to-medium turns and occasional long, uninterrupted presentation segments. The opening is loose and chatty, with frequent greetings, small talk, technical checks, and overlapping or abruptly cut-off remarks; speakers use many fillers and repairs such as \u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections. Formality rises for introductions and talks but remains warm and conversational, with praise and informal acknowledgments. Questions are usually prefaced politely (\u201cI have a quick question,\u201d \u201cnaive question,\u201d \u201cgreat talk\u201d) and often unfold as multipart, exploratory prompts rather than tightly framed queries. Participants build on answers through follow-ups, paraphrases, and tentative speculation, using hedges like \u201cI think,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d and \u201cI\u2019m not sure.\u201d Disagreement is indirect and framed as uncertainty, alternative interpretations, or requests for clarification rather than blunt contradiction. Speakers often think aloud, repeat key phrases while formulating a point, and end exchanges with brief thanks or affirmations.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Working out why wild bee numbers on farms did not recover after wildflower strips were planted along field edges.",
+  "disciplines": [
+    "ecology",
+    "biology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Maya Rios",
+      "discipline": "ecology",
+      "functional_role": "PhD student",
+      "background": "Third-year landscape ecology PhD student studying pollinator responses to agri-environment schemes. She has spent three field seasons mapping field margins, semi-natural habitat, and nesting substrates across mixed arable farms, and works with GIS, repeated bee surveys, and species-trait databases. She is responsible for reconciling the project's survey records and spatial layers across the 24 farms.",
+      "distinct_perspective": "Maya treats a flower strip as one element in a larger habitat network rather than as a self-contained treatment. She wants to establish whether farms and bee records are biologically comparable before interpreting responses: strip connectivity to semi-natural habitat, nesting resources within realistic foraging ranges, and consistent species-group assignments across all three survey years. She sees this classification as necessary for identifying meaningful farm/species strata and defensible candidates for follow-up, while still being careful about the limits of the available maps and survey data.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Anika Patel",
+      "discipline": "biology",
+      "functional_role": "PhD student",
+      "background": "Final-year pollinator biology PhD student with prior training as a laboratory technician in environmental toxicology. Her work combines bee specimen curation, targeted pesticide-residue assays, lipid and protein condition measures, and trait-based comparisons of solitary bees and bumblebees. She has helped design chain-of-custody procedures and sample-selection rules for archived field specimens.",
+      "distinct_perspective": "Anika frames the apparent lack of recovery in terms of individual-level exposure and physiological constraint: residues, nutritional state, pathogen burden, and species-specific sensitivity could obscure benefits of floral resources. She initially pushes to select specimens for pesticide-residue and physiological analyses, but recognizes that an analytically valid sample set must be drawn after ecological strata and follow-up farms are defined, since bee groups differ in foraging range, nesting ecology, and pesticide susceptibility.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Tom\u00e1\u0161 Varga",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "Research engineer with eight years of experience building farm-survey instruments and analyzing uptake of agri-environment payments. He has worked with farm business records, gross-margin estimates, stated-preference surveys, and scenario models for land-use incentives. He manages the team's planned farmer cost-and-yield survey and the payment-scenario calculations.",
+      "distinct_perspective": "Tom\u00e1\u0161 approaches the project through farmer decisions, opportunity costs, yield risks, and whether a payment level would induce changes that can realistically be adopted. He initially proposes fielding the cost-and-yield survey immediately and estimating whether larger strip payments would be worthwhile. He is wary of broad ecological narratives that cannot be translated into choices or costs, but accepts that a useful survey instrument and credible payment scenarios must wait for the shared ecological classification and the biology team's selected candidate mechanisms; otherwise, farmers would be asked about every conceivable management change and the subsidy analysis would not be targeted.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "pollinator_strips",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 5,
+  "task_id": "coordination_04",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+  "seed_spec": {
+    "task_id": "coordination_04",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+    "explicit_instruction": "In the meeting, have the economist propose immediately fielding the farmer cost-and-yield survey and estimating whether larger strip payments would be worthwhile. Have the biologist propose immediately selecting bee specimens for pesticide-residue and physiological analyses. The ecologist must explain that these proposals are premature because the team first needs to complete a common ecological classification of each farm: whether the strip is connected to other semi-natural habitat, what nesting resources occur within the relevant foraging range, and whether each sampled bee record can be assigned to a comparable species group across all three survey years. The ecologist states that this classification will identify the biologically comparable farm/species strata and the candidate farms for follow-up. The biologist agrees that residue and physiology samples must be selected only after those strata and candidate farms are defined, because species differ in foraging range and pesticide sensitivity. The economist agrees that the survey instrument and payment scenarios must wait for the same classification plus the biology team's selected candidate mechanisms, because asking farmers about every possible management change would not yield a targeted subsidy analysis. Keep the meeting focused on planning; do not resolve why bee numbers failed to recover. Ensure participants discuss the proposed actions in the initially out-of-order sequence, while leaving clear evidence that ecology's classification is the prerequisite.",
+    "ground_truth": {
+      "dependency_issue": "The biology sampling plan and the economics survey/payment analysis are being proposed before the ecological classification that defines comparable farm/species strata and follow-up candidates. Their inputs are not yet available.",
+      "required_order": [
+        {
+          "step": 1,
+          "discipline": "ecology",
+          "action": "Complete the cross-farm ecological classification using habitat connectivity, nesting resources within relevant foraging ranges, and harmonized species-group assignments across the multi-year surveys.",
+          "output": "Comparable farm/species strata and candidate farms for follow-up."
+        },
+        {
+          "step": 2,
+          "discipline": "biology",
+          "action": "Use the ecological strata and candidate farms to select specimens and farms for pesticide-residue and physiological analyses, accounting for species-specific foraging range and sensitivity.",
+          "output": "Prioritized biological mechanisms and targeted candidate management changes."
+        },
+        {
+          "step": 3,
+          "discipline": "economics",
+          "action": "Design and field a targeted farmer cost-and-yield survey, then evaluate subsidy/payment scenarios using the ecological classification and biology team's candidate mechanisms.",
+          "output": "Costs, yield implications, and targeted payment options for feasible management changes."
+        }
+      ],
+      "key_reasoning": [
+        "Ecological classification is a shared upstream dependency rather than a parallel optional task.",
+        "Biological testing without comparable species and farm strata could mix species and contexts with different exposure and response patterns.",
+        "Economic questions and subsidy scenarios should be targeted to management changes supported by the ecological and biological follow-up, rather than surveying all possible changes."
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not fully instantiated. The transcript clearly establishes ecology as the prerequisite: Maya says specimens cannot be selected until cross-year species groups and habitat/nesting/connectivity classification are completed (turns 4, 9, 27), Anika agrees to assess/select against actual candidate cells only afterward (turns 5, 19, 25, 28), and Tom\u00e1\u0161 holds survey spending until viable contrasts/candidate cells are known (turns 24, 29). However, the required initially out-of-order proposals do not occur: the economist never proposes immediately fielding the survey or estimating larger strip payments, and the biologist never proposes immediately selecting specimens for residue/physiology analyses. The discussion is already dependency-aware from the outset.",
+  "ground_truth": {
+    "dependency_issue": "The biology sampling plan and the economics survey/payment analysis are being proposed before the ecological classification that defines comparable farm/species strata and follow-up candidates. Their inputs are not yet available.",
+    "required_order": [
+      {
+        "step": 1,
+        "discipline": "ecology",
+        "action": "Complete the cross-farm ecological classification using habitat connectivity, nesting resources within relevant foraging ranges, and harmonized species-group assignments across the multi-year surveys.",
+        "output": "Comparable farm/species strata and candidate farms for follow-up."
+      },
+      {
+        "step": 2,
+        "discipline": "biology",
+        "action": "Use the ecological strata and candidate farms to select specimens and farms for pesticide-residue and physiological analyses, accounting for species-specific foraging range and sensitivity.",
+        "output": "Prioritized biological mechanisms and targeted candidate management changes."
+      },
+      {
+        "step": 3,
+        "discipline": "economics",
+        "action": "Design and field a targeted farmer cost-and-yield survey, then evaluate subsidy/payment scenarios using the ecological classification and biology team's candidate mechanisms.",
+        "output": "Costs, yield implications, and targeted payment options for feasible management changes."
+      }
+    ],
+    "key_reasoning": [
+      "Ecological classification is a shared upstream dependency rather than a parallel optional task.",
+      "Biological testing without comparable species and farm strata could mix species and contexts with different exposure and response patterns.",
+      "Economic questions and subsidy scenarios should be targeted to management changes supported by the ecological and biological follow-up, rather than surveying all possible changes."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "Morning. It\u2019s finally stopped raining here, which I guess is good news for the strips, if not for the fieldwork schedule. For today, I\u2019d mainly like us to get clear on what ecological split, or mechanism, we can actually follow up next season, because that determines whether the farmer survey is asking useful, specific things rather than just everything under the sun."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Mm, yeah."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Morning. The rain has made our specimen freezer alarm rather more dramatic than it needed to be, but it is fine. I agree we need a mechanism, not just a general follow-up. I am especially concerned that floral provision may be decoupled from individual condition if exposure or nutritional stress remains high. Maya, before I select any archived material, how confident are you that we can, can harmonize the species groups across all three survey years?"
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "I think we can get there, but I\u2019m not confident enough to select specimens yet. The common bumblebee groups are pretty straightforward, but the solitary-bee records are patchier across years. I still need to check whether the older habitat layer picked up things like bare banks and ditch edges consistently. Once I\u2019ve done that, we can separate farms where a strip is actually connected to forage and nesting habitat from ones where it\u2019s pretty isolated, and then..."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "That distinction matters for the biological sampling too. A bee from an isolated strip and one from a strip that's embedded in forage and nesting habitat, those aren't comparable exposure units, especially for the solitary taxa. I wouldn't pool them. So before we reserve an assay panel, I need to check the freezer inventory, the numbers and storage quality within those eventual strata may be the limiting factor."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "That would help, because the feasible strata could be pretty uneven. Anika, once I have the comparable groups, how much would your minimum useful specimen set differ for solitary bees versus bumblebees? I\u2019m already seeing a few farms near mapped hedgerows with unexpectedly low counts, and I can\u2019t tell yet whether that\u2019s the maps, the records, or what was actually there in the field."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "For bumblebees, I\u2019d want roughly eight to ten individuals per farm-class by year if we\u2019re estimating residues and condition jointly. For solitary bees, I\u2019d rather define a small number of taxonomically coherent focal groups and accept fewer farms than pool across very different nesting and foraging ecologies. But I need to inspect the inventory first, since the storage, storage history may reduce that number substantially. And those hedgerow farms are exactly why the nesting layer matters. Low counts there could be a real constraint, not a mapping artefact."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "Hm, that\u2019s quite tight."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "That\u2019s why I\u2019d rather not force all 24 farms into the same comparison. We may end up with fewer, cleaner farm classes, but at least we\u2019d know whether low abundance is associated with isolation or with something happening within the strip. Tom\u00e1\u0161, for the cost and yield side, which management details do you actually need farmers to remember accurately?"
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "For the cost and yield side, I need the basics. Establishment and reseeding, mowing or other maintenance, what area came out of which crop, and whether the strip made awkward bits of the field harder to work. But the key issue is the counterfactual yield risk. Those two similar-sized strips with very different reported losses worry me. Maya, are your habitat links things a farmer would actually recognize as choices, like maintaining a bank or hedge, or are they mostly mapped features they wouldn't report on?"
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Some are choices they'd recognize, like hedge cutting, whether a bank or ditch edge is left unmanaged, and mowing timing around the strip. But the connectivity measure itself is- that's map-based, so I wouldn't ask them to classify it. Maybe the survey can ask about those management decisions, and then I use the maps to put them in the habitat context?"
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Right, that makes sense."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "That would work much better. I can keep connectivity as Maya's mapped variable and ask farmers about the things they actually did, hedge cutting, edge mowing, leaving banks alone, rather than making them diagnose their own landscape. I do still need to check whether the records separate strip maintenance from ordinary field-edge work. I was going to say the gross-margin figures- otherwise they could be pretty misleading."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Mm. That split is useful, but I\u2019d want the same terms used across farms. What counts as edge mowing versus strip maintenance can blur quite a lot in the records. And if farmers can say when they cut hedges or left ditch edges, that may help me work out whether those low-count hedgerow farms are- whether they\u2019re really habitat-poor at the relevant time, rather than just looking connected on the map."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "For the biological interpretation, I probably wouldn't want to lose the timing of spraying and cutting relative to flowering. A strip can look floristically successful, but bees might encounter residues or lose forage continuity at exactly the wrong point. Tom\u00e1\u0161, is it realistic to recover even approximate timings for the two prior seasons from spray records or farmer recall?"
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Oh, timing\u2019s going to matter."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "For spray records, we can probably get product and date, at least, because those tend to be logged. Cutting dates are less reliable, especially if it was just folded into a normal pass, so I'd ask for approximate windows rather than pretend we'll get exact days. And before we treat it as a real strip effect, I'd want to see whether the two odd yield-loss farms also differ on crop and field shape."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Crop and field shape could explain some of that, and I\u2019d also want to overlay which side of the field the strip is on. A strip along a busy worked edge may be managed very differently than one beside a hedge, even if the mapped connectivity score looks similar. I can check whether those details are in the spatial records before we treat the low counts as a strip response."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "If the spatial records can distinguish that worked-edge context, it should go into the specimen strata instead of being treated as a nuisance variable. A strip beside a hedge but next to a routinely sprayed or frequently cut edge could produce a very different residue and lipid profile, even with similar floral cover. I did see a small version of that pattern in the curated material, but it wasn't interpretable."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Oh, that\u2019s interesting."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "That\u2019s useful, actually. If that worked-edge pattern holds even loosely, it gives us concrete things to put in the survey, like spray dates, cutting windows, and whether the strip sits beside a routinely worked margin, rather than just a vague question about strip quality. I\u2019d still keep the yield questions separate, because a bad gross-margin number could just be, um, how the farmer has allocated the field operation costs."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Mm, separate accounting, yes."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "For the spatial side, I can probably code worked-edge context separately from connectivity, rather than folding them into one score. I just need to check the older aerial layer for those margins. Some of the narrow ditch and bank features may not be visible consistently, so I don't want to make that a stronger- a more robust variable than the maps support."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "I\u2019d rather not make payment scenarios depend on a worked-edge code if it\u2019s shaky in the older imagery. We can ask the farmer directly about the operational side, then use Maya\u2019s spatial coding where it\u2019s reliable. And I think we hold the survey spend until Maya and Anika know which of those contrasts are actually viable."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "I agree with holding the assay commitment until the viable contrasts are clear. I can do the inventory check now, though, particularly whether we have enough well-preserved material in the potential worked-edge and hedge-adjacent classes. I was thinking we don't want to discover after the survey design that the residue and lipid comparison was never feasible."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "Okay, that\u2019s the sensible order."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "I\u2019ll finish the cross-year group assignments and flag where the old maps can\u2019t support a nesting or worked-edge call, rather than filling those gaps with assumptions. Then we can see whether there are actually enough comparable hedge-adjacent and worked-edge farms for\u2014 sorry, for Anika\u2019s inventory check to mean something."
+    },
+    {
+      "speaker": "Dr. Anika Patel",
+      "text": "Once those flags are available, I can assess the freezer inventory against the actual candidate cells, not hypothetical ones. I\u2019ll also record storage provenance, because a nominally adequate count isn\u2019t useful if preservation differs systematically by year or farm class."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "Mm. Once you\u2019ve got those candidate cells, I can turn- I can make them into a short survey module instead of committing the whole cost-and-yield spend now. I\u2019ll also check the farm records on those two yield-loss outliers, the crop, field shape, and how they booked machinery time, because I don\u2019t want us pricing a payment off an accounting difference."
+    },
+    {
+      "speaker": "Maya Rios",
+      "text": "Okay, I think we've got what we needed for today. I'll send the flags round when I've finished that pass, and then we can, um, pick it up from there. Thanks, both."
+    },
+    {
+      "speaker": "Tom\u00e1\u0161 Varga",
+      "text": "All right, bye both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      4,
+      5,
+      7,
+      10,
+      11,
+      15,
+      21,
+      24,
+      25,
+      27,
+      28,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The initially out-of-order actions are only weakly explicit. Anika says she will not select specimens yet in turn 3, and Tom\u00e1\u0161 does not plainly propose fielding the survey immediately; he frames survey needs and later agrees to hold spending (turns 10, 21, 24). Make both premature proposals explicit before Maya explains the dependency.",
+      "Maya\u2019s prerequisite classification is substantially present but not stated as one complete, shared checklist in a single clear explanation. Turns 4, 11, 18, 23, and 27 distribute connectivity, nesting resources, species harmonization, and candidate strata across the meeting. A clearer early statement that this produces comparable farm/species strata and follow-up candidates would make the benchmark dependency less inferential.",
+      "The conversation is polished and highly orderly despite having all five realism signals. Most substantive turns are complete, well-formed arguments that directly advance the plan, and the final turns (27-30) function as a tidy action-item recap. This triggers the written-dialogue tell and limits naturalness to 3.",
+      "The requested one_voice_leads style is not strongly realized: participation is unusually balanced (Maya 12 turns, Tom\u00e1\u0161 10, Anika 9), rather than having one participant clearly lead while others contribute more sparsely."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.3,
+    "turn_moves": {
+      "proposal": 7,
+      "backchannel": 4,
+      "question": 5,
+      "answer": 3,
+      "concern": 2,
+      "agreement": 4,
+      "observation": 1,
+      "commitment": 5
+    },
+    "volunteer_turns": [
+      4,
+      5,
+      13,
+      18,
+      25,
+      27,
+      28,
+      29,
+      30
+    ],
+    "unsure_turns": [
+      4,
+      6,
+      7,
+      13,
+      23
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": true,
+      "issues": [
+        "The initially out-of-order actions are only weakly explicit. Anika says she will not select specimens yet in turn 3, and Tom\u00e1\u0161 does not plainly propose fielding the survey immediately; he frames survey needs and later agrees to hold spending (turns 10, 21, 24). Make both premature proposals explicit before Maya explains the dependency.",
+        "Maya\u2019s prerequisite classification is substantially present but not stated as one complete, shared checklist in a single clear explanation. Turns 4, 11, 18, 23, and 27 distribute connectivity, nesting resources, species harmonization, and candidate strata across the meeting. A clearer early statement that this produces comparable farm/species strata and follow-up candidates would make the benchmark dependency less inferential.",
+        "The conversation is polished and highly orderly despite having all five realism signals. Most substantive turns are complete, well-formed arguments that directly advance the plan, and the final turns (27-30) function as a tidy action-item recap. This triggers the written-dialogue tell and limits naturalness to 3.",
+        "The requested one_voice_leads style is not strongly realized: participation is unusually balanced (Maya 12 turns, Tom\u00e1\u0161 10, Anika 9), rather than having one participant clearly lead while others contribute more sparsely."
+      ]
+    }
+  ]
+}

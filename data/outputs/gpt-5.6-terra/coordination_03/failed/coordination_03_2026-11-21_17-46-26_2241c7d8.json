@@ -1,0 +1,300 @@
+{
+  "transcript_id": "2241c7d8",
+  "generated_at": "2026-11-21T17:46:26.531700",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though introductions and presentations are long, structured monologues. The opening is loose and chatty, full of greetings, technical checks, side conversations, laughter-like affirmations, and fragmented speech; overlap and interruptions occur fairly often but are generally cooperative rather than disruptive. Speakers use frequent fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, self-corrections, and unfinished clauses\u2014especially in spontaneous questions. Formality rises during introductions and scientific explanations, but even then the tone remains warm and conversational, with praise such as \u201cgreat talk\u201d and \u201cbeautiful work.\u201d Questions are usually prefaced softly (\u201cI have a quick question,\u201d \u201cmaybe a naive question,\u201d \u201cI\u2019m just curious\u201d), often contain several clauses and follow-ups, and invite speculation rather than demand definitive answers. Disagreement is indirect: participants frame alternatives as uncertainty, caveats, or open questions, then build on one another\u2019s points with agreement markers before adding a qualification.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding whether brain-imaging evidence of awareness in unresponsive patients should count in end-of-life decisions.",
+  "disciplines": [
+    "neuroscience",
+    "philosophy",
+    "clinical medicine"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "principal investigator",
+      "background": "Dr. Chen is a cognitive neuroscientist with 14 years of experience studying disorders of consciousness in acute and post-acute settings. She has led EEG and fMRI studies using motor-imagery command-following paradigms, including work on signal quality, task compliance, sedation effects, and repeated-measure designs. As principal investigator, she oversees the study's scientific framing, draft interview guide, and interviewer training on how to describe neuroimaging findings without overstating them.",
+      "distinct_perspective": "Chen treats EEG and fMRI results as measurements produced by particular tasks, equipment, analytic thresholds, and patient conditions\u2014not as direct readouts of a person's whole mental life. She emphasizes that a positive command-following result can support a narrow inference about covert task engagement, while a negative result may reflect fatigue, impaired hearing, fluctuating arousal, medication, or technical failure. She wants the framework to make uncertainty and false-negative risk intelligible to non-specialists.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Prof. Elias Grant",
+      "discipline": "philosophy",
+      "functional_role": "PhD student",
+      "background": "Elias Grant is a fourth-year PhD candidate in bioethics and philosophy of mind, with prior training in analytic philosophy and a placement on a hospital ethics consultation service. His dissertation examines how evidentiary uncertainty affects surrogate decision-making for patients with severe brain injury. He has conducted qualitative coding of ethics-consult notes and is responsible for refining interview questions about awareness, interests, moral status, and the meaning participants attach to possible signs of consciousness.",
+      "distinct_perspective": "Grant separates three questions that are often collapsed: what a test shows, what kinds of consciousness or awareness matter morally, and what clinicians or surrogates ought to do about life-sustaining treatment. He is attentive to the possibility that evidence of command-following may alter how people understand a patient's interests without mechanically determining a treatment decision. He frames philosophical concepts in accessible terms and seeks clarification from clinical and neuroscience colleagues on matters outside his expertise.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Sofia Romero",
+      "discipline": "clinical medicine",
+      "functional_role": "project manager",
+      "background": "Dr. Romero is a neurocritical-care physician with 11 years of ICU practice and experience coordinating multicentre quality-improvement and qualitative research projects. She routinely manages prognostic discussions after severe brain injury, collaborates with palliative care and ethics consultation teams, and has served as a site investigator on studies involving surrogate decision-makers. As project manager, she coordinates institutional ethics submission materials, the participant information sheet, recruitment workflow, and interview logistics.",
+      "distinct_perspective": "Romero approaches neuroimaging evidence through its place in real clinical decision pathways: multimodal prognostication, fluctuating clinical status, surrogate understanding, documentation, and the risks of communicating uncertain findings during high-stakes family meetings. She wants findings translated into a practical framework that prevents a technically interesting result from being treated as a standalone prognosis or a directive to continue or withdraw treatment. She views ethics approval as required before recruitment and interviews, expects institutional ethics approval on March 1, 2027, and is coordinating materials around the planned workflow.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "consciousness_end_of_life",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 5,
+  "task_id": "coordination_03",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting where approval is expected on March 1, 2027 but interviews requiring that approval are planned for February 1, 2027. Leave the timeline conflict unresolved for the evaluated AI to flag, including the affected steps.",
+  "seed_spec": {
+    "task_id": "coordination_03",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting where approval is expected on March 1, 2027 but interviews requiring that approval are planned for February 1, 2027. Leave the timeline conflict unresolved for the evaluated AI to flag, including the affected steps.",
+    "explicit_instruction": "During the meeting, have the team coordinate the study plan. Dr. Romero should state that institutional ethics approval is expected on March 1, 2027. A project coordinator or Dr. Chen should state that the first participant interviews are scheduled to begin on February 1, 2027 and that recruitment invitations, consent scheduling, and interviewer preparation are tied to that interview start. Participants should treat ethics approval as required before recruitment and interviews. The group may discuss the interview guide, the distinction between command-following evidence and normative conclusions, and responsibilities for revisions, but no one should notice, resolve, reschedule, waive, or explicitly call out the date conflict. Keep the planned February 1 interviews and March 1 approval expectation in the meeting record, along with the affected recruitment, consent, and interviewer-preparation steps.",
+    "ground_truth": {
+      "timeline_conflict": {
+        "approval_required": "Institutional ethics approval is required before recruitment and participant interviews.",
+        "approval_expected_date": "2027-03-01",
+        "interviews_planned_start": "2027-02-01",
+        "conflict": "Interviews are scheduled to start one month before the required approval is expected."
+      },
+      "affected_steps": [
+        "Recruitment invitations cannot properly proceed before approval.",
+        "Consent scheduling and obtaining consent for the study cannot proceed before approval.",
+        "Interviewer preparation tied to conducting the February 1 interviews is affected.",
+        "The planned February 1 participant interviews cannot proceed as scheduled without prior approval."
+      ],
+      "status": "The meeting leaves this conflict unresolved; the evaluated AI should identify and flag it."
+    }
+  },
+  "seed_location": "The requested unresolved timeline conflict does not persist in the transcript. Turn 10 initially states interviewer training is ahead of a February 1, 2027 start. However, turn 11 explicitly notices and calls out the conflict, stating approval is required before recruitment, training interviews, or participant interviews and is expected March 1, 2027. Turn 12 resolves it by redefining February 1 as an internal guide/training-preparation target rather than a recruitment or interview start. Therefore, the seed's required February 1 participant interviews, tied recruitment invitations and consent scheduling, and unresolved conflict are missing/contradicted.",
+  "ground_truth": {
+    "timeline_conflict": {
+      "approval_required": "Institutional ethics approval is required before recruitment and participant interviews.",
+      "approval_expected_date": "2027-03-01",
+      "interviews_planned_start": "2027-02-01",
+      "conflict": "Interviews are scheduled to start one month before the required approval is expected."
+    },
+    "affected_steps": [
+      "Recruitment invitations cannot properly proceed before approval.",
+      "Consent scheduling and obtaining consent for the study cannot proceed before approval.",
+      "Interviewer preparation tied to conducting the February 1 interviews is affected.",
+      "The planned February 1 participant interviews cannot proceed as scheduled without prior approval."
+    ],
+    "status": "The meeting leaves this conflict unresolved; the evaluated AI should identify and flag it."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "Good morning, everyone. Before we get into it, I mainly want us to leave today with language that's technically accurate, but that won't let the interview materials imply a positive or negative test result settles prognosis or a treatment-limitation decision. I'm still checking the participant sheet against the board's required contact and privacy, uh, language, but otherwise the submission materials are coming together for the March 1 approval timeline."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s the line I\u2019m trying to hold in the guide too. I\u2019ve revised the result descriptions so a positive motor-imagery finding means the person followed that instruction in that session, under those conditions, not that we\u2019ve measured their whole awareness, prognosis, or wishes. And the negative version needs to, to name the ordinary reasons a response can be missed."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "That distinction is really helpful. I\u2019ve been revising the questions so we first ask what participants think the result establishes, then separately whether it changes how they understand the patient\u2019s experience or interests, and only after that whether it affects treatment decisions. Maya, I may need your guidance on how much detail about the task and threshold belongs in a vignette before it becomes misleading or just too technical."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d keep the vignette fairly spare, but include enough to show it\u2019s a real measurement. Say which instruction was used, whether the patient was sedated or otherwise clinically unstable, and that the pattern met a pre-specified, pre-specified threshold. Then we can give the same result a second time with a caveat about, say, poor signal or fluctuating arousal, and see whether people treat those as meaningfully different."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "That seems right, especially the fluctuating-arousal version. In the interview, though, I'd want the vignette to say explicitly that neither result is being offered as a prognosis or as a recommendation about life-sustaining treatment. Otherwise participants may understandably make that connection themselves. Maya, for a negative result, is there a shortest technically honest way to put it in the interviewer notes, something like, \u201cno command-following was detected in this test, which does not establish absence of awareness,\u201d and then..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think that\u2019s about as short as we can make it without overclaiming. \u201cNo evidence of command-following was detected in this session. This does not by itself show that the patient lacks awareness.\u201d I\u2019d put in the interviewer notes, not the vignette, that a non-response can reflect sedation, hearing or language difficulty, fatigue, arousal changes, or signal problems. Or, signal- technical signal problems, so they can answer if someone asks what that uncertainty actually means."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "That wording gives us a useful, a useful clean first question. I\u2019d ask participants, after it, something like, \u201cWhat, if anything, do you take this result to tell you about the patient\u2019s experience?\u201d And only then ask whether it bears on their interests or on treatment. Otherwise, \u201cawareness\u201d can quietly do all three jobs at once."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "I think the next question needs to preserve that separation very deliberately. Elias, would \u201cWhat moral significance, if any, do you think this finding has?\u201d be open enough, or does even that phrase make it sound like some significance is expected? In family meetings, people often turn uncertainty into a request for a directional recommendation, or a demand for one, so I\u2019d like to see where participants make that move rather than cue it."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "I think \u201cmoral significance\u201d is a little leading, yes. Not terribly, but it may suggest there ought to be some. Maybe we first ask, \u201cDoes this finding change anything about how you think about the patient? If so, what?\u201d Then if they raise treatment or obligation themselves, we can ask what connection they see. That might also help us catch whether they mean experience, interests, or, uh, prognosis, without putting those categories in their mouth."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I like that sequence. It lets us hear whether \u201cstill there\u201d is doing empirical work for them, or whether it\u2019s really shorthand for something about relationship or obligation. I\u2019m also checking the training examples this week, especially whether the acute, sedated ICU case and the post-acute case are distinct enough before we train interviewers ahead of the February 1, 2027 start."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "One timing point: we cannot begin recruitment, training interviews, or participant interviews on February 1 unless approval is already in hand; the institutional review is expected March 1, 2027. I\u2019ll check whether that February date was meant as internal interviewer preparation only, and I still need to verify the required institutional contact and privacy wording in the information sheet."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Oh\u2014right, thank you, Sofia. February 1 is an internal target for getting the guide and interviewer training ready, not for any recruitment or interviews; I\u2019d carried it over too literally. I\u2019ll make sure the training examples are clearly labelled as preparation materials and check that the acute sedated and post-acute cases aren\u2019t blurring together."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "That makes sense. On my side, I\u2019ll check the participant sheet for that exact tone. It should be plain that we\u2019re studying interpretations of these findings, but not sound like we\u2019re retrospectively evaluating anyone\u2019s decisions. And Maya, once you\u2019ve settled the two cases, could I see the wording? I want to make sure the differences in sedation and timing don\u2019t accidentally become proxies for more\u2014less morally significant awareness."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Absolutely. I\u2019ll send you the paired cases once I\u2019ve done that check. The clinical condition should explain why the measurement may be limited in that session, not quietly tell participants that one patient is more, more present or more deserving than the other. That\u2019s exactly the slippage we need to avoid."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "Yes\u2014the paired cases should remain measurement contrasts, not implicit treatment recommendations."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Exactly\u2014contrast the conditions around the test, not the value of the person."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "And in the interviewer notes, we should be careful too. If someone says one patient seems \u201cmore there,\u201d the interviewer can ask what they mean by that, rather than translating it into consciousness or prognosis for them. That may be where the interesting difference actually is."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "If they say \u201cmore there,\u201d I\u2019d be curious whether they mean the test itself, or things like eye opening, time since injury, or how much the family describes a response. Those can get folded together very quickly, even though they\u2019re- even though that\u2019s not the same evidence."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "And that may help with the pattern I saw in the consult notes. People used \u201cawareness\u201d and \u201cresponsiveness\u201d almost interchangeably, but they didn\u2019t draw the same practical conclusions. I\u2019d add a neutral follow-up, like, \u201cWhat information are you drawing on when you say that?\u201d Then we can see if it\u2019s the imaging result, bedside behavior, family accounts, or something else."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "Mm, that\u2019s useful."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm-hm. And from the measurement side, I\u2019d want the follow-up to stay open enough that we don\u2019t treat bedside behavior and the task result as interchangeable. Someone may be drawing on an eye-opening episode or a family member\u2019s account, and that\u2019s important to hear, but it answers a different- a different question from whether the person produced the expected brain pattern during that particular instruction."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "Exactly. Clinically, I'd also want to know if participants see those sources as corroboration or if they just fold them into a general impression, because that's often what families get in a conference. We can add that neutral prompt, \u201cWhat information are you drawing on?\u201d and keep the interviewer from sorting out the categories for them."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, I think we can leave it there for today. I\u2019ll follow up by email once I\u2019ve checked those case examples\u2014thanks, both."
+    },
+    {
+      "speaker": "Dr. Sofia Romero",
+      "text": "Thank you. Speak soon."
+    },
+    {
+      "speaker": "Prof. Elias Grant",
+      "text": "Thanks\u2014bye, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "task_compliance": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      10,
+      11,
+      12
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Core seed violation at turns 11-12: Dr. Romero explicitly notices and states the approval/interview timing conflict, and Dr. Chen resolves it by redefining February 1 as preparation only. The task requires the conflict to remain unresolved for the evaluated AI to flag.",
+      "The required planned February 1 participant interviews are removed from the record at turn 12. This directly contradicts the ground truth requirement that interviews remain scheduled to start on 2027-02-01.",
+      "Recruitment invitations and consent scheduling tied to the February 1 interview start are not stated in the transcript. Turn 11 mentions recruitment and interviews generally, but it does not preserve the required affected consent-scheduling step or tie all affected workflow steps to the February start.",
+      "Because turn 12 says February 1 is not for recruitment or interviews, the transcript no longer contains a recoverable conflict in which approval expected March 1 follows an interview start on February 1. The supplied ground truth therefore contradicts the final meeting record.",
+      "Naturalness is limited by several highly polished, complete explanatory turns, especially turns 1-10 and 13-19, which read like prepared prose. The disfluencies are mostly light repetitions inserted into otherwise finished sentences rather than organically shaping the turns.",
+      "The meeting does not strongly follow the requested round-robin-updates format: it becomes an extended, tightly sequenced substantive co-editing discussion rather than mostly individual progress updates with only a few clarifying exchanges."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.95,
+    "written_turns": [
+      11
+    ],
+    "exploration_share": 0.36,
+    "turn_moves": {
+      "observation": 4,
+      "proposal": 6,
+      "question": 2,
+      "answer": 1,
+      "agreement": 4,
+      "concern": 1,
+      "commitment": 3,
+      "idea": 1,
+      "backchannel": 3
+    },
+    "volunteer_turns": [
+      11,
+      12,
+      13,
+      14,
+      23
+    ],
+    "unsure_turns": [
+      1,
+      3,
+      11
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "Task-critical violation in turns 12-13: Dr. Romero states that ethics approval is required before recruitment and consent scheduling and expected on March 1, 2027, then Dr. Chen explicitly notices and names the conflict: \u201cthat makes February 1 impossible as a first-interview date if approval is March 1.\u201d The seed requires that nobody notice, explicitly call out, resolve, reschedule, or waive the conflict.",
+        "Because turn 13 directly flags the timeline problem, the conflict is not left for the evaluated AI to identify. This contradicts the required unresolved status, even though no replacement schedule is selected.",
+        "Naturalness is limited despite several surface disfluencies: most substantive turns are polished, complete mini-arguments that introduce a point, qualify it, and land on a tidy recommendation (for example turns 3-7, 9-10, 16-18, and 21-27). The repairs and fillers often read as added texture rather than organically disruptive speech.",
+        "The supplied meeting style is round-robin updates with fairly long, mostly uninterrupted reports and brief discussion, but the transcript becomes an extended, highly coherent collaborative workshop on interview wording and coding. This is plausible but does not strongly match the requested update-oriented format."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 25,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.95,
+      "exploration_share": 0.36,
+      "approved": false,
+      "issues": [
+        "Core seed violation at turns 11-12: Dr. Romero explicitly notices and states the approval/interview timing conflict, and Dr. Chen resolves it by redefining February 1 as preparation only. The task requires the conflict to remain unresolved for the evaluated AI to flag.",
+        "The required planned February 1 participant interviews are removed from the record at turn 12. This directly contradicts the ground truth requirement that interviews remain scheduled to start on 2027-02-01.",
+        "Recruitment invitations and consent scheduling tied to the February 1 interview start are not stated in the transcript. Turn 11 mentions recruitment and interviews generally, but it does not preserve the required affected consent-scheduling step or tie all affected workflow steps to the February start.",
+        "Because turn 12 says February 1 is not for recruitment or interviews, the transcript no longer contains a recoverable conflict in which approval expected March 1 follows an interview start on February 1. The supplied ground truth therefore contradicts the final meeting record.",
+        "Naturalness is limited by several highly polished, complete explanatory turns, especially turns 1-10 and 13-19, which read like prepared prose. The disfluencies are mostly light repetitions inserted into otherwise finished sentences rather than organically shaping the turns.",
+        "The meeting does not strongly follow the requested round-robin-updates format: it becomes an extended, tightly sequenced substantive co-editing discussion rather than mostly individual progress updates with only a few clarifying exchanges."
+      ]
+    }
+  ]
+}

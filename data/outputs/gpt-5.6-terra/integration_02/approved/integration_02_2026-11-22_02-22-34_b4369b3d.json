@@ -1,0 +1,598 @@
+{
+  "series_id": "b4369b3d",
+  "generated_at": "2026-11-22T02:22:34.953284",
+  "task_id": "integration_02",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.",
+  "input_type": "paired_meetings",
+  "research_id": "forest_carbon_credits",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 5,
+  "research_problem": "Assess how forest carbon credits in a proposed conservation program are measured, governed, and experienced, while separately examining two neuroscience specialties' account of memory-related neural dynamics.",
+  "project_context": "Meeting A concerns a proposed forest-carbon-credit program in the Alto Verde region, where a university team is preparing a joint study of credit calculations, forest change, and local decision-making. Meeting B is an unrelated discussion between two neuroscience researchers planning a study of hippocampal replay during memory consolidation.",
+  "plan_document": null,
+  "ground_truth": {
+    "Meeting A": {
+      "disciplines_present": [
+        "ecology",
+        "political science",
+        "science & technology studies"
+      ],
+      "is_cross_disciplinary": true,
+      "reason": "The participants come from three distinct disciplines and contribute distinct ecological, governance, and knowledge-production approaches to the carbon-credit problem.",
+      "evidence": "Meeting A \u2014 March 12, 2027"
+    },
+    "Meeting B": {
+      "disciplines_present": [
+        "neuroscience"
+      ],
+      "specialties_present": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "is_cross_disciplinary": false,
+      "reason": "The participants use different specialties and methods, but both belong to neuroscience and share its core concepts and training vocabulary concerning hippocampal replay and memory consolidation.",
+      "evidence": "Meeting B \u2014 March 19, 2027"
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting A \u2014 March 12, 2027",
+      "disciplines": [
+        "ecology",
+        "political science",
+        "science & technology studies"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Luc\u00eda Herrera",
+          "discipline": "ecology",
+          "functional_role": "postdoctoral researcher",
+          "background": "A forest ecologist with six years of postdoctoral and field-research experience in tropical dry-forest and forest-frontier landscapes in Latin America. She designs carbon-monitoring studies using permanent forest inventory plots, biomass allometry, Landsat and Sentinel time series, and spatial analyses of leakage and disturbance. She has contributed to evaluations of avoided-deforestation projects but is wary of claims that remote sensing alone can establish causality or long-term permanence.",
+          "distinct_perspective": "Luc\u00eda treats the proposed credits first as an empirical claim about biophysical change: compared with a defensible counterfactual, did the program prevent carbon loss, and did clearing shift beyond the project boundary? She will press for transparent baseline construction, field validation of satellite classifications, and monitoring that distinguishes temporary canopy retention from durable carbon storage. She is cautious about governance analyses that infer ecological outcomes from stated rules without measuring forest change.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Samuel Okoro",
+          "discipline": "political science",
+          "functional_role": "postdoctoral researcher",
+          "background": "A political scientist with four years of postdoctoral research on decentralization, land tenure, and environmental enforcement in rural resource-governance settings. His work combines institutional mapping, elite and household interviews, archival review of concessions and cadastral records, and comparative case analysis. He has studied how formally designated conservation authority is altered by overlapping customary claims, patronage networks, and uneven enforcement capacity.",
+          "distinct_perspective": "Samuel approaches Alto Verde as a contested authority system rather than a bounded project site. He wants to identify who can credibly authorize land-use restrictions, how municipal offices and village councils resolve\u2014or fail to resolve\u2014overlapping claims, and whether enforcement changes incentives for residents, migrants, and outside logging interests. He sees forest outcomes and credit durability as contingent on legitimacy, enforcement capacity, and distributional conflict, while remaining willing to revise his account in light of ecological evidence and local testimony.",
+          "tone": "diplomatic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Maya Srinivasan",
+          "discipline": "science & technology studies",
+          "functional_role": "PhD student",
+          "background": "A fourth-year PhD student in science and technology studies researching carbon-accounting infrastructures and environmental certification. She has conducted ethnographic observation of verification processes, interviews with project developers and auditors, and document analysis of methodologies, monitoring reports, maps, and registry records. Her dissertation examines how categories such as forest, baseline, additionality, and local participation become stabilized across field teams, software platforms, and certification institutions.",
+          "distinct_perspective": "Maya examines how measurements and assumptions acquire authority as tradable credits. She will ask how plot measurements, satellite classifications, boundary maps, and baseline models are translated into audit-ready evidence; who gets to classify uncertainty as acceptable; and why some local accounts of land use or boundaries count as data while others are treated as anecdote. She does not deny the importance of ecological measurement or institutional analysis, but emphasizes that the credit is produced through practices of standardization, verification, and admissibility that deserve study in their own right.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a proposed forest-carbon-credit program in the Alto Verde region, where a university team is preparing a joint study of credit calculations, forest change, and local decision-making. Meeting B is an unrelated discussion between two neuroscience researchers planning a study of hippocampal replay during memory consolidation.\n\nMeeting A \u2014 March 12, 2027. The Alto Verde research team is aligning its study of the proposed forest carbon program before fieldwork and document collection begin.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Three researchers participate: an ecologist, a political scientist, and an STS researcher. The ecologist explains that the project must test the counterfactual deforestation baseline, detect displacement of clearing to nearby areas, and combine forest inventories with satellite observations to assess carbon loss and permanence. The political scientist raises overlapping land claims, the division of authority between municipal officials and village councils, and whether enforcement can prevent outside logging. The STS researcher focuses on how field measurements, satellite classifications, and baseline assumptions are turned into tradable credits; they ask how auditors and certifiers decide which local knowledge is admissible. The group agrees to coordinate evidence collection but does not settle whose account should control disputed boundary and baseline decisions.",
+        "explicit_instruction": "Three researchers participate: an ecologist, a political scientist, and an STS researcher. The ecologist explains that the project must test the counterfactual deforestation baseline, detect displacement of clearing to nearby areas, and combine forest inventories with satellite observations to assess carbon loss and permanence. The political scientist raises overlapping land claims, the division of authority between municipal officials and village councils, and whether enforcement can prevent outside logging. The STS researcher focuses on how field measurements, satellite classifications, and baseline assumptions are turned into tradable credits; they ask how auditors and certifiers decide which local knowledge is admissible. The group agrees to coordinate evidence collection but does not settle whose account should control disputed boundary and baseline decisions.",
+        "ground_truth": {
+          "participants_and_disciplines": [
+            "ecology",
+            "political science",
+            "science & technology studies"
+          ],
+          "key_contributions": {
+            "ecology": "carbon baselines, leakage, forest measurement, and permanence",
+            "political science": "land tenure, authority, and enforcement",
+            "science_technology_studies": "how measurements and knowledge claims become certified carbon credits"
+          }
+        }
+      },
+      "ground_truth": {
+        "participants_and_disciplines": [
+          "ecology",
+          "political science",
+          "science & technology studies"
+        ],
+        "key_contributions": {
+          "ecology": "carbon baselines, leakage, forest measurement, and permanence",
+          "political science": "land tenure, authority, and enforcement",
+          "science_technology_studies": "how measurements and knowledge claims become certified carbon credits"
+        }
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Morning, everyone. Before we start, did the updated municipal concession file from last week ever come through to the group? I may have missed it. For today, I was hoping we could- I want us to get clear on what each of us needs before we treat the proposed project boundary as meaningful, instead of just taking the designation at face value."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "I don't think I saw the updated concession file either\u2014was it meant to include the GIS attachment, or just the municipal resolution? For me, the boundary becomes meaningful partly through the paperwork that makes it auditable. Which map version is treated as controlling, who signed off on it, and whether residents' boundary accounts can enter the record as more than, sorry, just context."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Mm, yes, that distinction matters."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Quick question from last week, did anyone ever circulate the preliminary GIS layer with the concession file? On the ecological side, I need to know which boundary is operational before we build any baseline or leakage analysis. A legally clean polygon can still be pretty meaningless if clearing and local access patterns, if they just ignore it."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Before we settle on an operational polygon, do we know which certification methodology and verifier Alto Verde is likely to use? I'm asking because the admissible map, and even what counts as a discrepancy worth documenting- that can change with their rules, not just with what's happening on the ground."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "I\u2019d want to avoid letting the verifier\u2019s preferred polygon quietly become our ecological, um, unit. Do we know whether they\u2019ve named a methodology yet? Because if not, we should probably preserve the competing boundary versions and test leakage across a wider surrounding zone, rather than only just outside whichever line ends up in the documents."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Preserving them is important, but I'd also want us to record when one version starts being treated as authoritative and who is doing that. A wider zone may capture leakage ecologically, but if the methodology only recognizes the project polygon, it can- that gap can disappear from the credit file, and that's something we should follow too."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Mm, yes, and that gap isn't just administrative for us. If the recognized polygon is narrower than the area where access restrictions or land prices are changing, we could call the project stable while carbon loss has simply shifted\u2014moved. Do Samuel's interviews or records show who actually recognizes these different lines when the formal map and local claims diverge?"
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Not yet, at least not systematically. The cadastral review has already turned up one awkward case. Two adjacent parcels show up as a single municipal concession, but village notes describe them as separately managed commons. So I'd want to interview council members, municipal land staff, and users around those parcels before we infer recognition from the map. It could be an obsolete record, but it could also be a deliberately useful ambiguity."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "That\u2019s exactly the kind of ambiguity I\u2019d want to trace, not resolve too quickly. Samuel, if the municipal staff and the councils give incompatible accounts, what would persuade you that one is actually shaping land-use decisions? Use patterns, sanctions, who grants permission? And we should keep the contradictory records in the file, not just turn them into one clean boundary."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Mm, sanctions especially."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Sanctions are one indicator, but not the only one. Who can authorize cultivation or timber access, whether people comply with that authorization, and who residents turn to when there's a dispute may tell us more than a formal penalty. The awkward part is that patronage can make a municipal claim look effective in one household network and irrelevant in the next, so we should ask about actual episodes, not just stated rules."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Actual episodes seem crucial because those are also the moments when a verifier may ask for evidence and decide whose account is legible. I\u2019m wondering, if a household follows a council\u2019s permission informally but the municipal file says otherwise, what record would make that practice visible without- without immediately recoding it as anecdotal?"
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Could we geo-reference those episodes, even roughly? Where permission was granted, where cultivation actually occurred, and when. I\u2019m not saying that makes an account more- it doesn\u2019t make it more true, but it would let us compare the accounts against the disturbance record and see whether those apparently stable pixels are tied to a boundary people actually use."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Mm, roughly, yes."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "That would help, especially if we keep the rough location and the account linked, rather than stripping the account away once it becomes a point on a map. Luc\u00eda, what would make you doubt the satellite classification, even if it clears the usual accuracy threshold? Say residents describe seasonal cultivation or access that the imagery is, is flattening out."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "I\u2019d doubt it if the classification is just seeing a green canopy signal and not the structure underneath. In the dry-forest pilot, we had plots that looked similarly stable from space but had very different stem density and regrowth, so seasonal cultivation or repeated understory clearing could matter a lot, even above the nominal accuracy threshold. We\u2019d need a few field plots and, ideally, dates from those local accounts to see what the sensor is actually- what it\u2019s missing."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "And I\u2019d want the field notes to say not just what the plot shows, but what prompted us to put a plot there, there. A local account, a classification edge, a suspected access route. Otherwise, by the time it reaches a monitoring report, the plot can look like neutral validation instead of a response to a dispute about what the imagery is seeing."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Yeah, keep that provenance."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "And for the permission episodes, the provenance includes who felt able to speak to us at all. If we sample only people named by the council or municipal office, we may reproduce the same authority claim we're trying to examine. I think we need a way to reach recent migrants and households along the, um, access routes too."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "I\u2019d be careful that our recruitment trail becomes part of the evidence record, who referred whom, which accounts we couldn\u2019t reach, and why. Otherwise, an audit later might read the interview set as a neutral community consultation, when it was already shaped by the same access routes and authorities we\u2019re trying to\u2014"
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "And I'd add a small safeguard. Recruitment through offices and councils should be just one entry point, not the frame. We can sample outward from the disputed parcels and access routes, then record refusals and referral chains separately, separately, because otherwise silence from migrants or unregistered users gets mistaken for absence of a claim."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Yes, and that separate record matters for more than recruitment ethics. If the project documents end up saying \"community consultation,\" we should be able to see which people and claims were excluded by the route into consultation, instead of letting that label stand in for a settled constituency. And I'm still wondering, before field preparation starts, whether we can get the methodology and verifier name. I lost the thread there, but that's what I mean."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "I haven\u2019t seen it named, no. Before field preparation, could we get the sponsor to confirm both the proposed methodology and verifier, but not let that determine our sampling frame? I\u2019m still concerned the municipal files may be outdated, so I\u2019d rather preserve the competing, competing claims even if the eventual credit documentation only recognizes one polygon."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "I think we should ask the sponsor for those names now, but frame it as a documentation question, not as though their eventual choice is the ground truth. And if they can't name them yet, that uncertainty is worth recording too, because the evidence standards may still be getting, um, negotiated while the boundary is already being made operational."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Alongside that request, I think we should ask whether there are actually comparable reference areas, and whether there\u2019s enough historical imagery to build a baseline before anyone implies the credits are measurable. If the baseline is weak, knowing the eventual verifier helps us understand the paperwork, but it won\u2019t make avoided loss identifiable. I need to check the, um, archive coverage around Alto Verde, though."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Mm, and if the baseline has to be revised because the archive or the reference areas are inadequate, I\u2019d want to follow how that revision gets documented. Whether it shows up as a technical limitation, a methodological choice, or it just\u2014whether it disappears before the credit claim. We should ask the sponsor for any early baseline memos, if they exist, along with the methodology and verifier."
+        },
+        {
+          "speaker": "Dr. Luc\u00eda Herrera",
+          "text": "Hm, if they exist."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "And I\u2019d want any early baseline memo read alongside the access history, not just as a technical precursor. A reference area may look comparable in the imagery but sit under a quite different enforcement arrangement or set of claims, and that changes what displacement would mean. We can probably keep that as an open check until Luc\u00eda knows what coverage is available."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "Before we break, could the sponsor request explicitly include any correspondence about why particular reference areas were selected or rejected? The final baseline memo may make those choices look settled, and I think the earlier exchanges are where we may actually see what kinds of ecological and governance differences were treated as- what they treated as material."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "Yes\u2014especially the rejected reference areas; those choices may encode governance differences."
+        },
+        {
+          "speaker": "Maya Srinivasan",
+          "text": "I think we should let people go a few minutes early. Thanks, both. Once we hear back from the sponsor and Luc\u00eda has checked the coverage, we can pick this up."
+        },
+        {
+          "speaker": "Dr. Samuel Okoro",
+          "text": "All right. Take care, both."
+        }
+      ],
+      "seed_location": "Turns 1-32. The dialogue is genuinely cross-disciplinary: Dr. Luc\u00eda Herrera contributes ecology through ecological baselines, leakage/displaced clearing, reference areas, historical imagery, field plots/forest structure, satellite classifications, carbon loss, and permanence-related stability (especially turns 4, 6, 8, 14, 17, 26, 29). Dr. Samuel Okoro contributes political science through overlapping municipal and village land claims, authority, permissions, sanctions, enforcement arrangements, patronage, and access to timber/cultivation (especially turns 1, 9, 12, 20, 22, 24, 29). Maya Srinivasan contributes STS by examining how maps, field observations, classifications, baseline choices, provenance, local accounts, methodologies, auditors/verifiers, and documentation become authoritative and credit-eligible (especially turns 2, 5, 7, 10, 13, 16, 18, 21, 23, 25, 27, 30). They agree to coordinate evidence collection and sponsor requests, while preserving competing claims and leaving boundary/baseline authority unresolved (turns 22-30).",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          4,
+          6,
+          8,
+          9,
+          12,
+          13,
+          16,
+          17,
+          20,
+          22,
+          24,
+          26,
+          27,
+          29,
+          30
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by the highly polished, thesis-like construction of many turns. For example, turns 6, 7, 10, 16, 18, 23, 25, 27, and 30 each articulate a complete analytical point and tidy implication, making the exchange read more like scripted expert dialogue than spontaneous discussion.",
+          "Disfluencies are present but often function as surface decoration on otherwise finished prose (for example turns 6, 13, 17, 21, and 23). The repeated em-dash cutoffs and self-repairs feel patterned rather than arising from real conversational pressure.",
+          "Turn 23 uses the prohibited stock phrase \"I lost the thread there,\" despite the explicit meeting-style instruction not to use \"lost my thread.\"",
+          "The meeting resolves procedural questions unusually smoothly: nearly every concern immediately becomes an agreed documentation or sampling practice. The central authority dispute remains open as required, but more uncertainty, unanswered questions, or partial misunderstanding would improve realism."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.29,
+        "turn_moves": {
+          "question": 9,
+          "agreement": 5,
+          "proposal": 11,
+          "answer": 2,
+          "request": 4,
+          "backchannel": 2
+        },
+        "volunteer_turns": [],
+        "unsure_turns": [
+          1,
+          2,
+          6,
+          9,
+          23,
+          24,
+          26
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.29,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by the highly polished, thesis-like construction of many turns. For example, turns 6, 7, 10, 16, 18, 23, 25, 27, and 30 each articulate a complete analytical point and tidy implication, making the exchange read more like scripted expert dialogue than spontaneous discussion.",
+            "Disfluencies are present but often function as surface decoration on otherwise finished prose (for example turns 6, 13, 17, 21, and 23). The repeated em-dash cutoffs and self-repairs feel patterned rather than arising from real conversational pressure.",
+            "Turn 23 uses the prohibited stock phrase \"I lost the thread there,\" despite the explicit meeting-style instruction not to use \"lost my thread.\"",
+            "The meeting resolves procedural questions unusually smoothly: nearly every concern immediately becomes an agreed documentation or sampling practice. The central authority dispute remains open as required, but more uncertainty, unanswered questions, or partial misunderstanding would improve realism."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting B \u2014 March 19, 2027",
+      "disciplines": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Serrano",
+          "discipline": "cognitive neuroscience",
+          "functional_role": "domain expert",
+          "background": "Dr. Serrano is a cognitive neuroscientist with 12 years of research experience studying human spatial learning and episodic memory. She designs behavioral tasks that pair navigation or object-location learning with post-learning rest, then relates later recall accuracy and confidence to hippocampal activity measured with intracranial recordings and high-resolution fMRI. Her recent work has focused on distinguishing neural signatures associated with durable memory from activity that accompanies weak or forgotten experiences.",
+          "distinct_perspective": "She begins with the behavioral phenomenon: what was learned, what is later remembered, and whether a putative replay event predicts a meaningful memory outcome. For the proposed study, she advocates a spatial-memory task followed by quiet rest and a delayed recall test, with preregistered criteria separating stronger memories from forgetting. She treats hippocampal place representations and replay as mechanisms that must be anchored to interpretable changes in memory behavior, while recognizing that the exact neural readout requires close collaboration with computational modeling.",
+          "tone": "cautious",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "assertive",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Aaron Feldman",
+          "discipline": "computational neuroscience",
+          "functional_role": "principal investigator",
+          "background": "Dr. Feldman is a computational neuroscientist and principal investigator with 15 years of experience analyzing multichannel hippocampal recordings in rodents and humans. His lab develops Bayesian decoders, state-space models, and generative simulations of sequential neural activity to study candidate replay during rest and sleep. He has published methodological work on false-positive sequence detection, including how classifier calibration, temporal smoothing, and threshold selection can turn noisy population activity into apparently structured replay events.",
+          "distinct_perspective": "He frames replay as an inference problem: candidate sequences must be decoded from population activity, tested against carefully matched nulls, and compared with explicit models of sequence generation rather than accepted because they resemble trajectories. He supports linking neural events to later recall, but emphasizes that behavioral associations cannot rescue a biased detector. He will push the group to preregister decoder training, classifier thresholds, null distributions, and neural inclusion criteria, while leaving open which model-comparison metric\u2014such as predictive likelihood, Bayes factors, or cross-validated performance\u2014should be primary.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a proposed forest-carbon-credit program in the Alto Verde region, where a university team is preparing a joint study of credit calculations, forest change, and local decision-making. Meeting B is an unrelated discussion between two neuroscience researchers planning a study of hippocampal replay during memory consolidation.\n\nMeeting B \u2014 March 19, 2027. Two researchers are refining an experiment and analysis plan on hippocampal replay during post-learning rest.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: A cognitive neuroscientist and a computational neuroscientist participate. The cognitive neuroscientist proposes a spatial-memory task followed by quiet rest, with later recall used to distinguish replay associated with stronger memory from replay associated with forgetting. The computational neuroscientist proposes decoding candidate replay sequences from multichannel hippocampal recordings and comparing them with simulated sequence-generation models, while warning that classifier thresholds can create apparent replay events. Both refer to hippocampal place representations, replay, and memory consolidation as shared concepts. They agree to preregister behavioral and neural criteria, but leave unresolved which model-comparison metric should be primary.",
+        "explicit_instruction": "A cognitive neuroscientist and a computational neuroscientist participate. The cognitive neuroscientist proposes a spatial-memory task followed by quiet rest, with later recall used to distinguish replay associated with stronger memory from replay associated with forgetting. The computational neuroscientist proposes decoding candidate replay sequences from multichannel hippocampal recordings and comparing them with simulated sequence-generation models, while warning that classifier thresholds can create apparent replay events. Both refer to hippocampal place representations, replay, and memory consolidation as shared concepts. They agree to preregister behavioral and neural criteria, but leave unresolved which model-comparison metric should be primary.",
+        "ground_truth": {
+          "participants_and_specialties": [
+            "cognitive neuroscience",
+            "computational neuroscience"
+          ],
+          "shared_field": "neuroscience",
+          "key_contributions": {
+            "cognitive_neuroscience": "memory task design and behavioral interpretation of replay",
+            "computational_neuroscience": "neural decoding, simulation, and model comparison"
+          }
+        }
+      },
+      "ground_truth": {
+        "participants_and_specialties": [
+          "cognitive neuroscience",
+          "computational neuroscience"
+        ],
+        "shared_field": "neuroscience",
+        "key_contributions": {
+          "cognitive_neuroscience": "memory task design and behavioral interpretation of replay",
+          "computational_neuroscience": "neural decoding, simulation, and model comparison"
+        }
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "Hi Maya\u2014quick logistical thing, did the revised task timeline I sent after last week ever come through? I mainly want us to leave today with a sensible recall endpoint and an analysis plan that doesn't let the replay detector decide the result for us."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "It did. Sorry, I only got to it this morning. I like the delayed recall endpoint, but before we lock it in, do you think the timing gives us enough variation to separate accurate location memory from confident-but-wrong routes? That showed up in the pilot, and I don't want confidence to quietly become the outcome just because it's easier to score."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "Confidence has to stay separate from accuracy. Otherwise, we risk calling a vivid reconstruction a durable spatial memory. From the neural side, I'd prefer exact location as the primary endpoint, and then model route structure and confidence alongside it. But how much forgetting did the pilot actually show at that delay? We need enough errors to discriminate outcomes without making the layout feel arbitrary."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "In the pilot, at that delay, we had enough wrong locations to work with, but not enough outright blanks for a clean remembered-versus-forgotten split. So I'd keep exact location as the primary outcome, but preregister graded accuracy instead of forcing a binary label. Maybe we add a slightly longer delayed test for a subset. I worry the layout gets arbitrary if we just increase the difficulty."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "A subset could be useful, though I\u2019d worry about turning delay into a second task condition when we have too little data per cell. If we keep graded location error as primary, could we make the longer test exploratory at first? And for the recordings, I need to check the unit yield. I mean, whether it supports item-level decoding across both delays before we build the neural question around that split."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "Exploratory makes sense for the longer delay. I don't want the primary question to depend on a sparse subgroup. But before we settle that, how stable are your place estimates from learning into quiet rest? If the decoder itself shifts across those periods, then an item-level replay difference by graded accuracy is hard to interpret, even if we have enough trials."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "That\u2019s the right concern. I wouldn\u2019t assume the learning-place fields transfer unchanged into rest. We need to quantify cross-period stability on held-out learning data, and probably allow an explicit remapping or drift component instead of baking stability into the decoder. If rest decoding only looks item-specific under one smoothing window or one registration choice, then, um, that\u2019s a detector result, not evidence for replay."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "And could you send me the null checks you used in the earlier sequential analyses? I\u2019m especially interested in which matched controls actually produced convincing-looking sequences, time shuffles, trajectory-label swaps, whatever, because I\u2019d want those specified alongside the drift model before we ask whether a rest event predicts lower location error."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "The most deceptive ones were usually the label swaps and rate-matched population surrogates. Simple time shuffles can be almost too easy to reject because they wreck the autocorrelation. I\u2019ll send the full set, but I think we should preregister at least a trajectory-label permutation, a within-rest circular shift, and simulations with drift but no sequential generator. Otherwise the drift model is just another way for the decoder to manufacture\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "The drift-only simulations feel essential, because otherwise we could end up explaining a behavioral association with a sequence score that the rest data could generate on its own. I\u2019d want the same nulls applied within the graded accuracy analysis, not just to establish that replay exists overall. And maybe we should decide now whether confidence is a covariate or a secondary outcome, since those, those confident spatial errors were pretty systematic in the pilot."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "I'd make confidence a secondary outcome, not a covariate in the primary graded-error model. It may be part of the mechanism, or at least share variance with whatever replay is doing, so controlling for it up front could erase the association we actually need to understand. We can preregister a sensitivity model with confidence included, and ask whether the neural effect is specific to location error or tracks, um, subjective certainty too."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "I think that\u2019s the cleanest split. The primary model is replay versus graded location error, and then confidence is secondary, and the sensitivity model tells us whether the apparent spatial effect survives once certainty is in there. I\u2019d also like to look at the confident-wrong cases descriptively. They may be few, but they\u2019re exactly where a replay account could mean something different."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "Descriptively is right for those, and I'd be very cautious about making them a separate neural subgroup unless the counts surprise us. One thing I want to check, though, is should we define replay exposure as event count, sequence strength, or something like total posterior mass? Those can behave pretty, pretty differently under the drift-only null, especially with the smoothing issue I saw in the last set."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "I\u2019d resist choosing one of those as the exposure before we see how each one behaves against the behavioral endpoint. Event count is probably easiest for me to interpret, how often an item was revisited, but if strength or posterior mass is more stable under the drift null, that may be the defensible primary measure. Could we preregister one primary metric based on its null calibration, and keep the other two as converging analyses instead of letting whichever predicts error best win, and then..."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "That\u2019s the right way to choose it, not by which exposure happens to predict error best. I\u2019d rank the three on calibration against the trajectory-label, circular-shift, and drift-only nulls, plus stability across a prespecified smoothing range. Then the primary is whichever survives that without inflating false sequences. I\u2019m not yet sure whether posterior mass or, um, strength will win there, so we should leave the exact metric contingent on that preregistered calibration step."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "Okay, but I\u2019d want that calibration step to be blind to the recall data, not just formally listed beforehand. Otherwise we\u2019re still choosing a neural measure after seeing which one feels most plausible for the behavior. Could we freeze the metric based only on held-out recordings and those null results, and then bring in graded location error?"
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "That\u2019s important. We can lock the choice using held-out recordings only. We assess calibration under the three null families, stability across the prespecified smoothing range, and maybe cross-validated predictive performance for the sequence model, all without loading any recall variables. I\u2019ll need to spell out the tie-break rule, though, because I don\u2019t want us quietly choosing between two adequately calibrated metrics after the fact."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "The tie-break needs to be mechanical enough that neither of us can reinterpret it later. Maybe calibration failure rules out a metric first, then among the survivors, we use the lowest held-out false-positive rate across the nulls, with a prespecified stability threshold. If they're still- if we still have a tie, we declare both primary rather than pick on intuition. Is that going to be feasible with the amount of held-out recording we expect?"
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "I think so, as long as we hold out blocks at the recording-session level, not by randomly splitting events, because otherwise correlated rest activity leaks across the split. The two-primary fallback is feasible, but I\u2019d set it up so both, both have to pass the same calibration and stability criteria, and we report the multiplicity adjustment for the behavioral tests. I need to check the expected unit yields, though. That\u2019s the limiting piece."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "Reserving whole recording blocks is non-negotiable if the rest activity is correlated. If unit yield means we can't support that split and the behavioral model, I'd rather simplify the neural claim than relax the holdout rule. Do you have even a rough sense, um, from the prior sessions how often we'd fall below that threshold?"
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "Roughly, from the prior sessions, I'd expect maybe a third to be marginal once we require stable units across learning and rest. I need to verify that against the actual yield table, because the item-specific requirement is stricter than in our old analyses. But I agree, if that leaves us underpowered, we simplify to a coarser sequence claim rather than split correlated blocks or loosen the calibration."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "We should make that simplification explicit now. Sessions that fail the whole-block holdout and stability criteria can contribute to an overall, coarser replay analysis, but not to the item-level location-error test. I don't want missing item-level decoding treated as evidence that those memories had no replay. Could you check that yield table before we freeze the sample-size assumptions?"
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "That distinction matters. A failed decoder is missing measurement, not a zero-replay observation. I\u2019ll check the yield table against the whole-block split and the stability criterion, and we can set the item-level sample assumptions from that rather than, rather than backfill them. If it\u2019s too thin, the coarser analysis stays explicitly separate."
+        },
+        {
+          "speaker": "Dr. Maya Serrano",
+          "text": "Okay, I think we should stop there, and the rest can wait until next time. Thanks, Aaron. Once you\u2019ve checked the yield table, we can pick this back up."
+        },
+        {
+          "speaker": "Dr. Aaron Feldman",
+          "text": "Sounds good. Take care, Maya."
+        }
+      ],
+      "seed_location": "The transcript is consistent with two neuroscience specialties (cognitive and computational neuroscience), not a genuinely cross-disciplinary pairing. Cognitive-neuroscience/task-design contributions appear primarily in turns 2, 4, 10, 12, 14, 16, 18, 20, and 22 (delayed spatial recall, graded location error, confidence, behavioral interpretation). Computational-neuroscience contributions appear primarily in turns 3, 5, 7, 9, 13, 15, 17, 19, 21, and 23 (unit-level/place-field decoding, null simulations, drift, calibration, held-out recordings). Shared concepts are present throughout, including place representations/fields (6-7), replay (1, 7, 9-17, 22-23), and memory outcomes/consolidation-related behavioral interpretation (2-4, 10-12). They agree to preregister behavioral and neural criteria (4, 9-12, 14-19, 22-23). However, the seed condition that the primary model-comparison metric remains unresolved is incomplete/missing: turns 14-19 establish a preregistered calibration and tie-break procedure, but do not discuss comparison among simulated sequence-generation models as a primary model-comparison metric; the exact replay exposure metric remains contingent on calibration (15, 17-19).",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          6,
+          7,
+          8,
+          9,
+          10,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          23
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by highly polished, uniformly substantial alternating turns. Most turns present a complete concern, rationale, and proposed resolution; there are almost no brief acknowledgments, partial thoughts, or organically loose exchanges beyond the closing (turns 2-23).",
+          "The apparent disfluencies are often inserted into otherwise carefully composed technical paragraphs, especially repeated words and 'um' in turns 7, 11, 13, 15, 19, 20, 23. This reads more like scripted naturalization than spontaneous speech.",
+          "The transcript does not explicitly establish the full task sequence of spatial-memory learning followed by quiet rest; learning and rest are implied in turns 6-7 and 21, and delayed recall is explicit, but an explicit statement of the proposed spatial-memory task and quiet-rest phase would make the seed fully recoverable.",
+          "The required unresolved issue is only partially represented: turns 14-19 leave the primary replay exposure metric contingent on calibration, but the transcript does not clearly discuss or leave open a primary model-comparison metric such as predictive likelihood, Bayes factors, or cross-validated performance. Turn 17 mentions cross-validated predictive performance only as a possible calibration input.",
+          "Shared concepts are substantially present through place fields/place estimates and replay, but 'memory consolidation' is not explicitly named."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.96,
+        "written_turns": [
+          3
+        ],
+        "exploration_share": 0.24,
+        "turn_moves": {
+          "question": 5,
+          "proposal": 10,
+          "observation": 1,
+          "request": 2,
+          "answer": 2,
+          "agreement": 3,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          9,
+          17,
+          23
+        ],
+        "unsure_turns": [
+          5,
+          15,
+          19,
+          21,
+          23
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 25,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.24,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by highly polished, uniformly substantial alternating turns. Most turns present a complete concern, rationale, and proposed resolution; there are almost no brief acknowledgments, partial thoughts, or organically loose exchanges beyond the closing (turns 2-23).",
+            "The apparent disfluencies are often inserted into otherwise carefully composed technical paragraphs, especially repeated words and 'um' in turns 7, 11, 13, 15, 19, 20, 23. This reads more like scripted naturalization than spontaneous speech.",
+            "The transcript does not explicitly establish the full task sequence of spatial-memory learning followed by quiet rest; learning and rest are implied in turns 6-7 and 21, and delayed recall is explicit, but an explicit statement of the proposed spatial-memory task and quiet-rest phase would make the seed fully recoverable.",
+            "The required unresolved issue is only partially represented: turns 14-19 leave the primary replay exposure metric contingent on calibration, but the transcript does not clearly discuss or leave open a primary model-comparison metric such as predictive likelihood, Bayes factors, or cross-validated performance. Turn 17 mentions cross-validated predictive performance only as a possible calibration input.",
+            "Shared concepts are substantially present through place fields/place estimates and replay, but 'memory consolidation' is not explicitly named."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short to medium turns, with a long, uninterrupted presentation style during formal talks followed by brief, conversational Q&A. Before the meeting starts, participants use casual small talk, frequent greetings, laughter-like acknowledgments, repetitions, and self-corrections; the transcript suggests occasional overlap and loose turn-taking, though interruptions are generally friendly rather than adversarial. Formality shifts noticeably: the host and introductions are moderately formal but spoken informally, while discussion among colleagues is relaxed, collegial, and full of \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d \u201cyou know,\u201d and repeated words. Speakers hedge often with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit seems,\u201d and \u201cI guess,\u201d especially when speculating. Questions tend to begin with praise or framing (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question\u201d) and then unfold in multi-part, sometimes meandering form. Participants build on prior remarks by restating parts of the answer, offering related possibilities, and inviting future collaboration; disagreement is indirect and framed as uncertainty, alternative explanations, or open questions rather than blunt correction.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

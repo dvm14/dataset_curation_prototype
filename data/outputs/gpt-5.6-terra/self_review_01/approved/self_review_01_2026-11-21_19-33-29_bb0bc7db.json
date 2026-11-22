@@ -1,0 +1,938 @@
+{
+  "series_id": "bb0bc7db",
+  "generated_at": "2026-11-21T19:33:29.250646",
+  "task_id": "self_review_01",
+  "benchmark_category": "Self-review",
+  "benchmark_task": "Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.",
+  "input_type": "meeting_sequence",
+  "research_id": "community_fisheries",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 1,
+  "research_problem": "How can the community-managed reef fishery redesign catch limits so reef-fish stocks recover without excluding fishing-dependent households or undermining customary governance?",
+  "project_context": "A joint ecology, economics, and anthropology team is advising the Kaloa Reef Council, which manages a nearshore reef fishery used by three villages. The council wants a defensible catch-limit proposal before the next fishing season, but the team is still reconciling ecological recovery targets with household dependence and customary tenure rules.",
+  "plan_document": null,
+  "ground_truth": {
+    "question_over_time": [
+      {
+        "meeting": "Meeting 1 \u2014 March 4, 2027",
+        "question": "How can catch limits restore Kaloa Reef fish stocks without harming fishing-dependent households?"
+      },
+      {
+        "meeting": "Meeting 2 \u2014 March 25, 2027",
+        "question": "Can a rule targeted to rabbitfish spawning aggregations restore the declining stock while protecting households most reliant on aggregation-season income?"
+      },
+      {
+        "meeting": "Meeting 3 \u2014 April 15, 2027",
+        "question": "How can clan-enforced seasonal closures at the two rabbitfish spawning sites, paired with household-level transition support and locally nominated monitoring, rebuild rabbitfish spawning biomass without excluding fishing-dependent households?"
+      }
+    ],
+    "drivers_of_change": [
+      {
+        "transition": "Meeting 1 to Meeting 2",
+        "driver": "Ecological data localized the acute decline to rabbitfish spawning aggregations, and household and customary-tenure findings showed that a uniform annual quota would disproportionately burden dependent households and lack local legitimacy."
+      },
+      {
+        "transition": "Meeting 2 to Meeting 3",
+        "driver": "Feasibility findings indicated that seasonal protection of the two sites would yield the key biological benefit, while targeted household support and clan-led enforcement could address the concentrated economic burden and governance requirements."
+      }
+    ],
+    "constants": "Across all meetings, the project retains two linked aims: recovery of depleted reef-fish stocks and avoidance of exclusion or undue harm to fishing-dependent households. The work also consistently treats ecological evidence, household economics, and customary clan governance as necessary parts of the design."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 4, 2027",
+      "disciplines": [
+        "ecology",
+        "economics",
+        "anthropology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Leilani Moana",
+          "discipline": "ecology",
+          "functional_role": "postdoctoral researcher",
+          "background": "A marine ecologist with four years of postdoctoral field research in Pacific nearshore reefs and prior doctoral work on herbivorous fish assemblages. She has conducted underwater visual censuses, belt transects, spawning-aggregation observations, and biomass-to-reference-point assessments with local fishers and reef monitors. She is responsible for compiling the Kaloa Reef stock-status evidence and translating it into recovery-relevant indicators.",
+          "distinct_perspective": "Leilani frames the problem around whether fish populations can rebuild reproductive capacity and ecological function. She treats biomass relative to the locally adopted recovery benchmark, size structure, fishing pressure, and the timing and location of spawning aggregations as essential evidence. She is careful not to assume that a biologically appealing intervention is socially workable, but is confident that any catch-limit proposal must be anchored in measurable stock recovery dynamics.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Arun Patel",
+          "discipline": "economics",
+          "functional_role": "domain expert",
+          "background": "A fisheries economist with 15 years of experience studying small-scale coastal livelihoods, seasonal income risk, and distributional effects of fisheries regulation. His work combines household expenditure surveys, landing and price records, participatory wealth ranking, and scenario modeling of how changes in catch affect food consumption, debt, and cash income. He has advised community fisheries on safeguards for households with limited alternatives to fishing.",
+          "distinct_perspective": "Arun sees a catch limit as a change in risk and resource access that will not fall evenly across households. He focuses on seasonal earnings, dependence on reef fish for food and cash, debt obligations, alternative livelihood options, and the difference between an average welfare effect and hardship for the least able to absorb lower landings. He will press the team to define whose losses and benefits count, while deferring to ecologists on biological thresholds and to anthropologists on customary authority and sharing obligations.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Mereana Vakalalabure",
+          "discipline": "anthropology",
+          "functional_role": "project manager",
+          "background": "A social anthropologist and project manager with 11 years of experience conducting ethnographic and participatory research with customary marine-tenure communities in the Pacific. She has worked through long-term village residence, semi-structured interviews, kinship mapping, fishing-ground histories, and community-led meeting facilitation. For the Kaloa study, she coordinates the research process and advises on how clan tenure, local legitimacy, and sharing practices shape the practical meaning of any restriction.",
+          "distinct_perspective": "Mereana treats fisheries rules as social institutions rather than only technical controls. She emphasizes that rights to fishing grounds are embedded in clan authority, obligations to kin, and negotiated local legitimacy; a restriction aimed at a named permit holder may affect extended households and may be interpreted differently across tenure groups. She will question overly individualistic measures of impact and insist that the study identify who has authority to make, enforce, and revise rules before proposing a design.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint ecology, economics, and anthropology team is advising the Kaloa Reef Council, which manages a nearshore reef fishery used by three villages. The council wants a defensible catch-limit proposal before the next fishing season, but the team is still reconciling ecological recovery targets with household dependence and customary tenure rules.\n\nMeeting 1 \u2014 March 4, 2027. Initial project framing session for the Kaloa Reef Council catch-limit study. The team is defining the evidence needed and the central question the study should answer.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 1 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: The same ecology, economics, and anthropology team meets to frame the study. The ecologist reports that herbivorous reef fish biomass is below the locally adopted recovery benchmark and that the most vulnerable species concentrate at predictable spawning aggregations. The economist explains that fishing earnings are highly seasonal and households differ substantially in their ability to absorb lower landings. The anthropologist explains that fishing grounds are held through customary clan tenure and that catches are routinely shared through kin networks, so a permit holder is not the only person affected by a restriction. In the discussion, the team settles on a broad working question about designing catch limits that restore stocks while avoiding harm to fishing-dependent households. They agree to examine stock status, income effects, and customary institutions, but do not yet choose a specific species, management unit, or policy instrument. No one connects the spawning-site evidence to a particular design change yet.",
+        "explicit_instruction": "The same ecology, economics, and anthropology team meets to frame the study. The ecologist reports that herbivorous reef fish biomass is below the locally adopted recovery benchmark and that the most vulnerable species concentrate at predictable spawning aggregations. The economist explains that fishing earnings are highly seasonal and households differ substantially in their ability to absorb lower landings. The anthropologist explains that fishing grounds are held through customary clan tenure and that catches are routinely shared through kin networks, so a permit holder is not the only person affected by a restriction. In the discussion, the team settles on a broad working question about designing catch limits that restore stocks while avoiding harm to fishing-dependent households. They agree to examine stock status, income effects, and customary institutions, but do not yet choose a specific species, management unit, or policy instrument. No one connects the spawning-site evidence to a particular design change yet.",
+        "ground_truth": {
+          "working_question": "How can catch limits be redesigned to restore Kaloa Reef fish stocks without harming households that depend on fishing?",
+          "key_facts": "Herbivorous reef fish biomass is below the recovery benchmark; fishing dependence and ability to absorb reduced catches vary across households; customary tenure and kin sharing mean catch-limit effects extend beyond individual fishers.",
+          "unresolved": "The team has not yet specified which fishery component should be limited or how customary tenure should shape the limit."
+        }
+      },
+      "ground_truth": {
+        "working_question": "How can catch limits be redesigned to restore Kaloa Reef fish stocks without harming households that depend on fishing?",
+        "key_facts": "Herbivorous reef fish biomass is below the recovery benchmark; fishing dependence and ability to absorb reduced catches vary across households; customary tenure and kin sharing mean catch-limit effects extend beyond individual fishers.",
+        "unresolved": "The team has not yet specified which fishery component should be limited or how customary tenure should shape the limit."
+      },
+      "transcript": [
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Hi, sorry, could I get a quick catch-up? I missed the last informal call, and I heard there'd been some movement on who the council thinks needs to be at the first consultation. For today, I don't want us to jump straight to a number. We need to get clear on what evidence would let us balance recovery with households' actual fishing and sharing arrangements, and who has- who actually has standing to make a limit stick."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mm, yeah."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "I think that is the right starting point. From the records, a limit could mean very different things depending on whether a household is relying on those fish for meals, cash, or getting through debt repayments in the lean season\u2014 the lean period, and the averages will hide that. Mereana, on the consultation point, do you know whether people who receive shared catch, rather than land it, are usually represented in those decisions?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Not reliably, no. The council representatives may speak for their clans, but women who clean, portion, and send fish on to relatives aren't automatically in that room, and neither are all the kin receiving it. Before we assume representation, I'd want to ask each village how those sharing obligations are actually, um, voiced, and whether the council expects particular clan people at the first consultation."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Right, that's important."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "On the ecological side, I\u2019d want the first consultation to ask where people see the larger herbivores and when they gather, not just how much is landed. Our transects put herbivore biomass below the local recovery benchmark, although I need to check whether the older monitor counts are really comparable. If the big fish are being taken at predictable spawning times, a single annual catch number may miss the main\u2014"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "That matters because spawning time may not be one thing across the grounds. Could the transects tell us which species are driving that biomass result? And are those actually the fish people here name as everyday food or sale fish? I\u2019d want to put those observations alongside fishing-ground histories. An edge reef that looks like one site on a map may- it may have quite different access and seasonal rules through different kin lines."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "I think so, at least provisionally. I can break the biomass down by species and size class from the current lanes, then crosswalk the local names with what fishers use. But with the older counts, I need to see if they recorded sizes the same way. And treating the edge reef as one ecological unit could be misleading if access shifts by kin group and season."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And I\u2019d be careful that the crosswalk isn\u2019t just a naming exercise. If a fish is locally grouped with several others as, say, the ordinary fish for a family meal, then a species-level decline may have a different practical meaning than the landing records suggest. Could we ask people to walk us through a recent good trip, what was kept, sold, and sent on to whom, alongside the species and size data?"
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That would help a lot. A good-trip walkthrough could show whether fish recorded as a sale catch are really discretionary income, or whether they're already committed to meals, kin, or maybe a debt arrangement. Our household income categories won't capture that cleanly. I'd also want the same exercise for a poor-weather or lean-period trip, because that's when a limit is most likely to bite."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And not only because the quantities change. In a lean period, who gets the smaller catch first can be an obligation question, not a household- I mean, not just a household choice. I'd like the walkthroughs to include the person who portions or distributes it. Otherwise we may hear the boat owner's account of a sharing arrangement that others would describe rather differently."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "And on the economic side, I\u2019d avoid treating the receiving household as somehow peripheral. If fish is portioned out beyond the landing household, then a limit can reduce food security for people who show almost no fishing income in our survey. I\u2019m wondering, Mereana, whether those distributors would be comfortable mapping a typical lean-month, lean-month allocation, or is that too sensitive to ask directly at a first consultation?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I think we can ask, but I wouldn't start with a full allocation map in the first room. Maybe start with a recent meal or a lean-week story, who normally expects a portion, what happens when there isn't enough, and let people decide what detail is appropriate. If we go straight to named recipients and quantities, it may sound like we're- like we're auditing obligations rather than trying to understand them."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That sounds right. We can get at the structure of the risk without asking people to expose every obligation. A lean-week story could tell us whether a smaller catch means less food, a postponed debt payment, or somebody else stepping in. And it would help me check whether our survey missed the, the months when those trade-offs are actually sharpest."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "That timing is useful for the reef work too, because a lean-week story might tell us whether people shift onto the larger herbivores or particular grounds when weather narrows their options. Arun, in your household data, how do you separate one unusually bad fishing month from a household that really- that has no buffer for a lower catch?"
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "At the moment, only imperfectly. I'd look for persistence across the landing and expenditure records, whether a low-catch month is followed by borrowing, cutting food purchases, or no recovery in the next period. But the survey may not cover the actual lean months, so that's a real gap. The lean-week stories could help distinguish a weather shock from households that routinely have no garden, savings, wage work, or kin support to fall back on."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "For the reef side, I\u2019d be interested in whether those households also change where they fish when that happens. Because the shallow patch with very few big herbivores could be seeing concentrated use in those narrow weather windows, though it could just as easily be habitat or a poor survey day. We should probably ask that without making people identify anyone\u2019s usual ground too precisely."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "We can ask about changes in routes or conditions, like, \u201cwhere can you still go when the weather turns?\u201d without asking them to hand over a map of somebody\u2019s ground. And before we use even broad ground categories, I need to check who has the authority to say that information can be discussed across the three villages. That edge reef is already less- I mean, less straightforward than it looks."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "I can work with broad habitat and exposure classes rather than named grounds at first, like shallow sheltered, outer edge, that sort of thing, and see whether the size structure changes across them. It won't prove fishing pressure, but if the missing large fish- if they line up with the weather-access pattern, that would tell us where to look more carefully."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Broad classes are a safer start. But even \u201couter edge\u201d can carry a claim about who is entitled to speak for it, so I\u2019d present those as ecological descriptions, not a shared tenure map, until we\u2019ve checked the histories with the relevant clan people. I\u2019m still wondering who the council has actually named for that first conversation. If it\u2019s only permit holders, we should catch that before invitations go out\u2014"
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Hm, before invitations go out."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Before the invitations go out, I think we should make sure it isn't just permit holders and council representatives. For the welfare evidence, we need at least some people who receive fish, and probably people managing food or debt in the, uh, lean months. Otherwise we'll build a limit around the landing household and miss who actually absorbs it. Mereana, do you know who at the council can confirm that list quickly?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "The council secretary, Sela, is probably the quickest route. I don't know whether she can change the list or only tell us what's already been agreed. I'll ask her today who's been named, and specifically whether the relevant clan representatives and women involved in distribution have a recognized way in. Because if not, we shouldn't quietly treat that list as the consultation."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That would be really helpful. Once we know who is actually in the room, we can decide whether the first consultation is enough to identify the vulnerable pathways, or whether we need smaller follow-ups, especially with people receiving fish and managing repayments. I don't think we should, um, draw that from permit-holder data."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Yeah, exactly\u2014we need to see the invitation list before we call that evidence."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "And I\u2019ll check the survey calendar against the landing records before we treat the observed expenditure patterns as representative. If the lean months fell outside that window, then even a very careful permit-holder sample gives us a rather flattering, I should say incomplete, picture of households\u2019 ability to absorb a reduction."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Mm. I\u2019ll come back to you both after I\u2019ve spoken with Sela, because the invitation question affects what those gaps mean. We probably shouldn\u2019t promise the council a single catch-limit answer until we know who- until we know whose authority and whose food arrangements the proposal would actually be sitting in."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Okay, I think we should leave it there, given the time. I\u2019ll follow up by email once we\u2019ve got a little more clarity on the invitation list and the timing, I mean, the survey timing. Thanks, both."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Okay, bye both\u2014talk soon."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Thanks, both. Bye for now."
+        }
+      ],
+      "seed_location": "Turns 1, 3-4, 6-27 substantively cover the requested framing: turn 6 reports herbivore biomass below the local recovery benchmark and predictable spawning-time concentration; turns 3, 10, 12, 14-16, and 26 address seasonal/lean-period vulnerability and differing household buffers; turns 4, 7-13, 18, and 20-25 address clan tenure, kin sharing, and impacts beyond permit holders. However, the explicit broad working question in the ground truth is not jointly stated verbatim, and the team does not formally settle it. The transcript also goes beyond the seed by discussing possible species breakdowns, habitat/ground categories, and the possibility that spawning-time catches make an annual limit inadequate (turns 6-8, 15-19), though it does not select a species, management unit, or policy instrument.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          1,
+          3,
+          4,
+          6,
+          8,
+          10,
+          12,
+          16,
+          18,
+          22,
+          27
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence"
+        ],
+        "issues": [
+          "The required broad working question is never explicitly settled or stated. Turns 1 and 27 gesture toward balancing recovery and household arrangements, but the team ends without clearly agreeing on a question equivalent to redesigning catch limits to restore Kaloa Reef stocks without harming fishing-dependent households.",
+          "The ecology seed is only partially explicit. Turn 6 states that herbivore biomass is below the recovery benchmark and mentions large fish taken at predictable spawning times, but it does not establish that the species at predictable spawning aggregations are the most vulnerable species.",
+          "The economist's required finding that fishing earnings are highly seasonal and that households differ substantially in ability to absorb lower landings is present only indirectly and provisionally across turns 3, 10, 14, 16, and 26. The discussion emphasizes possible survey gaps rather than giving the requested finding cleanly.",
+          "The transcript does not follow the requested tangent-heavy meeting style. It stays tightly on the study agenda throughout; no conference, paper, script, campus, or comparable side-topic develops for several turns.",
+          "Many substantive turns are polished, complete mini-arguments that directly convert the preceding concern into a method or action, especially turns 8-20 and 22-27. This gives the exchange a constructed planning-dialogue quality despite the inserted hesitations.",
+          "The close in turns 28-30 functions somewhat like a tidy meeting wrap-up, with Arun summarizing follow-up conditions and ending the call rather than leaving the discussion more naturally unresolved."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.28,
+        "turn_moves": {
+          "request": 1,
+          "backchannel": 5,
+          "question": 5,
+          "proposal": 8,
+          "commitment": 5,
+          "agreement": 3,
+          "answer": 1,
+          "idea": 1,
+          "concern": 1
+        },
+        "volunteer_turns": [
+          8,
+          23,
+          26,
+          27,
+          28
+        ],
+        "unsure_turns": [
+          6,
+          8,
+          16,
+          18,
+          23
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.31,
+          "approved": false,
+          "issues": [
+            "Task compliance: Turn 6 identifies aggregation sites as an early ecological signal, and turns 20-23 move toward reducing pressure in aggregation-related zones. This comes close to connecting spawning-site evidence to a design direction, whereas the required part says no one should yet connect that evidence to a particular design change. It remains nonspecific, so this is a minor rather than fatal violation.",
+            "Task compliance: The team does not explicitly settle on the requested broad question about designing catch limits that restore stocks while avoiding harm to fishing-dependent households. Turns 23-26 formulate closely related questions, but they also broaden the frame to legitimacy, zones, and a possible bridge period rather than clearly agreeing the ground-truth wording.",
+            "Naturalness: Despite several disfluencies, the substantive turns are consistently polished, complete mini-arguments that introduce evidence, qualify it, and end in a clear methodological implication. This written-dialogue construction is especially visible in turns 4, 6, 9, 12, 14-17, and 23-26, requiring a score of 3 or lower under the stated rule.",
+            "Naturalness: The requested tangent-heavy style is not meaningfully present. Turn 1 mentions missed Council timing, but the conversation immediately stays on agenda; there is no concrete off-topic drift followed for several turns.",
+            "Naturalness: Participants explore some uncertainty, but many concerns are converted immediately into a proposed method or assignment, for example turns 9, 14-15, 17, and 19-23. This contributes to the scripted planning feel."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.28,
+          "approved": false,
+          "issues": [
+            "The required broad working question is never explicitly settled or stated. Turns 1 and 27 gesture toward balancing recovery and household arrangements, but the team ends without clearly agreeing on a question equivalent to redesigning catch limits to restore Kaloa Reef stocks without harming fishing-dependent households.",
+            "The ecology seed is only partially explicit. Turn 6 states that herbivore biomass is below the recovery benchmark and mentions large fish taken at predictable spawning times, but it does not establish that the species at predictable spawning aggregations are the most vulnerable species.",
+            "The economist's required finding that fishing earnings are highly seasonal and that households differ substantially in ability to absorb lower landings is present only indirectly and provisionally across turns 3, 10, 14, 16, and 26. The discussion emphasizes possible survey gaps rather than giving the requested finding cleanly.",
+            "The transcript does not follow the requested tangent-heavy meeting style. It stays tightly on the study agenda throughout; no conference, paper, script, campus, or comparable side-topic develops for several turns.",
+            "Many substantive turns are polished, complete mini-arguments that directly convert the preceding concern into a method or action, especially turns 8-20 and 22-27. This gives the exchange a constructed planning-dialogue quality despite the inserted hesitations.",
+            "The close in turns 28-30 functions somewhat like a tidy meeting wrap-up, with Arun summarizing follow-up conditions and ending the call rather than leaving the discussion more naturally unresolved."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 25, 2027",
+      "disciplines": [
+        "ecology",
+        "economics",
+        "anthropology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Leilani Moana",
+          "discipline": "ecology",
+          "functional_role": "postdoctoral researcher",
+          "background": "A marine ecologist with four years of postdoctoral field research in Pacific nearshore reefs and prior doctoral work on herbivorous fish assemblages. She has conducted underwater visual censuses, belt transects, spawning-aggregation observations, and biomass-to-reference-point assessments with local fishers and reef monitors. She is responsible for compiling the Kaloa Reef stock-status evidence and translating it into recovery-relevant indicators.",
+          "distinct_perspective": "Leilani frames the problem around whether fish populations can rebuild reproductive capacity and ecological function. She treats biomass relative to the locally adopted recovery benchmark, size structure, fishing pressure, and the timing and location of spawning aggregations as essential evidence. She is careful not to assume that a biologically appealing intervention is socially workable, but is confident that any catch-limit proposal must be anchored in measurable stock recovery dynamics.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Arun Patel",
+          "discipline": "economics",
+          "functional_role": "domain expert",
+          "background": "A fisheries economist with 15 years of experience studying small-scale coastal livelihoods, seasonal income risk, and distributional effects of fisheries regulation. His work combines household expenditure surveys, landing and price records, participatory wealth ranking, and scenario modeling of how changes in catch affect food consumption, debt, and cash income. He has advised community fisheries on safeguards for households with limited alternatives to fishing.",
+          "distinct_perspective": "Arun sees a catch limit as a change in risk and resource access that will not fall evenly across households. He focuses on seasonal earnings, dependence on reef fish for food and cash, debt obligations, alternative livelihood options, and the difference between an average welfare effect and hardship for the least able to absorb lower landings. He will press the team to define whose losses and benefits count, while deferring to ecologists on biological thresholds and to anthropologists on customary authority and sharing obligations.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Mereana Vakalalabure",
+          "discipline": "anthropology",
+          "functional_role": "project manager",
+          "background": "A social anthropologist and project manager with 11 years of experience conducting ethnographic and participatory research with customary marine-tenure communities in the Pacific. She has worked through long-term village residence, semi-structured interviews, kinship mapping, fishing-ground histories, and community-led meeting facilitation. For the Kaloa study, she coordinates the research process and advises on how clan tenure, local legitimacy, and sharing practices shape the practical meaning of any restriction.",
+          "distinct_perspective": "Mereana treats fisheries rules as social institutions rather than only technical controls. She emphasizes that rights to fishing grounds are embedded in clan authority, obligations to kin, and negotiated local legitimacy; a restriction aimed at a named permit holder may affect extended households and may be interpreted differently across tenure groups. She will question overly individualistic measures of impact and insist that the study identify who has authority to make, enforce, and revise rules before proposing a design.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint ecology, economics, and anthropology team is advising the Kaloa Reef Council, which manages a nearshore reef fishery used by three villages. The council wants a defensible catch-limit proposal before the next fishing season, but the team is still reconciling ecological recovery targets with household dependence and customary tenure rules.\n\nMeeting 2 \u2014 March 25, 2027. Evidence review and design-scoping session after the team has compiled landing records, household interviews, and spawning-site observations.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 4, 2027: The group agreed not to propose a catch limit yet; the research question is how to support herbivore recovery while accounting for households\u2019 fishing, sharing, food-security and debt obligations, and for who has authority over fishing grounds and any limit. The first consultation should explore species and size patterns, spawning and weather-related fishing, and recent good-trip and lean-week stories, including people who portion, distribute and receive fish, without initially demanding named allocation maps or precise grounds. Mereana will ask council secretary Sela who has been named for the consultation and whether relevant clan representatives and women involved in distribution have a recognized way into it. Leilani will break current transect biomass down by species and size classes, crosswalk local and fisher names, check comparability of older counts, and use broad ecological habitat/exposure classes rather than tenure maps. Arun will check survey timing against landing records and assess whether lean months and household vulnerability were missed; open issues include the consultation invitation list, authority to discuss grounds across villages, older-monitor data comparability, and whether follow-up sessions are needed.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 2 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: The same team reviews newly compiled evidence. The ecologist presents landing and survey results showing that the sharpest decline is concentrated in rabbitfish taken during two short spawning-aggregation periods, while non-aggregation reef-fish catches are comparatively stable. The economist presents household diaries showing that a uniform annual household quota would fall most heavily on approximately 30 households that rely on the aggregation-season fishery for cash needed for school fees, whereas several other households have wage or tourism income. The anthropologist reports that the two aggregation sites lie within separate clan sea territories and that clan leaders are willing to discuss temporary seasonal rules at those sites but oppose an externally assigned annual quota for all households. During discussion, the team moves away from the broad question of overall catch limits and focuses on whether protections targeted to rabbitfish spawning periods and sites can produce recovery while safeguarding the households most exposed to restrictions. They do not decide whether the protection should be a closure, a quota, or another mechanism, and they do not yet settle how affected households would be supported.",
+        "explicit_instruction": "The same team reviews newly compiled evidence. The ecologist presents landing and survey results showing that the sharpest decline is concentrated in rabbitfish taken during two short spawning-aggregation periods, while non-aggregation reef-fish catches are comparatively stable. The economist presents household diaries showing that a uniform annual household quota would fall most heavily on approximately 30 households that rely on the aggregation-season fishery for cash needed for school fees, whereas several other households have wage or tourism income. The anthropologist reports that the two aggregation sites lie within separate clan sea territories and that clan leaders are willing to discuss temporary seasonal rules at those sites but oppose an externally assigned annual quota for all households. During discussion, the team moves away from the broad question of overall catch limits and focuses on whether protections targeted to rabbitfish spawning periods and sites can produce recovery while safeguarding the households most exposed to restrictions. They do not decide whether the protection should be a closure, a quota, or another mechanism, and they do not yet settle how affected households would be supported.",
+        "ground_truth": {
+          "working_question": "Can a management rule targeted to rabbitfish spawning aggregations restore the declining stock while protecting households most reliant on aggregation-season income?",
+          "driver_of_change": "Landing and survey data localize the decline to rabbitfish spawning aggregations, while household and tenure evidence shows that a uniform annual quota would be inequitable and politically unacceptable.",
+          "unresolved": "The specific targeted rule and the means of protecting affected households remain open."
+        }
+      },
+      "ground_truth": {
+        "working_question": "Can a management rule targeted to rabbitfish spawning aggregations restore the declining stock while protecting households most reliant on aggregation-season income?",
+        "driver_of_change": "Landing and survey data localize the decline to rabbitfish spawning aggregations, while household and tenure evidence shows that a uniform annual quota would be inequitable and politically unacceptable.",
+        "unresolved": "The specific targeted rule and the means of protecting affected households remain open."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Before we get into it\u2014did everyone get the revised diary extract? I was looking at the missing weeks during the heavy rains, and I think today I'd like us to pin down whether the aggregation-season catch is really the ecological pressure point. Economically, it's very uneven. For some households, that's school-fee money, not just an annual income number."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mm, I did, yeah."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I've got it, yes. Before we make that the pressure point, could I get a quick catch-up on what the ecology said last time? I was in the council meeting. Are we seeing the same short spawning windows at both aggregation sites, or is that still uncertain?"
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Yeah, that\u2019s still open, I think."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "It\u2019s still uncertain. We saw two short, really clear windows at both sites, and rabbitfish landings jump sharply in those windows. Outside them, the other catches look much steadier. But before we treat those two periods as the whole season, I need to check whether we missed earlier or later aggregation pulses\u2014"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Right, so weather may matter."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "And from the diary side, those heavy-rain gaps could be doing two different things. There are fewer chances to fish, but people may also rely more on whatever cash came in during the aggregation weeks. Leilani, when you say weather may matter, do the spawning observations suggest the windows shift with conditions, or is it mainly that our observation coverage is uncertain..."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mainly coverage, I think. We only watched those two periods, so I can't yet say whether the timing shifts with weather. Rabbitfish often have fairly repeatable lunar-seasonal cues, but local conditions can change when fishers can reach them. The rough-weather period is odd because boats arrived late and the landing spike was still high. Maybe effort got, um, compressed into the calm window, but I need to check where those fish were sold too."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "That distinction matters because if weather is shifting access, people may still recognize the spawning period even when the landing peak moves around. And the two sites are in separate clan waters, so I'd be careful about reading one compressed calm-weather burst as a single fishery-wide pattern. Do the records keep the sites separate?"
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Not cleanly enough, no. The landing sheets have the village and sometimes the buyer, but on a fair number of aggregation-day trips the site is missing. So at the moment I can only separate the reliably coded subset. I don't want to pool them and call it a common pattern. Could the site-specific right to land there affect whether fishers report the site at all?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "It could, yes. Naming a ground can signal a claim, or an admission that someone fished outside the right relationship, especially across the village lines, so a blank field isn't necessarily just bad recording. I'd want to ask Sela whether site reporting was understood as neutral when those sheets were introduced. Though I don't know if he was- if he was involved then."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That makes the blank sites much harder to interpret, yeah. From my side, about 30 households seem to depend on aggregation-season sales for school fees, but I can\u2019t tell whether that dependence clusters around one site or village if the provenance is selectively missing. And it may be- it could be cash moving through kin, not just the diary household\u2019s own need."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Hm, that\u2019s a real blind spot."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And it\u2019s not only provenance. We may be missing the social route of the cash. Arun, for those roughly 30 households, do the diaries show what alternatives they actually had during those same weeks, not averaged across the year? Because a site rule that looks manageable on annual income could land very differently if there\u2019s no other cash source right when fees are\u2014 when school fees are due."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Some do, but not consistently enough that we can call them alternatives yet. Of the roughly 30 households with aggregation-season sales tied to school fees, several report wage work or tourism income at other times of the year. But in those particular weeks, the diaries often just show the fish sale, then fees or loan repayments. A few households with wage income also have unusually high sales, and that makes me wonder if they\u2019re collecting or holding cash for a wider kin group rather than just supplementing their own income."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Mm. That\u2019s exactly where an individual household diary may be too narrow. A high sale could mean someone is fishing, but it could also mean they\u2019re the person trusted to receive, hold, and redistribute money. Did any of those entries say who the repayment or fees were for, even loosely, like their own child, a sister\u2019s child, or a clan obligation, or is that just not in the diary prompts?"
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Mostly, it\u2019s not in the prompt. We\u2019ve coded fee payments and loan repayments, and sometimes there\u2019s a note like \u201cschool\u201d or a person\u2019s name, but not the relationship or the ultimate recipient. I don\u2019t want to infer household dependence from that. We\u2019d need to ask carefully whether the sale was theirs to use or whether it was money moving through them."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I think we need a separate conversation about the flow. Not framed as who depends on fishing, but who is authorized or expected to receive and pass on aggregation money. Otherwise, we could ask one listed seller to absorb a closure when the obligation sits across several households. I\u2019ll check with Sela on whether the consultation list gives women who do that distribution work a recognized way to speak."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "I\u2019d separate the question of entitlement from the question of exposure. We have about 30 households with these sales around school-fee time, but until we know whether a seller is holding money for siblings, affines, whoever, that\u2019s not a count of the households that would actually bear a restriction. And I still need to check the rain-week gaps before we treat their annual catch as a normal..."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Before we turn that into a follow-up instrument, I want to make sure the people we ask have standing to talk about it, especially at each aggregation site. Sela still hasn't confirmed whether both clan representatives are actually on the list, or whether women who distribute the catch can come through a recognized channel. Without that, we may get very tidy answers from the wrong people."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "From the stock side, I\u2019d rather not treat both grounds as interchangeable just because the site labels are missing. The large rabbitfish are thinner in the aggregation counts, at least compared with the older observations, and those are the breeding fish we need to protect. But I\u2019m still finishing the comparability check. Mereana, do you have any sense of whether a temporary spawning-time rule can be discussed separately for each site?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I think so. Both leaders said a temporary seasonal rule at their own site is discussable. What they pushed back on was an annual quota across everybody, as if the grounds were one pool. But before we treat that as a mandate, I\u2019d still want Sela to confirm who can formally speak for each clan, and the timing needs to be locally recognizable enough that it doesn\u2019t become an- that it doesn\u2019t turn into an enforcement argument every week."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Mm, site-by-site then."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Site-by-site makes biological sense too, as long as we confirm those two observed windows are the full aggregation season. I don't think we need an annual rabbitfish limit to test the recovery question first. The immediate thing is whether protecting the recognizable spawning time and place leaves enough large fish to rebuild. But I'd want Arun's read on whether that short interruption, I was going to say whether it affects households generally, but whether it hits those school-fee weeks with no substitute."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "A short, site-specific interruption may be less blunt than an annual cap, but I can\u2019t say it\u2019s low-cost yet. Those roughly 30 households are concentrated around the aggregation sales and school-fee obligations, and the missing rain weeks may be hiding whether they had any workable fallback. We need to ask about the actual timing of fees, loans, and food shortages alongside the locally recognized closure window."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Uh, the timing is really tight."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "It\u2019s tight enough that I wouldn\u2019t call it a workable design until we put the closure dates alongside the obligation dates. The rule may need to be a locally declared spawning-time pause at each ground, not fixed calendar dates from us, if the cues are lunar or weather-linked. Otherwise, who gets to say the window has opened becomes another dispute."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "For the roughly 30 households, the practical question isn't just the lunar period in the abstract. It's whether a locally declared pause overlaps the exact school-fee and repayment pinch. If it does, we should at least explore customary ways of cushioning that. Though food sharing or credit- I don't know yet whether those can realistically cover a missed aggregation trip."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And whether that cushioning is something the clan leaders can legitimately call on is not a small detail. It may fall unevenly on the same women already, um, distributing fish. I\u2019ll follow up with Sela on the representation question, and we should not present a pause as low-impact until the timing and support piece is actually clear."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Hm, that\u2019s a concern."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mm, yes\u2014we can\u2019t call the pause biologically effective or socially workable yet."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Okay, I think we should leave it there, since we're at time. I\u2019ll follow up by email once I\u2019ve checked those rain-week, rain-week gaps. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Okay, thanks\u2014bye both."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "All right, talk soon."
+        }
+      ],
+      "seed_location": "Turns 5, 8, 21, and 24 provide ecological evidence that rabbitfish aggregation windows/sites are the likely decline pressure point and that protecting spawning time and place may support recovery. Turns 12, 15, 19, 25, and 28 identify roughly 30 households exposed through aggregation-season school-fee income and uncertainty about viable alternatives. Turns 9-11 and 22 establish separate clan territories and leaders' willingness to discuss temporary site-specific seasonal rules while opposing an annual quota. Turns 24-31 shift the discussion away from an annual rabbitfish limit toward targeted, site-specific spawning-time protection, while leaving the exact mechanism (they discuss a possible pause/closure but do not decide it) and household support unresolved.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4,
+        "evidence_turns": [
+          5,
+          8,
+          15,
+          21,
+          22,
+          24,
+          25,
+          27,
+          28,
+          29,
+          31
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The core ecological claim is only partly explicit. Turns 5, 8, and 21 establish rabbitfish aggregation windows, high landings, and thinner large fish, but do not clearly state that the sharpest decline is concentrated in aggregation-period rabbitfish or that non-aggregation reef-fish catches are comparatively stable; turn 5's 'other catches look much steadier' is somewhat ambiguous.",
+          "The required comparison with a uniform annual household quota is not fully presented as evidence. Turns 22 and 24 reject or deprioritize an annual quota, and turns 12 and 25 identify roughly 30 exposed households, but no turn explicitly says that a uniform annual household quota would fall most heavily on those households while households with wage or tourism income would be less affected.",
+          "Naturalness is weakened by the lack of the requested tangent-heavy meeting style. The conversation remains tightly on agenda throughout; there is no substantive off-topic drift, practical interruption, or return to topic.",
+          "Several substantive turns are unusually polished and complete, especially turns 18, 22, 24, 27, and 29. They formulate a concern, qualify it, and land on a clean implication or action, making the dialogue read somewhat like deliberately authored research discussion rather than spontaneous talk.",
+          "Turn 32 functions as a compact written-minute recap of the remaining action item rather than a more natural close, though it is brief."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.52,
+        "turn_moves": {
+          "question": 7,
+          "backchannel": 5,
+          "answer": 8,
+          "observation": 2,
+          "concern": 5,
+          "proposal": 3,
+          "agreement": 2,
+          "idea": 1,
+          "commitment": 1
+        },
+        "volunteer_turns": [
+          11,
+          17,
+          18,
+          19,
+          22,
+          25,
+          29,
+          32
+        ],
+        "unsure_turns": [
+          4,
+          5,
+          8,
+          11,
+          12,
+          19,
+          21,
+          24,
+          25,
+          28
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 34,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.52,
+          "approved": true,
+          "issues": [
+            "The core ecological claim is only partly explicit. Turns 5, 8, and 21 establish rabbitfish aggregation windows, high landings, and thinner large fish, but do not clearly state that the sharpest decline is concentrated in aggregation-period rabbitfish or that non-aggregation reef-fish catches are comparatively stable; turn 5's 'other catches look much steadier' is somewhat ambiguous.",
+            "The required comparison with a uniform annual household quota is not fully presented as evidence. Turns 22 and 24 reject or deprioritize an annual quota, and turns 12 and 25 identify roughly 30 exposed households, but no turn explicitly says that a uniform annual household quota would fall most heavily on those households while households with wage or tourism income would be less affected.",
+            "Naturalness is weakened by the lack of the requested tangent-heavy meeting style. The conversation remains tightly on agenda throughout; there is no substantive off-topic drift, practical interruption, or return to topic.",
+            "Several substantive turns are unusually polished and complete, especially turns 18, 22, 24, 27, and 29. They formulate a concern, qualify it, and land on a clean implication or action, making the dialogue read somewhat like deliberately authored research discussion rather than spontaneous talk.",
+            "Turn 32 functions as a compact written-minute recap of the remaining action item rather than a more natural close, though it is brief."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 3 \u2014 April 15, 2027",
+      "disciplines": [
+        "ecology",
+        "economics",
+        "anthropology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Leilani Moana",
+          "discipline": "ecology",
+          "functional_role": "postdoctoral researcher",
+          "background": "A marine ecologist with four years of postdoctoral field research in Pacific nearshore reefs and prior doctoral work on herbivorous fish assemblages. She has conducted underwater visual censuses, belt transects, spawning-aggregation observations, and biomass-to-reference-point assessments with local fishers and reef monitors. She is responsible for compiling the Kaloa Reef stock-status evidence and translating it into recovery-relevant indicators.",
+          "distinct_perspective": "Leilani frames the problem around whether fish populations can rebuild reproductive capacity and ecological function. She treats biomass relative to the locally adopted recovery benchmark, size structure, fishing pressure, and the timing and location of spawning aggregations as essential evidence. She is careful not to assume that a biologically appealing intervention is socially workable, but is confident that any catch-limit proposal must be anchored in measurable stock recovery dynamics.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Arun Patel",
+          "discipline": "economics",
+          "functional_role": "domain expert",
+          "background": "A fisheries economist with 15 years of experience studying small-scale coastal livelihoods, seasonal income risk, and distributional effects of fisheries regulation. His work combines household expenditure surveys, landing and price records, participatory wealth ranking, and scenario modeling of how changes in catch affect food consumption, debt, and cash income. He has advised community fisheries on safeguards for households with limited alternatives to fishing.",
+          "distinct_perspective": "Arun sees a catch limit as a change in risk and resource access that will not fall evenly across households. He focuses on seasonal earnings, dependence on reef fish for food and cash, debt obligations, alternative livelihood options, and the difference between an average welfare effect and hardship for the least able to absorb lower landings. He will press the team to define whose losses and benefits count, while deferring to ecologists on biological thresholds and to anthropologists on customary authority and sharing obligations.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Mereana Vakalalabure",
+          "discipline": "anthropology",
+          "functional_role": "project manager",
+          "background": "A social anthropologist and project manager with 11 years of experience conducting ethnographic and participatory research with customary marine-tenure communities in the Pacific. She has worked through long-term village residence, semi-structured interviews, kinship mapping, fishing-ground histories, and community-led meeting facilitation. For the Kaloa study, she coordinates the research process and advises on how clan tenure, local legitimacy, and sharing practices shape the practical meaning of any restriction.",
+          "distinct_perspective": "Mereana treats fisheries rules as social institutions rather than only technical controls. She emphasizes that rights to fishing grounds are embedded in clan authority, obligations to kin, and negotiated local legitimacy; a restriction aimed at a named permit holder may affect extended households and may be interpreted differently across tenure groups. She will question overly individualistic measures of impact and insist that the study identify who has authority to make, enforce, and revise rules before proposing a design.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint ecology, economics, and anthropology team is advising the Kaloa Reef Council, which manages a nearshore reef fishery used by three villages. The council wants a defensible catch-limit proposal before the next fishing season, but the team is still reconciling ecological recovery targets with household dependence and customary tenure rules.\n\nMeeting 3 \u2014 April 15, 2027. Proposal-design session with preliminary feasibility findings for a rule the Kaloa Reef Council could adopt before the next fishing season.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 4, 2027: The group agreed not to propose a catch limit yet; the research question is how to support herbivore recovery while accounting for households\u2019 fishing, sharing, food-security and debt obligations, and for who has authority over fishing grounds and any limit. The first consultation should explore species and size patterns, spawning and weather-related fishing, and recent good-trip and lean-week stories, including people who portion, distribute and receive fish, without initially demanding named allocation maps or precise grounds. Mereana will ask council secretary Sela who has been named for the consultation and whether relevant clan representatives and women involved in distribution have a recognized way into it. Leilani will break current transect biomass down by species and size classes, crosswalk local and fisher names, check comparability of older counts, and use broad ecological habitat/exposure classes rather than tenure maps. Arun will check survey timing against landing records and assess whether lean months and household vulnerability were missed; open issues include the consultation invitation list, authority to discuss grounds across villages, older-monitor data comparability, and whether follow-up sessions are needed.\nMeeting 2 \u2014 March 25, 2027: The group\u2019s working question was whether protecting rabbitfish during aggregation season can help rebuild large breeding fish without creating unacceptable hardship, especially around school-fee and loan-repayment periods. They agreed not to treat the two aggregation grounds as one fishery or pursue an annual quota first; the current direction is to explore temporary, site-specific spawning-time pauses, contingent on confirming the full aggregation season and local authority to discuss rules at each site. Leilani will complete the stock comparability check, investigate whether the observed windows capture all aggregation pulses, and examine site and buyer information rather than pooling incomplete records. Arun will check the heavy-rain diary gaps and assess the timing of fees, loans, food shortages, and possible alternatives or support around any closure window. Mereana will ask Sela about site-reporting meanings, formal clan representation, and whether women who receive and redistribute catch money have recognized channels to speak; open issues include missing site labels, cash moving through kin networks, weather-related access, and whether local support can cushion missed sales.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 3 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: The same team reviews feasibility work completed since the prior meeting. The ecologist states that protecting the two documented rabbitfish aggregation windows, each lasting roughly six weeks, is expected to protect most spawning adults; broader annual restrictions would add less biological benefit in the short term. The economist reports that a full six-week closure would create a predictable but concentrated income gap for the 30 highly dependent households, and that a council-funded transition package combining short-term cash support with paid reef-monitoring work is financially feasible if it is limited to those households. The anthropologist reports that the two relevant clan councils will enforce site-specific seasonal closures if they nominate monitors and if eligibility for support is assessed through village households rather than only registered boat owners, because sharing obligations make boat-owner records incomplete. Through discussion, the team settles on studying and proposing clan-enforced seasonal closures at the two spawning sites, paired with household-level transition support and locally nominated monitoring. The team keeps stock recovery and prevention of household exclusion as joint objectives; it does not broaden the intervention to all species or impose a fishery-wide annual quota.",
+        "explicit_instruction": "The same team reviews feasibility work completed since the prior meeting. The ecologist states that protecting the two documented rabbitfish aggregation windows, each lasting roughly six weeks, is expected to protect most spawning adults; broader annual restrictions would add less biological benefit in the short term. The economist reports that a full six-week closure would create a predictable but concentrated income gap for the 30 highly dependent households, and that a council-funded transition package combining short-term cash support with paid reef-monitoring work is financially feasible if it is limited to those households. The anthropologist reports that the two relevant clan councils will enforce site-specific seasonal closures if they nominate monitors and if eligibility for support is assessed through village households rather than only registered boat owners, because sharing obligations make boat-owner records incomplete. Through discussion, the team settles on studying and proposing clan-enforced seasonal closures at the two spawning sites, paired with household-level transition support and locally nominated monitoring. The team keeps stock recovery and prevention of household exclusion as joint objectives; it does not broaden the intervention to all species or impose a fishery-wide annual quota.",
+        "ground_truth": {
+          "working_question": "How can clan-enforced seasonal closures at the two rabbitfish spawning sites, paired with household-level transition support and locally nominated monitoring, rebuild rabbitfish spawning biomass without excluding fishing-dependent households?",
+          "driver_of_change": "Feasibility analysis shows that short seasonal site closures deliver the main biological protection, while targeted support and clan-led enforcement make the burden on highly dependent households manageable and legitimate.",
+          "settled_design_scope": "The proposed research and intervention focus on the two rabbitfish spawning sites, seasonal closures, household-level support, and clan-nominated monitoring rather than a fishery-wide annual quota."
+        }
+      },
+      "ground_truth": {
+        "working_question": "How can clan-enforced seasonal closures at the two rabbitfish spawning sites, paired with household-level transition support and locally nominated monitoring, rebuild rabbitfish spawning biomass without excluding fishing-dependent households?",
+        "driver_of_change": "Feasibility analysis shows that short seasonal site closures deliver the main biological protection, while targeted support and clan-led enforcement make the burden on highly dependent households manageable and legitimate.",
+        "settled_design_scope": "The proposed research and intervention focus on the two rabbitfish spawning sites, seasonal closures, household-level support, and clan-nominated monitoring rather than a fishery-wide annual quota."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Hi, sorry, before we start\u2014I missed the tail end of the last discussion with Sela. Was there anything new on who can actually speak for the two aggregation sites? I\u2019m hoping today we can see whether these two roughly six-week spawning windows are solid enough to build a site-specific pause around. I was going to say, rather than drifting into a broad reef-fish limit\u2014we can\u2019t really support that ecologically."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Sela confirmed the two clan councils each have standing for their own site, and they\u2019re willing to enforce a seasonal pause if they nominate the monitors themselves. But they were quite clear that these aren\u2019t one combined ground. So before we call it a six-week closure, Leilani, I\u2019d like to hear how firm those windows look at each site."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Right, separate sites."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "They look fairly firm, yes, but I\u2019d put it as two separate site windows, not one uniform six-week rule. The observations and the older monitor records both point to roughly six weeks at each ground, and that should cover most of the breeding-sized fish we saw aggregating. Beyond that, an annual restriction doesn\u2019t seem to buy us much recovery benefit right now. I do want to keep a little flexibility at the exposed site, because after rough weather the large fish almost disappeared from our counts\u2014well, not disappeared, but we saw far fewer. Could be movement or just visibility, I can\u2019t tell yet."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That distinction matters economically too. Calling it a single six-week closure makes the burden sound smoother than it really is. Leilani, if the benefit is really concentrated in each documented window, that helps justify asking households to take a short pause. But I'd want to spell out the flexibility at the exposed site pretty carefully, because people need to know which weeks they're planning around."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Mm. And that flexibility can't just be an ecological footnote. If weather shifts the exposed-site period, who tells people it's shifted, and who has the authority to do that? The clan council can nominate monitors, but I still need to check whether those particular people are, uh, acceptable across the three villages. Otherwise the rule will look like one group moving the dates on everyone else."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "I\u2019d be uncomfortable with monitors moving the dates on their own based on a rough-weather count. The biological window looks fairly stable in the records, so maybe we use the fixed, locally agreed six weeks, and weather observations get reported for the next season instead of changing things in the middle of a pause. Arun, are the households landing at the exposed site the same ones using the sheltered ground, or is that a completely different burden..."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "They overlap a little, but it\u2019s not the same burden. The exposed-site fishers, they include more households with seasonal crew income, while the sheltered ground has several boat owners whose catch is spread across quite a few kin households. And the diary cross-check picked up- there were some households with low recorded sales but very sharp food shortfalls, so I wouldn\u2019t identify eligibility from landing records or boat ownership alone."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "That makes me think we shouldn't describe either pause as protecting one neat set of fishing households. Ecologically, the sites are separate, and socially, it sounds like the effects are separate too. Mereana, is there a workable way for each council to identify who needs to be part of the discussion without turning it into a landing-record eligibility list?"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I think so, but it has to start with the councils naming the affected networks, not certifying a fixed beneficiary list. We heard women describe the same catch money as boat-owner income, sorry, boat-household income in one conversation, and as already owed to relatives in another. So I'd want separate village discussions that include people who receive fish or cash, including households without boats. Then the councils can recognize who's affected at their site, but not quietly decide it alone."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mm, yes, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "That matters for the scale of any support. On our current household reading, it's about 30 highly dependent households across the two sites, not just the people landing fish, who would face a very concentrated six-week loss of sales or food fish. I'd be wary of asking the councils to name them without a household discussion, but we do need some, uh, recognized basis for a transition package."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Thirty is useful as a planning estimate, but I wouldn\u2019t let it harden into the support list before those discussions. And Arun, do you think paid monitoring roles could be spread beyond boat households, maybe through the village process, so households without boats are not only recipients of help but but have some stake in how the pause is watched?"
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "I think so, especially if the monitoring work is real paid work and not just a token role. But the allocation needs to reflect the loss. Someone whose household loses food fish through sharing may be appropriate for monitoring or support even if they never go on the boat. I'd want the village discussions to identify both the affected network and who can actually do the monitoring, because those won't always be the same people."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "I\u2019d keep those two things separate in the proposal. The councils nominate monitors because that\u2019s their authority at the sites, but the village discussions have to recognize both who\u2019s affected and who can take paid roles. I\u2019m still a little uneasy about whether a monitor nominated at one site will be seen as legitimate by families in the third village, especially if they\u2019re receiving fish rather than landing it."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "A household-based assessment, I think, is exactly where that helps. It can establish need without making the monitor appointment itself the test of who counts. We should probably ask in the village discussions what they see as credible evidence of a shared dependency, regular fish received, cash obligations, school fees, that sort of thing, because the low-sales households in the diaries are the ones I'm most worried, worried we otherwise miss."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And I\u2019d be careful with \u201ccredible evidence\u201d if it starts sounding like people have to prove kin obligations in front of the council. Maybe the village discussions can agree on what kinds of dependency count, but that should guide a confidential household process. The other question is whether the third village has a recognized person in that process, not to overrule site authority, just so families there aren\u2019t being assessed by strangers."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "A third-village representative in the confidential process is important, I think. The assessment can be household-based and locally recognized without requiring people to disclose every obligation publicly. We can use a small set of agreed indicators, regular fish received, reliance on that cash, lean-week food shortages, and then I need to check the council reserve against its other commitments before we put a fixed support amount beside it."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Before we put any amount in, I think the third village needs to help shape those indicators, not just be represented at the end. Regular fish received may be easy enough to talk about, but cash obligations can be quite private and they change week to week. So we should ask what people are willing to have considered confidentially, instead of treating one version of the household story as the true one."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "From the welfare side, I don\u2019t need one precise account of every transfer. The process can use a few locally agreed, confidential indicators and let people explain unusual lean-week circumstances. I\u2019ll check what the reserve can cover for, say, 25 to 35 households, rather than treat thirty as a promise before that process, and then\u2014"
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "A range is better. For the proposal, I'd say we co-design the support assessment through discussions in all three villages, and use a small confidential process that includes someone recognized by the third village. Then the site councils keep the monitor nominations, but those names go back for cross-village acceptance instead of being assumed."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "For the ecological side, I\u2019d keep the proposal pretty narrow, with two council-led, fixed site-specific spawning pauses, and then measure whether breeding-sized rabbitfish and biomass actually respond. I need to check with the nominated monitors whether they can reliably separate the larger, larger size classes in routine counts. If not, we shouldn\u2019t pretend that indicator is more precise than it is."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "And when you ask them about the size classes, it might be worth asking whether people would accept the counts being reported back simply. Otherwise the monitors can look like they're collecting information for outsiders. I think we're close enough to take the fixed windows and the process language back to the three villages, but the cross-village acceptance of monitor names is still- that's the bit I wouldn't skip."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Yeah, the reporting piece too."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "Yeah\u2014provided the reserve check still makes that support package real."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Hm, that\u2019s still uncertain."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Mm, yes\u2014without real support, the pause won\u2019t be workable."
+        },
+        {
+          "speaker": "Mereana Vakalalabure",
+          "text": "Okay, I'll leave it there and follow up by email, especially once we know how the reserve check lands. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Leilani Moana",
+          "text": "Thanks\u2014talk soon."
+        },
+        {
+          "speaker": "Dr. Arun Patel",
+          "text": "All right, bye for now."
+        }
+      ],
+      "seed_location": "Partially reflected in turns 1-23, but the required feasibility conclusion is incomplete. Ecological scope is supported in turns 1, 4, 7, and 22: two rabbitfish spawning sites/windows, roughly six weeks each, with little added benefit from annual restrictions. Household-based eligibility and concern about exclusion are supported in turns 8-21; clan nomination of monitors is in turns 2, 6, 15, and 21. However, the economist does not report that a council-funded cash-plus-paid-monitoring package is financially feasible for 30 households; instead, turns 18, 20, 25-28 explicitly leave reserve funding and support-package feasibility uncertain. The team therefore does not fully settle on the ground-truth design, as support remains conditional and monitor legitimacy/cross-village acceptance remains unresolved. No fishery-wide annual quota or all-species expansion is proposed.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          4,
+          8,
+          10,
+          12,
+          14,
+          15,
+          18,
+          21,
+          22
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The economist never establishes the seed's required conclusion that a council-funded package of short-term cash support plus paid reef-monitoring work is financially feasible when limited to the 30 highly dependent households. Turn 25 makes feasibility explicitly unresolved ('provided the reserve check still makes that support package real'), and turns 18 and 20 say Arun still needs to check the reserve. This weakens recoverability of the stated driver of change and violates the required completed feasibility finding.",
+          "The cash-support component is not concretely proposed as part of the settled package. Arun refers generally to a 'transition package' (turn 12) and support assessment (turns 16-20), while paid monitoring is discussed, but no turn clearly states that the feasible package combines short-term cash support with paid monitoring work.",
+          "The transcript does not actually follow the requested tangent-heavy meeting style. It remains tightly on agenda throughout; there is no meaningful drift into a conference, paper, technical problem, campus issue, or other side topic before returning to the project.",
+          "Several medium and long turns are polished, complete mini-arguments with a concern, qualification, and tidy recommendation, especially turns 6, 10, 15, 17, 19, and 21. The disfluencies are present but often appear as surface additions to otherwise finished prose, limiting naturalness.",
+          "The final outcome is left more provisional than the required 'settles on' decision: turns 23-27 retain unresolved monitor legitimacy and reserve funding, and no participant clearly states adoption of the complete closure-plus-household-support-plus-locally-nominated-monitoring design."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.32,
+        "turn_moves": {
+          "question": 3,
+          "answer": 4,
+          "agreement": 4,
+          "concern": 6,
+          "proposal": 9,
+          "commitment": 2,
+          "backchannel": 2
+        },
+        "volunteer_turns": [
+          18,
+          20,
+          28
+        ],
+        "unsure_turns": [
+          4,
+          6,
+          15,
+          18,
+          22,
+          26
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 2,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.38,
+          "approved": false,
+          "issues": [
+            "Turn 1 violates the explicit prohibited-phrase instruction by saying, \"I lost my thread there.\" It also uses an opening formulation that is very close to the required catch-up, but the forbidden phrase is a direct compliance failure.",
+            "The required feasibility conclusion is not actually established. The ecologist never states that both documented aggregation windows each last roughly six weeks, that protecting them is expected to protect most spawning adults, or that broader annual restrictions would add less biological benefit in the short term. Instead, turns 8-12 and 22 leave the exposed-site window materially uncertain.",
+            "The economist reports concentrated hardship for about 30 households in turn 13, but never reports that a council-funded package combining short-term cash support and paid reef-monitoring work is financially feasible when limited to those households. Turns 17, 20, 23, and 25 repeatedly leave affordability pending a funds check.",
+            "The transcript does not settle on the benchmark's final design. Turns 25-27 explicitly leave the base bridge conditional and the exposed-site extension pending, then end the meeting without agreeing to study and propose the two-site seasonal-closure package described in the ground truth.",
+            "Paid reef-monitoring work as a component of household transition support is absent. Monitoring is discussed as data collection and clan appointment, not as paid employment within a financially feasible transition package.",
+            "Although it contains several disfluencies, many substantive turns are polished, complete mini-arguments that immediately convert concerns into proposed procedures or contingencies (especially turns 5-7, 20-26). The required tangent-heavy style is absent: there are no off-topic drifts such as a conference, paper, script, or local problem.",
+            "The discussion is coherent and discipline-grounded, but it is more like a carefully scripted planning meeting than a naturally wandering feasibility review; the closing in turns 26-27 is especially neat and agenda-like despite unresolved core evidence."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.32,
+          "approved": false,
+          "issues": [
+            "The economist never establishes the seed's required conclusion that a council-funded package of short-term cash support plus paid reef-monitoring work is financially feasible when limited to the 30 highly dependent households. Turn 25 makes feasibility explicitly unresolved ('provided the reserve check still makes that support package real'), and turns 18 and 20 say Arun still needs to check the reserve. This weakens recoverability of the stated driver of change and violates the required completed feasibility finding.",
+            "The cash-support component is not concretely proposed as part of the settled package. Arun refers generally to a 'transition package' (turn 12) and support assessment (turns 16-20), while paid monitoring is discussed, but no turn clearly states that the feasible package combines short-term cash support with paid monitoring work.",
+            "The transcript does not actually follow the requested tangent-heavy meeting style. It remains tightly on agenda throughout; there is no meaningful drift into a conference, paper, technical problem, campus issue, or other side topic before returning to the project.",
+            "Several medium and long turns are polished, complete mini-arguments with a concern, qualification, and tidy recommendation, especially turns 6, 10, 15, 17, 19, and 21. The disfluencies are present but often appear as surface additions to otherwise finished prose, limiting naturalness.",
+            "The final outcome is left more provisional than the required 'settles on' decision: turns 23-27 retain unresolved monitor legitimacy and reserve funding, and no participant clearly states adoption of the complete closure-plus-household-support-plus-locally-nominated-monitoring design."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chatter giving way to long, highly structured presentation turns and then medium-length technical questions. Overlap is occasional but generally polite: participants use quick acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), wait for answers, and sometimes self-correct or restart mid-sentence. The tone is collegial and relaxed despite the technical level, with frequent fillers, repetitions, false starts, and lightly fragmented grammar, especially from non-native speakers or during spontaneous questions. Speakers hedge often with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d and \u201cas far as I know,\u201d framing claims as provisional rather than absolute. Questions are usually prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then unfold in exploratory multi-part form. Challenges are indirect and collaborative, typically posed as alternative interpretations or requests for clarification rather than disagreement. Participants build on one another by referencing prior questions, extending hypotheses, and offering future collaboration, while the host uses brief, efficient transitions to manage the agenda.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

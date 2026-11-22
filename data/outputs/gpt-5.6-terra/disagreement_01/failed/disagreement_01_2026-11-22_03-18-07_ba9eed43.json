@@ -1,0 +1,532 @@
+{
+  "transcript_id": "ba9eed43",
+  "generated_at": "2026-11-22T03:18:07.924526",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly medium-to-long turns, with informal pre-session small talk made up of short, fragmented exchanges before shifting into highly structured presentation monologues and extended Q&A. Overlap is occasional rather than constant, especially around greetings, acknowledgments, and transitions; participants generally wait for answers during scientific discussion. The tone is collegial, relaxed, and semi-formal: speakers use frequent fillers and self-repairs (\u201cum,\u201d \u201cyeah,\u201d \u201cyou know,\u201d repeated starts), hedge claims with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d and \u201cwe\u2019re interested in,\u201d and frame criticism as curiosity rather than confrontation. Questions are often prefaced with praise, disclaimers such as \u201cnaive question\u201d or \u201cjust curious,\u201d and a long setup before the actual question. Participants build on one another by referencing prior questions, extending hypotheses, and offering future collaboration; disagreement is indirect, expressed through qualifications, alternative explanations, or admissions of uncertainty. Moderation is light but clear, using brief handoffs, thanks, and reminders to keep the session moving.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Protecting outdoor workers from wildfire smoke when air-quality alerts arrive after the shift has already started.",
+  "disciplines": [
+    "environmental science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "environmental science",
+      "functional_role": "PhD student",
+      "background": "Fourth-year PhD candidate in environmental science specializing in wildfire-smoke exposure assessment. She has spent three fire seasons deploying low-cost PM2.5 sensors alongside reference monitors in agricultural valleys and landscaping corridors, integrating hourly observations with satellite smoke products, plume forecasts, and meteorology. Her fieldwork includes evaluating sensor placement, maintenance, and the difference between ambient readings and conditions inside vehicles or filtered rooms.",
+      "distinct_perspective": "Frames the pilot as an operational exposure-detection problem: crews need a simple, timely rule that translates changing smoke conditions into an action supervisors can implement. She emphasizes the strengths and limits of fixed-site monitoring, forecast lead time, rolling averages, and clean-air-room infiltration assumptions. She favors a predefined, short rolling PM2.5 trigger supplemented by plume forecasts because a consistent standard can support rapid deployment, while recognizing that validation measurements may be needed to understand task-level exposure variation.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Rafael Ortiz",
+      "discipline": "epidemiology",
+      "functional_role": "domain expert",
+      "background": "Associate professor of occupational and environmental epidemiology with 14 years of experience studying respiratory effects of air pollution among outdoor and contingent workers. He has led cohort and surveillance studies using repeated symptom surveys, electronic health-record outcomes, exposure reconstruction, and causal methods for time-varying confounding. His prior wildfire research has examined the roles of heat, respiratory infections, preexisting asthma and COPD, and cumulative exposure in interpreting short-term health changes.",
+      "distinct_perspective": "Treats PM2.5 readings and alerts as exposure indicators rather than direct health-risk boundaries. He focuses on what the pilot can validly infer about health and implementation: continuous exposure recording, prespecified respiratory case definitions, careful measurement of heat, infection, and baseline respiratory conditions, and outcome analyses that distinguish cumulative and lagged effects from same-day associations. He supports practical operational triggers but resists presenting a short rolling average as if it establishes a biological safety threshold.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Lena Brooks",
+      "discipline": "sociology",
+      "functional_role": "domain expert",
+      "background": "Professor of sociology with 16 years of research on labor precarity, immigrant worker protections, and workplace reporting systems in agriculture, construction, and service-sector subcontracting. She uses interviews, ethnographic observation, worker-led surveys, policy implementation studies, and community-based participatory research. Her work has documented how piece rates, contingent hiring, immigration concerns, language access, and supervisor discretion shape whether workers can use formally available safety protections.",
+      "distinct_perspective": "Frames smoke response as a question of power, access, and practical control rather than notification alone. She asks whether directly hired, subcontracted, and day-labor workers can leave a task, reach a clean-air room, take paid relief time, and report pressure or retaliation without jeopardizing income or future work. She supports monitoring as useful information, but argues that any trigger must be paired with enforceable pay protection, no-retaliation procedures, trusted worker-controlled reporting, bilingual communication, and privacy safeguards for health data.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "wildfire_smoke_workers",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 5,
+  "task_id": "disagreement_01",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting containing agreements and disagreements across disciplines. The evaluated AI must map each to the correct disciplines and explain each side's rationale, evidence and common ground.",
+  "seed_spec": {
+    "task_id": "disagreement_01",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting containing agreements and disagreements across disciplines. The evaluated AI must map each to the correct disciplines and explain each side's rationale, evidence and common ground.",
+    "explicit_instruction": "Hold a planning meeting among Chen, Ortiz, and Brooks. Establish these shared facts: the pilot begins during the July-August fire season; participating employers can provide a clean-air room at two fixed sites but cannot guarantee one at dispersed sites; alerts from the regional system may be delayed relative to changing local conditions; and workers may face smoke before a formal alert is issued. Include the following agreements. All three agree that waiting for the next-day forecast is inadequate for shifts already underway, that the pilot needs a same-day response pathway, and that communications must be available in English and Spanish. Chen and Ortiz agree that fixed-site PM2.5 monitoring plus regional forecasts can support a practical operational trigger, while Brooks agrees monitoring can inform action but stresses that a notification alone will not ensure workers can use protections. Ortiz and Brooks agree that evaluation must track whether workers actually receive and can act on protections, not merely whether alerts were sent; Chen accepts adding these implementation measures.\n\nInclude two substantive, respectful disagreements that remain unresolved at the meeting. First, Chen favors a predefined action threshold based on a short rolling PM2.5 average, supplemented by plume forecasts, because supervisors need a clear, rapid rule and because a single operational standard permits consistent deployment. Ortiz argues that the pilot should avoid treating a short-term PM2.5 threshold as a health-risk boundary: respiratory outcomes reflect cumulative and lagged exposure, heat and respiratory infections can confound short-term comparisons, and the pilot should record exposure continuously while evaluating several trigger options. Brooks argues that a threshold-only rule is insufficient because workers may be unable to stop work after an alert due to lost-pay fears or supervisor pressure; she favors a trigger paired with paid relief time, a no-retaliation process, and a worker-controlled reporting channel. Make clear that all sides share the goal of rapid, protective action, but differ over what the trigger can validly represent and what conditions make it usable.\n\nSecond, Ortiz proposes a primary health outcome of short-term respiratory symptoms and medically attended respiratory visits, using a prespecified case definition and collecting heat, baseline respiratory condition, and infection information to address confounding. Chen supports those outcomes but wants personal or task-level PM2.5 measurements on a smaller validation sample, arguing that site monitors cannot characterize exposures across vehicles, fields, and clean-air rooms or test infiltration assumptions. Brooks supports gathering health information only with strong privacy safeguards and rejects making medical visits the main indicator of success, because uninsured, undocumented, temporary, and day-labor workers may avoid care or have care-seeking barriers; she favors anonymous symptom check-ins plus measures of missed pay, ability to take breaks, and retaliation concerns. Ortiz acknowledges care-seeking bias and agrees to anonymous symptom data and access measures, but maintains that medically attended visits are still a useful secondary outcome when interpreted cautiously. Do not resolve the choice of primary endpoint or the threshold design. State decisions/assignments: Chen will draft a monitoring and forecast protocol by June 10; Ortiz will draft outcome definitions and a confounding-data plan by June 17; Brooks will convene worker and community representatives to review language access, pay protection, privacy, and reporting-channel requirements by June 17. The group will revisit unresolved choices on June 24 after reviewing these materials. Do not mention this benchmark instruction during the meeting.",
+    "ground_truth": {
+      "agreements": [
+        {
+          "disciplines": [
+            "environmental science",
+            "epidemiology",
+            "sociology"
+          ],
+          "agreement": "A next-day forecast alone is inadequate once a shift has begun; the pilot needs a same-day response pathway.",
+          "rationale_and_evidence": "Regional alerts can arrive after local conditions change and workers can already be exposed. All disciplines therefore support a mechanism for acting during an active shift.",
+          "common_ground": "Rapid protection during ongoing work, rather than relying only on advance planning."
+        },
+        {
+          "disciplines": [
+            "environmental science",
+            "epidemiology",
+            "sociology"
+          ],
+          "agreement": "Worker communications must be available in English and Spanish.",
+          "rationale_and_evidence": "The pilot includes workers with varying language access, and protections cannot be used if instructions are not understandable.",
+          "common_ground": "Equitable access to timely protective information."
+        },
+        {
+          "disciplines": [
+            "environmental science",
+            "epidemiology"
+          ],
+          "agreement": "Fixed-site PM2.5 monitoring combined with regional smoke forecasts can contribute to an operational response system.",
+          "rationale_and_evidence": "Chen views these as complementary environmental indicators for local and anticipated smoke conditions; Ortiz accepts them as inputs to intervention timing and exposure documentation.",
+          "common_ground": "Environmental data are useful for informing same-day decisions, although they do not alone settle the health or social meaning of a trigger."
+        },
+        {
+          "disciplines": [
+            "environmental science",
+            "epidemiology",
+            "sociology"
+          ],
+          "agreement": "The evaluation should measure whether protections reach workers and are usable, not only whether an alert was issued.",
+          "rationale_and_evidence": "Ortiz and Brooks explicitly prioritize receipt and ability to act; Chen accepts implementation measures alongside monitoring.",
+          "common_ground": "A notification is not itself evidence of effective protection."
+        }
+      ],
+      "disagreements": [
+        {
+          "topic": "Meaning and design of the same-day action trigger",
+          "environmental_science": {
+            "position": "Use a predefined action threshold based on a short rolling PM2.5 average, supplemented by plume forecasts.",
+            "rationale": "Supervisors need a clear and fast operational rule, and a single standard supports consistent deployment across participating sites.",
+            "evidence_basis": "Site PM2.5 measurements and regional smoke-plume forecasts."
+          },
+          "epidemiology": {
+            "position": "Do not present a short-term PM2.5 threshold as a health-risk boundary; continuously record exposure and evaluate multiple trigger options.",
+            "rationale": "Respiratory effects can reflect cumulative and lagged exposure, and short-term associations can be confounded by heat and respiratory infections.",
+            "evidence_basis": "Exposure-response timing, prespecified health-outcome assessment, and data on heat and infection-related confounding."
+          },
+          "sociology": {
+            "position": "A threshold-only rule is inadequate; any trigger must be paired with paid relief time, no-retaliation protections, and a worker-controlled reporting channel.",
+            "rationale": "Workers may be unable to stop work because of lost-pay concerns or supervisor pressure, especially among informal, subcontracted, and day-labor arrangements.",
+            "evidence_basis": "Worker vulnerability, employer incentives, fear of losing shifts, and unequal practical ability to use formally offered protections."
+          },
+          "common_ground": "All three seek rapid protective action during active shifts and accept that environmental monitoring can help prompt it.",
+          "unresolved_issue": "Whether the pilot should adopt one fixed operational threshold and, if so, how it should be framed and coupled to enforceable worker protections."
+        },
+        {
+          "topic": "Primary outcomes and measurement strategy",
+          "environmental_science": {
+            "position": "Add personal or task-level PM2.5 monitoring in a smaller validation sample.",
+            "rationale": "Fixed-site monitors may not capture exposures in vehicles, different fields, or clean-air rooms, and cannot adequately test indoor-outdoor infiltration assumptions.",
+            "evidence_basis": "Comparison of personal/task exposure measurements with fixed-site monitoring and clean-air-space conditions."
+          },
+          "epidemiology": {
+            "position": "Use prespecified short-term respiratory symptoms and medically attended respiratory visits, while collecting heat, baseline respiratory condition, and infection information; retain visits as a cautious secondary outcome if access bias is addressed.",
+            "rationale": "Clear case definitions and confounder data are needed to interpret health effects. Medically attended visits can provide a meaningful outcome but cannot be read uncritically.",
+            "evidence_basis": "Standardized symptom and visit data, case definitions, and covariate information for confounding control."
+          },
+          "sociology": {
+            "position": "Do not make medical visits the main success measure; use anonymous symptom check-ins and measures of missed pay, ability to take breaks, and retaliation concerns, with strong privacy safeguards.",
+            "rationale": "Uninsured, undocumented, temporary, and day-labor workers may avoid or be unable to obtain care, so medical utilization can undercount harm and obscure whether protections are genuinely accessible.",
+            "evidence_basis": "Care-seeking barriers, employment precarity, privacy concerns, and worker-reported access to protections."
+          },
+          "common_ground": "The team agrees health and implementation outcomes both matter, that anonymous symptom data and privacy protections should be included, and that fixed-site exposure data have limitations.",
+          "unresolved_issue": "Which outcome should be primary and how heavily to rely on medical-visit data versus worker-reported, exposure, and access measures."
+        }
+      ],
+      "decisions_and_assignments": [
+        {
+          "decision": "The pilot will include a same-day response pathway and bilingual English-Spanish communications.",
+          "status": "agreed"
+        },
+        {
+          "decision": "The final action-threshold design and primary endpoint remain unresolved until the June 24 review.",
+          "status": "deferred"
+        },
+        {
+          "person": "Chen, environmental science",
+          "assignment": "Draft the PM2.5 monitoring and smoke-forecast protocol.",
+          "due_date": "June 10"
+        },
+        {
+          "person": "Ortiz, epidemiology",
+          "assignment": "Draft outcome definitions and a plan to collect confounding data.",
+          "due_date": "June 17"
+        },
+        {
+          "person": "Brooks, sociology",
+          "assignment": "Convene worker and community representatives to review language access, pay protection, privacy, and reporting-channel requirements.",
+          "due_date": "June 17"
+        },
+        {
+          "group": "All participants",
+          "assignment": "Review the materials and revisit the unresolved threshold and endpoint choices.",
+          "due_date": "June 24"
+        }
+      ]
+    }
+  },
+  "seed_location": "The dialogue partially reflects the seed but is incomplete. Turns 3, 9, and 11 cover a same-day PM2.5/forecast response pathway, Chen's operational threshold rationale, Ortiz's objection to treating a cutoff as a safety boundary, and Chen's June 10 protocol assignment. Turns 4, 6, 8, 12, 14, 16, 19, 21, 25, and 27 cover Brooks's concerns about paid relief, retaliation, worker-controlled/anonymous reporting, language access, and whether protections are actually usable. Turns 5, 17, 20, 22, 23, and 26 cover fixed-site-monitor limitations, validation/personal-task monitoring, exposure during travel/relief, and implementation measures. However, required seed content is missing or incomplete: the July-August fire-season fact is not stated; the full shared facts about regional-alert delay and pre-alert smoke exposure are not explicitly established; Ortiz never states the required outcome-definition/confounding-data assignment due June 17; medically attended respiratory visits, prespecified case definitions, baseline respiratory conditions, respiratory infections, and the primary-endpoint disagreement are absent; the group does not explicitly state that threshold design and primary endpoint remain unresolved for June 24; and the explicit June 24 group revisit assignment is only indirectly referenced in turn 12. Thus the meeting does not fully contain the requested agreements, disagreements, and assignments.",
+  "ground_truth": {
+    "agreements": [
+      {
+        "disciplines": [
+          "environmental science",
+          "epidemiology",
+          "sociology"
+        ],
+        "agreement": "A next-day forecast alone is inadequate once a shift has begun; the pilot needs a same-day response pathway.",
+        "rationale_and_evidence": "Regional alerts can arrive after local conditions change and workers can already be exposed. All disciplines therefore support a mechanism for acting during an active shift.",
+        "common_ground": "Rapid protection during ongoing work, rather than relying only on advance planning."
+      },
+      {
+        "disciplines": [
+          "environmental science",
+          "epidemiology",
+          "sociology"
+        ],
+        "agreement": "Worker communications must be available in English and Spanish.",
+        "rationale_and_evidence": "The pilot includes workers with varying language access, and protections cannot be used if instructions are not understandable.",
+        "common_ground": "Equitable access to timely protective information."
+      },
+      {
+        "disciplines": [
+          "environmental science",
+          "epidemiology"
+        ],
+        "agreement": "Fixed-site PM2.5 monitoring combined with regional smoke forecasts can contribute to an operational response system.",
+        "rationale_and_evidence": "Chen views these as complementary environmental indicators for local and anticipated smoke conditions; Ortiz accepts them as inputs to intervention timing and exposure documentation.",
+        "common_ground": "Environmental data are useful for informing same-day decisions, although they do not alone settle the health or social meaning of a trigger."
+      },
+      {
+        "disciplines": [
+          "environmental science",
+          "epidemiology",
+          "sociology"
+        ],
+        "agreement": "The evaluation should measure whether protections reach workers and are usable, not only whether an alert was issued.",
+        "rationale_and_evidence": "Ortiz and Brooks explicitly prioritize receipt and ability to act; Chen accepts implementation measures alongside monitoring.",
+        "common_ground": "A notification is not itself evidence of effective protection."
+      }
+    ],
+    "disagreements": [
+      {
+        "topic": "Meaning and design of the same-day action trigger",
+        "environmental_science": {
+          "position": "Use a predefined action threshold based on a short rolling PM2.5 average, supplemented by plume forecasts.",
+          "rationale": "Supervisors need a clear and fast operational rule, and a single standard supports consistent deployment across participating sites.",
+          "evidence_basis": "Site PM2.5 measurements and regional smoke-plume forecasts."
+        },
+        "epidemiology": {
+          "position": "Do not present a short-term PM2.5 threshold as a health-risk boundary; continuously record exposure and evaluate multiple trigger options.",
+          "rationale": "Respiratory effects can reflect cumulative and lagged exposure, and short-term associations can be confounded by heat and respiratory infections.",
+          "evidence_basis": "Exposure-response timing, prespecified health-outcome assessment, and data on heat and infection-related confounding."
+        },
+        "sociology": {
+          "position": "A threshold-only rule is inadequate; any trigger must be paired with paid relief time, no-retaliation protections, and a worker-controlled reporting channel.",
+          "rationale": "Workers may be unable to stop work because of lost-pay concerns or supervisor pressure, especially among informal, subcontracted, and day-labor arrangements.",
+          "evidence_basis": "Worker vulnerability, employer incentives, fear of losing shifts, and unequal practical ability to use formally offered protections."
+        },
+        "common_ground": "All three seek rapid protective action during active shifts and accept that environmental monitoring can help prompt it.",
+        "unresolved_issue": "Whether the pilot should adopt one fixed operational threshold and, if so, how it should be framed and coupled to enforceable worker protections."
+      },
+      {
+        "topic": "Primary outcomes and measurement strategy",
+        "environmental_science": {
+          "position": "Add personal or task-level PM2.5 monitoring in a smaller validation sample.",
+          "rationale": "Fixed-site monitors may not capture exposures in vehicles, different fields, or clean-air rooms, and cannot adequately test indoor-outdoor infiltration assumptions.",
+          "evidence_basis": "Comparison of personal/task exposure measurements with fixed-site monitoring and clean-air-space conditions."
+        },
+        "epidemiology": {
+          "position": "Use prespecified short-term respiratory symptoms and medically attended respiratory visits, while collecting heat, baseline respiratory condition, and infection information; retain visits as a cautious secondary outcome if access bias is addressed.",
+          "rationale": "Clear case definitions and confounder data are needed to interpret health effects. Medically attended visits can provide a meaningful outcome but cannot be read uncritically.",
+          "evidence_basis": "Standardized symptom and visit data, case definitions, and covariate information for confounding control."
+        },
+        "sociology": {
+          "position": "Do not make medical visits the main success measure; use anonymous symptom check-ins and measures of missed pay, ability to take breaks, and retaliation concerns, with strong privacy safeguards.",
+          "rationale": "Uninsured, undocumented, temporary, and day-labor workers may avoid or be unable to obtain care, so medical utilization can undercount harm and obscure whether protections are genuinely accessible.",
+          "evidence_basis": "Care-seeking barriers, employment precarity, privacy concerns, and worker-reported access to protections."
+        },
+        "common_ground": "The team agrees health and implementation outcomes both matter, that anonymous symptom data and privacy protections should be included, and that fixed-site exposure data have limitations.",
+        "unresolved_issue": "Which outcome should be primary and how heavily to rely on medical-visit data versus worker-reported, exposure, and access measures."
+      }
+    ],
+    "decisions_and_assignments": [
+      {
+        "decision": "The pilot will include a same-day response pathway and bilingual English-Spanish communications.",
+        "status": "agreed"
+      },
+      {
+        "decision": "The final action-threshold design and primary endpoint remain unresolved until the June 24 review.",
+        "status": "deferred"
+      },
+      {
+        "person": "Chen, environmental science",
+        "assignment": "Draft the PM2.5 monitoring and smoke-forecast protocol.",
+        "due_date": "June 10"
+      },
+      {
+        "person": "Ortiz, epidemiology",
+        "assignment": "Draft outcome definitions and a plan to collect confounding data.",
+        "due_date": "June 17"
+      },
+      {
+        "person": "Brooks, sociology",
+        "assignment": "Convene worker and community representatives to review language access, pay protection, privacy, and reporting-channel requirements.",
+        "due_date": "June 17"
+      },
+      {
+        "group": "All participants",
+        "assignment": "Review the materials and revisit the unresolved threshold and endpoint choices.",
+        "due_date": "June 24"
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "Before we get into it, I hope everyone\u2019s had a chance to look at the two fixed-site constraints. What I most want from today is clarity on whether our trigger actually gives workers a usable option to stop, relocate, or take, um, relief time, not just a warning that comes after they\u2019re already out in the field."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Mm, yeah."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think that\u2019s the key. We need a same-day rule, not just the forecast. If a short rolling PM2.5 average at a monitored site crosses a preset level, the supervisor gets a concrete message to move to the clean-air room if it\u2019s available, relocate, or pause. And the plume forecast can give some lead time before that. I\u2019d worry about making that decision- leaving it site by site."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "I'd be careful about making the supervisor message the operative step. For a subcontracted or day-labor crew, \"pause\" isn't really- it isn't a real instruction unless it says, in Spanish as well as English, that relief time is paid, that leaving the task won't affect future work, and who they can contact if that isn't honored. And Maya, how representative do you think one monitored site will be for a crew spread across the county?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s a real limitation. One site can tell us the area is deteriorating and support a consistent action rule, but it can\u2019t stand in for every crew\u2019s exposure. Vehicles, irrigated fields, and exposed lots can differ a lot within the hour. I\u2019d treat it as a conservative operational signal, then do a small validation sample with personal or task-level monitors to see where it fails. And I agree, the message has to make the protection actually usable, not just notify someone."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That validation matters, because otherwise a negative reading at the fixed site may get heard as permission to keep dispersed crews working. I\u2019d want the rule to say the monitor is a floor for action, not a finding that conditions are safe everywhere. And the paid-pause commitment has to apply when a crew reports visibly worsening smoke even if the selected monitor hasn\u2019t crossed yet. I was going to say, um, that\u2019s especially important when\u2014 no, the key point is that the crew report still has to trigger it."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That makes sense, and it keeps us from treating the monitor like an all-clear. We could build worker- or crew-reported worsening smoke into the same notification process, with a default protective action while the supervisor checks conditions. I\u2019d want to log those separately, though, because it would be useful to see how often they happen before the fixed-site trigger."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "But that route can't just feed back into supervisor discretion. A worker or crew report should itself activate paid relief while conditions are checked, with an anonymous or worker-controlled channel alongside the supervisor, because otherwise the people most dependent on that day's wages may never use it. We should also ask employers now whether they'll put that commitment in writing for subcontracted crews. We can't just assume the notification protocol carries it."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I think Lena's right. From the health side, I wouldn't call any rolling monitor cutoff a safety boundary. It can trigger a protective response, but we should keep the continuous readings and log the worker-reported events too. Respiratory symptoms may show up after accumulated exposure, and heat can make a same-day pattern pretty misleading. Maya, how much missing data or calibration drift would make you stop trusting that fixed-site signal?"
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That is a useful question."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d set a pretty conservative data-quality rule rather than try to rescue a questionable signal mid-shift. If the monitor has a communication gap longer than, say, an hour, obvious sensor fault behavior, or it\u2019s overdue for its field check, we, we fall back to the forecast and worker-report pathway, not an all-clear. I\u2019m drafting the monitoring and forecast protocol for June 10, so I can put the exact QA thresholds and that fallback language in there."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That fallback needs to be communicated as a protection escalation, not a technical- not a technical failure that workers are expected to interpret. I\u2019m convening the worker and community representatives on June 17, and I can put the fallback wording, especially the paid-relief and anonymous reporting language, in front of them before we revisit the threshold on June 24."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "That sequencing works for me. For the June 17 discussion, I\u2019d want to test whether an anonymous symptom check-in feels believable to day-labor and subcontracted workers, or whether it still feels like employment screening, even with the safeguards. If it is credible, we can keep it separate from the exposure trigger and learn whether protections were actually reachable."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "I wouldn't assume it's believable. In my experience, \u201canonymous\u201d can still sound like a personnel record when the employer is collecting it. The June 17 group can tell us whether a worker-controlled channel, maybe through the community partner, feels meaningfully separate, and whether symptom reporting should be optional and never linked to names, crew assignment, or future scheduling."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the exposure side, I\u2019d keep symptoms completely separate from the monitor and forecast trigger too. Nobody should have to report coughing or anything personal to get paid relief when the rolling signal, forecast, or visible-smoke report calls for it. Symptoms can be an optional, worker-controlled outcome measure if the June 17 group thinks there\u2019s a channel they\u2019d actually trust."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "And I\u2019d add that the outcome question isn\u2019t just whether relief was offered. It\u2019s whether workers could actually take it without losing pay or facing a later penalty. We should ask through that separate channel whether they got the message, understood it as permission to stop or relocate, and could actually do that. Otherwise, a very polished protocol can look successful while it- while changing very little."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Those are outcomes we can line up with the exposure record without linking anyone's identity. Did a trigger or report occur, did the message reach the crew, and was there actually a pause, relocation, or clean-air-room access? The tricky part is timing. If relief happens forty minutes after the rolling average crossed, that's operationally different from immediate action, even if both get counted as \"offered\"."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Hm, timing really matters."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "And the clock should start at the trigger or report, not when somebody eventually records the pause. I\u2019d want us to capture separately whether the delay came from travel to a room, lack of transport, or somebody waiting for permission. Those are very different failures, especially for crews that can\u2019t reach either fixed site..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Especially because travel is itself exposure time if the clean-air room is off-site. We should time-stamp the trigger or report, the message receipt if we can get it, and the actual protective action, then tag the reason for any gap. Otherwise, we won't know whether a long delay is a communications problem or just the geography of those dispersed sites..."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "And I\u2019d be wary of treating travel to a fixed-site room as the default protective action for dispersed crews. If the gap is long, the immediate option may need to be a paid pause in a vehicle or another identified indoor space. The reason codes should include whether the worker was told to wait for authorization, because that\u2019s exactly where formal access can\u2014where it can disappear in practice."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "For the health analysis, that travel interval can't just disappear into \u201crelief.\u201d We should record whether the alternative space or vehicle was actually lower exposure than the field. Maya, do we have any sense yet how different those concentrations are? Otherwise, a pause that sounds protective operationally may still be- it may still be a fairly substantial cumulative exposure."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "We have a little indication from last season, but not enough to assume the vehicle or either room is protective. In one landscaping corridor, the fixed monitor went up while the crew vehicle stayed lower for much of an hour. Then they moved to an exposed lot and it reversed. I'd like a small paired sample- actually, field, vehicle, and the two rooms, so the pilot can report the actual concentration during that travel-and-relief interval, not just label it relief."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Oh, that's important."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That paired sample is important, but I wouldn't make the pilot wait until we can prove a vehicle is clean enough before we recognize that a crew needs an immediate paid option. We should separate temporary shelter while a safer location is arranged from a verified clean-air space, and then ask workers afterward whether they could actually use either one without pressure or lost wages, because..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That distinction is important. We can call a vehicle or another nearby indoor spot an immediate temporary shelter, not a clean-air space, unless the paired measurements show it actually stays lower. The crew still gets the paid pause either way. And we should log which one they used, because otherwise we\u2019ll- we'd blur a very different exposure situation."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "Temporary shelter isn't the same thing as usable protection, and we need to keep that distinction visible."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, I think we should leave it there. I'll follow up by email with the monitoring protocol draft as it takes shape. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Thanks\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript never establishes the pilot timing as the July-August fire season, despite this being a required shared fact in the seed.",
+      "The shared fact that participating employers can provide clean-air rooms at two fixed sites but cannot guarantee one at dispersed sites is only partially inferable from turns 19-23; it is not clearly established as an employer capability/constraint.",
+      "The required all-party agreement that communications must be available in both English and Spanish is not established. Brooks requests Spanish alongside English in turn 4, but Chen and Ortiz do not explicitly agree and no group decision is made.",
+      "Ortiz never receives or states his required assignment to draft outcome definitions and a confounding-data plan by June 17. Turn 13 discusses symptom-check-in credibility, but it is not an assignment and does not cover case definitions, medically attended visits, heat, baseline respiratory conditions, or infection data.",
+      "The second required substantive disagreement is largely absent. Turns 13-16 discuss privacy and anonymous symptom reporting, while turns 22-26 discuss validation monitoring and temporary shelter, but Ortiz does not propose prespecified respiratory symptoms and medically attended visits, Chen does not explicitly support those health outcomes, and Brooks does not reject medical visits as the primary success indicator because of care-seeking barriers.",
+      "The transcript does not explicitly defer both the threshold design and primary endpoint choice to June 24. Turn 12 mentions revisiting the threshold on June 24, but the primary endpoint is not addressed or left unresolved.",
+      "The conversation reads as a highly polished sequential co-construction of a protocol. Many turns convert the previous concern directly into a refined solution or assignment, especially turns 3-8 and 15-17, triggering the realism concern that nobody explores uncertainty for long.",
+      "The requested deferential-junior dynamic is weak: Chen, the PhD student, is generally confident and equal in turn-taking, while Brooks does not noticeably talk over her or draw her out in the specified manner."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      27
+    ],
+    "exploration_share": 0.24,
+    "turn_moves": {
+      "proposal": 15,
+      "backchannel": 4,
+      "question": 3,
+      "answer": 1,
+      "agreement": 1,
+      "commitment": 2,
+      "observation": 2,
+      "concern": 1
+    },
+    "volunteer_turns": [
+      11,
+      12,
+      28
+    ],
+    "unsure_turns": [],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.52,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "The second required substantive disagreement is not adequately represented. Ortiz never proposes medically attended respiratory visits, prespecified case definitions, or explicitly maintains visits as a cautious secondary outcome; Brooks therefore never explicitly rejects visits as the primary success measure because of care-seeking barriers. Turns 6, 12, 17, 20, and 22 discuss symptoms, confounding, anonymity, and access, but do not establish the required medical-visit endpoint dispute.",
+        "Several required shared facts are absent or only weakly implied: the transcript does not explicitly establish that employers can provide clean-air rooms at exactly two fixed sites but cannot guarantee them at dispersed sites; it does not state that regional alerts may be delayed relative to local conditions; and it does not clearly state that workers may encounter smoke before a formal alert. Turns 9-15 discuss local variation and monitor outages, which are related but not substitutes.",
+        "The all-party agreement that next-day forecasts are inadequate during an active shift is not explicit. The discussion supports a same-day pathway (turns 1-2, 11, 13), but no one contrasts it with waiting for the next-day forecast.",
+        "The all-party English-and-Spanish communications agreement is only partially evidenced. Brooks requires bilingual materials in turns 7 and 16, but Chen and Ortiz do not expressly agree, so the benchmark's stated three-discipline agreement is not fully recoverable.",
+        "The trigger disagreement is softened into a largely resolved operational plan. Chen's fixed rolling-trigger preference is clear (turn 2), Ortiz's caution is clear (turn 6), and Brooks's protection requirements are clear (turns 4 and 10), but turns 11-15 settle on a combined self-report/forecast/monitor pathway without explicitly preserving the fixed-threshold design as unresolved. The closing at turn 27 says remaining questions wait until June 24 but does not identify threshold design or primary endpoint as the deferred choices.",
+        "Naturalness is limited by polished, highly complete turns and orderly turn-taking. Most substantive contributions neatly state a concern, rationale, and proposed solution or assignment, and the conversation effectively supplies a structured recap through sequential commitments. Despite genuine repairs and backchannels, this reads more like carefully authored dialogue than spontaneous meeting speech.",
+        "The requested deferential-junior dynamic is only lightly realized. Chen uses the prescribed cautious framing in turn 9, but she is not noticeably drawn out by a senior participant, and the transcript has no clear friendly talking-over or interruption beyond trailing-off utterances."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "The transcript never establishes the pilot timing as the July-August fire season, despite this being a required shared fact in the seed.",
+        "The shared fact that participating employers can provide clean-air rooms at two fixed sites but cannot guarantee one at dispersed sites is only partially inferable from turns 19-23; it is not clearly established as an employer capability/constraint.",
+        "The required all-party agreement that communications must be available in both English and Spanish is not established. Brooks requests Spanish alongside English in turn 4, but Chen and Ortiz do not explicitly agree and no group decision is made.",
+        "Ortiz never receives or states his required assignment to draft outcome definitions and a confounding-data plan by June 17. Turn 13 discusses symptom-check-in credibility, but it is not an assignment and does not cover case definitions, medically attended visits, heat, baseline respiratory conditions, or infection data.",
+        "The second required substantive disagreement is largely absent. Turns 13-16 discuss privacy and anonymous symptom reporting, while turns 22-26 discuss validation monitoring and temporary shelter, but Ortiz does not propose prespecified respiratory symptoms and medically attended visits, Chen does not explicitly support those health outcomes, and Brooks does not reject medical visits as the primary success indicator because of care-seeking barriers.",
+        "The transcript does not explicitly defer both the threshold design and primary endpoint choice to June 24. Turn 12 mentions revisiting the threshold on June 24, but the primary endpoint is not addressed or left unresolved.",
+        "The conversation reads as a highly polished sequential co-construction of a protocol. Many turns convert the previous concern directly into a refined solution or assignment, especially turns 3-8 and 15-17, triggering the realism concern that nobody explores uncertainty for long.",
+        "The requested deferential-junior dynamic is weak: Chen, the PhD student, is generally confident and equal in turn-taking, while Brooks does not noticeably talk over her or draw her out in the specified manner."
+      ]
+    }
+  ]
+}

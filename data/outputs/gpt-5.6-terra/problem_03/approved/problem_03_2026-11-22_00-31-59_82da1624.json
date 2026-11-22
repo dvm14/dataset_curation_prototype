@@ -1,0 +1,338 @@
+{
+  "transcript_id": "82da1624",
+  "generated_at": "2026-11-22T00:31:59.812969",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style, with mostly short to medium turns in the opening and Q&A but long, uninterrupted presentation turns during talks. Overlap and interruptions are frequent but generally cooperative: people jump in with greetings, brief acknowledgments, follow-up questions, or conversational side comments rather than overtly competing for the floor. Speech is informal and highly disfluent, especially among non-native speakers, with repeated words, restarts, fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cso,\u201d and \u201cyou know,\u201d plus occasional self-corrections. Participants hedge often\u2014using phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d \u201cI guess,\u201d and \u201cwe\u2019re interested in\u201d\u2014and frame challenges as curiosity or uncertainty rather than disagreement. Questions are usually prefaced with praise (\u201cgreat talk,\u201d \u201cinteresting\u201d), then broaden into multi-part, exploratory prompts; speakers respond at length, acknowledging limits and emphasizing open questions. Formality rises during introductions and scientific presentations, which are structured and signposted, but quickly drops back to warm, lightly joking, conversational exchange in transitions and discussion.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Designing payments to coastal landowners to keep mangroves standing instead of converting them to shrimp ponds.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lina Rao",
+      "discipline": "ecology",
+      "functional_role": "domain expert",
+      "background": "Coastal wetland ecologist with 14 years of field research in tropical estuaries. She has led mangrove plot inventories, soil-core carbon sampling, remote-sensing analyses of canopy fragmentation, and juvenile-fish surveys using seines and underwater visual counts. Her recent work compares recovery trajectories in intact, edge-dominated, and heavily cleared mangrove mosaics.",
+      "distinct_perspective": "Frames the problem around ecological function, spatial configuration, and irreversible or slow-to-reverse losses. She emphasizes that a payment pilot should not treat all remaining mangroves as equivalent: site screening needs to account for fragmentation and likely recovery potential, while broader valuation claims should be tied to defensible ecological measurements rather than assumed benefits.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Mateo Silva",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Environmental economist and postdoctoral researcher with 5 years of experience designing stated-preference surveys, farm and aquaculture enterprise budgets, and conservation-incentive pilots in coastal Southeast Asia. He works with willingness-to-accept elicitation, cost-effectiveness analysis, randomized survey modules, and monitoring-cost models, while paying attention to strategic responses and implementation constraints.",
+      "distinct_perspective": "Frames the immediate decision as a mechanism-design and feasibility problem: a pilot needs credible estimates of the compensation required to change conversion decisions, along with the transaction and monitoring costs that determine whether an offer can be implemented. He treats tenure and payment-recipient arrangements as core design variables rather than administrative details, and is prepared to revise economic models when local institutions make standard landholder assumptions inappropriate.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Sari Putri",
+      "discipline": "anthropology",
+      "functional_role": "PhD student",
+      "background": "Anthropology PhD student with 4 years of ethnographic and mixed-methods research in Indonesian coastal villages. Her work combines participant observation, semi-structured interviews, kinship and land-use mapping, and village-level discussion groups to study customary tenure, household decision-making, and experiences with externally funded environmental programs.",
+      "distinct_perspective": "Frames mangrove conservation payments as a question of legitimacy and social relations, not simply individual choice. She examines who is recognized locally as having authority to decide over land and mangroves, how benefits and obligations are distributed within families and villages, and how prior encounters with outside projects shape trust. She argues that baseline inquiry into tenure and trust is necessary to interpret stated willingness to accept and to avoid designing a pilot that is locally seen as unfair.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "mangrove_payments",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 1,
+  "task_id": "problem_03",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+  "seed_spec": {
+    "task_id": "problem_03",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+    "explicit_instruction": "Simulate a planning meeting among Rao, Silva, and Putri. They must explicitly consider these three candidate primary questions: (1) what payment level and payment recipient arrangement would induce landholders to retain mangroves rather than convert to shrimp ponds; (2) how much carbon and fish-nursery value is lost under different conversion and fragmentation patterns, including whether there is a regeneration tipping point; and (3) how customary tenure, community norms about entitlement, and trust in outside programs affect acceptance and perceived legitimacy of payments. The group must choose question 1 as the single first-year primary research question because it directly informs a feasible pilot-payment design. They must decide that its design will collect baseline tenure and trust information and will screen sites to avoid areas already beyond the ecological regeneration threshold. They must not resolve the appropriate recipient arrangement within question 1: whether payments should go to individual titled landholders, customary family groups, or a village-level institution remains an open question for the study. They must also leave unresolved the exact fragmentation threshold at which regeneration becomes unlikely, and the method for monetizing fish-nursery benefits. Clearly distinguish these unresolved questions from decisions already made. Do not introduce a hidden conflict, a different primary question, or unsupported factual claims.",
+    "ground_truth": {
+      "chosen_primary_research_question": "What payment level and payment recipient arrangement would induce landholders to retain mangroves rather than convert them to shrimp ponds?",
+      "reason_for_choice": "It most directly informs a feasible first-year pilot-payment design within the available budget.",
+      "decisions_made": [
+        "The first-year study will use the payment-design question as its single primary question.",
+        "The study will collect baseline information on tenure and trust to inform payment-design analysis.",
+        "The study will screen prospective sites to avoid mangrove areas already beyond the ecological regeneration threshold."
+      ],
+      "alternatives_considered_but_not_chosen_as_primary": [
+        "Estimate carbon and fish-nursery losses across conversion and fragmentation patterns, including possible regeneration tipping points.",
+        "Study how customary tenure, community entitlement norms, and trust affect payment acceptance and legitimacy."
+      ],
+      "unresolved_questions": [
+        "Which recipient arrangement is appropriate: payments to individual titled landholders, customary family groups, or a village-level institution.",
+        "What exact fragmentation threshold makes mangrove regeneration unlikely.",
+        "How fish-nursery benefits should be monetized."
+      ]
+    }
+  },
+  "seed_location": "Turns 1, 16-20, 27, and 30 select and refine the payment-and-recipient/consent-compatible offer question as the first-year focus, with tenure/claimant and trust-related baseline information and ecological screening. Turns 2-4, 25-30 address ecological screening but do not explicitly establish screening specifically to avoid areas already beyond a regeneration threshold; turn 26 instead says poor-fit is not necessarily beyond rescue and leaves restoration potential open. Turns 15-20 leave recipient arrangements unresolved in practice by testing individual, family, and village-based arrangements rather than choosing one. Turns 4 and 26 leave an exact recovery/regeneration threshold unresolved. Turns 29-30 leave full ecological losses and monetary valuation open, but do not explicitly identify the method for monetizing fish-nursery benefits as an unresolved question. The required explicit consideration of all three candidate primary questions and an explicit final choice of question 1 because it directly informs a feasible pilot-payment design within budget are incomplete; the meeting discusses the alternatives but does not clearly state that comparative decision and rationale.",
+  "ground_truth": {
+    "chosen_primary_research_question": "What payment level and payment recipient arrangement would induce landholders to retain mangroves rather than convert them to shrimp ponds?",
+    "reason_for_choice": "It most directly informs a feasible first-year pilot-payment design within the available budget.",
+    "decisions_made": [
+      "The first-year study will use the payment-design question as its single primary question.",
+      "The study will collect baseline information on tenure and trust to inform payment-design analysis.",
+      "The study will screen prospective sites to avoid mangrove areas already beyond the ecological regeneration threshold."
+    ],
+    "alternatives_considered_but_not_chosen_as_primary": [
+      "Estimate carbon and fish-nursery losses across conversion and fragmentation patterns, including possible regeneration tipping points.",
+      "Study how customary tenure, community entitlement norms, and trust affect payment acceptance and legitimacy."
+    ],
+    "unresolved_questions": [
+      "Which recipient arrangement is appropriate: payments to individual titled landholders, customary family groups, or a village-level institution.",
+      "What exact fragmentation threshold makes mangrove regeneration unlikely.",
+      "How fish-nursery benefits should be monetized."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "Hi, everyone. I hope the weather's been a little kinder on your side than it has here\u2014it's been raining all morning. I put the worksheet up, and maybe today we can use it to decide what the first-year question actually has to answer, rather than trying to make the survey carry all three questions at once. I'm particularly hoping we can see whether a payment-and-recipient design is even workable in these two districts, with the tenure and trust baseli- baseline built in."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "That seems workable to me, as long as the map screening isn't just patch area. Two same-sized patches in my transects had completely different seedling recruitment because one was basically all edge, so we need a quick condition screen, screen for connectivity, edge exposure, and probably hydrology before we call a site eligible."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "I think that matters for the offer too. We shouldn\u2019t be eliciting payments for parcels that are ecologically a poor fit from the start. Lina, could the screening map give us a defensible eligibility flag for connectivity, edge, and hydrology, without us having to value the full carbon and fisheries loss at every- at each site?"
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "I think so. It can be a triage flag, not a claim that we know the exact recovery threshold. We can look at patch shape and edge, connection to larger forest or tidal channels, and obvious hydrological blockage from the imagery and a short field check. I'd keep it as eligible, uncertain, and poor-fit, rather than pretend a single cutoff is, um, ready yet."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "Mm, eligible, uncertain, poor-fit."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "That works for me. In the survey, we can show the payment scenarios only for eligible and maybe uncertain sites. For poor-fit parcels, we can- we should keep those in the baseline rather than treat them as candidates. Sari, with those categories, do people locally tend to see the boundary as something an outside project can set, or would that itself create trouble?"
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "It could create trouble if the flag comes in as a fixed judgment from outside. In some places, people will recognize the ecological difference, but they may ask why a neighboring family's area is called poor-fit and theirs is eligible, especially if eligibility is tied to money. Could the field check include a brief, visible explanation with residents and record disputes or alternative local boundaries, instead of treating the map boundary as settled?"
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "I\u2019d want that recorded, especially because a disputed boundary could change both who has standing to accept a payment and who thinks they were excluded. Maybe the site-check form has the map flag, the residents\u2019 account of the boundary, and a simple dispute indicator, not to adjudicate it in year one, just so we don\u2019t treat eligibility as, as neutral."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "And on the ecological side, if a resident walks us through the boundary, they may show us things the image misses, like an old bund, a blocked creek, or where the tidal water actually reaches. I\u2019d put those observations beside the flag, not as a vote on the ecology exactly, but because they may explain why a patch looks recoverable or not."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "Yeah, that's useful."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "That may help with what I\u2019m still puzzled by from the earlier pilot. People with roughly the same expected shrimp profit gave very different minimum payments. If the walk-through shows shared claims, blocked water, or just disagreement over who decides, that\u2019s not- it may be the reason the WTA number differs, not noise in it."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "Hm, that makes sense."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "I\u2019d be careful not to call it simply disagreement. In the two villages I visited, similar shrimp expansion histories led to different first questions. One was very much, \u201cwho gets the money?\u201d The other was- no, in the other one it was, \u201cwill you still be here next season?\u201d Both affect a minimum payment, but they point to different arrangements and different kinds of trust."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "Those are really different mechanisms. If the concern is whether the project will still be there next season, then a high minimum payment may be partly a credibility premium, not foregone shrimp income. Sari, when there's a paper title but relatives or village figures still expect a say in the mangrove, what have you seen happen? Does the titleholder answer alone, or do they usually defer to some family or village process?"
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "It varies, and I don't think we should assume the titleholder is the decision-maker. Sometimes they'll speak first, but then say they need to consult siblings, an uncle, or the village leadership. In other cases, um, the title is almost beside the point if the land is understood as family mangrove. Could the survey let respondents name multiple people or bodies with a legitimate claim, and then ask who would need to agree, instead of making them select one recipient?"
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "I think that's better than forcing them to choose one recipient. We can put a claimant-and-consent section before the payment scenarios, asking who may receive funds, who has to agree, and whether the answer is individual, family, or village-based. Then we randomize the recipient arrangement after that. I'd need to check the sample size before promising too many versions, but it gets at whether the WTA gap is really about the offer or about who can authorize it, and..."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "I\u2019d keep the claimant and consent questions separate, because the person seen as able to receive money may not be the one, or the only one, who can authorize conservation. The randomization is interesting, but if we present, say, an individual payment where people regard this as family mangrove, it could feel insulting, not just hypothetical. Maybe we need a short open follow-up after each scenario asking what makes that arrangement acceptable or not?"
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "I like the open follow-up. We can make the scenario deliberately conditional, like, \u201cif this were discussed with the people you named,\u201d rather than implying the titleholder can just take an individual offer. And Sari, if they say an arrangement is insulting or impossible, should we still ask for a minimum amount, or does that make the number pretty- does that turn it into something pretty meaningless?"
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "If they say it is impossible or insulting, I wouldn't press for a minimum amount in that branch. We can record that as a substantive outcome, that this recipient arrangement lacks legitimacy, and ask briefly what process or recipient would make it discussable. Otherwise we risk turning refusal into a price."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "We should code that as not priceable under the proposed arrangement, not as a zero or a missing WTA. Then the primary question is a little sharper. Among ecologically viable sites, which consent and recipient arrangements are discussable at all, and what compensation is required once they are? We\u2019ll need to keep the non-discussable cases in the results, otherwise we\u2019d end up with a very misleading pilot budget."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "Mm, yes, keep those cases."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "And keeping them matters ecologically too, because a poor-fit or non-discussable site is not evidence that mangroves there have no value. On the worksheet, I\u2019d put the eligible, uncertain, poor-fit flag and the boundary or consent notes in the same site-check record, so when we look at payment responses, we don\u2019t accidentally compare very different mangrove conditions as though they were the same parcel."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "On that record, could we make the consent notes more than just a checkbox? Even a short field note on who was at the walk-through and whether anyone says other people need to be consulted would help us tell a settled arrangement from one that only looks settled in the survey."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "Yeah, a short note helps."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "Let\u2019s add a short narrative field there, not just yes or no. And Lina, on the site-screening side, are you comfortable that the eligible, uncertain, poor-fit flag can reliably pick out areas already beyond likely regeneration? Or are we at risk of calling something poor-fit when it could recover with a fairly modest hydrology fix?"
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "I wouldn't call that reliable enough for a hard exclusion, no. A patch can look poor on the image because of a blocked creek or an old bund and still respond if tidal exchange is restored. That's why poor-fit should mean poor fit for a standing-mangrove payment as currently observed, not ecologically beyond rescue. For year one, I'd keep those cases out of the offer, flag the reason, and leave restoration potential as an open\u2014 leave restoration potential as an open question."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "That distinction is useful. For the budget model, I\u2019ll treat poor-fit as ineligible for this particular avoided-conversion offer, not as a zero-benefit category. Otherwise we\u2019d be quietly pricing restoration out of the project. And for eligible and uncertain sites, I think the primary question is still whether a consent-compatible payment can change conversion decisions, with the ecological flag shaping that estimate."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "Mm, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "I\u2019d just make sure \u201cecologically viable\u201d in that question means the screen is informing the comparison, not certifying the site as healthy or permanently safe. The baseline can give us carbon structure, seedling condition, and, um, a small fish-use measure where feasible, but I wouldn\u2019t turn those into a bundled monetary benefit in year one."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "That\u2019s enough for the first-year question, I think. I\u2019ll revise the survey and budget tabs around the consent-compatible offer, with the ecological screen as a condition rather than a valuation exercise. And we should leave restoration potential, full ecological losses, and the broader legitimacy effects open rather than trying to fold them into one estimate. We\u2019re at time, so maybe I\u2019ll circulate that version after I\u2019ve checked what the sample and monitoring logistics can actually support."
+    },
+    {
+      "speaker": "Dr. Sari Putri",
+      "text": "Okay, I think we should let the rest wait until next time. Thanks, both. This was really helpful, and..."
+    },
+    {
+      "speaker": "Dr. Mateo Silva",
+      "text": "Great, bye both\u2014talk soon."
+    },
+    {
+      "speaker": "Dr. Lina Rao",
+      "text": "All right, take care\u2014bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      4,
+      13,
+      15,
+      20,
+      25,
+      26,
+      29,
+      30
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The three candidate primary questions are not explicitly enumerated as alternatives. The payment-design question is clearly selected (turns 20, 27, 30), but the carbon/fish-loss and customary-tenure/trust questions are discussed mainly as design components or deferred topics rather than plainly stated candidate primary research questions.",
+      "The stated reason for selecting question 1 is only partly explicit. Turn 30 says it is the first-year question and mentions checking sample and monitoring logistics, but it does not clearly say that this question was chosen because it most directly informs a feasible pilot-payment design within the available budget.",
+      "The unresolved payment-recipient alternatives are not fully named. Turns 15-19 establish that recipient arrangements remain unresolved and distinguish authority from receipt, but do not explicitly preserve the full set of individual titled landholder, customary family group, and village-level institution as the alternatives.",
+      "The site-screening decision is weaker than required: turn 26 explicitly says the team cannot reliably identify areas beyond likely regeneration and defines poor-fit only for the current standing-mangrove offer. This preserves the regeneration threshold as open, but does not clearly establish that screening will avoid sites already beyond that threshold.",
+      "Naturalness is limited by polished, sequentially complete turns. Most substantive turns present a finished point and immediately convert it into a practical design decision, especially turns 6-9, 14-20, and 25-30. The worksheet itself is barely referenced after turn 1 despite the screen-share working-session format; concrete on-screen anchors such as columns, rows, or tabs are sparse."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.2,
+    "turn_moves": {
+      "proposal": 13,
+      "request": 2,
+      "answer": 2,
+      "backchannel": 3,
+      "question": 4,
+      "agreement": 6,
+      "idea": 1,
+      "observation": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      27,
+      30
+    ],
+    "unsure_turns": [
+      4,
+      15,
+      16,
+      26,
+      30
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.26,
+      "approved": false,
+      "issues": [
+        "Task-compliance issue: the seed requires a decision to screen sites to avoid areas already beyond the ecological regeneration threshold. Turns 11-16 explicitly reject a hard exclusion threshold in year one and retain highly compromised sites in the sample; turns 21 and 25 describe broad ecological sampling rather than avoidance. This means the required ecological-screening decision is missing or contradicted.",
+        "Task-compliance issue: the required reason for choosing the payment question\u2014its direct relevance to a feasible pilot-payment design within the available budget\u2014is only partly stated. Turn 1 mentions the first-year budget, and turns 23 and 27 discuss feasibility/sample size, but the final choice is not explicitly tied to the budget as the reason for selection.",
+        "Naturalness issue: despite several disfluencies, many substantive turns are polished, complete mini-arguments that identify a concern, qualify it, and resolve it tidily (especially turns 5, 7, 12, 14, 16, 19, and 25). The conversation therefore still reads somewhat authored rather than like a live screen-share working session.",
+        "Naturalness/style issue: the specified screen-share working-session style is not strongly realized. Apart from generic references to maps, sheets, and a field frame, speakers rarely point to concrete on-screen items such as a column, row, figure, or budget line, and there are no brief pauses while someone scrolls or checks the shared material."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.2,
+      "approved": true,
+      "issues": [
+        "The three candidate primary questions are not explicitly enumerated as alternatives. The payment-design question is clearly selected (turns 20, 27, 30), but the carbon/fish-loss and customary-tenure/trust questions are discussed mainly as design components or deferred topics rather than plainly stated candidate primary research questions.",
+        "The stated reason for selecting question 1 is only partly explicit. Turn 30 says it is the first-year question and mentions checking sample and monitoring logistics, but it does not clearly say that this question was chosen because it most directly informs a feasible pilot-payment design within the available budget.",
+        "The unresolved payment-recipient alternatives are not fully named. Turns 15-19 establish that recipient arrangements remain unresolved and distinguish authority from receipt, but do not explicitly preserve the full set of individual titled landholder, customary family group, and village-level institution as the alternatives.",
+        "The site-screening decision is weaker than required: turn 26 explicitly says the team cannot reliably identify areas beyond likely regeneration and defines poor-fit only for the current standing-mangrove offer. This preserves the regeneration threshold as open, but does not clearly establish that screening will avoid sites already beyond that threshold.",
+        "Naturalness is limited by polished, sequentially complete turns. Most substantive turns present a finished point and immediately convert it into a practical design decision, especially turns 6-9, 14-20, and 25-30. The worksheet itself is barely referenced after turn 1 despite the screen-share working-session format; concrete on-screen anchors such as columns, rows, or tabs are sparse."
+      ]
+    }
+  ]
+}

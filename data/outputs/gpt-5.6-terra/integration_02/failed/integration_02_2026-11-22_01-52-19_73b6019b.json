@@ -1,0 +1,583 @@
+{
+  "series_id": "73b6019b",
+  "generated_at": "2026-11-22T01:52:19.078963",
+  "task_id": "integration_02",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.",
+  "input_type": "paired_meetings",
+  "research_id": "sleep_adolescent_emotion",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 1,
+  "research_problem": "Identify the disciplines represented in two research meetings and determine whether each meeting is cross-disciplinary, distinguishing disciplines from specialties within a single field.",
+  "project_context": "The materials contain two unrelated research discussions. One team is studying chronic sleep loss, adolescent emotion regulation, and possible effects of later school start times; the other is studying neural mechanisms of emotional memory using complementary neuroscience approaches.",
+  "plan_document": null,
+  "ground_truth": {
+    "Meeting A": {
+      "disciplines_specialties_present": [
+        "neuroscience",
+        "psychology",
+        "education"
+      ],
+      "cross_disciplinary": true,
+      "reason": "The participants come from three distinct disciplines and contribute different disciplinary methods and concerns: neural measurement, developmental and self-report assessment, and school-system implementation and outcomes."
+    },
+    "Meeting B": {
+      "disciplines_specialties_present": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "cross_disciplinary": false,
+      "reason": "The participants have different specialties and methods, but both are within the single discipline of neuroscience, sharing its training and vocabulary."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting A \u2014 March 4, 2027",
+      "disciplines": [
+        "neuroscience",
+        "psychology",
+        "education"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Anika Rao",
+          "discipline": "neuroscience",
+          "functional_role": "research engineer",
+          "background": "Dr. Rao is a cognitive-affective neuroscientist with 11 years of experience designing longitudinal adolescent neuroimaging studies. She manages wearable-sensor pipelines, MRI acquisition protocols, motion-quality control, and multilevel analyses of functional connectivity. Her prior work has examined sleep restriction, circadian timing, and amygdala-prefrontal network dynamics in teenagers.",
+          "distinct_perspective": "She treats the sleep intervention as an opportunity to test whether changes in sleep timing and duration are accompanied by reliable within-person changes in neural circuitry supporting affective control. She emphasizes measurement reliability, repeated-scan design, motion and developmental confounds, and sample-size planning driven by scan-to-scan variability rather than only behavioral outcomes.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Mateo Alvarez",
+          "discipline": "psychology",
+          "functional_role": "project manager",
+          "background": "Dr. Alvarez is a developmental psychologist with 9 years of experience studying adolescent emotion regulation, daily stress, and sleep-related changes in mood. He has led school-linked longitudinal projects using validated questionnaires, ecological momentary assessment, daily diaries, and mixed-effects models. He coordinates participant-facing protocols and is attentive to burden, assent, and age-sensitive interpretation of self-report data.",
+          "distinct_perspective": "He frames the central question in terms of adolescents' lived emotional functioning across developmental stages: whether later starts alter how young people notice, manage, and recover from emotion in daily life. He advocates combining brief, validated regulation measures with repeated diaries, while probing whether reports are interpretable, developmentally comparable, and practical enough for students to complete consistently.",
+          "tone": "informal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Camille Brooks",
+          "discipline": "education",
+          "functional_role": "domain expert",
+          "background": "Dr. Brooks is an education researcher with 14 years of experience evaluating districtwide policy pilots, including secondary-school scheduling reforms. Her work combines implementation research, administrative-data analysis, interviews, and stakeholder surveys, with particular attention to transportation constraints, school climate, attendance, course performance, and equity across student groups.",
+          "distinct_perspective": "She views later start time as a district-level implementation change rather than a laboratory treatment. She focuses on whether the proposed schedule is operationally feasible given bus routing and staffing, whether adoption differs across schools and families, and whether the policy produces meaningful educational outcomes such as attendance, grades, and stakeholder acceptance alongside any individual-level health effects.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "The materials contain two unrelated research discussions. One team is studying chronic sleep loss, adolescent emotion regulation, and possible effects of later school start times; the other is studying neural mechanisms of emotional memory using complementary neuroscience approaches.\n\nMeeting A \u2014 March 4, 2027. The adolescent sleep project team is aligning its proposed measures with the practical constraints of a district pilot of later high-school start times.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Three researchers participate: a neuroscientist, a developmental psychologist, and an education researcher. The neuroscientist presents a plan to use actigraphy and repeated fMRI measures of amygdala-prefrontal connectivity, noting that scan-to-scan variability requires a sufficiently large sample. The psychologist argues for emotion-regulation questionnaires and short daily diaries, raising concerns about self-report validity and differences across adolescent developmental stages. The education researcher explains that start-time changes depend on bus-route feasibility and should be evaluated with attendance, grades, and teacher and parent attitudes. They agree that the project needs all of these measurement and implementation components, while leaving the final district recruitment target unresolved. Nobody characterizes the group by disciplinary type.",
+        "explicit_instruction": "Three researchers participate: a neuroscientist, a developmental psychologist, and an education researcher. The neuroscientist presents a plan to use actigraphy and repeated fMRI measures of amygdala-prefrontal connectivity, noting that scan-to-scan variability requires a sufficiently large sample. The psychologist argues for emotion-regulation questionnaires and short daily diaries, raising concerns about self-report validity and differences across adolescent developmental stages. The education researcher explains that start-time changes depend on bus-route feasibility and should be evaluated with attendance, grades, and teacher and parent attitudes. They agree that the project needs all of these measurement and implementation components, while leaving the final district recruitment target unresolved. Nobody characterizes the group by disciplinary type.",
+        "ground_truth": {
+          "disciplines_present": [
+            "neuroscience",
+            "psychology",
+            "education"
+          ],
+          "key_positions": {
+            "neuroscience": "Uses actigraphy and fMRI measures of amygdala-prefrontal connectivity; flags scan-to-scan variability.",
+            "psychology": "Uses emotion-regulation questionnaires and diary studies; addresses self-report validity and developmental stage.",
+            "education": "Addresses school schedules and bus routes, plus attendance, grades, and stakeholder attitudes."
+          }
+        }
+      },
+      "ground_truth": {
+        "disciplines_present": [
+          "neuroscience",
+          "psychology",
+          "education"
+        ],
+        "key_positions": {
+          "neuroscience": "Uses actigraphy and fMRI measures of amygdala-prefrontal connectivity; flags scan-to-scan variability.",
+          "psychology": "Uses emotion-regulation questionnaires and diary studies; addresses self-report validity and developmental stage.",
+          "education": "Addresses school schedules and bus routes, plus attendance, grades, and stakeholder attitudes."
+        }
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "Hi, everyone\u2014before we get into the measures, I missed the end of the last meeting. Could somebody give me the quick version of where we landed on the student protocol? And today I mainly want to keep the district-side indicators in view too, so routing, staffing, attendance, course performance, and whether families actually experience the schedule change the same way across schools."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "Very preliminary. We were leaning toward one brief, age-appropriate regulation questionnaire, plus short phone diaries, so we can see whether sleep changes show up in day-to-day, uh, recovery rather than just in a retrospective score. But we hadn't fixed the diary frequency yet. I wanted to check the burden from the last school study, especially for the younger students, before we lock that in."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "Mm, especially the younger cohort."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "Mateo, I\u2019m curious about that too. Do the daily reports give us a separable within-person signal beyond the questionnaire, especially for the younger students, or are we mostly buying burden? For the imaging piece, that day-level variability could be useful, but only if the items mean roughly the same thing across, um, ninth through twelfth grade."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "I think they can, but I don't want to assume that yet. In the last diary pilot, younger students showed bigger day-to-day swings, but they also missed more entries. So that could be development, prompt timing, or just response style. I need to pull the burden numbers. Anika, on your side, how many repeated observations would you need before you\u2019d- when would you call that a within-person connectivity signal rather than noise?"
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "For a change score, I'd want at least two scans per student, pre and post, but I'd feel a lot better with three if we can manage it, because single-session connectivity reliability isn't great in adolescents. The actual N depends on scanner access and motion exclusions, so I need to check both before I put a number in this column. Camille, once a district says yes, how fixed are the implementation dates? Our scan windows can't drift by weeks."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "They're rarely fixed when the district agrees. The board calendar may be set, but routing redesign, union provisions, and sometimes a staggered school rollout can push the actual first later bell back by weeks. So I wouldn't anchor the scan schedule until we've seen the transportation assumptions and candidate-school contracts. And if one school's post window slides while another's doesn't, we need to treat that as implementation variation, not just a nuisance."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "I\u2019d rather define the windows around each school\u2019s actual first later-bell date and record the implementation lag explicitly. But if the post scans are offset by several weeks across sites, can the districts give us the routing and, um, bell-time changes at the school level, not just the board-approved date?"
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "At the school level, usually, but I\u2019d want the operational record, not just the approved calendar. The actual first bell, bus pickup changes, route disruptions, and any staggered grades. I\u2019m also a little worried about differential scan completion. If the school with the roughest transportation rollout has more missed post scans, how sensitive is your connectivity comparison- how sensitive is it to that uneven participation?"
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "It could bias it quite badly if completion is related to the rollout disruption and also to sleep or stress. I'd model the school-level implementation timing and use all the available repeated observations in a mixed-effects framework, but that doesn't fix systematically missing post scans. We'd need completion rates by school and probably some contingency slots. I also need to know if transport disruption itself is something we can measure, instead of treating it as background noise."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "I think we can measure it directly. I\u2019d want a school-by-week implementation log with planned and actual pickup shifts, late buses, route changes, and maybe a short student item on whether transportation changed their morning routine. The tricky part is that parent reaction may be to childcare or commute disruption rather than the later bell itself, so I\u2019d keep a parent survey item that separates those. We saw that disconnect in the last scheduling evaluation."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "That student item could help us interpret the diaries too. If a younger student's morning routine gets less predictable because of the buses, a change in reported regulation may not be the later-start effect in the clean sense. It may be the rollout. Camille, have families said much in prior changes about tolerating repeated phone check-ins, or does that mostly become a student burden, a family burden issue?"
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "Mostly, it becomes a student burden. But parent tolerance matters when the check-ins spill into the evenings or they have to troubleshoot phones. I\u2019d keep the diary protocol really low-friction and ask parents separately about contact burden, because families with unstable transport or shared devices may experience the same prompts very differently."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "That shared-device issue matters for actigraphy too, actually. Device adherence can look like a sleep-timing effect if the watch comes off or gets swapped around. In our wearable pilot, reported bedtimes shifted earlier after the adjustment, but actigraphic midpoint barely moved. I don't know yet if that's weekend compensation, diary interpretation, or adherence, so I'd want a very short wear-compliance check, I mean a wear check, alongside the diaries."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "I\u2019d put that check right next to the sleep items, not make it another diary task. And we should probably separate a missed prompt from a completed report saying the watch wasn\u2019t worn. Otherwise, especially with the younger students, we\u2019ll fold adherence into both the sleep and emotion story."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "I\u2019d want us to cross-tab those adherence flags by school and by transportation exposure, not just overall. If missed wear or prompts cluster in the schools with the messiest route changes, that\u2019s an implementation inequity signal as much as a data-quality problem, and we shouldn\u2019t quietly average it away."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "Yeah, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "For the imaging analysis, I\u2019d want those flags available at the scan level too, not just summarized by school, because a week of disrupted transport could affect both who arrives for the scan and their sleep immediately beforehand. We should probably record the actual days since the later bell started for every scan, rather than calling everything just, um, pre or post."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "And for the diaries, I\u2019d want that same actual-days-since-start variable, not just a pre/post label. The first couple of weeks may be unusually chaotic, so I\u2019m not sure a student\u2019s emotion report then is comparable to, um, say week five. Maybe we need to preserve enough dates to model that settling period rather than average it out."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "Mm, that makes sense."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "That settling period is probably substantively important on the district side too. Could we keep the first two weeks visible rather than just treat them as bad data, with attendance, late arrivals, and the parent transport items by week? If the routes stabilize quickly, great. If they don't, we'll know the student measures are sitting inside a genuinely different implementation context."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "Keeping those weeks visible is better than trying to call them unusable. For the diary side, we can look at completion and emotion reports separately by week since implementation, and not assume early missingness means the same thing as later missingness. I still need to check whether our last school study had enough younger-student data to support that without making the protocol- without making the protocol heavier."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "I think that\u2019s the right question, because if the younger students\u2019 completion drops in weeks one and two, we need to know whether that\u2019s protocol burden or whether those schools are still sorting buses. Could we keep the diary schedule fixed for now, but make the implementation log and the brief family contact item available so we can diagnose that before we- before deciding it\u2019s a developmental pattern?"
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "That works for me as a provisional hold. I\u2019d rather not decide frequency until I\u2019ve checked the younger-group completion and the age coverage on the regulation measure. Then we can see whether a fixed schedule is actually, um, interpretable across grades, rather than just uniform on paper."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "Let\u2019s leave it there provisionally. I\u2019d just add, before we approach districts, I need to verify the preliminary routing model and any fixed union or contractual constraints at the candidate schools. Otherwise we may be designing around a rollout pattern that- that simply can\u2019t happen."
+        },
+        {
+          "speaker": "Dr. Anika Rao",
+          "text": "Once that\u2019s clearer, I can check scanner capacity and, uh, realistic motion attrition against the actual rollout windows."
+        },
+        {
+          "speaker": "Dr. Camille Brooks",
+          "text": "Okay, I think we should stop there\u2014the rest can wait until the next meeting, once we've got those checks. Thanks, everybody."
+        },
+        {
+          "speaker": "Dr. Mateo Alvarez",
+          "text": "Thanks, all. See you next time."
+        }
+      ],
+      "seed_location": "The requested cross-disciplinary meeting is evidenced throughout: Dr. Anika Rao covers neuroscience-related measures and variability (turns 4-6, 8, 10, 14, 18, 26), including repeated scans/connectivity, actigraphy, and scan reliability/motion attrition; Dr. Mateo Alvarez covers developmental psychology measures and developmental/self-report concerns (turns 2, 4-5, 12, 15, 19, 22-24), including regulation questionnaires, daily diaries, younger students, burden, and response validity; Dr. Camille Brooks covers education/implementation issues (turns 1, 7, 9, 11, 13, 16, 21, 23, 25), including routing, schedules, attendance, family attitudes, and implementation logs. They agree on combining measurement and implementation components provisionally (turns 21-26), while district feasibility/recruitment remains unresolved (turns 25-26). No speaker explicitly characterizes the group by disciplinary type.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          14,
+          15,
+          21,
+          22,
+          24,
+          25,
+          26
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence"
+        ],
+        "issues": [
+          "The neuroscience evidence does not fully meet the seed: Dr. Rao discusses repeated scans, connectivity reliability, scanner capacity, motion exclusions, and actigraphy/wear checks (turns 6, 10, 14, 18, 26), but never explicitly names fMRI or amygdala-prefrontal connectivity. A benchmark answer can infer neuroscience from the persona and imaging context, but the specified measure is not recoverable from the transcript alone.",
+          "The education outcome set is incomplete. Dr. Brooks explicitly mentions attendance and course performance/grades (turns 1 and 21) and parent attitudes/contact burden (turns 11-13, 21), but teacher attitudes are never raised.",
+          "The final district recruitment target is not clearly left unresolved. Dr. Brooks refers to candidate schools and approaching districts (turns 25-26), but no recruitment target, sample of districts, or unresolved district-count decision is stated.",
+          "Naturalness is weakened because most substantive turns are polished, fully formed mini-arguments that identify a concern, explain its implication, and propose a solution. This is especially noticeable in turns 7-16 and 21-26. The fillers and self-corrections are present, but often appear as light surface additions to otherwise finished prose.",
+          "Despite the screen-share working-session framing, references to the shared material are sparse and nonspecific: only a few phrases such as 'this column' (turn 6) and implementation logs appear. There are no practical scroll/read pauses or concrete on-screen items, dates, or values that would make the interaction sound like active document review.",
+          "The transcript does not explicitly register a group-level agreement that all neural, psychological, and implementation components are needed. It reaches compatible provisional decisions, but the required agreement is mostly implicit rather than directly stated."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.19,
+        "turn_moves": {
+          "request": 1,
+          "answer": 5,
+          "backchannel": 2,
+          "question": 2,
+          "observation": 2,
+          "proposal": 10,
+          "concern": 1,
+          "agreement": 3,
+          "commitment": 2
+        },
+        "volunteer_turns": [
+          25,
+          26
+        ],
+        "unsure_turns": [
+          2,
+          5,
+          6,
+          14,
+          19,
+          22
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 32,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 2,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.23,
+          "approved": false,
+          "issues": [
+            "The required neuroscience point that scan-to-scan variability requires a sufficiently large sample is absent. Dr. Rao discusses repeated scans, within-person change, and selection into the repeat-scan subset (turns 5 and 8), but never states a sample-size need driven by scan-to-scan variability.",
+            "The psychologist does not explicitly propose emotion-regulation questionnaires or discuss differences across adolescent developmental stages. Dr. Alvarez proposes brief daily stress/emotion-regulation prompts and discusses recall reliability and burden (turns 16, 19, 21), but the required questionnaire and developmental-stage components are missing.",
+            "The education outcome set is incomplete: attendance and course performance appear in turn 2, and parent/teacher acceptance appears there as well, but grades are not stated explicitly. More importantly, the transcript does not clearly establish agreement that all neuroscience, psychology, and education components are needed; it works through diary and implementation details without a cross-component decision.",
+            "The final district recruitment target is not explicitly left unresolved. Transportation feasibility and eligible sites remain uncertain (turns 2, 4, 7), but no recruitment target is proposed or deferred.",
+            "Naturalness is weakened by highly polished, solution-oriented turns. Most turns immediately convert the prior concern into a protocol decision or assignment, with little genuine exploration or uncertainty beyond local details. The dialogue reads more like collaboratively authored meeting notes than spontaneous talk.",
+            "Turn 31 uses the prohibited stock phrase \"I lost my thread there,\" directly violating the supplied meeting-style constraint.",
+            "The screen-share working-session framing is only lightly realized. Participants occasionally say \"column,\" \"sheet,\" \"tab,\" and \"screen,\" but there is little concrete navigation, reading from the displayed material, pausing to scroll, or document-level correction expected of the specified style.",
+            "Speaker differentiation is generally credible, but Dr. Mateo's contributions are dominated by feasibility and access logistics rather than his stated developmental-psychology remit; developmental comparability and validated self-report measurement receive little attention."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.19,
+          "approved": false,
+          "issues": [
+            "The neuroscience evidence does not fully meet the seed: Dr. Rao discusses repeated scans, connectivity reliability, scanner capacity, motion exclusions, and actigraphy/wear checks (turns 6, 10, 14, 18, 26), but never explicitly names fMRI or amygdala-prefrontal connectivity. A benchmark answer can infer neuroscience from the persona and imaging context, but the specified measure is not recoverable from the transcript alone.",
+            "The education outcome set is incomplete. Dr. Brooks explicitly mentions attendance and course performance/grades (turns 1 and 21) and parent attitudes/contact burden (turns 11-13, 21), but teacher attitudes are never raised.",
+            "The final district recruitment target is not clearly left unresolved. Dr. Brooks refers to candidate schools and approaching districts (turns 25-26), but no recruitment target, sample of districts, or unresolved district-count decision is stated.",
+            "Naturalness is weakened because most substantive turns are polished, fully formed mini-arguments that identify a concern, explain its implication, and propose a solution. This is especially noticeable in turns 7-16 and 21-26. The fillers and self-corrections are present, but often appear as light surface additions to otherwise finished prose.",
+            "Despite the screen-share working-session framing, references to the shared material are sparse and nonspecific: only a few phrases such as 'this column' (turn 6) and implementation logs appear. There are no practical scroll/read pauses or concrete on-screen items, dates, or values that would make the interaction sound like active document review.",
+            "The transcript does not explicitly register a group-level agreement that all neural, psychological, and implementation components are needed. It reaches compatible provisional decisions, but the required agreement is mostly implicit rather than directly stated."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting B \u2014 March 11, 2027",
+      "disciplines": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Maya Patel",
+          "discipline": "cognitive neuroscience",
+          "functional_role": "postdoctoral researcher",
+          "background": "A postdoctoral researcher with 6 years of human cognitive-neuroscience research experience, including doctoral work on emotional episodic memory. She designs behavioral paradigms using negative and neutral image encoding, recognition decisions, and confidence ratings, and has run multiple fMRI studies linking medial temporal lobe activity to subsequent memory and recognition performance. She is responsible for protecting the interpretability and feasibility of the participant task and imaging protocol.",
+          "distinct_perspective": "Frames the project around psychological constructs and observable behavior: what participants attend to during encoding, whether emotional material changes recognition and confidence, and how hippocampal and amygdala signals relate to successful memory. She favors analyses that preserve a transparent connection between trial events, memory outcomes, and brain activation, while remaining receptive to model-based measures if they clarify rather than obscure the experimental question.",
+          "tone": "informal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "assertive",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Dr. Elias Werner",
+          "discipline": "computational neuroscience",
+          "functional_role": "domain expert",
+          "background": "A computational neuroscientist with 12 years of experience building and evaluating formal models of decision-making and learning. His work combines hierarchical Bayesian estimation, drift-diffusion modeling, simulation-based parameter recovery, posterior predictive checks, and cross-validated model comparison. He has collaborated on fMRI projects that use trial-wise latent variables, such as evidence accumulation and decision thresholds, as regressors in neural analyses.",
+          "distinct_perspective": "Treats recognition and confidence responses as noisy outputs of latent decision processes rather than as direct measures of memory strength alone. He argues that behavioral effects and regional fMRI associations should be interpreted through identifiable model parameters, with model selection constrained by recovery simulations and out-of-sample performance. He is wary of relying only on condition averages or unmodeled confidence bins when a mechanistic account of the choices is available.",
+          "tone": "cautious",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        }
+      ],
+      "meeting_context": "The materials contain two unrelated research discussions. One team is studying chronic sleep loss, adolescent emotion regulation, and possible effects of later school start times; the other is studying neural mechanisms of emotional memory using complementary neuroscience approaches.\n\nMeeting B \u2014 March 11, 2027. A neural-memory lab is refining an analysis plan for an emotional-memory experiment that combines behavioral performance with fMRI data.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Two researchers participate, both trained in neuroscience but with different specialties. The cognitive neuroscientist focuses on experimental task design: participants encode negative and neutral images, later complete recognition and confidence judgments, and the researcher wants to relate hippocampal and amygdala activity to memory performance. The computational neuroscientist proposes fitting a drift-diffusion model to the recognition and confidence data and using model-derived quantities in fMRI analyses; this researcher discusses parameter recovery and cross-validation. They share standard neuroscience terminology and agree to retain the behavioral task and fMRI protocol, but defer the final choice of model variant. Nobody describes their relationship as cross-disciplinary or within a field.",
+        "explicit_instruction": "Two researchers participate, both trained in neuroscience but with different specialties. The cognitive neuroscientist focuses on experimental task design: participants encode negative and neutral images, later complete recognition and confidence judgments, and the researcher wants to relate hippocampal and amygdala activity to memory performance. The computational neuroscientist proposes fitting a drift-diffusion model to the recognition and confidence data and using model-derived quantities in fMRI analyses; this researcher discusses parameter recovery and cross-validation. They share standard neuroscience terminology and agree to retain the behavioral task and fMRI protocol, but defer the final choice of model variant. Nobody describes their relationship as cross-disciplinary or within a field.",
+        "ground_truth": {
+          "disciplines_present": [
+            "cognitive neuroscience",
+            "computational neuroscience"
+          ],
+          "shared_field": "neuroscience",
+          "key_positions": {
+            "cognitive_neuroscience": "Designs the emotional-memory task and interprets hippocampal and amygdala activity in relation to recognition and confidence.",
+            "computational_neuroscience": "Uses drift-diffusion modeling, parameter recovery, and cross-validation to analyze behavioral and fMRI data."
+          }
+        }
+      },
+      "ground_truth": {
+        "disciplines_present": [
+          "cognitive neuroscience",
+          "computational neuroscience"
+        ],
+        "shared_field": "neuroscience",
+        "key_positions": {
+          "cognitive_neuroscience": "Designs the emotional-memory task and interprets hippocampal and amygdala activity in relation to recognition and confidence.",
+          "computational_neuroscience": "Uses drift-diffusion modeling, parameter recovery, and cross-validation to analyze behavioral and fMRI data."
+        }
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "Morning\u2014before we jump in, did anyone catch Maya up on where we landed last time? I mainly want us to look at the behavioral export and decide what\u2019s actually defensible for the first-level model. I\u2019m seeing people with basically matched recognition accuracy but very different\u2014actually, very different use of the confidence scale, which makes raw confidence bins a little worrying."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "A quick catch-up would help\u2014I missed the last bit. I agree raw bins may be awkward, but I don't want us to lose the plain questions. Did negative versus neutral items that were later remembered, or remembered with high confidence, show different hippocampal and amygdala activity? Before we split too much\u2014too finely, what do the usable trial counts look like after exclusions?"
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "The export on screen is before the final QC, so I don't want to quote a usable N or cell counts yet. I need to check those against the run-level exclusions. But those accuracy-matched, confidence-divergent participants are exactly why I'd keep the later-memory question and fit a hierarchical drift-diffusion model alongside it. Otherwise high confidence may be response caution or, uh, scale use, not stronger mnemonic evidence."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "I\u2019m open to that alongside the standard later-memory model. I just want to know, when you put those trial-wise model values into fMRI, what would count as evidence that they tell us something beyond correct versus incorrect and the reported confidence, especially if they\u2019re correlated with reaction time or confidence? The negative false alarms are a little, um, odd in this export too, so I\u2019d rather not assume high confidence is one thing behaviorally."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "A significant trial-wise regressor on its own wouldn\u2019t be incremental evidence if it\u2019s just another way of expressing RT or the confidence report. We should compare first-level models, the standard subsequent-memory plus confidence model versus that model with the latent decision variable added, and ask if it improves held-out predictive fit while we check the design-matrix correlations. But first, Maya, in this task, do you expect confidence to track mnemonic evidence closely enough that it\u2019s even plausible to separate it from caution?"
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "I think it\u2019s plausible, but not close enough to assume it. For most people, high confidence probably reflects stronger evidence, but the scale-use differences\u2014and those high-confidence negative false alarms\u2014I\u2019m losing the point. Caution or response style could be mixed in too. So I\u2019d treat the model as a useful separation to test, while keeping the observed accuracy and confidence effects visible alongside it."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "I\u2019d keep those observed effects as descriptive targets, not have the latent model erase them. What I need to check now is whether the trial counts and confidence-scale occupancy actually identify separate valence effects in a hierarchical drift-diffusion model. Then parameter recovery, posterior predictive checks, and cross-validation can decide the variant, rather than- rather than us picking one from intuition."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "Mm-hm. Before we let the hierarchical model drive the fMRI plan, I'd like the basic post-QC table. Negative and neutral, hits and misses, plus false alarms if we're modeling retrieval. If the cells are thin, I'd rather- I'd keep the imaging question centered on subsequent memory and not try to estimate every valence-by-confidence interaction."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "That seems right. I\u2019m not proposing a saturated valence-by-confidence retrieval model if those cells collapse after QC. The hierarchical DDM can pool information, but it can\u2019t rescue- it can\u2019t identify parameters the data don\u2019t identify. Could you scroll to the participant-level confidence-frequency column for a second? I want to see whether the upper-scale clustering is widespread or just those few apparent outliers."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "If it\u2019s just a few people, I\u2019d be cautious about building the main model around it."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "Possibly, but even a few people are enough to make pooled confidence bins hard to interpret, so I wouldn't make the whole model hinge on them either. Could you read out the counts at the top end by participant, say the proportion using the highest category? If it's broadly skewed, we may need confidence as an auxiliary observation with participant-level response-style variation rather than a simple ordinal regressor, but\u2014"
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "Let's look at that before we decide how to code confidence. And could we keep the raw proportion and the number of trials there? A participant with, say, three highest-category responses is different from somebody who puts half the task at the ceiling."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "Exactly, we need the denominator and occupancy, not just the proportion. And if the ceiling users are concentrated in one valence or response outcome, that changes the modeling question quite a bit. We should also read those counts split by negative versus neutral and by hit versus false alarm, if the sheet has that."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "For the imaging side, I'd want the encoding trials still labeled by later hit or miss, even if retrieval confidence gets modeled more flexibly. If negative false alarms are where the ceiling is, that's interesting behaviorally, but I don't want it to quietly redefine the main hippocampal subsequent-memory contrast, because..."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "No, agreed, the encoding GLM should keep the conventional negative-versus-neutral subsequent-memory contrast exactly as planned. The retrieval-side model is complementary. If that false-alarm ceiling pattern survives QC, it tells us confidence isn't a clean mnemonic-strength regressor. It doesn't mean we should fold it into the hippocampal contrast."
+        },
+        {
+          "speaker": "Dr. Maya Patel",
+          "text": "Okay, I think that's enough for today. Once we've got the post-QC counts in front of us, we can, we can pick this back up. Thanks, everyone."
+        },
+        {
+          "speaker": "Dr. Elias Werner",
+          "text": "All right, take care."
+        }
+      ],
+      "seed_location": "Turns 2, 4, 6, 8, 14-16 (Dr. Maya Patel) support the cognitive-neuroscience role through the negative/neutral emotional-memory task, recognition/confidence, and hippocampal/amygdala subsequent-memory fMRI questions. Turns 1, 3, 5, 7, 9, 11, 13, and 15 (Dr. Elias Werner) support the computational-neuroscience role through hierarchical drift-diffusion modeling, latent trial-wise fMRI regressors, parameter recovery, posterior predictive checks, and cross-validation. Turns 15-16 confirm agreement to retain the conventional behavioral/imaging protocol while deferring the model variant decision. No speaker explicitly characterizes the relationship as cross-disciplinary or within a field.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          3,
+          5,
+          7,
+          8,
+          14,
+          15
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence"
+        ],
+        "issues": [
+          "Naturalness is limited by highly polished, unusually complete analytic turns throughout, especially Elias's turns 3, 5, 7, 9, 11, 13, and 15. They read more like prepared methodological prose than spontaneous screen-share discussion.",
+          "The stated screen-share style is only partly realized: turns 9, 11, and 13 refer to columns and a sheet, but no key counts are actually read aloud before the meeting ends. This is plausible given the deferral, but it makes the shared-screen work somewhat abstract.",
+          "Turn 16 has Maya end the meeting with a tidy group-style recap despite there being only two participants; 'Thanks, everyone' is mildly unnatural in that context.",
+          "Elias is marked as dominant in the persona, but Maya drives or redirects several central decisions (turns 4, 8, 12, and 14). This is not a task-compliance failure, but the dominance distinction is less consistently enacted than the persona suggests."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.88,
+        "written_turns": [
+          5,
+          15
+        ],
+        "exploration_share": 0.31,
+        "turn_moves": {
+          "question": 3,
+          "concern": 2,
+          "proposal": 5,
+          "answer": 1,
+          "request": 3,
+          "agreement": 2,
+          "backchannel": 1
+        },
+        "volunteer_turns": [],
+        "unsure_turns": [
+          3,
+          6,
+          7
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 24,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 4,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.12,
+          "approved": false,
+          "issues": [
+            "Seed/ground-truth support is incomplete: Dr. Patel clearly covers recognition, confidence, valence, and amygdala interpretation (turns 2, 6, 8, 12), but hippocampal activity is never mentioned in the transcript.",
+            "The computational-neuroscience requirement is only partially met. Elias discusses a hierarchical diffusion-model variant and latent quantities (turns 3, 5, 11), but he never explicitly says drift-diffusion, parameter recovery, or cross-validation. This makes the specified computational position less directly recoverable.",
+            "The final model variant is deferred implicitly through model comparison (turn 11), but this could be made explicit as an unresolved decision after reviewing recovery and cross-validation results.",
+            "The stated screen-share working-session style is weakly realized. Participants repeatedly request a QC sheet (turns 4, 14, 17-20), but nobody actually shares, scrolls through, or reads values from a document; the conversation remains an abstract planning dialogue.",
+            "Naturalness is low because most turns are polished, complete mini-arguments that directly convert the prior concern into a precise analysis decision or data request. Turns 8-20 especially form an unusually orderly escalation of specifications, with little exploration, uncertainty about practical implementation, or realistic interruption.",
+            "Disfluencies are present but mostly superficial insertions into otherwise highly edited prose, for example turns 2, 5, 8, 12, and 14. The two speakers alternate with near-perfect symmetry and every substantive concern receives an immediate, tidy response.",
+            "Elias's persona is somewhat less dominant and less explicitly methodological than specified: he appropriately raises identifiability and collinearity concerns, but does not discuss posterior predictive checks, recovery simulations, or out-of-sample validation."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 17,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.88,
+          "exploration_share": 0.31,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by highly polished, unusually complete analytic turns throughout, especially Elias's turns 3, 5, 7, 9, 11, 13, and 15. They read more like prepared methodological prose than spontaneous screen-share discussion.",
+            "The stated screen-share style is only partly realized: turns 9, 11, and 13 refer to columns and a sheet, but no key counts are actually read aloud before the meeting ends. This is plausible given the deferral, but it makes the shared-screen work somewhat abstract.",
+            "Turn 16 has Maya end the meeting with a tidy group-style recap despite there being only two participants; 'Thanks, everyone' is mildly unnatural in that context.",
+            "Elias is marked as dominant in the persona, but Maya drives or redirects several central decisions (turns 4, 8, 12, and 14). This is not a task-compliance failure, but the dominance distinction is less consistently enacted than the persona suggests."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chatter followed by long, uninterrupted presentation turns and brief question-and-answer exchanges. Participants overlap lightly and often jump in with acknowledgments, greetings, or quick follow-ups; interruptions are generally friendly rather than competitive. Speech is highly conversational and relaxed, using frequent fillers (\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cright\u201d), repetitions, self-corrections, false starts, and unfinished phrasing, especially from speakers thinking aloud or speaking non-natively. Formality rises during introductions and scientific explanations but remains warm and collegial, with praise such as \u201cgreat talk\u201d and \u201cbeautiful work.\u201d Questions are usually prefaced softly\u2014\u201cI have a quick question,\u201d \u201cmaybe a naive question,\u201d \u201cI\u2019m just curious\u201d\u2014and tend to be multipart, exploratory, and iterative rather than sharply framed. Disagreement is rare and indirect; participants qualify claims with phrases like \u201cI think,\u201d \u201cit could be,\u201d \u201cwe don\u2019t know,\u201d and \u201cmy prediction is,\u201d then build on one another through clarification, shared uncertainty, and suggestions for future work.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

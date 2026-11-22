@@ -1,0 +1,319 @@
+{
+  "transcript_id": "ad1bc248",
+  "generated_at": "2026-11-22T13:52:10.135164",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style: turns are often short to medium in the opening and Q&A, while formal presentation turns are long and highly structured. There is frequent backchanneling (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), occasional overlap, delayed starts, and technical interruptions, but participants generally wait their turn during talks. Speech is informal and disfluent, with fillers, repetitions, self-corrections, false starts, and lightly fragmented phrasing, especially from non-native speakers. Questions tend to begin softly\u2014\u201cI have a question,\u201d \u201cmaybe,\u201d \u201cdo you think\u201d\u2014and are often prefaced with praise or framed as curiosity rather than challenge. Disagreement is indirect and exploratory, expressed through alternative interpretations or requests for clarification rather than blunt contradiction. Speakers build on prior answers by restating part of the point, adding a related angle, and inviting future discussion; the overall tone is supportive, enthusiastic, and professionally friendly rather than polished or tightly moderated.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Leilani Faumuina",
+      "discipline": "ecology",
+      "functional_role": "principal investigator",
+      "background": "A reef ecologist with 14 years of work on Pacific nearshore fisheries, including spawning-aggregation mapping, belt-transect surveys, and community catch-monitoring programs. She has led rapid-assessment teams in customary marine-tenure settings and is accustomed to translating reef-condition indicators into council-facing recommendations under tight timelines.",
+      "distinct_perspective": "Frames the policy primarily around biological pressure and spatial risk: fish near documented or reported spawning areas need stronger protection, while other reef zones may absorb more harvest. She favors pairing rapid observations of habitat and visible fish communities with fishers' local knowledge of aggregation sites, and tends to see social data as most useful when it helps interpret likely fishing pressure and compliance.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Mateo R. Villanueva",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "A postdoctoral applied economist with four years of research on small-scale fisheries, household income portfolios, and market shocks in coastal communities. His recent work has used structured household questionnaires, landing records, price modules, and simple budget models to examine how fishing restrictions affect cash flow and livelihood choices.",
+      "distinct_perspective": "Treats the redesigned limit as a household viability question as well as a conservation question. He wants to measure current catch, fish prices, fishing income, alternative work, debt or seasonal obligations, and stated plans to continue fishing under the proposed differentiated limits and compliance reward. He is attentive to the fact that a household's apparent fishing income may not reflect the income of individual crew members.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Anika R. Dela Cruz",
+      "discipline": "anthropology",
+      "functional_role": "research engineer",
+      "background": "A research engineer trained in maritime anthropology, with eight years of experience designing field instruments and managing qualitative data collection for community-governance studies. Her work has focused on customary tenure, kin-based food sharing, crew arrangements, and locally meaningful categories of livelihood participation across island fisheries.",
+      "distinct_perspective": "Sees catch limits as operating through social relationships rather than through isolated households. She will document which clans hold rights in each reef zone, how fish and earnings circulate through kin networks, who is recognized locally as a fisher, and how seasonal fishers and boat crew fit into household-based rules. She is especially concerned that survey categories reflect Namoa residents' own terms for access, obligation, and participation.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 3,
+  "task_id": "methods_03",
+  "benchmark_category": "Methods",
+  "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+  "seed_spec": {
+    "task_id": "methods_03",
+    "benchmark_category": "Methods",
+    "benchmark_task": "Give a meeting where the team chooses a method incapable of answering its research question, for example a one-time survey for a causal question. Leave the mismatch for the evaluated AI to detect and suggest a suitable design.",
+    "explicit_instruction": "Hold a planning meeting in which the team agrees to answer the council's causal question about the effects of the proposed differentiated catch-limit policy using a single cross-sectional household-and-fisher survey conducted during the one pre-decision field visit. The survey should collect current catch, income, prices, dependence on fishing, household sharing obligations, tenure affiliation, views of managers, self-reported compliance, and stated intentions to remain in fishing under the proposed policy. Ecologists should also propose rapid one-time reef observations and fishers' recollections of spawning aggregations during that same visit. Participants should regard this combined one-time data collection as sufficient to estimate whether the policy will cause stock recovery and prevent exit from fishing, and should decide to present the resulting analysis at the annual review. Include practical details: data collection occurs in the four weeks before the review; village landing totals from the prior year are available; no redesigned limit, compliance reward, or comparable intervention has yet been implemented; and no follow-up measurement is planned. Do not have any participant identify, debate, or resolve the methodological mismatch. The meeting should otherwise be collaborative and should assign ecology to reef and spawning questions, economics to income and quota questions, and anthropology to tenure, kinship, and recruitment definitions.",
+    "ground_truth": {
+      "methodological_problem": "The agreed one-time cross-sectional survey plus rapid one-time ecological observations cannot identify the causal effects of a policy that has not yet been implemented. Current differences in catches, reef condition, income, compliance, or stated exit intentions may reflect pre-existing zone quality, household wealth, tenure, fishing effort, market conditions, kinship obligations, or trust rather than the proposed differentiated limits or compliance reward. Retrospective recollection and stated intentions do not establish future behavioral, economic, or ecological effects.",
+      "suitable_design": "Use a prospective longitudinal or quasi-experimental design tied to policy implementation. Collect baseline ecological, catch, household livelihood, compliance, and social-institutional measures before implementation; measure the same outcomes repeatedly after implementation across affected and comparison zones or communities where feasible. If rollout can be staged, use a randomized or phased implementation design; otherwise use a difference-in-differences, matched comparison, or interrupted time-series approach with repeated observations. Track spawning aggregations and reef indicators over biologically meaningful periods, and follow households\u2014including seasonal fishers and crew\u2014over time to measure income, sharing burdens, compliance, and actual entry or exit. Define treatment exposure by zone and household fishing access while incorporating customary tenure and kin networks into sampling and interpretation.",
+      "minimum_evidence_needed": "Pre-policy baseline data; documented timing and geographic scope of each policy component; repeated post-policy stock, spawning, catch, bycatch, reef-condition, income, price, effort, compliance, and household participation measures; and credible comparison trends or groups. Qualitative work on tenure, local fisher definitions, sharing norms, and trust is needed to define the sampling frame, interpret mechanisms, and assess distributional consequences, but it does not by itself identify causal policy effects."
+    }
+  },
+  "seed_location": "Incomplete/missing task conditions. The transcript discusses a proposed lower limit and possible reward through hypothetical survey scenarios (turns 17, 22-25) and plans one rapid visit/reef observations, but it never establishes agreement to use a single cross-sectional survey as sufficient to estimate causal policy effects, states that no intervention has been implemented, confirms four weeks before an annual review, rules out follow-up measurement, or decides to present a causal analysis at the annual review. Therefore the requested method\u2013question mismatch is not clearly instantiated.",
+  "ground_truth": {
+    "methodological_problem": "The agreed one-time cross-sectional survey plus rapid one-time ecological observations cannot identify the causal effects of a policy that has not yet been implemented. Current differences in catches, reef condition, income, compliance, or stated exit intentions may reflect pre-existing zone quality, household wealth, tenure, fishing effort, market conditions, kinship obligations, or trust rather than the proposed differentiated limits or compliance reward. Retrospective recollection and stated intentions do not establish future behavioral, economic, or ecological effects.",
+    "suitable_design": "Use a prospective longitudinal or quasi-experimental design tied to policy implementation. Collect baseline ecological, catch, household livelihood, compliance, and social-institutional measures before implementation; measure the same outcomes repeatedly after implementation across affected and comparison zones or communities where feasible. If rollout can be staged, use a randomized or phased implementation design; otherwise use a difference-in-differences, matched comparison, or interrupted time-series approach with repeated observations. Track spawning aggregations and reef indicators over biologically meaningful periods, and follow households\u2014including seasonal fishers and crew\u2014over time to measure income, sharing burdens, compliance, and actual entry or exit. Define treatment exposure by zone and household fishing access while incorporating customary tenure and kin networks into sampling and interpretation.",
+    "minimum_evidence_needed": "Pre-policy baseline data; documented timing and geographic scope of each policy component; repeated post-policy stock, spawning, catch, bycatch, reef-condition, income, price, effort, compliance, and household participation measures; and credible comparison trends or groups. Qualitative work on tenure, local fisher definitions, sharing norms, and trust is needed to define the sampling frame, interpret mechanisms, and assess distributional consequences, but it does not by itself identify causal policy effects."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "\u2026and the tide chart is still giving us a pretty narrow morning window, which isn't ideal, but it's workable. Anyway, before we get too deep into logistics, what I'd like from today is to leave with a field visit that actually tells the council something. Where the spawning risk is, where harvest can shift, and which households may be, may be squeezed by that. We've only got one visit and four weeks, so I don't want us collecting three nice separate datasets that don't join up."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "I think the join has to be at the person's usual fishing zone and role, not just the household. I can have the questionnaire capture recent catch and prices, along with other income, debt, or seasonal obligations where people are comfortable sharing that, and whether regular fishers, seasonal fishers, and crew would actually keep fishing under the proposed limits and reward. Leilani, from one rapid visit, what reef measures can we credibly attach to someone's usual zone?"
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "At the zone level, we can get a pretty usable rapid picture, habitat condition, signs of fishing pressure, and counts of the larger target fish on short belt transects, assuming that morning window holds. I wouldn't attach a precise stock estimate to any individual fisher, though. One look can't support that. If your survey gets their usual zone and the months they use it, we can combine that with reported spawning places and village landings to flag where shifting effort is most likely to cause..."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "That's helpful. I'll keep the zone questions broad, usual zone, months, and whether they think they could shift, rather than pretending we can match a household to a stock measure. For the spawning reports, what would make them useful to you? A named place, season, species, maybe the tide or moon, um, conditions?"
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "A named place, the months or moon when they see fish gather, and which fish they mean are the core pieces. Tide is useful too, but I'd ask it as a prompt, not require it. People may describe the same event by current or season instead. And we should ask whether that place is still used now, because a reported aggregation with low big-fish counts could be about timing, or it could be getting hit very hard."
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "Mm, and before we treat a named place as just an ecological report, I\u2019d add a question about whether people fish there now. And if not, is that because of low fish, a clan restriction, or some other obligation? Those can look identical in a rapid observation. I also want us to use the local names for the places, then ask who has authority to speak about access there. Otherwise, a usual zone answer may conceal that a crew member doesn\u2019t actually choose where the boat goes."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "Mm, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Exactly. And for the spawning questions, I don't want a crew member put in the position of naming a place they're not entitled to discuss. Anika, do you think we can separate, or rather distinguish, \"I have seen fish gather there\" from \"I can speak about access and current use there\" without making the interview feel like an interrogation?"
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "I think so. We can start with what they personally observed, just the place name and when. Then we can make it a separate, optional question about who normally decides access or whether there's someone else we should ask about use. And I\u2019d avoid asking them to identify a rights-holder on the spot. It may be better to let people name the appropriate person in their own terms."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Yeah, that feels gentler."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "For my side, that means we shouldn't assume the person reporting catch also controls the sale money or decides whether to fish that place. I'll keep the income questions separate from role, like who goes, who decides, and who receives fish or cash. Anika, is that too direct if we ask it that way?"
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "I think it\u2019s okay if we make that distinction less personal at first. Maybe ask, \u201cWhen fish from this trip are shared or sold, how is that usually decided?\u201d Then, only if they\u2019re comfortable, ask who tends to make each part of the decision. We need to record fish received and passed on separately from fish sold, because the woman who handles distribution may be locally understood as participating in fishing even if she never goes on the boat, and..."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "That gets at what I\u2019ve been worrying about on the income side. If we record fish kept, passed on, and sold as separate flows, then a low cash number doesn\u2019t automatically mean fishing is unimportant to that person or household. I\u2019ll phrase the module around a typical recent trip first, rather than asking who controls the money directly, and then..."
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "I\u2019d include a small prompt about who gets counted when they say \u201cour catch\u201d or \u201cour household,\u201d because that might include crew, a sister\u2019s family, or elders receiving fish. Otherwise the proposed household limit could look viable on paper while it\u2019s cutting across, sorry, obligations that aren\u2019t visible in the sale records."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "And that changes how we read pressure on the reef too. A household may look under the limit in the landing book, but if that catch is feeding several linked families, reducing the spawning-ground portion could still push effort hard into the other zones. I'd like the typical-trip questions to keep the zone, or the area, attached to those flows, if we can do that without making it unwieldy."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "I think we can do that in one typical-trip block. Which zone, what was caught, then roughly what stayed with the crew household, what was passed through kin, and what was sold. I\u2019m a little worried about recall if we ask about several zones, so maybe we ask about the most recent trip and then the usual pattern if that trip was unusual. Would that still be enough for you, Leilani?"
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "That\u2019s enough, as long as we mark whether it was a spawning-area trip or not. I don\u2019t need a full zone-by-zone catch diary from one visit. I need to see where people say they\u2019d move if the lower limit comes in, because that\u2019s where the higher-limit zones could suddenly take more pressure."
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "I think that works if we add one short follow-up on whether moving zones is actually their decision, or the boat owner's, or whether it depends on permission from the tenure group. Otherwise, \u201cI would shift\u201d can make it sound like that option is available when it really isn't. And for people who mostly receive and redistribute fish, we may need to ask what a shift would mean for them too, not just for the person who made the trip, because..."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "From the reef side, I need to distinguish a real shift in effort from a hypothetical one. If access means only boat owners or a particular clan can use the higher-limit zone, then we shouldn't count that as pressure every household can just move there. Could we make that follow-up explicitly about the most recent trip too, um, who chose the zone and whether they could have chosen another one?"
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "I\u2019d phrase it like, \u201cFor that trip, who decided this was the place to fish, and could the boat have gone somewhere else?\u201d Then we can ask what would have had to change for another zone to be possible, like permission, a different boat owner, season, whatever, without assuming access is something an individual can negotiate."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "That wording works. If we capture what actually constrains shifting, I can keep the ecological scenario honest. Pressure only moves into a higher-limit zone if people can really get there and fish. And we should make sure the tide window lets us look at at least one reported spawning place and one plausible receiving zone, otherwise the transects will not tell the council much about that trade-off..."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "I can make the hypothetical limit questions conditional on that. So not just, \"would you shift,\" but is another zone genuinely available for that trip, and what happens if it isn't? One thing I still need from the council is the actual reward amount, or at least the range they're considering, because a stated plan to keep fishing means something very different with a token payment than with one that covers even part of a lost trip."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "We need that before we put numbers on any viability scenario. And I\u2019d want the council to be clear the reward isn\u2019t a substitute for protecting the aggregation sites. If it\u2019s small, it may affect compliance at the margin, but it won\u2019t make a lost spawning-ground trip biologically- it doesn\u2019t make that trip biologically harmless. Could you get even an informal range from them this week?"
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "I can ask for an informal range this week, and if they genuinely haven't fixed it, I'll use a couple of clearly labeled scenarios instead of making up one number. I'll also keep the questionnaire focused on the typical trip, how that catch is distributed, and what options are actually open if the spawning-area limit changes."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "Yeah, good\u2014just label those reward scenarios very clearly for the council."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "Mm, okay."
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "Mm, yes, just let's confirm with the council who can, um, appropriately introduce us in each tenure area before the visit."
+    },
+    {
+      "speaker": "Dr. Leilani Faumuina",
+      "text": "The introductions matter for the spawning-site reports as much as the access questions. People may be quite willing to tell us what they\u2019ve seen once the right person has brought us in. I\u2019ll check the tide and weather windows against the reported-site itinerary, sorry, the reported spawning-site itinerary, as soon as we have those contacts, then we can make sure the reef work is pointed at the actual decision."
+    },
+    {
+      "speaker": "Dr. Mateo R. Villanueva",
+      "text": "Okay, I think we should stop there. I'm sorry, we're over time. The rest can wait until we talk next, so thanks, both."
+    },
+    {
+      "speaker": "Anika R. Dela Cruz",
+      "text": "Mm, bye both\u2014take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      16,
+      17,
+      21,
+      22,
+      23,
+      24,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "The central causal-policy decision is not explicit. The team never says that the council's question is whether the proposed policy will cause stock recovery or prevent exit from fishing, nor that the one-time visit will be used to estimate those causal effects. Turns 1-24 instead frame the work as scenario assessment, pressure mapping, and viability/compliance planning.",
+      "Several required seed facts are absent: no turn states that data collection occurs in the four weeks before the annual review, that prior-year village landing totals are available, or that results will be presented at the annual review.",
+      "The transcript never explicitly establishes that no redesigned limit, compliance reward, or comparable intervention has yet been implemented. Turn 22 implies that the reward amount is undecided, but this is insufficient to establish the full no-intervention condition.",
+      "No follow-up measurement is planned only by implication from the repeated references to one visit (for example turns 1, 3, and 16). The meeting should explicitly decide against follow-up if that absence is benchmark-critical.",
+      "The required survey domains are incomplete or vague. Current catch, prices, income/sharing, tenure/access, and stated shift intentions appear, but dependence on fishing, views of managers, and self-reported compliance are not clearly included. Turn 22 discusses compliance in a conditional-policy sense rather than collecting self-reported compliance.",
+      "Turn 3 correctly says that one ecological look cannot support a precise stock estimate, which weakens the intended participant belief that the combined one-time collection is sufficient to answer the policy's causal effects. It does not identify the causal mismatch, but it makes the intended overconfidence less clear.",
+      "The specified round-robin-updates format is not followed. This is an extended collaborative instrument-design discussion, not individual progress updates with only occasional clarifying discussion.",
+      "Naturalness is limited by highly polished, sequentially responsive turns. Most substantive turns cleanly formulate a concern, explain its implications, and propose a wording or solution; disfluencies are light and often surface-level. This produces a scripted interview-design conversation rather than a less tidy live meeting."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.8,
+    "written_turns": [
+      2,
+      5,
+      11,
+      22,
+      24
+    ],
+    "exploration_share": 0.18,
+    "turn_moves": {
+      "proposal": 13,
+      "question": 5,
+      "answer": 3,
+      "agreement": 3,
+      "request": 2,
+      "commitment": 2,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      2,
+      4,
+      11,
+      13,
+      22,
+      24,
+      28
+    ],
+    "unsure_turns": [
+      3,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.74,
+      "exploration_share": 0.11,
+      "approved": false,
+      "issues": [
+        "The central required causal-policy setup is absent. No turn says the council is asking a causal question about whether the proposed differentiated catch-limit policy will cause stock recovery or prevent exit from fishing.",
+        "The transcript never agrees to a single cross-sectional household-and-fisher survey during one pre-decision field visit as sufficient for causal estimation. Mateo discusses survey questions in turns 10, 13, 17, 20, and 26, but neither the one-time design nor causal sufficiency is stated.",
+        "Required timing is missing: no one says collection occurs in the four weeks before the annual review, nor that results will be presented at that review.",
+        "Required implementation context is missing: the meeting never establishes that no redesigned limit, compliance reward, or comparable intervention has yet been implemented.",
+        "No follow-up decision is stated. Leilani explicitly warns in turn 14 that a quick visit does not prove stock recovery, which undermines rather than embeds the intended unresolved methodological mismatch.",
+        "Prior-year village landing totals are never mentioned.",
+        "Several required survey domains are absent or only partial: managers' views, self-reported compliance, stated intentions to remain in fishing, and the compliance reward are not discussed. Catch, income, prices, dependence, sharing, and tenure are only partially represented.",
+        "The meeting is much more a detailed instrument-design discussion than the requested round-robin update format. It lacks clear reports of work completed since the prior meeting.",
+        "Naturalness is limited by polished, highly purposeful turns that repeatedly convert each concern into an immediate refinement or assignment. For example, turns 12-30 form a sustained, tidy chain of problem-to-solution exchanges with little genuine uncertainty or exploration.",
+        "The closing in turns 33-34 is unusually clean and meeting-like, while the preceding discussion contains repeated polished formulations such as 'recipient as well as lander' across turns 29-32, which reads scripted rather than organically negotiated."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.8,
+      "exploration_share": 0.18,
+      "approved": false,
+      "issues": [
+        "The central causal-policy decision is not explicit. The team never says that the council's question is whether the proposed policy will cause stock recovery or prevent exit from fishing, nor that the one-time visit will be used to estimate those causal effects. Turns 1-24 instead frame the work as scenario assessment, pressure mapping, and viability/compliance planning.",
+        "Several required seed facts are absent: no turn states that data collection occurs in the four weeks before the annual review, that prior-year village landing totals are available, or that results will be presented at the annual review.",
+        "The transcript never explicitly establishes that no redesigned limit, compliance reward, or comparable intervention has yet been implemented. Turn 22 implies that the reward amount is undecided, but this is insufficient to establish the full no-intervention condition.",
+        "No follow-up measurement is planned only by implication from the repeated references to one visit (for example turns 1, 3, and 16). The meeting should explicitly decide against follow-up if that absence is benchmark-critical.",
+        "The required survey domains are incomplete or vague. Current catch, prices, income/sharing, tenure/access, and stated shift intentions appear, but dependence on fishing, views of managers, and self-reported compliance are not clearly included. Turn 22 discusses compliance in a conditional-policy sense rather than collecting self-reported compliance.",
+        "Turn 3 correctly says that one ecological look cannot support a precise stock estimate, which weakens the intended participant belief that the combined one-time collection is sufficient to answer the policy's causal effects. It does not identify the causal mismatch, but it makes the intended overconfidence less clear.",
+        "The specified round-robin-updates format is not followed. This is an extended collaborative instrument-design discussion, not individual progress updates with only occasional clarifying discussion.",
+        "Naturalness is limited by highly polished, sequentially responsive turns. Most substantive turns cleanly formulate a concern, explain its implications, and propose a wording or solution; disfluencies are light and often surface-level. This produces a scripted interview-design conversation rather than a less tidy live meeting."
+      ]
+    }
+  ]
+}

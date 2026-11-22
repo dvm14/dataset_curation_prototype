@@ -1,0 +1,317 @@
+{
+  "transcript_id": "e3845e33",
+  "generated_at": "2026-11-22T12:19:16.248372",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though formal presentation segments are long, slide-driven monologues. Early conversation is loose and social, with frequent greetings, acknowledgments, brief side exchanges, and occasional overlapping or interrupted starts; speakers often repeat words, restart phrases, and use fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d and \u201cyou know.\u201d The moderation becomes more structured for introductions, transitions, and Q&A, but remains warm and informal. Participants generally build on talks through praise followed by exploratory questions, often framing challenges softly\u2014\u201cI\u2019m curious,\u201d \u201cdo you think,\u201d \u201chave you looked at\u201d\u2014rather than directly disputing claims. Answers are thoughtful and hedged, using qualifiers like \u201cI think,\u201d \u201csort of,\u201d \u201clikely,\u201d \u201cwe haven\u2019t looked at that,\u201d and \u201cit\u2019s early,\u201d with speakers openly noting uncertainty and limits. Questions tend to be multipart, conversational, and sometimes reformulated midstream, while responses often begin by validating the question before narrowing or qualifying the answer.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Redesigning catch limits for a community-managed reef fishery so stocks recover without pushing families out of fishing.",
+  "disciplines": [
+    "ecology",
+    "economics",
+    "anthropology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lani Vaeasoani",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "A reef-fish population ecologist with 12 years of experience designing monitoring systems for community-managed coastal fisheries in the Pacific. She has led underwater visual censuses, benthic-habitat assessments, larval-recruitment monitoring, and spawning-aggregation counts, and routinely fits surplus-production and length-structured stock indicators to imperfect catch data. She coordinated the 2023-2025 reef-condition and aggregation surveys for this fishery.",
+      "distinct_perspective": "Frames catch limits as a precautionary control on fishing mortality relative to reef productivity, recruitment variability, and the vulnerability of spawning aggregations. She sees the 2019-2025 cooperative records as the strongest initial quantitative anchor because they provide a repeated, species-specific time series from which trends, seasonal concentration, and potential depletion signals can be estimated. She is wary of treating one-time household reports as equivalent to longitudinal catch monitoring, while recognizing that missing removals must eventually be characterized.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Mateo R. de la Cruz",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "A fisheries and development economist with 9 years of experience analyzing small-scale fishery markets, cooperative transaction records, and household income risk. His applied work combines price-and-volume series, revenue decomposition, basic scenario modeling, and distributional analysis of management changes. He has previously helped local governments translate uncertain data into provisional harvest rules with explicit review points.",
+      "distinct_perspective": "Treats the immediate problem as one of managing biological recovery while limiting abrupt income shocks for fishing households. He values the cooperative records because they link species landed, volume, prices, and registered owner revenue over several years, allowing an initial estimate of how alternative limits may affect earnings and volatility. He is cautious about inferring monetary losses from non-market harvest without clearer measurement, but supports using household evidence to test who is excluded from the transaction data and what a limit would mean beyond sales revenue.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Mereana Katoa",
+      "discipline": "anthropology",
+      "functional_role": "principal investigator",
+      "background": "A maritime anthropologist with 15 years of field-based research on customary tenure, household labor, food sharing, and gendered work in coastal fishing communities. She designed the 2024 household livelihood survey and has conducted participant observation, semi-structured interviews, kinship mapping, and seasonal activity calendars with fishers, gleaners, processors, and households dependent on shared catch. As principal investigator, she is responsible for ensuring that the research process is credible to both the council and community members.",
+      "distinct_perspective": "Understands fishing as a household and social-relations system rather than only a stream of market landings. She focuses on unpaid kin crew, shore-based gleaning, reciprocal distribution, and subsistence fish as forms of labor, nutrition, and obligation that may be invisible in buyer records. She can accept a time-sensitive provisional quantitative baseline when it is transparently bounded, but insists that excluded activities be documented and that the team establish a clear evidence-based point for revisiting the baseline before final limits are adopted.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "community_fisheries",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 5,
+  "task_id": "disagreement_02",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+  "seed_spec": {
+    "task_id": "disagreement_02",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+    "explicit_instruction": "In the meeting, the ecology lead recommends using the 2019-2025 buyers' cooperative landing records as the primary dataset for the initial catch-limit baseline because they provide the only multi-year species-specific catch series. The economics lead agrees, noting that the same records allow comparison of landed volume, prices, and registered fishers' revenue variation. The anthropology lead objects once: the records count registered boat owners but omit unpaid kin crew, shore-based gleaners, and fish distributed through customary sharing, so using them as the primary baseline may make the social burden of lower limits look smaller than it is. The project chair decides to use the cooperative landing records as the primary baseline so work can be completed for the 15 June council meeting. The chair assigns ecology and economics to prepare the baseline and assigns anthropology to document the omitted fishing and sharing activities using the 2024 household survey and short follow-up interviews. After stating the objection, the anthropology lead does not speak again about the dataset decision. No one claims the choice is unanimous. The meeting should leave a concrete revisit condition: the team will revisit whether the cooperative records remain the primary baseline if the anthropology follow-up shows that omitted fishing or sharing supplies at least 20% of household fish income or food fish among affected households, or if it identifies a group materially affected by the proposed limit that is absent from cooperative records. The follow-up evidence is due by 1 September, before final catch limits are adopted.",
+    "ground_truth": {
+      "decision": "The team selected the 2019-2025 buyers' cooperative landing records as the primary quantitative dataset for the initial catch-limit baseline, with reef surveys, spawning-aggregation counts, and household evidence used as supporting and follow-up evidence.",
+      "dissent": {
+        "dissenter": "Anthropology lead",
+        "position": "Objected to relying on the cooperative records as the primary baseline.",
+        "reason": "The records cover registered boat owners and recorded sales but omit unpaid kin crew, shore-based gleaners, and customary sharing. This could understate who bears the livelihood and food-security effects of reduced catch limits."
+      },
+      "agreement_status": "The decision was made by the chair despite the anthropology objection; it was not unanimous.",
+      "assignments": {
+        "ecology_and_economics": "Prepare the initial baseline from cooperative landing records, including catch and price/income patterns.",
+        "anthropology": "Use the 2024 household survey and short follow-up interviews to document omitted fishing roles, sharing, food fish, and livelihood dependence."
+      },
+      "revisit_trigger": "Reconsider using cooperative records as the primary baseline if the anthropology follow-up finds that omitted fishing or sharing contributes at least 20% of household fish income or food fish among affected households, or identifies a materially affected group absent from cooperative records.",
+      "revisit_timing": "Anthropology evidence is due 1 September, before final catch limits are adopted."
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not met. The primary-baseline choice and dissent rationale appear in turns 3, 6, and 8-11; the revisit trigger and 1 September timing are stated in turn 11 and adopted in turns 12-13. However, the anthropology lead (Dr. Mereana Katoa) speaks again about the dataset decision after her objection, including in turns 15, 17, and 22. Additionally, no project chair makes the decision or assigns ecology/economics and anthropology as specified; Dr. Lani Vaeasoani recommends and states the outcome, while Mateo closes the meeting. No one calls the decision unanimous.",
+  "ground_truth": {
+    "decision": "The team selected the 2019-2025 buyers' cooperative landing records as the primary quantitative dataset for the initial catch-limit baseline, with reef surveys, spawning-aggregation counts, and household evidence used as supporting and follow-up evidence.",
+    "dissent": {
+      "dissenter": "Anthropology lead",
+      "position": "Objected to relying on the cooperative records as the primary baseline.",
+      "reason": "The records cover registered boat owners and recorded sales but omit unpaid kin crew, shore-based gleaners, and customary sharing. This could understate who bears the livelihood and food-security effects of reduced catch limits."
+    },
+    "agreement_status": "The decision was made by the chair despite the anthropology objection; it was not unanimous.",
+    "assignments": {
+      "ecology_and_economics": "Prepare the initial baseline from cooperative landing records, including catch and price/income patterns.",
+      "anthropology": "Use the 2024 household survey and short follow-up interviews to document omitted fishing roles, sharing, food fish, and livelihood dependence."
+    },
+    "revisit_trigger": "Reconsider using cooperative records as the primary baseline if the anthropology follow-up finds that omitted fishing or sharing contributes at least 20% of household fish income or food fish among affected households, or identifies a materially affected group absent from cooperative records.",
+    "revisit_timing": "Anthropology evidence is due 1 September, before final catch limits are adopted."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Good morning. Before we get into the updates, did anyone hear from Mateo? He said he might be coming straight from the cooperative office. For today, I think we need to leave with a defensible choice of primary quantitative baseline for the June proposal. Not necessarily a final quota number. I want us to be clear about what each dataset can actually support."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "Sorry, I was at the cooperative office. I missed the last meeting, so could I get the short version of where we landed on the baseline question? I've started tabulating the 2019 to 2025 records, and they're probably the strongest quantitative- sorry, the strongest anchor we have for the numbers, but only for marketed landings and registered owners, not total household fishing income."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "That\u2019s essentially where we were. I\u2019d recommend using the 2019\u20132025 cooperative series as the primary baseline, explicitly as a marketed-landings baseline, because it\u2019s repeated and species-resolved. The reef and household material would then constrain how we interpret it, rather than us pretending they\u2019re equivalent sampling frames. Mateo, from what you\u2019ve tabulated so far, do price and owner-revenue patterns vary enough by season that an annual cap could concentrate hardship in particular months?"
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "I haven't separated the series by month yet, so I wouldn't want to infer that from the annual tabulation. What concerns me is 2024. Volume fell in several high-value species, but recorded owner revenue stayed fairly steady because average price rose. Before we call that resilience, I need to check whether it's quality, timing, or just a different mix of boats selling through the cooperative. And Lani, do the spawning indicators suggest there are particular months we should treat separately?"
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "The aggregation signal points to a vulnerable seasonal window, but I would not specify months yet. The 2024 and 2025 counts need a comparability check on tidal window and observer coverage first. One heavily landed species was lower at the aggregation in 2025, sorry, in the 2025 count, without the same decline on adjacent transects, so that could be timing rather than depletion. Once that's checked, we can test whether the monthly landing and price series overlaps the aggregation period."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "That comparability check matters. From the household side, I'm comfortable treating the cooperative series as a provisional marketed-landings baseline, but not as a measure of household exposure. It leaves out kin crew, gleaners, and fish moved through sharing. Mateo, when owner revenue is standing in for economic exposure, what are we assuming about how catch, cash, and risk are actually distributed within a boat household?"
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Mm, that is the concern."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "That is a real limitation. If we use owner revenue, we're assuming, at least provisionally, that the owner's recorded sales are a reasonable proxy for the household's exposure. But it doesn't tell us anything reliable about crew shares, unpaid labor, consumption from catch, or whether the owner absorbs a bad season rather than passing it on. Mereana, in the 2024 survey, which of those forms of dependence was, um, least visible in the cash-income questions?"
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "The least visible was fish received and redistributed outside a sale. Cash questions captured some crew income, unevenly, but households often described food fish as an obligation or a reciprocal claim, rather than income, so they didn't necessarily report it that way. I need to check the instrument and the coding before saying how consistently we can compare that across households."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "That distinction is why I'd keep the 2019\u20132025 cooperative records labeled as marketed removals. I wouldn't inflate them into household catch. Mereana, when you check the coding, can you tell us whether received fish is separable from directly caught fish consistently enough to set a review threshold, say a level of unrecorded dependence where the initial baseline needs revisiting, or..."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "I think that is workable, provided it is a real review condition and not just a footnote. I would use 1 September for the follow-up evidence, and revisit the baseline if omitted fishing or sharing accounts for at least 20% of food fish or fish income among affected households, or if we identify a materially affected group that's absent from the cooperative records. I need to verify first that the coding can support that comparison."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "I support making that a genuine review condition. For the 15 June proposal, I'd keep the baseline strictly to recorded marketed landings and show the distribution across registered owners. Then the 1 September check can tell us whether that limit is missing a group whose food or income exposure is substantial."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "That gives us a defensible sequence. The 2019\u20132025 cooperative records stay as the primary quantitative baseline for the June advice, and they're explicitly for recorded marketed landings. Then the 1 September household review is a condition on whether that framing is adequate. I would just avoid calling the limit protective of total removals until we know how large those omitted pathways are."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "Right, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "And for the June wording, I want to keep that distinction really clear. This is a provisional marketed-landings baseline, not an estimate of total removals or household burden. I\u2019ll check whether the survey coding lets us apply the 20 percent condition consistently, rather than, um, treating the threshold as more precise than the data allow."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Until that coding check is complete, I would not attach ecological meaning to the 20 percent figure either. The 2019\u20132025 cooperative records can still give us the species-specific trajectory and seasonal concentration we need for June, but the proposal should say plainly that it is controlling recorded marketed fishing mortality, not all reef- I mean, not all reef removals."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "One practical point for the June analysis, I need to verify whether the 2019 and 2020 price fields are net of handling fees, and whether all buyers reported them in the same format. Until then, I'd present revenue changes cautiously, cautiously as recorded owner receipts, not necessarily directly comparable net earnings, and keep the proposed limit tied first to volumes by species."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "The biological screen should stay volume- and species-based at this stage. From the 2019\u20132025 cooperative landings, we can look at trajectories, concentration, and whether removals peak around the aggregation window, once I\u2019ve checked the 2024\u20132025 count protocols. I wouldn\u2019t let the revenue series- I wouldn\u2019t let an uncertain revenue series determine the fishing-mortality control."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "Yes, that keeps the control aligned with what the records can actually show."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Yes\u2014the 2019\u20132025 cooperative series is the right anchor for that volume screen."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "I agree on the anchor, but let's keep that qualification visible in the June text. And when we describe household implications, I would avoid extrapolating from registered owners to households generally. The households reporting shortages despite high cooperative landings are exactly the pattern we need to understand before we make that claim."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Yes\u2014the 2019\u20132025 cooperative records should remain explicitly bounded that way."
+    },
+    {
+      "speaker": "Mateo R. de la Cruz",
+      "text": "All right, I think we can stop there and give everyone a few minutes back. Thank you, everyone. We'll pick this up once the checks are in."
+    },
+    {
+      "speaker": "Dr. Lani Vaeasoani",
+      "text": "Thank you, everyone. Goodbye."
+    },
+    {
+      "speaker": "Dr. Mereana Katoa",
+      "text": "Take care, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      22
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required single anthropology objection followed by silence on the dataset decision is not met. Dr. Mereana continues to comment directly on the baseline choice and its qualification in turns 11, 15, and 22, including agreement on the anchor in turn 22. This undermines preservation of a one-time dissent that remains unresolved rather than subsequently softened.",
+      "The chair does not clearly make the decision despite the anthropology objection. Turn 13 presents a shared 'defensible sequence,' and turns 21-23 produce repeated agreement language, which makes the outcome sound broadly consensual even though it does not literally call it unanimous.",
+      "Required assignments are incomplete. The transcript has ecology and economics implicitly working on parts of the baseline (turns 12, 18-19), but Dr. Lani never explicitly assigns ecology and economics to prepare it. Anthropology is asked to check survey coding (turns 10-11, 15), but is not assigned the required short follow-up interviews or a broader documentation of omitted fishing roles and sharing.",
+      "The opening does satisfy the missed-meeting catch-up requirement in turn 2, but the conversation does not really follow the specified round-robin-updates format; it becomes an extended, highly structured joint deliberation.",
+      "Naturalness is limited by polished, complete argumentative turns and repeated tidy convergence. Several turns state a concern and immediately convert it into a precise action or condition, especially turns 10-13 and 15-19. The closing also reads like a formal wrap-up rather than an organically trailing meeting discussion."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.72,
+    "written_turns": [
+      3,
+      6,
+      11,
+      12,
+      13
+    ],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "question": 2,
+      "request": 2,
+      "proposal": 7,
+      "concern": 3,
+      "answer": 3,
+      "agreement": 6,
+      "commitment": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      15
+    ],
+    "unsure_turns": [
+      4,
+      5,
+      9,
+      11,
+      15,
+      18
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.74,
+      "exploration_share": 0.08,
+      "approved": false,
+      "issues": [
+        "The required anthropology objection is not made clearly or only once. Dr. Katoa identifies omissions and limitations in turns 2, 4, 11, 15, 18, 20, and 27, but never explicitly objects to selecting the cooperative records as the primary baseline or states that this choice could understate the social burden of lower limits.",
+        "The required omitted groups are incomplete. The transcript discusses recipients, sharing, and owner/crew networks, but never explicitly identifies shore-based gleaners and does not clearly state unpaid kin crew are omitted from the cooperative records.",
+        "There is no chair decision made despite dissent. Lani effectively supports the provisional baseline in turns 3 and 22, but nobody explicitly decides to adopt it for the 15 June council meeting after recording an objection. The meeting instead reaches broad comfort/agreement in turns 23-27, which obscures the non-unanimous status required by the task.",
+        "The required concrete revisit trigger is absent. Turn 27 says the team will revisit the safeguard before permanence, but it does not state either the 20% threshold for omitted income/food fish or the alternative trigger of discovering a materially affected group absent from cooperative records.",
+        "The required timing is absent: no follow-up evidence due date of 1 September is given, and the meeting refers only generally to June or the next meeting. The 15 June council date is also not stated; it is only called the June council discussion/note.",
+        "Assignments only partially match the ground truth. Ecology and economics are assigned continuity, coding, roster, fee, and revenue checks, while anthropology plans survey mapping and follow-ups, but there is no clear explicit assignment to jointly prepare the specified initial baseline or to document all omitted fishing and sharing activities.",
+        "The dialogue is polished and solution-oriented throughout. Many substantive turns are complete, carefully qualified mini-arguments that resolve directly into a next step, especially turns 2-6, 14-16, and 19-23. Disfluencies are largely inserted into otherwise finished prose rather than arising organically.",
+        "The stated round-robin update format is not strongly realized after the opening. The material becomes a sustained structured policy-analysis discussion, with long alternating analytical turns and little reporting of what each participant has done since the previous meeting."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.72,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "The required single anthropology objection followed by silence on the dataset decision is not met. Dr. Mereana continues to comment directly on the baseline choice and its qualification in turns 11, 15, and 22, including agreement on the anchor in turn 22. This undermines preservation of a one-time dissent that remains unresolved rather than subsequently softened.",
+        "The chair does not clearly make the decision despite the anthropology objection. Turn 13 presents a shared 'defensible sequence,' and turns 21-23 produce repeated agreement language, which makes the outcome sound broadly consensual even though it does not literally call it unanimous.",
+        "Required assignments are incomplete. The transcript has ecology and economics implicitly working on parts of the baseline (turns 12, 18-19), but Dr. Lani never explicitly assigns ecology and economics to prepare it. Anthropology is asked to check survey coding (turns 10-11, 15), but is not assigned the required short follow-up interviews or a broader documentation of omitted fishing roles and sharing.",
+        "The opening does satisfy the missed-meeting catch-up requirement in turn 2, but the conversation does not really follow the specified round-robin-updates format; it becomes an extended, highly structured joint deliberation.",
+        "Naturalness is limited by polished, complete argumentative turns and repeated tidy convergence. Several turns state a concern and immediately convert it into a precise action or condition, especially turns 10-13 and 15-19. The closing also reads like a formal wrap-up rather than an organically trailing meeting discussion."
+      ]
+    }
+  ]
+}

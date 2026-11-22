@@ -1,0 +1,367 @@
+{
+  "transcript_id": "1c5e6828",
+  "generated_at": "2026-11-21T15:02:41.902079",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style: turns are mostly short to medium in casual chat and Q&A, while speakers deliver long, structured presentation turns. Overlap and quick backchannels (\u201cyeah,\u201d \u201cright,\u201d \u201cokay,\u201d laughter-like reactions) are frequent, especially during introductions and transitions, with occasional interrupted or abandoned starts. Participants use many fillers and hedges\u2014\u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess\u201d\u2014and formulate questions incrementally, often prefacing them as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions before adding several clauses. Formality is mixed: friendly banter and personal asides coexist with conventional host language, praise, and technical discussion. Challenges are indirect and collaborative, framed as extensions, uncertainties, or requests for clarification rather than disagreement; answers commonly acknowledge limits, restate the question, and think aloud. Speech includes repetitions, self-corrections, run-on phrasing, and occasional audio/transcription roughness, giving it an informal, spontaneous feel.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding how to restore a degraded tidal marsh so it both recovers native vegetation and reduces storm-surge damage to nearby homes.",
+  "disciplines": [
+    "ecology",
+    "environmental engineering",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "ecology",
+      "functional_role": "PhD student",
+      "background": "Doctoral researcher in coastal wetland ecology with six years of field and analytical experience in tidal-marsh restoration. Her work combines vegetation transects, RTK elevation surveys, porewater salinity sampling, invasive Phragmites mapping, and comparisons with nearby reference marshes to identify conditions associated with native high-marsh recovery. She has worked on monitoring plans for small municipal restoration projects but has limited experience translating ecological thresholds into engineered design specifications.",
+      "distinct_perspective": "Chen frames the Bayhaven decision as rebuilding the site conditions that allow native plant communities to persist, rather than simply adding vegetation or sediment. She argues that recovery depends on an appropriate, spatially varied elevation and salinity mosaic, using the two nearby reference marshes as practical recovery targets. She is concerned that a uniform sediment fill could simplify habitat, miss fine-scale hydrologic variation, and leave some zones favorable to invasive reed. She wants design alternatives evaluated against likely vegetation trajectories, invasive-regrowth risk, and the ability of the marsh to retain a range of high-marsh habitats over time.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Eng. Rafael Ortiz",
+      "discipline": "environmental engineering",
+      "functional_role": "research engineer",
+      "background": "Coastal and environmental research engineer with nine years of experience developing hydrodynamic and wave-transformation models for shoreline projects, including living-shoreline, berm, and marsh-edge designs. He has built the preliminary Bayhaven model using present bathymetry, tidal water levels, wind-wave conditions, and a 1% annual-chance storm scenario. His work typically compares alternatives through water levels, wave attenuation, overtopping-related exposure, and sensitivity testing of uncertain physical inputs.",
+      "distinct_perspective": "Ortiz treats the restoration as a coupled flood-risk and coastal-process problem: the relevant question is how changes in marsh width, elevation, vegetation roughness, and berm geometry alter storm water levels and wave forces at the neighborhood berm. His current model compares alternatives mainly by peak water level and wave reduction under the design storm. He sees a wider vegetated marsh bench and targeted berm modifications as potentially protective, but stresses that vegetation roughness, sediment response, and future marsh-elevation change are uncertain inputs. He wants ecologists to clarify plausible vegetation and elevation states and economists to specify which flood-performance outputs are decision-relevant.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Lena Brooks",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Postdoctoral environmental economist with five years of applied research on coastal adaptation, household flood exposure, and public-infrastructure appraisal. She works with parcel-level property data, flood-depth damage functions, stated and revealed property-value evidence, construction budgets, and long-run maintenance assumptions. For Bayhaven, she has assembled preliminary estimates of residential exposure, avoided expected flood damage, and alternative-specific capital and maintenance cost ranges.",
+      "distinct_perspective": "Brooks frames the county's choice as a public-investment decision under uncertainty, with benefits and costs occurring over time and accruing to different groups. Her current appraisal compares construction and maintenance costs with avoided expected residential flood damage and possible property-value effects. She needs credible, time-varying estimates of how marsh and berm performance changes, rather than a single design-storm result. She insists on distinguishing benefits accruing directly to Bayhaven homeowners from broader ecological benefits, which may be real but require separate treatment rather than being assumed equivalent to flood-damage reduction. She is skeptical of performance claims that cannot be tied to measurable outcomes, probabilities, or maintenance commitments.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "tidal_wetland_restoration",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 5,
+  "task_id": "opportunity_01",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+  "seed_spec": {
+    "task_id": "opportunity_01",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary research meeting with sufficient topic context for the evaluated AI to recommend related literature offering a new viewpoint. Record existing perspectives so novelty can be assessed. Do not fabricate publications; recommended literature needs external verification.",
+    "explicit_instruction": "Hold a planning meeting among Dr. Maya Chen (ecology), Eng. Rafael Ortiz (environmental engineering), and Dr. Lena Brooks (economics). Chen should explain that native vegetation recovery depends on restoring an appropriate elevation and salinity mosaic, using the two nearby reference marshes as recovery targets; she is concerned that a uniform sediment fill could simplify habitat and leave invasive reed favored in some zones. Ortiz should explain that his current model compares alternatives mainly by peak water level and wave reduction at the neighborhood berm under a 1% annual-chance storm; he sees a wider vegetated bench and berm modifications as potentially protective, but says vegetation roughness and future marsh-elevation change are uncertain model inputs. Brooks should explain that her current appraisal compares construction and maintenance costs with avoided expected residential flood damage and property-value effects; she needs credible estimates of performance over time and must distinguish benefits accruing to Bayhaven homeowners from broader ecological benefits. The group should agree that all three perspectives need to be considered and that permitting, cost, and long-term maintenance constrain feasible designs. They should not select a final restoration alternative, quantify a final benefit-cost ratio, or resolve how to value ecological benefits. Keep the discussion focused on the stated site and decision. The meeting should surface the existing perspectives clearly enough that a later assistant can seek externally verifiable literature that introduces a genuinely additional viewpoint; participants must not name, invent, or recommend publications.",
+    "ground_truth": {
+      "existing_perspectives": [
+        {
+          "discipline": "Ecology",
+          "viewpoint": "Restoration should recreate an elevation-salinity mosaic compatible with native high-marsh vegetation and use nearby reference marshes to assess recovery. Uniform sediment placement may reduce habitat heterogeneity and could fail to suppress invasive reed in unsuitable zones.",
+          "evidence_available": "Site vegetation, elevation, and porewater-salinity surveys; observations from two nearby reference marshes."
+        },
+        {
+          "discipline": "Environmental engineering",
+          "viewpoint": "Alternatives should be evaluated for storm-surge and wave attenuation at the neighborhood berm, currently using modeled peak water level and wave reduction for a 1% annual-chance storm. Vegetated benches and berm changes may improve protection, but vegetation roughness and future elevation change are uncertain.",
+          "evidence_available": "Preliminary present-condition hydrodynamic model and design-storm water levels."
+        },
+        {
+          "discipline": "Economics",
+          "viewpoint": "Alternatives should be assessed through construction and maintenance costs, avoided expected residential flood damages, and property-value effects. Estimates require credible time-varying performance and should distinguish homeowner benefits from broader ecological benefits.",
+          "evidence_available": "Parcel-level exposure estimates and preliminary cost ranges."
+        }
+      ],
+      "decision_context": {
+        "site": "45-hectare degraded tidal marsh adjacent to Bayhaven homes and a narrow existing berm",
+        "deadline": "State coastal-permitting-fund application is due September 2027",
+        "candidate_actions": [
+          "Restore tidal exchange and remove invasive vegetation",
+          "Place sediment in selected marsh areas",
+          "Create a wider vegetated marsh bench seaward of the berm",
+          "Maintain or modify the existing berm"
+        ],
+        "unresolved_items": [
+          "Which restoration concept or combination should be selected",
+          "How ecological benefits should be valued",
+          "How restoration performance should be represented over time in economic analysis"
+        ]
+      },
+      "novelty_boundary": "Literature recommendations should add a perspective not already represented solely by vegetation-recovery ecology, design-storm hydrodynamic protection modeling, or conventional avoided-damage/property-value cost-benefit analysis. Any suggested publication must be externally verified rather than assumed to exist."
+    }
+  },
+  "seed_location": "Turns 1-24 substantially satisfy the requested planning-meeting seed. Ecology: turns 3-5 and 11-17 describe elevation/salinity mosaics, two reference marshes, spatially variable native/reed conditions, and concern against uniform treatment; turns 20 and 23 retain ecological outcomes separately. Engineering: turns 2, 4, 7, 10, 12, 14, and 21 cover 1% storm modeling, vegetated bench/berm protection, roughness and elevation uncertainty, and scenario-based hydrodynamics. Economics: turns 6, 9, 16, 19, and 22 cover time-varying performance, avoided residential damage, property-value uncertainty, costs/maintenance, and separation of homeowner from ecological benefits. Constraints and unresolved decisions appear in turns 16, 19-24: September 2027 permitting-fund application, permit/maintenance/cost constraints, no chosen final alternative, and no resolution of ecological valuation. No participants name, invent, or recommend publications.",
+  "ground_truth": {
+    "existing_perspectives": [
+      {
+        "discipline": "Ecology",
+        "viewpoint": "Restoration should recreate an elevation-salinity mosaic compatible with native high-marsh vegetation and use nearby reference marshes to assess recovery. Uniform sediment placement may reduce habitat heterogeneity and could fail to suppress invasive reed in unsuitable zones.",
+        "evidence_available": "Site vegetation, elevation, and porewater-salinity surveys; observations from two nearby reference marshes."
+      },
+      {
+        "discipline": "Environmental engineering",
+        "viewpoint": "Alternatives should be evaluated for storm-surge and wave attenuation at the neighborhood berm, currently using modeled peak water level and wave reduction for a 1% annual-chance storm. Vegetated benches and berm changes may improve protection, but vegetation roughness and future elevation change are uncertain.",
+        "evidence_available": "Preliminary present-condition hydrodynamic model and design-storm water levels."
+      },
+      {
+        "discipline": "Economics",
+        "viewpoint": "Alternatives should be assessed through construction and maintenance costs, avoided expected residential flood damages, and property-value effects. Estimates require credible time-varying performance and should distinguish homeowner benefits from broader ecological benefits.",
+        "evidence_available": "Parcel-level exposure estimates and preliminary cost ranges."
+      }
+    ],
+    "decision_context": {
+      "site": "45-hectare degraded tidal marsh adjacent to Bayhaven homes and a narrow existing berm",
+      "deadline": "State coastal-permitting-fund application is due September 2027",
+      "candidate_actions": [
+        "Restore tidal exchange and remove invasive vegetation",
+        "Place sediment in selected marsh areas",
+        "Create a wider vegetated marsh bench seaward of the berm",
+        "Maintain or modify the existing berm"
+      ],
+      "unresolved_items": [
+        "Which restoration concept or combination should be selected",
+        "How ecological benefits should be valued",
+        "How restoration performance should be represented over time in economic analysis"
+      ]
+    },
+    "novelty_boundary": "Literature recommendations should add a perspective not already represented solely by vegetation-recovery ecology, design-storm hydrodynamic protection modeling, or conventional avoided-damage/property-value cost-benefit analysis. Any suggested publication must be externally verified rather than assumed to exist."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where have you all got to? If we\u2019re just starting, I was hoping we could compare what each of us has since last time, and get clearer on what evidence we need before we settle on a Bayhaven concept, especially instead of treating the interior as one uniform fill area."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "We're just starting, so perfect timing. I've got the present-condition and 1% storm runs set up, and the early sensitivity runs suggest a wider vegetated bench may cut waves at the berm, though I'm not ready to rank anything yet. Maya, when you get to your update, I'd really like to hear what vegetation and elevation range you think is plausible, or rather, what elevation range and vegetation, instead of treating the restored marsh as a fixed surface."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The surveys really don\u2019t support a single plausible grade. Over fairly short distances, we\u2019re seeing different elevations, porewater salinity, native cover, and reed patches. I\u2019d use the two reference marshes as ranges for an elevation-and-salinity mosaic, not- I wouldn\u2019t copy them exactly. I do need to check the datum alignment and sediment conditions before putting hard numbers on that. Rafael, does the model represent a patchy mixed-height surface at all, or is it effectively a uniform vegetated bench?"
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "Right now it\u2019s more like a uniform bench, or a few broad zones, than the fine mosaic you\u2019re describing. I can represent patches with different roughness and elevation, but I\u2019d want your plausible ranges before I- before we treat the patch map as predictive. Do those reference marshes show the elevation differences persisting from season to season, or are they shifting around a lot?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "They do persist in the broad sense. The reference sites keep distinct higher and lower plant zones across seasons, but the exact edges move with water levels and growing conditions. So I\u2019d give you bands and patch sizes, not a fixed little map. I\u2019m still checking whether Bayhaven\u2019s tidal datum... whether that makes those elevation bands directly comparable."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That range-based approach is what I need for the appraisal. Rafael, could the runs give us outcomes under a few plausible marsh-condition and berm-maintenance states over time, not just the 1% storm with one finished design? A one-time\u2014 a one-off peak-water result is hard to translate into expected avoided damage for the homes."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "I think so. I can run a small set of condition states, say lower and higher marsh elevations, a few vegetation-roughness ranges, and maintained versus degraded berm geometry, and pair those with more than one storm level. For parcel damage, though, I\u2019d need to understand what depth and duration information your damage estimates actually use. The model can give water levels at the berm now, but getting defensible parcel depths means checking the survey detail behind it."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "For the damage side, I use parcel ground and first-floor elevations against flood depth, and then depth-damage curves. Duration matters less in the current residential estimates, though it could matter for contents and displacement. If we can get water levels, or ideally depths, at enough points landward of the berm across several storm probabilities, I can map that into expected annual damages instead of hanging everything on the 1% event."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "That\u2019s useful. I\u2019ll need to check whether the berm and landward survey are dense enough to turn modeled berm water levels into parcel-scale depths without making up too, too much in between. But I can set up several storm probabilities around the current 1% annual-chance case, rather than treating that one event as the answer."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the ecological states, I\u2019d be careful not to collapse the 45-hectare site into one average elevation or roughness value. The low interior strips and the higher patches may respond quite differently after tidal reconnection. The 2024 autumn storm is useful as a reality check, but I guess the model set should still keep those spatial contrasts visible, rather than imply native cover automatically means the same flood benefit everywhere."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "I can keep those as broad spatial zones instead of averaging them away, like the low interior, higher patches, reed-affected areas, and the seaward bench, and test a few plausible configurations. The catch is, I need to see whether the survey near the berm is fine enough for that geometry. Otherwise the parcel-depth piece gets more certain-looking than it really is."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For those zones, I\u2019d want the condition states tied to likely vegetation trajectories, not just arbitrary roughness values. The low interior strip is a good example. Salinity there was closer to the reference range than I expected, but native cover is still sparse and reed is patchy, so I need to check whether inundation timing or soil condition is driving that before we call it a recoverable high-marsh patch."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "That distinction matters for the hydraulics too. Sparse cover and a recovered high-marsh patch aren't interchangeable roughness states. Maya, once you know if that low strip is mainly an inundation-timing issue or a soils issue, could you give me a couple of credible trajectories for it, like it stays sparse or it transitions toward native cover, instead of one endpoint? I can use those as actual model cases."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I can do that, but I\u2019d frame them as conditional trajectories rather than predictions. One is where reconnection and treatment support native recovery, and one is where the strip stays sparse or reed re-establishes. I need to look back at the inundation record and soil samples first, because the salinity result on its own clearly isn\u2019t enough to call it recoverable high marsh."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "That\u2019s helpful, because for the county decision I can treat those as conditional benefit cases instead of pricing a promised endpoint. I do need to know what ongoing reed treatment each trajectory assumes, though. Recurring control can change the cost comparison a lot, and we need a concept solid enough for the September 2027 permitting-fund application, so..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I don't think we should assume the same maintenance schedule for every ecological case. A trajectory with durable native cover might still need early follow-up treatment, but the sparse or reed-return case could mean repeated control. I'll need to put some realistic ranges around that from comparable projects, rather than imply it's a one-time removal cost."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "Hm, the range matters."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "I need to check the county's actual maintenance obligation and whether permit conditions add monitoring or, um, adaptive-management costs. If repeated reed control is a condition of getting the ecological trajectory we model, it belongs in the recurring cost stream, not as some vague contingency at the end."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That feels important. I can separate the ecological cases by likely treatment intensity, initial removal plus short-term follow-up versus recurrent control where reed regrowth remains likely. But I'll need to check comparable sites before I- before attaching intervals. And maybe the appraisal should keep the ecological outcome visible alongside avoided damages, rather than folding native recovery into a dollar benefit it doesn't really equal."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "Keeping those separate makes sense, rather than letting a favorable wave-reduction number stand in for ecological success. On my side, the maintenance cases also need to include berm condition, because a widened bench may reduce wave exposure, but it doesn't make a poorly maintained berm\u2014 I\u2019ll make that explicit in the scenario set, assuming the survey resolution holds up."
+    },
+    {
+      "speaker": "Dr. Lena Brooks",
+      "text": "And on the economic side, that gives us a pretty clean set of cases. We can look at homeowner flood damages under each marsh-and-berm condition, with the capital and recurring costs attached to the conditions needed to get there. I\u2019d keep native recovery as its own reported outcome for now. I\u2019m not comfortable treating it as a substitute dollar for avoided household damage, especially while the property-value patterns are still so uneven."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That separation is important to me. I\u2019ll make the native-recovery side- I\u2019ll lay it out as likely high-marsh extent, vegetation composition, and reed-regrowth risk under each condition, not a monetized proxy for household protection. I just need to verify those reference elevation bands before we treat them as the ecological target in the scenarios."
+    },
+    {
+      "speaker": "Eng. Rafael Ortiz",
+      "text": "Okay, we\u2019re at time, so let\u2019s stop there. I\u2019ll check the survey resolution on my end before we talk next. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Okay, bye\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      11,
+      13,
+      16,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance is slightly incomplete on decision context: the 45-hectare site is stated in turn 11 and the September 2027 application in turn 16, but the transcript never clearly enumerates the full candidate action set. Tidal reconnection, sediment placement, invasive removal, the seaward vegetated bench, and berm maintenance/modification are only partial or distributed references rather than an explicit set of feasible actions.",
+      "The permitting constraint is reduced to the permitting-fund application deadline in turn 16. Permit conditions are mentioned in turn 19, but the transcript does not clearly establish permitting as a design constraint alongside cost and long-term maintenance.",
+      "Despite several genuine disfluencies, many substantive turns are highly polished, self-contained paragraphs that state a concern, qualify it, and land on a tidy next step (especially turns 3, 7, 9, 15, 20-23). This makes the dialogue read more like edited planning prose than spontaneous meeting speech, capping naturalness at 3.",
+      "The ending in turns 24-25 is abrupt and omits any response to the stated meeting aim of comparing what each person has done since last time; the discussion instead becomes a sustained scenario-design exchange. It remains coherent, but the round-robin update format is only lightly realized."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.86,
+    "written_turns": [
+      1,
+      9,
+      22
+    ],
+    "exploration_share": 0.27,
+    "turn_moves": {
+      "proposal": 6,
+      "observation": 1,
+      "question": 2,
+      "answer": 3,
+      "request": 2,
+      "backchannel": 3,
+      "commitment": 5,
+      "concern": 3
+    },
+    "volunteer_turns": [
+      7,
+      10,
+      12,
+      15,
+      20,
+      21,
+      23,
+      24
+    ],
+    "unsure_turns": [
+      2,
+      3,
+      5,
+      10,
+      12,
+      13,
+      15,
+      17,
+      19,
+      20,
+      21,
+      23
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.91,
+      "exploration_share": 0.15,
+      "approved": false,
+      "issues": [
+        "The required opening is missing: turn 1 begins with Rafael convening the meeting, rather than a participant apologizing for being a couple of minutes late and asking where the group has got to.",
+        "The transcript does not clearly establish the full decision context. Bayhaven is named in turns 19 and 27, and the 45-hectare map appears in turn 13, but the site is not explicitly characterized as a degraded tidal marsh adjacent to Bayhaven homes and a narrow existing berm.",
+        "The September 2027 permitting-fund application is only referred to generically as an 'application' in turn 17. The state coastal-permitting-fund context is absent.",
+        "Several required candidate actions are not stated clearly enough: restoring tidal exchange, invasive-vegetation removal, selected sediment placement, creating a wider vegetated bench, and maintaining/modifying the berm are not presented as the candidate decision set. Sediment fill and berm work are mentioned piecemeal, but tidal exchange and a wider bench are absent.",
+        "The engineering baseline is incomplete. Rafael discusses waves, berm geometry, mosaics, and events, but never clearly says that his current model primarily compares alternatives via peak water level and wave reduction at the neighborhood berm under the 1% annual-chance storm; turn 10 gives only a partial reference to that storm.",
+        "The economics perspective omits property-value effects. Lena discusses parcel-level exposure, avoided residential losses, and maintenance costs (turns 3, 11, 15, 18, 21), but not property values or their role in the appraisal.",
+        "Brooks does not explicitly distinguish homeowner benefits from broader ecological benefits. Turn 18 keeps ecological outcomes separate from avoided flood losses, but this is narrower than the required distinction and does not surface how broader ecological benefits would be treated or valued.",
+        "The group does not explicitly agree that permitting, cost, and long-term maintenance constrain feasible designs. Cost and maintenance are discussed, but permitting constraints are absent and no all-three-perspectives agreement is voiced.",
+        "The transcript supports only a partial novelty boundary. It makes ecological outcomes distinct from avoided flood losses, but it does not clearly summarize the existing three perspectives and their evidentiary bases sufficiently for a later literature-recommendation system to reliably identify what would be genuinely additional.",
+        "Despite several naturalistic markers, many substantive turns are polished, complete mini-arguments that cleanly state a concern and a proposed next step, especially turns 3-18. This makes the exchange feel somewhat scripted rather than like spontaneous round-robin updates.",
+        "Turn 28 has Maya, rather than the designated opening host, deliver a tidy meeting-closing recap ('we've covered what we needed'), which contributes to a written-meeting feel."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 25,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.86,
+      "exploration_share": 0.27,
+      "approved": true,
+      "issues": [
+        "Task compliance is slightly incomplete on decision context: the 45-hectare site is stated in turn 11 and the September 2027 application in turn 16, but the transcript never clearly enumerates the full candidate action set. Tidal reconnection, sediment placement, invasive removal, the seaward vegetated bench, and berm maintenance/modification are only partial or distributed references rather than an explicit set of feasible actions.",
+        "The permitting constraint is reduced to the permitting-fund application deadline in turn 16. Permit conditions are mentioned in turn 19, but the transcript does not clearly establish permitting as a design constraint alongside cost and long-term maintenance.",
+        "Despite several genuine disfluencies, many substantive turns are highly polished, self-contained paragraphs that state a concern, qualify it, and land on a tidy next step (especially turns 3, 7, 9, 15, 20-23). This makes the dialogue read more like edited planning prose than spontaneous meeting speech, capping naturalness at 3.",
+        "The ending in turns 24-25 is abrupt and omits any response to the stated meeting aim of comparing what each person has done since last time; the discussion instead becomes a sustained scenario-design exchange. It remains coherent, but the round-robin update format is only lightly realized."
+      ]
+    }
+  ]
+}

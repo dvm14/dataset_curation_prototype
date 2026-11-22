@@ -1,0 +1,410 @@
+{
+  "transcript_id": "3aea6513",
+  "generated_at": "2026-11-21T21:22:11.063682",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with mostly short-to-medium turns outside the formal presentations and much longer, slide-driven monologues during talks. Opening chatter is loose and overlapping, full of greetings, technical checks, repeated acknowledgments, and fragmented small talk; interruptions are generally friendly and low-stakes rather than competitive. Participants use frequent fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cright,\u201d repetitions, false starts, and self-corrections\u2014especially among non-native speakers, giving the exchange an unpolished live feel. Formality rises for introductions and scientific questions, but remains warm and conversational, with praise before critique or inquiry (\u201cgreat talk,\u201d \u201cbeautiful work,\u201d \u201cquick question\u201d). Questions are often prefaced with hedges such as \u201cI\u2019m just curious,\u201d \u201cmaybe,\u201d \u201cdo you think,\u201d \u201cI\u2019m not sure,\u201d or \u201cthis may be naive,\u201d and speakers build on prior comments by restating part of the answer before extending it. Disagreement is indirect and framed as uncertainty, alternative explanations, or open questions rather than blunt contradiction. Responses tend to be expansive and exploratory, acknowledging limitations and future work, while transitions are managed with brief moderator cues like \u201cokay,\u201d \u201cany more questions,\u201d and \u201cshould we go to the next one.\u201d\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lian Chen",
+      "discipline": "computer science",
+      "functional_role": "PhD student",
+      "background": "Fourth-year computer science PhD candidate leading implementation for an educational AI research lab. She has three years of experience building and auditing tutoring-system pipelines, including response-quality review protocols, privacy-minimized interaction logs, and classroom deployments with district IT staff. Her work combines software engineering, human-in-the-loop evaluation, and error analysis against pre-specified answer keys.",
+      "distinct_perspective": "Chen treats the pilot as a bounded system-evaluation problem: the tutor must produce mathematically correct, appropriately constrained help reliably and quickly, while generating only the minimum auditable data needed to determine whether it is functioning as intended. She emphasizes operational definitions, reproducible measurement, de-identified data handling, and teacher-facing review controls rather than treating student engagement as evidence of technical quality on its own.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Marisol Alvarez",
+      "discipline": "education",
+      "functional_role": "project manager",
+      "background": "Education researcher and former middle-school mathematics teacher with 12 years of experience in classroom-based studies and district partnerships. She coordinates teacher participation, develops structured observation protocols, and studies how instructional tools alter routines, student participation, and teacher decision-making. Her prior projects have examined formative assessment practices, equitable classroom participation, and implementation burden during short pilots.",
+      "distinct_perspective": "Alvarez evaluates the tutor through its fit with actual classroom instruction. She is attentive to whether next-step help preserves productive struggle, whether teachers can interpret and act on tutor activity, and whether the tool adds manageable rather than hidden workload. She views classroom norms and teachers' formative use of available information as central conditions for interpreting any student outcome.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Jordan Morgan",
+      "discipline": "psychology",
+      "functional_role": "PhD student",
+      "background": "Fifth-year psychology PhD candidate specializing in adolescent learning, emotion, and self-regulated problem solving. They have conducted survey-based and mixed-methods studies with students in grades 6\u20139, using brief repeated measures, validated anxiety and motivation scales, and observational coding of reactions to corrective feedback. They lead the pilot's student surveys and feedback-response coding plan.",
+      "distinct_perspective": "Morgan focuses on the student-level experience of receiving help: whether tutor feedback changes willingness to persist, evokes or reduces math-related worry, and supports constructive responses to errors rather than avoidance or answer-seeking. They favor measures that distinguish immediate reactions to hints or corrections from broader changes in motivation and math anxiety, while remaining cautious about drawing causal conclusions from a six-week classroom pilot.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 1,
+  "task_id": "jargon_03",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_03",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+    "explicit_instruction": "Run a planning meeting in which the three researchers establish a shared glossary before discussing the study design. Dr. Chen must define model accuracy as the proportion of tutor responses judged mathematically correct against a pre-specified answer key; hint generation as producing a next-step prompt rather than supplying the final answer; event logging as recording time-stamped tutor interactions for evaluation; and latency as the delay between a student request and the tutor response. Dr. Alvarez must define formative assessment as information used during instruction to adjust support, productive struggle as students working through a challenging problem with support but without premature answers, teacher workload as the time and effort required of teachers to use and oversee the tutor, and classroom norms as agreed expectations for appropriate tutor use. Dr. Morgan must define math anxiety as worry or tension related to doing mathematics, motivation as students' willingness to begin and persist with math work, and feedback response as how students react to tutor hints or corrections. Participants must agree to use these definitions consistently. They should make ordinary pilot decisions: the tutor gives next-step hints but not final answers during assigned practice; teachers may override or review tutor interactions; model accuracy, latency, teacher workload, formative-assessment use, productive struggle, math anxiety, motivation, and feedback response will be measured; event logging will use de-identified student IDs and retain only the fields needed for the pilot. The group should assign Dr. Chen to test accuracy and latency, Dr. Alvarez to draft observation and teacher-workload measures, and Dr. Morgan to draft student surveys and feedback-response coding. No terminology disagreement, ambiguous term, conflicting definition, or unresolved jargon issue should occur.",
+    "ground_truth": {
+      "terminology_assessment": "No terminology problems should be flagged. All technical terms are defined early, their definitions are compatible across disciplines, and the meeting uses them consistently.",
+      "required_shared_definitions": {
+        "model accuracy": "The proportion of tutor responses judged mathematically correct against a pre-specified answer key.",
+        "hint generation": "Producing a next-step prompt rather than supplying the final answer.",
+        "event logging": "Recording time-stamped tutor interactions for evaluation.",
+        "latency": "The delay between a student request and the tutor response.",
+        "formative assessment": "Information used during instruction to adjust support.",
+        "productive struggle": "Students working through a challenging problem with support but without premature answers.",
+        "teacher workload": "The time and effort required of teachers to use and oversee the tutor.",
+        "classroom norms": "Agreed expectations for appropriate tutor use.",
+        "math anxiety": "Worry or tension related to doing mathematics.",
+        "motivation": "Students' willingness to begin and persist with math work.",
+        "feedback response": "How students react to tutor hints or corrections."
+      },
+      "agreed_pilot_design": {
+        "scope": "Six-week pilot in four middle-school algebra classrooms.",
+        "tutor_role": "Provide next-step hints during assigned practice and not provide final answers.",
+        "teacher_role": "Teachers retain responsibility for instruction, grading, intervention, and may override or review tutor interactions.",
+        "measures": [
+          "model accuracy",
+          "latency",
+          "teacher workload",
+          "formative-assessment use",
+          "productive struggle",
+          "math anxiety",
+          "motivation",
+          "feedback response"
+        ],
+        "data_handling": "Event logging uses de-identified student IDs and retains only fields necessary for the pilot."
+      },
+      "assignments": {
+        "Dr. Chen": "Test model accuracy and latency.",
+        "Dr. Alvarez": "Draft classroom-observation and teacher-workload measures.",
+        "Dr. Morgan": "Draft student surveys and feedback-response coding."
+      }
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not met. Although several terms are discussed and some are defined early (Dr. Morgan defines math anxiety, motivation, and feedback response in turn 3), the required shared glossary is not established before study-design discussion. Dr. Chen never fully defines model accuracy, hint generation, event logging, and latency; Dr. Alvarez never fully defines formative assessment, productive struggle, teacher workload, and classroom norms; and there is no explicit agreement to use all definitions consistently. The required six-week/four-classroom pilot and complete pilot decisions/assignments are also not fully stated. Consequently, this is not a valid control transcript supporting the ground-truth conclusion that no terminology problems should be flagged.",
+  "ground_truth": {
+    "terminology_assessment": "No terminology problems should be flagged. All technical terms are defined early, their definitions are compatible across disciplines, and the meeting uses them consistently.",
+    "required_shared_definitions": {
+      "model accuracy": "The proportion of tutor responses judged mathematically correct against a pre-specified answer key.",
+      "hint generation": "Producing a next-step prompt rather than supplying the final answer.",
+      "event logging": "Recording time-stamped tutor interactions for evaluation.",
+      "latency": "The delay between a student request and the tutor response.",
+      "formative assessment": "Information used during instruction to adjust support.",
+      "productive struggle": "Students working through a challenging problem with support but without premature answers.",
+      "teacher workload": "The time and effort required of teachers to use and oversee the tutor.",
+      "classroom norms": "Agreed expectations for appropriate tutor use.",
+      "math anxiety": "Worry or tension related to doing mathematics.",
+      "motivation": "Students' willingness to begin and persist with math work.",
+      "feedback response": "How students react to tutor hints or corrections."
+    },
+    "agreed_pilot_design": {
+      "scope": "Six-week pilot in four middle-school algebra classrooms.",
+      "tutor_role": "Provide next-step hints during assigned practice and not provide final answers.",
+      "teacher_role": "Teachers retain responsibility for instruction, grading, intervention, and may override or review tutor interactions.",
+      "measures": [
+        "model accuracy",
+        "latency",
+        "teacher workload",
+        "formative-assessment use",
+        "productive struggle",
+        "math anxiety",
+        "motivation",
+        "feedback response"
+      ],
+      "data_handling": "Event logging uses de-identified student IDs and retains only fields necessary for the pilot."
+    },
+    "assignments": {
+      "Dr. Chen": "Test model accuracy and latency.",
+      "Dr. Alvarez": "Draft classroom-observation and teacher-workload measures.",
+      "Dr. Morgan": "Draft student surveys and feedback-response coding."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Hi, everyone. I want us to leave today with definitions that are stable enough for the district packet, especially what we mean by accuracy, hinting, logging, and latency, so we\u2019re not each measuring a slightly different system. And the smallest defensible data footprint for the six weeks, I\u2019d like us to pin that down, but..."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "Mm, smallest is important."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "For the student side, I\u2019d want the packet to separate math anxiety, which is worry or tension around doing math, from motivation, which is the willingness to start and stick with the work, and then feedback response, meaning what they actually do after a hint or correction. Those can be pretty small measures, but I\u2019m especially curious whether the log can retain enough of the sequence to tell if a student comes back and attempts the same problem after help."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "The sequence is feasible without keeping identity. We can use a de-identified session ID, problem ID, timestamp, request type, response type, and whether there's a subsequent attempt on that problem. I would avoid inferring motivation from that alone, though. Jordan, what reactions to a correction would you treat as meaningfully distinct, revision, repeated identical entry, abandoning it?"
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "I\u2019d separate revision after a hint or correction from a repeated identical entry, a new unrelated attempt, and no further attempt before the session ends. That last one is tricky. Ending may be time or a teacher interruption, not avoidance, so I\u2019d code it as disengagement from that problem, not a psychological conclusion. And a revision could be productive even if it\u2019s still incorrect."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Right, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "That coding is useful for us too, because a revision that's still incorrect can be productive struggle, not failure. I'd want the observation protocol to note whether students are trying a next step before they request again, and whether the teacher can see that pattern as formative assessment- whether they can see it as formative assessment, not just a dashboard count. We should be careful, though, not to treat silence or a session ending as disengagement in the classroom."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "Yeah, context really matters."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I think the observation layer is exactly what keeps us from overinterpreting the event stream. Marisol, what would you need to see to call it productive struggle instead of just stuckness? Like, a changed strategy, written work, peer or teacher interaction? If we can specify that, I can make sure the teacher review view surfaces the relevant sequence without turning the log into a behavioral dossier."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "I\u2019d look for an observable cycle where the student makes a substantive attempt, uses a hint or some other available resource, and then revises or explains a next move, maybe with a peer or teacher, without the tutor just supplying the solution. Written work and strategy change matter, yes, but I\u2019d avoid making either one mandatory. Some of the evidence will be in the talk and the timing. I need to check the four teachers\u2019 existing routines before setting observation frequency, though, because we can\u2019t turn formative assessment into an observer-induced- an observer-driven performance."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "That makes sense. I can represent the interaction sequence, attempt, hint, subsequent attempt, and timing, without labeling any student as stuck or productive. The observation protocol supplies that interpretation. For the teacher view, would a per-problem chronological trace be enough for those cycles, or do you need a lightweight aggregate as- do you need that as well?"
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "I think we need both, but for different purposes. The aggregate should be really lightweight, maybe problems with repeated hint requests or no subsequent attempt, so a teacher can decide where to look. The chronological trace is what makes it usable as formative assessment. And I'd want an override or flag there, because a mathematically correct hint can still push a student down a needlessly inefficient path for the lesson's objective."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "An override is important, but I'd make the teacher's flag a review annotation, not another student-level label in the analytic log. The chronological trace can show the actual prompt and response sequence, and then the teacher can mark, for example, \u201cmisaligned with lesson objective\u201d without us silently treating that as a model-accuracy failure. I do need to check with district IT whether that review layer can refresh from the de-identified log on their network without retaining an extra field."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "Hm, the extra field concern."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "Keeping that annotation separate is probably cleaner for interpretation too. If a teacher flags a sequence, could the review view preserve the timing and problem context without carrying the flag into the student survey linkage? I\u2019d rather not have students\u2019 reported worry or willingness treated as if it explains a teacher\u2019s\u2014 I mean, the teacher\u2019s lesson-alignment judgment."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Exactly. The review interface can join the timing and problem context only when it displays them, and the teacher annotation stays in a separate review table with no survey identifier. It\u2019s excluded from the analytic event extract. I need to verify the network implementation with IT, but conceptually that keeps the two, um, evidentiary streams separate."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "And I\u2019d want the teacher-facing flag language to stay descriptive, like \u201cmisaligned with lesson objective\u201d or \u201cinefficient pathway,\u201d instead of implying the student did something wrong. On the classroom side, that separation lets us ask whether teachers actually use the review information as formative assessment, without folding their judgment into Jordan\u2019s student measures, and then..."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "That wording matters for the student side too. Marisol, when you\u2019re observing, what visible signs would make you think the classroom norm is driving use of the tutor, like students waiting for teacher permission to ask it, rather than it just being an individual preference? That would help me interpret any changes in the brief motivation items without overclaiming."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "I\u2019d look for patterned, public expectations, not just one student\u2019s choice. Things like the teacher saying, \u201ctry the tutor before you ask me,\u201d students reminding each other of that, or a routine where they wait for a particular cue before opening it. I\u2019d also note whether those norms leave room for asking aloud. That earlier platform visit- it made me a little uneasy, because fewer questions could mean several very different things."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "That\u2019s really helpful, because a drop in immediate attempts isn\u2019t automatically bad. In a grade 7 study I worked on, students sometimes reported less worry after corrective feedback, but then delayed the next item. We couldn\u2019t tell whether they were rechecking or avoiding. Could your notes distinguish a brief, purposeful pause, where they\u2019re looking at their work or talking through it, from students just moving away from the task?"
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "I think so, but only probabilistically. I can code what\u2019s happening right around a pause, like eyes on written work, rereading the hint, peer or teacher talk, versus closing the device, off-task talk, or shifting to something unrelated. And then I can code duration, but I wouldn\u2019t want a fixed cutoff to decide what it means. The teacher\u2019s pacing and the task structure are going to matter a lot there, so\u2026"
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "Probabilistic is enough for me, honestly. If the notes retain that immediate context alongside the event timing, we can treat a delayed next attempt as an ambiguous outcome rather than forcing it into persistence or avoidance. I\u2019d just need to see whether a very brief survey can fit into the teachers\u2019 practice periods without disrupting those routines."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "That seems workable, as long as we don't merge the observation notes into the event log. I can preserve timestamped attempts and response latency, so your pause-context coding can be aligned afterward, but I wouldn't collect any additional inferred state. One implementation issue I still need to resolve is the multi-step prompts. The internal dry run showed higher latency there, and I need to separate prompt-structure effects from the classroom-device context\u2014environment, before we set a reliability threshold."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "Oh, that latency split matters."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "From the classroom side, I\u2019d be cautious about calling a latency threshold \u201creliability\u201d until we know what the Chromebooks and school Wi-Fi are doing in each room. A slow multi-step response changes the instructional interaction. What should be a next-step hint can turn into waiting, so I\u2019d want the observations to note the visible wait time and what students do during it, at least in the first week."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I\u2019ll treat latency as something we measure in the service, not as one reliability proxy. So we\u2019ll look at end-to-end response time by prompt type and, if IT permits, by device or network context. In week one, we can line those traces up with Marisol\u2019s observed waiting behavior, then set a threshold once we know whether the multi-step delay is model-side or Chromebook-side."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "Mm, first week makes sense."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "And for the student measures, that first-week alignment will help us avoid mistaking a long system wait for a student choosing not to persist. I\u2019d keep the brief check-in out of that first practice period if possible, though, and let them encounter the routine before we ask about worry or willingness. I still need to confirm with the teachers whether a two- or three-minute check-in later in the week is realistic."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "Okay, I\u2019ll document the core definitions for model accuracy against the pre-specified key, next-step hint generation, de-identified event logging, and latency, and I\u2019ll test accuracy and the week-one latency split. I\u2019ll also check the IT constraint on the teacher review refresh, and then we can keep the survey after the initial routine is established."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "Okay, and I\u2019ll hold off on fixing the observation schedule until I\u2019ve checked those four classroom routines. I\u2019ll draft the protocol around productive-struggle cycles, visible waiting, classroom norms, and actual teacher use of the review view\u2014without making those observations, I mean, another burden on the teachers. We can tighten the glossary language in the packet once Chen has the IT answer."
+    },
+    {
+      "speaker": "Dr. Lian Chen",
+      "text": "I think we've covered what we needed today, and I know we're at the hard stop. I'll follow up once I have the IT answer. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Marisol Alvarez",
+      "text": "Thanks, all. Bye."
+    },
+    {
+      "speaker": "Dr. Jordan Morgan",
+      "text": "Thanks\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      3,
+      4,
+      5,
+      7,
+      10,
+      13,
+      16,
+      19,
+      21,
+      23,
+      26,
+      29,
+      30
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Turns 1-3 begin discussing measures and data design before the full shared glossary is established. The seed requires the group to establish the glossary before discussing study design.",
+      "Several required definitions are absent or only implied rather than explicitly stated. Chen never defines model accuracy as a proportion judged against a pre-specified answer key, hint generation as a next-step prompt rather than a final answer, event logging as time-stamped interactions for evaluation, or latency as delay between request and response. Turn 29 merely lists terms, and turns 23 and 26 partially operationalize latency.",
+      "Alvarez does not explicitly define formative assessment, productive struggle, teacher workload, or classroom norms in the required shared-glossary form. Turns 7, 10, 17, 19, and 30 discuss these concepts, but do not establish the requested definitions early.",
+      "The transcript never explicitly records agreement to use all glossary definitions consistently. Turn 1 expresses Chen's goal for stable definitions, but the meeting does not confirm shared adoption.",
+      "The required six-week pilot in four middle-school algebra classrooms is incomplete: six weeks appears in turn 1 and four teachers appear in turn 10, but neither middle-school algebra classrooms nor the complete scope is clearly stated.",
+      "The tutor-role condition is not explicitly decided. The dialogue refers to next-step hints and not supplying solutions (turns 10 and 25), but it does not clearly establish that the tutor will provide next-step hints and no final answers during assigned practice.",
+      "Teacher workload is not operationalized or assigned as a measure. Alvarez mentions avoiding burden in turns 17 and 30, but does not define workload as teacher time and effort or draft a teacher-workload measure as required.",
+      "Morgan is not assigned to draft student surveys and feedback-response coding. They say they need to check survey feasibility (turns 22 and 28), but no explicit assignment is made.",
+      "The conversation is substantially more polished and agenda-driven than a natural round-robin update meeting. Most substantive turns are finished, carefully structured paragraphs that resolve the immediately preceding issue. The small disfluencies in turns 10-17 are largely surface repairs rather than naturally unfinished thought.",
+      "The meeting does not follow the supplied round_robin_updates style: it is a sustained design discussion rather than researchers giving updates on work completed since the last meeting."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.64,
+    "written_turns": [
+      3,
+      4,
+      5,
+      13,
+      20,
+      22,
+      25,
+      26,
+      29
+    ],
+    "exploration_share": 0.24,
+    "turn_moves": {
+      "proposal": 10,
+      "agreement": 5,
+      "question": 4,
+      "answer": 3,
+      "backchannel": 4,
+      "request": 1,
+      "observation": 1,
+      "concern": 2,
+      "commitment": 3
+    },
+    "volunteer_turns": [
+      21,
+      26,
+      29,
+      30,
+      31
+    ],
+    "unsure_turns": [
+      10,
+      13,
+      16,
+      21,
+      22,
+      23,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.15,
+      "approved": false,
+      "issues": [
+        "The required shared glossary is absent. No early turns define model accuracy, hint generation, event logging, latency, formative assessment, productive struggle, teacher workload, classroom norms, math anxiety, motivation, or feedback response using the required definitions. For example, turns 1-3 discuss several concepts but do not establish definitions or an agreement to use them consistently.",
+        "The ground-truth conclusion that there are no terminology problems is not recoverable from the meeting: terminology is introduced organically and sometimes only partially characterized. For example, turn 3 says what Alvarez would 'define' a useful hint through, but does not define the required term productive struggle; turns 11-12 describe hints but do not define hint generation as required.",
+        "Required pilot scope is missing: no turn identifies a six-week pilot in four middle-school algebra classrooms. Six weeks appears in turns 7 and 9, but the number of classrooms and algebra-specific setting are never established.",
+        "Several required measures are missing or not explicitly committed to. Model accuracy is never defined or named as a measure; teacher workload is never discussed; formative-assessment use is mentioned in turn 3 but not committed as a measure; math anxiety/motivation/feedback response are discussed but not defined with the required shared definitions.",
+        "Required assignments are incomplete. Chen discusses latency and audit work, Alvarez discusses observation notes, and Morgan discusses check-ins, but there is no explicit assignment that Chen will test model accuracy and latency, Alvarez will draft classroom-observation and teacher-workload measures, and Morgan will draft student surveys and feedback-response coding.",
+        "The transcript introduces extra category terminology\u2014such as 'boundary/refusal,' 'boundary case,' 'functional-help judgment,' and 'category-audit confusion rate' (turns 5, 18, 20-24)\u2014without definitions. This conflicts with the control requirement that every technical term be defined early and that no terminology confusion be planted.",
+        "Naturalness is limited by highly polished, solution-oriented turns. Much of the discussion converts each concern immediately into a proposed protocol or assignment, particularly turns 15-27, and the sequence ends with a tidy operational plan. The fillers and repairs are present but largely embedded in otherwise finished prose.",
+        "The stated meeting style is round-robin updates, but the transcript is primarily an extended collaborative design discussion after the opening rather than researchers reporting discrete progress since the prior meeting."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.64,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "Turns 1-3 begin discussing measures and data design before the full shared glossary is established. The seed requires the group to establish the glossary before discussing study design.",
+        "Several required definitions are absent or only implied rather than explicitly stated. Chen never defines model accuracy as a proportion judged against a pre-specified answer key, hint generation as a next-step prompt rather than a final answer, event logging as time-stamped interactions for evaluation, or latency as delay between request and response. Turn 29 merely lists terms, and turns 23 and 26 partially operationalize latency.",
+        "Alvarez does not explicitly define formative assessment, productive struggle, teacher workload, or classroom norms in the required shared-glossary form. Turns 7, 10, 17, 19, and 30 discuss these concepts, but do not establish the requested definitions early.",
+        "The transcript never explicitly records agreement to use all glossary definitions consistently. Turn 1 expresses Chen's goal for stable definitions, but the meeting does not confirm shared adoption.",
+        "The required six-week pilot in four middle-school algebra classrooms is incomplete: six weeks appears in turn 1 and four teachers appear in turn 10, but neither middle-school algebra classrooms nor the complete scope is clearly stated.",
+        "The tutor-role condition is not explicitly decided. The dialogue refers to next-step hints and not supplying solutions (turns 10 and 25), but it does not clearly establish that the tutor will provide next-step hints and no final answers during assigned practice.",
+        "Teacher workload is not operationalized or assigned as a measure. Alvarez mentions avoiding burden in turns 17 and 30, but does not define workload as teacher time and effort or draft a teacher-workload measure as required.",
+        "Morgan is not assigned to draft student surveys and feedback-response coding. They say they need to check survey feasibility (turns 22 and 28), but no explicit assignment is made.",
+        "The conversation is substantially more polished and agenda-driven than a natural round-robin update meeting. Most substantive turns are finished, carefully structured paragraphs that resolve the immediately preceding issue. The small disfluencies in turns 10-17 are largely surface repairs rather than naturally unfinished thought.",
+        "The meeting does not follow the supplied round_robin_updates style: it is a sustained design discussion rather than researchers giving updates on work completed since the last meeting."
+      ]
+    }
+  ]
+}

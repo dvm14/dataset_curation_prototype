@@ -1,0 +1,483 @@
+{
+  "transcript_id": "c5788fc4",
+  "generated_at": "2026-11-21T15:19:59.074266",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short-to-medium turns outside the presentations, including frequent greetings, technical check-ins, and light small talk. Speakers use abundant fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections\u2014while non-native phrasing and imperfect transcription add to the spontaneous feel. Overlap is occasional, especially around acknowledgments, transitions, and follow-up questions, but interruptions are generally polite and brief. The formal presentation sections are much longer, structured, and explanatory, though still conversational and hedged with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cwe\u2019re interested in,\u201d and \u201cwhat we think is.\u201d Questions are usually prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question\u201d), then asked indirectly and collaboratively. Challenges are framed as open questions or extensions rather than direct disagreement; participants build on prior remarks with affirmations, clarifications, and invitations to continue the discussion later.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "domain expert",
+      "background": "Dr. Chen is a cognitive neuroscientist with 14 years of experience studying attention development and EEG measurement in children. Her lab has run school-adjacent studies using portable EEG, behavioral attention tasks, and repeated-measures designs. She has particular expertise in separating neural signal from motion, muscle, and electrode-contact artifacts, and in interpreting the limited relationship between proprietary EEG-derived \u201cattention\u201d indices and durable changes in attentional control.",
+      "distinct_perspective": "She treats the headband\u2019s attention score as an indirect, artifact-prone measurement rather than a demonstrated outcome. She will press the group to distinguish usable signal quality from apparent improvement, consider expectancy and novelty effects, and ask whether any change transfers beyond the brief feedback sessions into ordinary classroom behavior or persists after training ends. She is wary of relying on teacher impressions alone as evidence of cognitive change, while recognizing that laboratory-style tasks may not capture meaningful classroom attention.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Ms. Elena Rivera",
+      "discipline": "education",
+      "functional_role": "project manager",
+      "background": "Ms. Rivera is an education researcher and former elementary instructional coach with 11 years of experience partnering with public-school districts on classroom-based pilots. She has managed mixed-methods evaluations of educational technology, including teacher logs, observations, student work samples, interviews, and implementation records. She is experienced in coordinating research around school schedules and in examining how interventions affect different student groups and classrooms.",
+      "distinct_perspective": "She frames the central issue as whether the program can produce educationally meaningful benefits under normal school conditions without displacing valuable instruction or imposing unsustainable work on teachers. She will keep attention on the four classrooms across two schools, the 30-minute weekly limit on teacher-supported activity, variation in classroom routines, teacher willingness, and whether students with different sensory needs, hair types, disabilities, or access to support can participate fairly. She sees implementation conditions as part of the intervention rather than as background noise.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Mr. Tunde Okafor",
+      "discipline": "biomedical engineering",
+      "functional_role": "PhD student",
+      "background": "Mr. Okafor is a fourth-year biomedical engineering PhD student developing wearable biosensing systems for pediatric and community settings. He has conducted benchtop validation, field testing, and signal-quality analyses for dry-electrode EEG devices, with experience in electrode impedance proxies, motion-artifact characterization, battery and Bluetooth reliability, and human-factors testing. He led technical testing of the current prototype and knows its electrical safety features and operational limits.",
+      "distinct_perspective": "He approaches the pilot as a sociotechnical deployment problem: data validity depends on hardware performance, fit, comfort, placement consistency, movement, hair type, and the practical workflow required to obtain interpretable recordings. He will distinguish electrical safety from measurement reliability and raise questions about dropout, missing or low-quality EEG segments, cleaning and charging routines, tablet connectivity, and whether device problems could systematically affect particular students. He is less certain about how technical performance thresholds should be translated into educational decisions, and will seek guidance from Chen and Rivera on what levels of data loss or setup burden matter in classrooms.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "task_id": "opportunity_02",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+  "seed_spec": {
+    "task_id": "opportunity_02",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+    "explicit_instruction": "Simulate a planning meeting among Dr. Chen, a neuroscientist; Ms. Rivera, an education researcher; and Mr. Okafor, a biomedical engineer. They should discuss the stated main research question and identify practical uncertainties worth investigating before or during the 12-week pilot. Each participant should contribute from their discipline, while engaging with constraints raised by the others. The meeting should establish that four classrooms across two schools and a maximum of 30 teacher-supported minutes per week are available. It should mention that dry-electrode fit, movement, comfort, and hair type may influence usable EEG data; that placebo or expectation effects are plausible; and that classroom outcomes, teacher burden, instructional time, and equitable access matter. Do not resolve which follow-up questions are best, do not provide a finalized study design, and do not rank or answer the questions. Keep the discussion exploratory and evidence-oriented.",
+    "ground_truth": {
+      "main_research_question": "Does the 12-week dry-electrode neurofeedback headband program improve attention for grade 3-5 students in ordinary classrooms, and under what implementation conditions?",
+      "required_contextual_facts": [
+        {
+          "fact": "The pilot has four classrooms in two schools and lasts 12 weeks.",
+          "evidence": "Meeting context and participant discussion."
+        },
+        {
+          "fact": "Students would use the program twice weekly for 15-minute sessions, and teachers can support at most 30 minutes per week.",
+          "evidence": "Meeting context and participant discussion."
+        },
+        {
+          "fact": "EEG attention measures may be distorted by movement, dry-electrode fit, hair type, comfort, and other signal artifacts.",
+          "evidence": "Biomedical engineering and neuroscience contributions."
+        },
+        {
+          "fact": "Placebo and expectation effects may contribute to observed attention changes.",
+          "evidence": "Neuroscience contribution."
+        },
+        {
+          "fact": "The team must consider learning outcomes, teacher buy-in and burden, instructional time, and equity of access.",
+          "evidence": "Education contribution."
+        }
+      ],
+      "expected_follow_up_question_themes": [
+        {
+          "theme": "Measurement validity and signal quality",
+          "integrated_question": "How should usable EEG-data rates, motion artifacts, fit or comfort problems, and observed classroom attention be jointly tracked so that an apparent attention benefit is not merely a device-quality difference across students or classrooms?",
+          "discipline_integration": [
+            "neuroscience",
+            "biomedical engineering",
+            "education"
+          ]
+        },
+        {
+          "theme": "Expectancy effects and credible comparison",
+          "integrated_question": "What feasible comparison or measurement of student and teacher expectations could distinguish neurofeedback-specific effects from novelty, encouragement, or placebo effects without exceeding classroom time limits?",
+          "discipline_integration": [
+            "neuroscience",
+            "education",
+            "biomedical engineering"
+          ]
+        },
+        {
+          "theme": "Transfer to educationally meaningful outcomes",
+          "integrated_question": "Which classroom outcomes should be measured alongside EEG or attention-task changes to test whether any benefit transfers to learning and participation rather than only to performance during headband sessions?",
+          "discipline_integration": [
+            "neuroscience",
+            "education"
+          ]
+        },
+        {
+          "theme": "Durability",
+          "integrated_question": "When and how can the team assess whether any attention or classroom benefit persists after the 12-week program ends, given school scheduling and teacher-burden constraints?",
+          "discipline_integration": [
+            "neuroscience",
+            "education"
+          ]
+        },
+        {
+          "theme": "Equity and differential implementation",
+          "integrated_question": "Do headband fit, comfort, signal reliability, acceptance, or access differ systematically by hair type, sensory needs, disability-related accommodations, school resources, or classroom context, and how would those differences affect both effectiveness and fairness?",
+          "discipline_integration": [
+            "biomedical engineering",
+            "education",
+            "neuroscience"
+          ]
+        },
+        {
+          "theme": "Implementation feasibility and teacher adoption",
+          "integrated_question": "What minimum setup, troubleshooting, training, and supervision requirements allow the program to fit within 30 teacher-supported minutes per week, and what evidence would justify scaling it?",
+          "discipline_integration": [
+            "education",
+            "biomedical engineering",
+            "neuroscience"
+          ]
+        },
+        {
+          "theme": "Dose, adherence, and safety",
+          "integrated_question": "What actual exposure, missed-session, comfort, adverse-event, and battery or charging data are needed to determine whether a null or positive result reflects neurofeedback dose rather than uneven implementation?",
+          "discipline_integration": [
+            "biomedical engineering",
+            "neuroscience",
+            "education"
+          ]
+        }
+      ],
+      "acceptance_criteria": "A strong evaluated response proposes multiple concrete follow-up questions rather than asserting conclusions. The questions should connect at least two disciplines overall, include feasibility under the stated classroom constraints, and address several of measurement validity, expectancy, educational transfer, durability, equity, implementation, and dose or safety. Other well-justified interdisciplinary questions are acceptable if grounded in the meeting evidence."
+    }
+  },
+  "seed_location": "Turns 1-30. The dialogue substantively covers the 12-week pilot (turns 11, 13, 20-24), four classrooms/two schools (turns 12, 20, 24, 29), two 15-minute weekly sessions and the 30-minute teacher-support limit (turns 10, 17, 20, 24, 26), signal validity and movement/contact/fit/comfort/hair-related equity concerns (turns 2-11, 18, 22, 28), educational transfer and teacher/instructional-time burden (turns 13-18, 23-26), durability via post-program follow-up (turns 23-25), and differential access/implementation (turns 26-29). It raises multiple exploratory interdisciplinary follow-up questions. However, the required placebo or expectation-effect issue is not mentioned, and the main research question is not explicitly stated in the transcript.",
+  "ground_truth": {
+    "main_research_question": "Does the 12-week dry-electrode neurofeedback headband program improve attention for grade 3-5 students in ordinary classrooms, and under what implementation conditions?",
+    "required_contextual_facts": [
+      {
+        "fact": "The pilot has four classrooms in two schools and lasts 12 weeks.",
+        "evidence": "Meeting context and participant discussion."
+      },
+      {
+        "fact": "Students would use the program twice weekly for 15-minute sessions, and teachers can support at most 30 minutes per week.",
+        "evidence": "Meeting context and participant discussion."
+      },
+      {
+        "fact": "EEG attention measures may be distorted by movement, dry-electrode fit, hair type, comfort, and other signal artifacts.",
+        "evidence": "Biomedical engineering and neuroscience contributions."
+      },
+      {
+        "fact": "Placebo and expectation effects may contribute to observed attention changes.",
+        "evidence": "Neuroscience contribution."
+      },
+      {
+        "fact": "The team must consider learning outcomes, teacher buy-in and burden, instructional time, and equity of access.",
+        "evidence": "Education contribution."
+      }
+    ],
+    "expected_follow_up_question_themes": [
+      {
+        "theme": "Measurement validity and signal quality",
+        "integrated_question": "How should usable EEG-data rates, motion artifacts, fit or comfort problems, and observed classroom attention be jointly tracked so that an apparent attention benefit is not merely a device-quality difference across students or classrooms?",
+        "discipline_integration": [
+          "neuroscience",
+          "biomedical engineering",
+          "education"
+        ]
+      },
+      {
+        "theme": "Expectancy effects and credible comparison",
+        "integrated_question": "What feasible comparison or measurement of student and teacher expectations could distinguish neurofeedback-specific effects from novelty, encouragement, or placebo effects without exceeding classroom time limits?",
+        "discipline_integration": [
+          "neuroscience",
+          "education",
+          "biomedical engineering"
+        ]
+      },
+      {
+        "theme": "Transfer to educationally meaningful outcomes",
+        "integrated_question": "Which classroom outcomes should be measured alongside EEG or attention-task changes to test whether any benefit transfers to learning and participation rather than only to performance during headband sessions?",
+        "discipline_integration": [
+          "neuroscience",
+          "education"
+        ]
+      },
+      {
+        "theme": "Durability",
+        "integrated_question": "When and how can the team assess whether any attention or classroom benefit persists after the 12-week program ends, given school scheduling and teacher-burden constraints?",
+        "discipline_integration": [
+          "neuroscience",
+          "education"
+        ]
+      },
+      {
+        "theme": "Equity and differential implementation",
+        "integrated_question": "Do headband fit, comfort, signal reliability, acceptance, or access differ systematically by hair type, sensory needs, disability-related accommodations, school resources, or classroom context, and how would those differences affect both effectiveness and fairness?",
+        "discipline_integration": [
+          "biomedical engineering",
+          "education",
+          "neuroscience"
+        ]
+      },
+      {
+        "theme": "Implementation feasibility and teacher adoption",
+        "integrated_question": "What minimum setup, troubleshooting, training, and supervision requirements allow the program to fit within 30 teacher-supported minutes per week, and what evidence would justify scaling it?",
+        "discipline_integration": [
+          "education",
+          "biomedical engineering",
+          "neuroscience"
+        ]
+      },
+      {
+        "theme": "Dose, adherence, and safety",
+        "integrated_question": "What actual exposure, missed-session, comfort, adverse-event, and battery or charging data are needed to determine whether a null or positive result reflects neurofeedback dose rather than uneven implementation?",
+        "discipline_integration": [
+          "biomedical engineering",
+          "neuroscience",
+          "education"
+        ]
+      }
+    ],
+    "acceptance_criteria": "A strong evaluated response proposes multiple concrete follow-up questions rather than asserting conclusions. The questions should connect at least two disciplines overall, include feasibility under the stated classroom constraints, and address several of measurement validity, expectancy, educational transfer, durability, equity, implementation, and dose or safety. Other well-justified interdisciplinary questions are acceptable if grounded in the meeting evidence."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hi, everyone. I know we only have ten minutes, so what I most want out of this is clarity on what would count as an attention improvement outside the headband exercise, not just a better-looking vendor score. And whether the recordings are stable, stable enough across kids that we can interpret any change at all."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "From the hardware side, I\u2019d separate a safe session from one we can actually interpret. Battery and electrical checks can all be fine, but contact quality can collapse once the child starts responding to the tablet. Maya, would session-level usable-data rates be enough for you, or do you need quality indexed to the activity and movement context before we treat a change in the vendor score as meaningful?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd need it indexed to context, yes. A single usable-data rate could look fine while, say, the later sessions have less fidgeting or better contact, and that alone moves the score. I'd want quality and artifact flags during the actual feedback periods, and ideally by child over time. Do you have movement or contact metrics at that- at that granularity, or is it just a session pass/fail?"
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "It\u2019s not quite pass/fail. We log contact-quality proxies and Bluetooth events in short windows, and the tablet can timestamp feedback blocks. Motion is indirect, though, from artifact features rather than an accelerometer. I\u2019d want to inspect whether those flags rise specifically once feedback starts. The odd dropout we saw in field testing had normal battery and Bluetooth, so a session summary would have missed it."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "That granularity matters for implementation too. Tunde, in a normal classroom, what does it take when a child has a poor-contact period, I mean, a poor-contact window? Does an adult need to stop and refit the band, reconnect something, clean it? I'm trying to see whether those interruptions, plus the basic setup and transition, can actually fit inside the teachers' thirty minutes."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "For a poor-contact period, the lightest intervention is just a quick visual fit check, band position, hair under the electrodes, comfort, and that might take under a minute if it works. But if it needs reseating or a tablet reconnection, it can turn into several minutes, and cleaning really should be between users, not improvised mid-session. I don't yet know what teachers would see as tolerable there. Elena, is even a one- or two-minute interruption realistic during a transition?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, that\u2019s pretty tight."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "It can be, but only if it\u2019s genuinely contained. A minute per child is a very different thing when several children need help at once, and transitions are where classes lose time quickly. I\u2019d want us to time the whole routine in each classroom, distribution, fitting, troubleshooting, and cleaning, not just the scheduled fifteen-minute exercise, because..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d put those timings next to the signal data, not just treat them as logistics. If the kids who need repeated refits are also the ones whose scores change least, or most, we can\u2019t tell if that\u2019s neurofeedback or just who got a clean, comfortable recording. Tunde, do the logs capture when someone does a refit, or would we need just a very simple checkmark, because otherwise..."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "The device log has connection and contact events, but it doesn't know when an adult physically refit the band. So yes, I think we need a checkmark with a timestamp, maybe for a fit adjustment, reconnect, comfort complaint, or abandoned session. With two fifteen-minute sessions each week, that feels small enough to capture, and it lets us see whether the interventions themselves cluster by child or classroom."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Over twelve weeks, those checkmarks give us a way to separate a real trajectory from kids simply getting a better fit, or getting more practiced at sitting still for the setup. And I'd want to know whether the adjustment burden is concentrated in particular students, not just averaged out across a classroom."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "And I wouldn't want the checkmark to turn into another task that quietly pushes us over the thirty minutes of teacher-supported time each week. Maybe it's a really short shared form that whoever's running the session fills out, but we need to see if that routine is feasible in all four classrooms, not just the ones where the transition happens to be smooth, because..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And since this is only twelve weeks, I'd be careful about treating a smooth upward score trend as training unless we have some outside measure that isn't collected during the headband activity. Elena, is there something already routine, like work completion or maybe a brief classroom observation, that teachers would recognize as a real change without adding another whole assessment?"
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "Yeah, that would help."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "I think we should start with what's already there instead of creating a new teacher measure. Work completion could be useful if the schools record it consistently, but I'd need to check the grade-level routines, testing windows, and accommodations first. A brief observation might be more comparable, but it can't come out of the teachers' thirty minutes a week."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think a brief independent observation is probably worth protecting, because work completion can move for lots of reasons, like assignment difficulty, accommodations, or the time of year. Even one or two standardized observations per child, maybe before and near the end of the 12 days\u201412 weeks, during ordinary seatwork, would tell us more about transfer than the in-app score does. Though we'd need someone other than the teachers to do it."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "I agree, as long as those observations are scheduled independently and don't use teacher support time. The two 15-minute sessions already take up the full 30 minutes teachers can support each week, so fitting, cleanup, and any documentation need to fit into a workable routine, not just be assumed to be extra."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "So the operational budget is actually tighter than the nominal thirty minutes, because the headband session isn't fifteen minutes from start to finish. I think we need full timing logs for the first few uses, especially to see whether fit checks and cleaning run past the transition, before we call the hardware feasible. Otherwise, a good EEG yield in one classroom may just be coming from extra adult time that isn't counted."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, that\u2019s a real constraint."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "And that's why I'd treat the first week or two as a feasibility check, not just the start of outcome collection. Across the four classrooms, we need to see whether two nominal 15-minute sessions can actually, actually fit within the 30-minute weekly support limit once the real routines are part of it. Otherwise, missed sessions may be telling us about storage, transitions, or staffing rather than student engagement."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d hold off on treating those first weeks as baseline outcome data, honestly. There\u2019s going to be setup learning and novelty and probably changing artifact rates. If feasibility stabilizes, then we can ask whether anything shifts in ordinary seatwork, instead of folding all that ramp-up into an apparent attention gain."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "From the device side, that gives us a clean separation. Weeks one and two can tell us whether contact quality, fit adjustments, and end-to-end timing actually stabilize. I'd be reluctant to merge those recordings with the later ones unless the artifact profile really, really looks comparable. Otherwise the apparent early change could just be the hardware and the children settling in."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the outcome piece, I'd compare the ordinary-seatwork observations after that ramp-up with a follow-up after the program ends, if the calendar allows. Otherwise we may just be measuring a short-lived response to the feedback routine. I don't- I don't think that supports an expansion recommendation."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "That follow-up matters, but I need to check the school calendars before we promise it. Testing windows and end-of-term routines may make a post-program observation uneven across the two schools. And just to keep the constraint visible, teachers have no more than 30 minutes a week total, so any follow-up observation or, um, documentation has to be done by our team, not added to their load."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "That seems right. From my side, the follow-up doesn't need the headbands at all. What matters is keeping the per-child feasibility record, so if a classroom had repeated dropouts or refits, we don't later read an uneven observation result as evidence that the device worked equally well there, and..."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "The practical recommendation has to distinguish a program that works within the 30 minutes per week from one that only works when somebody quietly supplies extra adult time. And we should look at who bears that extra time. If students need repeated fit help or accommodations- they may otherwise be the first ones effectively excluded."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, who gets excluded."
+    },
+    {
+      "speaker": "Mr. Tunde Okafor",
+      "text": "I think we should make that visible in the feasibility result itself, not bury it in an average usable-signal rate. Per-child completion, refit burden, comfort complaints, and whether the routine stayed inside the actual, actual transition. If those failure modes concentrate by hair, sensory tolerance, or classroom staffing, then even a technically safe device is not really an equitable deployment."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "That\u2019s the right threshold for the district recommendation. It\u2019s not an average result, it\u2019s whether all kinds of students can participate without extra hidden adult support. I\u2019ll check the two school calendars and the existing routines, and then we can keep the feasibility period and outside observations realistic instead of designing for an ideal classroom."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think we're at time. Thanks, both. Let's pick this back up once Elena's had a look at the calendars and routines."
+    },
+    {
+      "speaker": "Ms. Elena Rivera",
+      "text": "Thank you. Goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      3,
+      6,
+      10,
+      11,
+      12,
+      15,
+      17,
+      20,
+      22,
+      23,
+      24,
+      28,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "The explicit main research question is never stated. Turn 1 frames parts of it, and later turns imply a 12-week classroom headband pilot, but the full question\u2014whether the program improves attention for grade 3-5 students in ordinary classrooms and under what implementation conditions\u2014must be inferred rather than recovered directly.",
+      "The transcript never mentions grade 3-5 students, an important ground-truth contextual term.",
+      "Placebo or expectation effects are absent. Turns 16 and 21 mention novelty and setup learning, but neither addresses student/teacher expectations, placebo, encouragement, or a credible comparison; consequently the expectancy-effects follow-up theme is unsupported.",
+      "Learning outcomes and teacher buy-in are only weakly represented. Turn 15 considers work completion, while burden and instructional time are strong, but no participant explicitly raises teacher willingness/buy-in or broader learning outcomes.",
+      "The requested one_voice_leads style is not followed: participation is highly balanced (Chen 12 turns, Rivera 10, Okafor 9), rather than having one speaker lead most of the meeting while others contribute sparsely.",
+      "Naturalness is limited by polished, highly sequential turns. Most turns cleanly articulate a concern, connect it to the previous point, and propose the next procedural response (for example turns 9-12 and 20-24), making the exchange read like scripted planning dialogue rather than spontaneous meeting speech.",
+      "Disfluencies are relatively sparse and often decorative rather than organically disruptive. Several turns end in ellipses or abrupt trailing clauses without another speaker directly taking up the unfinished wording (turns 8, 9, 12, and 25), which feels stylized.",
+      "The conversation approaches a partial protocol despite the instruction to remain exploratory: turns 20-22 settle on weeks one and two as a feasibility/ramp-up period, and turns 16-18 substantially converge on independent observations and timing logs. The questions are not ranked, but the degree of convergence reduces the intended open-endedness."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.3,
+    "turn_moves": {
+      "proposal": 15,
+      "question": 6,
+      "observation": 1,
+      "backchannel": 4,
+      "agreement": 3,
+      "concern": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      29
+    ],
+    "unsure_turns": [
+      6,
+      15,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.4,
+      "approved": false,
+      "issues": [
+        "The core main research question is never stated clearly: the transcript discusses a pilot, headband scores, and classroom attention, but does not explicitly establish the 12-week dry-electrode neurofeedback question for grades 3-5 or frame it as improvement under implementation conditions.",
+        "The required context that the pilot spans four classrooms across two schools is incomplete. Turn 1 mentions four classrooms, but no turn identifies two schools.",
+        "The 12-week duration is absent entirely, preventing recovery of a required contextual fact.",
+        "Placebo/expectation effects are absent. Dr. Chen addresses gadget novelty and the limits of proprietary scores in turns 2 and 4, but does not raise student or teacher expectations, placebo effects, or a credible comparison.",
+        "Learning outcomes are not meaningfully addressed. Turns 3, 22, and 23 cover work initiation, persistence, completion, participation, and teacher ratings, but not learning outcomes or student work evidence as required context.",
+        "Several required practical uncertainties are explored well, but the discussion is disproportionately narrowed to fit, workflow, transition conditions, and logging. Durability after the program, dose/adherence beyond session completion, adverse events, charging reliability, and teacher buy-in are not substantively explored.",
+        "The specified one_voice_leads meeting style is not followed: turns are balanced almost exactly across speakers (11/9/9), rather than having one speaker lead much of the discussion and a quieter participant speak rarely.",
+        "Naturalness is limited by polished, highly complete turns. Many turns cleanly state a concern, explain its implication, and propose a next step\u2014for example turns 14-20\u2014giving the exchange a scripted planning-dialogue quality despite some repairs and fillers.",
+        "Turn 27 functions as a tidy written-meeting close, explicitly summarizing the two follow-ups before ending; this contributes to the polished/minutes-like feel."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "The explicit main research question is never stated. Turn 1 frames parts of it, and later turns imply a 12-week classroom headband pilot, but the full question\u2014whether the program improves attention for grade 3-5 students in ordinary classrooms and under what implementation conditions\u2014must be inferred rather than recovered directly.",
+        "The transcript never mentions grade 3-5 students, an important ground-truth contextual term.",
+        "Placebo or expectation effects are absent. Turns 16 and 21 mention novelty and setup learning, but neither addresses student/teacher expectations, placebo, encouragement, or a credible comparison; consequently the expectancy-effects follow-up theme is unsupported.",
+        "Learning outcomes and teacher buy-in are only weakly represented. Turn 15 considers work completion, while burden and instructional time are strong, but no participant explicitly raises teacher willingness/buy-in or broader learning outcomes.",
+        "The requested one_voice_leads style is not followed: participation is highly balanced (Chen 12 turns, Rivera 10, Okafor 9), rather than having one speaker lead most of the meeting while others contribute sparsely.",
+        "Naturalness is limited by polished, highly sequential turns. Most turns cleanly articulate a concern, connect it to the previous point, and propose the next procedural response (for example turns 9-12 and 20-24), making the exchange read like scripted planning dialogue rather than spontaneous meeting speech.",
+        "Disfluencies are relatively sparse and often decorative rather than organically disruptive. Several turns end in ellipses or abrupt trailing clauses without another speaker directly taking up the unfinished wording (turns 8, 9, 12, and 25), which feels stylized.",
+        "The conversation approaches a partial protocol despite the instruction to remain exploratory: turns 20-22 settle on weeks one and two as a feasibility/ramp-up period, and turns 16-18 substantially converge on independent observations and timing logs. The questions are not ranked, but the degree of convergence reduces the intended open-endedness."
+      ]
+    }
+  ]
+}

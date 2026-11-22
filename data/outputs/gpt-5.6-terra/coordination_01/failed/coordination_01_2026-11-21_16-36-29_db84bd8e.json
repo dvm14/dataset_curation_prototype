@@ -1,0 +1,592 @@
+{
+  "transcript_id": "db84bd8e",
+  "generated_at": "2026-11-21T16:36:29.132675",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style with mostly short-to-medium turns in the opening and Q&A, contrasted with long, structured presentation turns. Participants use frequent acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), light small talk, and occasional joking before shifting abruptly into formal introductions and talks. Speech is highly spontaneous and disfluent: fillers such as \u201cum,\u201d repetitions, self-corrections, abandoned starts, and loosely formed questions are common, especially among non-native speakers. Overlap and interruptions are low; speakers generally wait, though brief backchanneling and quick interjections occur. Questions are usually prefaced with praise or hedging (\u201cI have a quick question,\u201d \u201cmaybe,\u201d \u201cI\u2019m not sure\u201d), then develop through multiple follow-ups. Disagreement is indirect and framed as uncertainty, alternative explanations, or open questions rather than confrontation. Responses tend to validate the question first, qualify limits of the evidence, and then reason aloud through possibilities.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mei Chen",
+      "discipline": "computer science",
+      "functional_role": "PhD student",
+      "background": "A fourth-year PhD student in learning technologies who has spent three years building and evaluating NLP-assisted math-feedback systems. Her work uses held-out, anonymized student-work datasets to test error classification and hint quality, along with usability telemetry, privacy-preserving logging, and school-network performance testing. She has supported pilots in public-school settings and is attentive to making system limits visible to educators.",
+      "distinct_perspective": "Chen treats the tutor as a fallible technical system whose behavior must be tested before classroom use. She focuses on whether error detection is accurate across varied student work, whether graduated hints reliably stop short of completing problems, whether latency is acceptable on school networks, and whether event logs can answer research questions without exposing student identities. She will lead validation of error-detection and hint behavior using held-out anonymized work, network latency testing, and pseudonymized logging design, while relying on education and psychology colleagues to define what counts as useful, safe classroom behavior.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Ms. Rosa Alvarez",
+      "discipline": "education",
+      "functional_role": "domain expert",
+      "background": "A middle-school mathematics instructional coach with 16 years of experience as a Grade 6\u20138 teacher, department chair, and district curriculum facilitator. She has led implementation of digital math tools across multiple classrooms and uses lesson observations, teacher interviews, student-work review, and formative-assessment planning to study whether a tool fits real instructional routines. She is familiar with linear-equation misconceptions and the practical constraints of managing mixed-readiness classrooms.",
+      "distinct_perspective": "Alvarez judges the tutor by its instructional fit rather than its technical novelty. She focuses on when students may use it, how teachers introduce and monitor it without losing instructional time, what off-task or workaround behavior looks like, and whether weekly summaries give teachers actionable evidence for next lessons. She will lead classroom-use routines, an observation protocol for teacher workload and off-task use, and requirements for teacher-facing formative-assessment summaries. She strongly favors keeping teachers in control of instruction, grading, and student support.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Arjun Patel",
+      "discipline": "psychology",
+      "functional_role": "project manager",
+      "background": "A school and developmental psychologist with 11 years of experience studying adolescent motivation, academic anxiety, self-regulated learning, and help-seeking during STEM instruction. He has designed brief classroom-friendly pre/post measures and mixed-methods studies combining student surveys, behavior coding, and teacher reports. In cross-disciplinary pilots, he coordinates timelines and decision logs while ensuring that behavioral indicators are interpreted cautiously rather than treated as simple proof of engagement.",
+      "distinct_perspective": "Patel asks how the tutor changes students' emotional and motivational relationship to difficult mathematics. He is concerned that a hint can support persistence for one student but encourage passive dependence or disengagement for another. He will lead selection of brief, age-appropriate pre/post measures of math anxiety and motivation and develop a coding procedure for hint responses, including persistence, disengagement, and over-reliance. He will also help specify how observed distress or repeated disengagement should be routed to the teacher through the school's existing support process, rather than through automated intervention.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 2,
+  "task_id": "coordination_01",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+  "seed_spec": {
+    "task_id": "coordination_01",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+    "explicit_instruction": "Hold a planning meeting with Dr. Chen (computer science), Ms. Alvarez (education), and Dr. Patel (psychology). The group must agree on coordinated next steps for the April 13 pilot and assign each task to the discipline best positioned to lead it, while allowing stated collaboration where needed. Dr. Chen should explain that computer science can validate error-detection and hint behavior using a held-out set of anonymized student work, run school-network latency tests, and implement privacy-preserving event logging with student identifiers removed or pseudonymized. Ms. Alvarez should explain that education can define classroom routines for when students may use the tutor, create an observation protocol for teacher workload and off-task use, and specify formative-assessment evidence teachers need from a weekly summary. Dr. Patel should explain that psychology can select brief age-appropriate pre/post measures of math anxiety and motivation and design a procedure for reviewing whether hints lead students to persist, disengage, or become over-reliant. The team should make three decisions: the tutor may give error-specific graduated hints but may not provide final answers or complete multi-step problems for students; teachers receive weekly class-level summaries rather than real-time student rankings; and any student distress or repeated disengagement observed during the pilot is referred to the teacher under the school\u2019s existing support process. The meeting should establish dependencies and dates: Chen will provide a testable tutor build and logging specification by March 6; Alvarez will provide classroom routines, observation protocol, and teacher-summary requirements by March 13; Patel will provide measures and the hint-response coding guide by March 13; Chen will integrate the approved requirements by March 27; the full team will conduct a teacher walkthrough and network check during the week of March 30; and the team will review pilot data together after the first two weeks of use. Do not claim that consent procedures, district data approval, or the exact sample size have been finalized; these remain open items requiring school/district confirmation before student data collection.",
+    "ground_truth": {
+      "decisions": {
+        "tutor_scope": [
+          "The tutor may provide error-specific graduated hints.",
+          "The tutor may not give final answers.",
+          "The tutor may not complete multi-step problems for students."
+        ],
+        "teacher_reporting": "Teachers will receive weekly class-level summaries, not real-time student rankings.",
+        "student_support": "Observed student distress or repeated disengagement will be referred to the teacher through the school\u2019s existing support process."
+      },
+      "task_ownership": [
+        {
+          "task": "Validate error-detection accuracy and hint behavior against a held-out anonymized set of student work.",
+          "lead_discipline": "computer science",
+          "collaborators": [
+            "education",
+            "psychology"
+          ],
+          "due": "2026-03-06"
+        },
+        {
+          "task": "Test tutor latency and reliability on school networks.",
+          "lead_discipline": "computer science",
+          "collaborators": [],
+          "due": "2026-03-30"
+        },
+        {
+          "task": "Implement privacy-preserving event logging using removed or pseudonymized student identifiers.",
+          "lead_discipline": "computer science",
+          "collaborators": [
+            "education"
+          ],
+          "due": "2026-03-06"
+        },
+        {
+          "task": "Define classroom routines governing when and how students use the tutor.",
+          "lead_discipline": "education",
+          "collaborators": [
+            "psychology"
+          ],
+          "due": "2026-03-13"
+        },
+        {
+          "task": "Create an observation protocol for teacher workload and off-task use.",
+          "lead_discipline": "education",
+          "collaborators": [
+            "psychology"
+          ],
+          "due": "2026-03-13"
+        },
+        {
+          "task": "Specify the formative-assessment content needed in weekly teacher summaries.",
+          "lead_discipline": "education",
+          "collaborators": [
+            "computer science"
+          ],
+          "due": "2026-03-13"
+        },
+        {
+          "task": "Select brief, age-appropriate pre/post measures of math anxiety and motivation.",
+          "lead_discipline": "psychology",
+          "collaborators": [
+            "education"
+          ],
+          "due": "2026-03-13"
+        },
+        {
+          "task": "Create a coding guide for whether hints support persistence, disengagement, or over-reliance.",
+          "lead_discipline": "psychology",
+          "collaborators": [
+            "education",
+            "computer science"
+          ],
+          "due": "2026-03-13"
+        },
+        {
+          "task": "Integrate approved classroom, measurement, and reporting requirements into the tutor build.",
+          "lead_discipline": "computer science",
+          "collaborators": [
+            "education",
+            "psychology"
+          ],
+          "due": "2026-03-27"
+        },
+        {
+          "task": "Conduct a teacher walkthrough and school-network check.",
+          "lead_discipline": "education",
+          "collaborators": [
+            "computer science",
+            "psychology"
+          ],
+          "due_week_of": "2026-03-30"
+        },
+        {
+          "task": "Review the first two weeks of pilot evidence and determine any needed adjustments.",
+          "lead_discipline": "education",
+          "collaborators": [
+            "computer science",
+            "psychology"
+          ],
+          "due": "after two weeks of pilot use"
+        }
+      ],
+      "dependencies": [
+        {
+          "task": "Computer-science integration",
+          "depends_on": [
+            "education classroom routines, observation protocol, and teacher-summary requirements",
+            "psychology measures and hint-response coding guide"
+          ]
+        },
+        {
+          "task": "Teacher walkthrough",
+          "depends_on": [
+            "integrated tutor build",
+            "classroom routines",
+            "network testing"
+          ]
+        },
+        {
+          "task": "Pilot data collection",
+          "depends_on": [
+            "district/school confirmation of consent procedures and data approval",
+            "confirmation of sample size"
+          ]
+        }
+      ],
+      "open_items": [
+        "Consent procedures have not been finalized.",
+        "District data approval has not been finalized.",
+        "The exact sample size has not been finalized."
+      ]
+    }
+  },
+  "seed_location": "Incomplete relative to the seed/ground truth. Relevant turns 1-2 and 27 keep consent procedures, district approval, and sample details open. Turns 10-11 set Alvarez\u2019s March 13 deliverables and Chen\u2019s March 6 build/logging specification; turn 15 sets Chen\u2019s March 27 integration and the week-of-March-30 walkthrough; turns 23-26 discuss network testing. However, the dialogue never makes the required tutor-scope decision about error-specific graduated hints/no final answers/no multi-step completion, never assigns Patel the required March 13 measures and hint-response coding guide, never explicitly assigns or confirms the full required task ownership/collaboration structure, never clearly establishes the post-two-week pilot-data review, and does not explicitly make the required weekly-class-summary-versus-real-time-rankings decision. The existing-support referral is discussed in turn 2, but not clearly adopted as a team decision.",
+  "ground_truth": {
+    "decisions": {
+      "tutor_scope": [
+        "The tutor may provide error-specific graduated hints.",
+        "The tutor may not give final answers.",
+        "The tutor may not complete multi-step problems for students."
+      ],
+      "teacher_reporting": "Teachers will receive weekly class-level summaries, not real-time student rankings.",
+      "student_support": "Observed student distress or repeated disengagement will be referred to the teacher through the school\u2019s existing support process."
+    },
+    "task_ownership": [
+      {
+        "task": "Validate error-detection accuracy and hint behavior against a held-out anonymized set of student work.",
+        "lead_discipline": "computer science",
+        "collaborators": [
+          "education",
+          "psychology"
+        ],
+        "due": "2026-03-06"
+      },
+      {
+        "task": "Test tutor latency and reliability on school networks.",
+        "lead_discipline": "computer science",
+        "collaborators": [],
+        "due": "2026-03-30"
+      },
+      {
+        "task": "Implement privacy-preserving event logging using removed or pseudonymized student identifiers.",
+        "lead_discipline": "computer science",
+        "collaborators": [
+          "education"
+        ],
+        "due": "2026-03-06"
+      },
+      {
+        "task": "Define classroom routines governing when and how students use the tutor.",
+        "lead_discipline": "education",
+        "collaborators": [
+          "psychology"
+        ],
+        "due": "2026-03-13"
+      },
+      {
+        "task": "Create an observation protocol for teacher workload and off-task use.",
+        "lead_discipline": "education",
+        "collaborators": [
+          "psychology"
+        ],
+        "due": "2026-03-13"
+      },
+      {
+        "task": "Specify the formative-assessment content needed in weekly teacher summaries.",
+        "lead_discipline": "education",
+        "collaborators": [
+          "computer science"
+        ],
+        "due": "2026-03-13"
+      },
+      {
+        "task": "Select brief, age-appropriate pre/post measures of math anxiety and motivation.",
+        "lead_discipline": "psychology",
+        "collaborators": [
+          "education"
+        ],
+        "due": "2026-03-13"
+      },
+      {
+        "task": "Create a coding guide for whether hints support persistence, disengagement, or over-reliance.",
+        "lead_discipline": "psychology",
+        "collaborators": [
+          "education",
+          "computer science"
+        ],
+        "due": "2026-03-13"
+      },
+      {
+        "task": "Integrate approved classroom, measurement, and reporting requirements into the tutor build.",
+        "lead_discipline": "computer science",
+        "collaborators": [
+          "education",
+          "psychology"
+        ],
+        "due": "2026-03-27"
+      },
+      {
+        "task": "Conduct a teacher walkthrough and school-network check.",
+        "lead_discipline": "education",
+        "collaborators": [
+          "computer science",
+          "psychology"
+        ],
+        "due_week_of": "2026-03-30"
+      },
+      {
+        "task": "Review the first two weeks of pilot evidence and determine any needed adjustments.",
+        "lead_discipline": "education",
+        "collaborators": [
+          "computer science",
+          "psychology"
+        ],
+        "due": "after two weeks of pilot use"
+      }
+    ],
+    "dependencies": [
+      {
+        "task": "Computer-science integration",
+        "depends_on": [
+          "education classroom routines, observation protocol, and teacher-summary requirements",
+          "psychology measures and hint-response coding guide"
+        ]
+      },
+      {
+        "task": "Teacher walkthrough",
+        "depends_on": [
+          "integrated tutor build",
+          "classroom routines",
+          "network testing"
+        ]
+      },
+      {
+        "task": "Pilot data collection",
+        "depends_on": [
+          "district/school confirmation of consent procedures and data approval",
+          "confirmation of sample size"
+        ]
+      }
+    ],
+    "open_items": [
+      "Consent procedures have not been finalized.",
+      "District data approval has not been finalized.",
+      "The exact sample size has not been finalized."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "Hi, everyone. Before we get into it, I missed the very end of our last conversation. Did anything change around the district data approval? I was hoping today we could get concrete about what this looks like in an actual Grade 7 class, especially the teacher routine while students are on the tutor, because April will come around very, very quickly."
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "I don't think anything changed, Rosa. Consent procedures, district approval, and the final sample are still awaiting confirmation. For the classroom routine, I'd want a really simple teacher-facing route if there's repeated withdrawal or visible distress, through the school's existing support process, not something the tutor tries to manage on its own. What do your teachers already see as the line between normal productive struggle and a student who's really checking..."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "For most teachers, normal frustration still looks like engagement. They\u2019re writing, trying a different step, maybe asking a peer or waiting to ask the teacher. The concern is when that stops\u2014head down, repeated clicking with no change in written work, or just reopening hints. But I\u2019d want the teacher to notice a pattern, not flag one rough problem."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That distinction is helpful. So for the logs, I\u2019d be cautious about treating repeated hints or a pause on its own as a disengagement signal. We could surface a small class-level pattern for the teacher, but not generate a student flag. Rosa, when students show incomplete work, just an answer or one partial line, how common is that in this unit? Our error detector is less, um, steady on those than on fully written steps."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "Pretty common, especially early in the unit and with students who aren't confident writers in math. A partial line can mean they know what operation comes next, or it can just be a rushed entry, so I wouldn't want the tutor naming it as an error. It should ask for the next step or let the student say they're, they're not finished. Could it keep that distinction visible in the log?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I think so. We can log it as something like \u201cinsufficient work to classify,\u201d separate from a detected error, and have the tutor give a neutral prompt rather than a correction. I\u2019d want to test that on the held-out work first, because incomplete entries are exactly where a confident-looking wrong label would be most harmful."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "That wording matters a lot. If the weekly view separates \"not enough work to classify\" from actual error patterns, a teacher can decide whether to look at the notebook or confer with the student instead of assuming the system knows. Could the student-facing prompt be something like, \"Show your next step when you\u2019re ready,\" instead of pushing them to type a full explanation?"
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "Mm, that seems important."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "We can make it exactly that, \u201cShow your next step when you\u2019re ready,\u201d and record that the system didn\u2019t classify the entry, not that the student made an error. I\u2019d also keep the weekly view to counts and patterns, with the actual student work staying with the teacher, because the log can\u2019t tell why a line is partial."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "That\u2019s the right boundary. For the March 20 plan, I need the weekly summary to show those categories clearly alongside class-level use, without turning it into a list of kids to chase. I can pull together the teacher routine, observation notes, and summary requirements by March 13, and then we should test the actual build with teachers in the week of March 30, not just review screenshots."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That sounds workable. I can have the testable build and the logging specification ready by March 6, so the summary categories are in something teachers can react to before the March 30 session. I do need to check both schools' device and network setup before we promise the same, the same response time in a full class, though, especially with the logging on."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "Please include the actual student log-in and first problem in that check, not just a speed test. If the response drags, the teacher ends up filling the dead time, and then the routine falls apart. Do we know yet whether the schools can give the participating teachers protected time for that walkthrough and for looking at the weekly summary?"
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "That protected time also affects whether any student measures are feasible. I can keep the pre/post very brief, but I need to check with both schools what class time is actually available and whether the district is comfortable with the wording. We shouldn't add it just because the logs exist. And the walkthrough could test the teacher routine for noticing patterns without making the weekly summary feel like another, another surveillance task."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "Exactly. If a teacher has to decode a dashboard during a passing period, it won't get used. I'd rather test whether they can glance at one short class pattern, check a couple of notebooks or have a quick conference, and use that to shape the next day's warm-up. That's about the limit of what feels..."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That gives us a pretty concrete test. Can a teacher use one class-level pattern to choose a warm-up without having to interpret individual log trails? Once Rosa\u2019s summary requirements and Arjun\u2019s measures are settled, I can fold those into the build by March 27, so the March 30 walkthrough is using the same reporting setup we\u2019d take into the April 13..."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "For that walkthrough, I want teachers to actually use the summary to pick a warm-up from a realistic set of student work, and then tell us what they would do next. Otherwise we might prove the report displays correctly without- without learning whether it helps them teach a mixed group."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Yeah, I\u2019d like to see that."
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "I\u2019d add one small piece to that exercise. After teachers choose the warm-up, ask what evidence they\u2019d need before concluding a pattern reflects disengagement rather than, um, students using hints strategically. The same hint count can mean pretty different things, so I think the walkthrough should make that ambiguity visible instead of asking the summary to settle it."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "That\u2019s exactly the question I\u2019d put in front of them. I\u2019d also ask what they\u2019d check first, the student\u2019s paper, a quick conversation, maybe what was happening in the room, because the log should be a reason to look, not evidence by itself. And if they\u2019d need five different screens to- if that\u2019s what the answer is, then we\u2019ve made it too complicated."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I can make the summary deliberately thin, just one or two class patterns, with a plain note that they're prompts to check work or talk to students, not conclusions. For the walkthrough, could we also watch whether teachers understand the \"insufficient work to classify\" category without us explaining it? If that label gets read as a deficit, we should change it before April."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "Let\u2019s test that cold, with no legend beyond whatever would actually be on the page. \u201cInsufficient work to classify\u201d may be accurate, but I can imagine a teacher reading it as, you know, this child didn\u2019t do enough. Maybe \u201centry not yet classifiable\u201d lands differently? We should see what they say before we decide."
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "Hm, worth testing cold."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I can put two or three candidate labels into the March 30 version and keep the underlying event separate from whatever wording teachers see. And the network check should include that exact summary page too, not just tutor responses. I was thinking the thin report- if it takes too long to load, it still won\u2019t be usable."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "And I want the network check to happen with a whole-class kind of load, if the schools will allow it, not one laptop in an empty room. A slow summary page on Friday afternoon is one thing, but a slow first login with thirty seventh-graders is where the teacher routine really..."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I\u2019ll check whether each school can give us a realistic concurrent-login test, including the first problem submission, hint delivery, and the summary page. If they can\u2019t, I don\u2019t think we should pretend a single-device result tells us much. I\u2019ll also need their filtering and device details before I can say what telemetry will actually work."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "While you\u2019re getting those details, I need to know what time the teachers can actually give us that week. A realistic load test is useful, but the walkthrough also needs enough protected time for them to try the routine and the summary without rushing out to pick up a class. I\u2019ll check with the schools rather than assume that\u2019s..."
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "That makes sense. Once Rosa knows what protected time is available, I can check whether a genuinely brief pre/post fits there without displacing instruction. If it doesn't, I'd rather omit it than rush students through it. And we should keep all of that contingent on the district approval and consent decision."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "I\u2019ll get the protected-time answer from both schools, and I\u2019ll make the March 30 walkthrough contingent on actually having enough time to run the routine, the whole-class check, and that warm-up exercise. If they can\u2019t give us that, we need to say so plainly in the March 20 plan rather than quietly, quietly adding work to teachers\u2019 plates."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Okay, I think we\u2019re at time. Thanks, everyone\u2014I'll see you at the next check-in."
+    },
+    {
+      "speaker": "Ms. Rosa Alvarez",
+      "text": "All right, take care, everyone."
+    },
+    {
+      "speaker": "Dr. Arjun Patel",
+      "text": "Thank you, everyone. Goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      6,
+      9,
+      10,
+      11,
+      13,
+      15,
+      18,
+      20,
+      23,
+      25,
+      27,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript never states the required tutor-scope decision that the tutor may give error-specific graduated hints but may not give final answers or complete multi-step problems. Turns 5-9 establish neutral handling of incomplete work, but not the required prohibition on answers or completed solutions.",
+      "Chen never explicitly commits to validation against a held-out anonymized student-work set. Turn 6 mentions testing incomplete entries on held-out work, but it is narrower than validating overall error-detection accuracy and hint behavior, and anonymization is not stated.",
+      "Privacy-preserving event logging with removed or pseudonymized identifiers is absent. Turns 9, 11, 23, and 25 discuss logging and telemetry, but none establishes identifier removal/pseudonymization or the required privacy task ownership.",
+      "Alvarez does not explicitly create or commit to an observation protocol for teacher workload and off-task use by March 13. Turn 10 assigns her a teacher routine, observation notes, and summary requirements, which is suggestive but does not satisfy the specific protocol requirement.",
+      "Patel does not commit to providing brief age-appropriate math-anxiety and motivation measures or a hint-response coding guide by March 13. Turns 13 and 27 only say he will check feasibility of a brief pre/post measure; turn 18 raises interpretation of hint use but does not assign or date a coding guide.",
+      "The required post-pilot review after the first two weeks of use is absent. The meeting ends at turn 29 without establishing this next step.",
+      "The March 30 walkthrough/network check is discussed, but ownership is diffuse rather than explicitly education-led with computer science and psychology collaboration. Turns 10, 15-16, 23-28 imply roles but do not make the coordinated assignment recoverable without substantial inference.",
+      "The transcript has realistic interruptions and repetitions, but many substantive turns remain polished, self-contained mini-arguments that immediately convert concerns into a proposed test or assignment (especially turns 10-16 and 18-28). It also lacks the requested deferential-junior dynamic: Chen is not notably cautious or drawn out, and Alvarez does not talk over her.",
+      "Turn 11 says Chen will provide a testable build and logging specification by March 6, and turn 15 makes integration contingent on Rosa\u2019s and Arjun\u2019s requirements, but the March 27 integration dependency is only partially supported because Patel\u2019s March 13 deliverables are not established."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.8,
+    "written_turns": [
+      6,
+      7,
+      9,
+      10,
+      25
+    ],
+    "exploration_share": 0.1,
+    "turn_moves": {
+      "question": 3,
+      "answer": 2,
+      "request": 4,
+      "proposal": 7,
+      "agreement": 4,
+      "commitment": 9,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      10,
+      11,
+      13,
+      15,
+      20,
+      21,
+      23,
+      25,
+      26,
+      27,
+      28
+    ],
+    "unsure_turns": [
+      2,
+      11,
+      13,
+      25
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.12,
+      "approved": false,
+      "issues": [
+        "The central tutor-scope decision is incomplete. The transcript discusses incomplete explanations and hint use (turns 2-6) but never explicitly agrees that hints are error-specific and graduated, nor that the tutor may not give final answers or complete multi-step problems. These required ground-truth decisions are therefore not recoverable.",
+        "The required validation task\u2014testing error-detection accuracy and hint behavior against a held-out anonymized set of student work\u2014is absent. Turn 12 only promises a basic build and pseudonymized sequence logging by March 6; it does not assign or describe held-out-work validation, education/psychology collaboration, or its due date.",
+        "Psychology's March 13 deliverables are not established. Patel mentions very brief pre/post items in turn 19 and develops a lean observation code in turn 23, but does not explicitly select age-appropriate anxiety and motivation measures, provide a hint-response coding guide by March 13, or own the full persistence/disengagement/over-reliance procedure.",
+        "The required student-support decision is absent: no turn says observed distress or repeated disengagement will be referred to the teacher through the school's existing support process. Distress is never substantively addressed, and turn 23 merely includes a stopped-engaging observation category.",
+        "The required open items are absent. The meeting does not state that consent procedures, district data approval, and exact sample size remain unfinalized and require school/district confirmation before student data collection. It consequently also fails to establish the pilot-data-collection dependency on those confirmations.",
+        "The post\u2013first-two-weeks joint review and adjustment decision is only weakly implied in turn 27 ('after the first two weeks') and is framed around copying/student work rather than an explicit full-team review of pilot evidence and needed adjustments.",
+        "The week-of-March-30 activity is discussed as a walkthrough and network check (turns 16-18), but it is not explicitly assigned as education-led with computer-science and psychology collaboration, and it is not clearly tied to a completed integrated build. The network work also lacks the ground-truth March 30 ownership/due framing.",
+        "Naturalness is capped low because many substantive turns are polished, complete written arguments that move directly from concern to solution or assignment. The conversation also ends with a tidy stopping/thank-you sequence (turns 28-30) and lacks genuine exploration of unknowns despite several planning requirements.",
+        "Turn 25 uses the prohibited stock phrase 'I lost my point there,' directly violating the supplied meeting-style constraint.",
+        "The specified deferential-junior dynamic is not convincingly realized. Chen is somewhat tentative, but there is no clear junior deference, no senior speaker talking over her, and no third speaker drawing out a withheld contribution."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.8,
+      "exploration_share": 0.1,
+      "approved": false,
+      "issues": [
+        "The transcript never states the required tutor-scope decision that the tutor may give error-specific graduated hints but may not give final answers or complete multi-step problems. Turns 5-9 establish neutral handling of incomplete work, but not the required prohibition on answers or completed solutions.",
+        "Chen never explicitly commits to validation against a held-out anonymized student-work set. Turn 6 mentions testing incomplete entries on held-out work, but it is narrower than validating overall error-detection accuracy and hint behavior, and anonymization is not stated.",
+        "Privacy-preserving event logging with removed or pseudonymized identifiers is absent. Turns 9, 11, 23, and 25 discuss logging and telemetry, but none establishes identifier removal/pseudonymization or the required privacy task ownership.",
+        "Alvarez does not explicitly create or commit to an observation protocol for teacher workload and off-task use by March 13. Turn 10 assigns her a teacher routine, observation notes, and summary requirements, which is suggestive but does not satisfy the specific protocol requirement.",
+        "Patel does not commit to providing brief age-appropriate math-anxiety and motivation measures or a hint-response coding guide by March 13. Turns 13 and 27 only say he will check feasibility of a brief pre/post measure; turn 18 raises interpretation of hint use but does not assign or date a coding guide.",
+        "The required post-pilot review after the first two weeks of use is absent. The meeting ends at turn 29 without establishing this next step.",
+        "The March 30 walkthrough/network check is discussed, but ownership is diffuse rather than explicitly education-led with computer science and psychology collaboration. Turns 10, 15-16, 23-28 imply roles but do not make the coordinated assignment recoverable without substantial inference.",
+        "The transcript has realistic interruptions and repetitions, but many substantive turns remain polished, self-contained mini-arguments that immediately convert concerns into a proposed test or assignment (especially turns 10-16 and 18-28). It also lacks the requested deferential-junior dynamic: Chen is not notably cautious or drawn out, and Alvarez does not talk over her.",
+        "Turn 11 says Chen will provide a testable build and logging specification by March 6, and turn 15 makes integration contingent on Rosa\u2019s and Arjun\u2019s requirements, but the March 27 integration dependency is only partially supported because Patel\u2019s March 13 deliverables are not established."
+      ]
+    }
+  ]
+}

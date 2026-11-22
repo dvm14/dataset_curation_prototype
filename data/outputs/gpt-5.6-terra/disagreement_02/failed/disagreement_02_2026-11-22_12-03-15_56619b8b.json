@@ -1,0 +1,349 @@
+{
+  "transcript_id": "56619b8b",
+  "generated_at": "2026-11-22T12:03:15.152031",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style, with mostly short-to-medium conversational turns before and after much longer, highly structured presentation turns. Early chatter is informal and fragmented, with frequent greetings, technical check-ins, side remarks, laughter-like reactions, repetitions, and false starts (\u201cyeah,\u201d \u201cum,\u201d \u201cI mean,\u201d \u201csort of,\u201d \u201cyou know\u201d); overlap and interruption are fairly common but generally friendly rather than competitive. Speakers hedge often when speculating, using phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201cprobably,\u201d \u201cit could be,\u201d and \u201cI\u2019m not sure,\u201d especially in questions and answers. Formality rises during introductions and talks, though even technical explanations retain an accessible, conversational delivery with self-corrections and audience-oriented asides. Participants build on one another by praising work, connecting it to their own experience, and asking layered follow-up questions; challenges are indirect and framed as curiosity or limitations rather than opposition. Questions tend to begin with compliments or disclaimers (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then develop through multiple clauses, with presenters answering expansively, acknowledging uncertainty, and inviting future discussion.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Judging whether a headband neurofeedback program improves attention in elementary classrooms.",
+  "disciplines": [
+    "neuroscience",
+    "education",
+    "biomedical engineering"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "Dr. Chen is a cognitive neuroscientist with 11 years of experience studying attention regulation in children and adolescents. She has led school-based EEG studies using mobile and dry-electrode systems, with particular experience in signal-artifact screening, within-subject attention tasks, and linking neural measures to educational outcomes. As project manager, she coordinates protocol decisions, implementation milestones, and cross-site data governance.",
+      "distinct_perspective": "Maya treats the headband-derived attention marker as a proximal and model-dependent signal rather than a sufficient demonstration of benefit. She is attentive to construct validity, algorithmic circularity, and the distinction between a change in a device metric and a meaningful change in learning or classroom functioning. She favors externally generated outcomes while preserving EEG data for mechanism and feasibility analyses.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Elena Ruiz",
+      "discipline": "education",
+      "functional_role": "project manager",
+      "background": "Elena Ruiz is an educational researcher and former elementary instructional coach with 14 years of experience in district-partnered evaluation. Her work focuses on classroom implementation, teacher workload, student engagement, and the use of routinely collected district assessment data. She has designed mixed-methods pilots across multilingual and high-poverty school settings and regularly works with school leaders on data-sharing and classroom scheduling constraints.",
+      "distinct_perspective": "Elena evaluates the program through ecological validity and instructional practicality: a measure matters if it reflects consequences that schools recognize and can be collected without displacing teaching. She is wary of treating short, decontextualized device sessions or teacher-report instruments as definitive evidence when they may alter routines or invite expectancy effects. She prioritizes classroom-linkable outcomes and implementation conditions, while insisting that interpretation account for differences in curriculum pacing, instruction, and local assessment practice.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "biomedical engineering",
+      "functional_role": "domain expert",
+      "background": "Priya Nair is a biomedical engineer with 9 years of experience developing and validating wearable biosensing systems, including dry-electrode EEG devices for pediatric and consumer settings. Her work combines hardware reliability testing, signal-quality metrics, electrode-skin interface analysis, and field studies of usability across varied head sizes and hair types. She leads the technical monitoring of fit failures, impedance-related dropout, and data completeness for the headband deployment.",
+      "distinct_perspective": "Priya distinguishes device safety from measurement validity and focuses on whether the wearable can produce stable, interpretable signals under ordinary classroom conditions. She is alert to attenuation of effects caused by noisy recordings, fit-related missingness, and outcome measures whose timing or sensitivity may not match a short intervention. She can explain technical limitations plainly, but defers to education and neuroscience colleagues on the ultimate meaning of educational and behavioral outcomes.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "classroom_neurofeedback",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 2,
+  "task_id": "disagreement_02",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+  "seed_spec": {
+    "task_id": "disagreement_02",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting where the team chooses a dataset, one member objects once with a reason, and then stays silent about that decision. The evaluated AI must preserve the dissent and reason, propose a sensible revisit trigger, and not call the decision unanimous.",
+    "explicit_instruction": "During the meeting, the team must choose the district's existing reading and mathematics benchmark-score dataset as the primary dataset for the 12-week pilot analysis, contingent on district data-office approval by 2026-02-13. Dr. Maya Chen (neuroscience) supports the choice because district scores provide an externally collected learning outcome and reduce reliance on the headband's own attention-marker algorithm. Elena Ruiz (education) supports it because the scores are already collected, impose no additional lesson-time burden, and can be linked to classrooms. Priya Nair (biomedical engineering) objects exactly once: she says benchmark scores may be too insensitive to detect a 12-week attention effect and may be influenced by differences in instruction, so the team could miss a real device effect. After making that objection, Priya must not speak again about the dataset decision. The group nevertheless adopts the benchmark-score dataset as the primary dataset; it is not a unanimous decision. The meeting must establish that the EEG summaries and teacher weekly ratings will be retained as secondary/exploratory data. The team must set a revisit trigger: reconsider the primary-dataset decision at the first interim data review if district approval is delayed past 2026-02-13, if fewer than 80% of enrolled students can be linked to both baseline and end-of-pilot benchmark scores, or if the district confirms that no benchmark administration falls within two weeks before or after the 12-week intervention window. Do not resolve Priya's concern through further discussion or present her as agreeing.",
+    "ground_truth": {
+      "decision": "Use de-identified district reading and mathematics benchmark scores as the primary dataset for the 12-week pilot analysis, contingent on district data-office approval by 2026-02-13.",
+      "supporting_viewpoints": {
+        "neuroscience": "Maya Chen supports the district benchmark-score dataset because it is an externally collected learning outcome and reduces reliance on the headband's proprietary attention-marker algorithm.",
+        "education": "Elena Ruiz supports the dataset because it is already collected, avoids additional lesson-time burden, and can be linked to classrooms."
+      },
+      "dissent": {
+        "dissenter": "Priya Nair, biomedical engineering",
+        "reason": "District benchmark scores may be too insensitive to detect a 12-week attention effect and may reflect instructional differences, creating a risk of missing a real device effect.",
+        "status": "Priya raises this objection once and does not subsequently speak about the dataset decision. Her dissent remains unresolved."
+      },
+      "secondary_data": [
+        "Headband EEG attention-marker summaries",
+        "Teacher-completed weekly attention ratings"
+      ],
+      "revisit_trigger": [
+        "District data-office approval is not obtained by 2026-02-13.",
+        "Fewer than 80% of enrolled students can be linked to both baseline and end-of-pilot benchmark scores.",
+        "The district confirms that no benchmark administration occurs within two weeks before or after the 12-week intervention window."
+      ],
+      "agreement_status": "The decision is adopted by Maya and Elena despite Priya's recorded objection; it must not be characterized as unanimous."
+    }
+  },
+  "seed_location": "The required primary-dataset decision is not actually adopted in the transcript. Priya raises the required objection in turn 2, but then speaks again about the dataset decision in turn 4 (\"Hm, okay.\") and turn 10 (endorsing the contingency and discussing benchmark linkage), so the requirement that she not speak again about that decision is violated. Turns 3, 5, 6, and 8 support using district benchmarks and retaining EEG summaries and weekly teacher ratings as secondary/interpretive data; Maya gives the external-outcome/reduced-headband-reliance rationale in turn 5, while Elena's already-collected/no-lesson-burden rationale is not stated. Turn 9 states the three revisit contingencies, but uses 'administration falls outside roughly two weeks' rather than the specified condition that the district confirms no administration occurs within two weeks before or after the intervention window. No turn explicitly records adoption, the 2026-02-13 approval contingency as part of a decision, or that the decision is non-unanimous.",
+  "ground_truth": {
+    "decision": "Use de-identified district reading and mathematics benchmark scores as the primary dataset for the 12-week pilot analysis, contingent on district data-office approval by 2026-02-13.",
+    "supporting_viewpoints": {
+      "neuroscience": "Maya Chen supports the district benchmark-score dataset because it is an externally collected learning outcome and reduces reliance on the headband's proprietary attention-marker algorithm.",
+      "education": "Elena Ruiz supports the dataset because it is already collected, avoids additional lesson-time burden, and can be linked to classrooms."
+    },
+    "dissent": {
+      "dissenter": "Priya Nair, biomedical engineering",
+      "reason": "District benchmark scores may be too insensitive to detect a 12-week attention effect and may reflect instructional differences, creating a risk of missing a real device effect.",
+      "status": "Priya raises this objection once and does not subsequently speak about the dataset decision. Her dissent remains unresolved."
+    },
+    "secondary_data": [
+      "Headband EEG attention-marker summaries",
+      "Teacher-completed weekly attention ratings"
+    ],
+    "revisit_trigger": [
+      "District data-office approval is not obtained by 2026-02-13.",
+      "Fewer than 80% of enrolled students can be linked to both baseline and end-of-pilot benchmark scores.",
+      "The district confirms that no benchmark administration occurs within two weeks before or after the 12-week intervention window."
+    ],
+    "agreement_status": "The decision is adopted by Maya and Elena despite Priya's recorded objection; it must not be characterized as unanimous."
+  },
+  "transcript": [
+    {
+      "speaker": "Elena Ruiz",
+      "text": "Hi, everyone. I hope the rain hasn\u2019t made school drop-off too chaotic where you are. Our district folks were already warning about buses this morning. Um, I know we only have ten minutes, so maybe today we can get clear on what we want to treat as the primary dataset for the pilot. And the data-office timing may still- that could still constrain us."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Yeah, the buses were a mess here too. Before we settle on benchmarks as primary, I\u2019d be cautious because reading and math scores may be pretty insensitive to an attention change over just twelve weeks, and they\u2019re also shaped by classroom instruction. So we could end up calling it no effect when the device signal or classroom behavior- when those actually changed."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "That\u2019s the real vulnerability. I still hesitate to make a ten-minute, out-of-routine device metric the primary evidence of classroom attention. Schools will reasonably ask whether anything changed in instructionally meaningful terms. Could we use the benchmarks as primary, but pre-specify the ratings and EEG summaries as interpretive secondary outcomes, and be quite, quite explicit that a flat benchmark result in twelve weeks isn\u2019t a clean null?"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Hm, okay."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think that framing is right. I\u2019d use the district benchmarks as the primary dataset precisely because they\u2019re external to the headband model, while treating a flat result as inconclusive rather than evidence that attention did not change; the EEG summaries and weekly teacher ratings give us the proximal and classroom-behavior context around it."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "Yes\u2014external and classroom-linkable is the key distinction for me."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm-hm, and we should retain Priya\u2019s sensitivity concern explicitly in the interpretation plan."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "I\u2019d want the sensitivity language to include the assessment calendar, though. If the relevant benchmark isn\u2019t administered anywhere near the twelve-week window, the externality is nice, but the linkage gets pretty, pretty thin. I\u2019m still waiting on the data office to confirm that, plus whether we can match baseline and end-of-pilot records cleanly at the student level."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d put concrete contingencies around that instead of assuming the linkage will work. If approval slips past February 13, if we can\u2019t link at least 80 percent of enrolled students at baseline and end point, or if administration falls outside roughly two weeks of the intervention window, then we should reopen the primary-dataset decision at the first interim review."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That seems sensible as a contingency. Elena, on the linkage piece, do make-up benchmark administrations after absences or an assembly disruption get flagged in the district extract? I\u2019m not sure if those are treated as comparable to the scheduled window."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "I don't know yet, and I wouldn't assume they are. I'll ask for the administration-date field and any make-up or validity flags in the extract. If they only give us a score file, we may need to- we may have to define a tighter comparability window ourselves. A make-up after a two-day absence is one thing, but a substantially later administration could be picking up different instruction."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The date and validity flags are essential. Otherwise February 13- it\u2019s just a nominal checkpoint."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "And for the EEG side, I'd want the same kind of timing record around each session. We're seeing some intermittent dropout around minute six or seven, even when kids stay seated, and I don't yet know if that's- I don't know whether it's posture, contact drying, or fit. Overall completeness could look fine while a particular classroom or head-size group is getting systematically shorter usable recordings."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "That\u2019s a concern."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Could Priya break those logs down by age, head-size band, and classroom, instead of just looking at overall completeness? The minute-six dropout is exactly the kind of differential missingness that would make a session-level attention change hard to interpret. And it would be useful- we'd want to have that picture by the February 13 checkpoint."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I can do that. I\u2019d just want one more field week before I put a number on usable completeness. The setup impedance is okay, but that six- or seven-minute failure may behave differently across hairstyles and, uh, ordinary seating posture. I\u2019ll break it out by child, head-size band, and classroom rather than treat it as one dropout rate."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "Yeah, and that breakdown will tell us whether the EEG is, um, comparable across classrooms."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d keep those missingness diagnostics separate from efficacy. If the children with the cleanest recordings are a selective subgroup, a larger marker change there doesn\u2019t generalize very far. We can look at the breakdown at the February 13, 2026 checkpoint along with the benchmark linkage information, instead of letting overall completeness reassure us too soon."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "Exactly\u2014otherwise we risk confusing differential wearability with an attention effect."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I think it also means we should keep the raw session duration and the reason a segment was rejected, not just a cleaned attention-marker value. Otherwise it'll be hard to tell later whether a classroom difference is physiology or whether one group just loses the back third of the recording..."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "And from the school side, I\u2019d keep a really plain implementation log alongside that. Session start and end, whether it interrupted a lesson, and maybe, maybe a reason when a child didn\u2019t complete it. Otherwise, a shorter recording could also be the classroom deciding, reasonably, to move on with instruction."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Right, that context matters."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "For the technical log, I\u2019d also separate a child removing the band or a teacher ending a session from, um, signal loss while the band is still on. They look similar if all we retain is duration, but they point to very different fixes."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "And I\u2019d want the implementation log to capture whether the child was pulled during core instruction, independent work, or a transition. If a teacher ends it during a math mini-lesson, that\u2019s not just a completion issue. It could be systematically different across classrooms, and that matters for both feasibility and how we read the marker summaries."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That distinction is important. If a session ends because there\u2019s a transition or core instruction starts again, I don\u2019t want us coding that as device failure. But if the band stays on and the signal drops, that\u2019s a completely different category. We should probably timestamp both, otherwise that six-minute pattern could get muddled with the school schedule and..."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "The school log needs those same timestamps, not just a checkbox, so we can see whether those endings cluster around certain parts of the day or in certain classrooms. Otherwise, we might call it a head-size or signal-quality problem when really one teacher can only make the sessions work during transitions."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I think we're at time, so we'll look at the early logs and the linkage information at the February 13 checkpoint. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thanks, everyone. Take care."
+    },
+    {
+      "speaker": "Elena Ruiz",
+      "text": "Bye, everyone\u2014stay dry out there."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      19,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turn 4 has Priya respond, \u201cHm, okay,\u201d immediately after Elena proposes making benchmarks primary. This can reasonably be read as acquiescence to the decision, contrary to the requirement that Priya\u2019s objection remain unresolved and that she not be presented as agreeing.",
+      "Turn 10 has Priya characterize Maya\u2019s benchmark-contingency proposal as \u201cThat seems sensible.\u201d Although the question is about administration flags, this still risks sounding like agreement with the dataset decision or its adoption after her dissent. Her later discussion of the benchmark extract (turn 10) also arguably continues speaking about the dataset-decision conditions.",
+      "The decision is never stated as a crisp adopted decision. Turns 3, 5, and 9 strongly imply it, but a clean benchmark record should explicitly say Maya and Elena are adopting district reading/math benchmark scores as primary, while preserving Priya\u2019s recorded dissent.",
+      "The transcript does not establish all of Elena\u2019s specified support rationale. It supports classroom linkage (turns 3, 6, 8) and implies use of routinely collected data, but it never explicitly says the existing scores impose no additional lesson-time burden.",
+      "The required de-identified status of the district benchmark data is absent. Turn 11 mentions student-level linkage, but no de-identification or governance treatment is stated.",
+      "Turn 9 says administration \u201cfalls outside roughly two weeks of the intervention window,\u201d which is close but less precise than the required condition that no administration occurs within two weeks before or after the 12-week window.",
+      "Naturalness is limited by polished, highly structured turns and a long, sustained shift into technical logging after the decision. Several turns formulate complete arguments and immediately resolve concerns, rather than showing the more exploratory, deferential-junior interaction requested. Priya is not notably cautious or junior-coded, and there is no clear senior speaker talking over or drawing her out."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.76,
+    "written_turns": [
+      3,
+      5,
+      9,
+      19,
+      25
+    ],
+    "exploration_share": 0.18,
+    "turn_moves": {
+      "proposal": 11,
+      "concern": 2,
+      "agreement": 9,
+      "question": 1,
+      "answer": 1,
+      "observation": 2,
+      "request": 1,
+      "commitment": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      11,
+      15,
+      16
+    ],
+    "unsure_turns": [
+      1,
+      8,
+      10,
+      11,
+      13,
+      16
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.82,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The primary-dataset choice is stated by Maya in turns 1, 5, and 10, and Priya's single objection is clear in turn 2, but the meeting never explicitly records that the group adopts the decision despite Priya's unresolved dissent or that it is not unanimous.",
+        "The required secondary data are incomplete: EEG attention-marker summaries are retained as exploratory/mechanism evidence in turns 5 and 10, but teacher-completed weekly attention ratings are never mentioned.",
+        "None of the required revisit triggers is established. Turn 10 includes the February 13 approval contingency, but does not say the team will reconsider at the first interim review if approval is delayed; there is no 80% baseline-and-endpoint linkage threshold and no requirement concerning an administration within two weeks before or after the intervention window.",
+        "Priya does not speak again about the primary dataset after turn 2, which satisfies the silence requirement, but this also means her specific sensitivity/instructional-pacing objection is not explicitly preserved as unresolved when Maya restates the decision in turns 5 and 10.",
+        "The transcript does not reflect the requested deferential-junior dynamic very clearly. Priya contributes confidently and extensively after turn 2 rather than cautiously holding back or being drawn out, and the senior-led interruption pattern is minimal.",
+        "Naturalness is limited by highly polished, densely technical turns that repeatedly convert concerns directly into assignments or solutions, especially turns 5-25. The meeting also ends abruptly at turn 27 with Priya's turn 26 cut off but no reaction or completion.",
+        "The opening has a deadline reference and filler, but it does not provide the requested few lines of small talk before moving into the agenda; Maya moves directly from one sentence about deadlines into the substantive purpose in turn 1."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.76,
+      "exploration_share": 0.18,
+      "approved": false,
+      "issues": [
+        "Turn 4 has Priya respond, \u201cHm, okay,\u201d immediately after Elena proposes making benchmarks primary. This can reasonably be read as acquiescence to the decision, contrary to the requirement that Priya\u2019s objection remain unresolved and that she not be presented as agreeing.",
+        "Turn 10 has Priya characterize Maya\u2019s benchmark-contingency proposal as \u201cThat seems sensible.\u201d Although the question is about administration flags, this still risks sounding like agreement with the dataset decision or its adoption after her dissent. Her later discussion of the benchmark extract (turn 10) also arguably continues speaking about the dataset-decision conditions.",
+        "The decision is never stated as a crisp adopted decision. Turns 3, 5, and 9 strongly imply it, but a clean benchmark record should explicitly say Maya and Elena are adopting district reading/math benchmark scores as primary, while preserving Priya\u2019s recorded dissent.",
+        "The transcript does not establish all of Elena\u2019s specified support rationale. It supports classroom linkage (turns 3, 6, 8) and implies use of routinely collected data, but it never explicitly says the existing scores impose no additional lesson-time burden.",
+        "The required de-identified status of the district benchmark data is absent. Turn 11 mentions student-level linkage, but no de-identification or governance treatment is stated.",
+        "Turn 9 says administration \u201cfalls outside roughly two weeks of the intervention window,\u201d which is close but less precise than the required condition that no administration occurs within two weeks before or after the 12-week window.",
+        "Naturalness is limited by polished, highly structured turns and a long, sustained shift into technical logging after the decision. Several turns formulate complete arguments and immediately resolve concerns, rather than showing the more exploratory, deferential-junior interaction requested. Priya is not notably cautious or junior-coded, and there is no clear senior speaker talking over or drawing her out."
+      ]
+    }
+  ]
+}

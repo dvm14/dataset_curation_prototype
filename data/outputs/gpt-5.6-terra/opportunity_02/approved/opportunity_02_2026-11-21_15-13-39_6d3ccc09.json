@@ -1,0 +1,414 @@
+{
+  "transcript_id": "6d3ccc09",
+  "generated_at": "2026-11-21T15:13:39.408804",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial videoconference style with mostly short-to-medium turns, though formal presentations are long and uninterrupted. The opening contains frequent overlap, greetings, tech checks, casual side chat, and clipped, sometimes fragmented speech; speakers use fillers such as \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cright,\u201d and repeated words or self-corrections. Formality shifts noticeably: introductions and talks are structured and professional but still conversational, while Q&A is informal, supportive, and exploratory. Questions are often prefaced with praise or hedging (\u201cgreat talk,\u201d \u201cI have a naive question,\u201d \u201cI\u2019m just curious\u201d), then develop through follow-ups and reformulations. Participants generally build on prior remarks rather than sharply challenge them, expressing uncertainty openly with phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201cwe don\u2019t know,\u201d and \u201cit could be.\u201d Disagreement or correction is indirect and softened, usually framed as an alternative interpretation or limitation. Responses tend to be generous and explanatory, with speakers acknowledging good questions, conceding gaps, and thinking aloud.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Working out why wild bee numbers on farms did not recover after wildflower strips were planted along field edges.",
+  "disciplines": [
+    "ecology",
+    "biology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Aisha Rahman",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "Landscape ecologist with 12 years of experience designing and evaluating agri-environment monitoring projects in intensively farmed lowland landscapes. She has built GIS-based connectivity models, conducted field assessments of floral and nesting resources, and coordinated repeated pollinator surveys across farm networks. On this programme, she has helped standardise strip-condition records and link farm locations to surrounding land-cover data.",
+      "distinct_perspective": "Aisha treats the strips as components of a landscape rather than isolated interventions. She will argue that successful floral establishment does not establish whether strips provide bare ground, tussocky vegetation, hedgerows, banks, or other nesting substrates, nor whether they are reachable from source populations. She is especially alert to scale mismatch: a strip can look good at field-edge scale while remaining too isolated, too short-lived, or embedded in a hostile matrix to change farm-level bee populations.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Tom\u00e1s Velasco",
+      "discipline": "biology",
+      "functional_role": "project manager",
+      "background": "Bee biologist with 9 years of experience in wild-bee taxonomy, trait-based community analysis, and pesticide-risk research. His work combines specimen identification, pollen and foraging observations, reproductive-condition assays, and controlled exposure studies, with recent collaborations on linking field pesticide residues to sublethal effects in solitary bees and bumblebees. He manages the survey-specimen workflow for the county programme but is cautious about inferring individual-level mechanisms from the existing abundance data.",
+      "distinct_perspective": "Tom\u00e1s focuses on which bees were measured, not only how many. He expects a pooled abundance or richness result to conceal divergent responses among short-range solitary bees, long-range bumblebees, dietary specialists, and species with different nesting requirements. He will raise the possibility that pesticides or nutritional limitations reduce fecundity, larval development, navigation, or overwinter survival without causing conspicuous acute mortality. He will press the group to ask whether the current June and August surveys can detect demographic responses, colonisation lags, or species turnover.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Eleanor Price",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Agricultural economist in her third postdoctoral year, studying farmer participation in environmental schemes using payment records, cost surveys, interviews, and econometric analysis of land-use and crop-return decisions. She has worked with arable farmers on establishment costs, maintenance burdens, perceived yield effects near field margins, and how contract rules shape management choices. She is currently linking the programme's payment and management records to farm-level crop and field-size information.",
+      "distinct_perspective": "Eleanor views strip quality and persistence as outcomes partly produced by incentives, risk, and farm constraints. She will ask whether uniform or area-based payments reward visible hectares more reliably than seed-mix quality, timely maintenance, reduced chemical exposure, or placement in ecologically connected locations. She will distinguish biological non-response from uneven implementation driven by opportunity costs, labour, machinery access, expected crop losses, and the distribution of semi-natural habitat across participating farms. She is interested in redesigns that are credible to farmers while making ecological performance measurable rather than assumed.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "pollinator_strips",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 2,
+  "task_id": "opportunity_02",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+  "seed_spec": {
+    "task_id": "opportunity_02",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+    "explicit_instruction": "Run a planning meeting involving one ecologist, one bee biologist and one agricultural economist. They should agree on the main research question: why have wild bee populations not recovered following field-edge wildflower-strip planting, and how should the intervention and incentive scheme be redesigned? Each participant should briefly explain the evidence and constraints their field considers relevant. The ecologist should note that flower strips may not supply nesting resources or connect suitable habitat at the relevant landscape scale. The biologist should note that responses may differ by species and foraging range, and that pesticide exposure could impair reproduction or survival without producing obvious mortality. The economist should note that farmers face varying establishment and upkeep costs, possible yield trade-offs, and subsidy incentives that may favour visible strip area rather than ecological performance. The discussion should leave the relative importance of these mechanisms unresolved and identify that linked ecological, biological and economic follow-up questions are needed. Do not have participants generate a final ranked list of follow-up questions or solve the research problem.",
+    "ground_truth": {
+      "main_research_question": "Why did wild bee abundance and species richness fail to recover after wildflower strips were planted, and what ecologically effective and economically workable redesign of strips and farm incentives could produce recovery?",
+      "relevant_integrated_follow_up_questions": [
+        {
+          "question": "Do bee responses depend on whether strips are connected to nesting habitat and other semi-natural patches within the foraging ranges of particular bee species, rather than on strip area alone?",
+          "integration": "Combines landscape connectivity and nesting resources with species-specific foraging biology; it can identify where spatial targeting of payments is more effective than uniform field-edge planting.",
+          "feasibility": "Map habitat and nesting proxies around surveyed farms, identify focal bee taxa, and relate multi-year occupancy or abundance changes to connectivity at several biologically informed spatial scales."
+        },
+        {
+          "question": "Are pesticide exposure and nutritional conditions jointly reducing bee reproduction or survival, so that flower availability in strips is insufficient to produce population growth?",
+          "integration": "Links strip floral resources and farm management to bee physiology and sublethal pesticide effects, while considering whether management changes require compensation or altered subsidy conditions.",
+          "feasibility": "Pair pesticide-use records and targeted residue sampling with floral-resource measurements and a focused set of biomarkers or reproduction/survival indicators for common focal species."
+        },
+        {
+          "question": "Which strip designs and maintenance schedules provide season-long forage and nesting opportunities while remaining acceptable to farmers given costs, labour, crop-yield risk and payments?",
+          "integration": "Connects ecological resource requirements and bee phenology with establishment and maintenance costs, yield effects and incentive design.",
+          "feasibility": "Compare existing seed mixes and mowing or re-sowing practices, measure flowering continuity and nesting features, and use farm budget data plus stated-preference or contract-choice analysis."
+        },
+        {
+          "question": "Would outcome-oriented or spatially targeted subsidies increase adoption of the strip locations and management practices most likely to benefit bees, compared with payments based mainly on planted area?",
+          "integration": "Uses ecological and biological indicators to define credible outcomes or targeting rules, then assesses farmer participation, payment levels and administrative feasibility.",
+          "feasibility": "Model alternative payment rules using observed farm costs and landscape data; test farmer willingness and monitoring burden through a small pilot before programme-wide implementation."
+        },
+        {
+          "question": "Are apparent null effects masking gains in some bee groups and losses in others, and do those differences correspond to landscape setting, pesticide exposure and farm-management incentives?",
+          "integration": "Combines improved species identification and trait-based biology with ecological heterogeneity and economically driven management variation.",
+          "feasibility": "Reanalyse repeated survey data by species or functional group, supplement identification where needed, and link responses to farm-level management and landscape covariates."
+        }
+      ],
+      "key_evidence_needed": [
+        "Repeated, species-resolved bee data across more than two years, including measures related to reproduction or persistence where feasible.",
+        "Spatial data on floral resources, nesting-resource proxies and connectivity to semi-natural habitat at multiple foraging-relevant distances.",
+        "Farm-level pesticide applications or credible exposure proxies, plus targeted residue and sublethal-effect measurements.",
+        "Records of strip seed mix, planting, mowing, reseeding and other maintenance actions.",
+        "Farm-specific establishment, maintenance and opportunity costs, crop-yield effects, subsidy payments and farmer preferences for alternative contracts."
+      ],
+      "important_dependencies": [
+        "Species and trait identification is needed before selecting meaningful spatial scales and focal taxa.",
+        "Access to confidential pesticide and economic records requires farmer consent and data-governance arrangements.",
+        "Any outcome-based payment pilot depends on selecting indicators that are ecologically meaningful, sufficiently reliable and not excessively costly to monitor.",
+        "Causal conclusions require comparison across landscape contexts and management regimes, and ideally matched comparison farms or staggered changes in implementation."
+      ]
+    }
+  },
+  "seed_location": "Turns 1\u201333. The meeting includes an ecologist (Dr. Aisha Rahman), bee biologist (Dr. Tom\u00e1s Velasco), and agricultural economist (Dr. Eleanor Price), but they do not explicitly agree on or state the seed\u2019s full main research question about failed recovery and redesigning both strips and incentives. Relevant mechanisms are discussed without resolution: landscape connectivity and missing nesting resources (turns 3, 7\u201310, 20\u201322); species/guild-specific responses, foraging scales, phenology, and limited survey data (turns 9\u201317); sublethal pesticide exposure (turns 25\u201329); and heterogeneous farmer costs, yield/placement trade-offs, and area-based versus connectivity-sensitive payments (turns 2, 5, 15, 18, 21, 23, 26\u201331). The participants generate integrated, feasible follow-up questions throughout\u2014for example habitat connectivity/traits/payment targeting (turns 2\u20135, 15\u201323), nesting-resource field checks linked to bee guilds (turns 7\u201317), and pesticide diaries/residue targeting linked to mapped contrasts and farmer burden (turns 25\u201329). They leave mechanisms unresolved and identify data/access dependencies, including species IDs, mapping/field checks, confidential payment/crop data, farmer consent, and pilot feasibility (turns 9\u201313, 22\u201323, 26\u201331). No final ranked list is produced and the problem is not solved.",
+  "ground_truth": {
+    "main_research_question": "Why did wild bee abundance and species richness fail to recover after wildflower strips were planted, and what ecologically effective and economically workable redesign of strips and farm incentives could produce recovery?",
+    "relevant_integrated_follow_up_questions": [
+      {
+        "question": "Do bee responses depend on whether strips are connected to nesting habitat and other semi-natural patches within the foraging ranges of particular bee species, rather than on strip area alone?",
+        "integration": "Combines landscape connectivity and nesting resources with species-specific foraging biology; it can identify where spatial targeting of payments is more effective than uniform field-edge planting.",
+        "feasibility": "Map habitat and nesting proxies around surveyed farms, identify focal bee taxa, and relate multi-year occupancy or abundance changes to connectivity at several biologically informed spatial scales."
+      },
+      {
+        "question": "Are pesticide exposure and nutritional conditions jointly reducing bee reproduction or survival, so that flower availability in strips is insufficient to produce population growth?",
+        "integration": "Links strip floral resources and farm management to bee physiology and sublethal pesticide effects, while considering whether management changes require compensation or altered subsidy conditions.",
+        "feasibility": "Pair pesticide-use records and targeted residue sampling with floral-resource measurements and a focused set of biomarkers or reproduction/survival indicators for common focal species."
+      },
+      {
+        "question": "Which strip designs and maintenance schedules provide season-long forage and nesting opportunities while remaining acceptable to farmers given costs, labour, crop-yield risk and payments?",
+        "integration": "Connects ecological resource requirements and bee phenology with establishment and maintenance costs, yield effects and incentive design.",
+        "feasibility": "Compare existing seed mixes and mowing or re-sowing practices, measure flowering continuity and nesting features, and use farm budget data plus stated-preference or contract-choice analysis."
+      },
+      {
+        "question": "Would outcome-oriented or spatially targeted subsidies increase adoption of the strip locations and management practices most likely to benefit bees, compared with payments based mainly on planted area?",
+        "integration": "Uses ecological and biological indicators to define credible outcomes or targeting rules, then assesses farmer participation, payment levels and administrative feasibility.",
+        "feasibility": "Model alternative payment rules using observed farm costs and landscape data; test farmer willingness and monitoring burden through a small pilot before programme-wide implementation."
+      },
+      {
+        "question": "Are apparent null effects masking gains in some bee groups and losses in others, and do those differences correspond to landscape setting, pesticide exposure and farm-management incentives?",
+        "integration": "Combines improved species identification and trait-based biology with ecological heterogeneity and economically driven management variation.",
+        "feasibility": "Reanalyse repeated survey data by species or functional group, supplement identification where needed, and link responses to farm-level management and landscape covariates."
+      }
+    ],
+    "key_evidence_needed": [
+      "Repeated, species-resolved bee data across more than two years, including measures related to reproduction or persistence where feasible.",
+      "Spatial data on floral resources, nesting-resource proxies and connectivity to semi-natural habitat at multiple foraging-relevant distances.",
+      "Farm-level pesticide applications or credible exposure proxies, plus targeted residue and sublethal-effect measurements.",
+      "Records of strip seed mix, planting, mowing, reseeding and other maintenance actions.",
+      "Farm-specific establishment, maintenance and opportunity costs, crop-yield effects, subsidy payments and farmer preferences for alternative contracts."
+    ],
+    "important_dependencies": [
+      "Species and trait identification is needed before selecting meaningful spatial scales and focal taxa.",
+      "Access to confidential pesticide and economic records requires farmer consent and data-governance arrangements.",
+      "Any outcome-based payment pilot depends on selecting indicators that are ecologically meaningful, sufficiently reliable and not excessively costly to monitor.",
+      "Causal conclusions require comparison across landscape contexts and management regimes, and ideally matched comparison farms or staggered changes in implementation."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Morning, everyone. I\u2019m hoping today we can get a bit clearer on whether this is a strip problem or a landscape problem, or more likely, where the two overlap."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "I'd add that a strip can look established, but the costly bits vary a lot from farm to farm. Timely upkeep, spray buffers, where it sits relative to productive crop. I'm seeing similar enrolled areas but very different maintenance entries in the records. I need to check whether that's real or just reporting. Aisha, which connectivity measures could we actually use in a payment scheme without surveying every field from scratch?"
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "I\u2019d probably use a small set of map-based indicators, not a bespoke model. Things like the amount of semi-natural habitat and hedgerow connectivity within species-relevant distances, and whether the strip actually links to a patch. But broad maps will miss banks and little fallow corners, so I think we\u2019d still need a quick field check on a subset. And Eleanor, are the more connected edges usually the ones farmers can\u2019t afford to take out of production?"
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "Mm, species-relevant distances, yes."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "That\u2019s exactly what I need to find out. I don\u2019t think it\u2019ll be uniform. On larger, more productive fields, the connected edge may have a pretty visible crop-return cost, but I need to link the strip locations to the crop and field-size data before I can say that. If we can identify those cases, a flat per-hectare payment may be selecting the cheaper edges instead of the most useful ones."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Right, that could matter."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "And the biological payoff could differ even along the same edge. Aisha, do those map layers tell us anything about actual nesting, um, substrate, or just nearby green cover? Because a strip can look well connected on paper and still be useless to, say, the small ground-nesting solitary bees that seem to be staying scarce."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Mostly nearby green cover, honestly. The maps can give us hedges and larger semi-natural patches, but not exposed soil, old banks, tussock structure, or those tiny neglected corners. So for nesting we'd need field checks, or rather at least a stratified subset of farms."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "That\u2019s probably essential. I\u2019m a little wary of treating nesting as a generic covariate. Bare ground helps some taxa and harms others, so could the field check- could it record a few discrete features rather than just score \"nesting quality\"? And I need to see whether the stored material is good enough to make those small solitary-bee identifications reliable."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Discrete features makes more sense. We could record exposed ground, south-facing banks, tussocky grass, hedge bases, maybe cavities in dead wood, separately, and then not pretend one score fits every bee. If your IDs give us the main nesting guilds, we can stratify the visits around those rather than trying to inspect all- rather than trying to inspect all 24 the same way."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "That helps. One thing I don't want us to lose is that June and August are only two snapshots. If the strips are filling a mid-season gap, or if recruitment is failing over winter, those counts may barely, barely show it. The 2025 batches give me a tentative bumblebee-versus-small-solitary split, but I need to check the IDs and the sampling consistency before we build around that."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "And with only the 24 farms, I\u2019d be careful about reading a June to August average as the strip effect anyway. Those two dense-looking strips with flat June counts, compared with that less impressive 2025 site, might be a phenology or species-composition, um, difference. Once you\u2019ve checked the IDs, could we see whether those contrasts are actually bumblebees versus solitary bees?"
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "I think so, as long as the specimens are retained well enough. I can audit the 2025 material against the field sheets before we call those patterns biological. But I'd also want to compare within season rather than average it. If the bumblebees are using late flowers and the solitary taxa- if they need nesting access or earlier forage, the same strip could look both successful and unsuccessful."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Mm, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "That makes me think the redesign can't just pay for a flowered hectare if different taxa need different things at different points. Tom\u00e1s, once you've got the ID split, are there a couple of indicators, like early forage or a specific nesting feature, that actually mean something but are simple enough for a farmer or adviser to record without turning this into a huge compliance exercise?"
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "Probably, but I'd keep it really taxon-specific. An adviser could note early-flowering continuity, patches of exposed soil or a south-facing bank, and whether spraying is kept away from the strip. The trouble is, a cavity-nester and a ground-nester shouldn't get the same- shouldn't be using the same checklist. We may end up with two or three focal guilds, if the specimens support it."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Two or three focal guilds would also stop us forcing one landscape scale onto everything. Since these are only 24 arable farms and the strips went in spring 2023, I\u2019d use the next visits to contrast, say, isolated versus connected sites within each guild, rather than- rather than chasing a single overall bee response."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "And that gives us something we could potentially contract around without pretending every farm needs the same strip. The question for me is whether connected sites also systematically cost more in foregone crop or awkward machinery turns. If they do, we need to know whether a connectivity supplement would actually move, move placement, rather than just pay farms already able to provide it."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "Hm, placement versus uptake."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Exactly. From the landscape side, I\u2019d want to separate farms where a connected edge was genuinely available from ones where the whole surrounding matrix is, I mean, pretty isolated. Otherwise, a supplement could look ineffective just because there was nowhere useful to put the strip."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "That availability constraint matters for the payment analysis too. We should probably distinguish a farm that chooses a cheap isolated edge from one that just has no connected option. Otherwise we'll call it poor implementation when it's really a landscape- when it's really a landscape feasibility problem. Do you think the maps can flag that before we go out, even roughly?"
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Roughly, yes. I can map semi-natural cover, hedge networks, strip-to-patch distance, and identify farms with no plausible connected edge at a couple of candidate scales; I\u2019d want Tom\u00e1s\u2019s trait groups before fixing those scales. But I wouldn\u2019t use that as the final answer on nesting features\u2014the maps are a triage tool, then we field-check the contrasting cases."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "That triage would be really useful. Then I can compare payment and maintenance patterns among farms with a plausible connected option, instead of treating all 24 as if they faced the same choice. I\u2019ll need to check what location detail and permissions we actually have in the payment files, though. At the moment, I\u2019m not sure the confidential records are clean enough to compare at the edge level."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Oh, that\u2019s a constraint."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "And separately, Eleanor, what could farmers realistically tell us about spray timing and products near the strips? I\u2019m not saying residues are the explanation from these counts, far from it. But a flower-rich edge can still be an exposure route, and the sublethal, sublethal stuff won\u2019t show up as dead bees in a survey."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "I don't know yet, honestly. The management records may have broad declarations, but timing and products near a particular strip are unlikely to be reliable enough on their own. Farmer interviews or spray diaries would be much better, and I need to check whether there's budget and consent for that. We could at least ask about the decision points, whether they can leave a buffer and what makes that difficult in a given- in a particular season."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "I\u2019d rather not make residue sampling the first ask if it makes people defensive. A small voluntary diary, diary with product class, timing, and whether the strip or its flowering period was adjacent to an application, might at least tell us whether targeted pollen or nectar samples are worth doing on a few contrasting farms. Does that seem feasible, or is even that too much reporting?"
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "I think a voluntary, very short diary is probably workable if we frame it as learning about constraints, not checking compliance. But I'd want to test that with a few farmers first. During spraying windows, even a simple extra form may be one more thing that drops off. If we do it, linking it to the mapped contrasting sites would make the burden a bit more defensible."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "I think that\u2019s the sensible overlap. Map the contrasts first, then only ask for diaries and nesting checks where they can actually help distinguish explanations. I\u2019m still waiting on the trait split before I settle the buffers, but I can start with the land-cover\u2014 I can start with the land-cover triage now."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "Yeah, selective sampling then."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "I\u2019ll check whether we can get the edge-level payment and crop-return linkage cleared, and whether there\u2019s even a small budget for piloting the diary with a few of those contrasting farms. If that access falls through, we should be honest that we can describe implementation differences, but not really identify the incentive, the incentive mechanism."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Yep, that sounds right."
+    },
+    {
+      "speaker": "Dr. Tom\u00e1s Velasco",
+      "text": "Okay, I think we should let people go a few minutes early. I\u2019ll check the 2025 material, and we can pick this up once the map triage and, um, access questions are a bit clearer. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Eleanor Price",
+      "text": "Thanks, both\u2014speak soon."
+    },
+    {
+      "speaker": "Dr. Aisha Rahman",
+      "text": "Cheers, bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      11,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27,
+      28,
+      31
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The main research question is strongly implied across turns 1-31 but is never explicitly agreed or stated in the full benchmark wording: why abundance and species richness failed to recover after planting, and how both the intervention and incentive scheme should be redesigned. A brief explicit framing near turn 1 or 17 would make the seed more directly recoverable.",
+      "The meeting is labeled a rushed weekly quick check-in, but many substantive turns are polished, densely structured mini-paragraphs that each introduce evidence, qualify it, and land on a clear next step (especially turns 2, 5, 11, 17, 21, 23, and 31). This makes it read more like carefully authored dialogue than an informal rushed check-in, limiting naturalness despite the inserted hesitations.",
+      "Disfluencies are often embedded as repetitions or dashes within otherwise grammatically finished, highly coherent turns (for example turns 9-10, 11, 13, 16-18, 21, 25-29), which can feel mechanically added rather than arising from spontaneous conversation.",
+      "The required unresolved mechanism set is largely present, but the transcript gives little direct attention to records of seed mix, planting, mowing, reseeding, or other maintenance schedules as ecological follow-up evidence. Turn 2 mentions maintenance entries and turn 15 raises early forage, but the strip-design and maintenance-schedule question is less developed than connectivity, taxonomy, payment placement, and pesticide diaries.",
+      "Turn 33 provides a tidy end-of-meeting recap assigning each person's next action, which is somewhat at odds with the requested style instruction that nobody summarizes and that the conversation should stop where it stops."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.19,
+    "turn_moves": {
+      "proposal": 6,
+      "question": 5,
+      "answer": 6,
+      "agreement": 6,
+      "concern": 1,
+      "request": 2,
+      "commitment": 5,
+      "backchannel": 4
+    },
+    "volunteer_turns": [
+      13,
+      22,
+      29,
+      31,
+      33
+    ],
+    "unsure_turns": [
+      2,
+      5,
+      9,
+      11,
+      13,
+      23,
+      26
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.93,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "Naturalness is substantially weakened by the transcript's polished, sequential construction. Most substantive turns cleanly introduce a disciplinary concern, explain its implication, and hand off an actionable next step; see especially turns 4-8, 10-17, and 23-29. This reads more like a deliberately composed interdisciplinary synthesis than a rushed weekly check-in.",
+        "The required quick_checkin style is only partly met. At 34 turns with a 52-word median and a highly developed full-cycle discussion, it is much more extended and deliberative than 'short status updates and quick questions.' Turns 11-17 and 23-31 are particularly dense for the stated format.",
+        "The meeting has a tidy written ending and explicit near-recap despite the style requirement that nobody summarizes and that the conversation should stop where it stops. Turn 29 formulates the shared question, turn 31 recaps Eleanor's checks, and turn 32 closes with 'we've got what we needed today.'",
+        "The seed calls for the economist to note possible yield trade-offs and for the group to leave relative mechanism importance unresolved. Opportunity costs, field size, and crops are discussed (turns 10, 23, 25, 28), but yield trade-offs are not directly stated, and the conversation leans toward a settled shared framing in turn 29 rather than explicitly acknowledging that the mechanisms remain unresolved.",
+        "Some required or ground-truth-relevant evidence is thinner than it could be: no targeted residue sampling, reproduction/survival biomarkers, seed-mix detail, farm budget/yield data, comparison farms, or staggered implementation are proposed. This does not prevent recovery of the main question, but it limits coverage of the full follow-up evidence and causal-design dependencies."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 35,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.19,
+      "approved": true,
+      "issues": [
+        "The main research question is strongly implied across turns 1-31 but is never explicitly agreed or stated in the full benchmark wording: why abundance and species richness failed to recover after planting, and how both the intervention and incentive scheme should be redesigned. A brief explicit framing near turn 1 or 17 would make the seed more directly recoverable.",
+        "The meeting is labeled a rushed weekly quick check-in, but many substantive turns are polished, densely structured mini-paragraphs that each introduce evidence, qualify it, and land on a clear next step (especially turns 2, 5, 11, 17, 21, 23, and 31). This makes it read more like carefully authored dialogue than an informal rushed check-in, limiting naturalness despite the inserted hesitations.",
+        "Disfluencies are often embedded as repetitions or dashes within otherwise grammatically finished, highly coherent turns (for example turns 9-10, 11, 13, 16-18, 21, 25-29), which can feel mechanically added rather than arising from spontaneous conversation.",
+        "The required unresolved mechanism set is largely present, but the transcript gives little direct attention to records of seed mix, planting, mowing, reseeding, or other maintenance schedules as ecological follow-up evidence. Turn 2 mentions maintenance entries and turn 15 raises early forage, but the strip-design and maintenance-schedule question is less developed than connectivity, taxonomy, payment placement, and pesticide diaries.",
+        "Turn 33 provides a tidy end-of-meeting recap assigning each person's next action, which is somewhat at odds with the requested style instruction that nobody summarizes and that the conversation should stop where it stops."
+      ]
+    }
+  ]
+}

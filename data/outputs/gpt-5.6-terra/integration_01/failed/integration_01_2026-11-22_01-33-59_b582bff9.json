@@ -1,0 +1,433 @@
+{
+  "transcript_id": "b582bff9",
+  "generated_at": "2026-11-22T01:33:59.582898",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with casual pre-meeting small talk followed by long, uninterrupted presentation blocks and brief Q&A exchanges. Overlap and interruptions are light; participants generally wait for a speaker to finish, though there are occasional quick acknowledgments, repeated starts, and audio-related repairs. The tone is collegial, informal, and supportive, with frequent \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d \u201cso,\u201d and appreciative comments. Speakers hedge often through phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cit seems,\u201d and \u201cI\u2019m not sure,\u201d especially when speculating. Questions are usually prefaced politely (\u201cI have a quick question,\u201d \u201ccan I ask a question\u201d), then unfold in exploratory, multi-part form. Challenges are indirect and framed as curiosity or extension rather than disagreement; people build on prior remarks by referencing an earlier point, offering a related observation, or suggesting future discussion. Speech includes false starts, repetitions, self-corrections, fragmented phrasing, and occasional technical monologues that alternate between confident explanation and tentative interpretation.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Arun Patel",
+      "discipline": "computer science",
+      "functional_role": "principal investigator",
+      "background": "A computer scientist with 12 years of experience in educational AI, including development and evaluation of adaptive practice systems for school mathematics. He leads a university learning-technologies lab and works with natural-language model evaluation, retrieval-grounded hint generation, latency testing, error analysis, interaction telemetry, and privacy-preserving data architectures. He has led several district-facing pilots and is accustomed to translating model performance metrics into implementation plans.",
+      "distinct_perspective": "Frames the pilot as a socio-technical system whose reliability must be established through observable system behavior: whether hints are mathematically correct, appropriately targeted, fast enough for classroom use, and auditable through logs. He prioritizes clear success criteria, instrumented interaction data, access controls, and a teacher dashboard that makes model activity visible. He tends to treat completion, time on task, and dashboard uptake as actionable operational signals, while needing colleagues to clarify when such signals may obscure learning or student well-being.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Elena Morales",
+      "discipline": "education",
+      "functional_role": "research engineer",
+      "background": "An education researcher and former grade 7 mathematics teacher with 9 years of experience studying classroom implementation of digital learning tools. Her work combines classroom observation, teacher interviews, lesson-artifact analysis, formative-assessment design, and mixed-methods pilot studies. She has supported schools in aligning technology use with curriculum goals and in designing teacher-facing routines that are realistic within a standard class period.",
+      "distinct_perspective": "Treats the tutor as part of an instructional ecology rather than as a stand-alone intervention. She focuses on whether students' reasoning about proportional relationships becomes visible to teachers, whether hints preserve productive struggle, and whether the tool fits lesson flow without adding unsustainable workload. She argues that teachers must retain authority over when and how the tutor is used, what kinds of help students may request, and how dashboard information informs formative instruction rather than merely monitoring activity.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Mei Chen",
+      "discipline": "psychology",
+      "functional_role": "principal investigator",
+      "background": "A developmental and educational psychologist with 11 years of experience researching math anxiety, academic motivation, self-efficacy, and persistence in early adolescents. She conducts longitudinal school-based studies using validated student self-report measures, behavioral process data, brief interviews, and experimental comparisons of feedback and help-seeking conditions. Her recent work examines how automated feedback affects students who enter mathematics instruction with different levels of anxiety.",
+      "distinct_perspective": "Approaches tutor behavior as a motivational environment: the timing, wording, and escalation of help can shape threat appraisal, perceived competence, help-seeking, and willingness to persist. She is attentive to students for whom quick answer-giving may reduce agency or whose repeated errors may become emotionally salient if feedback implies failure. She presses the group to distinguish efficient completion from healthy, durable engagement and to evaluate whether the system's hint policy protects students' sense that mistakes are informative rather than diagnostic of inability.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 3,
+  "task_id": "integration_01",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Give a meeting where one discipline dominates airtime and a quieter participant raises a substantive point that should change the plan. The evaluated AI must identify disciplines and summarize perspectives by substance, preserving the quieter contribution.",
+  "seed_spec": {
+    "task_id": "integration_01",
+    "benchmark_category": "Integration/Perspectives",
+    "benchmark_task": "Give a meeting where one discipline dominates airtime and a quieter participant raises a substantive point that should change the plan. The evaluated AI must identify disciplines and summarize perspectives by substance, preserving the quieter contribution.",
+    "explicit_instruction": "Run a planning meeting in which Dr. Patel from computer science receives most of the airtime and presents a detailed plan centered on model accuracy, the correctness and latency of generated hints, interaction logging, privacy controls, and a teacher dashboard. He proposes evaluating success mainly through benchmarked hint accuracy, student completion rates, time to solve problems, and dashboard use. Dr. Morales from education contributes shorter comments that support measuring formative assessment and teacher workload; she says the tutor should not immediately supply solutions and that teachers need authority to set classroom use norms. Dr. Chen from psychology speaks least. Near the end, she raises a substantive concern: if the tutor escalates hints quickly or frames repeated errors as failure, it may increase math anxiety and reduce willingness to persist, especially for students already anxious about mathematics. She proposes that the pilot explicitly measure anxiety and motivation before and after the unit, log hint-escalation patterns, and test a delayed-hint/encouragement condition rather than treating faster completion as an unqualified benefit. The group must acknowledge that this point changes the evaluation plan: completion time cannot stand alone as a success metric, and the tutor design needs a safeguard against rapid answer-giving and negatively framed feedback. Decide to include student anxiety/motivation measures and a delayed-hint, neutral-encouragement condition in the pilot, while leaving the exact validated survey instrument and thresholds for later selection. Do not describe the benchmark task or tell participants to identify dominant versus quiet speakers.",
+    "ground_truth": {
+      "disciplines_and_perspectives": [
+        {
+          "discipline": "computer science",
+          "participant": "Dr. Arun Patel",
+          "perspective": "Prioritizes technical feasibility and performance: accurate hints, acceptable latency on school networks, privacy-conscious interaction logging, and usable teacher dashboards. Initially favors evaluation through hint accuracy, completion, solution time, and dashboard use."
+        },
+        {
+          "discipline": "education",
+          "participant": "Dr. Elena Morales",
+          "perspective": "Prioritizes formative assessment, productive struggle, teacher workload, and classroom norms. Argues that the tutor should not immediately provide solutions and that teachers must retain control over how the tool is used in class."
+        },
+        {
+          "discipline": "psychology",
+          "participant": "Dr. Mei Chen",
+          "perspective": "Prioritizes math anxiety, motivation, persistence, and students' responses to feedback. Warns that rapid hint escalation and failure-framed feedback can harm anxious students and make speed-based outcomes misleading."
+        }
+      ],
+      "airtime_dynamic": "Computer science dominates the meeting through Dr. Patel. Psychology is the quietest contribution, but Dr. Chen's point is substantive and materially changes the pilot plan.",
+      "required_plan_changes": [
+        {
+          "change": "Do not treat faster completion or shorter solution time as a standalone indicator of success.",
+          "reason": "It may reflect answer-giving or reduced persistence rather than healthy learning."
+        },
+        {
+          "change": "Add pre/post measures of student math anxiety and motivation.",
+          "reason": "To detect whether the tutor's feedback and hint behavior affect students' emotional and motivational outcomes."
+        },
+        {
+          "change": "Log and analyze hint-escalation patterns.",
+          "reason": "To determine whether students are being moved too quickly toward answers."
+        },
+        {
+          "change": "Include a delayed-hint, neutral-encouragement condition.",
+          "reason": "To test a design intended to preserve productive struggle and avoid negatively framed feedback."
+        },
+        {
+          "change": "Preserve teacher authority over classroom norms and avoid immediate solution delivery.",
+          "reason": "To support formative assessment and manage teacher workload."
+        }
+      ],
+      "unresolved_items": [
+        "The team has not selected the specific validated anxiety/motivation survey instrument.",
+        "The team has not set numerical thresholds for acceptable anxiety effects, hint timing, or success criteria."
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not satisfied. Dr. Patel dominates airtime and Dr. Chen speaks least (turns 17, 19, and 21), and Chen raises concerns about rapid escalation and negatively evaluative feedback, with a brief retry window and neutral help option discussed (turns 17-24). However, the dialogue never explicitly adds pre/post anxiety and motivation measures, never decides on a delayed-hint/neutral-encouragement pilot condition as an evaluation condition, never explicitly states that completion time cannot stand alone as a success metric, and does not leave survey instrument and numerical thresholds for later selection. The meeting ends without acknowledging Chen's point as a material change to the evaluation plan.",
+  "ground_truth": {
+    "disciplines_and_perspectives": [
+      {
+        "discipline": "computer science",
+        "participant": "Dr. Arun Patel",
+        "perspective": "Prioritizes technical feasibility and performance: accurate hints, acceptable latency on school networks, privacy-conscious interaction logging, and usable teacher dashboards. Initially favors evaluation through hint accuracy, completion, solution time, and dashboard use."
+      },
+      {
+        "discipline": "education",
+        "participant": "Dr. Elena Morales",
+        "perspective": "Prioritizes formative assessment, productive struggle, teacher workload, and classroom norms. Argues that the tutor should not immediately provide solutions and that teachers must retain control over how the tool is used in class."
+      },
+      {
+        "discipline": "psychology",
+        "participant": "Dr. Mei Chen",
+        "perspective": "Prioritizes math anxiety, motivation, persistence, and students' responses to feedback. Warns that rapid hint escalation and failure-framed feedback can harm anxious students and make speed-based outcomes misleading."
+      }
+    ],
+    "airtime_dynamic": "Computer science dominates the meeting through Dr. Patel. Psychology is the quietest contribution, but Dr. Chen's point is substantive and materially changes the pilot plan.",
+    "required_plan_changes": [
+      {
+        "change": "Do not treat faster completion or shorter solution time as a standalone indicator of success.",
+        "reason": "It may reflect answer-giving or reduced persistence rather than healthy learning."
+      },
+      {
+        "change": "Add pre/post measures of student math anxiety and motivation.",
+        "reason": "To detect whether the tutor's feedback and hint behavior affect students' emotional and motivational outcomes."
+      },
+      {
+        "change": "Log and analyze hint-escalation patterns.",
+        "reason": "To determine whether students are being moved too quickly toward answers."
+      },
+      {
+        "change": "Include a delayed-hint, neutral-encouragement condition.",
+        "reason": "To test a design intended to preserve productive struggle and avoid negatively framed feedback."
+      },
+      {
+        "change": "Preserve teacher authority over classroom norms and avoid immediate solution delivery.",
+        "reason": "To support formative assessment and manage teacher workload."
+      }
+    ],
+    "unresolved_items": [
+      "The team has not selected the specific validated anxiety/motivation survey instrument.",
+      "The team has not set numerical thresholds for acceptable anxiety effects, hint timing, or success criteria."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Hi, both. I'm glad we found this slot. April 18 is starting to feel rather close. I was looking at the draft application this morning, and maybe we can use today to get concrete on what the tutor should do in the proportional-reasoning unit, and what evidence would, um, make the pilot worth continuing."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I'm still clearing April deadlines from my calendar, so I appreciate the urgency. For me, the pilot is worth continuing only if we can see students' proportional reasoning, not just that they used hints, and if teachers can act on that during a normal, normal period."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "The logs can show a student requested a hint and then finished, but that could just mean we gave away the setup too quickly. In our internal set, a few hints were mathematically right, but they jumped from spotting the ratio to almost the full equation. Elena, what would you want captured? Maybe a brief solve-before-hint attempt, or- sorry, a follow-up item without hints, to make the reasoning visible?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I'd want both, but keep it light. One required first attempt, even if it's incomplete, then hints that start with a question or a representation rather than the equation. And a later no-hint transfer item would tell us more, more than completion does."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That gives us a useful constraint for the hint policy. The first prompt should surface their setup, or a table or double-number line, not generate it for them. For the transfer item, would you want it structurally similar but in a different context, or actually- would you want a different representation? I\u2019m thinking we can log the first attempt and the hint path, but the no-hint response needs to be interpretable to the teacher, not just a score."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I'd use a different representation, say move from a table to a double-number line, but keep the same underlying multiplicative relationship. And the teacher view should show the student's first setup next to that no-hint response, not just a correctness flag."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That makes sense. We can make it a small teacher-facing sequence, the first attempt, the representation-focused hint path, then the no-hint transfer response. Instead of collapsing all that into completion. Mei, I\u2019m curious, for seventh graders, is a required first attempt likely to feel like a useful pause, or could it make students who are already stuck disengage?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019d be interested in what Mei has seen. But I think it depends on the escape route. If the first attempt can be a sketch, a table, or a \u201cnot sure\u201d setup, it feels less like a gatekeeping quiz."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Treat \u201cnot sure\u201d as a valid first artifact, not a failure state. For a ten-week pilot, we could have the first-attempt field accept a table, double-number line, sketch, or short text, then have the system choose a question-based hint from that rather than requiring a typed equation."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "As long as the choice doesn\u2019t turn into a big open-ended artifact task. Across six grade 7 classrooms, teachers need a quick routine\u2014maybe one simple box to show a table, line, sketch, or \u201cnot sure\u201d\u2014or, sorry, the main thing is it\u2019ll eat the lesson."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "One compact response area, with those four options as the visible entry points. For the 10-week window, I think we can keep the routine stable enough that it becomes familiar. First artifact, then a representation-level hint, then occasional transfer, not a new workflow on every problem. I\u2019ll need to check whether the interface can capture a quick sketch cleanly on the district devices, though..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That\u2019s worth checking, because a clunky sketch tool will slow everyone down. If it isn\u2019t reliable, I\u2019d rather use the table and double-number-line templates than ask teachers to troubleshoot drawing on Chromebooks."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "I\u2019ll treat sketching as optional while I check the devices, and make the table and double-number-line templates the dependable path. The other thing I need to verify is whether those structured first attempts give enough signal for the hint selector. Though honestly, a selected template plus a couple of entries may be more usable than a messy freehand sketch anyway."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Mm, and I\u2019d rather the selector be a little less tailored than infer confidence from thin evidence. Arun, can the logs keep the chosen template, hint level, and revised, revised attempt together in that teacher sequence?"
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "We can log those as one ordered record, the selected template and entries, the first hint level and any later hints, then the revised attempt, all linked to the same item. I\u2019d avoid turning that into an inferred confidence score, though. The dashboard can just show the evidence, with timestamps, and let the teacher see whether the student changed the representation or only only filled in an answer."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Mm, that\u2019s the useful part."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That ordered record is really helpful for us because we can look at the timing of hints, not just the number. I\u2019d want to know if a student makes two or three attempts and then gets moved rapidly toward an answer, especially students who come in already anxious about math. Could the log preserve the wording or type of each prompt too?"
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "We can preserve the actual prompt text, its type, whether it's a question, a representation cue, or a more explicit scaffold, and the time between attempts. I'd also log whether the student dismissed it or acted after it, though that still won't tell us why. Mei, are there particular wording patterns you'd want us to flag before we\u2014 before we deploy?"
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I'd flag anything that sounds evaluative or final, like \"you should know this,\" \"incorrect again,\" even praise that implies speed equals ability. I'd rather the early prompts, prompts name the representation and invite another try, like \"Try showing both quantities on the double-number line.\""
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "We can make those wording constraints part of the prompt library, not just guidance for reviewers. On the timing, I\u2019m wondering if the first representation cue should appear right after the first artifact, or if we should give them, say, a short retry window before we surface it. I don\u2019t know, the line between a useful pause and letting somebody sit stuck\u2014 I don\u2019t know where that is."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I\u2019d lean toward a brief retry window, but make a visible, neutral option to ask for the representation cue sooner. For anxious students, having to wait when they\u2019re stuck can feel punitive. The key is that escalation shouldn\u2019t jump too quickly from the cue to the answer, because then..."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That seems implementable. After the first artifact, we give them a brief independent retry window, but the \u201cshow me a representation\u201d option is available immediately. Then we can cap the escalation so the next step is another question or a partially completed table or line, not an equation. I\u2019ll need to test the exact timing on the devices and see whether it creates awkward dead time in class."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "The immediate option matters. Could teachers decide whether that retry window is on at all, or how long it is? I\u2019m thinking a fixed delay may work differently in a 45-minute lesson than when they\u2019re using it in a small group."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "I think so, but I\u2019d make it a teacher-set session control, not something the model adjusts per student. Maybe it\u2019s off, or brief, like 15 or 20 seconds, or, um, a small-group setting, with the immediate help button always there. Otherwise the logs get hard to compare, and we risk the system quietly rationing help."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Session-level control feels right. I\u2019d want teachers to choose it as part of the lesson plan, not fiddle with it midstream, and we should ask them whether 15 or 20 seconds actually, actually fits their pacing."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "I\u2019ll put that in the classroom procedure as a pre-session choice, not a live control. For the application, I think we should say we\u2019ll collect a very short teacher check after early use about whether the chosen setting fit the period, because dashboard uptake or completion alone could make a bad pacing choice look fine."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "And make that check genuinely short, maybe one or two questions, so it doesn't become after-school paperwork. I'd also ask whether the teacher could identify a student need from that first-attempt, I mean, transfer sequence during the period."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That\u2019s a better teacher-use outcome than just a generic dashboard-use count. We can make the two-item check ask first whether they could identify a specific need from the sequence, and second whether it changed what they did in the period or what they planned next. I think that gives us something interpretable without much burden. I\u2019ll still need to confirm the dashboard refresh holds up on the district network before we promise in-period use, because if it doesn\u2019t..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "And if the refresh is slow, we shouldn\u2019t ask teachers to make live decisions from it. Could the check also ask whether they had time to look at it during the period, not just whether it was- whether it was useful?"
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "That belongs in the check. We can ask whether they had a realistic chance to look at it during the period, separately from whether the sequence helped them identify a need. If the refresh is slow or there\u2019s just no instructional breathing room, a low use count means something very different. I\u2019ll make the in-period dashboard claim conditional on the network check."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That separates lack of time from lack of value. That's- that's exactly what we need to know."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "I\u2019ll add that as a separate item. I think we have enough now to revise the application language. That includes the teacher sequence and transfer evidence, the neutral staged hints, and the network and device check as a condition for live dashboard use. I\u2019ll circulate the edited section before April 18. Mei, I\u2019ll mark the student-facing wording review as a place where we still need your read."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "One small thing for the application. Make sure it says teachers choose the session setting and the help norms, not the tutor. That wording- it\u2019s small, but it matters. I\u2019ll look for the revision when you circulate it."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "I\u2019ll make that explicit. Teachers select the session-level retry setting and establish the help routine, and the tutor only responds within those boundaries. I\u2019ll send the revision with Mei\u2019s wording section clearly marked, and we can resolve any last detail asynchronously given the hard stop."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That works. One small thing, make the teacher check optional on days they just can't look at the dashboard, so we don't turn a normal rushed period into missing data that feels like- like noncompliance."
+    },
+    {
+      "speaker": "Dr. Arun Patel",
+      "text": "Absolutely, it\u2019s optional, and we\u2019ll treat it that way in the application. I know someone has to run, so let\u2019s\u2014 anyway, let\u2019s stop there. Thanks, both. I\u2019ll circulate the revision shortly."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Thanks, Arun. Bye, both."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Thanks, both\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      7,
+      11,
+      15,
+      17,
+      19,
+      21,
+      22,
+      24,
+      32,
+      34
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "The central psychology plan change is not recoverable. Dr. Chen raises concern about anxious students, prompt wording, and rapid movement toward an answer in turns 17-21, but she never proposes pre/post anxiety or motivation measures, a delayed-hint/neutral-encouragement experimental condition, or later selection of a validated survey instrument and thresholds.",
+      "The meeting never explicitly changes the evaluation framework so that solution time/faster completion cannot stand alone as a success metric. Patel discusses completion and timing indirectly, but there is no clear acknowledgement that speed may reflect answer-giving or reduced persistence rather than success.",
+      "The required delayed-hint, neutral-encouragement condition is absent. Turns 20-24 establish a configurable brief retry window and immediate help option, but that is a product/session control rather than a pilot condition to test against another design.",
+      "The seed requires Patel's detailed plan to center on model accuracy, correctness and latency of generated hints, interaction logging, privacy controls, and dashboard use, with initial evaluation including benchmarked hint accuracy, completion, solve time, and dashboard use. The transcript contains logging, device/network latency concerns, and dashboard discussion, but lacks privacy controls, benchmarked hint-accuracy evaluation, and a substantive initial completion/time-to-solve success plan.",
+      "Psychology is quietest by turn count, but Chen raises her concern around the middle-to-late portion of the meeting (17-21), not near the end, and the group does not explicitly acknowledge that her point materially changes the pilot plan.",
+      "Education substantially rivals computer science in airtime (16 turns versus Patel's 18), which weakens the requested dynamic of computer science clearly dominating airtime.",
+      "The transcript does not convincingly fit the specified screen-share working-session style: speakers rarely refer to visible document elements, scrolling, columns, figures, or concrete onscreen edits. It reads more like a polished agenda discussion.",
+      "Several turns are highly polished, complete planning statements that resolve the immediately preceding concern efficiently, especially Patel's turns 9, 11, 15, 22, 24, 26, 28, 30, 32, 34, and 36. This creates a written-dialogue feel despite some fillers and self-corrections.",
+      "The opening has only minimal small talk: turns 1-2 mention April deadlines, but it moves immediately into a fully formed agenda rather than a few natural pre-meeting exchanges."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.97,
+    "written_turns": [
+      9
+    ],
+    "exploration_share": 0.17,
+    "turn_moves": {
+      "proposal": 18,
+      "question": 3,
+      "idea": 2,
+      "concern": 1,
+      "request": 3,
+      "answer": 2,
+      "agreement": 2,
+      "commitment": 5,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      26,
+      28,
+      30,
+      32,
+      34,
+      36
+    ],
+    "unsure_turns": [
+      11,
+      13,
+      20,
+      22,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.35,
+      "approved": false,
+      "issues": [
+        "The core required psychology intervention is only partially present. Dr. Chen addresses non-stigmatizing help wording and measures confidence/stress in turns 16, 19, and 21, but she never clearly raises the seed's substantive concern that rapid hint escalation or failure-framed repeated errors may increase math anxiety and reduce persistence specifically for already anxious students.",
+        "The meeting never decides to include a delayed-hint, neutral-encouragement experimental condition. Turns 10-17 establish a comparison prompt and staged hint sequence, but this is a single tutor policy rather than an explicit condition to test against faster escalation.",
+        "The required evaluation change is not explicit: Dr. Patel notes in turn 11 that fastest completion was not always judged useful reasoning, but the group does not clearly state that completion time cannot stand alone as a success metric or revise the evaluation plan on that basis.",
+        "Pre/post anxiety and motivation measurement is not established. Turns 17-20 choose two within-unit check-ins, early and near the end, with confidence, persistence, and help-stress items; this is related but does not clearly provide before-and-after unit measures of math anxiety and motivation.",
+        "Hint escalation is discussed and some rung/choice logging is adopted in turns 11-17, but the plan does not explicitly commit to analyzing escalation patterns for evidence that students are being moved too quickly toward answers.",
+        "Computer science dominates by turns, but psychology is not unequivocally the quietest by airtime: Dr. Chen has only four turns, yet turn 16 is substantial; more importantly, her contribution is elicited repeatedly by Patel and is integrated gradually rather than arriving near the end as a distinct plan-changing intervention.",
+        "Naturalness is weakened by the highly orderly alternating turn structure and by many turns that formulate a complete proposal, qualification, and resolution. The dialogue often converts each concern directly into an assignment or settled design choice, especially turns 3-8, 9-17, and 20-30."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 38,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.97,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "The central psychology plan change is not recoverable. Dr. Chen raises concern about anxious students, prompt wording, and rapid movement toward an answer in turns 17-21, but she never proposes pre/post anxiety or motivation measures, a delayed-hint/neutral-encouragement experimental condition, or later selection of a validated survey instrument and thresholds.",
+        "The meeting never explicitly changes the evaluation framework so that solution time/faster completion cannot stand alone as a success metric. Patel discusses completion and timing indirectly, but there is no clear acknowledgement that speed may reflect answer-giving or reduced persistence rather than success.",
+        "The required delayed-hint, neutral-encouragement condition is absent. Turns 20-24 establish a configurable brief retry window and immediate help option, but that is a product/session control rather than a pilot condition to test against another design.",
+        "The seed requires Patel's detailed plan to center on model accuracy, correctness and latency of generated hints, interaction logging, privacy controls, and dashboard use, with initial evaluation including benchmarked hint accuracy, completion, solve time, and dashboard use. The transcript contains logging, device/network latency concerns, and dashboard discussion, but lacks privacy controls, benchmarked hint-accuracy evaluation, and a substantive initial completion/time-to-solve success plan.",
+        "Psychology is quietest by turn count, but Chen raises her concern around the middle-to-late portion of the meeting (17-21), not near the end, and the group does not explicitly acknowledge that her point materially changes the pilot plan.",
+        "Education substantially rivals computer science in airtime (16 turns versus Patel's 18), which weakens the requested dynamic of computer science clearly dominating airtime.",
+        "The transcript does not convincingly fit the specified screen-share working-session style: speakers rarely refer to visible document elements, scrolling, columns, figures, or concrete onscreen edits. It reads more like a polished agenda discussion.",
+        "Several turns are highly polished, complete planning statements that resolve the immediately preceding concern efficiently, especially Patel's turns 9, 11, 15, 22, 24, 26, 28, 30, 32, 34, and 36. This creates a written-dialogue feel despite some fillers and self-corrections.",
+        "The opening has only minimal small talk: turns 1-2 mention April deadlines, but it moves immediately into a fully formed agenda rather than a few natural pre-meeting exchanges."
+      ]
+    }
+  ]
+}

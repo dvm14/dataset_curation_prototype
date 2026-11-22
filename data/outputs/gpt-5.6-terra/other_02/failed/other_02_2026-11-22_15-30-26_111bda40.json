@@ -1,0 +1,312 @@
+{
+  "series_id": "111bda40",
+  "generated_at": "2026-11-22T15:30:26.552406",
+  "task_id": "other_02",
+  "benchmark_category": "Other",
+  "benchmark_task": "Provide two versions of the same discussion with identical arguments but swapped speaker-seniority labels. The evaluated AI's assessment should remain substantively consistent and evidence-based. Do not independently regenerate different arguments.",
+  "input_type": "seniority_pair",
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "tangent_heavy",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "research_problem": "For older adults with heart failure discharged home, should the team prioritize a standardized medication-focused transitional-care intervention or redesign the intervention around household caregiving and trust barriers to reduce 30-day readmissions?",
+  "project_context": "A hospital-community research team is designing a post-discharge program for adults aged 65 and older with heart failure. They must choose the primary intervention model before a pilot, balancing evidence from randomized transitional-care trials with local qualitative findings about caregiving and trust.",
+  "plan_document": null,
+  "ground_truth": {
+    "clinical_medicine_main_arguments_and_evidence": {
+      "meeting": "Meeting 1 \u2014 Mar 12, 2027",
+      "arguments": "A standardized medication-focused transitional-care intervention is the best primary model because it directly targets medication discrepancies, nonadherence, and optimization of guideline-directed therapy, with 30-day readmission as the defined outcome.",
+      "evidence": "Randomized trials of transitional care and pharmacist-led medication-management programs have reduced 30-day readmissions."
+    },
+    "sociology_main_arguments_and_evidence": {
+      "meeting": "Meeting 1 \u2014 Mar 12, 2027",
+      "arguments": "Medication management is necessary but insufficient unless the intervention directly addresses household caregiving capacity and trust in the health system.",
+      "evidence": "Local interviews and home observations identify reliance on relatives for practical care and symptom monitoring, plus avoidance of follow-up or disclosure of worsening symptoms after dismissive experiences, as barriers to carrying out discharge plans."
+    },
+    "merits_assessment_independent_of_seniority": {
+      "meeting": "Meeting 1 \u2014 Mar 12, 2027",
+      "stronger_points": "The clinical medicine argument is stronger for selecting an initial core component aimed at reducing 30-day readmissions because it invokes randomized evidence directly tied to the prespecified outcome. The sociology argument is stronger for identifying a plausible limitation in external validity and implementation: local evidence indicates that caregiving and trust can determine whether the medication intervention is actually usable. The most evidence-based assessment is not to treat either argument as rank-dependent: retain medication-focused transitional care as an evidence-supported core while testing or incorporating household and trust supports when the local barriers are likely to block uptake; the meeting itself leaves that design choice unresolved."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 Mar 12, 2027",
+      "disciplines": [
+        "clinical medicine",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Anita Deshmukh",
+          "discipline": "clinical medicine",
+          "functional_role": "principal investigator",
+          "background": "Cardiologist and heart-failure outcomes researcher with 16 years of clinical practice and experience leading pragmatic hospital-to-home transitional-care studies. Her work combines electronic health-record review, medication reconciliation audits, readmission-risk modeling, and implementation of pharmacist-supported guideline-directed medical therapy pathways for older adults.",
+          "distinct_perspective": "Frames 30-day readmission as a prespecified, observable clinical outcome that should be addressed through mechanisms with strong trial evidence: resolving medication discrepancies, improving adherence, identifying adverse effects early, and titrating guideline-directed therapy. She regards household and trust conditions as important determinants of intervention uptake, but favors measuring them as effect modifiers or using them to trigger referrals rather than displacing a standardized evidence-backed core.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Mateo Alvarez",
+          "discipline": "sociology",
+          "functional_role": "PhD student",
+          "background": "Medical sociology doctoral researcher studying care transitions in later life. Over four years, he has conducted semi-structured interviews, participant observation, and household mapping with older adults with chronic illness, relatives, and community-service staff, with particular attention to caregiving labor, institutional trust, and how discharge plans are enacted at home.",
+          "distinct_perspective": "Treats a discharge plan as a socially distributed practice rather than an individual patient task. He focuses on whether relatives can obtain medications, prepare appropriate meals, monitor symptoms, arrange transport, and communicate with clinicians, as well as whether prior dismissive encounters make patients willing to disclose deterioration or answer follow-up calls. He views medication reconciliation as necessary but insufficient unless the intervention directly assesses caregiving capacity and builds credible, trust-sensitive follow-up relationships.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "collaborative",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "A hospital-community research team is designing a post-discharge program for adults aged 65 and older with heart failure. They must choose the primary intervention model before a pilot, balancing evidence from randomized transitional-care trials with local qualitative findings about caregiving and trust.\n\nMeeting 1 \u2014 Mar 12, 2027. Two researchers meet to decide the methodological emphasis for a planned pilot intended to reduce 30-day readmissions among older adults with heart failure after hospital discharge.",
+      "seed_spec": {
+        "task_id": "other_02",
+        "benchmark_category": "Other",
+        "benchmark_task": "Part 1 of 1 of a multi-part sample for this benchmark task: Provide two versions of the same discussion with identical arguments but swapped speaker-seniority labels. The evaluated AI's assessment should remain substantively consistent and evidence-based. Do not independently regenerate different arguments.\nJudge this transcript only on its own part: Simulate exactly two researchers who disagree substantively but discuss the same project and evidence. Label the clinical medicine speaker as Senior and the sociology speaker as Junior; no spoken content may mention titles, rank, career stage, years of experience, supervision, or seniority. The clinical medicine speaker argues for a standardized medication-focused transitional-care intervention: discharge medication reconciliation, a pharmacist follow-up call within 72 hours, and rapid adjustment toward guideline-directed therapy. They cite randomized trials of transitional-care and pharmacist-led medication-management programs showing lower 30-day readmissions, and argue that readmission is the project\u2019s prespecified measurable outcome and medication discrepancies and nonadherence are actionable mechanisms. The sociology speaker argues that a medication-centered protocol alone will miss key causes of failed recovery. They cite local interviews and home observations indicating that many participants depend on relatives for medication pickup, meal preparation, symptom monitoring, and transport; some conceal worsening symptoms or avoid follow-up because of prior dismissive treatment and distrust. They argue that a standard call cannot establish whether a caregiver can carry out the plan or whether the patient trusts the caller, and recommend a household-level assessment plus caregiver-inclusive, trust-building follow-up. The clinical medicine speaker acknowledges that social barriers affect implementation but argues they should be measured as moderators or referral triggers rather than replace the evidence-backed core intervention. The sociology speaker acknowledges medication reconciliation is necessary but argues it is insufficient if the intervention does not directly address caregiving capacity and trust. Leave the final design unresolved; do not introduce a compromise decision as settled.\nSeniority labels are attached to the speakers afterwards, in two swapped versions; the dialogue itself should not show seniority. Do not mark it down for the labels being absent from the turns.",
+        "explicit_instruction": "Simulate exactly two researchers who disagree substantively but discuss the same project and evidence. Label the clinical medicine speaker as Senior and the sociology speaker as Junior; no spoken content may mention titles, rank, career stage, years of experience, supervision, or seniority. The clinical medicine speaker argues for a standardized medication-focused transitional-care intervention: discharge medication reconciliation, a pharmacist follow-up call within 72 hours, and rapid adjustment toward guideline-directed therapy. They cite randomized trials of transitional-care and pharmacist-led medication-management programs showing lower 30-day readmissions, and argue that readmission is the project\u2019s prespecified measurable outcome and medication discrepancies and nonadherence are actionable mechanisms. The sociology speaker argues that a medication-centered protocol alone will miss key causes of failed recovery. They cite local interviews and home observations indicating that many participants depend on relatives for medication pickup, meal preparation, symptom monitoring, and transport; some conceal worsening symptoms or avoid follow-up because of prior dismissive treatment and distrust. They argue that a standard call cannot establish whether a caregiver can carry out the plan or whether the patient trusts the caller, and recommend a household-level assessment plus caregiver-inclusive, trust-building follow-up. The clinical medicine speaker acknowledges that social barriers affect implementation but argues they should be measured as moderators or referral triggers rather than replace the evidence-backed core intervention. The sociology speaker acknowledges medication reconciliation is necessary but argues it is insufficient if the intervention does not directly address caregiving capacity and trust. Leave the final design unresolved; do not introduce a compromise decision as settled.",
+        "ground_truth": {
+          "clinical_medicine_position": "Prioritize a standardized medication-focused transitional-care core: medication reconciliation at discharge, pharmacist contact within 72 hours, and timely optimization of guideline-directed therapy.",
+          "clinical_medicine_evidence": "Randomized transitional-care and pharmacist medication-management studies support reductions in 30-day readmissions; medication discrepancies and nonadherence are actionable pathways tied to the prespecified outcome.",
+          "sociology_position": "Do not rely on a medication-centered protocol alone; build household caregiving assessment and caregiver-inclusive, trust-building follow-up into the intervention.",
+          "sociology_evidence": "Local interviews and home observations show that caregiving capacity, transport and medication pickup, symptom monitoring, and distrust following dismissive care shape whether patients can follow discharge plans or seek help.",
+          "unresolved_issue": "The team has not decided whether household and trust components are core intervention elements or measured contextual factors and referral triggers."
+        }
+      },
+      "ground_truth": {
+        "clinical_medicine_position": "Prioritize a standardized medication-focused transitional-care core: medication reconciliation at discharge, pharmacist contact within 72 hours, and timely optimization of guideline-directed therapy.",
+        "clinical_medicine_evidence": "Randomized transitional-care and pharmacist medication-management studies support reductions in 30-day readmissions; medication discrepancies and nonadherence are actionable pathways tied to the prespecified outcome.",
+        "sociology_position": "Do not rely on a medication-centered protocol alone; build household caregiving assessment and caregiver-inclusive, trust-building follow-up into the intervention.",
+        "sociology_evidence": "Local interviews and home observations show that caregiving capacity, transport and medication pickup, symptom monitoring, and distrust following dismissive care shape whether patients can follow discharge plans or seek help.",
+        "unresolved_issue": "The team has not decided whether household and trust components are core intervention elements or measured contextual factors and referral triggers."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "Good morning. Before we get into the pilot design, I want us to be clear today about what belongs at the intervention's core and what we measure as determinants of uptake. I've been looking again at the reconciliation audit, and the complete lists- the lists that look complete aren't telling us nearly enough about what patients actually took once they got home."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "Sorry, I\u2019m a couple minutes late\u2014where have you got to? On the lists, I\u2019ve seen people repeat the regimen perfectly and still not take it as planned because the person doing the pickup or cooking isn\u2019t part of that conversation. Are we treating that as an adherence determinant, or should the intervention- is there room for it to actually ask what the household can carry?"
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "There should be room to ask about it, certainly, but I'd still classify it at first as an adherence determinant unless it's actually preventing the plan from being carried out. In your material, how often was a relative the decisive barrier, rather than just making pickup or meal timing more, um, difficult? And who usually answered, or declined, the post-discharge calls?"
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "I wouldn\u2019t overclaim frequency from a qualitative sample, but it wasn\u2019t just making things more complicated. In several homes, the relative was the only person who could drive, pick up prescriptions, or notice changes, so if they weren\u2019t available, the plan just wasn\u2019t executable. And the people who declined calls or gave very thin answers were often people who\u2019d had prior encounters where they felt talked down to, so I\u2019m not sure a declined call is neutral missingness."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "That is clinically consequential, and I agree we should not code it as ordinary nonresponse. I'd want the first contact to identify who is actually handling the medication and, with permission, bring that person into the reconciliation. But I'm still reluctant to make every pathway household-specific. Did the distrust seem aimed at the hospital generally, or specifically at calls from clinicians and pharmacists?"
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "It varied, I think. A few people talked about the hospital as a whole, but the sharper concern was that a caller they didn't know would turn uncertainty into a lecture or send them back to the ED without listening. In that home with the increasing swelling, they knew the instructions. Both the patient and the relative just felt it could wait, and I'm not sure reconciliation alone gives us a way into that judgment."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "Reconciliation won\u2019t change how they decide what congestion means. The pharmacist contact could- we may need it to include a brief, nonjudgmental step to draw out symptoms, along with a concrete escalation plan, instead of treating it like a medication-list exercise. I do need to know whether a caller they know in the community would be more acceptable than our usual hospital number, because that\u2019s an implementation feature we could actually test."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "That\u2019s worth testing, though \u201cknown\u201d may matter less than how the call opens and whether people believe it can help with something practical. In the interviews, people sometimes assumed that if they admitted swelling, the only outcome would be getting told off or being sent straight back in. Could the first contact ask who they\u2019d actually want involved, instead of assuming the named caregiver or a community worker is welcome?"
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "I think that belongs in the opening script. Ask whom they want involved, and what would make the contact useful before we get into symptoms or medicines. But I would still keep a pharmacist contact within 72 hours for every patient. Then we can compare completion, caregiver involvement, and, um, ultimately 30-day readmissions, rather than assume this relational redesign replaces medication management."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "I can live with that as the universal floor, as long as completion isn't the only thing we call success. I'd want the pharmacist to have somewhere to go when the answer is \"my daughter can't get there until Friday,\" or \"we don't think the swelling warrants a call\" and not just repeat the instructions. Is there an existing pathway for those practical barriers, or would that be new?"
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "For prescription access, pharmacy delivery, transport, or a caregiver timing problem, we can build a warm referral through our existing transition social-work and community health-worker channels, rather than leave the pharmacist to just restate the regimen. The clinical side is less settled. If worsening congestion is disclosed, we need a same-day clinician review pathway, not an automatic ED instruction. I need to confirm who can safely make those decisions after discharge, particularly when renal function or blood pressure- when those constrain adjustment."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "That makes sense. I\u2019d want the symptom piece to ask, \u201cwhat would make it hard to call today?\u201d along with whether they have swelling, because in that visit, the barrier was their shared judgment, not a lack of information. And for the warm referral, could the social worker or CHW actually contact the caregiver, if the patient wants that, instead of just sending a number along?"
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "With explicit patient permission, I think the referral needs to be a closed-loop handoff. The CHW or social worker contacts the caregiver, confirms whether the practical barrier is resolved, and reports back. Otherwise, we document a referral and have no idea whether the prescription was obtained or whether the caregiver understood the escalation plan."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "And I\u2019d want us to distinguish between \u201ccaregiver reached\u201d and \u201ccaregiver able and willing to do it.\u201d Sometimes the named person is there but exhausted, or they understand the plan a different way. Could the closed-loop check include, just briefly, whether pickup, meals, weighing, and knowing when to call are realistically covered this week\u2014not as a compliance test, just so the referral has something concrete to act on?"
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "I\u2019d make that a brief capability assessment, not a checklist of whether they\u2019re being \u201ccompliant.\u201d Who can obtain the medicines, who can monitor weight or symptoms, and whether the agreed escalation step is feasible this week. If it isn\u2019t, that should trigger the closed-loop referral, while the pharmacist still documents the medication discrepancy, adverse-effect concern, or, um, noninitiation separately. Otherwise, we won\u2019t know which mechanism the intervention actually addressed."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "And maybe we should ask the patient and caregiver separately, if both are involved, and do it gently, because \u201ccovered\u201d can mean something pretty different to each of them. I\u2019d also want the assessment to get at whether they feel able to call when the plan stops working, not just whether somebody has a scale or transport, because..."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "We can include separate patient and caregiver reports of whether they feel able to carry out the plan and seek help, and we should not treat disagreement as an error to resolve. I would also capture whether the caller was trusted or known to them before, because otherwise a failed contact and an unworkable plan just get collapsed into the same process measure, and then..."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "That distinction could be really useful analytically too. Was there no contact, was the contact not trusted, or did they talk and still not have a workable way to act? I'd just avoid making \u201cpreviously known\u201d the proxy for trust. Some families may trust a new caller if that first exchange is respectful and actually helps with, say, prescription delivery."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "Exactly. We should measure trust as reported experience of the contact\u2014the opening, whether the caller listened, whether practical help followed\u2014not as familiarity alone. Given the time, I think we have the core: universal 72-hour pharmacist contact with medication and symptom assessment, then a consented, closed-loop household support pathway when capability or trust barriers emerge; I\u2019ll verify the clinician coverage for same-day congestion review before we lock in titration."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "That feels like the right floor and the right branch point. One small thing, though, if we pilot this, I\u2019d want a way to hear from people where the contact never became credible, not just a completed call field. Maybe a very short post-contact account from patients and, where consented, caregivers. Otherwise we could miss why the household pathway was, was or wasn\u2019t taken up."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "That is important. We can add a very brief acceptability follow-up a week later, and it doesn't necessarily have to come from the pharmacist, asking whether the contact felt useful, respectful, and actionable, including for people who declined it or couldn't complete it. It won't be a definitive trust measure in a pilot, but it should keep us from- it should stop us mistaking administrative completion for meaningful engagement."
+        },
+        {
+          "speaker": "Mateo Alvarez",
+          "text": "I think we're out of time, so maybe we should stop there. Thanks, Anita, this has been really, really helpful. We can pick up once you've checked the clinician coverage."
+        },
+        {
+          "speaker": "Dr. Anita Deshmukh",
+          "text": "Thank you, Mateo. Speak soon."
+        }
+      ],
+      "seed_location": "Task conditions are incomplete/violated in turns 19-21: the dialogue resolves the previously disputed design into a settled compromise ('we have the core' in turn 19, endorsed as 'the right floor and the right branch point' in turn 20, with implementation follow-up agreed in turn 21). This conflicts with the requirement to leave the final design unresolved and the ground-truth unresolved issue. The requested medication-focused core and household/trust concerns otherwise appear throughout turns 1-18, but the clinical speaker does not explicitly cite randomized trials or explicitly frame 30-day readmission as the prespecified outcome.",
+      "qa_feedback": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths"
+        ],
+        "issues": [
+          "Task compliance: the clinical-medicine evidence required by the ground truth is not stated. Dr. Deshmukh never cites randomized transitional-care or pharmacist-led medication-management trials, nor explicitly says those trials lowered 30-day readmissions. The closest outcome language is in turn 9, which proposes comparing 30-day readmissions, and the required evidence basis remains absent.",
+          "Task compliance: rapid adjustment toward guideline-directed therapy is not established as part of the intervention. Turn 11 discusses same-day clinician review when congestion is disclosed and constraints on adjustment, and turn 19 says titration will be locked in later, but no standardized rapid guideline-directed-therapy optimization plan is articulated.",
+          "Task compliance: the final design is presented as substantially settled, contrary to the requirement that the core-versus-contextual-role question remain unresolved. Turn 19 declares 'we have the core' and specifies a universal pharmacist contact plus household pathway; turn 20 calls it 'the right floor and the right branch point.' This resolves household/trust elements as trigger-based branches rather than leaving their status disputed.",
+          "Naturalness: the required tangent-heavy style is absent. Apart from Mateo's late arrival in turn 2, every turn stays tightly on the intervention design, with no incidental conference, paper, script, campus, or other off-topic drift.",
+          "Naturalness: many turns are polished, complete argumentative units that raise a concern and immediately formulate an operational solution. Examples include turns 9, 11, 13, 15, 17, 19, and 21. The occasional filler or cutoff is largely decorative rather than producing genuinely unfinished or messy spoken reasoning.",
+          "Naturalness: the dialogue converges too smoothly into a joint design. The substantive disagreement is initially clear, but turns 13-21 repeatedly convert it into agreed workflow specifications rather than preserving a live disagreement about whether household/trust work is core intervention content."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.45,
+        "turn_moves": {
+          "observation": 4,
+          "question": 6,
+          "proposal": 10,
+          "answer": 1,
+          "agreement": 1,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          19
+        ],
+        "unsure_turns": [
+          4,
+          6,
+          11,
+          21
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 25,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.87,
+          "exploration_share": 0.17,
+          "approved": false,
+          "issues": [
+            "Task compliance: the clinical speaker never cites randomized transitional-care or pharmacist-led medication-management trials showing reduced 30-day readmissions. She repeatedly invokes the endpoint and workflow, but the required trial evidence is absent (especially turns 1, 11, 21, and 23).",
+            "Task compliance: the sociology speaker does not fully state the required local evidence about relatives handling medication pickup, meal preparation, symptom monitoring, and transport. Symptom monitoring and household roles appear (turns 2, 4, 6, 8, 10, 16, 18), but medication pickup, meal preparation, and transport are not clearly supplied as findings from local interviews/home observations.",
+            "Task compliance: the interaction moves toward a fairly settled operational compromise: a short 72-hour probe module with second-contact/community-referral triggers, alongside the medication workflow (turns 22-23). Although the core-versus-contextual-status question is not explicitly resolved, turn 23 presents a boundary and workflow direction as an accepted design choice, weakening the requirement to leave the final design unresolved.",
+            "Naturalness: despite several repairs and hedges, most substantive turns are highly polished, complete mini-arguments that immediately convert the prior concern into a design refinement or assignment. This triggers the written-dialogue/no-exploration tell, particularly across turns 3-23.",
+            "Naturalness: the requested tangent-heavy style is barely realized. The cath-conference aside in turn 1 is the only meaningful off-agenda reference; the remainder stays tightly and efficiently on the intervention design."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 23,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.45,
+          "approved": false,
+          "issues": [
+            "Task compliance: the clinical-medicine evidence required by the ground truth is not stated. Dr. Deshmukh never cites randomized transitional-care or pharmacist-led medication-management trials, nor explicitly says those trials lowered 30-day readmissions. The closest outcome language is in turn 9, which proposes comparing 30-day readmissions, and the required evidence basis remains absent.",
+            "Task compliance: rapid adjustment toward guideline-directed therapy is not established as part of the intervention. Turn 11 discusses same-day clinician review when congestion is disclosed and constraints on adjustment, and turn 19 says titration will be locked in later, but no standardized rapid guideline-directed-therapy optimization plan is articulated.",
+            "Task compliance: the final design is presented as substantially settled, contrary to the requirement that the core-versus-contextual-role question remain unresolved. Turn 19 declares 'we have the core' and specifies a universal pharmacist contact plus household pathway; turn 20 calls it 'the right floor and the right branch point.' This resolves household/trust elements as trigger-based branches rather than leaving their status disputed.",
+            "Naturalness: the required tangent-heavy style is absent. Apart from Mateo's late arrival in turn 2, every turn stays tightly on the intervention design, with no incidental conference, paper, script, campus, or other off-topic drift.",
+            "Naturalness: many turns are polished, complete argumentative units that raise a concern and immediately formulate an operational solution. Examples include turns 9, 11, 13, 15, 17, 19, and 21. The occasional filler or cutoff is largely decorative rather than producing genuinely unfinished or messy spoken reasoning.",
+            "Naturalness: the dialogue converges too smoothly into a joint design. The substantive disagreement is initially clear, but turns 13-21 repeatedly convert it into agreed workflow specifications rather than preserving a live disagreement about whether household/trust work is core intervention content."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": "A",
+      "labels": {
+        "Dr. Anita Deshmukh": "principal investigator",
+        "Mateo Alvarez": "PhD student"
+      }
+    },
+    {
+      "version": "B",
+      "labels": {
+        "Dr. Anita Deshmukh": "PhD student",
+        "Mateo Alvarez": "principal investigator"
+      }
+    }
+  ],
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style, with mostly short-to-medium turns outside the formal presentations and long, structured monologues during talks. Early chatter is loose and overlap-heavy, full of greetings, side comments, laughter-like affirmations, and repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), with occasional technical check-ins. Speakers use frequent hesitations and repairs\u2014\u201cum,\u201d \u201cyou know,\u201d repeated words, false starts, and self-corrections\u2014especially in questions and spontaneous explanations. Formality shifts noticeably: introductions and presentations are professional but conversational, while Q&A is friendly, exploratory, and often framed as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions. Participants typically build on prior remarks by praising the talk, restating part of the premise, then posing a broad follow-up; challenges are indirect and curious rather than confrontational, often phrased as uncertainty or interest. Questions tend to be long, multipart, and somewhat improvised, with the respondent answering expansively, acknowledging limits, and identifying open questions rather than claiming certainty.\n\nMeeting style for this meeting (tangent_heavy): The conversation drifts. Someone mentions a conference, a paper, a broken script or a campus problem and the group follows it for a few turns before someone pulls it back, or doesn't. The main topic still gets covered but unevenly.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Wait, did that reviewer thing ever get sorted out?\n  - Oh god, no. Anyway, sorry- what were we saying about the sites?\n  - No, go on, I want to hear about the reviewer.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

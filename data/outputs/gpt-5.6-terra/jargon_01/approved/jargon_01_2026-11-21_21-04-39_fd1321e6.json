@@ -1,0 +1,312 @@
+{
+  "transcript_id": "fd1321e6",
+  "generated_at": "2026-11-21T21:04:39.721715",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short to medium turns, with informal pre-meeting small talk giving way to long, highly structured presentation turns and then medium-length technical questions. Overlap is occasional but generally light; participants wait their turn, though they sometimes jump in with brief acknowledgments, corrections, or follow-up questions. The tone is collegial and casual-professional, using frequent \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d \u201cso,\u201d \u201cgreat,\u201d and \u201cthanks,\u201d along with repetitions, self-corrections, and false starts that make the speech feel spontaneous. Speakers hedge regularly with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cwe\u2019re interested in,\u201d and \u201cit could be,\u201d especially when interpreting results or speculating. Questions are often prefaced modestly\u2014\u201cI have a quick question,\u201d \u201cthis may be naive,\u201d \u201cI\u2019m just curious\u201d\u2014and tend to be multipart, exploratory, and conversational rather than sharply interrogative. Challenges are indirect and framed as extensions or requests for clarification; people validate the prior speaker before raising alternatives. Presenters use signposting heavily (\u201call right,\u201d \u201cso,\u201d \u201cwhat this shows,\u201d \u201cthe key question\u201d), repeat conclusions for emphasis, and answer cautiously while openly naming limits, uncertainty, and future work.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Choosing which retrofits to fund so older apartment buildings stay safe during multi-day heat waves.",
+  "disciplines": [
+    "environmental engineering",
+    "public health",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Maya Chen",
+      "discipline": "environmental engineering",
+      "functional_role": "research engineer",
+      "background": "Maya has 11 years of experience in building-performance engineering, including field audits and energy modeling for affordable multifamily housing. She uses calibrated whole-building simulation, weather files for extreme-heat events, and apartment-level temperature logger data to estimate indoor conditions under different retrofit packages.",
+      "distinct_perspective": "Maya treats the comparison table as a physical performance problem: which package keeps apartments below dangerous indoor-temperature thresholds during realistic multi-day heat waves, while accounting for building orientation, roof condition, window area, ventilation, and electrical capacity. She wants comparable modeled metrics that can be traced back to building characteristics and retrofit specifications.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Rafael Ortiz",
+      "discipline": "public health",
+      "functional_role": "research engineer",
+      "background": "Rafael has 8 years of applied public-health research experience in urban heat and housing, working with hospital surveillance records, neighborhood vulnerability indicators, tenant surveys, and cooling-center utilization data. His recent work examines how age, disability, medication use, social isolation, language access, and mobility shape risk during heat emergencies.",
+      "distinct_perspective": "Rafael sees retrofit ranking as a health-protection decision rather than a building-only score. He wants the table to show who lives in each building, who is likely to remain indoors during a heat event, which residents face elevated susceptibility, and whether a proposed retrofit reduces the need to travel to cooling centers. He is alert to the possibility that average indoor conditions can conceal severe risks for particular residents and apartments.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Leila Haddad",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Leila is a postdoctoral researcher with 4 years of experience evaluating residential energy programs and public incentives. She builds lifecycle cost models using contractor bids, utility tariff data, rebate eligibility rules, projected maintenance costs, and household bill records, and she has studied how split incentives affect landlord participation in rental-building upgrades.",
+      "distinct_perspective": "Leila frames the comparison table around the city\u2019s budget and the distribution of financial effects. She wants transparent estimates of upfront capital cost, expected maintenance and replacement costs, available incentives, tenant electricity-bill changes, landlord savings, and cost per unit of safety improvement. She is especially concerned that a technically strong package may fail if it raises bills, cannot be financed, or requires electrical work that delays implementation.",
+      "tone": "enthusiastic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "heat_resilient_housing",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 5,
+  "task_id": "jargon_01",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+  "seed_spec": {
+    "task_id": "jargon_01",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting transcript where two researchers from different disciplines use the same term with different discipline-specific definitions. The evaluated AI must identify both meanings and associate each with the correct discipline.",
+    "explicit_instruction": "Create a natural research-planning meeting involving an environmental engineer, a public-health researcher, and an economist. The environmental engineer and public-health researcher must each use the exact term \"exposure\" while discussing how retrofit options should be evaluated. The engineer uses exposure to mean residents' modeled physical contact with high indoor temperatures, such as person-hours above a temperature threshold. The public-health researcher uses exposure to mean a population's contact with a heat hazard in an epidemiologic sense, including who is present and vulnerable during the heat event. Make the differing meanings clear through ordinary discussion, without explicitly announcing that they are different definitions. The economist may contribute to funding and bill questions but must not provide another definition of \"exposure.\" Keep the meeting focused on planning the comparison table; no hidden conflict or unresolved factual gap is needed.",
+    "ground_truth": {
+      "term": "exposure",
+      "meanings": [
+        {
+          "discipline": "environmental engineering",
+          "meaning": "Modeled physical contact with high indoor temperatures, commonly quantified as person-hours above an indoor heat threshold."
+        },
+        {
+          "discipline": "public health",
+          "meaning": "Epidemiologic contact of a population with a heat hazard, accounting for which people are present and vulnerable during the heat event."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 9 and 12. Dr. Rafael Ortiz (public health) uses \"exposure\" in turn 9 to refer to health-relevant population contact with heat, incorporating affordability/delivery barriers that affect who is effectively exposed. Maya Chen (environmental engineering) uses \"exposure\" in turn 12 as a physical modeled metric: person-hours above 30\u00b0C under a specified operating case. The economist, Leila Haddad, does not use or define the term.",
+  "ground_truth": {
+    "term": "exposure",
+    "meanings": [
+      {
+        "discipline": "environmental engineering",
+        "meaning": "Modeled physical contact with high indoor temperatures, commonly quantified as person-hours above an indoor heat threshold."
+      },
+      {
+        "discipline": "public health",
+        "meaning": "Epidemiologic contact of a population with a heat hazard, accounting for which people are present and vulnerable during the heat event."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Leila Haddad",
+      "text": "\u2026I was just looking at the calendar\u2014next month is coming up pretty quickly. Um, for today, I was hoping we could get clearer on the fields we actually need from each candidate building, so the comparison table doesn't end up as three separate analyses glued together. On my side, I need enough to show upfront capital cost, rebates, and who sees the bill changes, but I'd really like to hear what everyone needs first."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "...for me, the basic row can't just be a building average. We need something on who is present and vulnerable during a heat event, like age, disability or mobility limits, isolation, medication-related sensitivity, and whether people can realistically get to a cooling center. Maya, I'm especially curious how much apartment-level variation your temperature model keeps. Top-floor, west-facing, low-ventilation units?"
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "Yeah, apartment-level matters."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "We can keep it at the apartment level, at least using representative unit types, like top floor versus lower floor, orientation, window area, and the ventilation assumption. I'd want the table to show person-hours above 30\u00b0C, not just a building mean, because the mean can look acceptable while the west-facing top-floor units aren't. Rafael, do your resident data tell us who's actually likely to remain in those hotter units during an event, or just the building-wide count?"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "...not reliably at the apartment level, no. The survey gives us building-level signals, and the sample is uneven, so I don't want to imply we know exactly which resident is in which hot unit. But maybe, maybe we can flag buildings where the resident profile suggests people are more likely to stay indoors or can't readily use a cooling center, then pair that with your worst-case unit types?"
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "That pairing would help a lot, actually. Maya, could your representative unit outputs include cooling demand by unit type along with the person-hours? I can map that to the utility tariffs and show likely bill changes for, say, top-floor west-facing units, instead of- rather than burying everything in a building average."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "...yes, that\u2019s doable. I can give cooling demand by representative unit type and package, and, what\u2019s the word, put the electrical-capacity field alongside it. High demand isn\u2019t the same as cooling that can actually be delivered if the panel or service is constrained. I\u2019d also keep the heat-wave temperature result separate from the bill estimate, since residents may limit AC use when the cost is high."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "Mm, right, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "...and that\u2019s where the health field gets a little slippery. If the model treats a room as cooled just because there\u2019s a heat pump there, but the household cuts back because of the bill, then the exposure result is too optimistic. Could the table show both physical cooling available and a simple flag for likely affordability or delivery barriers, including panel constraints, because otherwise..."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "...I think we can show two modeled cases instead of treating the heat pump as automatically used. One is equipment available at its design operation, and the other is a constrained-use case tied to a tariff or affordability flag. But I'd be careful not to turn that flag into a temperature estimate without knowing actual thermostat behavior. And for the capacity piece, we need to distinguish apartment panel limits from the building service\u2014or, sorry, from the building service limits. Do we have both for these candidates?"
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "...I don't think we have both consistently yet. The assessment files usually say something about the main service, but apartment-panel ratings are patchier. So maybe the table needs separate fields and an explicit \"unknown,\" instead of assuming one stands in for the other. And for the constrained-use case, I can build a tariff-based bill range by unit type, but I'd want to keep it as affordability risk, not say we know how residents will set the thermostat, because..."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "For the physical side, I\u2019d keep the exposure metric separate from the affordability flag. It\u2019s person-hours above 30\u00b0C under the specified operating case. We can show the capacity fields as known, unknown, or limiting, and then not pretend an unknown panel rating means the unit can run the heat pump. I\u2019m also wondering, uh, have we actually agreed on 30\u00b0C as the pilot threshold, or are we still treating that as provisional?"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I'd keep 30\u00b0C provisional. From the health side, it isn't just about crossing one cutoff. The duration and overnight recovery matter just as much, especially for people who can't leave or who are on heat-sensitive medications. Could we show person-hours above 30, and also something like nights when the representative unit doesn't cool below a recovery temperature? I'd need to check what threshold is defensible for this pilot."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "We can add an overnight recovery metric by unit type, maybe maximum consecutive hours above 30\u00b0C and the nightly minimum indoor temperature, rather than locking ourselves into a second cutoff today. I do want to check logger coverage first, though, because that top-floor building where nights stayed hot despite the window-opening assumption is exactly the kind of thing the model needs to be calibrated against."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Hm, calibration\u2019s important."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "...and that calibration affects the cost side too, because I don't want to price electricity from a cooling-demand estimate that's systematically high or low for those top-floor units. Once you know which logger sites are usable, could we use a calibrated range instead of one point estimate for the tenant bill field? That would make the affordability flag a little less, um, falsely precise."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "...yes, a calibrated range is more honest, but only for the buildings where we have enough logger data to, to constrain the model. For the others, I'd label the temperature and cooling-demand outputs as uncalibrated scenario results. I wouldn't fold them all into one uncertainty band. The overnight mismatch may be roof heat storage, but it could also be that people simply weren't opening windows, so I need to look at the site notes before deciding."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "Oh, site notes could matter."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "...and the site notes may tell us if opening windows is even a realistic adaptive action. If there are mobility limits, safety concerns, noise, or language barriers around operating equipment, I wouldn't want the model to treat an open-window assumption as neutral. Do the notes capture resident-reported reasons, or just the, uh, things the field team observed?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "...I think it's mostly field observations, like window condition, shading, and obvious safety features, but not a consistent resident-reported reason code. I should check the forms before we rely on them. For the model, I can make window opening an explicit scenario input instead of a default, and where the notes suggest it may not be feasible, show the closed-window result alongside it."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "...then for the bill range, I probably need to mirror that instead of treating window opening as fixed. A closed-window, higher-cooling-use scenario could mean better thermal protection but a much larger tenant bill, and that's exactly the tradeoff I don't want hidden. Would it help if the table put the operating assumptions right next to the bill estimate, not just buried in a note?"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Mm, make it visible."
+    },
+    {
+      "speaker": "Maya Chen",
+      "text": "I\u2019d put the operating assumptions right beside each modeled result, so the window state, heat-pump availability and assumed operation, plus whether the apartment panel and service are known to be adequate. Otherwise, the same cooling-demand number is going to look more comparable than it really is. I\u2019ll check the logger coverage and those field forms before we decide which buildings can carry calibrated outputs."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "And alongside those assumptions, I think we need a very small health-context field, not a score, just whether the survey gives a credible signal that residents are likely to be indoors and have trouble relocating. I need to check the consent and sample counts before I say we can report that building by building, though. We shouldn't make a thin survey look like a census."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "...yeah, and I can keep that health-context field separate from the financial fields instead of trying to monetize it. One thing I need to verify before I put in rebate numbers is whether the current program lets panel work and heat pumps qualify together, together for each building. If not, the net upfront capital cost and the timing could look very different."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Okay, I think we should leave it there before this turns into another whole meeting. I\u2019ll- I\u2019ll follow up by email once I\u2019ve checked the survey consent and sample counts. Thanks, everyone."
+    },
+    {
+      "speaker": "Leila Haddad",
+      "text": "All right, appreciate it\u2014talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 5,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      4,
+      9,
+      12,
+      13
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Naturalness is limited by polished, highly complete turn construction: many substantive turns present a concern, qualify it, and land on a tidy proposed table field or next step (for example turns 7, 10, 16, 20, 23, and 24). This reads more like carefully scripted collaborative planning than spontaneous thinking aloud.",
+      "The transcript effectively reaches a stable plan despite the requested exploratory brainstorm style in which nothing is decided. Turns 21-25 consolidate visible operating assumptions, health-context fields, financial-field separation, and verification tasks with little remaining uncertainty.",
+      "The term distinction is recoverable, but Maya's exact use of \"exposure\" in turn 12 is framed as a metric label rather than explicitly saying it means physical contact with indoor heat. Turn 4 supplies the needed person-hours explanation, so the answer remains clear but requires linking the two turns.",
+      "Speaker voices are professionally distinct through subject matter, but Leila, Maya, and Rafael share a similarly polished, cautious planning cadence. More discipline-specific conversational habits or phrasing would make blind speaker identification stronger."
+    ],
+    "seed_uses": [
+      {
+        "turn": 9,
+        "sense": "public health",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Links exposure to household affordability and likely population vulnerability during heat."
+      },
+      {
+        "turn": 10,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      },
+      {
+        "turn": 12,
+        "sense": "environmental engineering",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Defines exposure as person-hours above 30\u00b0C under an operating case."
+      },
+      {
+        "turn": 13,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.12,
+    "turn_moves": {
+      "proposal": 11,
+      "agreement": 4,
+      "answer": 2,
+      "request": 3,
+      "commitment": 2,
+      "question": 2,
+      "backchannel": 2,
+      "concern": 1
+    },
+    "volunteer_turns": [
+      7,
+      20,
+      23,
+      26
+    ],
+    "unsure_turns": [
+      5,
+      11,
+      12,
+      13,
+      14,
+      17,
+      20,
+      24,
+      25
+    ],
+    "approved": true
+  },
+  "qa_cycles": 1,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.12,
+      "approved": true,
+      "issues": [
+        "Naturalness is limited by polished, highly complete turn construction: many substantive turns present a concern, qualify it, and land on a tidy proposed table field or next step (for example turns 7, 10, 16, 20, 23, and 24). This reads more like carefully scripted collaborative planning than spontaneous thinking aloud.",
+        "The transcript effectively reaches a stable plan despite the requested exploratory brainstorm style in which nothing is decided. Turns 21-25 consolidate visible operating assumptions, health-context fields, financial-field separation, and verification tasks with little remaining uncertainty.",
+        "The term distinction is recoverable, but Maya's exact use of \"exposure\" in turn 12 is framed as a metric label rather than explicitly saying it means physical contact with indoor heat. Turn 4 supplies the needed person-hours explanation, so the answer remains clear but requires linking the two turns.",
+        "Speaker voices are professionally distinct through subject matter, but Leila, Maya, and Rafael share a similarly polished, cautious planning cadence. More discipline-specific conversational habits or phrasing would make blind speaker identification stronger."
+      ]
+    }
+  ]
+}

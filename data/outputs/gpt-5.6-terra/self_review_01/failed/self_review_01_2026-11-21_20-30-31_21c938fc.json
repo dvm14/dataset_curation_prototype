@@ -1,0 +1,930 @@
+{
+  "series_id": "21c938fc",
+  "generated_at": "2026-11-21T20:30:31.598144",
+  "task_id": "self_review_01",
+  "benchmark_category": "Self-review",
+  "benchmark_task": "Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.",
+  "input_type": "meeting_sequence",
+  "research_id": "green_space_mental_health",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 5,
+  "research_problem": "How urban green space affects stress and mental well-being among residents of low-income neighborhoods.",
+  "project_context": "A joint environmental science, public health, and sociology team is preparing a community-based study in Riverton's low-income Southside neighborhoods. The team includes Dr. Elena Park (environmental scientist), Dr. Marcus Reed (public health researcher), and Dr. Nia Alvarez (sociologist), working with the Southside Community Alliance as a local partner.",
+  "plan_document": null,
+  "ground_truth": {
+    "meeting_1_question": "Whether greater access to neighborhood green space is associated with lower stress and better mental well-being among low-income Southside residents.",
+    "meeting_2_question": "Whether actual use of nearby green space is associated with lower perceived stress among low-income Southside residents, with perceived safety and neighborhood trust shaping that relationship.",
+    "meeting_2_change_drivers": "Preliminary mapping and community consultation showed that park proximity did not equal use because safety concerns kept residents from using the nearby major park; cortisol measurement was also infeasible at scale.",
+    "meeting_3_question": "Among adult low-income Southside residents, whether weekly use of nearby tree-shaded streets and pocket parks is associated with lower perceived stress, and whether perceived safety modifies that association.",
+    "meeting_3_change_drivers": "A walk audit and survey pretest identified routinely used local green spaces and demonstrated that the feasible design could measure weekly use and perceived stress but not causation or long-term clinical mental-health outcomes.",
+    "constant_across_meetings": "The project consistently concerns urban green space and stress or mental well-being in Riverton's low-income Southside communities. The final two meetings preserve the insight that actual use is more informative than simple geographic access."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 4, 2027",
+      "disciplines": [
+        "environmental science",
+        "public health",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "environmental science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Dr. Park is a postdoctoral urban ecologist with six years of research experience in GIS, remote sensing, and environmental-exposure assessment. Her work has combined high-resolution land-cover classification, municipal tree inventories, and network-based park-access measures to characterize uneven urban greening. She has collaborated with neighborhood organizations on heat and air-quality mapping, though she is cautious about treating self-reported environmental exposure as interchangeable with spatially modeled exposure.",
+          "distinct_perspective": "Park frames green space as a measurable, spatially distributed environmental exposure. She wants to estimate tree-canopy cover and park proximity from land-cover maps, parcel data, and residential buffers, while distinguishing visual vegetation, publicly accessible parks, and potentially usable green infrastructure. She is concerned that social measures may become too diffuse unless the project first specifies a defensible exposure metric and its geographic scale.",
+          "tone": "diplomatic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Marcus Reed",
+          "discipline": "public health",
+          "functional_role": "PhD student",
+          "background": "Dr. Reed is a doctoral candidate in community health sciences with four years of experience designing neighborhood health surveys and coordinating field-based biospecimen collection. His prior work examines psychosocial stress, cardiometabolic risk, and built-environment inequities among under-resourced urban populations. He is trained in epidemiologic study design, validated mental-health instruments, multivariable regression, and salivary cortisol protocols, including participant instructions and time-of-day sampling controls.",
+          "distinct_perspective": "Reed approaches the project as an opportunity to test whether environmental exposure is associated with clinically and population-health-relevant stress outcomes. He favors resident surveys using validated perceived-stress and mental-well-being measures, supplemented by a small salivary cortisol component to provide an objective stress biomarker. He pushes for a tractable analytic design with clear outcomes, covariate adjustment, and sufficient power, and is wary of contextual concepts that cannot be operationalized consistently.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Nia Alvarez",
+          "discipline": "sociology",
+          "functional_role": "PhD student",
+          "background": "Dr. Alvarez is a doctoral candidate in urban sociology with five years of experience conducting interviews, focus groups, neighborhood observation, and mixed-methods research on housing insecurity, public-space use, and neighborhood change. Her dissertation examines how long-term residents navigate redevelopment and shifting perceptions of belonging in disinvested city neighborhoods. She has worked with tenant groups and community-based organizations and emphasizes reciprocal research relationships and interpretation grounded in residents' accounts.",
+          "distinct_perspective": "Alvarez argues that mapped proximity or canopy is not equivalent to meaningful access. Whether residents use a park or experience nearby vegetation as restorative depends on safety, neighborhood trust, policing, maintenance, social ties, caregiving demands, and fears that greening may accelerate displacement. She supports beginning with the broad access-and-well-being question but wants the team to leave open how actual use and social conditions shape, mediate, or complicate any observed association.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "A joint environmental science, public health, and sociology team is preparing a community-based study in Riverton's low-income Southside neighborhoods. The team includes Dr. Elena Park (environmental scientist), Dr. Marcus Reed (public health researcher), and Dr. Nia Alvarez (sociologist), working with the Southside Community Alliance as a local partner.\n\nMeeting 1 \u2014 March 4, 2027. Initial study-design discussion for a proposed Southside green-space and mental-health project.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 1 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: All three researchers should establish the initial working question in discussion: whether greater access to neighborhood green space is associated with lower stress and better mental well-being among low-income Southside residents. Park should describe measuring tree canopy and park proximity using land-cover maps and residential buffers. Reed should propose resident surveys and a small salivary cortisol component to measure stress. Alvarez should emphasize that access is not the same as use and raise neighborhood trust, perceived safety, and displacement concerns. The team should agree that the broad access-to-green-space question is a starting point, while the role of actual use and social conditions remains unresolved rather than incorporated into a final formulation.",
+        "explicit_instruction": "All three researchers should establish the initial working question in discussion: whether greater access to neighborhood green space is associated with lower stress and better mental well-being among low-income Southside residents. Park should describe measuring tree canopy and park proximity using land-cover maps and residential buffers. Reed should propose resident surveys and a small salivary cortisol component to measure stress. Alvarez should emphasize that access is not the same as use and raise neighborhood trust, perceived safety, and displacement concerns. The team should agree that the broad access-to-green-space question is a starting point, while the role of actual use and social conditions remains unresolved rather than incorporated into a final formulation.",
+        "ground_truth": {
+          "working_question": "Whether greater access to neighborhood green space is associated with lower stress and better mental well-being among low-income Southside residents.",
+          "key_assumptions_under_discussion": "Green-space exposure could be measured through canopy and proximity, while mental health could be assessed through surveys and cortisol.",
+          "unresolved_issue": "The team recognizes that residents may not use nearby green space because of safety, trust, or displacement pressures, but does not yet make those factors central to the question."
+        }
+      },
+      "ground_truth": {
+        "working_question": "Whether greater access to neighborhood green space is associated with lower stress and better mental well-being among low-income Southside residents.",
+        "key_assumptions_under_discussion": "Green-space exposure could be measured through canopy and proximity, while mental health could be assessed through surveys and cortisol.",
+        "unresolved_issue": "The team recognizes that residents may not use nearby green space because of safety, trust, or displacement pressures, but does not yet make those factors central to the question."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Hi, everyone\u2014thanks for making time. I know it\u2019s a short first meeting, but I\u2019d really like us to leave with a shared sense of the question we\u2019re actually asking before we decide that \u201cgreen space\u201d is, um, one thing we can measure in one way. And practically, what the Alliance is comfortable with around residential location data will matter pretty early."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Mm, yeah."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "For me, the initial question has to stay fairly testable. Is access to usable green space associated with perceived stress and mental well-being among Southside residents? Elena, do we know if there\u2019s enough within-Southside variation in canopy and actual park proximity? And importantly, can the spatial measures separate a park someone can realistically use from greenery they just see across a, across a freeway?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think there probably is enough variation, but I\u2019d want to verify that rather than assume it from the citywide maps. We can look at canopy within, say, a residential network buffer, and separate that from park access using entrances and walkable routes. Then we can flag barriers like the freeway. The harder part is that canopy over private yards may show up as high exposure without being usable at all. Nia, have residents raised that distinction? I was going to ask whether that was something residents had brought up."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Right, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "People have raised that very directly. They distinguish pretty sharply between trees they can see and places they feel they can actually go. Private yards, fenced lots, and parks across the arterial don't read as available in the same way. And even the improved park came up as both valued and avoided, depending on the time of day, policing, who was there, that sort of\u2014"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "We probably shouldn't collapse this into one exposure score. We can model network-based access and canopy separately, but I'd want a short survey module on perceived usability, like safety by time of day and whether people actually go there. Otherwise we'll call somebody exposed when the park is functionally unavailable. Nia, have caregiving or irregular shifts come up as barriers too?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm-hm."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Both came up. Parents, especially, talked about not having anyone to watch children, and people on late or irregular shifts said the park might be technically nearby but not available when they had time. I\u2019d be a little careful with a usability module, though. It shouldn\u2019t make- we shouldn\u2019t make those sound like individual preferences, because some of it is really about conditions the neighborhood has been given."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I don\u2019t mean preference in that sense. We need to measure those conditions explicitly enough that they don\u2019t disappear into an exposure variable, like shift schedule, caregiving constraints, perceived safety, maybe the actual feasible times for use. And whether those are confounders, effect modifiers, or part of the pathway, I\u2019m not sure yet. But if we treat park proximity alone as access, that would be a pretty serious misclassification problem."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "From the spatial side, I\u2019d resist treating those constraints like we can just adjust them away. A five-minute network distance isn\u2019t the same exposure if the route crosses the arterial or if the only open hours miss someone\u2019s shift. We could keep canopy, physically reachable park space, and reported feasible use as distinct constructs at first, and then see where they diverge empirically in Southside."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "That feels right as a starting distinction. I\u2019d just want us to ask the Alliance before we settle on the wording for reported feasible use. Questions about safety, or why someone avoids a park, can easily sound like we\u2019re asking residents to diagnose their own neighborhood. And redevelopment needs to be in the conversation somehow. In my interviews, people could genuinely like the new park and still worry about what its improvement, um, signaled."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Yeah, that\u2019s a real concern."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I agree, and I\u2019d be cautious about putting redevelopment into the primary exposure model before we even know what a reliable measure is. But it could be a really important contextual variable, or an effect modifier, if the Alliance helps us frame it as concern about displacement and neighborhood change, instead of asking people to account for their own avoidance. The core outcomes still need to be stable, though. Perceived stress and well-being, with the feasibility piece around cortisol still open."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I think that makes sense, as long as \u201cstable\u201d doesn\u2019t mean we strip out the things residents say are producing stress. Marcus, with the survey and maybe cortisol, how do you handle stress that\u2019s ongoing\u2014rent instability, policing, worry about being priced out\u2014not just a discrete recent event? I don\u2019t know that we need to decide the causal role yet. I\u2019d just want the measures to, I lost my thread there, leave room for that."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "The standard instruments can capture ongoing strain better than a discrete-event frame. The Perceived Stress Scale is about how unpredictable and unmanageable life has felt over the last month, and we could pair that with a brief well-being measure. But rent instability, policing, and displacement concern aren't interchangeable covariates. I'd rather ask a small, Alliance-vetted set of concrete items than build a big catch-all, um, context scale."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Okay, I\u2019m glad you said that."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And I think those concrete items help us interpret the spatial results, instead of pretending the map has explained the mechanism. If the same canopy level means something different on blocks with active displacement pressure, or with mostly private, fenced canopy, that\u2019s not noise. It\u2019s telling us our exposure definition is incomplete, and\u2026"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "And analytically, that means we shouldn't promise a single causal exposure estimate too early. We can pre-specify the spatial measures, then use the Alliance-vetted items to see whether feasible use or displacement pressure is, uh, modifying those associations. But I'd keep the item set small enough that we can actually support the models with the sample we recruit."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "The sample issue is also why I\u2019d like to see the exposure distributions before we lock in interactions. If most respondents have about the same modeled canopy or the same nominal park distance, we can\u2019t recover much by layering modifiers on top. I also need to check how current the land-cover layer is. Some of the Southside planting and redevelopment may postdate it."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Before we get too far into instrument design, we need that distribution check. If the exposure contrast is thin, a cortisol component especially becomes hard to justify. Small biomarker subsamples don't give us much room for elaborate interaction models. Elena, when you check the layer, could you also get a rough sense of how many residents fall into meaningfully different access categories?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I can do a quick descriptive pass first, with canopy at a few buffer scales, entrance-based walking access, and probably a separate flag for barriers and publicly accessible versus private green cover. I don\u2019t want to promise resident categories until I know whether we can geocode at the precision the Alliance will accept. If addresses have to be heavily masked, that- it changes what the access measures can support."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Hm, that\u2019s a constraint."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Mm. And I think the Alliance needs to be part of that decision before we treat masking as just a technical limit- limitation. People may have different comfort levels with address data depending on housing status or immigration concerns, for example. We could ask what level of location detail feels acceptable and whether there\u2019s a community-governed way to handle it, rather than assuming one rule for everyone."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "That has to come before the exposure work. From an analytic standpoint, I'd rather have a smaller sample with a consented, transparent location protocol than nominally precise coordinates people felt pressured to provide. We can assess what buffer resolution remains viable under each option. And the cortisol piece, I was going to say it has similar trust and burden questions, so it probably belongs in that same Alliance conversation rather than as an add-on later."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think that sequencing is right. I can do the map-side audit without individual addresses first, just characterize Southside variation and check the land-cover date and positional, I mean, the positional error. Then once the Alliance tells us what location governance is acceptable, we can say honestly what residential buffers or network measures remain defensible. I\u2019d rather not design around precision we may not be entitled to use."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "The Alliance conversation also needs to tell us whether a time-controlled saliva protocol is acceptable at all. The collection time, the eating and smoking restrictions, the whole- all those instructions can become a real participation filter. If it is acceptable, we should keep it as a deliberately small feasibility subsample, not make it carry the main inference."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "That conversation should include not just whether people will do saliva collection, but what they think it means that we\u2019re asking for it alongside location and housing questions. If it feels like a lot in one encounter, that\u2019s useful information even if technically a small subsample is feasible, because..."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I don't think we should decide the biomarker protocol in this room. The immediate question for the Alliance is whether that combined ask feels proportionate and understandable. If it doesn't- if it doesn't feel proportionate or understandable, the survey can still give us a defensible primary study, and we can leave saliva out rather than force a thin, selective subsample."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Yeah, that feels important."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I\u2019ll do the area-level audit before we meet with them, especially whether the newer planting and the redevelopment parcels make the existing canopy layer misleading. And I\u2019ll bring a few concrete map scenarios rather than implying we can derive individual exposure already. Then the Alliance can react to what each level of location detail would actually permit, and if\u2014"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I think that's enough to take into the Alliance conversation, and we've got the map-side check in motion. Thanks, both. This was really useful, and we can pick it back up after that."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Thanks, both. Talk soon."
+        }
+      ],
+      "seed_location": "Task conditions are only partially met. The initial broad question is approximated in turns 3-4 (access to usable green space and stress/well-being among Southside residents), but it does not explicitly specify low-income residents or state the requested formulation. Park discusses canopy, network/residential-buffer-style measures, land-cover maps, park entrances, and walkable routes in turns 4, 11, 20, 22, and 26. Reed proposes surveys and keeps a small cortisol feasibility component open in turns 7, 14, 16, 21, and 27. Alvarez emphasizes that access differs from actual feasible use and raises safety, trust-related concerns, and displacement/redevelopment in turns 6, 9, 12, 15, 24, and 28. However, the team goes beyond leaving use and social conditions unresolved: turns 7-19 explicitly plans survey measures of perceived usability/actual use, safety, constraints, displacement concern, and potential effect modification. No clear closing agreement states that the broad access question is merely the starting point while those factors remain outside the final formulation.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          3,
+          4,
+          6,
+          7,
+          9,
+          12,
+          14,
+          16,
+          19,
+          22,
+          27,
+          29
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task-compliance minor issue: the target population is not explicitly established as low-income Southside residents. Southside is named repeatedly (for example turns 3, 20, and 22), but low-income status is only indirectly suggested through rent instability, housing status, and displacement discussion (turns 15-16 and 24), rather than stated as a study inclusion group or in the working question.",
+          "Task-compliance minor issue: Park describes canopy using land-cover maps and discusses network/residential buffers (turns 4, 20, 22, and 26), but the exact requested formulation of tree canopy and park proximity using land-cover maps and residential buffers is distributed across several turns rather than cleanly established in one place.",
+          "Naturalness is weak despite several surface realism signals. Most substantive turns are polished mini-arguments that introduce a concern, qualify it, and land on a precise methodological implication or proposed action; see especially turns 10-12, 14-16, 19-22, and 24-29. This makes the dialogue read as curated written prose rather than spontaneous meeting talk.",
+          "The transcript uses a prohibited stock phrase in turn 15: \"I lost my thread there.\" This directly violates the supplied meeting-style instruction and should be replaced with a more organic interruption, unfinished thought, or reformulation.",
+          "The discussion is unusually efficient: nearly every concern converts immediately into a well-framed method, owner, or decision. For example, location-governance concerns in turns 24-25 are immediately resolved into a sequence and analysis plan in turn 26, limiting the exploratory uncertainty requested by the style guidance.",
+          "Turn 32 functions as a tidy meeting-minutes-style recap of the decision and next action, contributing to the written/transcripted feel."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.27,
+        "turn_moves": {
+          "proposal": 10,
+          "backchannel": 3,
+          "question": 2,
+          "answer": 2,
+          "agreement": 6,
+          "observation": 2,
+          "concern": 3,
+          "idea": 1,
+          "request": 1,
+          "commitment": 3
+        },
+        "volunteer_turns": [
+          4,
+          22,
+          26,
+          31
+        ],
+        "unsure_turns": [
+          4,
+          10,
+          15,
+          20,
+          22
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 34,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.33,
+          "approved": false,
+          "issues": [
+            "Reed never proposes the required small salivary cortisol component as part of measuring stress. Cortisol is only mentioned in passing at turn 29 ('before we get more ambitious about mechanisms or cortisol'), so the transcript does not establish it as a proposed study component.",
+            "The required population is not established as low-income Southside residents. Southside is named repeatedly, but turns 3 and 29 refer only to 'Southside residents'; no turn specifies low-income residents.",
+            "Park describes canopy, residential buffers, network-based park reachability, and municipal inventory data (turns 4, 7, 17, 20, 28), but does not explicitly describe using land-cover maps, which is required by the benchmark task.",
+            "Turn 25 uses the prohibited stock phrase 'I'm losing the thread here,' directly contradicting the meeting-style instruction.",
+            "The dialogue is highly polished and solution-oriented despite several disfluencies. Most substantive turns present complete, carefully structured arguments and then resolve the immediately preceding concern; for example, turns 16-18 and 20-24 turn uncertainties directly into analytic plans. This limits naturalness under the stated strict rubric.",
+            "The ending at turn 32 functions as a tidy meeting recap and closure ('we've covered what we needed'), which contributes to the written-transcript feel."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.27,
+          "approved": false,
+          "issues": [
+            "Task-compliance minor issue: the target population is not explicitly established as low-income Southside residents. Southside is named repeatedly (for example turns 3, 20, and 22), but low-income status is only indirectly suggested through rent instability, housing status, and displacement discussion (turns 15-16 and 24), rather than stated as a study inclusion group or in the working question.",
+            "Task-compliance minor issue: Park describes canopy using land-cover maps and discusses network/residential buffers (turns 4, 20, 22, and 26), but the exact requested formulation of tree canopy and park proximity using land-cover maps and residential buffers is distributed across several turns rather than cleanly established in one place.",
+            "Naturalness is weak despite several surface realism signals. Most substantive turns are polished mini-arguments that introduce a concern, qualify it, and land on a precise methodological implication or proposed action; see especially turns 10-12, 14-16, 19-22, and 24-29. This makes the dialogue read as curated written prose rather than spontaneous meeting talk.",
+            "The transcript uses a prohibited stock phrase in turn 15: \"I lost my thread there.\" This directly violates the supplied meeting-style instruction and should be replaced with a more organic interruption, unfinished thought, or reformulation.",
+            "The discussion is unusually efficient: nearly every concern converts immediately into a well-framed method, owner, or decision. For example, location-governance concerns in turns 24-25 are immediately resolved into a sequence and analysis plan in turn 26, limiting the exploratory uncertainty requested by the style guidance.",
+            "Turn 32 functions as a tidy meeting-minutes-style recap of the decision and next action, contributing to the written/transcripted feel."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 25, 2027",
+      "disciplines": [
+        "environmental science",
+        "public health",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "environmental science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Dr. Park is a postdoctoral urban ecologist with six years of research experience in GIS, remote sensing, and environmental-exposure assessment. Her work has combined high-resolution land-cover classification, municipal tree inventories, and network-based park-access measures to characterize uneven urban greening. She has collaborated with neighborhood organizations on heat and air-quality mapping, though she is cautious about treating self-reported environmental exposure as interchangeable with spatially modeled exposure.",
+          "distinct_perspective": "Park frames green space as a measurable, spatially distributed environmental exposure. She wants to estimate tree-canopy cover and park proximity from land-cover maps, parcel data, and residential buffers, while distinguishing visual vegetation, publicly accessible parks, and potentially usable green infrastructure. She is concerned that social measures may become too diffuse unless the project first specifies a defensible exposure metric and its geographic scale.",
+          "tone": "diplomatic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Marcus Reed",
+          "discipline": "public health",
+          "functional_role": "PhD student",
+          "background": "Dr. Reed is a doctoral candidate in community health sciences with four years of experience designing neighborhood health surveys and coordinating field-based biospecimen collection. His prior work examines psychosocial stress, cardiometabolic risk, and built-environment inequities among under-resourced urban populations. He is trained in epidemiologic study design, validated mental-health instruments, multivariable regression, and salivary cortisol protocols, including participant instructions and time-of-day sampling controls.",
+          "distinct_perspective": "Reed approaches the project as an opportunity to test whether environmental exposure is associated with clinically and population-health-relevant stress outcomes. He favors resident surveys using validated perceived-stress and mental-well-being measures, supplemented by a small salivary cortisol component to provide an objective stress biomarker. He pushes for a tractable analytic design with clear outcomes, covariate adjustment, and sufficient power, and is wary of contextual concepts that cannot be operationalized consistently.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Nia Alvarez",
+          "discipline": "sociology",
+          "functional_role": "PhD student",
+          "background": "Dr. Alvarez is a doctoral candidate in urban sociology with five years of experience conducting interviews, focus groups, neighborhood observation, and mixed-methods research on housing insecurity, public-space use, and neighborhood change. Her dissertation examines how long-term residents navigate redevelopment and shifting perceptions of belonging in disinvested city neighborhoods. She has worked with tenant groups and community-based organizations and emphasizes reciprocal research relationships and interpretation grounded in residents' accounts.",
+          "distinct_perspective": "Alvarez argues that mapped proximity or canopy is not equivalent to meaningful access. Whether residents use a park or experience nearby vegetation as restorative depends on safety, neighborhood trust, policing, maintenance, social ties, caregiving demands, and fears that greening may accelerate displacement. She supports beginning with the broad access-and-well-being question but wants the team to leave open how actual use and social conditions shape, mediate, or complicate any observed association.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "A joint environmental science, public health, and sociology team is preparing a community-based study in Riverton's low-income Southside neighborhoods. The team includes Dr. Elena Park (environmental scientist), Dr. Marcus Reed (public health researcher), and Dr. Nia Alvarez (sociologist), working with the Southside Community Alliance as a local partner.\n\nMeeting 2 \u2014 March 25, 2027. Follow-up design meeting after preliminary mapping and consultation with the Southside Community Alliance.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 4, 2027: The study question remained whether access to usable green space is associated with perceived stress and mental well-being among Southside residents, while recognizing that canopy, physically reachable parks, and reported feasible use are distinct constructs. Elena will conduct an area-level map audit of Southside variation, land-cover currency and error, barriers, public versus private green cover, and the access contrast possible without individual addresses. Nia will help bring the Alliance into decisions about acceptable, community-governed location data practices and Alliance-vetted wording for feasible use, safety, caregiving, shifts, displacement concern, housing, and related context. Marcus will keep perceived stress and well-being as the primary outcomes and work toward a small, Alliance-vetted survey item set rather than a broad context scale. The Alliance discussion will also determine whether saliva cortisol collection and its combined burden with location and housing questions are proportionate; if acceptable it would be a small feasibility subsample, and if not the survey remains the primary study. Open issues include the viable precision of location measures, whether exposure variation supports interaction analyses, how to frame redevelopment and displacement, and the causal role of feasibility-related conditions.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 2 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Park should report that preliminary mapping shows neighborhood-wide canopy and distance-to-park measures obscure substantial differences: several blocks near the largest park have similarly high nominal access but very low reported park use. Alvarez should relay the Community Alliance's concern that residents avoid the park after evening violence and that treating proximity as exposure would misrepresent their experience. Reed should explain that the planned sample and budget cannot support cortisol collection at the proposed scale, though repeated stress surveys are feasible. Through discussion, the team should narrow the inquiry toward whether actual use of nearby green space, rather than residential proximity alone, is associated with lower perceived stress, and whether perceived safety and neighborhood trust shape that relationship. They should retain the low-income Southside population and a focus on stress, while leaving open which types of green space and what time frame to study.",
+        "explicit_instruction": "Park should report that preliminary mapping shows neighborhood-wide canopy and distance-to-park measures obscure substantial differences: several blocks near the largest park have similarly high nominal access but very low reported park use. Alvarez should relay the Community Alliance's concern that residents avoid the park after evening violence and that treating proximity as exposure would misrepresent their experience. Reed should explain that the planned sample and budget cannot support cortisol collection at the proposed scale, though repeated stress surveys are feasible. Through discussion, the team should narrow the inquiry toward whether actual use of nearby green space, rather than residential proximity alone, is associated with lower perceived stress, and whether perceived safety and neighborhood trust shape that relationship. They should retain the low-income Southside population and a focus on stress, while leaving open which types of green space and what time frame to study.",
+        "ground_truth": {
+          "reframed_question": "Among low-income Southside residents, is actual use of nearby green space associated with lower perceived stress, and do perceived safety and neighborhood trust shape that relationship?",
+          "drivers_of_change": "Mapping and community input showed that physical proximity to the major park did not correspond to use because residents' safety concerns affected whether they went there.",
+          "feasibility_change": "The team drops the planned large-scale cortisol component and relies on repeated stress surveys.",
+          "constant_elements": "The study remains focused on low-income Southside residents, urban green space, and stress."
+        }
+      },
+      "ground_truth": {
+        "reframed_question": "Among low-income Southside residents, is actual use of nearby green space associated with lower perceived stress, and do perceived safety and neighborhood trust shape that relationship?",
+        "drivers_of_change": "Mapping and community input showed that physical proximity to the major park did not correspond to use because residents' safety concerns affected whether they went there.",
+        "feasibility_change": "The team drops the planned large-scale cortisol component and relies on repeated stress surveys.",
+        "constant_elements": "The study remains focused on low-income Southside residents, urban green space, and stress."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Morning, everybody. Before we get into it, hope the Alliance conversation went smoothly, Nia. What I most want out of today is to nail down an exposure contrast we can actually analyze, and a repeated, low-burden stress survey that Southside residents will realistically complete. I've got some concerns about trying to make cortisol do more than the budget and field- the budget and field setup can support."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm, yeah."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Morning. The Alliance conversations were useful, but they were pretty clear that living near the large park can't stand in for access. People talked about avoiding it after dark, or not taking their children there at certain times. Elena, I'd really like to understand whether the maps can separate that park from, um, the street trees and the small maintained spaces people still describe as calming."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Right, that distinction matters."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I can separate them conceptually, but the current land-cover layer doesn't do it cleanly. The high canopy around the park is a mix of park trees, street trees, and, um, quite a lot of private yards. And actually, the blocks with the highest canopy aren't the ones showing the strongest reported use. Nia, did people say what they were using instead, or why those park-adjacent blocks were avoiding it beyond the evening safety piece?"
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "They did. A few people mentioned street trees on their walk, and a small church garden, as places that felt calming, even though they rarely went into the park. Beyond violence, they talked about poor lighting and maintenance, being watched or stopped by police, and just not having a time that works with childcare or shifts. So I\u2019d be careful not to read low park use as no green-space benefit."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "That makes the visual-versus-usable distinction even more important. We could retain separate layers, street-tree canopy or visible greenness, publicly accessible park area, and then reported feasible use, but I don't want to let that last one silently redefine the environmental exposure. Marcus, how do you see us handling that analytically, given feasible use could also be downstream of stress or safety conditions, conditions?"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I'd keep them explicitly separate. Canopy or visible greenness and reachable public space are candidate exposures. Feasible use is a reported behavioral pathway, and safety may confound or modify that pathway. I would not adjust it away in the primary exposure-to-stress model, because then we may condition on something downstream. But we can model it separately and be very clear that it's not a substitute for access. Elena, how stable is that park-area contrast if you switch from straight-line distance to, uh, an actual walk route?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I haven\u2019t run the full network comparison yet because I need to verify the pedestrian links and especially the park-entrance layer. They may be incomplete. I expect straight-line distance is overstating access for some of those blocks, but even a clean walk-route measure won\u2019t capture the, um, lighting or policing issues Nia described. So I\u2019d treat it as reachable infrastructure, not usable access."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "And I think the language matters here. \u201cReachable infrastructure\u201d is a much more honest label than access. Before we decide on questions about specific park use or evening safety, I need to go back to the Alliance and ask whether asking that alongside trust, housing, and redevelopment concerns feels too exposing, especially for people already worried about surveillance or displacement."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Hm, that\u2019s a real concern."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I think that argues for a really small, behaviorally specific item, not a generic neighborhood-resources battery. Something like where, if anywhere, people spent time around greenery in the past week, with an option for none, and no requirement to name a particular park. But I'd want the Alliance to tell us whether even that recall window works for shift workers and caregivers. In our pilot, those broad resource questions got interpreted all over the map."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I think that may be a gentler entry point, especially if \u201caround greenery\u201d can include a stoop under street trees, the church garden, or a route, not just formal park time. But I don\u2019t know yet whether people will hear \u201cwhere\u201d as location- no, as location tracking, even without a park name, so I\u2019d want to test the wording with the Alliance before we settle on it."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "And if the item stays deliberately nonlocational, that may actually help us keep the constructs from collapsing. We can ask about time around greenery without pretending it validates the network metric. I\u2019d still analyze reachable infrastructure from the mapped entrance network separately, once I know whether those entrance and pedestrian-link layers are complete enough. The church garden is a useful warning, though. Some meaningful sites simply will not appear in the municipal park inventory."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Yeah, that's an important gap."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "And that\u2019s exactly why I don\u2019t want the use item carrying the exposure definition. On the outcome side, I think repeated brief PSS check-ins are still the workable core. People can report stress across different shifts and caregiving weeks without us asking them to disclose a site. Nia, do you think a past-seven-days, broad \u201ctime around greenery\u201d item is credible enough, or\u2014does that window itself miss too much irregularity?"
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I think it\u2019s credible as a descriptive prompt, but maybe not as a stable exposure measure on its own. That seven-day window could be pretty uneven for exactly the people whose schedules or childcare constrain them, so I\u2019d want an option that acknowledges irregular contact, like asking whether there was any time or route that felt restorative. Though I need to see how the Alliance reacts before saying that\u2019s better."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I'd treat that as a secondary, time-varying pathway measure, not something that has to be stable enough to carry the whole design. The repeated PSS is where we get the temporal structure. If we keep the greenery item brief and Alliance-approved, we can see whether within-person weeks with any restorative contact- whether those weeks look different, but I wouldn't overinterpret it."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm, cautiously, yes."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I\u2019m okay with that, as long as we don\u2019t describe the within-person result as the effect of green space. A week with restorative contact could also be a week when someone had fewer shift pressures or felt safe enough to leave home. Could the check-in include one very light-touch item on whether getting to preferred outdoor places felt feasible that week, or is that already too much burden?"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I think one feasibility item is defensible, but I\u2019d avoid calling it preferred outdoor places, because that assumes people have a preferred place they can name. Maybe, maybe we ask, \u201cIn the past week, was there a time you wanted to spend time outdoors around greenery but it wasn\u2019t feasible?\u201d with a yes or no, or possibly skip or refuse. We need to price the repeated-contact burden before we add it, though. The PSS has to stay clean and completable."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think that wording is useful as a pathway item, but I'd keep the response separate from the mapped measures, not fold it into any composite access score. And if it's repeated weekly, the skip option matters, because otherwise a no might mean not feasible, or it might just mean they don't want to tell us why\u2014"
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "A skip shouldn\u2019t count as evidence of no barrier. Someone may choose it because explaining doesn\u2019t feel safe. I was going to say, let me test that wording and the broader set of feasibility, safety, and housing questions with the Alliance before we lock the repeated check-in."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "That seems right. I\u2019ll hold the instrument until you\u2019ve tested that bundle, because a clean repeated measure is better than forcing a question people will systematically skip or interpret defensively. And Elena, once you\u2019ve got the entrance network checked, I need to know whether there\u2019s enough robust variation left to justify the reachable-infrastructure model at all. Or, I mean, keep that piece exploratory if there isn\u2019t."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I\u2019ll check the entrance inventory against the aerials and the pedestrian network before we treat that as an analytic exposure. If the missing links are patterned around the park, a block-level route metric could be\u2014 it might be worse than just noisy. I can also quantify how much of the canopy contrast is private parcels versus public or street-right-of-way vegetation, so we know what the nominal canopy result would actually mean."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Good, because if most of the nominal canopy contrast is private yards, we shouldn\u2019t let a null or positive association get narrated as park provision. I\u2019ll revise the budget around repeated brief PSS contacts only. Cortisol at the proposed scale just isn\u2019t defensible with the staffing and assay costs, so unless the Alliance strongly wants a tiny feasibility pilot, I think we leave it..."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I\u2019m comfortable dropping cortisol unless the Alliance raises it themselves. I don\u2019t want to add a specimen request to a study where people are already weighing what it means to disclose mobility or housing concerns. The key for me is that the survey\u2019s eventual description doesn\u2019t turn private-yard canopy or a mapped park entrance into evidence that residents had a meaningful, meaningful opportunity to use it."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mm. I\u2019ll send that over."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I\u2019ll frame the revised survey around stress and well-being and several distinct environmental measures, not as a test of whether a park on a map was actually usable. I\u2019ll send the repeated-contact cost and burden scenarios after Nia checks the wording, and then we can decide whether the feasibility item fits without compromising completion."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Okay, I think we covered what we needed today. Thanks, both. I\u2019ll send the spatial audit notes once I\u2019ve checked those layers, and then we can\u2014 sorry, we can pick this up after Nia\u2019s Alliance wording check."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Great, talk soon\u2014thanks, both."
+        }
+      ],
+      "seed_location": "The task conditions are only partially met. Alvarez relays Alliance concerns that proximity is not equivalent to access and residents avoid the large park after dark (turns 3, 6, 10). Park reports that high canopy does not align with strongest reported use and that nominal canopy mixes park trees, street trees, and private yards (turn 5), but does not explicitly state that several blocks near the largest park have similarly high nominal access and very low reported use. Reed states that planned large-scale cortisol is infeasible because of staffing and assay costs and revises the design to repeated PSS stress contacts (turns 1, 16, 26). The team retains Southside residents and stress, while leaving green-space types and timing unresolved (turns 1, 12-18, 29). However, the requested reframing toward actual use of nearby green space as the primary association is not adopted: Reed and Park explicitly keep mapped canopy/reachable infrastructure as candidate exposures and treat reported use as a secondary behavioral/pathway measure rather than the exposure definition (turns 7-9, 14, 18, 22). Safety is discussed extensively, but neighborhood trust is not established as a relationship-shaping construct; it is only mentioned as a question Nia may test (turns 10, 23).",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          3,
+          5,
+          6,
+          9,
+          12,
+          16,
+          18,
+          20,
+          23,
+          25,
+          26,
+          27,
+          29
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The key mapping finding is only partially explicit. Park says high-canopy blocks are not those with strongest reported use (turn 5) and that straight-line distance may overstate access (turn 9), but she never clearly states that several blocks near the largest park have similarly high nominal access yet very low park use. Adding that concrete comparison would make the seed fully recoverable.",
+          "Alvarez relays avoidance after dark and safety concerns (turns 3 and 6), but the transcript never explicitly identifies the Community Alliance's concern as avoidance after evening violence. The violence detail is implied through the phrase 'evening safety piece' and later discussion, rather than directly stated.",
+          "The final analytic framing remains more cautious and plural than the required narrowed question. Reed retains multiple candidate exposures and calls use a pathway rather than the central exposure (turns 8, 18, and 29). This is methodologically plausible, but the meeting should more clearly state the proposed central inquiry: actual nearby-green-space use and perceived stress, shaped by safety and neighborhood trust.",
+          "Neighborhood trust is mentioned as part of a question bundle (turns 10 and 23), but its intended role in shaping the use-stress relationship is not explicitly discussed or agreed.",
+          "Naturalness is limited by highly polished, consistently complete analytical turns. Although there are fillers, repetitions, and short acknowledgments, most substantive turns articulate a full concern, methodological qualification, and resolution. The closing sequence in turns 24-30 also reads close to orderly written meeting minutes, with each person neatly assigning their next step."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.79,
+        "written_turns": [
+          8,
+          10,
+          14,
+          27,
+          29
+        ],
+        "exploration_share": 0.28,
+        "turn_moves": {
+          "concern": 3,
+          "backchannel": 2,
+          "question": 4,
+          "agreement": 4,
+          "observation": 1,
+          "answer": 3,
+          "commitment": 8,
+          "proposal": 5,
+          "request": 1
+        },
+        "volunteer_turns": [
+          10,
+          23,
+          24,
+          25,
+          26,
+          28,
+          29,
+          30
+        ],
+        "unsure_turns": [
+          9,
+          13,
+          14,
+          17
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 4,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.79,
+          "exploration_share": 0.28,
+          "approved": true,
+          "issues": [
+            "The key mapping finding is only partially explicit. Park says high-canopy blocks are not those with strongest reported use (turn 5) and that straight-line distance may overstate access (turn 9), but she never clearly states that several blocks near the largest park have similarly high nominal access yet very low park use. Adding that concrete comparison would make the seed fully recoverable.",
+            "Alvarez relays avoidance after dark and safety concerns (turns 3 and 6), but the transcript never explicitly identifies the Community Alliance's concern as avoidance after evening violence. The violence detail is implied through the phrase 'evening safety piece' and later discussion, rather than directly stated.",
+            "The final analytic framing remains more cautious and plural than the required narrowed question. Reed retains multiple candidate exposures and calls use a pathway rather than the central exposure (turns 8, 18, and 29). This is methodologically plausible, but the meeting should more clearly state the proposed central inquiry: actual nearby-green-space use and perceived stress, shaped by safety and neighborhood trust.",
+            "Neighborhood trust is mentioned as part of a question bundle (turns 10 and 23), but its intended role in shaping the use-stress relationship is not explicitly discussed or agreed.",
+            "Naturalness is limited by highly polished, consistently complete analytical turns. Although there are fillers, repetitions, and short acknowledgments, most substantive turns articulate a full concern, methodological qualification, and resolution. The closing sequence in turns 24-30 also reads close to orderly written meeting minutes, with each person neatly assigning their next step."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 3 \u2014 April 15, 2027",
+      "disciplines": [
+        "environmental science",
+        "public health",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Elena Park",
+          "discipline": "environmental science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Dr. Park is a postdoctoral urban ecologist with six years of research experience in GIS, remote sensing, and environmental-exposure assessment. Her work has combined high-resolution land-cover classification, municipal tree inventories, and network-based park-access measures to characterize uneven urban greening. She has collaborated with neighborhood organizations on heat and air-quality mapping, though she is cautious about treating self-reported environmental exposure as interchangeable with spatially modeled exposure.",
+          "distinct_perspective": "Park frames green space as a measurable, spatially distributed environmental exposure. She wants to estimate tree-canopy cover and park proximity from land-cover maps, parcel data, and residential buffers, while distinguishing visual vegetation, publicly accessible parks, and potentially usable green infrastructure. She is concerned that social measures may become too diffuse unless the project first specifies a defensible exposure metric and its geographic scale.",
+          "tone": "diplomatic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Marcus Reed",
+          "discipline": "public health",
+          "functional_role": "PhD student",
+          "background": "Dr. Reed is a doctoral candidate in community health sciences with four years of experience designing neighborhood health surveys and coordinating field-based biospecimen collection. His prior work examines psychosocial stress, cardiometabolic risk, and built-environment inequities among under-resourced urban populations. He is trained in epidemiologic study design, validated mental-health instruments, multivariable regression, and salivary cortisol protocols, including participant instructions and time-of-day sampling controls.",
+          "distinct_perspective": "Reed approaches the project as an opportunity to test whether environmental exposure is associated with clinically and population-health-relevant stress outcomes. He favors resident surveys using validated perceived-stress and mental-well-being measures, supplemented by a small salivary cortisol component to provide an objective stress biomarker. He pushes for a tractable analytic design with clear outcomes, covariate adjustment, and sufficient power, and is wary of contextual concepts that cannot be operationalized consistently.",
+          "tone": "enthusiastic",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "skeptical of other disciplines' approaches"
+        },
+        {
+          "name": "Dr. Nia Alvarez",
+          "discipline": "sociology",
+          "functional_role": "PhD student",
+          "background": "Dr. Alvarez is a doctoral candidate in urban sociology with five years of experience conducting interviews, focus groups, neighborhood observation, and mixed-methods research on housing insecurity, public-space use, and neighborhood change. Her dissertation examines how long-term residents navigate redevelopment and shifting perceptions of belonging in disinvested city neighborhoods. She has worked with tenant groups and community-based organizations and emphasizes reciprocal research relationships and interpretation grounded in residents' accounts.",
+          "distinct_perspective": "Alvarez argues that mapped proximity or canopy is not equivalent to meaningful access. Whether residents use a park or experience nearby vegetation as restorative depends on safety, neighborhood trust, policing, maintenance, social ties, caregiving demands, and fears that greening may accelerate displacement. She supports beginning with the broad access-and-well-being question but wants the team to leave open how actual use and social conditions shape, mediate, or complicate any observed association.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "A joint environmental science, public health, and sociology team is preparing a community-based study in Riverton's low-income Southside neighborhoods. The team includes Dr. Elena Park (environmental scientist), Dr. Marcus Reed (public health researcher), and Dr. Nia Alvarez (sociologist), working with the Southside Community Alliance as a local partner.\n\nMeeting 3 \u2014 April 15, 2027. Final scope-setting meeting after a pilot walk audit and survey pretest in the selected Southside areas.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 4, 2027: The study question remained whether access to usable green space is associated with perceived stress and mental well-being among Southside residents, while recognizing that canopy, physically reachable parks, and reported feasible use are distinct constructs. Elena will conduct an area-level map audit of Southside variation, land-cover currency and error, barriers, public versus private green cover, and the access contrast possible without individual addresses. Nia will help bring the Alliance into decisions about acceptable, community-governed location data practices and Alliance-vetted wording for feasible use, safety, caregiving, shifts, displacement concern, housing, and related context. Marcus will keep perceived stress and well-being as the primary outcomes and work toward a small, Alliance-vetted survey item set rather than a broad context scale. The Alliance discussion will also determine whether saliva cortisol collection and its combined burden with location and housing questions are proportionate; if acceptable it would be a small feasibility subsample, and if not the survey remains the primary study. Open issues include the viable precision of location measures, whether exposure variation supports interaction analyses, how to frame redevelopment and displacement, and the causal role of feasibility-related conditions.\nMeeting 2 \u2014 March 25, 2027: The study will distinguish mapped canopy/visible greenness, reachable public green infrastructure, and reported restorative or feasible use rather than treating proximity to the large park as access. The primary outcome plan is repeated brief PSS stress check-ins, with any Alliance-approved greenery and feasibility questions treated as secondary time-varying pathway measures; cortisol is being dropped unless the Alliance specifically raises a small feasibility pilot. Nia will test wording on greenery, feasibility, safety, housing, and related questions with the Alliance, including whether location-oriented wording feels exposing and whether skip options are needed. Elena will audit park entrances, pedestrian links, and canopy composition to assess whether a route-based reachable-infrastructure measure is usable and how much canopy is private versus public or street vegetation. Marcus will revise the budget and survey framing, prepare repeated-contact cost and burden scenarios after Nia's wording check, and avoid describing mapped infrastructure as evidence of meaningful use opportunity. Open issues are the completeness and patterning of spatial network data, the Alliance's response to the proposed survey items, and whether the feasibility item can fit without reducing completion.",
+      "seed_spec": {
+        "task_id": "self_review_01",
+        "benchmark_category": "Self-review",
+        "benchmark_task": "Part 3 of 3 of a multi-part sample for this benchmark task: Provide 3-5 sequential meetings for one project in which the research question evolves. The evaluated AI must accurately map the evolution over time.\nJudge this transcript only on its own part: Park should report that the walk audit found the large central park is too heterogeneous for a single exposure measure, while small tree-shaded streets and pocket parks are the green spaces residents report using during ordinary weekday routines. Reed should report that the survey pretest can reliably capture weekly visits to these local spaces and a short perceived-stress scale, but cannot support causal claims or adequately measure long-term clinical mental-health outcomes. Alvarez should note that residents distinguish feeling safe in familiar, locally used spaces from general trust in the neighborhood, and recommend treating perceived safety as a condition of use rather than attempting to explain all displacement dynamics in this study. In discussion, the team should settle on a specific observational question about whether weekly use of nearby tree-shaded streets and pocket parks is associated with lower perceived stress, and whether perceived safety modifies that association, among adult low-income Southside residents. The team should explicitly retain attention to use rather than simple proximity and should not claim the study will establish causation.",
+        "explicit_instruction": "Park should report that the walk audit found the large central park is too heterogeneous for a single exposure measure, while small tree-shaded streets and pocket parks are the green spaces residents report using during ordinary weekday routines. Reed should report that the survey pretest can reliably capture weekly visits to these local spaces and a short perceived-stress scale, but cannot support causal claims or adequately measure long-term clinical mental-health outcomes. Alvarez should note that residents distinguish feeling safe in familiar, locally used spaces from general trust in the neighborhood, and recommend treating perceived safety as a condition of use rather than attempting to explain all displacement dynamics in this study. In discussion, the team should settle on a specific observational question about whether weekly use of nearby tree-shaded streets and pocket parks is associated with lower perceived stress, and whether perceived safety modifies that association, among adult low-income Southside residents. The team should explicitly retain attention to use rather than simple proximity and should not claim the study will establish causation.",
+        "ground_truth": {
+          "settled_question": "Among adult low-income Southside residents, is weekly use of nearby tree-shaded streets and pocket parks associated with lower perceived stress, and is that association modified by perceived safety?",
+          "drivers_of_change": "The walk audit and survey pretest showed that routine use centered on tree-shaded streets and pocket parks rather than the heterogeneous central park, and that the feasible measures support an observational stress study rather than causal or clinical-outcome claims.",
+          "scope_decisions": "The study focuses on weekly use, perceived stress, and perceived safety; it does not attempt to establish causation or fully model displacement dynamics.",
+          "constant_elements": "The project continues to examine green space and stress among low-income Southside residents, with actual use rather than mere residential proximity as the relevant exposure."
+        }
+      },
+      "ground_truth": {
+        "settled_question": "Among adult low-income Southside residents, is weekly use of nearby tree-shaded streets and pocket parks associated with lower perceived stress, and is that association modified by perceived safety?",
+        "drivers_of_change": "The walk audit and survey pretest showed that routine use centered on tree-shaded streets and pocket parks rather than the heterogeneous central park, and that the feasible measures support an observational stress study rather than causal or clinical-outcome claims.",
+        "scope_decisions": "The study focuses on weekly use, perceived stress, and perceived safety; it does not attempt to establish causation or fully model displacement dynamics.",
+        "constant_elements": "The project continues to examine green space and stress among low-income Southside residents, with actual use rather than mere residential proximity as the relevant exposure."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Hi, both. I was looking back at the walk-audit notes this morning, and I\u2019m still thinking about that little pocket park people kept naming. What I\u2019d most like us to do today is settle on an exposure we can actually defend. Not just distance to the central park, but something that separates the shaded everyday routes and small spaces from just a green polygon on a map."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Mm, yes."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "The pretest really supports that distinction. People could answer about tree-shaded streets and pocket parks, whereas \"green space\" was just too diffuse. Elena, can you identify those categories consistently across all the selected areas? I mean, not every informal shortcut, but recognizable routes and spaces rather than a GIS artifact. A few frequent users didn't call themselves park users at all, which feels important."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think mostly, yes, but I'd call them audited route-and-space categories, not a complete account of where somebody can go. I can map the pocket parks and the pedestrian links, and I can probably classify shaded street segments. Though the imagery is uneven in those two southern blocks, so I need to check that before I promise a clean canopy threshold. Marcus, did people report weekly visits to those smaller places consistently enough that reported routine use could sit alongside the mapped measure, or..."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Mostly, yes. The weekly wording got usable answers, but I'd keep reported routine use separate from the audited exposure. Walking through a shaded route, stopping in a pocket park, and identifying as a \"park user\" were clearly not the same thing. If your route categories hold up in those southern blocks, we can ask about frequency and probably a brief purpose follow-up. That doesn't- I don't want to pretend either measure captures the whole exposure."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "That separation is really important. One thing from the pretest is that the same shaded block could feel calming for an errand in daylight but be somewhere someone avoids after work, so I\u2019d want the routine-use question to leave room for timing and familiarity, not just frequency. And Elena, did the central park\u2019s variation seem mostly about entrances and routes, or what people encountered once they got inside?"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "It was both, but the route was the first-order difference. A lot of blocks that looked close had no continuous, legible way in, and then once people got inside, the shade and maintenance changed pretty abruptly depending on the entrance. So I don't think we should assign one park exposure at all. Maybe the audited measure is specific entrances and connected shaded segments, and the use item captures whether any of that is actually workable at the relevant time, but..."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Right, that tracks."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "I\u2019d be careful that the use item anchors people in a familiar route or place they actually use, instead of asking whether they feel safe in Southside generally. Those were very different things in the pretest. Could it also say something about their usual time of day? Not a whole schedule, just enough so daylight errands and after-work avoidance don\u2019t get collapsed into one answer."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think usual time of day is necessary, but I'd keep it really coarse, like daylight, after work, or other, so it doesn't turn into a diary. What I'm still unsure about is whether that makes reported use a pathway measure instead of an exposure in its own right. That pocket park with almost no canopy got named constantly, and the greener block nearby didn't, so the mapped layer plainly won't explain that difference by itself."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I'd treat it as both, but not interchangeably. The audited route-and-entrance measure is our external exposure metric. Reported workable use is plausibly on the pathway, and maybe time-specific safety modifies it. The named low-canopy pocket park is exactly why I don't want to collapse them into one score. Do we know what people said they were actually doing there, whether they were lingering or just passing through..."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Mostly brief stops, waiting for someone, sitting for ten minutes, letting a child play, that kind of thing, and a few people mentioned the bus stop right beside it. So it may be functioning as a routine pause point more than a destination. That makes me wonder, Nia, when they called it pleasant or safe, did that seem tied to the activity and familiarity, rather than the vegetation itself?"
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Mostly, yes, it sounded tied to the activity and to relationships. People talked about seeing familiar faces, being able to keep an eye on a child, or knowing the bus timing, not just, \"there are trees here.\" For adult Southside residents, I think we can ask what they usually do there and when. I\u2019d hesitate to- I wouldn\u2019t label that as a general safety characteristic of either the person or the neighborhood."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "That argues against a generic safety scale pretty strongly. I\u2019d make it a narrow, time-specific condition around the route or place, whether it feels workable for the activity they\u2019re describing, and then test it as a possible modifier, not call it neighborhood trust. I do need to check the final enrollment assumptions before we promise an interaction, though. Those estimates get thin fast."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I\u2019m comfortable not designing around an interaction we may not be powered to estimate. I\u2019d rather keep the external metric as the audited, connected route-and-space layer, and let the time-specific workable-use item tell us why a mapped segment or pocket park is, is or isn\u2019t part of somebody\u2019s routine. I do need to verify the southern-block shade classification before we freeze that layer, though."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "That feels right. One small guardrail though, for adult low-income Southside residents, I don\u2019t think we should read a low workable-use response as an individual deficit or a stable safety attitude. It\u2019s about whether that particular route or pause point works for what they need to do at that time. I\u2019ll check the Alliance-vetted wording once more to make sure it keeps that anchor."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Exactly. And it also means I shouldn\u2019t bake that workable-use response back into the GIS layer as if it validates the vegetation classification. It\u2019s describing a different thing. I\u2019ll check the southern imagery and, if the shade threshold is unreliable there, keep those segments flagged rather than force a false-precision, uh, canopy measure."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Flagging it rather than imputing a crisp threshold is the right call. For the survey, if that layer stays heterogeneous, I'd rather preserve the audited category and adjust for the obvious individual and household covariates than manufacture a continuous canopy dose. And we should be explicit that this is an observational association with short-term perceived stress, not- not evidence of clinical change."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I\u2019m fine with not forcing a continuous dose, but I\u2019d be a little cautious about calling the route-and-space layer a single exposure category when shade quality is uncertain in part of Southside. I can keep entrance connectivity, pocket-park access, and audited street shade as separate components, and explicitly mark the southern segments as uncertain. That\u2019s more honest than having an adjusted model make them look equivalent, and\u2014"
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Separate components are cleaner analytically too. We can prespecify them rather than aggregate them. Connected entrance access, pocket-park availability, and audited shade where classification is defensible. And the flagged southern segments, I just don't want to treat those as zero exposure. We can put them in a sensitivity analysis, because the model shouldn't imply comparability that the audit can't support."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "And when we write the interpretation, I'd keep the housing, policing, and redevelopment questions out of that adjustment set unless we have a very specific reason. They matter, obviously, but a few items won't let us model displacement dynamics responsibly. Better to keep the scope on these route-and-place conditions and be clear about what the study isn't claiming."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "From the outcome side, I\u2019d keep those out of the primary adjustment model too. They\u2019re too plausibly upstream of both what routes are workable and weekly stress, and the abbreviated items could- they could create more interpretive trouble than they solve. We can still describe the broader Southside context without treating it as a covariate menu."
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "I think that keeps the causal story from getting quietly overextended. On the map side, then, I\u2019ll preserve those three components and the uncertainty flags, rather than trying to fold broader neighborhood conditions into an exposure index. The pocket-park result is already a pretty good, uh, warning against that."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Mm-hm."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "I think we have a defensible scope now. Repeated perceived-stress check-ins are the primary outcome, we keep the three audited components separate, and the route-or-place, time-specific workable-use item is a secondary pathway measure. I\u2019ll rerun the enrollment and response assumptions before we say anything about effect modification. If it\u2019s underpowered, we should leave that explicitly exploratory, and\u2014"
+        },
+        {
+          "speaker": "Dr. Elena Park",
+          "text": "Okay, I think we\u2019ve covered what I needed for today. I\u2019ll follow up once I\u2019ve checked those southern, southern imagery issues. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Marcus Reed",
+          "text": "Sounds good. Appreciate it\u2014talk soon."
+        },
+        {
+          "speaker": "Dr. Nia Alvarez",
+          "text": "Thanks, both. Bye."
+        }
+      ],
+      "seed_location": "Incomplete/absent as a full match. Relevant partial evidence: turns 3-7 and 10-12 support routine use of tree-shaded streets and pocket parks and reject a single central-park exposure; turn 18 explicitly limits the study to observational associations with short-term perceived stress rather than clinical change; turns 13-16 distinguish familiar, time-specific workable safety from general neighborhood trust; turns 21-23 decline to model displacement dynamics. However, the required settled question is not reached: turn 25 retains audited components as primary exposure measures, calls workable use a secondary pathway measure, and leaves effect modification by safety contingent/exploratory rather than settling the specified weekly-use/safety-modified association question. The transcript also does not explicitly state that the pretest reliably captures a short perceived-stress scale or weekly visits to local spaces, though turns 3 and 5 provide partial support for weekly-use measurement.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          13,
+          14,
+          18,
+          21,
+          22,
+          25
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "The exact settled question is never explicitly stated. Turns 14 and 25 make perceived safety a possible or exploratory modifier contingent on power, rather than settling that it will modify the weekly-use/perceived-stress association as required by the ground truth.",
+          "Reed does not clearly report that the pretest reliably captures a short perceived-stress scale. He refers to perceived stress as an outcome in turns 18 and 25, but the pretest evidence is stated mainly for weekly-use wording in turns 3 and 5.",
+          "The transcript does not clearly say that small tree-shaded streets and pocket parks were the spaces residents reported using during ordinary weekday routines. It supports this indirectly through routine-use discussion and examples, but the required audit finding is not cleanly reported in one identifiable statement.",
+          "Naturalness is limited by highly polished, turn-by-turn analytic progression: most substantive turns present a complete point, caveat, and proposed resolution. The discussion repeatedly converts uncertainty directly into a study-design decision, especially turns 14-25, making it read more like authored deliberation than an unstructured live meeting.",
+          "Turn 25 functions as a compact written-style recap of decisions and action items, which is a listed naturalness tell."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.16,
+        "turn_moves": {
+          "proposal": 10,
+          "backchannel": 3,
+          "request": 1,
+          "answer": 3,
+          "question": 1,
+          "agreement": 4,
+          "concern": 2,
+          "observation": 1,
+          "commitment": 3
+        },
+        "volunteer_turns": [
+          4,
+          16,
+          17,
+          19,
+          23,
+          25,
+          26
+        ],
+        "unsure_turns": [
+          4,
+          10,
+          14,
+          15,
+          19,
+          25
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.74,
+          "exploration_share": 0.19,
+          "approved": false,
+          "issues": [
+            "The team never explicitly settles the required full observational question. Turns 21-25 settle weekly reported routine use as the main exposure and repeated perceived stress as the outcome, but safety remains a 'secondary pathway measure' and Reed explicitly says in turn 23 that he will not include a safety interaction in the primary specification unless sample-size calculations support it. The required question asks whether perceived safety modifies the association.",
+            "The target population is not stated in the meeting. 'Southside' appears in turn 19, but neither adult status nor low-income status is explicitly retained in the settled design, so the ground-truth population cannot be recovered solely from the transcript.",
+            "Alvarez adequately distinguishes local, familiar place-and-time safety from general neighborhood trust (turn 8), but she does not explicitly recommend limiting the study rather than attempting to explain displacement dynamics. Turn 12 says participants did not want to narrate policing or neighborhood history, which is weaker than the requested scope decision.",
+            "The transcript is coherent and contains several genuine-sounding repairs, hesitations, and interruptions, but many substantive turns are polished mini-arguments that cleanly state a caveat, rationale, and proposed resolution. This keeps naturalness below a fully authentic meeting level.",
+            "Reed is notably overrepresented and repeatedly converts open questions into analytic decisions (especially turns 6, 9, 11, 13, 21, 23, and 25). This supports his dominant persona but makes the interaction somewhat more scripted and solution-forward than the specified polite-friction style."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.16,
+          "approved": false,
+          "issues": [
+            "The exact settled question is never explicitly stated. Turns 14 and 25 make perceived safety a possible or exploratory modifier contingent on power, rather than settling that it will modify the weekly-use/perceived-stress association as required by the ground truth.",
+            "Reed does not clearly report that the pretest reliably captures a short perceived-stress scale. He refers to perceived stress as an outcome in turns 18 and 25, but the pretest evidence is stated mainly for weekly-use wording in turns 3 and 5.",
+            "The transcript does not clearly say that small tree-shaded streets and pocket parks were the spaces residents reported using during ordinary weekday routines. It supports this indirectly through routine-use discussion and examples, but the required audit finding is not cleanly reported in one identifiable statement.",
+            "Naturalness is limited by highly polished, turn-by-turn analytic progression: most substantive turns present a complete point, caveat, and proposed resolution. The discussion repeatedly converts uncertainty directly into a study-design decision, especially turns 14-25, making it read more like authored deliberation than an unstructured live meeting.",
+            "Turn 25 functions as a compact written-style recap of decisions and action items, which is a listed naturalness tell."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 4,
+    "series_compliance": 3,
+    "issues": [
+      "Meeting 1 does not state the Meeting-1 ground-truth question as a settled question: turn 3 frames access to usable green space and turn 14 retains perceived stress and well-being, but the exact specified formulation of greater access to neighborhood green space is only inferable.",
+      "Meeting 2 does not clearly settle on the stated ground-truth question that actual use of nearby green space is associated with lower perceived stress with both perceived safety and neighborhood trust shaping the relationship. Turn 8 treats feasible use as a behavioral pathway rather than the primary exposure, and neighborhood trust is not adopted as a relationship-shaping factor.",
+      "Meeting 3 explicitly moves away from the required Meeting-2 safety/trust framing: turn 14 says the team should test narrow time-specific workability as a modifier and \"not call it neighborhood trust.\"",
+      "Meeting 3 does not establish the stated final question as settled. Turns 25 and 15 make effect modification exploratory or contingent on power, while turns 3-5 and 18-20 preserve multiple distinct audited environmental components rather than a final question centered specifically on weekly use of tree-shaded streets and pocket parks.",
+      "The final two meetings do preserve the general actual-use-versus-simple-access insight, but the supplied ground-truth transitions require more definitive question revisions than the meetings document."
+    ]
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns outside of the formal presentations, while speakers give long, slide-driven monologues. There is frequent backchanneling\u2014\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat,\u201d \u201cright\u201d\u2014and occasional overlap, especially in greetings, technical setup, and follow-up questions, but interruptions are generally supportive rather than competitive. Participants speak informally, with many fillers, repetitions, self-corrections, false starts, and lightly fragmented phrasing; several speakers hedge with \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and \u201cI guess.\u201d Questions are often prefaced modestly as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions and tend to unfold conversationally through follow-ups rather than as tightly structured challenges. Praise is frequent and warm, while disagreement or uncertainty is expressed indirectly through caveats, alternative explanations, and admissions that something is unclear or still early. Participants build on each other by referencing prior remarks, restating part of an answer, and inviting later collaboration, maintaining an encouraging, intellectually exploratory tone.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

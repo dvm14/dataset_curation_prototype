@@ -1,0 +1,358 @@
+{
+  "transcript_id": "cc740b00",
+  "generated_at": "2026-11-21T21:38:39.444844",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short to medium turns, though presenters speak in long, structured monologues and answer questions at length. Early conversation is informal and chatty, with greetings, technical checks, side comments, and frequent brief acknowledgments like \u201cyeah,\u201d \u201cokay,\u201d and \u201cright.\u201d Overlap and interruption are light but natural, especially in transitions and follow-up questions. Speakers hedge often\u2014\u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d \u201cit seems\u201d\u2014and use self-corrections, repeated words, false starts, and unfinished phrasing. Questions are generally polite and exploratory, often prefaced with praise or disclaimers such as \u201cgreat talk,\u201d \u201cquick question,\u201d or \u201cnaive question,\u201d then developed aloud in several clauses. Challenges are indirect and framed as curiosity or requests for clarification rather than disagreement. Participants build on one another by referencing prior questions, affirming points, and adding related possibilities. Formal introductions and closing remarks are more polished, but the overall tone remains warm, enthusiastic, and conversational.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Deciding how to restore a degraded tidal marsh so it both recovers native vegetation and reduces storm-surge damage to nearby homes.",
+  "disciplines": [
+    "ecology",
+    "environmental engineering",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lena Ortiz",
+      "discipline": "ecology",
+      "functional_role": "domain expert",
+      "background": "Coastal wetland ecologist with 16 years of experience studying tidal-marsh restoration along urbanized Atlantic estuaries. She leads field programs combining vegetation transects, permanent elevation plots, porewater salinity sampling, and reference-marsh comparisons to evaluate whether restored marshes regain locally characteristic plant communities. She has advised on sediment-placement projects and is attentive to both short-term burial stress and longer-term plant recovery.",
+      "distinct_perspective": "Ortiz evaluates alternatives primarily through ecological trajectory: whether marsh-surface conditions can support the return of locally characteristic native plant cover and species composition, rather than merely producing a stable shoreline. She treats sediment characteristics, surface height relative to tidal water levels, salinity conditions, and reference-site evidence as linked determinants of vegetation recovery. She will press the group to state ecological targets in measurable terms while accepting engineering and economic constraints if they do not compromise the restoration objective.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Ravi Shah",
+      "discipline": "environmental engineering",
+      "functional_role": "postdoctoral researcher",
+      "background": "Environmental engineer and coastal-modeling postdoctoral researcher with 5 years of experience in marsh-edge stabilization and storm-water dynamics. His work uses water-level, current, and wave simulations to compare how shoreline designs affect flooding and wave energy during specified storm scenarios. He has supported design review for living shorelines and sediment-placement projects, translating model assumptions and construction constraints into clear comparisons for public agencies.",
+      "distinct_perspective": "Shah focuses on whether each alternative can reliably reduce wave energy and shallow flooding under the agreed storm scenario, while remaining constructible within the site's physical limits. He is cautious about conclusions drawn from ecological indicators or monetary estimates unless their assumptions are traceable to the same model inputs and scenario. He prefers clear, testable design parameters and will emphasize uncertainty in the preliminary water-and-wave simulation before endorsing performance claims.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Mei Chen",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "Environmental and public-sector economist with 14 years of experience evaluating coastal resilience investments for counties and regional planning agencies. She develops 30-year discounted comparisons of capital costs, maintenance costs, and storm-related residential losses, using property market data as an input to modeled damage estimates. Her recent work has examined how uncertainty in storm frequency, engineering performance, and avoided losses affects restoration recommendations before capital-budget decisions.",
+      "distinct_perspective": "Chen frames the choice as a transparent comparison of costs and benefits over a common time horizon, anchored to the same no-action comparison and storm assumptions used by the other disciplines. She distinguishes market value of homes from the value of damage avoided, and will ask whether modeled physical protection is sufficient to justify claimed monetary benefits. She is willing to advance an option with incomplete information if uncertainty is identified, bounded, and paired with a feasible analysis schedule.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "tidal_wetland_restoration",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 4,
+  "task_id": "jargon_03",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_03",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+    "explicit_instruction": "Hold a planning meeting in which the participants establish a short shared glossary before discussing options. Dr. Ortiz defines native vegetation recovery as the return of locally characteristic marsh plant cover and species composition, measured against a nearby intact reference marsh; she defines sediment elevation as marsh-surface height relative to local tidal water levels; and she defines salinity as the concentration of dissolved salts in marsh water or soil water. Shah defines wave attenuation as the reduction in wave energy between the marsh edge and the homes; defines the design storm as the specified storm scenario used consistently for comparing alternatives; and defines hydrodynamic model as a computer representation of water levels, currents, and waves. Chen defines avoided storm damage as the estimated monetary value of residential damage prevented relative to taking no restoration action; defines cost-benefit analysis as comparison of discounted project costs and benefits over the same 30-year period; and defines property value as the market value of affected homes, used only as an input to damage estimates rather than as a separate benefit. All speakers must use these definitions consistently and should explicitly confirm that the same no-action baseline, 30-year analysis period, and design storm will be used across ecological, engineering, and economic comparisons. The team should decide to advance the combined sediment-placement and living-shoreline option for further analysis, contingent on verifying sediment suitability and refining the hydrodynamic model. Ortiz is assigned to assess sediment suitability and vegetation-recovery targets by 15 May 2027; Shah is assigned to refine wave-attenuation estimates for the agreed design storm by 1 June 2027; Chen is assigned to calculate avoided storm damage and the 30-year cost-benefit analysis using Shah's model outputs by 20 June 2027. No terminology conflict, ambiguous use, inconsistent definition, or undefined technical term should be introduced.",
+    "ground_truth": {
+      "terminology_problems": [],
+      "shared_definitions": {
+        "native vegetation recovery": "Return of locally characteristic marsh plant cover and species composition, measured against a nearby intact reference marsh.",
+        "sediment elevation": "Marsh-surface height relative to local tidal water levels.",
+        "salinity": "Concentration of dissolved salts in marsh water or soil water.",
+        "wave attenuation": "Reduction in wave energy between the marsh edge and the homes.",
+        "design storm": "Specified storm scenario used consistently for comparing alternatives.",
+        "hydrodynamic model": "Computer representation of water levels, currents, and waves.",
+        "avoided storm damage": "Estimated monetary value of residential damage prevented relative to taking no restoration action.",
+        "cost-benefit analysis": "Comparison of discounted project costs and benefits over the same 30-year period.",
+        "property value": "Market value of affected homes, used only as an input to damage estimates rather than as a separate benefit."
+      },
+      "consistent_comparison_conditions": {
+        "baseline": "No restoration action.",
+        "analysis_period": "30 years.",
+        "storm_scenario": "The agreed design storm."
+      },
+      "decisions": {
+        "option_advanced": "Combined thin-layer sediment placement and living-shoreline edge stabilization option.",
+        "conditions": [
+          "Verify sediment suitability.",
+          "Refine the hydrodynamic model."
+        ]
+      },
+      "assignments": [
+        {
+          "owner": "Dr. Lena Ortiz",
+          "task": "Assess sediment suitability and vegetation-recovery targets.",
+          "due": "15 May 2027"
+        },
+        {
+          "owner": "Ravi Shah",
+          "task": "Refine wave-attenuation estimates for the agreed design storm.",
+          "due": "1 June 2027"
+        },
+        {
+          "owner": "Mei Chen",
+          "task": "Calculate avoided storm damage and the 30-year cost-benefit analysis using the engineering model outputs.",
+          "due": "20 June 2027"
+        }
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not fully realized. The transcript uses several terms consistently and confirms the no-action baseline, 30-year horizon, and agreed design storm (turns 1-3), but it does not establish the requested shared glossary early: native vegetation recovery is only described indirectly (turns 1, 7), sediment elevation is defined in turn 7, and the other required terms are not explicitly defined. The required decision to advance the combined sediment-placement and living-shoreline option is not made; it is discussed as a possible option (turns 4, 6, 8). Assignments are only partially present: Ortiz's due date appears in turn 7 and Shah's in turn 8, while Chen states an intended analysis by 20 June 2027 in turn 9, but the specified assignments are not formally completed or confirmed.",
+  "ground_truth": {
+    "terminology_problems": [],
+    "shared_definitions": {
+      "native vegetation recovery": "Return of locally characteristic marsh plant cover and species composition, measured against a nearby intact reference marsh.",
+      "sediment elevation": "Marsh-surface height relative to local tidal water levels.",
+      "salinity": "Concentration of dissolved salts in marsh water or soil water.",
+      "wave attenuation": "Reduction in wave energy between the marsh edge and the homes.",
+      "design storm": "Specified storm scenario used consistently for comparing alternatives.",
+      "hydrodynamic model": "Computer representation of water levels, currents, and waves.",
+      "avoided storm damage": "Estimated monetary value of residential damage prevented relative to taking no restoration action.",
+      "cost-benefit analysis": "Comparison of discounted project costs and benefits over the same 30-year period.",
+      "property value": "Market value of affected homes, used only as an input to damage estimates rather than as a separate benefit."
+    },
+    "consistent_comparison_conditions": {
+      "baseline": "No restoration action.",
+      "analysis_period": "30 years.",
+      "storm_scenario": "The agreed design storm."
+    },
+    "decisions": {
+      "option_advanced": "Combined thin-layer sediment placement and living-shoreline edge stabilization option.",
+      "conditions": [
+        "Verify sediment suitability.",
+        "Refine the hydrodynamic model."
+      ]
+    },
+    "assignments": [
+      {
+        "owner": "Dr. Lena Ortiz",
+        "task": "Assess sediment suitability and vegetation-recovery targets.",
+        "due": "15 May 2027"
+      },
+      {
+        "owner": "Ravi Shah",
+        "task": "Refine wave-attenuation estimates for the agreed design storm.",
+        "due": "1 June 2027"
+      },
+      {
+        "owner": "Mei Chen",
+        "task": "Calculate avoided storm damage and the 30-year cost-benefit analysis using the engineering model outputs.",
+        "due": "20 June 2027"
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "My apologies, I'm a couple of minutes late. Have you both already got underway, or are we just starting? I was hoping today we could get clear on what evidence each option needs to meet, not only surge reduction but a measurable vegetation-recovery target against the intact reference marsh, and make sure we're all comparing against the same, same no-action baseline, 30-year horizon, and design storm."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "Yeah, we're just starting. I'm glad you raised that, because I need the no-action baseline, the 30-year horizon, and one design storm locked in before I compare model outputs or attach any flood-reduction claim to an option. My update is, the preliminary runs do show edge wave reduction for the living shoreline, but shallow flooding at one inland point barely, barely moves, so I'm still checking the water levels and how we represented the existing edge."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "That distinction matters economically, because I can't translate an edge-wave result into avoided residential damage unless the model is also credible on inland water levels. Ravi, do you have a sense yet whether that near-zero change is a physical finding, or is it an artifact of how we represented the existing edge? For my comparison, I'd use no action, the same 30-year period, and the agreed design storm across all three options, but\u2014"
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "Not yet. I think it could be either, which is why I don't want to call it a performance result. I need to check the water-level boundary inputs and the existing-edge geometry, then I can see whether adding thin-layer sediment in the combined layout changes that inland response. Lena, from the 2026 observations, is there a placement depth where burial stress becomes a real concern for the local plants, or..."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "There isn't one safe placement depth that's independent of starting elevation and hydroperiod. For the low marsh, even a relatively thin lift can bury existing shoots and push the surface above the local elevation range for the characteristic assemblage. I'd need the proposed depth, grain size, contaminants, and the post-placement surface relative to tidal water levels before putting a number on it. The 2026 pattern is a little odd, too. Some low plots kept substantial native cover at higher porewater salinity, so salinity alone doesn't seem to explain the losses."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "That makes it hard to put a dollar value on the ecological performance threshold too early, which is useful to know. Lena, could we measure sediment suitability and a defensible vegetation-recovery target soon enough for the September 2027 capital cycle? And what field evidence would make you comfortable moving the combined option forward instead of treating it as speculative?"
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "I think so, as long as we treat it as a defined assessment and don't just assume recovery. I'd need the sediment grain size and contaminant results, the intended lift across the elevation gradient, and a post-placement elevation analysis\u2014 the surface height relative to local tidal water levels. Then we could set targets for native cover and species composition against the reference marsh. If those support an appropriate hydroperiod, I could deliver the suitability assessment and recovery targets by 15 May 2027."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "That gives me a useful gate for the combined layout. I can't treat the added sediment as helping the inland flooding result until we know the lift is actually suitable across those elevations. Once you have the proposed surface ranges, I can put those into the model instead of using a generic sediment layer. I should- I can have the revised wave-attenuation comparison for the agreed design storm by 1 June."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "That sequencing works for me. If the revised model gives us a stable result for each option on inundation and waves by 1 June, and Lena's suitability screen is available by 15 May, then I can run the 30-year discounted comparison by 20 June 2027. That would include avoided storm damage relative to no action. I do need to check first whether the shoreline estimates- whether they include credible maintenance and replacement allowances over the full period."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "One thing I'd like Mei to check, along with the large-loss events, is whether the repeated shallow floods show up in the residential records in a material way. Ecologically, those events matter for the marsh hydroperiod too, but I don't know if they add enough to the damage totals to change the economic comparison."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "I\u2019ll separate the recurrent shallow-flood losses from the event tail, rather than letting the handful of major storms dominate the inference. The records are uneven. Similar-valued homes have very different damage histories, so I need to figure out whether that\u2019s exposure, reporting, or repair practice before assigning avoided-damage benefits. Property values will stay as inputs to the damage estimates, not an additional benefit category."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Yes, separating those mechanisms will make the avoided-damage estimate much more interpretable."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "Agreed\u2014the separation should also show whether those recurring losses materially affect the ranking."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Yes, that breakdown should make the tradeoffs much clearer."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "For the model side, even a modest reduction in those recurring shallow floods could matter. But I need to separate that from saying it reduces the big design-storm water level. Mei, when you do the 30-year comparison against no action, how sensitive is the result if the change is mostly those smaller, repeated losses rather than a large avoided- I mean, avoided-damage event?"
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "It could still matter, but it depends on the annualized loss profile and the cost side. I would model the recurrent losses separately and apply the same storm-frequency assumptions across options, then test a range of attenuation rates. If benefits build up reliably over many years, their present value can be substantial even without a dramatic design-storm effect. But I would not infer that from the current records until we understand why the household histories diverge."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "Yeah, that\u2019s the right sensitivity to show over the full 30 years."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "All right, I think we can leave it there for today. I'll follow up by email. Thank you both."
+    },
+    {
+      "speaker": "Mei Chen",
+      "text": "Thank you, Lena and Ravi. Goodbye."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "text": "Okay, talk soon."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      12,
+      16,
+      17
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turns 1-17 never conduct the required early shared glossary. The ground-truth definitions for native vegetation recovery, sediment elevation, salinity, wave attenuation, design storm, hydrodynamic model, avoided storm damage, cost-benefit analysis, and property value are not explicitly established, so the empty terminology-problems answer is not fully recoverable from the transcript.",
+      "Several required definitions are only partially implied rather than stated. For example, turn 7 describes post-placement elevation analysis but does not label and define it as sediment elevation; turns 2 and 8 refer to wave reduction/attenuation without defining it as reduction in wave energy between marsh edge and homes; and no turn defines a hydrodynamic model as a computer representation of water levels, currents, and waves.",
+      "The required decision to advance the combined thin-layer sediment-placement and living-shoreline option is not made explicitly. Turns 7-9 provide contingent analysis gates, but no participant states that the combined option has been selected for further analysis contingent on sediment suitability and hydrodynamic-model refinement.",
+      "Chen's assignment in turn 9 says she will run a 30-year discounted comparison and include avoided storm damage, but it does not explicitly call this a cost-benefit analysis or say it will use Shah's model outputs, as required by the ground truth.",
+      "The transcript has a polished, task-oriented cadence despite some natural markers. Turns 11-15 contain a notably tidy chain of agreement and near-repetitive restatement, and most concerns are immediately converted into assignments or analysis steps; this limits exploratory meeting behavior.",
+      "The round-robin update style is only partly realized: the conversation begins with planning and shared comparison criteria rather than clearly having each participant report what they completed since the previous meeting."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.79,
+    "written_turns": [
+      7,
+      12,
+      17
+    ],
+    "exploration_share": 0.17,
+    "turn_moves": {
+      "proposal": 1,
+      "observation": 1,
+      "question": 2,
+      "answer": 3,
+      "request": 2,
+      "commitment": 5,
+      "backchannel": 3,
+      "agreement": 4
+    },
+    "volunteer_turns": [
+      7,
+      8,
+      9,
+      11,
+      12,
+      19
+    ],
+    "unsure_turns": [
+      2,
+      4,
+      5,
+      9,
+      11,
+      12,
+      17
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 20,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.76,
+      "exploration_share": 0.22,
+      "approved": false,
+      "issues": [
+        "The required opening is missing: turn 1 does not have anyone apologize for being a couple of minutes late or ask where the group has got to.",
+        "Several required glossary definitions are absent. Turn 3 defines native vegetation recovery and sediment elevation, and turn 10 defines wave attenuation, but nobody defines salinity, design storm, or hydrodynamic model as required by the seed/ground truth.",
+        "The terminology control is compromised by undefined technical terms beyond the required glossary, including 'damage function' (turn 2), 'inundation regime' (turn 3), 'sensitivity range' (turn 5), 'boundary water levels' (turn 8), 'porewater salinity' (turn 12), 'redox conditions' (turn 16), and 'geocode' (turn 9). This conflicts with the requirement that every technical term be defined early and that no undefined technical term be introduced.",
+        "The common comparison conditions are only partially explicit. Turn 1 mentions a no-action baseline, 30 years, and one design storm, and turn 2 repeats the horizon, but the speakers do not explicitly confirm that these conditions apply across ecological, engineering, and economic comparisons.",
+        "The decision to advance the combined sediment-placement and living-shoreline option is not made explicitly. Turns 14-18 discuss a 'combined option' conditionally, but no turn clearly states that the team has decided to advance the specified combined thin-layer sediment-placement and living-shoreline edge-stabilization option.",
+        "Assignments omit the required year 2027. Turns 16-18 give 15 May, 1 June, and 20 June, but the benchmark ground truth requires dated assignments in 2027.",
+        "Ravi's assignment is broader and less specific than required: turns 17-18 promise refined water-level and wave comparisons, but do not explicitly assign refinement of wave-attenuation estimates for the agreed design storm.",
+        "Chen is not explicitly assigned to conduct the complete 30-year cost-benefit analysis using Shah's engineering-model outputs. Turn 18 promises an 'avoided-damage and 30-year comparison,' which is weaker than the ground-truth task wording.",
+        "Naturalness is limited by a written-meeting tell: many substantive turns are polished, complete mini-arguments that neatly state uncertainty and end with a clear implication or request (especially turns 2, 9, 14, 16, and 18). The disfluencies are mostly surface-level additions to otherwise finished prose.",
+        "The transcript has some natural exploratory uncertainty, especially in turns 5, 8, 12, and 13, but it lacks the required late-arrival opening and otherwise moves unusually efficiently from each concern to a proposed next step."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 21,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.79,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "Turns 1-17 never conduct the required early shared glossary. The ground-truth definitions for native vegetation recovery, sediment elevation, salinity, wave attenuation, design storm, hydrodynamic model, avoided storm damage, cost-benefit analysis, and property value are not explicitly established, so the empty terminology-problems answer is not fully recoverable from the transcript.",
+        "Several required definitions are only partially implied rather than stated. For example, turn 7 describes post-placement elevation analysis but does not label and define it as sediment elevation; turns 2 and 8 refer to wave reduction/attenuation without defining it as reduction in wave energy between marsh edge and homes; and no turn defines a hydrodynamic model as a computer representation of water levels, currents, and waves.",
+        "The required decision to advance the combined thin-layer sediment-placement and living-shoreline option is not made explicitly. Turns 7-9 provide contingent analysis gates, but no participant states that the combined option has been selected for further analysis contingent on sediment suitability and hydrodynamic-model refinement.",
+        "Chen's assignment in turn 9 says she will run a 30-year discounted comparison and include avoided storm damage, but it does not explicitly call this a cost-benefit analysis or say it will use Shah's model outputs, as required by the ground truth.",
+        "The transcript has a polished, task-oriented cadence despite some natural markers. Turns 11-15 contain a notably tidy chain of agreement and near-repetitive restatement, and most concerns are immediately converted into assignments or analysis steps; this limits exploratory meeting behavior.",
+        "The round-robin update style is only partly realized: the conversation begins with planning and shared comparison criteria rather than clearly having each participant report what they completed since the previous meeting."
+      ]
+    }
+  ]
+}

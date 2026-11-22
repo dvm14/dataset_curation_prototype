@@ -1,0 +1,348 @@
+{
+  "transcript_id": "680481c1",
+  "generated_at": "2026-11-21T21:42:38.226477",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial academic video-call style, with mostly short to medium turns outside the presentations and long, structured monologues during talks. There is frequent low-stakes overlap around greetings, acknowledgments, and jokes, but speakers generally wait their turn during formal Q&A. Participants use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d repeated words, self-corrections, and restarted sentences\u2014giving the exchange an unpolished, spontaneous feel. The register is informal but professionally respectful: people praise talks warmly, ask technically detailed questions, and hedge heavily with phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201csort of,\u201d \u201cI guess,\u201d and \u201cI\u2019m not sure.\u201d Questions often begin with compliments or framing comments, then become exploratory and multipart. Challenges are indirect and collaborative, usually phrased as curiosity, alternative possibilities, or requests for clarification rather than disagreement. Speakers build on one another by referencing prior questions, adding related examples, and inviting follow-up discussion, while the host uses brief procedural transitions and upbeat thanks to keep the session moving.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating a program in which community health workers conduct home visits for patients with uncontrolled high blood pressure.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "public health"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "clinical medicine",
+      "functional_role": "PhD student",
+      "background": "A physician and third-year PhD student in clinical epidemiology with 8 years of outpatient primary-care experience. Her research focuses on hypertension quality measurement, electronic health-record data extraction, and pragmatic evaluations of care-delivery interventions. She has worked with clinic teams to standardize blood-pressure measurement procedures and reconcile clinical records with study assessments.",
+      "distinct_perspective": "Frames the evaluation around clinically credible and consistently collected blood-pressure outcomes. She is attentive to referral criteria, timing of assessments, measurement protocols, and whether observed changes can be interpreted as meaningful improvements in patient care. She values collaboration with implementation and social-science colleagues, while recognizing that clinical measurement methods must be adapted carefully to home-based support programs.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Luis Ortega",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "A postdoctoral researcher with 6 years of qualitative health-services research experience, including ethnographic observation and semi-structured interviews in safety-net primary-care settings. His prior work examines how institutional trust, language access, and unequal treatment shape engagement with chronic-disease care. He leads coding teams using reflexive thematic analysis and develops interview protocols with patients and frontline workers.",
+      "distinct_perspective": "Treats home visits as relationships embedded in unequal social conditions rather than as a uniform service exposure. He focuses on how patients and community health workers describe reliability, respect, safety, stigma, and practical barriers in the care relationship. He argues that interviews should explain how the program is experienced and delivered, rather than be asked to stand in for clinical outcome measurement.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "public health",
+      "functional_role": "postdoctoral researcher",
+      "background": "A public-health postdoctoral researcher with 7 years of experience evaluating county and community-based chronic-disease programs. She specializes in implementation measurement, health-equity reporting, and linkage of program, clinic, and neighborhood data. Her work has supported local agencies in tracking who is offered services, who receives them, and whether access differs across population groups and clinics.",
+      "distinct_perspective": "Views the program as a county service that must be assessed not only for outcomes but also for fair access and practical delivery. She prioritizes clear reporting of participation across relevant population groups, consistent eligibility criteria, and measures that show whether the program reaches people who are referred. She favors simple, usable measures that county partners can maintain after the evaluation ends.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "chw_blood_pressure",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 5,
+  "task_id": "jargon_03",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_03",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "CONTROL: Give a meeting where every technical term is defined early and used consistently. The evaluated AI is asked to flag terminology problems; false alarms are errors. Do not plant terminology confusion.",
+    "explicit_instruction": "At the start of the meeting, the program manager asks the group to adopt a short shared glossary, and all participants explicitly agree to use these definitions consistently: (1) \"uncontrolled high blood pressure\" means an average clinic blood-pressure reading of at least 140/90 mmHg at referral; (2) \"blood-pressure control\" means an average clinic reading below 140/90 mmHg at the 12-month assessment; (3) \"community health worker,\" abbreviated CHW, means a trained non-licensed program employee who conducts home visits and care-navigation support, not medication prescribing; (4) \"home-visit engagement\" means completion of at least one CHW home visit within 60 days of referral; and (5) \"reach\" means the proportion of eligible referred adults who complete home-visit engagement, reported overall and by race/ethnicity, language, insurance status, and neighborhood. Dr. Chen explains that a stepped-wedge design means clinics begin the program in a randomly assigned sequence, so every clinic eventually receives it. Dr. Ortega confirms that interviews will examine trust as patients' and CHWs' accounts of whether the relationship feels reliable, respectful, and safe enough to discuss care needs; this interview construct is not used as a substitute for the blood-pressure outcome. Priya confirms that equity reporting uses the defined reach measure and the same eligibility criteria at every clinic. The group decides to use blood-pressure control as the primary outcome, home-visit engagement and reach as implementation measures, and interviews to understand observed home-visit practice and trust. Assign Dr. Chen to draft clinical measurement procedures, Dr. Ortega to draft interview procedures, and Priya to draft reach and equity reporting. Do not introduce competing definitions, undefined acronyms, ambiguous terminology, or terminology disagreements. The meeting should be coherent and should not contain a terminology problem for the evaluated assistant to flag.",
+    "ground_truth": {
+      "terminology_problems": [],
+      "reference_assessment": "No terminology problems are present. All technical terms and abbreviations are defined early, retained with the same meaning, and distinguished appropriately across the clinical, sociological, and public-health components.",
+      "agreed_definitions": {
+        "uncontrolled high blood pressure": "Average clinic blood-pressure reading of at least 140/90 mmHg at referral.",
+        "blood-pressure control": "Average clinic blood-pressure reading below 140/90 mmHg at the 12-month assessment.",
+        "community health worker (CHW)": "A trained non-licensed program employee who conducts home visits and care-navigation support, not medication prescribing.",
+        "home-visit engagement": "Completion of at least one CHW home visit within 60 days of referral.",
+        "reach": "The proportion of eligible referred adults who complete home-visit engagement, reported overall and by race/ethnicity, language, insurance status, and neighborhood.",
+        "stepped-wedge design": "Clinics begin the program in a randomly assigned sequence, and every clinic eventually receives it.",
+        "trust": "Patients' and CHWs' accounts of whether the relationship feels reliable, respectful, and safe enough to discuss care needs."
+      },
+      "decisions": [
+        "Use blood-pressure control as the primary outcome.",
+        "Use home-visit engagement and reach as implementation measures.",
+        "Use interviews to understand observed home-visit practice and trust.",
+        "Use identical eligibility criteria for reach reporting across clinics."
+      ],
+      "assignments": {
+        "Dr. Maya Chen": "Draft clinical measurement procedures.",
+        "Dr. Luis Ortega": "Draft interview procedures.",
+        "Priya Nair": "Draft reach and equity reporting."
+      }
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not met. The transcript does not begin with the program manager asking the group to adopt the full shared glossary, does not show all participants explicitly agreeing to use the definitions consistently, does not define the stepped-wedge design, and does not include the specified assignments to Dr. Chen, Dr. Ortega, and Priya. Some definitions are stated consistently in turns 2, 4, 5, 8, 17, and 18, but the requested complete opening glossary and closing assignments are absent.",
+  "ground_truth": {
+    "terminology_problems": [],
+    "reference_assessment": "No terminology problems are present. All technical terms and abbreviations are defined early, retained with the same meaning, and distinguished appropriately across the clinical, sociological, and public-health components.",
+    "agreed_definitions": {
+      "uncontrolled high blood pressure": "Average clinic blood-pressure reading of at least 140/90 mmHg at referral.",
+      "blood-pressure control": "Average clinic blood-pressure reading below 140/90 mmHg at the 12-month assessment.",
+      "community health worker (CHW)": "A trained non-licensed program employee who conducts home visits and care-navigation support, not medication prescribing.",
+      "home-visit engagement": "Completion of at least one CHW home visit within 60 days of referral.",
+      "reach": "The proportion of eligible referred adults who complete home-visit engagement, reported overall and by race/ethnicity, language, insurance status, and neighborhood.",
+      "stepped-wedge design": "Clinics begin the program in a randomly assigned sequence, and every clinic eventually receives it.",
+      "trust": "Patients' and CHWs' accounts of whether the relationship feels reliable, respectful, and safe enough to discuss care needs."
+    },
+    "decisions": [
+      "Use blood-pressure control as the primary outcome.",
+      "Use home-visit engagement and reach as implementation measures.",
+      "Use interviews to understand observed home-visit practice and trust.",
+      "Use identical eligibility criteria for reach reporting across clinics."
+    ],
+    "assignments": {
+      "Dr. Maya Chen": "Draft clinical measurement procedures.",
+      "Dr. Luis Ortega": "Draft interview procedures.",
+      "Priya Nair": "Draft reach and equity reporting."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "What I most want out of today is a measure set we can actually collect consistently across all six clinics, especially for blood pressure. Before we get into that, are we still- are we still assuming the twelve-month assessment can be anchored to referral rather than the first CHW contact?"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I'd anchor it to referral. That gives us the same starting point for every eligible person, including people who never connect with a CHW, and that matters for reach. And so we're using the same terms, home-visit engagement would be- it means completing at least one home visit within 60 days of that referral."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Mm, referral makes sense."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Then I'd keep the clinical definitions fixed. Uncontrolled high blood pressure is an average clinic reading of at least 140/90 at referral, and control is an average clinic reading below 140/90 at the twelve-month assessment. I do need to verify that every EHR can generate those averages without manual review, because the clustered post-urgent-care- because those readings may make it less straightforward than it sounds."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Before we settle that, Maya, what record pattern would make you worry the twelve-month reading isn't really reflecting routine care, say if patients only show up after an urgent-care episode? I'm comfortable with referral as the common anchor, and with CHW meaning the non-licensed employee who provides home visits and navigation, but the clinical measurement rules need to be credible across those different care pathways, and if they're not then..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019d worry if the only qualifying assessment reading is part of an acute-care cluster. If it\u2019s several measurements on the same day or week after an urgent visit, that may reflect transient illness and repeat measurement, not the patient\u2019s usual ambulatory control. We could specify a standard assessment window and maybe use one clinic encounter date instead of treating every individual reading as independent, but I need to see what the extracts actually contain before I fix that."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Hm, that distinction matters."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I'd keep the assessment rule separate from the implementation measures, then, so uncertainty in the clinical extract doesn't change who gets counted as eligible or referred. For reach, we should use the same denominator at every clinic, eligible referred adults, and report the proportion completing home-visit engagement overall and by race or ethnicity, language, insurance status, and neighborhood. Maya, do readings documented outside a standard office visit usually usually enter the extraction at all?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "They often do, but not reliably in a comparable field. Urgent care, nurse-only checks, specialty visits, and patient-reported home values may all show up somewhere in the chart, but the extract can distinguish them only if encounter type and measurement source are populated consistently. I'd limit the primary outcome to clinic-recorded office readings, then assess how much that excludes by clinic. Otherwise, we may be calling different kinds of measurements the same outcome."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "That seems right for the primary clinical outcome. For the interviews, though, I'd want to know whether people experience a nurse-only check or an urgent-care reading as their actual blood-pressure care, because those pathways may be part of why a CHW relationship feels helpful without producing the office-based pattern we expect. We shouldn't collapse that into control, obviously, but it could explain..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That is useful context for interpreting the outcome. I would want the interview guide to ask specifically whether the first home visit changes willingness to discuss medication, transportation, or other barriers with the clinic team. Luis, have CHWs or patients described that kind of shift before? Separately, I need to confirm whether approved address data can support neighborhood reporting without producing small cells we would have to..."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "Yes, I have. It's not- I wouldn't call it a simple attendance effect. Patients often describe a CHW as the person who makes it feel safe or worthwhile to raise medication concerns, but transportation, shift work, or a bad prior clinic interaction can still prevent the visit. I would ask about that distinction directly, and I need to check whether county contact procedures let us recruit both people who completed a visit and those referred but never completed one."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That comparison matters for reach, because the non-completers can't just disappear from the implementation picture. If county procedures allow it, I'd include them in interviews, even if recruitment is more limited, and document the contact process\u2014 the contact pathway. Otherwise, we might mistake barriers to accepting a first visit for problems with the visit itself."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "The contrast is analytically important, but I would not frame non-completion as simply refusal or lack of engagement. People may have safety concerns, unstable housing, work constraints, or uncertainty about who the CHW is. If the county permits contact, interviews with both groups could distinguish those conditions from what happens, happens once a home visit actually occurs."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Right, that is important."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And clinically, that distinction matters too. Someone who never completes a visit may still have a perfectly usable 12-month assessment, so I'd keep them in the outcome denominator under the referral anchor. The primary endpoint is still average clinic blood pressure below 140/90 mmHg at 12 months. Then the implementation and interview data can tell us why that pathway did or didn't occur."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Keeping every eligible referred adult in the outcome denominator also keeps the clinical and service perspectives aligned. For the implementation side, I would just make explicit that reach is the proportion of those eligible referred adults who complete at least one home visit within 60 days. And that should be reported overall and across the equity groups. Otherwise, I was thinking the clinics might quietly apply different referral or eligibility filters."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "I agree with that definition of reach, as long as we keep the distinction between a referral a clinic records and a referral the patient actually understands as an offered service. In the interviews, \u201ctrust\u201d would mean their accounts of whether the CHW relationship feels reliable, respectful, and safe enough to discuss care needs, not a proxy for blood-pressure control. That may help us interpret variation in completion without attributing it too quickly to the individual."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I would keep trust analytically separate from the endpoint, but I do think Luis\u2019s interviews could help us understand a clinical problem we may see, whether patients regard medication follow-up and clinic BP checks as reliable enough to return for them. Priya, before I finalize the assessment specification, do the program data show how far after referral the first, first home-visit attempt is usually recorded?"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I don't know the usual interval yet. I'd need to inspect the program extract because an attempt might get entered on the referral date, after outreach, or only once the visit is scheduled. For reach, I'd preserve the completed visit within 60 days as the measure, but it would help to tabulate the first recorded attempt as a process indicator, especially if one clinic is slow to make initial- to make that first contact."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That would be useful, especially because a delayed first attempt could otherwise get conflated with patient non-completion. For the clinical extract, the immediate question is whether we can get encounter date and encounter type with each office reading. Without those fields, I am not comfortable specifying the averaging rule for the 12-month assessment..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "And I\u2019d want that same extract review to confirm the clinic identifier and referral date are stable, since we need those to assess whether delays in first contact differ across sites. I can hold neighborhood reporting pending the address-data check, rather than promise a breakdown we can\u2019t release without heavy, um, suppression."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "One small point before we close, when we inspect the program extract, could we also check whether preferred language and insurance fields are stable enough across clinics to report reach without extensive recoding? If those fields are uneven, the equity comparisons may look more precise than they are, and the interviews can give context, but they can't repair the denominator\u2014"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I would treat field completeness as part of the reporting, not just a data-cleaning issue. We can retain the defined reach measure, but show missing or unknown race/ethnicity, language, and insurance by clinic, so a difference in documentation doesn't get presented as an access difference. I need to check the address linkage and small-cell rules before I can say the same for neighborhood..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And I\u2019d apply that same transparency to outcome ascertainment. By clinic, we should report how many referred patients have a qualifying office reading in the 12-month, no, 12-month window, not just the control proportion among those observed. Otherwise, differential follow-up could look like a blood-pressure effect. I can draft the clinical extraction specification once we see whether encounter type and date are consistently available."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Let's stop there and give everyone a few minutes back. Thank you, and once the extract checks are underway, we can pick this up."
+    },
+    {
+      "speaker": "Dr. Luis Ortega",
+      "text": "All right, take care, everyone."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thank you, goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      4,
+      5,
+      8,
+      16,
+      17,
+      18
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turns 1-5 do not contain the required opening shared-glossary request by the program manager, nor do all participants explicitly agree to use the full set of definitions consistently.",
+      "The required definition of CHW is incomplete and inconsistent with the ground truth: turn 5 defines CHW as a non-licensed employee who provides home visits and navigation, but omits that the employee is trained and does not prescribe medication.",
+      "The stepped-wedge design is never mentioned or defined. This required ground-truth definition is absent from the entire transcript.",
+      "The reach definition is only partially established before later use: turns 8 and 17 give the denominator and stratifications, but neighborhood reporting is explicitly left pending in turns 11, 22, and 24, rather than being confirmed as part of the agreed reporting definition.",
+      "Required assignments are absent. No turn assigns Dr. Chen to draft clinical measurement procedures, Dr. Ortega to draft interview procedures, and Priya to draft reach and equity reporting; there are only individual offers or statements of what they may draft/check.",
+      "The transcript contains potentially undefined technical terminology, contrary to the control requirement that every technical term be defined early: examples include EHR (turn 4), clustered post-urgent-care readings (turn 4), acute-care cluster (turn 6), extraction/extract (turns 9, 20-24), small cells/suppression (turns 11 and 22), and outcome ascertainment (turn 25).",
+      "Terminology is not fully settled at the start: turns 4-9 repeatedly defer the assessment-window and qualifying-reading rules, creating unresolved clinical measurement language rather than a clean early glossary.",
+      "Naturalness is limited despite several repairs. Most substantive turns are polished, complete mini-arguments that directly convert the preceding concern into a solution or next action; the conversation has little genuine exploration. Turn 26 also functions as a tidy closing recap/transition rather than a naturally messy meeting ending."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.74,
+    "written_turns": [
+      6,
+      9,
+      16,
+      17,
+      18,
+      24
+    ],
+    "exploration_share": 0.23,
+    "turn_moves": {
+      "question": 4,
+      "proposal": 10,
+      "agreement": 4,
+      "answer": 4,
+      "concern": 2,
+      "commitment": 1,
+      "request": 1,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      22,
+      25
+    ],
+    "unsure_turns": [
+      4,
+      6,
+      11,
+      12,
+      20,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 26,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 1,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.79,
+      "exploration_share": 0.24,
+      "approved": false,
+      "issues": [
+        "Turns 1-3 never establish the required opening shared glossary or obtain explicit agreement from all participants to use the definitions consistently. Instead, eligibility and referral definitions remain under discussion through turns 3-9.",
+        "The required definition of community health worker (CHW) is entirely absent. CHW is used without definition in turns 5, 11-15, 19, and 23; there is no statement that CHWs are trained non-licensed program employees providing home visits and navigation rather than prescribing.",
+        "The required definition of reach is not supplied. Turn 7 discusses a denominator, and turns 9 and 22 discuss reporting, but the transcript never defines reach as the proportion of eligible referred adults who complete home-visit engagement, reported overall and by race/ethnicity, language, insurance status, and neighborhood.",
+        "The stepped-wedge design is absent: no one defines random clinic rollout or states that every clinic eventually receives the program.",
+        "The required trust construct is absent. Dr. Ortega discusses relationships, trust-related mechanisms, and interview sampling in turns 8, 15, 17, and 19, but never defines trust as patients' and CHWs' accounts of reliability, respect, and safety to discuss care needs, nor explicitly distinguishes that construct from the blood-pressure outcome.",
+        "Several core terms are actively unsettled or conditionally defined rather than fixed and consistently retained. Eligibility/referral rules are pending extract review in turns 3-7; the 12-month qualifying-reading rule remains provisional in turns 10 and 14; outside-system ascertainment is unresolved in turns 16-18. This conflicts with the control requirement not to plant terminology confusion or competing definitions.",
+        "Turn 12 does state the required uncontrolled-high-blood-pressure threshold, turn 10 states the blood-pressure-control threshold, and turn 11 states the home-visit-engagement threshold, but these definitions are not all given early and are not jointly adopted in a shared glossary.",
+        "The required final decisions are not clearly made. The transcript implies blood-pressure control as an endpoint and discusses engagement/reach, but it never explicitly decides the primary outcome, implementation measures, and interview purpose as specified in the ground truth.",
+        "Assignments are only partial and conditional. Chen says she can specify clinic-BP fields in turn 20, Ortega says he can draft an interview procedure in turn 21, and Priya states what she needs for reporting in turn 22, but there is no explicit assignment to Priya to draft reach and equity reporting and no clear group assignment sequence.",
+        "Naturalness is limited despite some repairs and hedging: most substantive turns are polished, complete mini-arguments that move directly from a concern to a proposed procedure. The discussion is highly agenda-bound and exploration is largely instrumental, with little informal interaction or spontaneous uncertainty beyond data availability.",
+        "Turn 25 ends the meeting abruptly without resolving or explicitly parking several central definitional and procedural questions, which weakens the dialogue's ability to support the supplied clean-control benchmark."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.74,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "Turns 1-5 do not contain the required opening shared-glossary request by the program manager, nor do all participants explicitly agree to use the full set of definitions consistently.",
+        "The required definition of CHW is incomplete and inconsistent with the ground truth: turn 5 defines CHW as a non-licensed employee who provides home visits and navigation, but omits that the employee is trained and does not prescribe medication.",
+        "The stepped-wedge design is never mentioned or defined. This required ground-truth definition is absent from the entire transcript.",
+        "The reach definition is only partially established before later use: turns 8 and 17 give the denominator and stratifications, but neighborhood reporting is explicitly left pending in turns 11, 22, and 24, rather than being confirmed as part of the agreed reporting definition.",
+        "Required assignments are absent. No turn assigns Dr. Chen to draft clinical measurement procedures, Dr. Ortega to draft interview procedures, and Priya to draft reach and equity reporting; there are only individual offers or statements of what they may draft/check.",
+        "The transcript contains potentially undefined technical terminology, contrary to the control requirement that every technical term be defined early: examples include EHR (turn 4), clustered post-urgent-care readings (turn 4), acute-care cluster (turn 6), extraction/extract (turns 9, 20-24), small cells/suppression (turns 11 and 22), and outcome ascertainment (turn 25).",
+        "Terminology is not fully settled at the start: turns 4-9 repeatedly defer the assessment-window and qualifying-reading rules, creating unresolved clinical measurement language rather than a clean early glossary.",
+        "Naturalness is limited despite several repairs. Most substantive turns are polished, complete mini-arguments that directly convert the preceding concern into a solution or next action; the conversation has little genuine exploration. Turn 26 also functions as a tidy closing recap/transition rather than a naturally messy meeting ending."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "transcript_id": "30cd802a",
+  "generated_at": "2026-11-21T17:04:35.457712",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a warm, informal videoconference style, with mostly short-to-medium turns outside the presentations and long, highly structured monologues during talks. Early conversation is loose and overlapping, full of greetings, technical checks, side chatter, repeated acknowledgments, and occasional abrupt topic shifts; interruptions are generally light and cooperative rather than confrontational. Speakers frequently hedge with \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and self-corrections or restarts, especially when asking questions or explaining tentative interpretations. The register is collegial and technically professional but relaxed, with praise, humor, and personal asides mixed into formal introductions and scientific discussion. Questions tend to be prefaced with compliments or disclaimers (\u201cquick,\u201d \u201cnaive,\u201d \u201cgood question\u201d), then asked in exploratory, multi-part form; answers are generous, qualified, and often openly identify uncertainty or future work. Disagreement is indirect, framed as alternative explanations, limitations, or \u201copen questions,\u201d while participants build rapport through affirmations, repeated thanks, and invitations to continue conversations offline.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "computer science",
+      "functional_role": "principal investigator",
+      "background": "An associate professor of computer science with 11 years of experience building and evaluating interactive learning systems, including school-deployed tools. Her recent work combines software reliability testing, human-computer interaction studies, and privacy-aware logging for educational applications. She has led technical pilots with public schools but is less certain how to translate standard system metrics into evidence that matters for classroom learning and instruction.",
+      "distinct_perspective": "Maya treats the tutor as a socio-technical system whose classroom value depends on what it actually delivers under ordinary conditions. She focuses on whether hints are mathematically sound and appropriately scaffolded, whether response latency is acceptable on school networks, and whether interaction logs can be minimized without losing the ability to understand use patterns. She supports a four-classroom comparison but stresses that a technically capable model is not equivalent to a useful instructional tool.",
+      "tone": "diplomatic",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Luis Herrera",
+      "discipline": "education",
+      "functional_role": "postdoctoral researcher",
+      "background": "A postdoctoral researcher in mathematics education with six years of classroom-based research in middle-school algebraic reasoning and proportional reasoning. He has conducted lesson observations, teacher interviews, student work analyses, and design-based studies of digital supports used during regular instruction. Before doctoral study, he taught middle-school mathematics for four years.",
+      "distinct_perspective": "Luis frames the pilot around instructional feasibility rather than tool exposure alone. He wants the tutor to fit existing lesson routines, preserve teachers' authority to interpret student work, grade, and make instructional decisions, and avoid turning teachers into constant monitors of a dashboard. He sees formative evidence in student strategies, classroom observations, and teacher accounts as necessary complements to any learning comparison, while remaining cautious about whether a small pilot can support strong claims about achievement.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "psychology",
+      "functional_role": "PhD student",
+      "background": "A fourth-year PhD student in educational psychology studying adolescents' math anxiety, academic motivation, and responses to feedback. Her work uses short repeated surveys, classroom observations, think-aloud interviews, and mixed-effects analyses to examine how students interpret corrective and encouraging messages during problem solving. She has experience recruiting through district partnerships but has not previously evaluated a full AI tutoring system.",
+      "distinct_perspective": "Priya views the tutor's feedback as an intervention in students' beliefs and emotions, not merely a delivery mechanism for hints. She is attentive to whether corrective feedback feels supportive or exposing, whether encouragement is credible rather than generic, and whether the system changes help-seeking, persistence, or avoidance for students with different levels of math anxiety. She favors collecting student-experience measures alongside process and learning evidence, while remaining open to adapting those measures to classroom constraints and teacher priorities.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 2,
+  "task_id": "coordination_02",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting with a clear research direction but little explicit next-step planning. The evaluated AI must suggest appropriate next steps. Preserve the lack of an explicit complete action plan.",
+  "seed_spec": {
+    "task_id": "coordination_02",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting with a clear research direction but little explicit next-step planning. The evaluated AI must suggest appropriate next steps. Preserve the lack of an explicit complete action plan.",
+    "explicit_instruction": "Run a meeting in which the three disciplines converge on a clear direction: a late-April, four-classroom Grade 7 proportional-reasoning pilot comparing tutor-available lessons with usual practice, with the tutor limited to scaffolded hints and feedback rather than final answers. Computer science should identify that hint quality, response latency on school networks, and privacy-minimizing interaction logs need validation. Education should emphasize feasible classroom routines, formative evidence, teacher workload, and teacher authority over grading and instruction. Psychology should emphasize math anxiety, motivation, and possible student reactions to corrective or encouraging feedback. Participants should agree that the evaluation needs learning/process measures, teacher feasibility evidence, and student-experience measures, and should note that district approval and teacher participation are prerequisites. Do not have the group create a complete work plan, assign owners, set detailed milestones, finalize instruments, settle the exact comparison implementation, or resolve the data-governance protocol. The meeting should end with shared direction but obvious missing coordination details.",
+    "ground_truth": {
+      "research_direction": "Conduct a small, classroom-based Grade 7 proportional-reasoning pilot in late April, comparing lessons where the AI tutor is available with usual classroom practice. Evaluate the tutor as a bounded scaffold: it may provide step-level hints and supportive feedback but should not give final answers, grade students, or replace teacher instructional judgment.",
+      "agreed_evaluation_domains": [
+        "Technical readiness: accuracy and appropriateness of hints, school-network latency, and privacy-minimizing logging.",
+        "Educational feasibility and learning process: formative evidence, productive struggle, classroom routines, and teacher workload.",
+        "Student experience: math anxiety, motivation, and responses to hints and feedback."
+      ],
+      "constraints_and_dependencies": [
+        "District approval is required before the pilot.",
+        "Teacher participation and classroom readiness are required.",
+        "Teachers retain responsibility for grading and final instructional decisions.",
+        "The pilot must not add substantial teacher monitoring burden.",
+        "Privacy requirements require minimized student data collection."
+      ],
+      "appropriate_next_steps_for_the_evaluated_ai_to_suggest": [
+        "Create a short pilot charter that specifies the research questions, comparison condition, tutor boundaries, participating classes, and success criteria.",
+        "Assign a cross-disciplinary owner or lead for each workstream: technical validation, classroom implementation, student/teacher measures, and approvals/data governance.",
+        "Set a backward timeline from the late-April target, including deadlines for district approval, teacher onboarding, technical/network testing, measure selection, and a small pre-pilot rehearsal.",
+        "Define and review the tutor policy for final-answer withholding, hint escalation, feedback tone, teacher override, and escalation of unsafe or inappropriate outputs.",
+        "Develop a data-minimization and consent/approval plan that lists required logs, retention/access rules, de-identification, and the permissions needed from the district and families.",
+        "Select a small, feasible measurement set spanning student learning/process, teacher workload and usability, and student anxiety/motivation, and schedule instrument review or piloting.",
+        "Plan a school-network latency and reliability test in each participating classroom before student use.",
+        "Hold a teacher co-design/readiness session to agree on when students may use the tutor, how teachers monitor use, and how disruptions or misuse will be handled.",
+        "Schedule a decision meeting to resolve the unresolved comparison implementation, final measures, and go/no-go criteria before launch."
+      ],
+      "unresolved_items_to_preserve": [
+        "Named owners and responsibilities.",
+        "Detailed timeline and milestones.",
+        "Exact usual-practice/comparison implementation.",
+        "Final instruments, outcome definitions, and analysis plan.",
+        "Specific logging fields, retention rules, consent process, and data-access protocol.",
+        "Operational classroom routines and teacher training plan.",
+        "Formal go/no-go criteria."
+      ]
+    }
+  },
+  "seed_location": "Turns 1-31. The dialogue converges on a late-April, four-Grade-7-classroom proportional-reasoning pilot with a bounded tutor that gives hints/feedback rather than answers (turns 1, 4-6, 25-29); addresses technical validation of hint quality, network latency, and minimal logs (turns 4, 11, 15, 18, 29); educational feasibility, formative/process evidence, routines, workload, and teacher authority (turns 8-15, 22-29); and student anxiety/motivation and reactions to feedback (turns 2, 5-7, 13, 16, 19-21, 27). District approval and teacher participation/readiness are explicitly treated as prerequisites (turns 11, 14, 18, 20-23, 29-30). The meeting preserves incomplete coordination: no complete plan, named workstream owners, detailed milestones, final measures, comparison implementation, or data-governance protocol are settled. Although Maya volunteers limited follow-up tasks in turn 29, this is not a complete action plan.",
+  "ground_truth": {
+    "research_direction": "Conduct a small, classroom-based Grade 7 proportional-reasoning pilot in late April, comparing lessons where the AI tutor is available with usual classroom practice. Evaluate the tutor as a bounded scaffold: it may provide step-level hints and supportive feedback but should not give final answers, grade students, or replace teacher instructional judgment.",
+    "agreed_evaluation_domains": [
+      "Technical readiness: accuracy and appropriateness of hints, school-network latency, and privacy-minimizing logging.",
+      "Educational feasibility and learning process: formative evidence, productive struggle, classroom routines, and teacher workload.",
+      "Student experience: math anxiety, motivation, and responses to hints and feedback."
+    ],
+    "constraints_and_dependencies": [
+      "District approval is required before the pilot.",
+      "Teacher participation and classroom readiness are required.",
+      "Teachers retain responsibility for grading and final instructional decisions.",
+      "The pilot must not add substantial teacher monitoring burden.",
+      "Privacy requirements require minimized student data collection."
+    ],
+    "appropriate_next_steps_for_the_evaluated_ai_to_suggest": [
+      "Create a short pilot charter that specifies the research questions, comparison condition, tutor boundaries, participating classes, and success criteria.",
+      "Assign a cross-disciplinary owner or lead for each workstream: technical validation, classroom implementation, student/teacher measures, and approvals/data governance.",
+      "Set a backward timeline from the late-April target, including deadlines for district approval, teacher onboarding, technical/network testing, measure selection, and a small pre-pilot rehearsal.",
+      "Define and review the tutor policy for final-answer withholding, hint escalation, feedback tone, teacher override, and escalation of unsafe or inappropriate outputs.",
+      "Develop a data-minimization and consent/approval plan that lists required logs, retention/access rules, de-identification, and the permissions needed from the district and families.",
+      "Select a small, feasible measurement set spanning student learning/process, teacher workload and usability, and student anxiety/motivation, and schedule instrument review or piloting.",
+      "Plan a school-network latency and reliability test in each participating classroom before student use.",
+      "Hold a teacher co-design/readiness session to agree on when students may use the tutor, how teachers monitor use, and how disruptions or misuse will be handled.",
+      "Schedule a decision meeting to resolve the unresolved comparison implementation, final measures, and go/no-go criteria before launch."
+    ],
+    "unresolved_items_to_preserve": [
+      "Named owners and responsibilities.",
+      "Detailed timeline and milestones.",
+      "Exact usual-practice/comparison implementation.",
+      "Final instruments, outcome definitions, and analysis plan.",
+      "Specific logging fields, retention rules, consent process, and data-access protocol.",
+      "Operational classroom routines and teacher training plan.",
+      "Formal go/no-go criteria."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026and I think late April is still plausible, assuming the district review doesn't surprise us. But before we get too far into the pilot design, did everyone get the latest classroom-device list? I mainly want us to leave today with a shared sense of what this tutor is allowed to do in the room, and what evidence would make the four-classroom comparison worth doing, because if we don't have that\u2014"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026for me, the evidence has to include what the feedback is doing to students, not just whether they get to the next step. Especially with anxious students, an encouraging message can come across as generic, or even a little exposing, and then they may stop asking for help. Maya, how consistently can the tutor avoid giving away the answer when a student keeps asking for help on the same item?"
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Mm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026we can put a hard ceiling on it. So after, say, two or three increasingly specific hints, it should redirect the student to try a particular next step or ask the teacher, instead of revealing the result. I'd want to test that on the actual proportional-reasoning items, though. Hint sequencing can look sensible in a review and still accidentally collapse the problem, so\u2026"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026yes, I think testing the sequence on the actual items matters, because the redirect itself could land badly if it feels like, \u201cyou have asked too many times.\u201d Could the wording make the next action concrete\u2014try setting up the ratio, for example\u2014or, sorry, make it clear that asking the teacher is a normal option, not a penalty?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026yes, exactly. We can make the redirect specific to the misconception or the next operation, not the number of requests. Something like, \u201cTry writing the two quantities as a ratio, your teacher can help you check the setup.\u201d I\u2019d also want Priya to look at a small set of those messages before we freeze them, because technically gentle language is not necessarily how it reads to a seventh, seventh grader."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Right, I can review those."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "And it would help if that redirect is something the teacher recognizes as fitting the lesson language, not a separate little tutoring- not a separate tutoring script. I'd want to see it in the actual proportional-reasoning tasks, because a prompt to write a ratio can be productive in one problem and basically tell them the representation in another."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And that means we probably need a teacher pass over the hint map, not just a general review of the messages. Luis, what would you count as evidence that students are using those hints productively instead of just getting through the worksheet faster? I\u2019m asking because our usual interaction measures won\u2019t answer that cleanly."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "I\u2019d look at whether the hint changes the student\u2019s next piece of reasoning, not just whether they submit. A small sample of written work, and maybe brief observations of what they do after a hint. Do they set up a ratio, revise it, explain it, or just enter something? But I\u2019m cautious because thinner written work could look like independence in the logs when it may actually mean they\u2019re still uncertain and relying on the screen."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "...that\u2019s helpful, because it means we shouldn\u2019t treat clickstream as a proxy for learning. We could keep the logs really lean, just hint level, timing, and whether they return to the item, and pair that with the small work sample and the observation Luis is describing. I need to check with the district which of those fields they\u2019ll even allow before we promise that design."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Hm, that\u2019s important."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026and the lean logs are useful, but I wouldn't want us to infer disengagement from them alone. In my recent work, some highly anxious students said they liked the encouragement and then they- on the next hard item, they sought less help. Luis, in an ordinary classroom, what do teachers actually notice when a student is quietly disengaging from a digital task? Would the routines you're proposing catch that?"
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "\u2026they often notice it indirectly. The student is sitting on the same screen, stops writing, or starts copying a pattern but can't say what it means. Brief observations could catch some of that, but only if they fit the normal four Grade 7 classroom routines. I wouldn't ask teachers to run a parallel surveillance system. We should probably ask the teachers if that kind of observation is realistic before district approval locks us into a design."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026I don't think the answer is a teacher dashboard they have to keep checking. Maybe the observer uses a really simple momentary note during the planned tutor period, like writing, being stuck on the same item, talking through a step, and we ask teachers first whether even that feels like it changes the room. I'm also still worried the school network could make a student look disengaged when the system is just slow. The image-heavy submissions had a few bad delays in our internal trial."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026and that matters for interpretation. A long pause could be anxiety, disengagement, or just waiting on the network. I\u2019d separate, if the district permits it, any observer note about apparent stuckness from the system timing data. I was going to say neither one should be definitive, and that\u2019s the point. And before we add even a brief student check-in about how the feedback felt, we should ask teachers if there\u2019s a point in the lesson when that would be feasible."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Yeah, timing\u2019s going to matter."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026right, and we should capture the timing automatically, but only at a coarse level, like request sent, response delivered, maybe whether an upload was involved, so we can tell a network wait from a genuinely long working pause. I need to verify with the district that those timestamps are acceptable, and we should test image-heavy work on the actual devices before we interpret anything in the pilot."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026and if the device test shows variable delays, I\u2019d be reluctant to put any student-facing check-in right after a response. They may be reporting frustration with the wait rather than the feedback. Could we pilot the wording and a very short, um, experience item with a few students first, assuming the district is comfortable with that, just to see whether they distinguish those things at all?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026I think a very small pre-pilot check makes sense, but I\u2019d keep that separate from the classroom comparison. We need to know whether students can even- whether they can parse the difference between \u201cthat message felt unhelpful\u201d and \u201cthe tool took forever,\u201d because otherwise the experience item is going to be pretty muddy. I\u2019ll need to see what the district will allow with a few students before we assume that\u2019s possible."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026that makes sense. I\u2019d keep the pre-pilot check focused on comprehension rather than asking students to evaluate the whole tool. Maybe ask what they think a couple of feedback messages mean, and whether a delay changes that\u2014whether it changes how they interpret them. But I\u2019d want to see what the district considers permissible before we design it too specifically."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "\u2026and before we add that pre-pilot piece, I\u2019d want to know if the same four Grade 7 teachers see a natural place for it in their proportional-reasoning routine. Even a tiny comprehension check can feel like one more, um, interruption if it lands at the wrong point in the lesson. Maybe we ask them about timing when we do the hint-map review, instead of designing it in isolation."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026bundle those questions. The teacher pass needs to cover the hint map, the wording, and where, if anywhere, a two-minute check could fit without breaking the lesson flow. I don't want us building a pre-pilot around a slot that turns out not to exist in the actual classrooms."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, that seems sensible."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "\u2026and with only four Grade 7 classrooms, I\u2019d put that teacher conversation ahead of saying the comparison will settle achievement effects. If the routines fit and we can see how students are actually using the hints, that\u2019s already useful evidence for a spring pilot. And if they don\u2019t fit, a cleaner measure won\u2019t rescue it."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026yes. I\u2019d frame the pilot that way. First, does the bounded tutor actually fit the lesson and behave reliably enough to study, and second, what do the work samples and observations suggest about how students use it. We should not let a small, small four-classroom comparison imply a clean achievement estimate it can\u2019t support."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026and I\u2019d add that \u201cfit\u201d includes whether students experience the boundary on help as supportive, rather than feeling, um, cut off. We may not be able to answer that fully in four classrooms, but a feasible, very brief student-experience check and the teacher observations could at least tell us if there are warning signs worth following up."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Yeah, I think so."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "\u2026yes. I think we\u2019re aligned that this is the threshold, not an outcome claim. I\u2019ll take the teacher-facing review questions and the minimal logging fields into the district conversation, and before anything goes into a classroom, we need that device-and-network test, especially with image uploads. We\u2019re at time, so let\u2019s not- let\u2019s wait for the teachers to tell us what fits before we act like we\u2019ve settled the experience check."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2026okay, I think we can let people go a few minutes early. Thanks, everyone. We can pick this up after the teacher and district- after those conversations."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "All right, take care, everyone."
+    },
+    {
+      "speaker": "Dr. Luis Herrera",
+      "text": "Bye, everybody."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      4,
+      6,
+      8,
+      10,
+      11,
+      14,
+      18,
+      20,
+      22,
+      25,
+      26,
+      27,
+      29,
+      30
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central comparison condition is never stated clearly enough: the transcript discusses a four-classroom comparison and usual practice only indirectly, but does not explicitly say which lessons have tutor availability versus usual practice or how the comparison is implemented. This weakens recoverability of the exact research direction (turns 1, 25-26).",
+      "Teacher authority over grading and final instructional decisions is not explicitly established. Luis argues against dashboard monitoring and for lesson-fit review, but the required boundary that teachers retain grading and instructional authority is absent (turns 8, 14-15, 22).",
+      "The transcript contains partial ownership despite the task's need to preserve missing coordination details: Maya says she will take questions and logging fields to the district and Priya agrees to review messages (turns 7, 29). This is not a complete plan, but it slightly reduces the intended absence of explicit next-step planning.",
+      "Several turns are unusually polished, complete mini-arguments that resolve the preceding concern into a clean proposal, especially turns 10-11, 14-16, 18-23, and 25-27. The disfluencies are largely prefixed ellipses or light insertions into otherwise finished prose, making the exchange read more scripted than spontaneous.",
+      "The meeting begins mid-thought as required, but the concrete contextual anchor is mostly the research agenda; there is little ordinary meeting texture, aside from a brief early-release comment at turn 30."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.17,
+    "turn_moves": {
+      "question": 4,
+      "agreement": 7,
+      "proposal": 14,
+      "commitment": 2,
+      "observation": 1,
+      "answer": 2,
+      "backchannel": 2
+    },
+    "volunteer_turns": [
+      6,
+      7,
+      29
+    ],
+    "unsure_turns": [
+      11,
+      18,
+      20,
+      21
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.14,
+      "approved": false,
+      "issues": [
+        "The central comparison required by the ground truth\u2014tutor-available lessons versus usual classroom practice\u2014is never stated. The discussion instead narrows to tutor interaction routes and a reflection-check small trial (turns 7-31), so the intended pilot design is not recoverable.",
+        "The transcript does not establish the late-April, four-classroom Grade 7 proportional-reasoning pilot. April is mentioned in turn 1 and late April in turn 12, while four Grade 7 classrooms and proportional reasoning appear separately in turns 4 and 14, but no participant connects these into the agreed pilot direction.",
+        "Tutor boundaries are incomplete: turns 7-9 discuss withholding immediate hint chains and tailoring first responses, but nobody explicitly says the tutor is limited to scaffolded hints/supportive feedback, must not give final answers, must not grade, or cannot replace teacher instructional judgment.",
+        "District approval and teacher participation/readiness as prerequisites are absent. Turn 12 mentions being able to defend logging to the district, but that is not an explicit approval dependency; teacher workload is discussed, not teacher participation or readiness as a condition of launch.",
+        "The meeting does not cover several required evaluation domains. Technical discussion addresses logging and network performance (turns 12 and 19), but not hint accuracy/quality in a clear validation sense. Education addresses routines and workload, but formative evidence and learning/process measures are not clearly agreed. Psychology addresses help-seeking discomfort, but math anxiety, motivation, and reactions to corrective or encouraging feedback are largely absent.",
+        "Privacy-minimizing logging is present (turns 10-13), but the transcript becomes unusually focused on finalizing a particular survey flow, wording, timing, teacher trigger, and logging detail. This risks over-resolving instruments and operational routines despite the task's requirement to preserve major coordination gaps.",
+        "Naturalness is limited by the highly polished, repetitive turn construction: nearly every substantive turn directly refines the immediately preceding proposal and reaches a tidy mini-conclusion. The numerous ellipses, repeats, and self-corrections are mostly surface-level additions to otherwise finished prose, rather than genuinely messy spoken interaction.",
+        "Despite the requested polite friction, the only substantial caution\u2014Priya's concern that a prompt could feel exposing (turns 8, 20, 30)\u2014is promptly integrated into a jointly agreed design. There is little unresolved disagreement or exploration beyond the intentionally missing high-level coordination details."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.17,
+      "approved": true,
+      "issues": [
+        "The central comparison condition is never stated clearly enough: the transcript discusses a four-classroom comparison and usual practice only indirectly, but does not explicitly say which lessons have tutor availability versus usual practice or how the comparison is implemented. This weakens recoverability of the exact research direction (turns 1, 25-26).",
+        "Teacher authority over grading and final instructional decisions is not explicitly established. Luis argues against dashboard monitoring and for lesson-fit review, but the required boundary that teachers retain grading and instructional authority is absent (turns 8, 14-15, 22).",
+        "The transcript contains partial ownership despite the task's need to preserve missing coordination details: Maya says she will take questions and logging fields to the district and Priya agrees to review messages (turns 7, 29). This is not a complete plan, but it slightly reduces the intended absence of explicit next-step planning.",
+        "Several turns are unusually polished, complete mini-arguments that resolve the preceding concern into a clean proposal, especially turns 10-11, 14-16, 18-23, and 25-27. The disfluencies are largely prefixed ellipses or light insertions into otherwise finished prose, making the exchange read more scripted than spontaneous.",
+        "The meeting begins mid-thought as required, but the concrete contextual anchor is mostly the research agenda; there is little ordinary meeting texture, aside from a brief early-release comment at turn 30."
+      ]
+    }
+  ]
+}

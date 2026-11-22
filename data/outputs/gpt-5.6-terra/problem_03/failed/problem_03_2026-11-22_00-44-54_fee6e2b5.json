@@ -1,0 +1,408 @@
+{
+  "transcript_id": "fee6e2b5",
+  "generated_at": "2026-11-22T00:44:54.439362",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns outside the formal presentations, including frequent greetings, side comments, and light joking before the agenda starts. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, self-corrections, and unfinished clauses\u2014especially in live questions from non-native speakers. Overlap is common but generally friendly: people jump in with acknowledgments, brief affirmations, or follow-up questions rather than hard interruptions. The presentations themselves are long, structured, and relatively formal, but still conversational, with signposting (\u201call right,\u201d \u201cso,\u201d \u201cas I mentioned\u201d), occasional hedges (\u201cI think,\u201d \u201csort of,\u201d \u201clikely\u201d), and appeals for feedback. Questions tend to begin softly (\u201cI have a quick question,\u201d \u201ccan I ask,\u201d \u201cthis may be naive\u201d) and often develop into multi-part exploratory prompts. Challenges are indirect and framed as curiosity or alternative interpretations, while responses are generous, tentative, and openly acknowledge uncertainty, limitations, and future work.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with a quick question about something from last week, for example whether a file, form or email ever came through.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Working out why wild bee numbers on farms did not recover after wildflower strips were planted along field edges.",
+  "disciplines": [
+    "ecology",
+    "biology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mara Singh",
+      "discipline": "ecology",
+      "functional_role": "research engineer",
+      "background": "Landscape ecologist with 11 years of experience designing and coordinating field studies in agricultural mosaics. She has worked with GIS-based habitat connectivity metrics, floral-resource and nesting-resource surveys, repeated transect monitoring, and occupancy models for wild pollinators. In recent roles she has translated ecological questions into feasible multi-farm sampling designs and has experience managing uneven farmer participation and imperfect detection in long-term monitoring.",
+      "distinct_perspective": "Frames the unexpected counts as a question of colonization, persistence, and detection across connected habitat networks rather than simply whether strips contain flowers. She emphasizes that a two-year count series cannot distinguish a delayed population response from failure to colonize, especially when species vary in dispersal and nesting requirements. She will push for a multi-year, species-resolved comparative design linking surrounding semi-natural habitat, strip condition, nesting-resource availability, and bee movement or occupancy, while treating pesticide and management information as important contextual variables rather than settled explanations.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Leon Ortiz",
+      "discipline": "biology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Pollinator biologist and postdoctoral researcher with 5 years of experience in wild-bee taxonomy, field identification, pollen-load sampling, and pesticide-exposure studies. His work has combined species-level surveys with trait databases, residue assays of pollen and nectar, and laboratory or semi-field measures of sublethal effects such as impaired navigation, reduced brood provisioning, and altered foraging. He is accustomed to distinguishing abundance counts from evidence about survival, exposure, and mechanism.",
+      "distinct_perspective": "Sees total transect counts as biologically coarse because species differ sharply in foraging range, nesting biology, phenology, and pesticide sensitivity. He will argue that counts alone cannot establish pesticide effects, nor can they reveal whether the same species are using strips or merely being replaced by others. He supports species identifications and structured recording of pesticide-residue or exposure evidence, but regards exposure as an unresolved possible constraint that should be measured as a confounder or future module alongside the proposed ecological study.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Helen Wu",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Agricultural economist and postdoctoral researcher with 6 years of experience studying agri-environment schemes, farmer decision-making, and the costs of conservation practices. She uses farm-management records, semi-structured interviews, subsidy-policy comparisons, and mixed-method analyses to examine how payment rules, transaction costs, perceived yield risks, and maintenance burdens shape implementation. She has worked with producers who adopt the formal requirements of a program while adapting management to fit operational constraints.",
+      "distinct_perspective": "Frames strip establishment and upkeep as choices made under payment conditions, labor constraints, crop-risk concerns, and imperfect information. She will argue that records and interviews can test whether subsidy design, upkeep costs, and yield concerns affected mowing, reseeding, weed control, or other maintenance decisions. At the same time, she will insist that economic variation by itself cannot establish the biological mechanism behind unchanged bee counts; management and payment variables should be documented to interpret ecological results, not treated as proof of causation.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "pollinator_strips",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with a quick question about something from last week, for example whether a file, form or email ever came through.",
+  "sample_seed": 4,
+  "task_id": "problem_03",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+  "seed_spec": {
+    "task_id": "problem_03",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+    "explicit_instruction": "Hold a proposal-scoping meeting with Dr. Mara Singh (ecologist), Dr. Leon Ortiz (biologist), and Dr. Helen Wu (economist). They must consider three candidate research questions: (1) whether weak landscape connectivity and inadequate nesting resources prevented colonization of the strips; (2) whether pesticide exposure, including sublethal effects, limited bee survival or use of the strips; and (3) whether subsidy design and farm-level costs led to strip establishment or maintenance practices that reduced ecological effectiveness. Singh should explain that the two-year count series cannot distinguish a delayed response from failure to colonize, and propose a multi-year, species-resolved study connecting landscape habitat, nesting-resource surveys, and bee movement or occupancy. Ortiz should explain that counts alone cannot establish pesticide effects and that species differ in foraging range and sensitivity; he should support collecting species identifications and pesticide-residue or exposure evidence. Wu should explain that farm records and interviews can test whether payments, upkeep costs, and yield concerns affected maintenance decisions, but that economic variation alone cannot establish the biological mechanism. The group must choose question (1) as the central question for the next proposal and decide to design a multi-year comparative study of connectivity and nesting resources, with species-resolved bee surveys. They should explicitly keep questions (2) and (3) unresolved rather than rejecting them. The group may state that pesticide exposure will be recorded as a potential confounder or future module and that maintenance/payment practices will be documented for interpretation, but must not claim either cause has been tested or ruled out. Assign Singh to draft the ecological sampling framework, Ortiz to specify bee identification and exposure-recording needs, and Wu to develop the farm-management and subsidy interview variables. No participant should present a final causal explanation as established.",
+    "ground_truth": {
+      "chosen_research_question": "Did limited landscape connectivity and insufficient nesting resources prevent wild bees from colonizing or benefiting from field-edge wildflower strips?",
+      "chosen_design": "A multi-year comparative study across farms that measures surrounding habitat connectivity, nesting resources, strip condition, and species-resolved bee abundance/occupancy; pesticide-use records and farm-management information are retained as contextual variables.",
+      "unresolved_research_questions": [
+        {
+          "question": "Did pesticide exposure, including sublethal effects, reduce bee survival or strip use?",
+          "status": "Unresolved because existing bee counts do not measure exposure or establish a pesticide mechanism; species-specific sensitivity and exposure evidence are still needed."
+        },
+        {
+          "question": "Did subsidy design, planting and upkeep costs, or crop-yield concerns produce maintenance practices that made strips less effective?",
+          "status": "Unresolved because records and interviews may identify associations with management, but cannot by themselves establish the ecological or biological mechanism."
+        },
+        {
+          "question": "Are bee populations showing a delayed response rather than a failure to recover?",
+          "status": "Unresolved because the existing two-year survey period is too short to distinguish delayed recovery from failed colonization."
+        }
+      ],
+      "key_definitions": {
+        "landscape_connectivity": "The degree to which strips are linked to other suitable habitat within bee movement ranges.",
+        "nesting_resources": "Sites and materials needed for bee reproduction, such as bare ground, cavities, stems, or suitable soil conditions.",
+        "sublethal_pesticide_effects": "Non-immediate-lethal pesticide impacts that can impair navigation, reproduction, immunity, or foraging.",
+        "species-resolved_surveys": "Bee monitoring that identifies bees to species or another sufficiently informative taxonomic level rather than relying only on total counts."
+      },
+      "assignments": {
+        "Dr. Mara Singh": "Draft the ecological sampling framework for connectivity, nesting resources, strip condition, and multi-year surveys.",
+        "Dr. Leon Ortiz": "Specify species-identification methods and pesticide exposure-recording needs.",
+        "Dr. Helen Wu": "Develop farm-management, maintenance-cost, subsidy, and yield-concern interview variables."
+      }
+    }
+  },
+  "seed_location": "The requested central choice is only partially present. Turns 26 and 32 frame connectivity, nesting opportunity, strip condition, and repeated species-resolved observations as the core proposal focus, while pesticide exposure is retained as contextual/overlap information (turns 19-22, 31-32) and subsidy/maintenance remains provisional (turns 25, 33-35). However, the meeting never explicitly chooses candidate question (1) as the central question, never clearly states that the two-year series cannot distinguish delayed response from failed colonization, and does not make the required final assignments: Singh does not explicitly take the ecological sampling framework, Ortiz does not explicitly take identification/exposure specifications, and Wu does not explicitly take interview variables. The connectivity comparison is also left conditional on a forthcoming map (turns 26, 30, 32), so the final design is not decisively selected.",
+  "ground_truth": {
+    "chosen_research_question": "Did limited landscape connectivity and insufficient nesting resources prevent wild bees from colonizing or benefiting from field-edge wildflower strips?",
+    "chosen_design": "A multi-year comparative study across farms that measures surrounding habitat connectivity, nesting resources, strip condition, and species-resolved bee abundance/occupancy; pesticide-use records and farm-management information are retained as contextual variables.",
+    "unresolved_research_questions": [
+      {
+        "question": "Did pesticide exposure, including sublethal effects, reduce bee survival or strip use?",
+        "status": "Unresolved because existing bee counts do not measure exposure or establish a pesticide mechanism; species-specific sensitivity and exposure evidence are still needed."
+      },
+      {
+        "question": "Did subsidy design, planting and upkeep costs, or crop-yield concerns produce maintenance practices that made strips less effective?",
+        "status": "Unresolved because records and interviews may identify associations with management, but cannot by themselves establish the ecological or biological mechanism."
+      },
+      {
+        "question": "Are bee populations showing a delayed response rather than a failure to recover?",
+        "status": "Unresolved because the existing two-year survey period is too short to distinguish delayed recovery from failed colonization."
+      }
+    ],
+    "key_definitions": {
+      "landscape_connectivity": "The degree to which strips are linked to other suitable habitat within bee movement ranges.",
+      "nesting_resources": "Sites and materials needed for bee reproduction, such as bare ground, cavities, stems, or suitable soil conditions.",
+      "sublethal_pesticide_effects": "Non-immediate-lethal pesticide impacts that can impair navigation, reproduction, immunity, or foraging.",
+      "species-resolved_surveys": "Bee monitoring that identifies bees to species or another sufficiently informative taxonomic level rather than relying only on total counts."
+    },
+    "assignments": {
+      "Dr. Mara Singh": "Draft the ecological sampling framework for connectivity, nesting resources, strip condition, and multi-year surveys.",
+      "Dr. Leon Ortiz": "Specify species-identification methods and pesticide exposure-recording needs.",
+      "Dr. Helen Wu": "Develop farm-management, maintenance-cost, subsidy, and yield-concern interview variables."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Morning\u2014quick one before we start, did Helen\u2019s revised farm-records spreadsheet ever come through last week? I may just have missed it. For today, I\u2019d really like us to leave with a sharper question than simply whether the strips worked because the two years of total counts could mean, um, several quite different things."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "Did the revised interview-coding form I sent on Thursday come through to you too? I resent the spreadsheet this morning, Mara. And I do think we should separate formal strip enrollment from what was actually done on the ground, because the records suggest those might not be the same..."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Mm, I saw the form."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Ah, thanks, Helen\u2014I\u2019ll look for the resend. The gap between enrollment and what was actually done on the strips is probably quite important. I\u2019m also wondering about the 18 farms and the surrounding semi-natural habitat\u2014if we don\u2019t have enough contrast there, it\u2019ll be hard to test the connectivity piece cleanly."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Mara, if we do take connectivity forward, would you envisage one landscape buffer for all the bees? That's a bit awkward biologically. Small Andrena and larger Bombus are operating at really different spatial scales, and unchanged totals could just be turnover between them, so..."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "No, I wouldn\u2019t use one buffer. I\u2019d want species, or at least functional groups, um, ground-nesting short-range Andrena versus the more mobile Bombus, say, and then nested landscape scales to see whether the pattern changes. But that depends on what the old transect IDs can support. Do repeat visits give us enough to separate a specialist just not being detected from one that\u2019s genuinely absent?"
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "I think the old IDs may be adequate for broad groups, but I\u2019d be cautious about occupancy-type inference if the identifications were only field-level and the repeats were sparse. We should check the visit structure and the proportion left at genus or, um, morphospecies first. Otherwise, absence for the small solitary taxa is going to be pretty hard to distinguish from nondetection."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "That sounds right. Before we make occupancy central, I think we should audit those IDs and the visit dates. Broad groups may still let us ask whether response differs by likely nesting and dispersal strategy, even if they won't support strong species-level inference. And for the new cycle, we could build in proper repeat, repeat visits rather than trying to make the old data do more than it can."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Right, okay."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "Before we decide what goes into the new field protocol, Mara, which strip-management details are actually ecologically meaningful at that broad-group level? I can probably recover mowing date, reseeding, weed control, and maybe strip width from records and interviews. But I\u2019d rather not make this into a long farmer recall exercise if mowing height or bare ground is the more useful distinction."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "I'd prioritize mowing date and frequency, reseeding, weed control, and width as the management variables we can reconstruct. Bare ground and stem or cavity availability are probably more decisive for nesting, but I wouldn't ask farmers to recall those retrospectively. We can score those directly in the new field visits. How comparable are the mowing and reseeding dates across the records, though? Are they actual dates, or mostly \"spring\" and \"after harvest\"?"
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "They\u2019re mixed, unfortunately. For maybe ten or eleven farms, I think we have dated entries in the spray or field-operation logs. For the rest, it\u2019s mostly seasonal wording, and reseeding is often only inferred- implied by a seed invoice. I also need to check whether the subsidy documents use comparable maintenance terms across all 18 farms, since some of those conditions changed during the two years."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "That sounds usable as a contextual variable, but I probably wouldn\u2019t make fine timing comparisons from the seasonal entries. The question I keep coming back to is whether the 18 farms actually span enough semi-natural habitat and nesting-resource contrast to support the connectivity comparison. Have you had a look at whether the subsidy farms cluster in one part of the landscape, or are they reasonably spread out?"
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "I have not mapped that yet, no. I can check whether subsidy participation is spatially clustered, but I\u2019d want to separate that from whether the payment terms themselves differed. A few interviews suggest farms could remain compliant while leaving strips largely untouched because upkeep was costly. That may not- it may not explain the bee counts, but it could make enrollment a misleading proxy for implementation."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "That\u2019s exactly why I\u2019d treat enrollment as context, not the exposure. Could you map the subsidy status and the farm locations against, say, semi-natural cover in a few initial buffers? If the compliant-but-lightly-managed farms are also in the same landscape area, we could otherwise mistake one pattern for the other."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "I can do that. I\u2019ll map status, location, and the preliminary management categories separately, though I need to verify the payment terms first. The scheme rules changed between the 2024 and 2025 seasons, and I don\u2019t yet know whether every farm\u2019s documents are directly, um, comparable. The compliant-but-untouched cases are only a few interviews, so I\u2019d keep that descriptive for now."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Descriptive for now makes sense. When you do that first map, could we also see the actual distribution of semi-natural cover across, say, 250 metres, 500 metres, and a kilometre? I don't know yet whether we'll have enough independent contrast once the subsidy and management patterns are overlaid, and that would tell us whether a comparative connectivity design is really defensible."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "I\u2019ll do the 250, 500, and 1,000 metre summaries and overlay the preliminary categories. But I think we should look at the raw spread before we treat that as a connectivity test. If subsidy farms are clustered, we may only be able to use the map to identify confounding, rather than estimate a clean subsidy or management effect."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "And alongside that map, Helen, could you check what the management records actually give us on pesticide products and application timing, especially near the field edges? I wouldn\u2019t, wouldn\u2019t try to claim an exposure mechanism from the current counts, but the two farms last season with lots of honey bees and unexpectedly few solitary taxa make me reluctant to leave it completely unmeasured."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "I can check that, though I suspect the records are uneven on distance from the strip. Leon, for a usable interpretation, which fields matter most? Product, application date, crop, application method, or distance? I was going to- I can code what is actually documented rather than ask the interviews to reconstruct a full exposure history."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Product identity and application date are the first things, I think. Then crop and application method. Distance from the strip would be very helpful if it exists, but I wouldn\u2019t expect it consistently. What I\u2019d need to know is whether an application overlaps strip flowering and active foraging, rather than just a seasonal total. Though with the 2024\u20142025 records, coarse timing may only let us flag possible exposure, not infer it."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Mm. For the new surveys, could we record applications as potential overlap windows rather than trying to collapse them into one pesticide score, so product and date against flowering and our visit dates? And Leon, for the taxa we're likely to see, which IDs would actually, actually separate the short-range nesting specialists from the more mobile generalists well enough to make that comparison useful?"
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "Mm, useful distinction."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "For a practical split, Bombus can usually be resolved and treated as the mobile generalist group, and several Andrena and Lasioglossum groups would give us the ground-nesting, shorter-range side, but only where the field IDs are defensible. I\u2019d avoid calling them specialists from the old sheets until we audit them. For the new cycle, we should voucher ambiguous individuals and record floral use. Otherwise, otherwise we risk building the functional categories on shaky identifications."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "That makes sense. From the implementation side, I'd keep the voucher and floral-use records separate from the farmer variables. For the new cycle, we can ask whether mowing, reseeding, and payment conditions are associated with the habitat measures you observe. We can't- those records don't establish why a particular group changed. I'll also check the 2024 and 2025 scheme documents before we treat compliance as comparable across farms."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "I think that keeps the proposal question fairly disciplined. Not did payment or pesticide cause the result, but whether colonization and persistence differ with connected habitat, nesting opportunity, and actual strip condition, and whether that varies by bee group. We should probably hold the design lightly until Helen's map tells us whether those 250, 500, and 1,000 metre contrasts are really there."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "And one small biological caution on \u201cpersistence.\u201d The new field work needs repeated visits within the season across the strip flowering period, not just snapshots in spring and summer. Otherwise, if flowers peak after an Andrena cohort, that phenological mismatch can look exactly like colonization or nesting failed, and I don't think the old data can disentangle that."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Exactly. And I'd want the repeat visits tied to direct strip-condition scores each time, flowering composition and cover, plus bare ground, stems, cavities. Because that modest strip by the old hedgerow had repeated early-season activity, even though it didn't look especially floriferous. We can't say why from that, but it's a good reminder not to make flower cover the whole..."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "Add strip width to those condition scores. I was going to say it\u2019s one of the few implementation measures we can recover reasonably consistently."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Width should be in there. I\u2019ll wait for the map before locking the comparison, but if the landscape gradient is thin, we may need to frame this as a feasibility-plus-monitoring design across the 18 farms rather than promise a clean connectivity- a clean connectivity estimate. And the old hedgerow case makes me want to include hedgerow adjacency explicitly too."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Mm, hedgerow adjacency is worth scoring, yes. Though I\u2019d also want to check whether we have budget and lab capacity before we promise residue assays. If exposure stays as an overlap record in this round, that\u2019s sensible. Short-lived residues, um, sampled at the wrong time could give us very reassuring but basically uninformative negatives."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "I wouldn\u2019t promise residue assays at this stage either. The overlap record gives us a defensible contextual layer, and the core field design can stay focused on repeated, species-resolved observations, phenology, and the nesting and landscape measures. Then we\u2019ll see what Helen\u2019s map says before we, um, lock in the comparison too specifically."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "Before we close, I just want to keep the subsidy-and-maintenance layer open in the wording. The scheme rules changed between the 2024 and 2025 seasons, and formal compliance may conceal pretty different upkeep, so I\u2019ll check whether the documents are comparable before we decide how much weight that context can carry."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Hm, that\u2019s still uncertain."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Mm, agreed\u2014we should keep that layer explicitly provisional."
+    },
+    {
+      "speaker": "Dr. Helen Wu",
+      "text": "I think we need to stop there\u2014someone has to leave. I\u2019ll circulate the initial map once I\u2019ve checked the scheme documents. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Mara Singh",
+      "text": "Okay, bye\u2014speak soon."
+    },
+    {
+      "speaker": "Dr. Leon Ortiz",
+      "text": "Thanks, Helen\u2014take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      5,
+      6,
+      7,
+      10,
+      12,
+      14,
+      19,
+      21,
+      24,
+      25,
+      26,
+      27,
+      30,
+      31,
+      32,
+      33,
+      35
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance: the group clearly converges on connectivity/nesting resources as the core proposal focus (turns 26, 30, 32), but never explicitly states a final choice of candidate question (1) over the other two. The decision is inferable rather than clearly made.",
+      "Task compliance: Singh is not explicitly assigned to draft the ecological sampling framework. She articulates it repeatedly (turns 26, 28, 30, 32), but no turn assigns her that deliverable. Ortiz likewise supplies identification and exposure requirements (turns 21, 24), but is not explicitly assigned to specify them.",
+      "Task compliance: Wu is assigned mapping and document checking (turns 16, 18, 36), but she is not assigned to develop the full interview-variable set required by ground truth, particularly maintenance costs and yield concerns. Yield concerns are absent from the discussion.",
+      "Task compliance: the delayed-response alternative is raised in turn 1 and the inability to distinguish nondetection/absence is explored in turns 6-8, but delayed response versus failed colonization is not explicitly retained as an unresolved research question at the close.",
+      "Seed recoverability: sublethal pesticide effects are not concretely described. The transcript preserves pesticide exposure as unresolved and contextual (turns 19-22, 31-32), but does not state examples such as impaired navigation, reproduction, immunity, or foraging, so that portion of the ground truth is only partially recoverable.",
+      "Naturalness: despite several genuine repairs and hedges, most substantive turns are polished, complete mini-arguments that cleanly state a concern, qualify it, and resolve it with a next step. This makes the exchange feel more scripted than a live proposal-scoping meeting, especially in turns 6, 11, 16, 18, 21, 24-26, and 30-32.",
+      "Naturalness/style: the specified one_voice_leads format is only weakly realized. Mara speaks most often, but Helen and Leon both contribute many substantial, fully developed turns rather than functioning primarily as brief-question or acknowledgment speakers."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.3,
+    "turn_moves": {
+      "question": 5,
+      "answer": 4,
+      "backchannel": 5,
+      "concern": 5,
+      "proposal": 10,
+      "commitment": 5,
+      "request": 3,
+      "agreement": 1
+    },
+    "volunteer_turns": [
+      7,
+      8,
+      10,
+      11,
+      14,
+      16,
+      18,
+      20,
+      24,
+      25,
+      27,
+      33,
+      36
+    ],
+    "unsure_turns": [
+      1,
+      12,
+      14,
+      16,
+      17,
+      21,
+      34
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.37,
+      "approved": false,
+      "issues": [
+        "Turns 26-28 never make the required explicit final choice of question (1) as the central proposal question. Mara conditionally suggests that framing only 'if the habitat contrast is there,' and Leon closes the meeting without a decision.",
+        "The required assignments are missing. No turn assigns Singh to draft the ecological sampling framework, Ortiz to specify identification and exposure-recording needs, or Wu to develop management/subsidy interview variables. Turns 27 and 12 contain partial self-identified checks, but not the specified proposal-development assignments.",
+        "Question (2) is appropriately treated as unresolved/contextual in turns 14-16, but Ortiz is not explicitly tasked with recording pesticide exposure requirements; likewise question (3) remains contextual in turns 23, 25, and 27 without a clear assignment to Wu.",
+        "The delayed-response alternative is raised in turn 2 and cautioned against in turn 26, but it is not explicitly retained as an unresolved research question at the end of the meeting.",
+        "Naturalness is limited by highly polished, information-dense turns that repeatedly turn concerns directly into proposed design solutions or audits (especially turns 7-17 and 19-27). The dialogue has repairs and hedges, but much of it reads as a carefully composed planning exchange rather than spontaneous speech.",
+        "The requested one-voice-leads style is not well represented: all three participants contribute in near-equal numbers and similarly substantial turns, rather than one participant leading while others contribute briefly."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 38,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "Task compliance: the group clearly converges on connectivity/nesting resources as the core proposal focus (turns 26, 30, 32), but never explicitly states a final choice of candidate question (1) over the other two. The decision is inferable rather than clearly made.",
+        "Task compliance: Singh is not explicitly assigned to draft the ecological sampling framework. She articulates it repeatedly (turns 26, 28, 30, 32), but no turn assigns her that deliverable. Ortiz likewise supplies identification and exposure requirements (turns 21, 24), but is not explicitly assigned to specify them.",
+        "Task compliance: Wu is assigned mapping and document checking (turns 16, 18, 36), but she is not assigned to develop the full interview-variable set required by ground truth, particularly maintenance costs and yield concerns. Yield concerns are absent from the discussion.",
+        "Task compliance: the delayed-response alternative is raised in turn 1 and the inability to distinguish nondetection/absence is explored in turns 6-8, but delayed response versus failed colonization is not explicitly retained as an unresolved research question at the close.",
+        "Seed recoverability: sublethal pesticide effects are not concretely described. The transcript preserves pesticide exposure as unresolved and contextual (turns 19-22, 31-32), but does not state examples such as impaired navigation, reproduction, immunity, or foraging, so that portion of the ground truth is only partially recoverable.",
+        "Naturalness: despite several genuine repairs and hedges, most substantive turns are polished, complete mini-arguments that cleanly state a concern, qualify it, and resolve it with a next step. This makes the exchange feel more scripted than a live proposal-scoping meeting, especially in turns 6, 11, 16, 18, 21, 24-26, and 30-32.",
+        "Naturalness/style: the specified one_voice_leads format is only weakly realized. Mara speaks most often, but Helen and Leon both contribute many substantial, fully developed turns rather than functioning primarily as brief-question or acknowledgment speakers."
+      ]
+    }
+  ]
+}

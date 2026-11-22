@@ -1,0 +1,470 @@
+{
+  "transcript_id": "854bb3dc",
+  "generated_at": "2026-11-21T21:53:13.170079",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic video-call style, with mostly short to medium turns in the opening chat and much longer, highly structured turns during presentations and answers. Overlap and interruptions are occasional but generally polite, often marked by quick acknowledgments like \u201cyeah,\u201d \u201cokay,\u201d or \u201cright,\u201d rather than competitive floor-taking. Participants hedge frequently\u2014using \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d and \u201cit could be\u201d\u2014especially when speculating, while still making direct technical claims during formal presentations. The register shifts from casual, joking small talk to semi-formal scientific discussion; introductions and transitions are formulaic, but questions are friendly and conversational, often prefaced with praise or self-deprecation (\u201cgreat talk,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d). Speakers build on prior remarks by restating part of the previous point before extending it, and disagreement is almost entirely indirect, framed as uncertainty, alternative explanations, or open questions. Speech contains many fillers, repetitions, false starts, self-corrections, and loosely formed sentences, particularly among non-native speakers and during spontaneous Q&A, giving it an authentic live-Zoom feel.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Testing whether financial stress narrows how people weigh present against future payoffs, and what that means for program design.",
+  "disciplines": [
+    "neuroscience",
+    "economics",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Anika Rao",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "Dr. Rao is a cognitive-affective neuroscientist with 11 years of experience running human stress studies, including salivary biomarker protocols in community samples. She has managed multi-site behavioral-health projects and is responsible for visit flow, sample handling, scheduling, and the biological-measures component. Her prior work uses cortisol as one indicator of stress-related physiological response, but she has limited experience translating laboratory stress measures into financial-program policy.",
+      "distinct_perspective": "Rao treats cortisol as a useful but context-sensitive physiological indicator rather than a direct readout of either financial hardship or decision-making mechanism. She focuses on whether the timing, collection conditions, and operational constraints make the biological data interpretable: a baseline sample before the manipulation, a post-stressor sample around 20 minutes later, afternoon scheduling to reduce diurnal variation, and recorded session time. She is attentive to what a one-visit, fixed-budget design can and cannot support, including the decision not to add neuroimaging.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Wei Chen",
+      "discipline": "economics",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Chen is a behavioral economist with 6 years of postdoctoral and doctoral research experience designing incentivized intertemporal-choice experiments and evaluating savings and matching programs. He has worked with low-income and financially constrained participant samples, estimated discounting from repeated choice tasks, and overseen electronic payment systems for delayed experimental compensation. He leads the choice-task and program-design component of the proposed study.",
+      "distinct_perspective": "Chen frames the central question as whether experimentally induced financial threat shifts revealed trade-offs between smaller-sooner and larger-later money. He prioritizes consequential choices, credible payment delivery, and a clean treatment-control contrast. He favors a single incentive-compatible task with one randomly selected choice paid for real and an eight-week maximum delay, arguing that participants must trust delayed electronic payments. He sees the applied implication as evidence relevant to whether a savings-support program should offer more immediate, smaller matched deposits rather than relying only on larger delayed matches, while remaining skeptical of measures that do not alter choices or incentives.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Elena Morales",
+      "discipline": "psychology",
+      "functional_role": "PhD student",
+      "background": "Dr. Morales is a fifth-year clinical and social psychology PhD candidate with 5 years of experience administering laboratory stress procedures, conducting participant-risk screening, and measuring perceived financial strain and affect in community samples. Her work examines how acute threat appraisals interact with existing socioeconomic hardship. She leads the stress-measurement and participant-procedure elements of the study, including distress protocols, debriefing, and follow-up survey procedures.",
+      "distinct_perspective": "Morales treats the manipulation as an appraisal-based procedure: participants must understand and psychologically engage with a standardized financial-threat scenario for it to be meaningful. She emphasizes identical vignette and instruction delivery across participants, a factual attention check about the notice, a brief self-reported financial-strain measure as evidence that perceived stress changed, and safeguards such as distress screening, debriefing, and referral information. She is alert to the possibility that pre-existing hardship may shape responsiveness to the fictional notice, but does not assume that low reported distress makes a participant unusable if they understood the manipulation.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "scarcity_decisions",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 2,
+  "task_id": "assumptions_01",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a meeting where researchers finalize decisions relying on both explicit and implicit assumptions. The evaluated AI must identify the decision-relevant assumptions. Provide a proposed reference answer with evidence; implicit assumptions should be inferable, not invented.",
+  "seed_spec": {
+    "task_id": "assumptions_01",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a meeting where researchers finalize decisions relying on both explicit and implicit assumptions. The evaluated AI must identify the decision-relevant assumptions. Provide a proposed reference answer with evidence; implicit assumptions should be inferable, not invented.",
+    "explicit_instruction": "In the meeting, the team must make these final decisions: (1) use a randomized, time-limited financial-threat manipulation versus a neutral control before the choice task; (2) use one incentive-compatible intertemporal-choice task with one randomly selected choice paid for real, with delayed payments delivered electronically; (3) collect salivary cortisol immediately before the manipulation and 20 minutes after it, plus a brief self-reported financial-strain scale; (4) interpret a manipulation-induced shift toward sooner payments as evidence relevant to benefit timing in a future savings-support program; and (5) preregister the primary analysis as the condition difference in discounting, with cortisol and self-reported strain as supporting manipulation-check measures rather than required mediators.\n\nDr. Chen should state that the manipulation will present participants with a realistic, fictional notice of an unexpected essential expense that exceeds their stated monthly discretionary funds, while controls see a neutral household-planning notice. Chen should state that the selected choice will be paid and that participants must believe delayed electronic payments will arrive as promised; the team chooses a maximum delay of eight weeks to keep the payment system manageable. Chen should also state that the program implication under discussion is whether to offer more immediate, smaller matched deposits rather than only larger delayed matches.\n\nDr. Morales should state that the financial-threat vignette and instructions will be identical for all participants, that distress screening and a debrief with referral information will be used, and that the strain scale is being treated as a check that the manipulation changed perceived financial stress. Morales should raise, but the group need not resolve, that pre-existing hardship could affect how strongly people respond.\n\nDr. Rao should state that cortisol is being used as an objective stress-related measure, that sampling at 20 minutes is intended to capture the expected post-stressor response, and that no neuroimaging will be included because the project has only one visit and a fixed budget. Rao should note that cortisol can be affected by time of day, so sessions will be scheduled between 1 pm and 5 pm and session time will be recorded.\n\nThe group should explicitly agree that random assignment supports attributing average post-manipulation differences to the experimental condition, provided the manipulation works and participants complete the task. They should also agree to exclude participants who fail a factual attention check about the notice, while retaining participants who report low distress. Do not have participants list, label, or systematically analyze assumptions. Keep unresolved the extent to which laboratory choices predict real program behavior and whether cortisol is a necessary mechanism; these should only be discussed insofar as needed for the stated decisions.",
+    "ground_truth": {
+      "decision_relevant_assumptions": [
+        {
+          "assumption": "The financial-threat notice produces a meaningful, short-term increase in financial stress relative to the neutral notice.",
+          "status": "explicit",
+          "relevance": "This is necessary for interpreting a condition difference as an effect of financial stress rather than merely exposure to different reading material.",
+          "evidence": "The team uses a fictional unexpected-essential-expense notice, treats the strain scale as a manipulation check, and collects pre/post cortisol; they condition causal attribution on the manipulation working."
+        },
+        {
+          "assumption": "Random assignment, identical procedures apart from the notice, and adequate task completion make the two conditions comparable on average.",
+          "status": "explicit",
+          "relevance": "This underlies the planned causal comparison of discounting between conditions.",
+          "evidence": "The protocol uses random assignment; Morales says the vignette and instructions will be identical; the group explicitly agrees randomization supports attribution provided the manipulation works and participants complete the task."
+        },
+        {
+          "assumption": "The incentive-compatible task measures participants' relative valuation of sooner versus later money, and paying one randomly selected choice makes stated choices consequential enough to reduce purely hypothetical responding.",
+          "status": "implicit",
+          "relevance": "The primary outcome and the conclusion about present-versus-future weighting depend on the task being a valid behavioral measure of discounting.",
+          "evidence": "The team selects one intertemporal choice for real payment and preregisters the condition difference in discounting as the primary analysis."
+        },
+        {
+          "assumption": "Participants regard delayed electronic payments up to eight weeks as credible and sufficiently comparable to immediate payments.",
+          "status": "explicit",
+          "relevance": "If delayed payments are not trusted or are difficult to receive, choices may reflect payment credibility or access rather than time preference under stress.",
+          "evidence": "Chen says participants must believe delayed electronic payments will arrive as promised, and the team sets an eight-week maximum delay for the electronic payment system."
+        },
+        {
+          "assumption": "The manipulation primarily changes financial stress rather than another condition-specific factor that itself changes choices, such as confusion, distrust, perceived deception, or general negative affect.",
+          "status": "implicit",
+          "relevance": "Otherwise a difference in discounting cannot specifically be interpreted as an effect of financial stress.",
+          "evidence": "The conditions differ in a financial-threat notice versus a neutral planning notice; the team relies on strain and cortisol checks but does not include a separate measure or control for these alternative pathways."
+        },
+        {
+          "assumption": "The self-reported financial-strain scale and the chosen cortisol sampling protocol provide informative indicators of manipulation-related stress, even though they are not required mediators.",
+          "status": "explicit",
+          "relevance": "These measures are used to support the claim that the manipulation changed stress and to characterize the experimental effect.",
+          "evidence": "Morales describes the strain scale as a check; Rao calls cortisol an objective stress-related measure and chooses a 20-minute post-stressor sample; the team designates both as supporting manipulation checks rather than required mediators."
+        },
+        {
+          "assumption": "A cortisol sample taken 20 minutes after the manipulation can capture the relevant post-stressor response under the study conditions, and restricting sessions to 1 pm-5 pm plus recording time sufficiently addresses time-of-day variation for the planned use.",
+          "status": "explicit",
+          "relevance": "This affects whether cortisol can credibly support the manipulation check.",
+          "evidence": "Rao specifies the 20-minute timing, notes time-of-day effects, and sets the 1 pm-5 pm scheduling window with session time recorded."
+        },
+        {
+          "assumption": "Excluding factual attention-check failures improves interpretability without introducing a condition-dependent selection bias that materially changes the estimated condition effect.",
+          "status": "explicit",
+          "relevance": "The exclusion rule can alter the analyzed groups and therefore the primary condition comparison.",
+          "evidence": "The group agrees to exclude participants who fail a factual check about the notice; because the notice is condition-specific, failure could differ by condition."
+        },
+        {
+          "assumption": "The effect estimated in adults recruited from a financial-counseling service is informative for the population and implementation setting of the proposed savings-support program.",
+          "status": "implicit",
+          "relevance": "The team intends to use laboratory findings to inform program design, which requires some transportability from this recruitment group to intended beneficiaries.",
+          "evidence": "Recruitment is from a community financial-counseling service, while Chen proposes implications for the timing of matched deposits in a future program; no separate representativeness or transportability plan is decided."
+        },
+        {
+          "assumption": "A short-run shift in laboratory intertemporal choices is relevant to real program behavior and can inform whether benefits should be delivered as immediate smaller matches rather than larger delayed matches.",
+          "status": "explicit",
+          "relevance": "This is the central bridge from the experimental result to the program-design decision.",
+          "evidence": "The team explicitly plans to interpret a manipulation-induced shift toward sooner payments as evidence relevant to benefit timing, while leaving the extent to which laboratory choices predict real program behavior unresolved."
+        },
+        {
+          "assumption": "The observed average effect is decision-relevant despite possible variation in response by pre-existing hardship.",
+          "status": "implicit",
+          "relevance": "If baseline hardship strongly moderates the effect, a single average result may not support a uniform program-timing recommendation.",
+          "evidence": "Morales raises that pre-existing hardship could affect response strength, but the team does not resolve a moderation analysis or a subgroup-specific design decision."
+        },
+        {
+          "assumption": "Cortisol need not be established as the causal mechanism for the primary conclusion about the manipulation's effect on discounting.",
+          "status": "explicit",
+          "relevance": "The team can retain its primary causal estimand even if cortisol does not mediate the condition effect, but should not claim a cortisol-mediated mechanism from this design alone.",
+          "evidence": "The preregistered primary analysis is the condition difference in discounting, with cortisol and strain described as supporting checks rather than required mediators; the necessity of cortisol as a mechanism remains unresolved."
+        }
+      ]
+    }
+  },
+  "seed_location": "Task conditions are incomplete/not fully met. Relevant partial evidence: turns 2, 13, 16, and 21 specify baseline saliva before the notice and a roughly 20-minute post-notice sample; turns 6, 9, 27, and 28 support matched instructions, retaining low-strain participants, and using strain as a condition-level manipulation check; turns 17-20 make the choice effect primary and cortisol supporting rather than a required mediator; turns 8-9 make intent-to-treat primary and factual-recall-restricted analysis secondary; turns 11 and 28 discuss one paid choice and the need for credible delayed transfers. However, the transcript never finalizes the required threat-versus-neutral notice content, maximum eight-week delay (vendor confirmation remains pending), randomized assignment, 1-5 pm scheduling, no-neuroimaging decision, recruitment context, or the program implication about immediate smaller matched deposits versus delayed larger matches. It also explicitly rejects the seed-required primary exclusion of factual attention-check failures, choosing ITT primary with recall-restricted sensitivity analysis instead (turns 8-9).",
+  "ground_truth": {
+    "decision_relevant_assumptions": [
+      {
+        "assumption": "The financial-threat notice produces a meaningful, short-term increase in financial stress relative to the neutral notice.",
+        "status": "explicit",
+        "relevance": "This is necessary for interpreting a condition difference as an effect of financial stress rather than merely exposure to different reading material.",
+        "evidence": "The team uses a fictional unexpected-essential-expense notice, treats the strain scale as a manipulation check, and collects pre/post cortisol; they condition causal attribution on the manipulation working."
+      },
+      {
+        "assumption": "Random assignment, identical procedures apart from the notice, and adequate task completion make the two conditions comparable on average.",
+        "status": "explicit",
+        "relevance": "This underlies the planned causal comparison of discounting between conditions.",
+        "evidence": "The protocol uses random assignment; Morales says the vignette and instructions will be identical; the group explicitly agrees randomization supports attribution provided the manipulation works and participants complete the task."
+      },
+      {
+        "assumption": "The incentive-compatible task measures participants' relative valuation of sooner versus later money, and paying one randomly selected choice makes stated choices consequential enough to reduce purely hypothetical responding.",
+        "status": "implicit",
+        "relevance": "The primary outcome and the conclusion about present-versus-future weighting depend on the task being a valid behavioral measure of discounting.",
+        "evidence": "The team selects one intertemporal choice for real payment and preregisters the condition difference in discounting as the primary analysis."
+      },
+      {
+        "assumption": "Participants regard delayed electronic payments up to eight weeks as credible and sufficiently comparable to immediate payments.",
+        "status": "explicit",
+        "relevance": "If delayed payments are not trusted or are difficult to receive, choices may reflect payment credibility or access rather than time preference under stress.",
+        "evidence": "Chen says participants must believe delayed electronic payments will arrive as promised, and the team sets an eight-week maximum delay for the electronic payment system."
+      },
+      {
+        "assumption": "The manipulation primarily changes financial stress rather than another condition-specific factor that itself changes choices, such as confusion, distrust, perceived deception, or general negative affect.",
+        "status": "implicit",
+        "relevance": "Otherwise a difference in discounting cannot specifically be interpreted as an effect of financial stress.",
+        "evidence": "The conditions differ in a financial-threat notice versus a neutral planning notice; the team relies on strain and cortisol checks but does not include a separate measure or control for these alternative pathways."
+      },
+      {
+        "assumption": "The self-reported financial-strain scale and the chosen cortisol sampling protocol provide informative indicators of manipulation-related stress, even though they are not required mediators.",
+        "status": "explicit",
+        "relevance": "These measures are used to support the claim that the manipulation changed stress and to characterize the experimental effect.",
+        "evidence": "Morales describes the strain scale as a check; Rao calls cortisol an objective stress-related measure and chooses a 20-minute post-stressor sample; the team designates both as supporting manipulation checks rather than required mediators."
+      },
+      {
+        "assumption": "A cortisol sample taken 20 minutes after the manipulation can capture the relevant post-stressor response under the study conditions, and restricting sessions to 1 pm-5 pm plus recording time sufficiently addresses time-of-day variation for the planned use.",
+        "status": "explicit",
+        "relevance": "This affects whether cortisol can credibly support the manipulation check.",
+        "evidence": "Rao specifies the 20-minute timing, notes time-of-day effects, and sets the 1 pm-5 pm scheduling window with session time recorded."
+      },
+      {
+        "assumption": "Excluding factual attention-check failures improves interpretability without introducing a condition-dependent selection bias that materially changes the estimated condition effect.",
+        "status": "explicit",
+        "relevance": "The exclusion rule can alter the analyzed groups and therefore the primary condition comparison.",
+        "evidence": "The group agrees to exclude participants who fail a factual check about the notice; because the notice is condition-specific, failure could differ by condition."
+      },
+      {
+        "assumption": "The effect estimated in adults recruited from a financial-counseling service is informative for the population and implementation setting of the proposed savings-support program.",
+        "status": "implicit",
+        "relevance": "The team intends to use laboratory findings to inform program design, which requires some transportability from this recruitment group to intended beneficiaries.",
+        "evidence": "Recruitment is from a community financial-counseling service, while Chen proposes implications for the timing of matched deposits in a future program; no separate representativeness or transportability plan is decided."
+      },
+      {
+        "assumption": "A short-run shift in laboratory intertemporal choices is relevant to real program behavior and can inform whether benefits should be delivered as immediate smaller matches rather than larger delayed matches.",
+        "status": "explicit",
+        "relevance": "This is the central bridge from the experimental result to the program-design decision.",
+        "evidence": "The team explicitly plans to interpret a manipulation-induced shift toward sooner payments as evidence relevant to benefit timing, while leaving the extent to which laboratory choices predict real program behavior unresolved."
+      },
+      {
+        "assumption": "The observed average effect is decision-relevant despite possible variation in response by pre-existing hardship.",
+        "status": "implicit",
+        "relevance": "If baseline hardship strongly moderates the effect, a single average result may not support a uniform program-timing recommendation.",
+        "evidence": "Morales raises that pre-existing hardship could affect response strength, but the team does not resolve a moderation analysis or a subgroup-specific design decision."
+      },
+      {
+        "assumption": "Cortisol need not be established as the causal mechanism for the primary conclusion about the manipulation's effect on discounting.",
+        "status": "explicit",
+        "relevance": "The team can retain its primary causal estimand even if cortisol does not mediate the condition effect, but should not claim a cortisol-mediated mechanism from this design alone.",
+        "evidence": "The preregistered primary analysis is the condition difference in discounting, with cortisol and strain described as supporting checks rather than required mediators; the necessity of cortisol as a mechanism remains unresolved."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "\u2014the ethics deadline is still Friday, right? Anyway, I\u2019d like us to leave today with the threat notice and the paid choice task basically settled. The payment language needs to be credible before we submit. I\u2019m still checking whether the vendor can document delivery- whether they can document it all the way through the eight-week window."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "\u2014and before we lock that language, how credible do we think an eight-week electronic payment will feel to people with irregular bank or phone access? On the biology side, I need the notice right after a baseline saliva sample, then we collect again about 20 minutes later, so the task order has to preserve that window."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "The credibility issue matters psychologically too. If people think the later payment might not arrive, we\u2019re not just measuring present-versus-future preference anymore. Wei, can the task separate that from impatience? I was thinking maybe ask how certain they feel the payment will be received. And Anika, the second saliva collection right after the notice, how much burden is that likely to add?"
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "It is very brief, yes."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "The second saliva isn't the burden I'm worried about. Elena, I'd keep a brief certainty item after the paid choices, but I wouldn't use it to replace the incentive-compatible task, because uncertainty is itself a possible consequence of the notice. We can preregister it as a diagnostic, and I need to confirm the vendor's delivery record before we promise eight weeks."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "The diagnostic makes sense, as long as we\u2019re careful not to read a lower later-payment choice as pure impatience. For the notice itself, I want the threat and neutral versions delivered with exactly matched instructions, and then a factual recall check. Low self-reported strain alone shouldn\u2019t mean exclusion\u2014some people in the pilot said the notice felt familiar, not unimportant."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "I\u2019m a little cautious about using a factual recall check as an exclusion rule. Have you seen it fail differently for people already under high financial strain? I\u2019d rather, rather retain everyone unless they miss something really basic, and then report it as a manipulation-comprehension measure, because selective exclusion could change the treatment contrast."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I haven't seen enough evidence yet to say whether failures are patterned by baseline hardship, so I wouldn't want to assume they aren't. Maybe we preregister the primary analysis as intent-to-treat, then a clearly labeled comprehension-restricted sensitivity analysis for people who miss a basic notice fact? That way we keep the treatment contrast without- without calling someone's low strain response a failure."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Yeah, that works for me. Let\u2019s make intent-to-treat the primary estimand, and keep the recall-restricted result explicitly secondary; I just don\u2019t want the exclusion rule drifting into the main analysis once we see choices. The check should be one very concrete fact from the notice, not a judgment about whether it felt threatening."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019ll word it as a concrete content question and keep it separate from the strain scale. We should also put the distress screen before the baseline sample, and I need to check the counseling service\u2019s referral materials are actually- before we cite them in the debrief, that they\u2019re current."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Good\u2014because if the referral route is stale, that's not just a debriefing detail for this group. And on the task side, I'd like the debrief to say plainly that one choice is selected for payment and that delayed transfers have a dated delivery commitment. Otherwise, the later options can pick up transaction-hassle beliefs, not the timing trade-off."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019d keep that wording out of the debrief until after the choices, but then make it very explicit. The distress screen also needs a simple in-session path. If someone becomes upset, we pause instead of trying to push them through the payment explanation. I\u2019m checking the counseling service\u2019s current referral contacts before we lock that language."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "\u2014if we pause, we should treat it as a protocol deviation for the cortisol timing. We shouldn't try to squeeze the second sample in on schedule. I also need to check whether staff can reliably keep the baseline-to-notice and 20-minute post-notice windows when someone arrives late. Otherwise the biological measure gets- it's rather hard to interpret."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "That\u2019s cleaner than treating a late arrival as something staff can just make up. For the procedure, would it help to define a late-arrival cutoff before consent, so they can either reschedule if we have capacity or do the behavioral session without being represented as having valid cortisol timing?"
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Mm, that seems sensible."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "\u2014yes. I\u2019d set a fixed cutoff, though I need to check the staffing schedule before I name it. If someone comes in late, the behavioral session can still be useful, but the saliva component- we should code that as not protocol-valid instead of shifting the post-notice collection window."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "For the economic outcome, I'd keep those late behavioral sessions in the primary intent-to-treat sample, but flag any pause or timing deviation separately. Anika, if the choices show a clean condition effect but the cortisol response is noisy or, I guess, only shows up in the protocol-valid subset, what would you see as the useful interpretation?"
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "I would treat that as evidence the notice changed choices, but not that cortisol mediated the change. A noisy overall cortisol result could reflect the narrow timing window, collection conditions, or genuine heterogeneity in response. If it only appears in the protocol-valid subset, I would call it exploratory, unless that subset is defined in advance and it isn't too selective."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Mm, okay."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "That distinction is important for us. I\u2019d preregister the choice effect as the main result, and treat cortisol as a pre-specified supporting mechanism measure, not something the behavioral result has to wait on. And we should retain the protocol-valid subset definition before any data are visible."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "\u2014yes, and for that subset, I would specify the actual windows, not just \u201cprotocol-valid.\u201d Baseline immediately before the notice, then the second collection at roughly 20 minutes, with exact collection times recorded. We should also retain session time. The dry run had some unexpectedly high late-afternoon baselines, and I do not yet know whether that was medication, recent travel, or\u2014 whether it was handling."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "And session time could matter for the self-report piece too. By late afternoon, people may be arriving after a whole day of financial hassles, so baseline strain is not really comparable. I think we should record it, and recent food, caffeine, maybe medication as standard covariates, but not, not start excluding on those unless we've specified a reason."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Hm, record all of that."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "\u2014and for recent food and caffeine, we need the timing, not just yes or no, because they can affect the sample. I\u2019d also record current medications and recent travel, as Elena said, but I\u2019d be cautious about treating them as covariates in the primary model until we see how complete those fields are."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Record them with timestamps where we can, but I agree, they shouldn't become a menu of post hoc controls. For the primary choice model, I'd rather adjust only for the pre-specified baseline variables. And keep the collection-condition fields for the cortisol analysis and descriptive checks."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Right, with timestamps."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "For the self-report, I\u2019d rather collect baseline strain before the notice and use the same brief scale after it, with the session time recorded. Trying to statistically repair what people arrived carrying that day\u2014 actually, I don\u2019t think that\u2019s the way to handle it. And the post-notice score is a manipulation check at the condition level, not an individual pass-fail threshold."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "Exactly. The post-notice strain score helps us establish that the notice moved perceived pressure on average, but the economic test is still whether it shifts the paid sooner-versus-later choices. I\u2019m still going to need the vendor confirmation before we finalize the dated-transfer wording, though..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Okay, we\u2019re out of time. I\u2019ll check the referral contacts, and we can pick up the remaining, uh, wording once Wei has the vendor confirmation\u2014thanks, both."
+    },
+    {
+      "speaker": "Dr. Wei Chen",
+      "text": "All right, talk soon."
+    },
+    {
+      "speaker": "Dr. Anika Rao",
+      "text": "Thank you. Goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      11,
+      13,
+      16,
+      17,
+      18,
+      20,
+      21,
+      27,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The transcript omits several seed-required protocol details that ground-truth assumptions rely on: it never states random assignment, the realistic fictional unexpected-essential-expense notice, that the expense exceeds stated monthly discretionary funds, or that control participants receive a neutral household-planning notice. The threat/control comparison is only loosely implied in turns 6 and 9.",
+      "Turn 9 directly conflicts with the required attention-check decision: it makes intent-to-treat primary and places factual-recall exclusion only in a secondary sensitivity analysis. The seed requires agreement to exclude factual attention-check failures while retaining low-distress participants.",
+      "The required explicit agreement that random assignment supports attribution of average post-manipulation differences, conditional on a working manipulation and task completion, is absent. This makes the corresponding causal-comparability assumption not recoverable from the meeting.",
+      "Chen never states the required program-design bridge: whether findings support immediate, smaller matched deposits rather than only larger delayed matches. Turn 28 mentions sooner-versus-later choices but does not connect them to the future savings-support program, so the lab-to-program assumption is not supported.",
+      "Rao does not state that cortisol is an objective stress-related measure, does not specify sessions will be scheduled from 1 pm to 5 pm, and never says neuroimaging is omitted because the study has one visit and a fixed budget. Turns 21-24 record timing and discuss late-afternoon variation, but they do not meet these required decisions.",
+      "The payment design is incomplete relative to the seed: turns 11 and 28 state one selected choice is paid and discuss an eight-week delivery commitment, but the team never finalizes the eight-week maximum or clearly commits to delayed payment being electronic.",
+      "Several decisions remain provisional rather than finalized despite the task asking for final decisions: vendor confirmation is still pending in turns 1, 5, and 28; the late-arrival cutoff is unspecified in turn 16; referral materials remain unverified in turns 10, 12, and 29.",
+      "The dialogue has all five realism signals, but it still reads somewhat scripted and deliberatively complete. Many medium-length turns package a concern, rationale, and resolution cleanly (especially turns 5-9, 17-21, and 22-27), and the sequence resembles a structured protocol review more than a rushed weekly check-in."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      18
+    ],
+    "exploration_share": 0.25,
+    "turn_moves": {
+      "question": 5,
+      "answer": 3,
+      "proposal": 13,
+      "agreement": 3,
+      "commitment": 2,
+      "concern": 1,
+      "backchannel": 3,
+      "observation": 1
+    },
+    "volunteer_turns": [
+      10,
+      29
+    ],
+    "unsure_turns": [
+      1,
+      5,
+      8,
+      10,
+      12,
+      13,
+      16,
+      17,
+      21,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "Major seed elements are absent or only partially implied. No turn states that the study uses random assignment or a neutral household-planning control; the transcript repeatedly discusses one fictional expense notice but never specifies the required treatment-versus-control design.",
+        "Turn 11 refers to a fictional expense but does not state that it exceeds participants' stated monthly discretionary funds. This required manipulation detail is missing.",
+        "No speaker states the planned program implication: whether to offer more immediate, smaller matched deposits rather than only larger delayed matches. Consequently, the bridge from laboratory discounting to savings-support benefit timing\u2014and the associated decision-relevant assumption\u2014is not recoverable from the meeting.",
+        "No explicit agreement says random assignment supports attribution of average post-manipulation differences to condition, conditional on a working manipulation and task completion. This is required both by the seed and ground truth.",
+        "Turn 6 establishes exclusion for factual recall failure and retention despite low reported stress, but the factual check is described only for the notice actually discussed. Without the missing control condition and randomization, the intended condition-comparison exclusion issue is under-specified.",
+        "Rao covers the 20-minute timing and 1\u20135 pm scheduling (turns 4, 15, 17), but never calls cortisol an objective stress-related measure and never states that neuroimaging is excluded because of the one-visit fixed-budget design.",
+        "Morales includes debriefing and referral discussion (turns 12, 21, 28), but she does not raise the required unresolved concern that pre-existing hardship may alter response strength.",
+        "The transcript reads more like a polished protocol-design discussion than the requested rushed weekly check-in. Most turns are long, complete, and agenda-efficient, despite the stated quick-checkin style.",
+        "Several disfluencies are surface edits embedded in otherwise polished prose, for example turns 3, 10\u201313, 15\u201317, and 25\u201328. They do not substantially disrupt the highly composed sentence structure.",
+        "The meeting ends with a tidy closure in turns 27\u201329 that functions like a compact decisions/action-items recap, which is specifically a naturalness tell for this evaluation."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.25,
+      "approved": false,
+      "issues": [
+        "The transcript omits several seed-required protocol details that ground-truth assumptions rely on: it never states random assignment, the realistic fictional unexpected-essential-expense notice, that the expense exceeds stated monthly discretionary funds, or that control participants receive a neutral household-planning notice. The threat/control comparison is only loosely implied in turns 6 and 9.",
+        "Turn 9 directly conflicts with the required attention-check decision: it makes intent-to-treat primary and places factual-recall exclusion only in a secondary sensitivity analysis. The seed requires agreement to exclude factual attention-check failures while retaining low-distress participants.",
+        "The required explicit agreement that random assignment supports attribution of average post-manipulation differences, conditional on a working manipulation and task completion, is absent. This makes the corresponding causal-comparability assumption not recoverable from the meeting.",
+        "Chen never states the required program-design bridge: whether findings support immediate, smaller matched deposits rather than only larger delayed matches. Turn 28 mentions sooner-versus-later choices but does not connect them to the future savings-support program, so the lab-to-program assumption is not supported.",
+        "Rao does not state that cortisol is an objective stress-related measure, does not specify sessions will be scheduled from 1 pm to 5 pm, and never says neuroimaging is omitted because the study has one visit and a fixed budget. Turns 21-24 record timing and discuss late-afternoon variation, but they do not meet these required decisions.",
+        "The payment design is incomplete relative to the seed: turns 11 and 28 state one selected choice is paid and discuss an eight-week delivery commitment, but the team never finalizes the eight-week maximum or clearly commits to delayed payment being electronic.",
+        "Several decisions remain provisional rather than finalized despite the task asking for final decisions: vendor confirmation is still pending in turns 1, 5, and 28; the late-arrival cutoff is unspecified in turn 16; referral materials remain unverified in turns 10, 12, and 29.",
+        "The dialogue has all five realism signals, but it still reads somewhat scripted and deliberatively complete. Many medium-length turns package a concern, rationale, and resolution cleanly (especially turns 5-9, 17-21, and 22-27), and the sequence resembles a structured protocol review more than a rushed weekly check-in."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "transcript_id": "6f53eba2",
+  "generated_at": "2026-11-21T23:05:32.799543",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a warm, informal academic-video-call feel, with mostly short to medium turns during setup and discussion, contrasted with long, highly structured presentation turns. Early conversation is chatty and fragmented, full of greetings, side comments, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), and occasional audio/logistics checks; interruptions and overlaps are fairly common but generally friendly and noncompetitive. Speakers hedge often with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d and \u201cit could be,\u201d especially when speculating. Formality rises during introductions and talks, but presenters still use conversational signposting, self-corrections, repetitions, and fillers such as \u201cum\u201d and \u201cuh.\u201d Questions are usually prefaced politely\u2014\u201cI have a quick question,\u201d \u201cnaive question,\u201d \u201ccan I ask\u201d\u2014then develop into long, exploratory multi-part prompts. Challenges are indirect and collaborative: participants frame alternatives as curiosities or open questions rather than blunt disagreement, and presenters validate questions before qualifying or revising an answer.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Testing whether financial stress narrows how people weigh present against future payoffs, and what that means for program design.",
+  "disciplines": [
+    "neuroscience",
+    "economics",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "neuroscience",
+      "functional_role": "project manager",
+      "background": "Dr. Chen is a cognitive-affective neuroscientist with 11 years of experience running psychophysiology studies on stress, uncertainty, and decision-making in adult community samples. She has managed multi-site saliva-collection protocols, including cold-chain logistics and cortisol assay coordination, and has led several ethics submissions involving socially sensitive stress inductions. Although she is serving as project manager, her substantive expertise centers on hypothalamic-pituitary-adrenal-axis responsivity, timing of endocrine sampling, and the distinction between biological correlates and psychological constructs.",
+      "distinct_perspective": "Chen treats acute stress as a temporally structured physiological and subjective response, not a broad label that can be inferred from one questionnaire or one biomarker. She will press the team to specify the induction's timing, recovery window, saliva collection procedures, medication exclusions, and privacy safeguards. She is likely to insist that cortisol be interpreted as a manipulation-check correlate rather than evidence that a biological measure directly explains or measures intertemporal valuation. She is wary of economists treating choices as transparent readouts of stable preferences and of psychologists treating self-report as sufficient evidence that the induction worked.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Dr. Daniel Ruiz",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "Dr. Ruiz is a behavioral economist with 14 years of research experience studying scarcity, household financial volatility, and intertemporal choice. His work combines incentivized laboratory experiments, structural estimation of discounting models, and field evaluations of financial-assistance and coaching interventions. He has designed payment implementations for delayed-reward tasks and regularly analyzes choice consistency, present-bias parameters, demand effects, and heterogeneous treatment effects among financially constrained populations.",
+      "distinct_perspective": "Ruiz frames the central question as whether a transient scarcity cue changes the tradeoff participants reveal between immediate liquidity and future resources. He will distinguish noisy one-off choices from estimated discounting or present-bias parameters, argue for incentive-compatible elicitation, and ask whether observed shifts represent genuine preference changes, altered beliefs about future payment reliability, or liquidity constraints. He will want outcomes that can speak to welfare and program design, while emphasizing that a laboratory effect must be interpreted cautiously before it is translated into a community financial-coaching pilot.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "discipline": "psychology",
+      "functional_role": "domain expert",
+      "background": "Dr. Shah is a health and social psychologist with 12 years of experience studying stress appraisal, socioeconomic threat, self-regulation, and behavioral intervention design. She has conducted laboratory studies using social-evaluative stress tasks and longitudinal community research with adults facing income instability. Her methodological work includes manipulation-check validation, multilevel repeated-measures analysis, preregistration, measurement invariance, and ethical adaptation of stress paradigms for nonstudent participants.",
+      "distinct_perspective": "Shah sees financial stress as a psychologically appraised state whose meaning depends on threat, controllability, shame, and perceived resource adequacy. She will argue that the adapted arithmetic task needs to produce demonstrable changes in perceived stress and financial-threat appraisal rather than merely exposing people to difficult arithmetic or money language. She will insist on separating acute experimentally induced stress from chronic financial strain, measured with the InCharge Financial Distress/Financial Well-Being Scale, and will advocate preregistered manipulation checks, exclusion rules, and moderation analyses. For the later pilot, she will focus on whether coaching changes perceived control and decision environments rather than assuming an individual-level laboratory effect maps directly onto program impact.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "scarcity_decisions",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 5,
+  "task_id": "assumptions_03",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a long meeting where an early constraint makes a later decision unworkable, and nobody connects them. Separate the two moments with substantive discussion. The evaluated AI must flag the conflict and cite both moments.",
+  "seed_spec": {
+    "task_id": "assumptions_03",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a long meeting where an early constraint makes a later decision unworkable, and nobody connects them. Separate the two moments with substantive discussion. The evaluated AI must flag the conflict and cite both moments.",
+    "explicit_instruction": "Simulate a long, natural planning meeting among Dr. Maya Chen (neuroscience), Dr. Daniel Ruiz (economics), Dr. Priya Shah (psychology), and project manager Elena Morris. Do not mention that the meeting is a benchmark or ask participants to identify contradictions. Early in the meeting, Elena states that the ethics office has approved participant payment only as a flat $50 electronic gift card sent after the visit; it specifically prohibits paying or promising any outcome-contingent, randomly selected, or delayed-choice bonus because participants may be financially vulnerable. The group accepts this as a fixed administrative constraint and moves on. Keep this fact available but do not have anyone later connect it to another decision.\n\nThen hold substantial discussion before the later decision: define acute financial stress as a time-limited state induced by an adapted social-evaluative arithmetic task with a money-scarcity framing; distinguish it from chronic strain measured by the InCharge Financial Distress/Financial Well-Being Scale; discuss saliva collection at baseline and 20 minutes after induction, cortisol timing, perceived-stress ratings, exclusion for steroid medication, privacy protections, replication sample size, and whether laboratory findings can inform a later field pilot. Let neuroscience emphasize that cortisol is a manipulation-check correlate rather than a direct measure of valuation; let psychology emphasize manipulation checks and pre-registration; let economics discuss discount-rate estimation, choice consistency, and welfare-relevant outcomes.\n\nLater, Daniel proposes and the group explicitly decides that the primary behavioral outcome will be an incentive-compatible intertemporal-choice task: each participant makes 40 sooner-versus-later monetary choices, one choice is selected at random, and the participant receives the amount and timing associated with that selected choice (for example, an immediate amount today or a larger amount paid in four weeks). The team adopts this design because Daniel says hypothetical choices may not reveal real tradeoffs under financial stress. They assign Daniel to program the random-payment task and Elena to include it in the protocol. Nobody notices, raises, resolves, or qualifies the incompatibility with the earlier payment constraint. The meeting should end with ordinary next steps and no resolution of this issue.",
+    "ground_truth": {
+      "conflict": "The early ethics/payment constraint makes the later primary-outcome decision unworkable.",
+      "early_moment": "Elena states that participants can receive only a flat $50 electronic gift card after the visit and that ethics prohibits any outcome-contingent, randomly selected, or delayed-choice bonus.",
+      "later_moment": "Daniel and the group decide to use an incentive-compatible intertemporal-choice task in which one of 40 choices is randomly selected and paid according to the selected immediate or delayed payoff, and they assign it for implementation.",
+      "why_unworkable": "The selected-choice payment is necessarily outcome-contingent and may be delayed, exactly the types of compensation the accepted ethics constraint prohibits. Therefore the team cannot implement the agreed primary behavioral outcome under its stated payment approval.",
+      "expected_flag": "A good answer should identify both moments, explain the direct contradiction, and note that the team must either obtain revised ethics/payment approval or replace the incentive-compatible payment design with a permitted measure."
+    }
+  },
+  "seed_location": "The requested unnoticed conflict does not occur. Turns 16-21 discuss an incentive-compatible/random-payment design before the payment constraint is stated, but turn 26 explicitly identifies that the approved flat $50 gift card prohibits outcome-contingent or delayed-choice payments and says the random-real-payment task may not be allowable. Turns 27-30 acknowledge the incompatibility, shift toward a hypothetical task, and leave it as an unresolved protocol issue. Thus the transcript contains the relevant payment conflict, but participants do connect and qualify it rather than overlooking it.",
+  "ground_truth": {
+    "conflict": "The early ethics/payment constraint makes the later primary-outcome decision unworkable.",
+    "early_moment": "Elena states that participants can receive only a flat $50 electronic gift card after the visit and that ethics prohibits any outcome-contingent, randomly selected, or delayed-choice bonus.",
+    "later_moment": "Daniel and the group decide to use an incentive-compatible intertemporal-choice task in which one of 40 choices is randomly selected and paid according to the selected immediate or delayed payoff, and they assign it for implementation.",
+    "why_unworkable": "The selected-choice payment is necessarily outcome-contingent and may be delayed, exactly the types of compensation the accepted ethics constraint prohibits. Therefore the team cannot implement the agreed primary behavioral outcome under its stated payment approval.",
+    "expected_flag": "A good answer should identify both moments, explain the direct contradiction, and note that the team must either obtain revised ethics/payment approval or replace the incentive-compatible payment design with a permitted measure."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hi all\u2014before we get into it, did anyone miss the last meeting and want a quick catch-up? I mostly want us to leave today with the lab sequence less fuzzy, especially where the saliva and the repeated choice tasks sit relative to the induction. Because otherwise we'll be calling very, very different things 'stress.'"
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "No, I\u2019m caught up. The key for me is the choice window has to line up with a plausible acute response, not just happen somewhere after the manipulation. Maya, with the roughly 20-minute cortisol lag, do you think we should put the main forty-choice block immediately, immediately after the task, or are we really targeting anticipatory stress there rather than cortisol-mediated effects?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd put the main choice block immediately after the task, yes, but not because cortisol is mediating it. That window is where the appraisal and the subjective rattling are most plausibly active. The 20-minute saliva sample is- that's a separate manipulation-check correlate. Then we should be explicit that any shift in choice lines up in time with the induction, not that it's evidence cortisol caused it."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "And I\u2019d have the immediate post-task ratings do real work there. We need perceived stress, financial-threat appraisal, and probably, um, perceived controllability before the choice block if we can keep the timing tight. Otherwise, we may just show that people did unpleasant arithmetic, not that the scarcity framing produced the psychologically relevant threat state."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Priya, what magnitude or pattern on those ratings would make you comfortable calling it an acute financial-threat state, rather than just frustration at getting sums wrong? I'd want- I'd want both threat appraisal and stress to move, ideally with controllability going down, but I don't know that we've agreed on what counts as enough."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I wouldn't set a universal cutoff this early, because the scale distributions in this population may be odd. But we should preregister a directional, condition-level manipulation criterion. Scarcity framing has to elevate financial-threat appraisal and perceived stress relative to the control, with controllability ideally lower. Then a stress-only increase without threat, I'd treat that as task frustration, not the intended construct. We could also ask one brief shame or anticipated-judgment item\u2014would that make the immediate battery too intrusive?"
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "Mm, maybe one item."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "One item seems manageable if it's clearly optional or easy to skip, given the population. I'm more worried we could conflate social evaluation from the arithmetic task with financial threat. Could we word it specifically around concern about meeting expenses or having enough money, instead of general embarrassment or judgment?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Exactly, I'd keep the financial-threat item anchored to anticipated resource adequacy, like whether they feel they may not have enough to cover near-term needs, rather than whether they feel judged. The shame item could be separate and explicitly about feeling embarrassed or inadequate, because it may, may explain response heterogeneity, but it isn't itself the induction target."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And that separation helps analytically too. We can see whether embarrassment is just tagging the social-evaluative piece instead of quietly becoming our definition of financial threat. We should keep the ratings very brief, though, then run choices and take saliva 20 minutes from induction onset, not 20 minutes after the choices, or the timing drifts all over the place."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "That works for me. If the ratings are genuinely brief, I'd put the forty-choice block straight after them and keep the saliva clock anchored to induction onset. The behavioral endpoint is the revealed liquidity tradeoff in that immediate window, not cortisol. Do we have enough room before the 20-minute draw to administer all forty without making the sample, um, interrupt the block?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "I think so, as long as the ratings are three or four items and not a mini-scale. But I'd want to preserve the exact timestamps. If a saliva draw cuts into the choice block, even briefly, it could restore a bit of control or break the appraisal state. Could we just schedule the block to finish before the draw, or take the sample between two preplanned choice segments?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I really don\u2019t want the draw to split the block if we can avoid it. We could design the immediate choice block to fit in, say, twelve to fourteen minutes, then reserve a couple of minutes for the 20-minute collection. But Daniel, would shortening it that way make the discounting estimates too noisy?"
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "Twelve to fourteen minutes should work for forty if the interface is clean and we don't add a lot of comprehension prompts. I'd rather keep the forty than split it, because that gives us enough price variation to estimate a discounting parameter and flag obvious nonmonotonic choices. Twenty-ish choices starts to look pretty thin. The question is whether we can randomize the order without people spending too long on each screen, because if they do then\u2014"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Forty is fine from my side, but I\u2019d avoid comprehension prompts in that immediate window, since they can shift people into a more deliberative, less threatened mode. Daniel, could the instructions and a couple of practice trials happen before the induction, so after the task it\u2019s just the choices on a familiar, familiar interface?"
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "That\u2019s exactly how I\u2019d do it. Full instructions, two or three neutral practice trials, and any clarification should all happen before induction. Afterward, the forty real choices need to be almost frictionless. We should make clear beforehand that one of the forty may determine payment, though. Otherwise the task is- it\u2019s not really incentive-compatible."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Yes, but the payment language itself is part of the construct here. Daniel, how do we distinguish a genuine shift toward immediacy from participants deciding that a later payment is less credible, especially people whose experience with institutions or irregular income makes \"later\" feel uncertain? I think we need a brief, separate payment-certainty item, probably after the immediate block so it doesn't prime that concern."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, that\u2019s an important distinction."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "I think we need that item, because otherwise a shift toward the later option is underidentified. It could be discounting, liquidity, or, um, a belief that we won't actually pay in four weeks. I'd ask, after all forty choices, how certain they are that a payment from us scheduled for four weeks later would arrive as promised. Then I'd treat it as a mechanism or sensitivity measure, not something we mechanically adjust away."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That seems right. Ask it after the block, and I\u2019d keep it explicitly about our payment process rather than a general belief that the future is uncertain. We should preregister that the primary outcome is the condition effect on choices, then examine payment certainty and chronic financial strain as moderators or, um, alternative explanatory pathways, not fold them into a single discounting score."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "I\u2019d just resist calling the raw condition effect a discounting effect unless the forty choices give us a reasonably coherent pattern across the immediate amounts and the four-week amounts. We can preregister the choice-level condition effects as primary, then estimate discounting and, where the data actually identify it, present bias. Payment certainty and the InCharge score can help us understand, um, heterogeneity rather than get collapsed into one number."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "And I want to keep the InCharge score out of that acute model. It's baseline, ongoing financial strain, not a manipulation check. I need to look at the wording and the reading burden before we freeze the packet. With variable-income participants, some of those items may be- they may feel more exposing than we intended."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "Before we build moderation terms around the InCharge score, I need to see what the likely analyzable sample is. Forty repeated observations help the choice model, but they don't magically give us power for condition-by-strain or condition-by-payment-certainty interactions. With a modest community sample, those will need to stay exploratory, I think..."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Those interactions should be explicitly exploratory, especially because high chronic strain may not even show up as higher self-reported acute stress. In our vignette pilot, that group had a smaller increase in ratings but more threat-focused written responses, and I genuinely don\u2019t know if that\u2019s habituation, scale compression, or reluctance to endorse distress. So I\u2019d avoid treating a null strain moderation as evidence that appraisal is irrelevant."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s partly why I\u2019m reluctant to set any biological-response threshold from the feasibility run. People said they were rattled, but several had flat or lower later cortisol, and I need to audit whether the pre-visit food, caffeine, and collection timing were actually consistent. For the submission, though, we should at least lock baseline saliva, the 20-minute draw, steroid-medication exclusion, and a very private opt-out and debrief. The framing could hit quite differently for someone already under real strain."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "The opt-out matters for the choice data too. If someone stops after the induction, that isn't ordinary missingness, especially if it clusters by baseline strain. One administrative snag we still need to resolve before ethics is that the approved compensation is a flat $50 electronic gift card after the visit, and outcome-contingent or delayed-choice payments are currently prohibited. So the random-real-payment version of the forty choices may not be allowable as written."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Mm, then we should not describe these as incentive-compatible choices in the submission\u2014that would be misleading. We can still use the hypothetical task, but Daniel, I\u2019d want to know how much that changes what the choice pattern means for your model; and we need to be very plain in consent that the $50 is not contingent on any response. We\u2019re at time, so let\u2019s leave that as the main unresolved protocol issue."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "It changes the evidentiary claim quite a bit if it\u2019s hypothetical. We can still estimate a condition effect across the forty choices and test internal consistency, but I\u2019d frame it as stated intertemporal choice under the scenario, not revealed willingness to trade current liquidity for an actual four-week payment. Whether that generalizes to program design is genuinely open. I\u2019ll look at whether there\u2019s any ethics-compliant way to make the timing, um, more salient without making compensation contingent, but I don\u2019t know that there is."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah\u2014let\u2019s not overclaim from hypothetical choices; we can pick that up offline."
+    },
+    {
+      "speaker": "Dr. Daniel Ruiz",
+      "text": "Okay, I think we should stop there before whoever has the hard stop gets, um, stuck. We can come back to the hypothetical-payment issue offline. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "All right, take care, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 1,
+    "task_compliance": 1,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      26,
+      27,
+      28
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The required seed conflict is not embedded. The early ethics constraint should have been stated and accepted near the beginning, while the later random-payment decision should have been adopted without anyone noticing the conflict. Instead, the compensation restriction first appears only at turn 26, after the group has already discussed incentive compatibility in turns 16-21.",
+      "The transcript explicitly notices and resolves/qualifies the incompatibility, directly violating the task. At turn 26, Ruiz says random-real payment may not be allowable; turns 27-29 replace the design with a hypothetical task and caution against incentive-compatibility claims. This leaves no unnoticed early-versus-later contradiction for the evaluated AI to flag.",
+      "Elena Morris is entirely absent, despite being required by the seed and being the person who must state the early approved-payment constraint and later be assigned to include the random-payment task in the protocol.",
+      "The required later decision is absent. No one explicitly adopts a 40-choice randomly selected, paid intertemporal task, assigns Daniel to program it, or assigns Elena to place it in the protocol. Turns 16 and 26 merely discuss and then reject or suspend that option.",
+      "The meeting-style instruction says this is an exploratory brainstorm in which nothing is decided, but the transcript contains multiple settled protocol decisions and a fairly polished progression. Many substantive turns read as finished written paragraphs that raise an issue, qualify it, and land on a tidy recommendation.",
+      "Although there are some fillers and repetitions, they are largely decorative within highly coherent, polished turns; the dialogue has little genuine uncertainty or exploration after questions are raised."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.43,
+    "turn_moves": {
+      "question": 6,
+      "proposal": 11,
+      "agreement": 3,
+      "concern": 5,
+      "answer": 2,
+      "request": 1,
+      "observation": 2,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      28
+    ],
+    "unsure_turns": [
+      5,
+      22,
+      24,
+      25,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 30,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.31,
+      "approved": false,
+      "issues": [
+        "The essential early payment/ethics constraint is entirely absent: Elena Morris never appears, and no turn states that payment is restricted to a flat $50 electronic gift card after the visit or that outcome-contingent, randomly selected, and delayed-choice bonuses are prohibited.",
+        "The later random-payment decision appears in turns 11-12 and is reinforced in turns 19 and 27, but without the required earlier ethics constraint there is no embedded contradiction for an evaluated assistant to flag.",
+        "The required personnel and assignments are missing: the transcript has only Chen, Ruiz, and Shah, while the seed requires project manager Elena Morris to state the constraint and later be assigned to include the random-payment task in the protocol.",
+        "The meeting style requested is exploratory with nothing decided, but the transcript repeatedly locks decisions and closes action items, especially turns 24-28; turn 27 effectively recaps a completed implementation plan.",
+        "Naturalness is limited by highly polished, paragraph-like turns that routinely pose a concern and immediately formulate a clean methodological response or assignment. The final sequence in turns 24-28 functions like written meeting minutes rather than an unfinished brainstorm."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 1,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.43,
+      "approved": false,
+      "issues": [
+        "The required seed conflict is not embedded. The early ethics constraint should have been stated and accepted near the beginning, while the later random-payment decision should have been adopted without anyone noticing the conflict. Instead, the compensation restriction first appears only at turn 26, after the group has already discussed incentive compatibility in turns 16-21.",
+        "The transcript explicitly notices and resolves/qualifies the incompatibility, directly violating the task. At turn 26, Ruiz says random-real payment may not be allowable; turns 27-29 replace the design with a hypothetical task and caution against incentive-compatibility claims. This leaves no unnoticed early-versus-later contradiction for the evaluated AI to flag.",
+        "Elena Morris is entirely absent, despite being required by the seed and being the person who must state the early approved-payment constraint and later be assigned to include the random-payment task in the protocol.",
+        "The required later decision is absent. No one explicitly adopts a 40-choice randomly selected, paid intertemporal task, assigns Daniel to program it, or assigns Elena to place it in the protocol. Turns 16 and 26 merely discuss and then reject or suspend that option.",
+        "The meeting-style instruction says this is an exploratory brainstorm in which nothing is decided, but the transcript contains multiple settled protocol decisions and a fairly polished progression. Many substantive turns read as finished written paragraphs that raise an issue, qualify it, and land on a tidy recommendation.",
+        "Although there are some fillers and repetitions, they are largely decorative within highly coherent, polished turns; the dialogue has little genuine uncertainty or exploration after questions are raised."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "transcript_id": "ff373b54",
+  "generated_at": "2026-11-21T18:08:40.408199",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style, with mostly short-to-medium turns in the opening chat and much longer, structured presentation turns once talks begin. Overlap and interruptions are fairly common but usually light and cooperative\u2014brief acknowledgments, greetings, or quick follow-ups rather than hostile cutoffs. Speakers use frequent fillers and repairs (\u201cum,\u201d \u201cyeah,\u201d \u201cI mean,\u201d repetitions, false starts), especially in spontaneous questions, and nonnative phrasing is left unpolished, giving the exchange an informal, live feel. The tone is friendly and academically professional but not formal: participants praise talks, joke lightly, address one another by first name, and soften criticism through hedges such as \u201cI think,\u201d \u201cmaybe,\u201d \u201cI\u2019m not sure,\u201d and \u201cit could be.\u201d Questions are often prefaced with compliments or disclaimers (\u201cquick question,\u201d \u201cnaive question\u201d), then develop into multipart, exploratory prompts. Disagreement is indirect and framed as uncertainty, alternative interpretations, or requests for clarification; presenters respond at length, acknowledge limits, and turn questions into future directions.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with one person already reading from, or referring to, a document the others have open.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Testing whether financial stress narrows how people weigh present against future payoffs, and what that means for program design.",
+  "disciplines": [
+    "neuroscience",
+    "economics",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Srinivasan",
+      "discipline": "neuroscience",
+      "functional_role": "postdoctoral researcher",
+      "background": "A cognitive-affective neuroscience postdoctoral researcher with 5 years of fMRI and psychophysiology experience, including studies of acute stress, reward anticipation, and decision-making under scarcity. She has managed scanner protocols, synchronized behavioral tasks with image acquisition, and overseen salivary cortisol collection, storage, and assay coordination.",
+      "distinct_perspective": "Maya treats the study as a question about whether acute financial stress changes the neural and endocrine conditions under which value is computed. She focuses on temporal precision: stress induction, cortisol sampling, trial events, and scanner acquisition must be aligned tightly enough to support interpretable claims about reward and valuation circuitry rather than merely adding biomarkers to a behavioral study.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Ethan Morales",
+      "discipline": "economics",
+      "functional_role": "research engineer",
+      "background": "A research engineer with 7 years of experience building web-based and laboratory behavioral experiments for applied microeconomics. He has implemented incentive-compatible delay-discounting and risk-preference tasks, payment randomization systems, participant tracking for delayed transfers, and data pipelines for field and lab studies involving financially constrained adults.",
+      "distinct_perspective": "Ethan frames the central issue as a measurement and incentive-design problem: the task must elicit choices with real consequences, distinguish present bias from noise or misunderstanding, and make delayed payments credible to participants. He is attentive to operational details such as how one choice is selected for payment, whether immediate and delayed transfers are feasible, and whether session burden changes the meaning of observed choices.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Leila Okafor",
+      "discipline": "psychology",
+      "functional_role": "domain expert",
+      "background": "A health and social psychologist with 12 years of experience studying financial strain, perceived scarcity, stress appraisal, and self-regulation among low-income and economically insecure adults. Her work uses randomized laboratory manipulations, self-report measures, manipulation checks, and mixed-methods pilot testing to assess whether an induced state is psychologically credible without being unnecessarily distressing.",
+      "distinct_perspective": "Leila sees financial stress as a subjective, context-sensitive state rather than a label that can be assumed from income or a single vignette. She prioritizes selecting a manipulation that reliably shifts perceived financial pressure while remaining ethical and acceptable, then verifying its effects through self-report and physiological indicators before interpreting any change in intertemporal choice as a consequence of stress.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "scarcity_decisions",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with one person already reading from, or referring to, a document the others have open.",
+  "sample_seed": 4,
+  "task_id": "coordination_04",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+  "seed_spec": {
+    "task_id": "coordination_04",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting discussing steps out of order, where work by one discipline must finish before another discipline can start. The evaluated AI must order next steps by dependency and name the dependency issue.",
+    "explicit_instruction": "In the meeting, have the economics lead report that they have drafted the incentive-compatible choice task and want to program it immediately, including the real-payment and delayed-payment procedures. Have the neuroscience lead say the scanner and saliva-collection slots can be reserved now but that the task must have final event timings, trial counts, and stress-manipulation timing before an fMRI-compatible version can be built or scanning slots can be meaningfully finalized. Have the psychology lead explain that the financial-stress manipulation is not yet selected: the team must first choose between two candidate manipulations, run a small manipulation-check pilot using self-report and cortisol, and use that result to set the timing and intensity of the final protocol. State that the pilot result is required before the final task timing can be locked. The discussion should mention these proposed actions in an intentionally unhelpful order: reserve scanner slots, program the economics task, conduct the manipulation-check pilot, choose the manipulation, build the fMRI-compatible task, and launch the integrated pilot. Do not resolve the ordering in the meeting. Make clear that the economics payment procedure also needs the final session length and final task structure, so it cannot be finalized before the protocol is locked. Keep the exchange practical and collaborative; there is no substantive disagreement about the research question.",
+    "ground_truth": {
+      "dependency_issue": "The proposed actions are out of dependency order. The final stress-manipulation choice and its validated timing are prerequisites for locking the integrated protocol; locked protocol timing and structure are prerequisites for finalizing the economics payment procedure and building the fMRI-compatible task; those finalized components are prerequisites for an integrated pilot.",
+      "ordered_next_steps": [
+        {
+          "step": 1,
+          "action": "Psychology selects the two candidate financial-stress manipulations and defines the manipulation-check measures and decision criterion.",
+          "depends_on": []
+        },
+        {
+          "step": 2,
+          "action": "Psychology runs the small manipulation-check pilot, including self-report and cortisol checks, and selects the manipulation, intensity, and timing based on the pre-specified criterion.",
+          "depends_on": [
+            1
+          ]
+        },
+        {
+          "step": 3,
+          "action": "The cross-disciplinary team locks the integrated protocol: manipulation timing, task onset relative to stress induction, trial counts, event timings, and total session length.",
+          "depends_on": [
+            2
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Economics finalizes and programs the incentive-compatible choice task and real/delayed payment procedures using the locked task structure and session length.",
+          "depends_on": [
+            3
+          ]
+        },
+        {
+          "step": 5,
+          "action": "Neuroscience builds the fMRI-compatible task version and finalizes usable scanner and saliva-collection scheduling based on the locked event timing and trial structure.",
+          "depends_on": [
+            3
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Launch the integrated pilot only after the finalized economics implementation and neuroscience-compatible protocol are available.",
+          "depends_on": [
+            4,
+            5
+          ]
+        }
+      ],
+      "coordination_note": "Tentative scanner holds may be requested administratively before Step 3 if necessary, but substantive scanner scheduling and task build should not be treated as finalized before the manipulation-check result and protocol lock."
+    }
+  },
+  "seed_location": "Partially present, but the requested intentionally out-of-order action list and unresolved ordering are not fully satisfied. Economics' draft/provisional choice task and payment constraints appear in turns 1, 4, 9, 13, 15, 17, 19, 21, and 24; notably turns 4, 9, 17, 21, and 24 state that payment procedures/final implementation cannot be locked before session structure, timing, transfer verification, and pilot information are available. Neuroscience's tentative scanner holds and need for stress-to-task timing, event structure, trial counts, and response timing before a usable scanner run/build are in turns 3, 5, 20, and 22. Psychology's two candidate inductions, required manipulation-check pilot, self-report ratings, cortisol/saliva timing, and selection based on pilot results are in turns 6, 8, 10, 16, and 18. The dependency issue is explicitly named in turn 17 ('the dependency is pretty clear now'), and turns 16, 20-22 establish that final protocol/scanner work must await pilot results. However, the dialogue does resolve much of the dependency ordering rather than leaving it unresolved, and it does not explicitly state all requested proposed actions in the specified intentionally unhelpful order, particularly a distinct finalized fMRI-compatible build and integrated-pilot launch.",
+  "ground_truth": {
+    "dependency_issue": "The proposed actions are out of dependency order. The final stress-manipulation choice and its validated timing are prerequisites for locking the integrated protocol; locked protocol timing and structure are prerequisites for finalizing the economics payment procedure and building the fMRI-compatible task; those finalized components are prerequisites for an integrated pilot.",
+    "ordered_next_steps": [
+      {
+        "step": 1,
+        "action": "Psychology selects the two candidate financial-stress manipulations and defines the manipulation-check measures and decision criterion.",
+        "depends_on": []
+      },
+      {
+        "step": 2,
+        "action": "Psychology runs the small manipulation-check pilot, including self-report and cortisol checks, and selects the manipulation, intensity, and timing based on the pre-specified criterion.",
+        "depends_on": [
+          1
+        ]
+      },
+      {
+        "step": 3,
+        "action": "The cross-disciplinary team locks the integrated protocol: manipulation timing, task onset relative to stress induction, trial counts, event timings, and total session length.",
+        "depends_on": [
+          2
+        ]
+      },
+      {
+        "step": 4,
+        "action": "Economics finalizes and programs the incentive-compatible choice task and real/delayed payment procedures using the locked task structure and session length.",
+        "depends_on": [
+          3
+        ]
+      },
+      {
+        "step": 5,
+        "action": "Neuroscience builds the fMRI-compatible task version and finalizes usable scanner and saliva-collection scheduling based on the locked event timing and trial structure.",
+        "depends_on": [
+          3
+        ]
+      },
+      {
+        "step": 6,
+        "action": "Launch the integrated pilot only after the finalized economics implementation and neuroscience-compatible protocol are available.",
+        "depends_on": [
+          4,
+          5
+        ]
+      }
+    ],
+    "coordination_note": "Tentative scanner holds may be requested administratively before Step 3 if necessary, but substantive scanner scheduling and task build should not be treated as finalized before the manipulation-check result and protocol lock."
+  },
+  "transcript": [
+    {
+      "speaker": "Ethan Morales",
+      "text": "I was looking at the readiness document, and the immediate practical question is whether we reserve the scanner slots now, even though the scanner task isn't specified yet. And I want to make sure we leave today clear enough on the session length and task structure that I can start programming the choice task and the real-payment flow. Otherwise, the draft is just a draft. Maybe we start with where the manipulation and scanner pieces actually stand?"
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "Hm, that\u2019s a bit early."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "I think Leila\u2019s right, it\u2019s early to specify the scanner task. I can put tentative holds on the mid-May calendar, the calendar is tight, but I\u2019d need the stress-to-task sequence and at least a provisional event structure before we call those usable slots. Otherwise I can\u2019t place the saliva samples or, sorry, estimate the actual scan run."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "Tentative holds make sense. Maya, what timing do you need from the end of the stress induction to the first choice, and then between choice events? I was going to ask about the scanner version being feasible, but really, once we know that sequence, I can program a provisional behavioral task. I just shouldn't lock the payment instructions or the session burden until then."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "Roughly, I need the first choice onset pinned down relative to the induction, not just one universal delay. Leila may have a view on what the credible window is. For imaging, the choices need a separable decision period and jittered intervals. I\u2019d want provisional trial counts and response deadlines before I can estimate the run. And longer post-stress responding can really stretch this. I saw that in the last scarcity protocol, so I wouldn\u2019t build around ideal response times alone."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "I can't give you a credible window yet, because we still have the two candidate inductions and they may peak differently. The small check pilot has to come first. We need ratings immediately after, then probably again around the first-choice window. Maya, I'd need your advice on what saliva schedule is actually interpretable in that kind of session. Until we see that, any task timing is provisional, and I wouldn't\u2014"
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "Right, that\u2019s still open."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "For saliva, I\u2019d separate what the check pilot tells us from what we can infer physiologically. We can take a baseline before induction, then an immediate post-induction sample if we want, but cortisol itself won\u2019t meaningfully reflect the manipulation right at that moment. I\u2019d want another around twenty to thirty\u2014twenty to thirty minutes after onset, ideally while the choice task is underway. But the exact spacing depends on Leila\u2019s two candidates, so we need that before we can set it."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "So the behavioral task needs to stay flexible enough to start in that later window, and that's manageable, but it changes the session burden. Leila, for the check pilot, what would the immediate ratings and the first-choice-window ratings need to show for you to pick one induction? I need that before I make the payment explanation and task length- before I make those feel credible rather than just technically possible."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "I\u2019d want more than just an immediate bump. The version we select should raise reported pressure right after the induction and still at the first-choice window, and people shouldn\u2019t say it was confusing or excessively upsetting. Then we can compare the size and consistency across the two. The complication is that in the last pilot, the most income-unstable participants sometimes said the prompt felt familiar rather than newly stressful, so I\u2019d want the brief follow-up comments in the check pilot too."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "That familiar-versus-newly-stressful distinction matters for the choice data too. In a constrained-income sample, I saw people select the later payment and then immediately ask whether it would actually arrive. The choice itself didn\u2019t map cleanly onto what they said about trust. So I think the follow-up should include a brief credibility or, um, comprehension check around the payment setup. Otherwise, we may call something present bias when it\u2019s really uncertainty about the transfer."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "I think that\u2019s important. If people doubt the delayed transfer, the neural contrast could be uncertainty or credibility appraisal rather than future valuation, so I\u2019d keep that check close to the choice task. Would the real-payment language be identical across the pilot and the eventual scanner session, Ethan, or..."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "Mostly, yes, but I'd treat it as the same core language rather than promise identical wording yet. The payment rule, one choice selected at random, how the sooner payment is sent, and the date and method for the later payment, that all has to stay stable. The scanner instructions may need to be shorter. I need to confirm what delayed-transfer process the institution will actually support, and whether we can retain contact details in the necessary format, before I can make that, that credible."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "From my side, that credibility wording isn't just administrative. It could change the pressure people feel during the task. Ethan, could you show us the core payment language before the check pilot? I'd put a couple of very short items after the choices asking whether they believed the delayed payment and understood the rule. Otherwise, it's hard to interpret the manipulation cleanly."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "I can circulate the core language before the check pilot, with the random-selection rule and the exact, um, points participants need to understand. But I do want to verify the institution can actually make the delayed transfer on the stated schedule before we test the credibility wording. Otherwise, we're measuring a promise we may not be able to keep."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "That has to come first. I also need to check the ethics wording and debriefing for the more intense induction before we expose anyone to it, and the saliva collection in the check pilot needs to be practical enough to match the later session. We can test provisional task timing, but we shouldn't treat the stress protocol as selected until those pilot- until those pilot results are in."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "I think the dependency is pretty clear now. Ethics and the transfer mechanism have to be verified before the check pilot. In the meantime, I can build a provisional behavioral version with adjustable timing and trial counts. One small concern is whether we have enough time in that pilot to explain the random-payment rule and test comprehension without making the session too burdensome. I\u2019ll need the tentative session outline for that."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "The outline should leave a little space for those checks instead of tacking them on at the end. The comprehension items can be very brief, but I\u2019d also want the pressure rating at the first-choice window, so we can tell whether a long explanation has diluted or changed the induction. We\u2019ll need to see whether that\u2019s tolerable in the pilot."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "I agree. The pilot outline needs to put the first-choice-window rating and the payment comprehension items in fixed spots, even if the task itself has adjustable trial counts. I\u2019ll need the transfer office\u2019s answer before I can write the date and method into that language. Without that, a clean comprehension score doesn\u2019t tell us much."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "Mm, from the saliva side, we only need fixed anchors at first: baseline, induction onset, and that roughly twenty-to-thirty-minute post-onset sample. The choice block can- we can let the choice block flex around that in the check pilot. But I would not reserve a final scanner run until we know whether the ratings and the actual response pace fit inside that window."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "That works for me. I\u2019ll program the pilot block with adjustable trial counts and fixed timing anchors, but I won\u2019t present it as the final task. The transfer office and the session outline are the two things I need before the payment procedure is real. Maya, once Leila has the induction pilot results, is that enough for you to turn the tentative scanner holds into an actual run estimate?"
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "Probably, yes, but I\u2019d need the selected induction\u2019s timing, the observed response-time distribution from the pilot, and the settled task anchors, not just the ratings result. Then I can estimate whether baseline and the later saliva sample, setup, and a viable decision run actually, actually fit in a scanner visit. I can keep the tentative holds alive while we get that."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "Mm, that\u2019s helpful."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "Okay, then the useful cutoff for me is the check-pilot response-time data and the selected induction timing, not just a decision to keep the scanner holds. I\u2019ll keep the behavioral build parameterized until then, and I\u2019ll get a definite answer from the transfer office on delayed payments and contact retention before we put any payment- any payment date in front of participants."
+    },
+    {
+      "speaker": "Dr. Leila Okafor",
+      "text": "I think that\u2019s enough for today. We can let the remaining details, details wait until we have those checks back. Thanks, both, and we\u2019ll pick this up at the next meeting."
+    },
+    {
+      "speaker": "Ethan Morales",
+      "text": "All right. Take care, both."
+    },
+    {
+      "speaker": "Dr. Maya Srinivasan",
+      "text": "Thanks\u2014bye, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      3,
+      5,
+      6,
+      8,
+      10,
+      13,
+      15,
+      16,
+      17,
+      20,
+      22,
+      24
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Task compliance is slightly weakened because the meeting explicitly resolves much of the dependency ordering despite the seed instruction, \"Do not resolve the ordering in the meeting.\" Ethan names the dependency directly in turn 17 and effectively restates the resulting order in turns 21 and 24.",
+      "The required ordered action list is not all surfaced in the intentionally unhelpful order specified by the seed. In particular, an integrated pilot is never explicitly proposed or discussed as a final action; turns 17-24 focus on the check pilot and subsequent task/scanner preparation instead.",
+      "The manipulation-check pilot is described as using ratings and saliva/cortisol timing (turns 6-10), but the meeting does not clearly state that cortisol results are part of the criterion used to select the manipulation; Leila's explicit selection criterion in turn 10 is self-report, acceptability, and comments.",
+      "Naturalness is limited by highly polished, complete turn construction. Many turns efficiently state a concern, qualification, and resolution-ready next move, especially Ethan's turns 17, 19, 21, and 24. The repairs and fillers are present but mostly decorative within otherwise finished prose.",
+      "The requested deferential-junior dynamic is not convincingly realized. Maya is a postdoc but speaks confidently and directly throughout, while Ethan\u2014not clearly established as the senior lead\u2014dominates discussion; there is little visible cautious withholding or friendly talking-over described by the requested meeting style."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.33,
+    "turn_moves": {
+      "question": 5,
+      "concern": 2,
+      "commitment": 5,
+      "answer": 5,
+      "agreement": 3,
+      "observation": 1,
+      "request": 1,
+      "proposal": 2,
+      "backchannel": 3
+    },
+    "volunteer_turns": [
+      3,
+      15,
+      16,
+      17,
+      21,
+      22,
+      24
+    ],
+    "unsure_turns": [
+      3,
+      6,
+      8,
+      13,
+      15,
+      18
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 25,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.28,
+      "approved": false,
+      "issues": [
+        "Naturalness is weak despite several surface disfluencies. Most substantive turns are polished, self-contained mini-arguments that state a concern, explain it, and land on a concrete next action; see especially turns 3-5, 9-19, and 21-23. The repairs ('I need to- I need to,' 'or rather') are largely sprinkled into otherwise finished prose rather than affecting the live construction of turns.",
+        "The requested deferential-junior interaction style is not convincingly realized. Maya is a postdoctoral researcher but speaks with sustained authority in turns 6, 9, 11, 13, 15, 17, and 19, without cautious framing, hesitation about offering ideas, or being drawn out by a senior participant. There is no friendly talking-over or meaningful junior/senior dynamic.",
+        "The intentionally unhelpful proposed-action order is only partially represented. The meeting does discuss tentative scanner holds early (turn 15), provisional economics programming (turns 16 and 18), manipulation checking and selection (turns 5, 21, and 23), and later fMRI construction, but it never clearly enumerates or proposes the full requested out-of-order sequence, especially the integrated-pilot launch. The dependency problem is nevertheless recoverable from the stated blockers.",
+        "Turn 24 functions as a tidy written-minutes recap of deliverables and the next meeting trigger, which contributes to the scripted feel."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.33,
+      "approved": true,
+      "issues": [
+        "Task compliance is slightly weakened because the meeting explicitly resolves much of the dependency ordering despite the seed instruction, \"Do not resolve the ordering in the meeting.\" Ethan names the dependency directly in turn 17 and effectively restates the resulting order in turns 21 and 24.",
+        "The required ordered action list is not all surfaced in the intentionally unhelpful order specified by the seed. In particular, an integrated pilot is never explicitly proposed or discussed as a final action; turns 17-24 focus on the check pilot and subsequent task/scanner preparation instead.",
+        "The manipulation-check pilot is described as using ratings and saliva/cortisol timing (turns 6-10), but the meeting does not clearly state that cortisol results are part of the criterion used to select the manipulation; Leila's explicit selection criterion in turn 10 is self-report, acceptability, and comments.",
+        "Naturalness is limited by highly polished, complete turn construction. Many turns efficiently state a concern, qualification, and resolution-ready next move, especially Ethan's turns 17, 19, 21, and 24. The repairs and fillers are present but mostly decorative within otherwise finished prose.",
+        "The requested deferential-junior dynamic is not convincingly realized. Maya is a postdoc but speaks confidently and directly throughout, while Ethan\u2014not clearly established as the senior lead\u2014dominates discussion; there is little visible cautious withholding or friendly talking-over described by the requested meeting style."
+      ]
+    }
+  ]
+}

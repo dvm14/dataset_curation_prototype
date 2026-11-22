@@ -1,0 +1,604 @@
+{
+  "series_id": "d506300a",
+  "generated_at": "2026-11-22T02:15:38.870301",
+  "task_id": "integration_02",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.",
+  "input_type": "paired_meetings",
+  "research_id": "clinic_triage_model",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with one person already reading from, or referring to, a document the others have open.",
+  "sample_seed": 4,
+  "research_problem": "Determine, from two research-team transcripts, which disciplines or specialties are represented in each meeting and whether each meeting is cross-disciplinary, distinguishing genuinely different disciplines from specialties within a single field.",
+  "project_context": "Meeting A concerns a community-clinic collaboration preparing to pilot a patient outreach risk-scoring model. Meeting B is an unrelated neuroscience project studying how people maintain visual information over short delays; its participants come from different neuroscience specialties but share the broader field's concepts and training.",
+  "plan_document": null,
+  "ground_truth": {
+    "Meeting A \u2014 March 4, 2027": {
+      "disciplines_or_specialties_present": [
+        "computer science",
+        "epidemiology",
+        "sociology"
+      ],
+      "cross-disciplinary": true,
+      "reason": "The participants represent three genuinely distinct disciplines, bringing computational model evaluation, population-health study design, and social analysis of work and accountability, respectively."
+    },
+    "Meeting B \u2014 March 11, 2027": {
+      "disciplines_or_specialties_present": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "cross-disciplinary": false,
+      "reason": "The participants have different specialties within the single broader field of neuroscience. Their methods differ, but they share neuroscience training, vocabulary, and a common research domain rather than representing separate disciplines."
+    }
+  },
+  "meetings": [
+    {
+      "label": "Meeting A \u2014 March 4, 2027",
+      "disciplines": [
+        "computer science",
+        "epidemiology",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Priya Nair",
+          "discipline": "computer science",
+          "functional_role": "postdoctoral researcher",
+          "background": "Priya is a postdoctoral researcher in machine learning with four years of experience developing and evaluating clinical prediction systems from electronic health record data. Her work uses supervised learning, calibration analysis, subgroup performance audits, feature provenance checks, and interpretable-modeling tools. She has collaborated with health systems on translating model outputs into staff-facing interfaces.",
+          "distinct_perspective": "Priya treats the risk score as a predictive system whose usefulness depends on valid targets, clean feature construction, reliable calibration, and performance that does not degrade across patient subgroups. She is attentive to feature leakage and to the practical question of how a ranked score can be explained clearly enough for outreach staff to use it appropriately.",
+          "tone": "informal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "collaborative",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Elena Morales",
+          "discipline": "epidemiology",
+          "functional_role": "postdoctoral researcher",
+          "background": "Elena is a postdoctoral epidemiologist with five years of applied research experience in health-care access, preventive outreach, and observational studies using linked clinic and claims data. She designs cohort definitions, assesses selection bias and transportability, and conducts external validation studies across patient populations and care settings.",
+          "distinct_perspective": "Elena frames the pilot around the epidemiologic validity of the outreach outcome and the population to which the model is meant to apply. She focuses on whether patients who appear in the data differ systematically from those who do not enter care, whether the outcome corresponds to a meaningful outreach objective, and whether validation in a new clinic population supports use beyond the development sample.",
+          "tone": "formal",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Marcus Lee",
+          "discipline": "sociology",
+          "functional_role": "postdoctoral researcher",
+          "background": "Marcus is a postdoctoral sociologist with three years of experience studying organizational decision-making in community health settings. He uses ethnographic observation, semi-structured interviews, document analysis, and workflow mapping to examine how staff interpret data systems, distribute responsibility, and negotiate discretion in daily practice.",
+          "distinct_perspective": "Marcus examines the score as something that will enter an existing workplace rather than simply produce a technical recommendation. He is concerned with how outreach staff actually incorporate or override ranked lists, who becomes accountable for those choices, and how patients may understand or respond to being sorted by a risk-based system. He favors observing the pilot in practice before assuming that formal procedures reflect real workflow.",
+          "tone": "formal",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "reserved",
+          "epistemic_stance": "defers to other experts outside their domain"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a community-clinic collaboration preparing to pilot a patient outreach risk-scoring model. Meeting B is an unrelated neuroscience project studying how people maintain visual information over short delays; its participants come from different neuroscience specialties but share the broader field's concepts and training.\n\nMeeting A \u2014 March 4, 2027. The clinic risk-score team is reviewing what must be settled before a pilot that will help outreach staff decide which patients to call first. They are considering both model validation and how the score will be used in daily clinic work.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Three researchers participate: Priya Nair, a computer scientist; Dr. Elena Morales, an epidemiologist; and Marcus Lee, a sociologist. Priya raises calibration, subgroup performance, feature leakage, and ways to explain a score to staff. Elena raises the definition of the outreach outcome, bias from which patients enter care, and validation in a clinic population different from the development data. Marcus raises observation of staff workflow, who is accountable when a ranked list is followed or overridden, and how patients may interpret being ranked. The group agrees that the pilot should include a new-population validation and workflow observation, but does not resolve the final outcome definition or the clinic policy for overrides. Nobody characterizes the group by disciplinary breadth or labels the meeting as cross-disciplinary.",
+        "explicit_instruction": "Three researchers participate: Priya Nair, a computer scientist; Dr. Elena Morales, an epidemiologist; and Marcus Lee, a sociologist. Priya raises calibration, subgroup performance, feature leakage, and ways to explain a score to staff. Elena raises the definition of the outreach outcome, bias from which patients enter care, and validation in a clinic population different from the development data. Marcus raises observation of staff workflow, who is accountable when a ranked list is followed or overridden, and how patients may interpret being ranked. The group agrees that the pilot should include a new-population validation and workflow observation, but does not resolve the final outcome definition or the clinic policy for overrides. Nobody characterizes the group by disciplinary breadth or labels the meeting as cross-disciplinary.",
+        "ground_truth": {
+          "participants_and_disciplines": {
+            "Priya Nair": "computer science",
+            "Dr. Elena Morales": "epidemiology",
+            "Marcus Lee": "sociology"
+          },
+          "relevant_contributions": [
+            "Computer science addresses score calibration, subgroup behavior, leakage, and score explanations.",
+            "Epidemiology addresses outcome definition, selection into care, and validation in a new population.",
+            "Sociology addresses staff workflow, accountability, and patient perceptions of ranking."
+          ],
+          "decisions_or_open_issues": [
+            "The pilot will include validation in a new population and observation of workflow.",
+            "The outcome definition and override policy remain unresolved."
+          ]
+        }
+      },
+      "ground_truth": {
+        "participants_and_disciplines": {
+          "Priya Nair": "computer science",
+          "Dr. Elena Morales": "epidemiology",
+          "Marcus Lee": "sociology"
+        },
+        "relevant_contributions": [
+          "Computer science addresses score calibration, subgroup behavior, leakage, and score explanations.",
+          "Epidemiology addresses outcome definition, selection into care, and validation in a new population.",
+          "Sociology addresses staff workflow, accountability, and patient perceptions of ranking."
+        ],
+        "decisions_or_open_issues": [
+          "The pilot will include validation in a new population and observation of workflow.",
+          "The outcome definition and override policy remain unresolved."
+        ]
+      },
+      "transcript": [
+        {
+          "speaker": "Marcus Lee",
+          "text": "I was looking at the pilot checklist on page two, and it still treats using the ranked list like it's pretty straightforward. Before we lock that down, I'd like us to talk about what evidence we need on the model in this clinic, but also what we need to see about how staff actually work with it day to day, because\u2014"
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "On the evidence side, I\u2019m a little worried about assuming the historical target transfers cleanly. Elena, what exactly are we calling the outreach outcome here, successful contact, an appointment completed, something else, and does it mean the same thing at this clinic? My held-out run kept discrimination, but it was overpredicting for sparse-history patients, so I don\u2019t think a rank order alone is enough."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "I think we should leave the outcome open for the moment. Successful contact, completed appointment, and subsequent care are different estimands, and I need to confirm which of those are captured reliably here, especially since the linked review showed some apparently inactive patients with claims outside the network. Priya, could you separate the sparse-history group in the clinic data and show, show calibration there, rather than only in the held-out development set?"
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "I can do that, but I\u2019d want to freeze a genuinely pre-pilot slice before staff start seeing the queue. Otherwise the intervention changes both documentation and the outcome. I\u2019ll stratify calibration by sparse history in the clinic extract, and I need to recheck the feature timestamps too. Especially whether any post-outreach note fields are getting, um, pulled forward."
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "That makes sense. I\u2019d also want to know whether the clinic\u2019s records distinguish somebody who was unreachable from somebody staff decided not to call, or somebody who declined. Otherwise the queue will make those look like the same kind of outcome. And once staff see it, their notes may change too, so the observation needs to- needs to sit alongside that pre-pilot slice."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "I would not collapse those categories in the evaluation. If a patient receives care elsewhere, or staff judge that outreach is inappropriate, that is not, not evidence the score failed in the same way as an unsuccessful call. Marcus, do those decisions usually leave a structured trace anywhere, or are we mostly relying on free-text notes?"
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "Mostly free text, I think, plus occasional shorthand in the call log, but I need to verify that with the clinic. In the shadowing I have done, staff were making those distinctions from memory, language needs, and prior notes, then reordering the list without recording why, so a structured field may not, um, capture the whole story anyway."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "That's exactly the concern. If the reasons for reordering or withholding a call stay mostly informal, then the observed outcome is partly a record of staff triage, not just patient responsiveness. I think we need at least a brief prospective reason capture during the pilot, though I'd like to see- I'd like to know what fields the clinic can realistically support before we specify it."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "And from the model side, that reason capture is not just implementation detail. It changes what label we can claim to be validating. Could it be a very small set of mutually exclusive codes, plus optional text, so we can distinguish unreachable from\u2014 so, deferred by staff, without asking them to narrate every reorder?"
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "I'd be cautious about making the codes too neat before we see the work. \u201cDeferred by staff\u201d could mean language matching, a safety concern, someone known to be in hospital, or just that there was no time that afternoon. Those carry- those have pretty different implications. Could we pilot a small set, but also observe a few huddles and calls alongside it, so we can see what gets lost in the coding?"
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "I think that\u2019s workable, as long as we don\u2019t later treat the codes as ground truth. For the model evaluation, I\u2019d keep the raw disposition, the optional text, and maybe a separate flag for a staff override. Then we can see whether the sparse-history calibration problem is also, also concentrated among patients being deferred for particular reasons."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "I would be careful not to make the override flag just another predictor of poor response, because it may be marking who is visible to staff as difficult to reach, rather than anything intrinsic to the patient. But yes, if we preserve the raw disposition and the text, we can estimate how much of the apparent clinic-specific performance is really selection into contact. The outside-network, the outside-network claims make that especially important."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "Mm, agreed, the override should stay out of the feature set and out of anything that sounds causal. I'd treat it as an audit variable. Among patients staff override, what were the stated reasons, and how does that intersect with sparse history and calibration? But we should define the extraction cutoff now, because even a disposition entered after the call can quietly become, uh, leakage if it lands in the EHR feed."
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "I agree on fixing the cutoff. But I\u2019d separate that technical cutoff from when staff record an override, because in practice they may only articulate the reason after a huddle or after a failed call. Priya, what will they actually see about why the model ranked someone highly? I worry that a very terse explanation can still be read as more, um, definitive than it is."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "I\u2019d keep it deliberately non-diagnostic. A short \u201cwhy this patient is near the top\u201d panel with the few pre-cutoff factors that contributed, and an explicit note that it\u2019s a prioritization aid and staff judgment can override it. But I don\u2019t want to show a pseudo-precise probability if calibration is off for sparse histories. Maybe for the pilot, it\u2019s a ranked tier plus uncertainty language until we\u2019ve checked clinic calibration."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "Tiering makes sense for the pilot, but the uncertainty language shouldn't- it can't obscure the population issue. For patients with little prior clinic history, we may be uncertain because they're new or disconnected from care here, or because they're getting care elsewhere, and those aren't interchangeable. Could the pre-pilot evaluation tabulate outside-network claims, where available, alongside the sparse-history strata?"
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "Mm, yes, that distinction matters."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "I can add that cross-tab, with the caveat that claims availability itself may be selective. So I\u2019d label missing claims separately rather than treat it as no outside care. What I\u2019d really want to see is whether the overprediction persists within sparse-history patients who do and don\u2019t have observed outside-network use. That would tell us a bit more about whether this is cohort shift versus a feature- construction problem."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "I would not expect that cross-tab by itself to separate those explanations. Observed outside-network use is only a proxy, and the missing-claims group may be selected in a different, different way again. Could we also report the size and basic composition of each cell? If some strata are very small, I would treat the calibration estimates as descriptive, rather than evidence that transportability is resolved."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "I\u2019ll report denominators and composition for every cell, and use intervals rather than pretending the small strata settle anything. If the clinic slice is too thin for reliable calibration estimates, that itself argues against putting a calibrated risk meaning on the tiers yet. We can still assess the ranking, but, sorry, I lost my point there. We should label it as provisional."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "And if that is the result, I would not frame the pilot as validation of a transportable risk score at all. We can still learn whether a ranked, provisional queue fits the workflow, but we need to keep the clinic evaluation population explicit, explicit about who had observable records, who had claims linkage, and who was actually eligible for contact."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "That\u2019s the right boundary. I\u2019ll make the pre-pilot report explicit about the analytic cohort and the observability filters, and then keep the pilot interface to provisional priority tiers instead of implying a validated probability. The one thing I\u2019d like us to settle before we close is the extraction cutoff, because I need that locked before I rerun the provenance audit."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "Before we fix the cutoff, I want it tied to the last point when all the predictors would have been available, not just the export date. And the cohort definition should keep patients excluded for insufficient observable history as a documented group. Otherwise, we will quietly make the clinic population look more stable than it really is."
+        },
+        {
+          "speaker": "Priya Nair",
+          "text": "The operational definition is the cutoff at the last timestamp the live scoring pipeline could actually have seen. The export date is irrelevant, except for reproducibility. I'll retain the insufficient-history exclusions as an explicit row in the cohort flow and provenance audit, rather than silently dropping them. I just need the clinic to confirm the relevant feed-latency rules before I freeze it."
+        },
+        {
+          "speaker": "Marcus Lee",
+          "text": "I think we should stop there, since we're at time. The rest can wait until the next meeting, uh, thanks, everyone."
+        },
+        {
+          "speaker": "Dr. Elena Morales",
+          "text": "All right, goodbye."
+        }
+      ],
+      "seed_location": "The transcript reflects several requested themes, but the task conditions are incomplete: it never explicitly identifies Priya as a computer scientist, Elena as an epidemiologist, or Marcus as a sociologist, and it does not explicitly record agreement that the pilot will include new-population validation and workflow observation or that override policy remains unresolved. Relevant content appears at turns 2, 4, 9, 11, 13, 15, 18, 20, 22, and 24 (Priya: calibration, sparse-history subgroup performance, leakage/provenance, and staff-facing score explanation); turns 2-3, 6, 8, 12, 16, 19, 21, and 23 (Elena: outcome definition, selection into contact/care, and clinic-population evaluation); and turns 1, 5, 7, 10, 14, and 25 (Marcus: workflow observation, staff reordering/overrides, and interpretation of ranking). No one labels the meeting cross-disciplinary or characterizes its disciplinary breadth.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          10,
+          13,
+          14,
+          15,
+          16,
+          21,
+          22,
+          24
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turn 20 uses the prohibited stock phrase, \"sorry, I lost my point there,\" despite the style instruction explicitly forbidding it. Replace it with a more natural unfinished reformulation that does not use the banned wording.",
+          "Naturalness is weakened because most substantive turns are polished, complete mini-arguments that cleanly introduce a concern, qualify it, and propose a next step (for example turns 2-4, 8-16, and 18-24). The inserted repairs and fillers do not sufficiently disrupt this written-paragraph structure.",
+          "The final agreement is inferable rather than clearly jointly stated: new-population validation is developed across turns 16-24 and workflow observation is proposed in turns 5 and 10, but no explicit group confirmation combines both as settled pilot components. This supports the ground truth, but a brief, non-minutes-like acknowledgment would make the decision more recoverable.",
+          "Marcus identifies staff reordering and the need for observation (turns 5, 7, 10, 14), but accountability for following versus overriding the ranked list is only indirect. Add a concrete question about who is responsible for an override or a followed recommendation, without resolving the override policy.",
+          "Marcus does not clearly raise how patients may interpret being ranked. Turn 14 concerns staff interpreting explanations; add a patient-facing concern, such as how patients could understand outreach or sorting if they learn about the queue.",
+          "The transcript substantially exceeds the stated 1.3-per-100-word disfluency estimate in visible repetitions, cutoffs, fillers, and repairs, so the supplied turn-statistic metadata appears inconsistent with the text."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.24,
+        "turn_moves": {
+          "proposal": 9,
+          "concern": 4,
+          "request": 3,
+          "commitment": 4,
+          "question": 1,
+          "observation": 1,
+          "agreement": 2,
+          "answer": 1,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          3,
+          4,
+          18,
+          20,
+          22,
+          24
+        ],
+        "unsure_turns": [
+          3,
+          4,
+          7,
+          8,
+          20,
+          24
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 3,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 5,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.87,
+          "exploration_share": 0.19,
+          "approved": false,
+          "issues": [
+            "The required commitment to validation in a clinic population different from the development data is not clearly made. Elena discusses the need to check feeds and potentially construct a revised outcome (turns 8, 10, 19-25), but no speaker explicitly proposes or agrees to a new-clinic/new-population external validation.",
+            "Elena does not clearly raise selection bias from which patients enter care. She addresses irregular clinic use, care elsewhere, claims completeness, and observability (turns 3, 8, 21, 25), which is related but falls short of an explicit concern that entry into care systematically biases the population.",
+            "Marcus addresses workflow observation and overrides well (turns 2, 12, 14, 16), but accountability for following a ranked list versus overriding it is only implicit through audit trails and override documentation; responsibility or accountability is not directly discussed.",
+            "Marcus does not clearly raise how patients themselves may interpret being ranked. His concern is primarily that staff will form stories about patients from displayed signals (turns 12-16), rather than patient perceptions of being risk-ranked.",
+            "The final turns end the meeting without an explicit agreement that workflow observation will be included in the pilot. It is strongly proposed and supported, but the stated decision remains inferential rather than clearly recorded.",
+            "The dialogue is highly polished and technically exhaustive. Many substantive turns are complete, well-structured arguments that resolve the immediately preceding issue, producing a written-dialogue feel despite the inserted repairs and fillers. The repeated neat technical progression around observability and calibration (turns 19-25) particularly contributes to this effect."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 26,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.24,
+          "approved": false,
+          "issues": [
+            "Turn 20 uses the prohibited stock phrase, \"sorry, I lost my point there,\" despite the style instruction explicitly forbidding it. Replace it with a more natural unfinished reformulation that does not use the banned wording.",
+            "Naturalness is weakened because most substantive turns are polished, complete mini-arguments that cleanly introduce a concern, qualify it, and propose a next step (for example turns 2-4, 8-16, and 18-24). The inserted repairs and fillers do not sufficiently disrupt this written-paragraph structure.",
+            "The final agreement is inferable rather than clearly jointly stated: new-population validation is developed across turns 16-24 and workflow observation is proposed in turns 5 and 10, but no explicit group confirmation combines both as settled pilot components. This supports the ground truth, but a brief, non-minutes-like acknowledgment would make the decision more recoverable.",
+            "Marcus identifies staff reordering and the need for observation (turns 5, 7, 10, 14), but accountability for following versus overriding the ranked list is only indirect. Add a concrete question about who is responsible for an override or a followed recommendation, without resolving the override policy.",
+            "Marcus does not clearly raise how patients may interpret being ranked. Turn 14 concerns staff interpreting explanations; add a patient-facing concern, such as how patients could understand outreach or sorting if they learn about the queue.",
+            "The transcript substantially exceeds the stated 1.3-per-100-word disfluency estimate in visible repetitions, cutoffs, fillers, and repairs, so the supplied turn-statistic metadata appears inconsistent with the text."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting B \u2014 March 11, 2027",
+      "disciplines": [
+        "cognitive neuroscience",
+        "computational neuroscience"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Hannah Ortiz",
+          "discipline": "cognitive neuroscience",
+          "functional_role": "research engineer",
+          "background": "Dr. Ortiz is a cognitive neuroscientist with 9 years of experience designing visual working-memory experiments and building fMRI task pipelines. Her work combines delayed-estimation paradigms, psychophysical analysis of precision and swap errors, and multivariate fMRI decoding of feature-specific delay-period activity. In the lab she is responsible for translating theoretical questions into trial timing, counterbalancing, acquisition constraints, and preregistered behavioral and neural outcome measures.",
+          "distinct_perspective": "Ortiz treats the task and measurement design as the decisive link between claims about memory and evidence. She focuses on whether the orientation-report distribution can distinguish reduced precision from binding failures, whether delay lengths isolate maintenance rather than encoding or response processes, and whether the fMRI design has enough temporal and trial-level structure to support interpretable decoding of delay-period representations.",
+          "tone": "informal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "reserved",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        },
+        {
+          "name": "Dr. Wei Chen",
+          "discipline": "computational neuroscience",
+          "functional_role": "domain expert",
+          "background": "Dr. Chen is a computational neuroscientist with 11 years of experience fitting generative models of working-memory behavior and relating their latent variables to neural population codes. He works with circular error distributions, hierarchical Bayesian model comparison, attractor-network models, and forward models that predict how orientation information should evolve in decoded neural signals. He has collaborated extensively with experimental fMRI groups but primarily contributes model specification, identifiability checks, and simulation-based power analyses.",
+          "distinct_perspective": "Chen frames the behavioral and fMRI results as joint constraints on candidate mechanisms. He asks whether a population code with drift, diffusion, or attractor dynamics produces the observed mixture of precision loss and structured errors, and whether each model makes separable predictions for changes in decoded orientation over longer delays. He is attentive to parameter recovery and to the possibility that the proposed sample may not discriminate model variants even if the behavioral effect replicates.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "reserved",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "Meeting A concerns a community-clinic collaboration preparing to pilot a patient outreach risk-scoring model. Meeting B is an unrelated neuroscience project studying how people maintain visual information over short delays; its participants come from different neuroscience specialties but share the broader field's concepts and training.\n\nMeeting B \u2014 March 11, 2027. A visual working-memory lab is planning a follow-up experiment after an earlier study found that remembered orientations become less precise over longer delays. The team is deciding how to connect behavioral measurements with a neural population-coding account.",
+      "seed_spec": {
+        "task_id": "integration_02",
+        "benchmark_category": "Integration/Perspectives",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide a pair of transcripts: a genuinely cross-disciplinary meeting and a meeting between two specialties within the same field. The evaluated AI must accurately identify disciplines without treating every specialty as a separate discipline.\nJudge this transcript only on its own part: Two researchers participate: Dr. Hannah Ortiz, a cognitive neuroscientist, and Dr. Wei Chen, a computational neuroscientist. Hannah discusses delayed-estimation behavior, precision and swap errors, stimulus timing, and an fMRI design aimed at identifying delay-period representations. Wei discusses fitting a population-coding model to error distributions, comparing models with and without attractor dynamics, and deriving predicted changes in decoded orientation across delays. They agree to use the same orientation task with multiple delay lengths and to preregister behavioral precision and decoded orientation as linked outcomes. They do not settle whether the fMRI sample will be large enough to distinguish the two model variants. Both use the field's shared concepts of working memory, neural representations, decoding, and delay-period activity. Nobody labels the meeting by disciplinary breadth or contrasts their specialties with separate disciplines.",
+        "explicit_instruction": "Two researchers participate: Dr. Hannah Ortiz, a cognitive neuroscientist, and Dr. Wei Chen, a computational neuroscientist. Hannah discusses delayed-estimation behavior, precision and swap errors, stimulus timing, and an fMRI design aimed at identifying delay-period representations. Wei discusses fitting a population-coding model to error distributions, comparing models with and without attractor dynamics, and deriving predicted changes in decoded orientation across delays. They agree to use the same orientation task with multiple delay lengths and to preregister behavioral precision and decoded orientation as linked outcomes. They do not settle whether the fMRI sample will be large enough to distinguish the two model variants. Both use the field's shared concepts of working memory, neural representations, decoding, and delay-period activity. Nobody labels the meeting by disciplinary breadth or contrasts their specialties with separate disciplines.",
+        "ground_truth": {
+          "participants_and_specialties": {
+            "Dr. Hannah Ortiz": "cognitive neuroscience",
+            "Dr. Wei Chen": "computational neuroscience"
+          },
+          "shared_field": "neuroscience",
+          "relevant_contributions": [
+            "Cognitive neuroscience contributes behavioral delayed-estimation measures and an fMRI design for delay-period representations.",
+            "Computational neuroscience contributes population-coding and attractor-dynamics models linked to behavioral errors and neural decoding."
+          ],
+          "decisions_or_open_issues": [
+            "They will use one orientation task across multiple delays and preregister behavioral precision and decoded orientation as linked outcomes.",
+            "Whether the fMRI sample can distinguish the model variants remains unresolved."
+          ]
+        }
+      },
+      "ground_truth": {
+        "participants_and_specialties": {
+          "Dr. Hannah Ortiz": "cognitive neuroscience",
+          "Dr. Wei Chen": "computational neuroscience"
+        },
+        "shared_field": "neuroscience",
+        "relevant_contributions": [
+          "Cognitive neuroscience contributes behavioral delayed-estimation measures and an fMRI design for delay-period representations.",
+          "Computational neuroscience contributes population-coding and attractor-dynamics models linked to behavioral errors and neural decoding."
+        ],
+        "decisions_or_open_issues": [
+          "They will use one orientation task across multiple delays and preregister behavioral precision and decoded orientation as linked outcomes.",
+          "Whether the fMRI sample can distinguish the model variants remains unresolved."
+        ]
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "I\u2019m looking at the task draft Hannah circulated, the one with the four delay bins. Before we get too deep into it, it\u2019s nice that the behavior and scan task are actually the same thing. I was hoping we could pin down whether the timing gives us a clean enough delay-period signal, because then I can ask something more useful than just whether precision goes down again, or whether..."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "In the draft, the jittered encoding-to-delay transition is doing most of that work, but I don't want the long bins to get confounded with response preparation just because participants can anticipate the probe. I'm still checking the acquisition schedule and usable trial count. Once we know that, we can decide whether four bins really, uh, buy us more than three well-powered delays."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "Three well-separated delays may actually be better for the model comparison than four thin bins. What I\u2019d want to know is whether, at the longest delay, we can jitter the response period independently enough that a decoded orientation change isn\u2019t just probe anticipation. Otherwise the neural trajectory is hard to interpret, and I\u2019d\u2014"
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "I think we can do that, but the report cue has to be independently jittered after every delay. It can't just come at a predictable endpoint. Otherwise, especially at twelve seconds, yeah, people can start selecting a motor plan or reactivating the likely feature. And Wei, for your fits, what would count as attractor dynamics in the circular-error distribution rather than just ordinary diffusion?"
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "I\u2019d look for structure that diffusion alone doesn\u2019t naturally give us. Errors getting increasingly pulled toward a few stable orientations, or a delay-dependent pattern of local bias along with the widening. And in the neural data, the stronger version would be decoded orientation moving toward those same states over the delay, instead of just getting noisier. But I should be careful. Aggregate precision can look almost identical under both models, so I need to run recovery with the actual trial counts before claiming we can separate them."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "And that means we shouldn't treat the pilot's apparent swap increase as evidence for the attractors by itself. It was pretty concentrated in a subset of people, so I'd want the mixture model to estimate target precision, swap rate, and any local bias separately at each delay. We shouldn't let a few participants' binding failures- we shouldn't let that masquerade as a population-level drift effect."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "I agree, we should give swaps their own component instead of asking the drift term to absorb them. The tricky part is, is that with one item, a true swap is hard to define. So are you imagining multi-item trials in the same task, or is \u201cswap-like\u201d really a response-layout or categorical-report error from the pilot? That changes the generative model quite, quite a lot."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "The pilot had two encoded orientations, and then after the delay a cue told them which location to report, so those were genuine non-target reports, though I agree the response wheel may have amplified them. For this follow-up, I'd keep the two-item display. With a single item, the precision result would be cleaner, but we'd lose the binding question, and then we shouldn't- we shouldn't call anything a swap."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "The two-item version is the right test, I think, but the model needs to keep non-target reports explicitly separate from gradual target drift. Could we randomize the response wheel across trials, or at least decouple it from the encoded locations? If that layout is contributing, we might otherwise interpret a really mundane motor or display bias as a delay-dependent binding- as a delay-dependent binding effect."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "I'd randomize the wheel's reference orientation trial by trial and keep it spatially neutral relative to the two encoded locations. I don't think that fully removes response-selection effects, though, so I'd also counterbalance the probe location and model any systematic report bias before we, we call a non-target response a binding failure. The twelve-second condition is where that could get ugly."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "And if the twelve-second trials have a stronger generic response bias, the mixture could still label some of that as swaps unless we put the bias in the observation model. I'd like to simulate the randomized wheel and probe-location counterbalancing explicitly, mostly to see whether the model can recover a real delay effect in, in swap rate separately from that nuisance pattern."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "But I\u2019d separate two questions in the simulations. One is recovery of the swap parameter under the randomized wheel, and the other is whether we have enough trials per participant to estimate it at twelve seconds at all. If that subset pattern from the pilot is real, pooling people could make a fairly bad individual-level estimate look like a clean, clean delay effect."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "Hierarchical fitting may help us borrow strength across people without pretending everyone has the same swap rate, but it won't manufacture information for the long-delay condition. I'd want to simulate a subgroup with genuinely elevated swaps and ask whether the model recovers that heterogeneity. Or whether it- whether it shrinks that into a misleading group-level delay slope."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "And I don't want hierarchical shrinkage to be the reason we call the pilot subgroup a graded maintenance effect. Could your recovery grid include, like, a sparse high-swap subgroup with no true delay slope, and then, then the converse, a uniform small slope across everybody? If we can't distinguish those at the usable long-delay trial count, we may need to treat swaps as exploratory rather than a co-primary outcome."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "That\u2019s the right grid. I\u2019d include those two cases, and also a condition where response bias goes up only at twelve seconds, because that\u2019s the failure mode I\u2019m most worried about. If the subgroup and uniform-slope cases blur together after the hierarchical fit, then I agree, swaps shouldn\u2019t carry the mechanistic claim."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "Before we elevate decoded drift to the mechanistic outcome, I want the behavioral recovery to tell us whether those cases are separable in the first place. If swaps end up exploratory, I\u2019m still comfortable preregistering target precision and delay-period orientation decoding as the linked primary measures, assuming the final scan schedule leaves enough clean trials at each delay."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "That seems like the sensible split. I\u2019d make the neural prediction pretty specific, though. Not just lower decoding at twelve seconds, but whether the reconstructed orientation shows the same local pull predicted by the behavioral fit. If recovery says the behavioral drift parameter isn\u2019t identifiable, then we should be honest that decoding is a linked measure of stability, not confirmation of attractors."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "I'd phrase it that way in the preregistration. Target precision and feature-specific delay decoding are primary, and swap rate and any decoded local drift only become confirmatory if the recovery clears the identifiability threshold. I still need the scanner's final usable-volume estimate, though. If twelve seconds leaves us with too few trials, even the cleanest observation model won't- won't rescue that."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "Mm. The volume estimate is really the hinge, because I can't set a meaningful recovery threshold without the per-delay trial counts and the number of usable delay-period samples. Once you have even a provisional number, I can simulate the precision-plus-decoding analysis jointly. I suspect the three-bin, three-bin version may still be the safer design if twelve seconds is thin, but I'd rather see that than assume it."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "I should have the provisional volume and censoring estimate from imaging by tomorrow. If it makes twelve seconds thin, I'd rather collapse to three delays than keep four bins on paper and have the long one be uninterpretable. Then your joint recovery can tell us whether the extra separation is actually worth losing the trials, or if\u2014"
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "Send the provisional counts, and I\u2019ll let the recovery decide whether four bins are defensible."
+        },
+        {
+          "speaker": "Dr. Hannah Ortiz",
+          "text": "Okay, I think that's enough for today. I'll let you go a few minutes early. I'll send the provisional counts when imaging, um, gets back to me. Thanks, Wei."
+        },
+        {
+          "speaker": "Dr. Wei Chen",
+          "text": "Sounds good, Hannah. Talk soon."
+        }
+      ],
+      "seed_location": "Turns 1-23. The dialogue matches the same-field neuroscience control: Hannah (cognitive neuroscience) covers delayed-estimation behavior, precision/swap errors, timing, and fMRI delay-period design (especially turns 2, 4, 6, 8, 10, 16, 18, 20); Wei (computational neuroscience) covers population-style generative/mixture modeling, attractor-versus-diffusion predictions, decoded orientation, and recovery/model comparison (turns 3, 5, 7, 9, 11, 13, 15, 17, 19, 21). They agree on the orientation task across delays and preregister linked precision and delay-period decoding outcomes (turns 16-18), while fMRI trial/sample adequacy for distinguishing variants remains unresolved (turns 18-21). No one labels or contrasts the specialties as separate disciplines; shared neuroscience concepts are used throughout.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 5,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Naturalness is limited by highly polished, turn-by-turn technical reasoning: most turns cleanly state a concern, explain its implication, and propose a next analytical step (especially turns 5-20), making the exchange read more like scripted expert dialogue than spontaneous meeting talk.",
+          "Disfluencies are present but often function as surface repairs within otherwise fully formed sentences (for example turns 6, 9, 10, 13, 18, and 20), rather than producing genuinely unfinished or uncertain conversational thought.",
+          "The discussion is unusually relentlessly productive: nearly every concern immediately becomes a concrete modeling or design solution. More exploratory uncertainty, an unresolved side question, or a briefly dropped point would make the meeting less engineered.",
+          "Speaker distinction is strong at the methodological level, but both speakers use very similar technical syntax and shared working-memory vocabulary throughout; a few turns could be made more individually characteristic in cadence and framing."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.91,
+        "written_turns": [
+          5,
+          16
+        ],
+        "exploration_share": 0.26,
+        "turn_moves": {
+          "question": 4,
+          "concern": 2,
+          "answer": 2,
+          "proposal": 7,
+          "request": 2,
+          "agreement": 3,
+          "commitment": 3
+        },
+        "volunteer_turns": [
+          19,
+          20,
+          21,
+          22
+        ],
+        "unsure_turns": [
+          2,
+          5,
+          7,
+          18
+        ],
+        "approved": true
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 23,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 5,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.91,
+          "exploration_share": 0.26,
+          "approved": true,
+          "issues": [
+            "Naturalness is limited by highly polished, turn-by-turn technical reasoning: most turns cleanly state a concern, explain its implication, and propose a next analytical step (especially turns 5-20), making the exchange read more like scripted expert dialogue than spontaneous meeting talk.",
+            "Disfluencies are present but often function as surface repairs within otherwise fully formed sentences (for example turns 6, 9, 10, 13, 18, and 20), rather than producing genuinely unfinished or uncertain conversational thought.",
+            "The discussion is unusually relentlessly productive: nearly every concern immediately becomes a concrete modeling or design solution. More exploratory uncertainty, an unresolved side question, or a briefly dropped point would make the meeting less engineered.",
+            "Speaker distinction is strong at the methodological level, but both speakers use very similar technical syntax and shared working-memory vocabulary throughout; a few turns could be made more individually characteristic in cadence and framing."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": false,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short to medium turns outside the presentations, including frequent greetings, technical check-ins, and light social chatter. Speakers use many fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, false starts, and self-corrections\u2014while nonnative phrasing and imperfect transcription add to an informal, spontaneous feel. Interruptions are limited during formal talks but questions often begin with hedged framing such as \u201cI have a quick question,\u201d \u201cmaybe,\u201d \u201cdo you think,\u201d or \u201cI\u2019m not sure,\u201d and can ramble through several reformulations before reaching the point. Responses are generally supportive and expansive, often starting with praise before answering, while challenges are phrased indirectly as alternative possibilities or open questions rather than blunt disagreement. The presenters speak in long, structured explanatory turns with repeated signposting (\u201cso,\u201d \u201call right,\u201d \u201cwhat we see\u201d), whereas discussion shifts to collaborative back-and-forth, acknowledgment tokens, and occasional overlap-like quick affirmations.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with one person already reading from, or referring to, a document the others have open.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

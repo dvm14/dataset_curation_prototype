@@ -1,0 +1,356 @@
+{
+  "transcript_id": "5245ffab",
+  "generated_at": "2026-11-21T21:17:54.592747",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short-to-medium turns outside the presentations and long, structured monologues during talks. Early conversation is loose and social, with frequent greetings, brief acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), filler words, repetitions, false starts, and occasional garbled or unfinished phrasing. Participants overlap lightly around transitions and informal banter, but questions after talks are generally orderly and prefaced politely (\u201cI have a question,\u201d \u201cnaive question,\u201d \u201cgreat talk\u201d). Speakers hedge often with \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201clikely,\u201d \u201cI guess,\u201d and self-corrections, especially when discussing uncertainty. The overall register is professionally informal: introductions and talk transitions are formalized, while discussion is warm, conversational, and complimentary. Challenges are indirect and framed as curiosity or extensions rather than disagreement; questioners build on prior remarks, acknowledge limitations, and invite speculation. Answers tend to be expansive, candid about open questions, and punctuated by repeated discourse markers such as \u201cso,\u201d \u201cum,\u201d \u201cyou know,\u201d and \u201cright.\u201d\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Testing whether financial stress narrows how people weigh present against future payoffs, and what that means for program design.",
+  "disciplines": [
+    "neuroscience",
+    "economics",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Elena Morales",
+      "discipline": "neuroscience",
+      "functional_role": "postdoctoral researcher",
+      "background": "Elena is a cognitive-affective neuroscience postdoc with 5 years of experience running laboratory studies of acute stress, reward processing, and autonomic physiology. She has managed saliva-collection protocols, cortisol assay logistics, and time-sensitive stress-induction sessions, and has analyzed fMRI and psychophysiological measures of reward anticipation. For this pilot, she is focused on whether the manipulation produces a credible endocrine and subjective-stress response before participants begin the choice task.",
+      "distinct_perspective": "Elena treats financial stress as a biologically instantiated state that may alter valuation through stress-responsive and reward-learning systems. She prioritizes manipulation checks, the temporal dynamics of cortisol, standardized collection conditions, and task timing relative to the expected physiological stress peak. She sees behavioral choices as most interpretable when paired with evidence that the intended stress response actually occurred.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Marcus Chen",
+      "discipline": "economics",
+      "functional_role": "PhD student",
+      "background": "Marcus is a fourth-year behavioral economics PhD student studying intertemporal choice, household liquidity constraints, and the design of low-friction public-benefit programs. He has built structural and reduced-form models using incentive-compatible monetary choice experiments, with particular attention to payment credibility, estimation of time-preference parameters, and external validity for policy settings. He has previously worked with administrative enrollment data and survey experiments involving financially constrained participants.",
+      "distinct_perspective": "Marcus frames the study around how stress may shift the discount rate that converts future utility or payoffs into present value. He wants choices between money today and money in one month to support estimable parameters that can be carried into economic models of take-up, welfare, and program timing. He is attentive to whether one randomly selected choice is paid, whether participants trust delayed payment, and whether observed choices reflect time preference rather than liquidity or transaction costs.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "psychology",
+      "functional_role": "project manager",
+      "background": "Priya is a social and health psychologist with 8 years of experience designing behavioral experiments on scarcity, stress, self-regulation, and decision-making. She has coordinated multi-site studies using validated self-report measures, acute stress manipulations, and computerized choice tasks, and is responsible for the pilot timeline, recruitment workflow, and preregistration plan. Her prior work examines how perceived financial threat changes attention, affect, and choices under constrained cognitive resources.",
+      "distinct_perspective": "Priya conceptualizes financial stress as a psychologically meaningful threat state that can narrow attention toward immediate needs and change the behavioral tendency to devalue delayed outcomes relative to immediate ones. She wants the delayed-reward task to yield participants' discount rate while also measuring perceived stress, financial strain, negative affect, and perceived control, so the team can distinguish a broad stress response from a specifically financial mechanism. She favors a clear stress-versus-control comparison with tightly sequenced questionnaires and choice trials.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "scarcity_decisions",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 5,
+  "task_id": "jargon_02",
+  "benchmark_category": "Jargon",
+  "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+  "seed_spec": {
+    "task_id": "jargon_02",
+    "benchmark_category": "Jargon",
+    "benchmark_task": "Give a meeting where researchers from two disciplines use the same term in different contexts without realizing the mismatch. Leave the misunderstanding unnoticed. The evaluated AI must alert the team to possible terminology confusion.",
+    "explicit_instruction": "In the planning discussion, Priya (psychology) should propose measuring participants' discount rate from the delayed-reward choice task and describe it as the behavioral tendency to devalue delayed outcomes relative to immediate ones. Marcus (economics) should agree that the discount rate is central and discuss estimating it as the parameter that converts future utility or payoffs into present value for the economic model and program welfare calculations. They should proceed as if they are aligned, without defining the term, questioning each other, or resolving the distinction. Elena may discuss cortisol sampling and reward-circuit measures but should not identify or clarify the terminology issue. Establish that the pilot uses choices between money today and money in one month, with one choice selected for payment, and that the team will compare the stress and control conditions. Do not include any meta-commentary about jargon or misunderstanding in the meeting.",
+    "ground_truth": {
+      "term": "discount rate",
+      "meanings": [
+        {
+          "discipline": "psychology",
+          "meaning": "A behavioral measure of how strongly an individual devalues a delayed reward relative to an immediate reward, typically inferred from choices in a delay-discounting task."
+        },
+        {
+          "discipline": "economics",
+          "meaning": "A model parameter used to translate future utility or monetary payoffs into present value, with implications for intertemporal welfare and policy evaluation."
+        }
+      ]
+    }
+  },
+  "seed_location": "Turns 10-11. Priya frames \"discount rate\" as each participant's behavioral outcome inferred from delayed-reward choices, while Marcus agrees on estimating a discount rate through the choice model and discusses task amounts. The pilot is explicitly money today versus money in one month with one randomly selected choice paid (turn 8), and stress versus control is established (turns 1 and 27). However, Marcus never explicitly describes the economics meaning as a parameter converting future utility/payoffs into present value for economic-model or welfare calculations, so the required cross-disciplinary terminology mismatch is incomplete.",
+  "ground_truth": {
+    "term": "discount rate",
+    "meanings": [
+      {
+        "discipline": "psychology",
+        "meaning": "A behavioral measure of how strongly an individual devalues a delayed reward relative to an immediate reward, typically inferred from choices in a delay-discounting task."
+      },
+      {
+        "discipline": "economics",
+        "meaning": "A model parameter used to translate future utility or monetary payoffs into present value, with implications for intertemporal welfare and policy evaluation."
+      }
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Priya Nair",
+      "text": "...and I think we can keep this first one pretty lean. Before we get into the task details, though\u2014thanks for making time. I'd like us to leave with a workable pilot sequence. The manipulation, saliva and brief measures, then the choice task, with a clear primary comparison between financial stress and control."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "\u2026for me, lean is fine as long as we protect the timing. I\u2019d really want a baseline saliva sample, then the manipulation, and a post-manipulation sample at a fixed interval\u2014cortisol is not going to show us much immediately, even if subjective stress jumps right away. Do we have enough room in the sequence to wait for that response before the choice task?"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I think we can make that work, as long as we don't fill the waiting interval with the choice task. We could do the manipulation, then the immediate manipulation checks\u2014perceived stress, financial strain, control, brief affect\u2014and then the... sorry, hold the discounting task for that fixed post-manipulation saliva window. Elena, roughly how long a window do you need?"
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "...I\u2019d target about 20 minutes from the end of the manipulation to the second sample, maybe 20 to 25 if the protocol allows it. We can do the immediate self-report right after, then use a neutral, standardized filler rather than letting people scroll or rehearse the financial material, and start the choice task immediately after that second collection. I\u2019d want the same clock time across conditions, obviously."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That sequencing works for me, as long as the choices start right after that second sample. Elena, just so I understand the interpretation: if we collect at 20 minutes and then run the task, is cortisol at that point a reasonable proxy for the physiological state during the choices, or are we really only using it as a manipulation check?"
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "\u2026both, but with different confidence. The post-manipulation cortisol is our cleanest evidence that the manipulation engaged the HPA axis. It\u2019s not a real-time readout of every choice trial. If we start right after collection, the task is in the rising-to-early-peak part of the response, so it should still be physiologically relevant. But I\u2019d frame cortisol mainly as the manipulation check, and maybe record the task start time precisely, just so we can\u2014"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Right, and if we timestamp task onset, we can keep the behavioral outcome clean while still testing whether cortisol change tracks it secondarily. I\u2019d put the immediate checks right after the manipulation\u2014especially perceived financial strain and control\u2014then keep the filler genuinely neutral, because I don\u2019t want the waiting period itself to become another financial prime."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "For the task, I\u2019d make the payment mechanics concrete before they see a single choice. One row gets selected at random, the today payment is immediate, and the later payment is automatically sent in a month by the same method. If the delayed transfer needs any extra verification or claiming step, we may end up estimating hassle or distrust rather than a change in discounting."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Once the payment rule is credible, the primary behavioral outcome can just be each person's discount rate from the choice series, compared across conditions. Marcus, I'm curious what amount range and spacing you think gives us a stable estimate without making the choices feel oddly hypothetical, and then..."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I\u2019d use a fairly modest but consequential range, maybe $10 to $30 sooner, with the later amounts varying enough to bracket a discount rate instead of just getting a single switch point. We should pilot whether people see a month as meaningful here. Priya, in the scarcity work, did effects show up at that horizon, or mostly when the delay was shorter and tied to immediate expenses?"
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "At one month, yes, I\u2019ve seen it, though it\u2019s usually clearest when the manipulation makes the near-term tradeoff feel personally actionable, rather than just unpleasant. I wouldn\u2019t go shorter for the primary task, because then we may be measuring urgency around today\u2019s expenses more than a broader shift in intertemporal choice. But we could pilot whether the $10\u2013$30 range actually, um, captures enough switches."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Yeah, that makes sense. I\u2019d want a small set of later amounts around each sooner amount, rather than a giant grid, and then estimate a simple individual discounting model with some allowance for choice noise. The thing I\u2019d check in the pilot is whether our payment vendor can actually send the month-later transfer automatically\u2014no separate confirmation\u2014because that\u2019s where these designs can get surprisingly fragile."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "While we\u2019re checking that, I want the payment explanation to be identical across conditions and before the manipulation, otherwise the stress materials could change trust in the transfer process itself. We should probably also ask one brief credibility item after the instructions, just so we know whether people believe the delayed payment is real."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Yeah, and I\u2019d make that item about the actual mechanism, not just whether they think we\u2019ll pay\u2014something like whether they expect the transfer to arrive automatically without anything further from them. We shouldn\u2019t use it to screen people out, but if it differs by condition, that\u2019s a real interpretability problem for the discount-rate comparison."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I'd keep that credibility item after the payment explanation but before the manipulation, so it can't itself be shifted by the condition. And for the immediate checks after the manipulation, I really do want- I want perceived control separated from negative affect. There may be people who don't report feeling especially bad but still feel they have much less room to maneuver, and that could be the pathway into the sooner choices."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "And I think that separation helps us interpret a condition effect without calling every sooner choice a pure preference shift. Could we also ask, after the task, one or two items about whether they had an immediate bill or cash need in mind while they were choosing? I wouldn\u2019t make it the primary mechanism measure, but it would tell us whether the one-month horizon is getting translated into liquidity, liquidity pressure for some people."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I like that as a post-task probe, especially if we word it around what was on their mind, not like they should have had a bill in mind. It could help with that odd pattern I mentioned, low reported negative affect but more immediate choices. Or, it could help explain that without turning the task into a demand-characteristics exercise. Maybe one item on immediate expenses, and one on whether the delayed payment felt usable for their situation?"
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I\u2019d separate those. Whether the delayed payment felt usable is probably more diagnostic than a generic trust item. If someone says it wasn\u2019t usable because they needed cash now, that may be part of the stress response substantively, but if it\u2019s because they expected a verification hassle, that\u2019s a payment-design problem. We can keep both probes really short and see how they relate to switching behavior, and then..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "I\u2019d keep those probes clearly after the behavioral outcome, just as interpretive context. The one thing I don\u2019t want is a long debrief-style battery there. We still need the core post-manipulation measures to be\u2014no, to stay perceived stress, financial strain, negative affect, and control, collected before the filler while the subjective response is fresh."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "\u2026and I'd put the post-manipulation saliva sample right after those immediate ratings, before the filler gets too long. At the fixed 20-to-25-minute mark, obviously. We should also log recent eating, caffeine, nicotine, and collection clock time, because with two samples, a little procedural noise can look like a condition effect. I still need to check whether the freezer and assay budget can actually support that..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Those arrival restrictions need to go in the recruitment materials early, not as a surprise reminder the morning of. I\u2019m a little wary of a long screener around recent financial shocks, though. We should check whether a minimal, optional item gets usable information without making enrollment feel, um, intrusive."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Hm, that\u2019s sensitive."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Mm, yes\u2014keep it optional; I\u2019d avoid adding anticipatory stress before baseline."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Optional, and probably phrased broadly enough that it doesn\u2019t ask people to narrate a crisis. For this pilot, I\u2019m comfortable treating recent shock as exploratory context, not an eligibility gate. The randomized condition is doing the causal work, and we can see whether the screener item is even acceptable before building more around it."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Yeah, that keeps the baseline uncontaminated."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Yeah. Given the time, I think we have enough for a clean first pilot: the preregistered primary outcome is the condition difference in estimated discounting, with the immediate stress, strain, affect, and control measures as the key manipulation and mechanism measures. I\u2019ll turn this sequence into a draft protocol, and we can leave the shock item and the saliva logistics as things to check before we lock recruitment."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "The only thing I\u2019d flag in the draft is the second saliva sample can\u2019t be immediately after the ratings unless the ratings happen to land at that 20-minute window. We should preserve the fixed latency from the end of the manipulation. I\u2019ll check freezer access, collection supplies, and whether two-sample assays fit the pilot budget before we, we promise that piece."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Right\u2014fixed latency first; I\u2019ll make that explicit in the draft."
+    },
+    {
+      "speaker": "Elena Morales",
+      "text": "Great, I think we\u2019ve got what we need for now. I\u2019ll follow up once I\u2019ve checked the saliva logistics. Thanks, everyone."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Perfect\u2014talk soon, everyone."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Thanks, everyone\u2014bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      8,
+      10,
+      11,
+      12,
+      13,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The psychology meaning is present but not fully explicit in Priya's own description: turn 10 says the outcome is an estimated discount rate from choices, and turns 12 and 16 imply immediate-versus-delayed valuation, but Priya never clearly defines it as the behavioral tendency to devalue delayed rewards relative to immediate rewards.",
+      "Marcus never explicitly states the economics-specific meaning required by the seed: turns 11 and 13 discuss estimating a discount rate/model and payment mechanics, but do not say it is a parameter converting future utility or payoffs into present value or connect it to program welfare calculations.",
+      "The interaction is highly polished and agenda-driven. Many substantive turns are complete mini-arguments that immediately resolve the prior concern (especially turns 3-8, 14-20, and 27-29), which makes it read more like a scripted protocol review than an unguarded meeting.",
+      "The required one_voice_leads style is only partly realized. Priya has more turns, but Elena and Marcus each contribute many similarly substantial, orderly turns rather than appearing as comparatively brief or infrequent contributors.",
+      "The apparent timing contradiction in turn 21 ('right after' ratings and 'at the fixed 20-to-25-minute mark') is corrected in turn 28, but its resolution is unusually tidy and supports the scripted feel.",
+      "The economics sense of the seed term never appears in a plain use of it."
+    ],
+    "seed_uses": [
+      {
+        "turn": 10,
+        "sense": "psychology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Behavioral outcome inferred from individual choice-series responses."
+      },
+      {
+        "turn": 11,
+        "sense": "psychology",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Discusses bracketing the rate through experimental switch points."
+      },
+      {
+        "turn": 12,
+        "sense": "none",
+        "comments_on_term": false,
+        "renames": false,
+        "why": "Does not contain the term."
+      }
+    ],
+    "spoken_share": 0.64,
+    "written_turns": [
+      1,
+      4,
+      7,
+      8,
+      14,
+      15,
+      21,
+      25,
+      27
+    ],
+    "exploration_share": 0.28,
+    "turn_moves": {
+      "proposal": 13,
+      "question": 6,
+      "answer": 2,
+      "agreement": 4,
+      "concern": 2,
+      "backchannel": 3,
+      "commitment": 2
+    },
+    "volunteer_turns": [
+      27,
+      28,
+      29,
+      30
+    ],
+    "unsure_turns": [
+      21,
+      28
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "The required one-choice-selected-for-payment feature is absent. The transcript discusses delayed-payment credibility, transfer dates, and payment methods (turns 6-12 and 26-29), but never establishes that one task choice will be randomly selected for actual payment.",
+        "Priya never explicitly gives the psychology-side meaning required by the seed: that a discount rate is the behavioral tendency to devalue delayed outcomes relative to immediate ones. She discusses estimating a discount rate from the task (turns 11 and 25), but the meaning has to be inferred from the task design.",
+        "Marcus does not explicitly connect his discount-rate parameter to program welfare calculations. He frames it as an estimate of time preference and discusses credibility and identification (turns 8, 10, 12, 26), but the welfare/program-model use in the seed is only weakly implied by his persona rather than stated.",
+        "The meeting does not follow the requested one_voice_leads style: participation is fairly balanced (Priya 12 turns, Marcus 10, Elena 9), and no speaker clearly dominates with long turns while the others remain comparatively quiet.",
+        "Although all five realism signals occur, many substantive turns are unusually polished, complete mini-arguments that immediately convert concerns into decisions or assignments, especially turns 7-14 and 21-29. The conversation has limited genuine exploration of unresolved questions beyond Marcus's platform check and Priya's wording concern.",
+        "The economics sense of the seed term never appears in a plain use of it."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.64,
+      "exploration_share": 0.28,
+      "approved": false,
+      "issues": [
+        "The psychology meaning is present but not fully explicit in Priya's own description: turn 10 says the outcome is an estimated discount rate from choices, and turns 12 and 16 imply immediate-versus-delayed valuation, but Priya never clearly defines it as the behavioral tendency to devalue delayed rewards relative to immediate rewards.",
+        "Marcus never explicitly states the economics-specific meaning required by the seed: turns 11 and 13 discuss estimating a discount rate/model and payment mechanics, but do not say it is a parameter converting future utility or payoffs into present value or connect it to program welfare calculations.",
+        "The interaction is highly polished and agenda-driven. Many substantive turns are complete mini-arguments that immediately resolve the prior concern (especially turns 3-8, 14-20, and 27-29), which makes it read more like a scripted protocol review than an unguarded meeting.",
+        "The required one_voice_leads style is only partly realized. Priya has more turns, but Elena and Marcus each contribute many similarly substantial, orderly turns rather than appearing as comparatively brief or infrequent contributors.",
+        "The apparent timing contradiction in turn 21 ('right after' ratings and 'at the fixed 20-to-25-minute mark') is corrected in turn 28, but its resolution is unusually tidy and supports the scripted feel.",
+        "The economics sense of the seed term never appears in a plain use of it."
+      ]
+    }
+  ]
+}

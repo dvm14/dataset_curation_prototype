@@ -1,0 +1,372 @@
+{
+  "transcript_id": "87432b62",
+  "generated_at": "2026-11-21T15:31:03.306544",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short-to-medium turns, though speakers give long, structured presentation segments and questioners often preface longer, exploratory questions with praise or disclaimers such as \u201cquick question\u201d or \u201cnaive question.\u201d Overlap and interruptions are light but frequent at transitions, with brief acknowledgments, false starts, repeated words, and occasional self-corrections. Informal fillers (\u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d \u201cyou know,\u201d \u201csort of\u201d) are common, especially during questions and answers, and several participants speak in fragmented, non-native-English-influenced phrasing. Discussion is highly supportive: challenges are framed as curiosity, often softened with hedges (\u201cI think,\u201d \u201cmaybe,\u201d \u201cit could be,\u201d \u201cI\u2019m not sure\u201d), while answers openly mark uncertainty and distinguish evidence from speculation. Questions are typically multipart and conversational rather than tightly formulated, with follow-ups building directly on the previous response. Moderation is gentle and efficient, using brief prompts, thanks, introductions, and transitions rather than formal procedural language.\n\nMeeting style for this meeting (polite_friction): Courteous but with real tension. People disagree in an indirect way: with a question, a hedge, a long pause, or 'let's take that offline'. Some disagreements are dropped rather than resolved. Nobody raises their voice.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I mean, that could work. I'd just want to see it on our data first.\n  - Sure. We can park that and come back to it.\n  - Right. I'd still like to know how you'd handle the late ones, but okay.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Protecting outdoor workers from wildfire smoke when air-quality alerts arrive after the shift has already started.",
+  "disciplines": [
+    "environmental science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "environmental science",
+      "functional_role": "research engineer",
+      "background": "An environmental exposure engineer with 11 years of experience designing field monitoring studies for heat, traffic pollution, and wildfire smoke. She has deployed low-cost and reference-adjacent PM2.5 sensors across farms, construction sites, and community buildings, and works with satellite smoke products, regulatory monitor data, plume forecasts, and time-stamped alert systems. Her recent work focuses on calibration drift, short-term spatial variability, and estimating indoor-outdoor particle infiltration under real operating conditions such as open doors, vehicle cabins, and temporary break areas.",
+      "distinct_perspective": "Maya treats the mid-shift problem first as a measurement and timing problem: an official alert is a regional administrative signal, not necessarily the exposure experienced by a crew at a particular site. She will push the group to distinguish forecasted smoke, alert issuance, ambient concentrations at a job site, and a worker's actual inhaled exposure. She is likely to ask whether monitors can be rotated across representative work settings, whether crews can document location and task changes without burdensome tracking, and how indoor respite spaces should be characterized before being treated as protective. She is clear that monitors can show patterns and timing, but cannot by themselves establish what workers did in response or why.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Rafael Ortiz",
+      "discipline": "epidemiology",
+      "functional_role": "domain expert",
+      "background": "An occupational and environmental epidemiologist with 14 years of experience studying acute respiratory effects of air pollution among workers and other mobile populations. He has led panel studies using repeated symptom surveys, time-stratified analyses of daily health-service utilization, and quasi-experimental evaluations of policy changes. He has worked extensively with imperfect exposure assignment and administrative health data, including settings where individual clinical records were unavailable. He has collaborated with worker organizations but is accustomed to defining prespecified outcomes, comparison periods, and analytic limits before collecting data.",
+      "distinct_perspective": "Rafael will insist that the team specify what health-related outcome is plausible to observe and what comparison can support a useful inference. He sees voluntary symptom check-ins as potentially informative for within-person changes over smoky versus clearer shifts, but vulnerable to selective participation and reporting; aggregate urgent respiratory-care counts may capture more severe events but will have weak linkage to workplace conditions. He will emphasize heat, physical workload, duration outdoors, baseline respiratory disease, day of week, and smoke season trends as competing explanations. He is likely to separate questions about exposure reduction, behavior change, symptoms, and health-care use rather than allowing an intervention label to stand in for all of them.",
+      "tone": "cautious",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "discipline": "sociology",
+      "functional_role": "project manager",
+      "background": "A labor sociologist with 12 years of fieldwork and community-based research experience with agricultural, construction, domestic, and day-labor workers in the western United States. She is bilingual in Spanish and English and works through Mixteco interpreters and worker-led organizations. Her methods include ethnographic observation, confidential interviews, employer-practice mapping, and participatory survey design. She has managed multi-partner studies involving worker centers, growers, labor contractors, and municipal agencies, with particular attention to retaliation risk, contingent hiring, wage insecurity, and the gap between written safety policy and what workers can safely use.",
+      "distinct_perspective": "Luc\u00eda will question any assumption that a protocol exists merely because an employer announces it or a worker receives an alert. For workers paid by the piece, hired informally, transported by a crew leader, or dependent on future shifts, reporting symptoms or requesting a break may carry economic and social costs. She will ask who receives smoke information first, in which language and format, who has authority to stop or modify work, whether masks and respite spaces are actually accessible, and whether study participation itself changes reporting or employer behavior. She is skeptical of analyses that treat workers or worksites as stable units without documenting mobility, hiring arrangements, trust, and employer capacity; she will press for measures that do not expose workers to retaliation or mistake silence for absence of harm.",
+      "tone": "cautious",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "reserved",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "wildfire_smoke_workers",
+  "meeting_style": "polite_friction",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 5,
+  "task_id": "opportunity_02",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+  "seed_spec": {
+    "task_id": "opportunity_02",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give an interdisciplinary meeting with a main research question. The evaluated AI must propose relevant follow-up questions integrating the disciplines; novelty, usefulness and feasibility require expert judgment.",
+    "explicit_instruction": "The meeting chair asks the group to formulate one main research question about how to protect workers when smoke alerts arrive mid-shift, then identify research opportunities and unresolved follow-up questions that genuinely require integration across environmental science, epidemiology, and sociology. Environmental science should explain what can realistically be measured about site-level PM2.5, forecast error, alert timing, and indoor-outdoor infiltration. Epidemiology should identify outcome definitions, likely confounding by heat and work conditions, and feasible designs given aggregate health-care counts and voluntary symptom check-ins. Sociology should explain how informal hiring, language access, retaliation concerns, pay arrangements, and employer capacity could alter uptake and measured effects. Participants should not settle on a single intervention or claim that any intervention is already effective. They should make clear where information is missing, especially about worker mobility, exact work schedules, employer practices, and whether participation changes reporting. The discussion should generate concrete, answerable follow-up questions rather than a generic list of disciplines or a finalized protocol.",
+    "ground_truth": {
+      "main_research_question": "How can a timely, worker-centered response triggered after a wildfire-smoke alert or credible smoke forecast arrives during a shift reduce real-time PM2.5 exposure and acute respiratory harms among formal, informal, and day-labor outdoor workers without worsening loss of income or access to future work?",
+      "integrated_follow_up_questions": [
+        {
+          "question": "What exposure reduction is achieved when a mid-shift alert triggers different feasible actions\u2014relocation, schedule change, indoor respite, respirator access, or stopping work\u2014and how does effectiveness vary by local PM2.5, plume-forecast accuracy, task intensity, and the infiltration of available indoor spaces?",
+          "integration": "Environmental monitoring can quantify personal or site-level exposure and indoor-outdoor differences; epidemiology can connect exposure changes to symptoms and short-term respiratory outcomes; sociology can determine which actions workers and employers can actually use."
+        },
+        {
+          "question": "Which trigger rule is most protective and operationally credible: an official alert, a forecast threshold, a local sensor threshold, an exposure-duration threshold, or a combination, particularly when official alerts lag behind workplace conditions?",
+          "integration": "Environmental science evaluates timing and error of forecasts, alerts, and monitors; epidemiology assesses health-relevant dose and timing; sociology assesses whether supervisors and workers trust, receive, and can act on each type of signal."
+        },
+        {
+          "question": "How do wage structure, informal hiring, fear of retaliation, language and literacy, immigration-related vulnerability, and employer capacity influence whether workers receive, understand, report, and act on a mid-shift smoke alert?",
+          "integration": "Sociology identifies mechanisms of unequal uptake and reporting; environmental science identifies what information must be communicated; epidemiology evaluates whether differential uptake produces unequal exposure and health benefits."
+        },
+        {
+          "question": "Can multilingual, worker-controlled reporting and alert channels improve timely protective action and symptom reporting without increasing perceived risk of lost shifts, and how can that risk be measured ethically?",
+          "integration": "Sociology guides trust, language access, and safe recruitment; environmental science supplies localized exposure information; epidemiology evaluates reporting completeness and health-related outcomes while accounting for reporting bias."
+        },
+        {
+          "question": "What is the appropriate acute outcome set for a feasible pilot\u2014same-day symptoms, rescue-medication use, missed work, short-term respiratory-care counts, or a composite\u2014and how should heat, physical workload, baseline respiratory disease, housing exposure, and worker mobility be handled?",
+          "integration": "Epidemiology leads outcome and confounding strategy; environmental science provides smoke and heat exposure measures; sociology clarifies feasibility, missingness, and the social meaning of missed work and care seeking."
+        },
+        {
+          "question": "Do protective protocols shift risk rather than reduce it\u2014for example, by sending workers to poorly filtered housing or vehicles, transferring work to less protected crews, or causing income losses that discourage future participation?",
+          "integration": "Environmental science measures exposure across work, transport, and indoor settings; epidemiology examines cumulative short-term exposure and health consequences; sociology examines displacement, inequity, and unintended economic effects."
+        },
+        {
+          "question": "What pilot design can credibly compare protocols while remaining feasible and ethical: a stepped rollout across willing employers, a case-crossover analysis around alert events, repeated worker panels, or a mixed-methods implementation study?",
+          "integration": "Environmental science specifies monitoring placement and exposure windows; epidemiology evaluates comparators, confounding, and statistical power; sociology assesses recruitment, consent, participation burden, and implementation fidelity."
+        }
+      ],
+      "key_design_dependencies": [
+        "Map actual shift timing, job locations, worker movement, and the timing of alert receipt before selecting an exposure window or trigger rule.",
+        "Characterize what protective options each employer and worker population can realistically access, including filtered indoor spaces, transport, paid breaks, and respirators.",
+        "Co-design multilingual and low-retaliation data-collection procedures with worker organizations before relying on self-reported symptoms or protocol uptake.",
+        "Pre-specify how heat, workload, baseline vulnerability, housing exposure, and differential health-care access will be measured or addressed as confounders.",
+        "Treat aggregate respiratory-care counts as a supplementary outcome because they cannot establish individual exposure-response links or represent all workers equally."
+      ]
+    }
+  },
+  "seed_location": "Turns 1-25 substantively satisfy the seed. The group develops a main integrated question most explicitly in turn 24: whether an earlier signal enables a usable response that lowers shift-level smoke exposure and acute symptoms without lost pay or future-shift risk. Environmental measurement and trigger uncertainty are addressed in turns 1-3, 6, 13, 16-17, 21, and 25 (site-level PM2.5, alert/forecast timing, spikes versus sustained exposure, indoor/vehicle air, connectivity). Epidemiologic outcomes, confounding, and feasible data limitations appear in turns 8, 11, 15-17, 20, and 24 (symptoms, informative missingness, aggregate urgent-care counts as supplementary, heat and task intensity). Sociological mechanisms and reporting/uptake concerns appear in turns 4, 7-8, 10, 12, 14, and 19-22 (piece rate, transport, language access, retaliation/surveillance concerns, worker control, lost pay and future work). Concrete unresolved integrated follow-up questions include comparison of trigger signals (turns 2, 21, 25), whether refuge options are genuinely lower exposure and usable (turns 4, 6, 21-22), how to collect symptoms without harmful or biased reporting (turns 7-15), and how heat, workload, pay, and task control shape effects (turns 17-22). The discussion does not settle on one intervention or claim effectiveness, and explicitly leaves design and key information unresolved (turns 12, 14-15, 24-26).",
+  "ground_truth": {
+    "main_research_question": "How can a timely, worker-centered response triggered after a wildfire-smoke alert or credible smoke forecast arrives during a shift reduce real-time PM2.5 exposure and acute respiratory harms among formal, informal, and day-labor outdoor workers without worsening loss of income or access to future work?",
+    "integrated_follow_up_questions": [
+      {
+        "question": "What exposure reduction is achieved when a mid-shift alert triggers different feasible actions\u2014relocation, schedule change, indoor respite, respirator access, or stopping work\u2014and how does effectiveness vary by local PM2.5, plume-forecast accuracy, task intensity, and the infiltration of available indoor spaces?",
+        "integration": "Environmental monitoring can quantify personal or site-level exposure and indoor-outdoor differences; epidemiology can connect exposure changes to symptoms and short-term respiratory outcomes; sociology can determine which actions workers and employers can actually use."
+      },
+      {
+        "question": "Which trigger rule is most protective and operationally credible: an official alert, a forecast threshold, a local sensor threshold, an exposure-duration threshold, or a combination, particularly when official alerts lag behind workplace conditions?",
+        "integration": "Environmental science evaluates timing and error of forecasts, alerts, and monitors; epidemiology assesses health-relevant dose and timing; sociology assesses whether supervisors and workers trust, receive, and can act on each type of signal."
+      },
+      {
+        "question": "How do wage structure, informal hiring, fear of retaliation, language and literacy, immigration-related vulnerability, and employer capacity influence whether workers receive, understand, report, and act on a mid-shift smoke alert?",
+        "integration": "Sociology identifies mechanisms of unequal uptake and reporting; environmental science identifies what information must be communicated; epidemiology evaluates whether differential uptake produces unequal exposure and health benefits."
+      },
+      {
+        "question": "Can multilingual, worker-controlled reporting and alert channels improve timely protective action and symptom reporting without increasing perceived risk of lost shifts, and how can that risk be measured ethically?",
+        "integration": "Sociology guides trust, language access, and safe recruitment; environmental science supplies localized exposure information; epidemiology evaluates reporting completeness and health-related outcomes while accounting for reporting bias."
+      },
+      {
+        "question": "What is the appropriate acute outcome set for a feasible pilot\u2014same-day symptoms, rescue-medication use, missed work, short-term respiratory-care counts, or a composite\u2014and how should heat, physical workload, baseline respiratory disease, housing exposure, and worker mobility be handled?",
+        "integration": "Epidemiology leads outcome and confounding strategy; environmental science provides smoke and heat exposure measures; sociology clarifies feasibility, missingness, and the social meaning of missed work and care seeking."
+      },
+      {
+        "question": "Do protective protocols shift risk rather than reduce it\u2014for example, by sending workers to poorly filtered housing or vehicles, transferring work to less protected crews, or causing income losses that discourage future participation?",
+        "integration": "Environmental science measures exposure across work, transport, and indoor settings; epidemiology examines cumulative short-term exposure and health consequences; sociology examines displacement, inequity, and unintended economic effects."
+      },
+      {
+        "question": "What pilot design can credibly compare protocols while remaining feasible and ethical: a stepped rollout across willing employers, a case-crossover analysis around alert events, repeated worker panels, or a mixed-methods implementation study?",
+        "integration": "Environmental science specifies monitoring placement and exposure windows; epidemiology evaluates comparators, confounding, and statistical power; sociology assesses recruitment, consent, participation burden, and implementation fidelity."
+      }
+    ],
+    "key_design_dependencies": [
+      "Map actual shift timing, job locations, worker movement, and the timing of alert receipt before selecting an exposure window or trigger rule.",
+      "Characterize what protective options each employer and worker population can realistically access, including filtered indoor spaces, transport, paid breaks, and respirators.",
+      "Co-design multilingual and low-retaliation data-collection procedures with worker organizations before relying on self-reported symptoms or protocol uptake.",
+      "Pre-specify how heat, workload, baseline vulnerability, housing exposure, and differential health-care access will be measured or addressed as confounders.",
+      "Treat aggregate respiratory-care counts as a supplementary outcome because they cannot establish individual exposure-response links or represent all workers equally."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hi, everyone. Before we get too far into the designs, I\u2019m hoping today we can get a shared sense of which signal actually matters during a shift, whether it\u2019s the alert, the forecast, or smoke reaching the specific site, and what response workers could realistically use. I\u2019m also curious whether either county has already said anything about where we could put monitors, because the vehicle and break-space piece may be less- it may be less simple than it sounds."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "What I most want is a comparison we can defend. If the monitors show the alert comes after the relevant site-level peak, then the health question probably needs to be whether a forecast- or monitor-triggered response changes exposure and same-shift symptoms, instead of treating the official alert itself as the intervention. Maya, do you think we can characterize those moving exposure windows well enough?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think we can characterize them well enough to compare triggers, just not to reconstruct every person\u2019s dose. If we put fixed monitors at representative work edges and rotate a few through cabins and break rooms, we can capture the onset, the duration, and those short spikes. Then I\u2019d need to know from you whether minute-level peaks matter clinically, or whether it\u2019s the hourly and shift-average windows we need to preserve, or..."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "I think the moving window is important, but I'd be careful that a representative work edge becomes a proxy for what workers can actually escape to. If a response sends someone into an unfiltered truck, or ends a piece-rate shift early, we need to record that as part of the exposure and the cost, not call it protection just because the monitor at the field edge drops. Could we map who can authorize a stop, transport, or break alongside those monitor, monitor periods?"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "Mm, yes, that matters."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd separate the authorization map from the monitor map, then line them up in time. A truck or room only counts as a viable response if we know its air is actually better during the period people are sent there. Doors, recirculation, all of that, that can flip it. Luc\u00eda, would asking workers just about broad task or location changes during a shift already be too intrusive, or could we do that through a very short check-in?"
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Broad changes could be okay if workers can choose a category instead of naming a field or supervisor, like outdoors, vehicle, enclosed room, home, that kind of thing, and if it's clearly separated from anything the employer sees. But I'd want to ask the worker organizations first, especially the Mixteco partners. Even a short phone check-in can feel like a record of leaving work, you know. The pay arrangement and whether transport was controlled may tell us more than the exact- than an exact location."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "From the health side, those aren't just background details. Piece rate, controlled transport, and whether someone can actually stop working can change both the dose and whether they report symptoms. I'd keep the check-in separate from the employer, and ask whether they could continue the shift and what kind of response happened, using broad categories and not a supervisor or site. Otherwise, a drop in symptoms could just mean people stopped answering on the hardest days."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Hm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "And nonresponse isn't neutral here. On the worst smoke days, the people with the least control over a phone or even a break may be exactly the ones we stop hearing from. So I'd want the check-in to include a really low-burden way to say, basically, \"couldn't respond safely,\" without asking why."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "And analytically, that status needs to be its own outcome. It can't just get folded into \"no symptoms.\" If someone marks that they couldn't respond safely, we should treat the symptom measure as missing in a potentially informative way. Otherwise we may make the response look healthier on exactly the days when contact was least possible."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "And the \u201ccouldn\u2019t respond safely\u201d option can\u2019t assume literacy or Spanish. I need to check with the Mixteco-speaking partners what\u2019s trusted. Maybe it\u2019s a voice prompt or a one-tap response, but I don\u2019t want to- I don\u2019t want to decide that from here. The worker center could also help us distinguish phone nonresponse from people who just never had reliable access that day."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That kind of missingness may line up with the periods we most need to characterize. Could the low-burden response carry just a timestamp and maybe a broad setting category, if the partners think that\u2019s acceptable? Then we could at least see whether \u201ccouldn\u2019t respond safely\u201d clusters around the local spikes or the alert window, without treating it as a location trace."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Maybe, but I'd be careful about linking even a broad setting category with an exact timestamp if that pattern could basically identify a crew's break or departure. We should ask the partners whether workers would trust a delayed check-in, maybe that same evening, because the value of real-time timing isn't worth creating something they experience as surveillance\u2014"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "A delayed check-in may actually be the safer primary option, as long as we don't pretend it gives us minute-by-minute symptoms. We could anchor it to the shift- no, anchor it around what happened during the shift, whether smoke worsened, whether they changed task or stopped, and same-day eye/throat symptoms versus breathing symptoms. Then we use the monitors to classify the broader exposure window. The urgent-care counts, frankly, would only be supplementary unless we find there are enough events."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the monitor side, a delayed, shift-level check-in actually fits better than trying to imply we know where someone was at 2:17. We can classify whether the shift overlapped a sustained site-level episode, an alert, or both. I do want to ask Rafael, though, for those same-day breathing symptoms, is an hourly exposure window enough, or do those 20- to 30-minute spikes need to be- do we need to retain those separately?"
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I'd retain both, but I wouldn't assume they mean the same thing. For acute eye and throat irritation, a short high peak may matter. For breathing symptoms, I'd want the spike measure plus the sustained hourly or shift-average burden, and then we'd- we'd see what pattern the data support. We should also record heat and task intensity on those days, because a late, hot shift can look like a smoke effect if we only use the peak."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Right, especially late shifts."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "And task intensity isn't just a covariate, really. It's tied to whether someone can slow down or take the respirator off in the heat without losing earnings. For the delayed check-in, could we ask one plain question about whether they had a real, real choice to pause or change tasks? I think that might distinguish a protocol that was available on paper from one workers could actually use."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I think that question matters, but I'd keep it separate from the symptom questions rather than treat it as another exposure measure. Something like, \u201cWere you able to take the smoke-protection option you were offered?\u201d And we'd include a no-option category, so we can distinguish availability from usable control. We should also ask about lost hours or pay in broad terms, because stopping work may reduce exposure but it can create a cost that affects who can use it."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "From the exposure side, \u201coffered\u201d versus \u201cusable\u201d is probably the key split. We can document whether the option led to a lower concentration in the actual cabin or, I mean, room, but if people couldn\u2019t take it without losing pay, a low reading there doesn\u2019t tell us the protocol worked. I\u2019d frame the trigger comparison around that. Which signal arrives early enough to make a genuinely usable lower-exposure option possible?"
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "I'd make the question broader than just whether an option was offered. Did you have a way to reduce smoke exposure without losing pay, transport, or tomorrow's work? Because an earlier forecast is only a better trigger if the foreperson or contractor can act on it in a way that workers can- if workers can safely take it up."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah, the timing is everything."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I\u2019d want the main question to hold both pieces together. Does an earlier signal enable a usable response that lowers shift-level smoke exposure and acute symptoms without lost pay or future-shift risk? But we shouldn\u2019t promise the urgent-care data will test that directly. It\u2019s context for severe days, and I need to see the event counts before we build it into the design."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The monitor piece is pretty bounded here. We'd compare the forecast, the alert, and local sustained episodes, and check whether the supposed refuge actually has lower exposure. Before we settle on a trigger, though, I need to look at cellular coverage and site access in both settings. If local readings can't get out during a shift\u2014 if they can't transmit during the shift, they're useful for evaluation but not as the real-time signal."
+    },
+    {
+      "speaker": "Dr. Rafael Ortiz",
+      "text": "I think we should leave it there. There\u2019s enough to follow up on without trying to settle the design now. I\u2019ll send a note by email, and, uh, thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thanks, Rafael. Bye, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The main question is strongly inferable from turns 21-24, but it is not explicitly framed by a chair as a request to formulate one main research question. Turn 1 opens with Maya's desired scope rather than a clear chair prompt, which weakens the requested meeting setup.",
+      "The discussion identifies several concrete research opportunities and unresolved design questions, but it does not explicitly generate a feasible comparative pilot-design question (for example, stepped rollout, case-crossover, repeated panel, or mixed-methods implementation study). Rafael and Maya discuss comparison and measurement constraints in turns 2, 15, and 24-25, but no design alternatives are explored.",
+      "Some seed dependencies are only partially addressed: worker mobility, exact schedules, employer practices, and participation-induced reporting change are raised indirectly, but the group does not clearly mark all of them as missing information to obtain before design selection.",
+      "Naturalness is limited by highly polished, consistently well-formed substantive turns. Many turns efficiently state a problem, qualify it, and propose a precise next step, particularly turns 2-4, 8, 11, 15-17, and 20-25. The dashes and repeated words add texture but often read as surface-level disfluencies on otherwise finished prose.",
+      "Turn 26 ends the meeting abruptly with Rafael saying he will send an email, without a more naturally incomplete exchange around the unresolved disagreements; this also slightly resembles a tidy meeting close despite the stated intention not to settle the design."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.73,
+    "written_turns": [
+      2,
+      8,
+      11,
+      13,
+      20,
+      24
+    ],
+    "exploration_share": 0.31,
+    "turn_moves": {
+      "question": 4,
+      "answer": 3,
+      "agreement": 4,
+      "proposal": 10,
+      "concern": 4,
+      "commitment": 1,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      26
+    ],
+    "unsure_turns": [
+      12,
+      24
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.3,
+      "approved": false,
+      "issues": [
+        "The central benchmark requirement is not met explicitly: no participant formulates the required single main research question about a timely worker-centered response after a mid-shift smoke alert, exposure and acute harms, and avoiding income/future-work losses. The discussion supplies components of that question across turns 1, 17, 20-25, but a benchmark assistant would need to synthesize it rather than recover it directly.",
+        "The meeting generates useful unresolved questions, but it does not clearly elicit or enumerate a broad set of concrete integrated research opportunities. It concentrates on reporting safety, symptom check-ins, and shift-condition documentation (turns 10-25), while giving little explicit development of alternative alert trigger rules, forecast error, respirator access, schedule changes, or displacement of risk to transport/housing.",
+        "Environmental limitations are strong for site PM timing and microenvironments (turns 6-9, 19, 23), but forecast accuracy is mentioned only indirectly and the feasible distinction among official alert, forecast threshold, local sensor threshold, and duration trigger is not explicitly explored.",
+        "The transcript does not explicitly address several key design dependencies: baseline respiratory disease, housing exposure, differential health-care access, exact schedules, and aggregate-care-count limitations beyond the brief statement that urgent-care counts are county-level context (turn 25).",
+        "Naturalness is capped at 3 because many substantive turns are unusually polished, complete mini-arguments that reliably convert the preceding concern into a qualified design response. The ending in turn 31 also uses the prohibited stock phrase \"I lost my thread,\" despite the supplied style instruction.",
+        "Turn 31 is internally awkward: Maya says the group is over and then says she lost her thread, which reads as scripted rather than a naturally motivated wrap-up. Replace it with a brief, ordinary closing or leave the final issue unresolved without announcing a formal recap."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.73,
+      "exploration_share": 0.31,
+      "approved": true,
+      "issues": [
+        "The main question is strongly inferable from turns 21-24, but it is not explicitly framed by a chair as a request to formulate one main research question. Turn 1 opens with Maya's desired scope rather than a clear chair prompt, which weakens the requested meeting setup.",
+        "The discussion identifies several concrete research opportunities and unresolved design questions, but it does not explicitly generate a feasible comparative pilot-design question (for example, stepped rollout, case-crossover, repeated panel, or mixed-methods implementation study). Rafael and Maya discuss comparison and measurement constraints in turns 2, 15, and 24-25, but no design alternatives are explored.",
+        "Some seed dependencies are only partially addressed: worker mobility, exact schedules, employer practices, and participation-induced reporting change are raised indirectly, but the group does not clearly mark all of them as missing information to obtain before design selection.",
+        "Naturalness is limited by highly polished, consistently well-formed substantive turns. Many turns efficiently state a problem, qualify it, and propose a precise next step, particularly turns 2-4, 8, 11, 15-17, and 20-25. The dashes and repeated words add texture but often read as surface-level disfluencies on otherwise finished prose.",
+        "Turn 26 ends the meeting abruptly with Rafael saying he will send an email, without a more naturally incomplete exchange around the unresolved disagreements; this also slightly resembles a tidy meeting close despite the stated intention not to settle the design."
+      ]
+    }
+  ]
+}

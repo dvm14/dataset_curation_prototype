@@ -1,0 +1,320 @@
+{
+  "transcript_id": "6ac84075",
+  "generated_at": "2026-11-21T15:37:07.446480",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial video-call style with mostly short-to-medium turns in the opening and Q&A, contrasted with long, structured presentation turns. Informal greetings, technical check-ins, and friendly side chatter feature heavily before the formal agenda begins. Speakers use frequent fillers and repairs\u2014\u201cum,\u201d \u201cyeah,\u201d repeated words, self-corrections, and unfinished or reformulated questions\u2014especially among non-native or remote participants. The tone is warm and appreciative rather than polished; introductions are semi-formal but conversational, and praise is common before questions. Questions tend to be exploratory and multi-part, often prefaced with hedges such as \u201cI have a naive question,\u201d \u201cI\u2019m just curious,\u201d or \u201cdo you think,\u201d while answers openly mark uncertainty with phrases like \u201cI don\u2019t know,\u201d \u201cwe haven\u2019t looked at that,\u201d and \u201cit\u2019s early days.\u201d Disagreement is minimal and indirect, framed as alternative interpretations or open questions rather than rebuttal. Participants build on prior comments by explicitly referencing earlier points, and the host keeps transitions brief and practical, occasionally moving the group on after pauses or limited response.\n\nMeeting style for this meeting (screen_share_working_session): Someone is sharing a document, figure or spreadsheet and the group works through it. People point at what is on screen ('that column', 'the second figure'), but whoever is reading still says the key numbers, names and dates out loud, since only the audio is recorded. Turns are short and practical, with pauses while someone scrolls or reads.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Can you scroll up- no, further. Yeah, that row.\n  - That one's wrong, I think. Or it's from the old file.\n  - Hang on, let me find it. Okay, give me a sec.\nOpening: Start with one person already reading from, or referring to, a document the others have open.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Understanding how urban green space affects mental health outcomes in low-income communities.",
+  "disciplines": [
+    "environmental science",
+    "public health",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Elena Marquez",
+      "discipline": "environmental science",
+      "functional_role": "project manager",
+      "background": "Dr. Marquez is an urban landscape ecologist with 11 years of experience translating remote-sensing products into neighborhood-scale exposure measures for municipal health and planning studies. She has led GIS teams using aerial imagery, parcel boundaries, impervious-surface layers, and municipal planting inventories to estimate canopy cover and park-area change. For Riverton, she coordinates access to spring and late-summer imagery and city tree-planting records, while managing the protocol timeline and cross-team data specifications.",
+      "distinct_perspective": "She treats the intervention as a measurable alteration in the physical urban environment. Her central concern is specifying reproducible, time-indexed exposure variables: parcel-level changes in tree canopy and park area, summarized within 300 m and 800 m buffers around each geocoded residential address. She is attentive to imagery timing, geocoding quality, and the difference between documented planting activity and canopy detectable from aerial data, but is less certain about how best to translate these spatial measures into mental-health-relevant constructs.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Priya Nanduri",
+      "discipline": "public health",
+      "functional_role": "PhD student",
+      "background": "Priya is a fourth-year doctoral candidate in epidemiology and community health who has worked on longitudinal cohort studies of neighborhood conditions, stress, and depressive symptoms. She has experience administering validated perceived-stress and depressive-symptom instruments, coordinating participant follow-up, maintaining residential address histories, and supporting biospecimen protocols for salivary cortisol. She will oversee the participant-facing assessment workflow for the 240-adult Riverton cohort across baseline and 6-, 12-, and 24-month follow-up waves.",
+      "distinct_perspective": "She frames the study around temporal ordering, retention, and defensible outcome measurement. She sees the intervention neighborhood and two comparison neighborhoods as the basis for a quasi-experimental longitudinal design, with address histories needed to align changing residential exposure with repeated mental-health outcomes. She is cautious about selective attrition, seasonal variation in cortisol, and the feasibility implications of optional biospecimen collection, and wants the data dictionary to lock down variable definitions before March recruitment.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Marcus Okafor",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Dr. Okafor is a postdoctoral researcher in urban sociology with six years of fieldwork experience in disinvested neighborhoods, especially on housing insecurity, institutional trust, and resident participation in redevelopment. He has partnered with tenant associations on interview studies, advisory boards, and mixed-methods neighborhood research. In Riverton, he will coordinate tenant-association recruitment support, convene the resident advisory group, and maintain structured records of major neighborhood events, including construction disruptions and housing turnover.",
+      "distinct_perspective": "He approaches neighborhood change as a social process rather than a stable backdrop. He questions whether area-level intervention labels can be interpreted without attention to displacement pressures, landlord practices, construction-related disruption, and unequal patterns of recruitment and retention. He regards tenant associations and the resident advisory group as sources of situated knowledge that can improve recruitment materials and contextual interpretation, while remaining skeptical that spatial exposure metrics alone capture the relevant neighborhood dynamics.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    }
+  ],
+  "research_id": "green_space_mental_health",
+  "meeting_style": "screen_share_working_session",
+  "meeting_opening": "Start with one person already reading from, or referring to, a document the others have open.",
+  "sample_seed": 1,
+  "task_id": "opportunity_03",
+  "benchmark_category": "Opportunity Generation",
+  "benchmark_task": "Give a meeting that omits substantive discussion or rationale on an important subtopic. Supply enough contextual evidence to infer the gap without having participants announce the missing topic. The evaluated AI must identify that gap.",
+  "seed_spec": {
+    "task_id": "opportunity_03",
+    "benchmark_category": "Opportunity Generation",
+    "benchmark_task": "Give a meeting that omits substantive discussion or rationale on an important subtopic. Supply enough contextual evidence to infer the gap without having participants announce the missing topic. The evaluated AI must identify that gap.",
+    "explicit_instruction": "Hold a planning meeting focused on finalizing the protocol outline. The environmental scientist should define green-space exposure using parcel-level changes in tree canopy and park area within 300 m and 800 m buffers around each participant address, calculated from spring and late-summer imagery. The public-health researcher should describe the baseline and follow-up surveys, optional cortisol collection, address-history tracking, and the two comparison neighborhoods. The sociologist should confirm tenant-association recruitment support, the resident advisory group, and plans to record major neighborhood events such as construction disruptions and housing turnover. The group should agree on the February 15 protocol deadline, March baseline recruitment, and the need to share a draft data dictionary before recruitment. Do not include substantive discussion, a decision, a rationale, or an assignment concerning whether residents actually visit, use, perceive, feel safe in, or can access the new parks and street-tree areas. Do not state that this topic is missing or needs attention.",
+    "ground_truth": {
+      "omitted_subtopic": "Measurement of residents' actual access to, use of, and experience of the green spaces.",
+      "why_it_is_important": "The proposed exposure measure relies on green space near participants' homes, but proximity and canopy change do not establish that residents can safely access, notice, use, or benefit from the parks and trees. Park quality, safety, mobility constraints, work schedules, and perceived welcome may differ across residents and could explain or modify mental-health effects.",
+      "evidence_in_meeting": [
+        "Exposure is operationalized only as canopy and park-area change within residential buffers.",
+        "Health outcomes, address histories, comparison neighborhoods, and community recruitment are addressed.",
+        "No protocol component captures park visitation, time spent outdoors, route/access barriers, perceived safety, park condition, or residents' perceptions of the intervention."
+      ],
+      "opportunity": "Add resident-informed measures of green-space access and engagement, such as survey items or diaries on visitation, time spent in green space, perceived safety and quality, barriers to use, and whether participants recognize the new greening. Use advisory-group input to ensure the measures reflect local experiences, and analyze these factors as potential mediators or effect modifiers rather than assuming residential proximity equals exposure."
+    }
+  },
+  "seed_location": "Turns 1-27 substantively cover the protocol\u2019s environmental exposure definition (parcel-level canopy and park-area measures within 300 m and 800 m buffers, dated imagery, address histories), survey waves and optional cortisol collection, and neighborhood-event/community-association elements. However, no turn discusses measuring residents\u2019 actual access to, visitation/use of, perceptions of, safety in, or barriers to using green spaces. The missing subtopic is therefore measurement of residents\u2019 access, use, and experience of the green spaces.",
+  "ground_truth": {
+    "omitted_subtopic": "Measurement of residents' actual access to, use of, and experience of the green spaces.",
+    "why_it_is_important": "The proposed exposure measure relies on green space near participants' homes, but proximity and canopy change do not establish that residents can safely access, notice, use, or benefit from the parks and trees. Park quality, safety, mobility constraints, work schedules, and perceived welcome may differ across residents and could explain or modify mental-health effects.",
+    "evidence_in_meeting": [
+      "Exposure is operationalized only as canopy and park-area change within residential buffers.",
+      "Health outcomes, address histories, comparison neighborhoods, and community recruitment are addressed.",
+      "No protocol component captures park visitation, time spent outdoors, route/access barriers, perceived safety, park condition, or residents' perceptions of the intervention."
+    ],
+    "opportunity": "Add resident-informed measures of green-space access and engagement, such as survey items or diaries on visitation, time spent in green space, perceived safety and quality, barriers to use, and whether participants recognize the new greening. Use advisory-group input to ensure the measures reflect local experiences, and analyze these factors as potential mediators or effect modifiers rather than assuming residential proximity equals exposure."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "I have the protocol outline open, the version dated January 28. Before we get into it, I see the city\u2019s construction start is still listed as April 2027, so that part hasn\u2019t moved, correct? For today, I\u2019d like us to leave with a stable way to define each participant\u2019s green-space exposure before recruitment starts in March, especially the address and timing fields, and then..."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "Mm, April is still what I heard."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "And for the cohort, that makes the baseline window pretty consequential. We need it completed before any construction exposure. On the address fields, I'd want move-in and move-out dates, not just the current address. And Elena, can each exposure value retain the imagery or planting-record date it came from? Otherwise, otherwise lining it up with the survey waves gets a little murky."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "We can retain the source date with every value, and I'd make that explicit in the data dictionary. Priya, do you need exact move-in and move-out dates for assigning exposure, or is the month, the month enough? I can calculate the 300- and 800-meter measures at each address, but we need to fix the date rule before we start."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Month is probably adequate for the main exposure assignment, as long as we record whether the date is exact or, sorry, month-only. Exact dates will be better where participants can provide them, but I'd worry that requiring them creates avoidable missingness. Could we use residential duration within each survey interval to weight the address-specific exposure when someone moved?"
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "That is workable. I\u2019ll put a residential-duration weight in the assignment rule, using month-level dates when that\u2019s all we have, and preserve the exact-date flag. The environmental table can then hold separate 300- and 800-meter canopy and park-area values for every address-period, with the imagery date, or the source date, alongside them."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "Could we keep a separate neighborhood-events field with those address-period rows? I don't want to turn every complaint into an exposure, but construction access problems, major landlord turnover, or a rent shock could affect both who stays in the cohort and how they experience the place. Priya, what would you need in that record for it to be analytically usable instead of just context notes?"
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "I\u2019d separate the structured fields from a brief notes field. For each event, we\u2019d want the neighborhood, the start and end month if known, the event type, the source, and maybe the expected pathway, like housing instability, access disruption, safety, that sort of thing. That would let us assess the timing against the outcome waves. I wouldn\u2019t want us to adjust for everything automatically, though, because some of those changes may be downstream of the greening itself."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "Marcus, for that event table, could we anchor each record to a geography no finer than a block, parcel cluster, or the named park project area? I need enough location to link the timing to the address-period rows, but not a separate event geometry for every report. Also, I\u2019m seeing a few planting records just outside the vacant-lot parcels, so the location convention matters more for the 300-meter buffer than I expected\u2014 than I thought."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "Block or parcel cluster feels like the right floor for the structured table. I'd want the source recorded too, whether it's a city notice, association report, or observed construction, so we don't give one complaint the same status as a documented project. And I'll check with the associations to see if they're comfortable with that level of location. No tenant-level information would go into it."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "Good. I\u2019ll set the structured geography options as block, parcel cluster, or named project area, and include the source field. And before February 15, I need to check whether the late-summer imagery date is actually comparable across all three neighborhoods. If it\u2019s not, the 800-meter measures especially could reflect, uh, capture timing rather than a real difference."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "And Elena, on the planting inventory versus the imagery, if a parcel is listed as planted but nothing is visible in the relevant image, which one governs that wave's exposure value? I worry residents may be living with the construction and the promise of green space well before there\u2019s measurable- before there\u2019s measurable canopy, so it seems worth keeping those states distinct."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "I\u2019d keep them distinct. For each address-period, the primary physical exposure is canopy and park area you can actually detect in the dated imagery, at both 300 and 800 meters. Then the planting inventory is a separate implementation field, planted, planting date if available, and maybe count. That lets Priya test a construction or early-installation phase without treating a newly planted sapling like it\u2019s the same thing as canopy, and..."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Mm, keeping both is useful."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "And I'd name that early-installation phase plainly in the protocol, because it may be when residents experience disruption more than benefit. The associations in the intervention area have already been raising rent and landlord-turnover concerns, though I don't want to overread a few conversations. The advisory group could help us decide what rises to an event record, but..."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "I'll add an explicit early-installation indicator rather than folding it into canopy. One thing I want to check in the table on screen is the 800-meter buffer. It will often include more than one project area, so the event log needs that block or project-area tag, even when the participant's immediate 300-meter environment is unchanged. Otherwise we can't tell what disruption was plausibly nearby."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "Right, that proximity matters."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "For the outcome side, I think we should make the exposure assignment, um, wave-specific. So baseline before April, then the 6-, 12-, and 24-month assessments for all 240 residents. That way, an event within 800 meters can be tagged as happening before, during, or after the relevant survey interval, instead of just showing up in the neighborhood record."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "And I want the table to show that interval rule instead of having us infer it later. For the 800-meter measure especially, I'll assign the address-specific canopy, park area, planting, and event indicators to each wave using the address-duration weight over the preceding interval, and carry the source imagery date through. Baseline is explicitly pre-April 2027, and then..."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Could we add the actual survey timing windows in that same table, baseline completed before April, then 6, 12, and 24 months, with the target interview date and allowable window? For the 240 residents, I need a fixed anchor for whether the exposure interval ends at the interview date or the window, the window midpoint. I'd lean toward the interview date, especially if follow-up timing drifts."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "The interview date should close the exposure interval, not the window midpoint. I\u2019ll add the target and actual interview date, the allowable window, and an interval-end rule to the address-period table, so the 300- and 800-meter values are weighted only through that actual date. For imagery, we may still have to carry forward the most recent dated surface, which is why I need to confirm those late-summer capture dates across all three neighborhoods, and then\u2014"
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "That works for the survey analyses. I\u2019d put an indicator next to the actual interview date for whether the participant completed the stress and depressive-symptom instruments, since partial follow-up is pretty likely among the 240 residents. And for cortisol, if we retain it, we need the collection time and date separately. You can\u2019t really recover season and time of day from the interview window."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "Put those completion fields next to the actual interview date, and give cortisol collection date and clock time their own columns. I\u2019m also going to add a missingness code instead of leaving blanks, because a missed specimen is different from a completed survey with no cortisol, and that\u2019ll make the wave-specific file much less ambiguous."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "I'd distinguish declined from attempted-but-unsuccessful, and from a specimen judged unusable, because those imply different selection processes. With the 240 adults, I'm a little wary of treating the cortisol subgroup as interchangeable with the survey cohort. We saw more stable-contact participants opting in elsewhere. Do we think staffing can keep collection within a reasonably narrow clock-time band at the 6-month wave, or should it stay explicitly exploratory?"
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "I\u2019d keep cortisol explicitly exploratory unless we can verify the staffing schedule. I don\u2019t want to put a narrow collection window in the protocol if we can\u2019t deliver it. On the table, I\u2019ll keep collection date and clock time regardless, and the 300- and 800-meter environmental assignments will still be tied to the actual interview date for the full survey cohort."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Exploratory feels right. For the 240-person cohort, I'd rather preserve follow-up flexibility for the survey outcomes than make the 6-month visit contingent on a cortisol staffing window. We can document who was offered it and why it was or wasn't collected, and then- then see how selective that subset is at each wave."
+    },
+    {
+      "speaker": "Dr. Elena Marquez",
+      "text": "That seems right. I\u2019ll keep the cortisol fields separate from the environmental assignment, so missing or selective collection doesn\u2019t alter the 300- or 800-meter exposure records. Those stay defined for every completed survey wave through the actual interview date. I think we have enough to circulate the data dictionary before recruitment, assuming my imagery-date and planting- actually, the planting-location checks come back cleanly."
+    },
+    {
+      "speaker": "Priya Nanduri",
+      "text": "Okay, I think we should stop there\u2014the rest can wait until the next meeting. This is- it's much clearer now for the cohort workflow. Thanks, everyone."
+    },
+    {
+      "speaker": "Dr. Marcus Okafor",
+      "text": "All right, take care, everyone."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      6,
+      7,
+      8,
+      12,
+      13,
+      18,
+      20,
+      22,
+      24,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance is slightly incomplete: the February 15 date is framed only as Elena's imagery-comparability check in turn 11, rather than as an explicit group agreement on a February 15 protocol deadline. Turn 27 says the data dictionary will circulate before recruitment, but the meeting never clearly commits the group to finalizing the protocol by February 15.",
+      "The two comparison neighborhoods are never explicitly discussed by Priya or another participant. Turn 11 refers to imagery across 'all three neighborhoods,' which permits inference, but does not satisfy the seed's requested public-health description of the two comparison neighborhoods as cleanly as an explicit statement would.",
+      "Naturalness is limited by the highly polished, protocol-ready construction of most substantive turns. Nearly every turn advances a complete technical point and immediately converts it into a specific table field, rule, or assignment; for example, turns 18-27 proceed as an unusually orderly sequence of decisions. The scattered repairs and fillers do not substantially disrupt the polished written-dialogue feel.",
+      "The conclusion in turns 27-29 is a tidy near-recap of resolved work and closure. It is plausible, but contributes to a scripted working-session feel rather than leaving realistic uncertainty, pauses, or an unresolved practical detail."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.8,
+    "written_turns": [
+      6,
+      8,
+      16,
+      23,
+      25
+    ],
+    "exploration_share": 0.21,
+    "turn_moves": {
+      "question": 5,
+      "answer": 1,
+      "proposal": 8,
+      "commitment": 8,
+      "request": 2,
+      "agreement": 3,
+      "concern": 1,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      4,
+      6,
+      10,
+      11,
+      16,
+      19,
+      21,
+      23,
+      25,
+      27
+    ],
+    "unsure_turns": [
+      11,
+      15,
+      21,
+      25,
+      27
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 2,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.84,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "Turns 17-22 substantively discuss whether residents can use nearby green space: Marcus says planting records do not show whether residents \"could actually use the space,\" asks for access/usability status and source (17, 21), Priya discusses a park being technically planted but not usable during construction (18), and Elena decides to add linked access/usability fields to the event file (20, 22). This directly violates the seed requirement to omit substantive discussion, decisions, rationale, or assignments about access, use, safety, perceptions, or experience of new parks and street-tree areas. It also makes the target omitted subtopic only partially absent.",
+        "The dialogue is highly polished and systematically resolves each issue. Many turns are complete, meeting-minutes-like arguments followed by immediate operational decisions or assignments, especially 3-15 and 20-29. This triggers the naturalness tell that participants rarely explore uncertainty without converting it straight into a solution or task.",
+        "Disfluencies are present but often appear as surface repairs in otherwise carefully composed turns. Turn 14 also uses the prohibited stock phrase \"I'm losing the thread there,\" despite the style instruction explicitly forbidding it.",
+        "The transcript opens directly with the protocol on screen (1), which fits the working-session setup, but it lacks the pauses, scrolling references, partial readouts, and less organized exploratory exchange expected of a live screen-share working session."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.8,
+      "exploration_share": 0.21,
+      "approved": true,
+      "issues": [
+        "Task compliance is slightly incomplete: the February 15 date is framed only as Elena's imagery-comparability check in turn 11, rather than as an explicit group agreement on a February 15 protocol deadline. Turn 27 says the data dictionary will circulate before recruitment, but the meeting never clearly commits the group to finalizing the protocol by February 15.",
+        "The two comparison neighborhoods are never explicitly discussed by Priya or another participant. Turn 11 refers to imagery across 'all three neighborhoods,' which permits inference, but does not satisfy the seed's requested public-health description of the two comparison neighborhoods as cleanly as an explicit statement would.",
+        "Naturalness is limited by the highly polished, protocol-ready construction of most substantive turns. Nearly every turn advances a complete technical point and immediately converts it into a specific table field, rule, or assignment; for example, turns 18-27 proceed as an unusually orderly sequence of decisions. The scattered repairs and fillers do not substantially disrupt the polished written-dialogue feel.",
+        "The conclusion in turns 27-29 is a tidy near-recap of resolved work and closure. It is plausible, but contributes to a scripted working-session feel rather than leaving realistic uncertainty, pauses, or an unresolved practical detail."
+      ]
+    }
+  ]
+}

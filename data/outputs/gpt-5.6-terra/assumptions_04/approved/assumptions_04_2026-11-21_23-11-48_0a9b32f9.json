@@ -1,0 +1,346 @@
+{
+  "transcript_id": "0a9b32f9",
+  "generated_at": "2026-11-21T23:11:48.703859",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns in the informal pre-meeting chat, followed by long, structured presentation turns and medium-length technical Q&A responses. Overlap and interruption are low; participants generally wait for acknowledgment, though the transcript shows occasional clipped starts, repeated words, and handoff phrases such as \u201cokay,\u201d \u201cyeah,\u201d or \u201cright.\u201d The tone is collegial and moderately informal, with frequent greetings, light joking, praise, and conversational fillers (\u201cum,\u201d \u201cyou know,\u201d \u201csort of,\u201d \u201cI mean\u201d), while the presentations shift into polished but still spoken academic language. Speakers build on one another by affirming questions before answering, restating the premise, and extending it with caveats; challenges are indirect and framed as curiosity, uncertainty, or alternative explanations rather than confrontation. Questions are often prefaced as \u201cquick,\u201d \u201cnaive,\u201d or \u201cgood\u201d questions, can be multipart and exploratory, and commonly include tentative wording like \u201cdo you think,\u201d \u201chave you looked,\u201d or \u201chow do you feel.\u201d Non-native or spontaneous speech contributes to repetitions, false starts, self-corrections, and occasionally incomplete phrasing, which gives the discussion a relaxed live-video-call feel.\n\nMeeting style for this meeting (one_voice_leads): One person (often the most senior) talks for much of the meeting in long turns. Others come in with short questions or one-line agreement. A quieter person speaks rarely and usually only when asked directly or after a pause.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - So what I keep coming back to, and this is just from the last couple of projects I've run, is that you pay for it later if you skip the pilot, you always do, and then...\n  - Mm.\n  - Sorry, can I ask- is that the same pilot as the spring one?\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating a program in which community health workers make home visits to patients with uncontrolled high blood pressure, integrating blood-pressure outcomes, household relationships, and population reach and equity.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "public health"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Lena Ortiz",
+      "discipline": "clinical medicine",
+      "functional_role": "research engineer",
+      "background": "Dr. Ortiz is a general internist and clinical informatics investigator with 12 years of experience in safety-net primary care. She has designed electronic health record (EHR) phenotypes, registry workflows, and pragmatic evaluations for hypertension and diabetes outreach programs. Her work relies on vital-sign data, medication lists, encounter histories, and chart validation, and she is accustomed to translating clinical concepts into reproducible inclusion criteria and operational dashboards.",
+      "distinct_perspective": "Ortiz treats eligibility as a clinical-operational phenotype that must be identifiable reliably in the EHR and actionable by clinic staff. She focuses on the validity of recorded blood-pressure measurements, the timing of readings, clinic workflow, and whether a definition can support prompt outreach without creating an unmanageable referral list. She recognizes that a recorded elevated reading may not map neatly onto a patient's longer-term hypertension status, and she is cautious about extending clinical-record logic to household and equity outcomes without additional data.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Samuel Reed",
+      "discipline": "sociology",
+      "functional_role": "project manager",
+      "background": "Dr. Reed is a medical sociologist with 14 years of experience studying chronic illness management, care navigation, and institutional trust in low-income urban and rural communities. He has led longitudinal qualitative studies using semi-structured interviews, household ethnography, observation of care encounters, and analytic memoing. He has managed mixed-methods field teams and is particularly experienced in examining how eligibility labels shape who is treated as reachable, adherent, or disengaged.",
+      "distinct_perspective": "Reed approaches uncontrolled blood pressure as a socially situated condition rather than a self-evident biomedical category. He asks how clinic measurements are produced, how medication access and household obligations shape follow-up, and whether the program's criteria inadvertently recast episodic disruption or mistrust as individual nonmanagement. He is skeptical of definitions that treat EHR data as transparent evidence of need, emphasizing that the eligibility rule will structure the population available for interpretation and may obscure people whose barriers are not legible in records.",
+      "tone": "diplomatic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Maya Patel",
+      "discipline": "public health",
+      "functional_role": "postdoctoral researcher",
+      "background": "Maya Patel is a public-health postdoctoral researcher with 6 years of experience evaluating community health worker programs, primary-care access initiatives, and health-equity interventions. She uses administrative data, geographic catchment analyses, implementation measures, and mixed-methods evaluation designs to assess reach, representativeness, staffing capacity, and sustainability. She has worked with county agencies to develop equity dashboards that compare participants with the broader population potentially eligible for services.",
+      "distinct_perspective": "Patel frames the program as a population intervention whose value depends on who is offered and able to receive support, not only on outcomes among enrolled participants. She is attentive to the denominator behind reach estimates, differences in referral pathways across catchment areas, and whether staffing patterns make equitable delivery feasible. She sees the need for a defensible operational definition of uncontrolled blood pressure but is unsure whether an EHR-based definition or a longer-term unmanaged-condition definition best reflects the county's intended target population and can be measured consistently across sites.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "chw_blood_pressure",
+  "meeting_style": "one_voice_leads",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 1,
+  "task_id": "assumptions_04",
+  "benchmark_category": "Assumptions",
+  "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+  "seed_spec": {
+    "task_id": "assumptions_04",
+    "benchmark_category": "Assumptions",
+    "benchmark_task": "Give a conversation where a consequential assumption remains ambiguous between plausible interpretations. The evaluated AI may ask one clarification question before recommending a next step. Preserve the ambiguity and record interpretations and information needed to resolve it.",
+    "explicit_instruction": "Simulate a planning discussion among Dr. Lena Ortiz (clinical medicine), Dr. Samuel Reed (sociology), and Maya Patel (public health). They agree that eligibility must be based on the phrase \u201cuncontrolled high blood pressure,\u201d because it determines the study population, denominator, recruitment workflow, and interpretation of equity results. Dr. Ortiz says the clinical team has been using \u201cuncontrolled\u201d to mean a recent elevated blood-pressure reading in the electronic record, so that the program can identify people needing prompt follow-up. Dr. Reed points out that a single clinic reading may reflect anxiety, measurement conditions, or a temporary disruption and asks whether the program instead means persistent hypertension that remains uncontrolled despite an opportunity for routine care. Patel says the county\u2019s stated goal is to reach people whose blood pressure is not being managed, including people missed by usual follow-up, but she does not know whether the county intends an elevated-reading definition or a persistent/unmanaged-condition definition. The group recognizes that these alternatives would select different people and yield different reach and equity estimates. No participant has the county\u2019s operative eligibility policy, no threshold, no recency window, and no requirement for repeat measurement or medication history are established. Keep the ambiguity unresolved: do not have the participants choose a definition, imply that one is correct, or silently combine them. The meeting should end with the need to obtain the relevant program policy and operational details, while allowing the evaluated AI to identify the ambiguity and propose a next step.",
+    "ground_truth": {
+      "consequential_assumption": "The phrase \u201cuncontrolled high blood pressure\u201d has not been operationally defined for program eligibility or evaluation.",
+      "plausible_interpretations": [
+        {
+          "interpretation": "A person is eligible if they have a single recent elevated blood-pressure reading documented in the electronic health record.",
+          "implications": "This supports rapid identification from records and may include people with transient, context-specific, or measurement-related elevation."
+        },
+        {
+          "interpretation": "A person is eligible only if they have persistent hypertension that remains inadequately managed, potentially demonstrated by repeat measurements and/or evidence of insufficient routine follow-up or treatment control.",
+          "implications": "This targets sustained unmet management needs but requires additional clinical history and may exclude people with only one documented elevated reading."
+        }
+      ],
+      "why_it_matters": "The definition changes who is recruited, the study denominator, the meaning of program reach and equity, CHW workload, and how blood-pressure outcomes should be interpreted.",
+      "information_needed_to_resolve": [
+        "The county program\u2019s written eligibility policy and referral workflow.",
+        "The blood-pressure threshold(s) and allowable recency window for qualifying readings.",
+        "Whether confirmation by repeat measurement is required and where it may occur (clinic, home, or either).",
+        "Whether medication history, prior diagnosis, missed follow-up, or evidence of inadequate management is required.",
+        "Whether the evaluation population must match program enrollment exactly or may include a separately defined analytic cohort."
+      ],
+      "appropriate_next_step": "Ask the program owner or county implementation lead for the operative eligibility criteria and document a single prespecified definition, including threshold, timing, confirmation requirements, and any care-engagement criteria, before finalizing recruitment and analysis plans."
+    }
+  },
+  "seed_location": "Turns 1, 3-6, 8-9, 21-29. The dialogue identifies \"uncontrolled\" blood pressure as consequential for who is reached and distinguishes a recent single elevated EHR reading/referral trigger (turn 3) from persistent inadequately managed hypertension requiring repeat readings and care-history context (turns 4-6, 21-24). It preserves uncertainty about thresholds, recency, repeat/home confirmation, medication/refill history, county eligibility policy, workflow, and whether a broader analytic cohort is allowed (turns 3, 18, 27, 29). However, the discussion partially operationalizes a pragmatic referral-versus-analytic division without obtaining the county's operative eligibility policy, and it ends after Maya says she will ask about a separate reporting cohort rather than explicitly seeking the complete eligibility criteria and documenting one prespecified definition.",
+  "ground_truth": {
+    "consequential_assumption": "The phrase \u201cuncontrolled high blood pressure\u201d has not been operationally defined for program eligibility or evaluation.",
+    "plausible_interpretations": [
+      {
+        "interpretation": "A person is eligible if they have a single recent elevated blood-pressure reading documented in the electronic health record.",
+        "implications": "This supports rapid identification from records and may include people with transient, context-specific, or measurement-related elevation."
+      },
+      {
+        "interpretation": "A person is eligible only if they have persistent hypertension that remains inadequately managed, potentially demonstrated by repeat measurements and/or evidence of insufficient routine follow-up or treatment control.",
+        "implications": "This targets sustained unmet management needs but requires additional clinical history and may exclude people with only one documented elevated reading."
+      }
+    ],
+    "why_it_matters": "The definition changes who is recruited, the study denominator, the meaning of program reach and equity, CHW workload, and how blood-pressure outcomes should be interpreted.",
+    "information_needed_to_resolve": [
+      "The county program\u2019s written eligibility policy and referral workflow.",
+      "The blood-pressure threshold(s) and allowable recency window for qualifying readings.",
+      "Whether confirmation by repeat measurement is required and where it may occur (clinic, home, or either).",
+      "Whether medication history, prior diagnosis, missed follow-up, or evidence of inadequate management is required.",
+      "Whether the evaluation population must match program enrollment exactly or may include a separately defined analytic cohort."
+    ],
+    "appropriate_next_step": "Ask the program owner or county implementation lead for the operative eligibility criteria and document a single prespecified definition, including threshold, timing, confirmation requirements, and any care-engagement criteria, before finalizing recruitment and analysis plans."
+  },
+  "transcript": [
+    {
+      "speaker": "Maya Patel",
+      "text": "Morning, everyone. I hope the protocol deadline isn't colliding too badly with everybody else's end-of-month work. I thought today we could, um, pin down what we mean by uncontrolled blood pressure, because that choice affects not just the clinical outcome but who actually ends up in the population we're claiming to reach."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Good morning. I haven't seen the county's actual eligibility policy yet, so I want to be careful not to make the EHR flag do more conceptual work than it can. For referral purposes, \"uncontrolled\" may just need to mean a recent qualifying elevated recorded pressure, but we still need to- I mean, we need the threshold, the recency window, and whether a repeat or home reading can qualify."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "I think we should separate the referral trigger from the analytic eligibility construct. Otherwise, one anxious or painful clinic encounter becomes the whole social problem. Lena, do we actually see prior diagnosis, medication and refill history, and scheduled-but-missed follow-up reliably, reliably enough to distinguish persistent difficulty managing hypertension from a single elevated reading?"
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Partly, yes. Diagnosis, active antihypertensives, encounters, and missed appointments are generally extractable, although refill data will be uneven unless the county has linked dispensing claims, so I would not make them a hard gate. What worries me is that a persistent-management phenotype becomes a pretty elaborate retrospective construct, while the CHW needs a referral list quickly. Could we keep that as a secondary analytic classification, or\u2014"
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "I\u2019m comfortable with that division, as long as the secondary classification isn\u2019t treated as an afterthought. The referral list can be clinically pragmatic, but analytically, analytically we should preserve whether the elevated reading followed any meaningful opportunity for routine management. Otherwise, missed appointments become a proxy for disengagement when they may be a proxy for instability in work, transport, or caregiving."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Yes, that's important."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "That division would also let us report reach without pretending the referral list is the whole need population. Lena, quick question, with a single recent elevated reading, how much do measurement and repeat-reading practices vary across the six clinics? I'm worried that apparent differences in reach could mostly be differences in who gets, um, documented or rechecked."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "I don't know yet. I'd need to look at the vital-sign feeds and the local rooming workflows clinic by clinic. In prior registry work, we saw a nontrivial group with an elevated triage value and a much lower repeat in the same encounter. That could be technique, acuity, or just who staff have time to recheck. I'd want to keep the first and repeat values, the measurement timestamps, and the encounter type, instead of treating every recorded elevated value as equivalent."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "Hm, that could really matter."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "And from the reach side, we should probably treat that variation itself as part of the implementation context, rather than just noise. If one clinic systematically rechecks and another does not, their apparent eligible pools could be quite different before a CHW has made any contact. Would the extract let us calculate recheck rates by site and encounter type?"
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "That depends on whether the feeds retain multiple vital-sign rows or just the encounter-level value. I need to verify that across the six sites. We should be able to report recheck rates by site and encounter type, and probably the interval between readings. But I would not interpret a low recheck rate as a patient characteristic. It may just be rooming workflow, so\u2014"
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "And we need to be really disciplined about not letting those workflow artifacts turn into patient behavior in the narrative. If the extract keeps first and repeat values, can we also flag whether a visit was, say, urgent care or a routine chronic-care encounter? An elevated triage reading doesn't mean the same thing in those settings."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Encounter type should be extractable from location, visit type, and scheduling metadata. Though the labels- we'll need a site-specific crosswalk, because they are never quite standardized. At minimum, I would distinguish urgent from routine ambulatory encounters. Whether we can reliably identify pain or acute intercurrent illness, though, is much less clear from structured data alone."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "That uncertainty is exactly why I\u2019d resist treating encounter type like a simple correction variable. An urgent-care reading can be clinically real, but it still may not tell us much about what the person has been able to do with routine care. Could the fieldwork sample deliberately include people whose qualifying reading came from each setting, so we can see what those categories are concealing?"
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "I think that would be useful, especially in a 12-month evaluation, where the referral mix may shift as clinics settle into the workflow. If the fieldwork samples routine and urgent qualifying encounters across both rollout waves, we can compare not just what the categories conceal, but whether the people, the people actually referred differ from the broader flagged population."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "I\u2019d want that comparison to include people who were flagged but never referred or never successfully contacted. Otherwise we learn a great deal about the cases the workflow made visible, but not whether the label itself is sorting out people with unstable schedules or tenuous institutional trust. Maya, do the county reach measures have any way to distinguish failed contact from someone declining after a real, real conversation?"
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "I think we can, if the referral workflow records disposition at each step, referred, outreach attempted, unable to reach after a defined number of attempts, contacted and declined, and enrolled. But I'd want to check whether those fields are mandatory and used consistently. Otherwise, \u201cfailed contact\u201d becomes a residual category that means different things at different clinics..."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "Yes, and I\u2019d be cautious with \u201cunable to reach\u201d as though it were an attribute of the person. Could the workflow retain the timing and channel of attempts, calls, texts, perhaps a clinic handoff, so we can see whether contact failures cluster around work hours or just, just reflect inconsistent outreach practice? That would make the fieldwork sampling of flagged-but-unenrolled people much more interpretable."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "I think that is important. The disposition log should include the date and time, the channel, the number of attempts, and whether the clinic introduced the CHW, because otherwise site-level contact rates will mostly reflect staffing practice. Then we can compare enrolled participants with flagged-but-unenrolled residents without treating either group as inherently more, um, engaged."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "From the EHR side, I'd keep the referral trigger, every outreach disposition, and the vital-sign sequence linked at the person level. That way we can see whether non-enrollment is concentrated among people flagged from a single triage reading versus people with repeated elevations. I'm less sure how much- without the fieldwork, I'm less sure how much interpretive weight we can put on those patterns, but at least the data structure wouldn't collapse them."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "That linkage gives us a defensible reach cascade, I think. Flagged, referred, contacted, enrolled, then actually visited. I would also keep a broader analytic denominator alongside the referral list. Maybe people with repeated elevations, or an elevated reading plus evidence of limited follow-up. That way we can say whether the program is reaching unmet need, not just- not only processing the people the workflow happened to identify."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "Yes, though I\u2019d be careful that \u201cevidence of limited follow-up\u201d doesn\u2019t just mean a trail of missed appointments. We need to keep the distinction between no documented contact with routine care and disrupted access despite repeated attempts to engage. Otherwise, the broader denominator just reproduces the same institutional visibility problem we\u2019re trying to study. The disposition log and a small flagged-but-unenrolled interview sample are probably the only way to test that, rather than just assume we can..."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "I think we can specify that broader denominator separately without treating no routine-care documentation as disengagement. For the EHR piece, I'd make it transparent. Repeated qualifying pressures over a defined interval, plus descriptive indicators of care opportunity, like encounters, scheduled follow-up, and missed visits, rather than a composite that labels someone as poorly engaged. We should probably validate a small, a small sample of those classifications against the interviews before we lean on it."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "I'd make that validation purposive, not just a chart audit. We should include people whose records look superficially similar but whose pathways differ, missed visits, no scheduled follow-up, repeated urgent-care use, and so on. Otherwise the interviews become illustrative after we've already- after the categories are already stabilized, rather than evidence about what those administrative traces actually mean."
+    },
+    {
+      "speaker": "Dr. Lena Ortiz",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "For the reach analysis, that makes sense. I would keep those care-opportunity indicators disaggregated in the protocol and explicitly say they are context for interpreting the denominator, not eligibility gates or measures of engagement. We may also need the county to confirm whether it will accept a broader analytic cohort alongside the enrollment cohort. I do not think we should assume that reporting, reporting distinction is permitted."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "Before we close, the protocol should say the broader cohort is an interpretive denominator, not a hidden eligibility screen. And the purposive interviews should include flagged people who never enter the program. Otherwise, we will have built a very careful cascade that still cannot tell us what \u201cnot reached\u201d actually consisted of."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "Yes, and I\u2019ll ask the county about the separate reporting cohort today."
+    },
+    {
+      "speaker": "Dr. Samuel Reed",
+      "text": "All right, I think we should stop there\u2014the rest can wait until the next meeting. Thanks, both. This was, was useful."
+    },
+    {
+      "speaker": "Maya Patel",
+      "text": "Thank you, take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 4,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      3,
+      4,
+      5,
+      8,
+      9,
+      15,
+      17,
+      18,
+      21,
+      22,
+      24,
+      27,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The core ambiguity is strongly evidenced, but task compliance is not fully maximal because the specific phrase \u201cuncontrolled high blood pressure\u201d is never used verbatim. Turns 1 and 3 discuss \u201cuncontrolled blood pressure,\u201d which is close and sufficient for recovery, but less exact than the seed requirement.",
+      "Turn 3 states that Ortiz has not seen the county eligibility policy, and turns 27-29 plan to ask the county about reporting, but no participant directly asks the county implementation lead for the full operative eligibility criteria before finalizing recruitment and analysis. The needed next step is implied rather than explicitly articulated.",
+      "The transcript is highly polished and systematically structured. Most substantive turns present a complete concern, caveat, and proposed resolution, especially turns 4-5, 11-15, and 21-25. This makes it read more like a carefully written research dialogue than live meeting speech.",
+      "The required one_voice_leads style is only partly reflected. Reed has the most turns and is influential, but Maya and Ortiz each contribute many long, highly developed turns; there is no clearly quieter participant who speaks rarely, contrary to the supplied meeting-style guidance.",
+      "The discussion spends considerable time resolving adjacent implementation details\u2014recheck rates, outreach disposition logs, purposive sampling, and crosswalks\u2014without periodically returning to the still-unresolved primary eligibility definition. This is coherent, but it contributes to a scripted, solution-forward feel rather than a more tentative live planning exchange."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.29,
+    "turn_moves": {
+      "proposal": 12,
+      "backchannel": 3,
+      "concern": 3,
+      "question": 5,
+      "agreement": 3,
+      "answer": 4,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      29
+    ],
+    "unsure_turns": [
+      3,
+      9,
+      12,
+      14,
+      18,
+      21,
+      27
+    ],
+    "approved": true
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.21,
+      "approved": false,
+      "issues": [
+        "The central phrase is never explicitly stated as \u201cuncontrolled high blood pressure,\u201d and Dr. Ortiz never clearly says that the clinical team has been using it to mean one recent elevated EHR reading. Turns 1-5 strongly imply an elevated-reading phenotype, but the required first interpretation is less directly recoverable than it should be.",
+        "Dr. Reed raises concerns about transient or context-specific readings in turns 2-3 and 8, but he does not explicitly articulate the alternative as persistent hypertension remaining uncontrolled despite an opportunity for routine care. Medication history, diagnosis, and inadequate management are not directly posed as eligibility requirements.",
+        "The conversation becomes substantially focused on referral cascades, contact modes, CHW documentation, and observation (turns 7-24). Those are plausible downstream concerns, but they dilute the required ambiguity around the eligibility definition rather than cleanly preserving and contrasting the two interpretations.",
+        "The transcript does not establish several information gaps required by the ground truth with sufficient specificity: no explicit unknown blood-pressure threshold, no explicit unknown recency window, no explicit question about medication history or prior diagnosis, and no explicit question whether the evaluation cohort must match enrollment exactly.",
+        "The required one-voice-leads meeting style is not followed: turns are distributed almost evenly among Ortiz (10), Reed (9), and Patel (10), with all three contributing repeated medium-length substantive turns. No clearly quieter participant speaks only rarely.",
+        "Despite several organic fragments and repetitions, many substantive turns are polished, complete mini-arguments that identify a concern and immediately prescribe a solution or data element. This makes the exchange read more like drafted research dialogue than a live planning meeting, particularly in turns 10-18 and 20-25.",
+        "The ending has a written-minutes quality: Ortiz assigns herself to circulate questions in turn 28 immediately after Patel summarizes the remaining uncertainty in turn 27. This is not fatal, but it contributes to a tidy scripted close."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 4,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.29,
+      "approved": true,
+      "issues": [
+        "The core ambiguity is strongly evidenced, but task compliance is not fully maximal because the specific phrase \u201cuncontrolled high blood pressure\u201d is never used verbatim. Turns 1 and 3 discuss \u201cuncontrolled blood pressure,\u201d which is close and sufficient for recovery, but less exact than the seed requirement.",
+        "Turn 3 states that Ortiz has not seen the county eligibility policy, and turns 27-29 plan to ask the county about reporting, but no participant directly asks the county implementation lead for the full operative eligibility criteria before finalizing recruitment and analysis. The needed next step is implied rather than explicitly articulated.",
+        "The transcript is highly polished and systematically structured. Most substantive turns present a complete concern, caveat, and proposed resolution, especially turns 4-5, 11-15, and 21-25. This makes it read more like a carefully written research dialogue than live meeting speech.",
+        "The required one_voice_leads style is only partly reflected. Reed has the most turns and is influential, but Maya and Ortiz each contribute many long, highly developed turns; there is no clearly quieter participant who speaks rarely, contrary to the supplied meeting-style guidance.",
+        "The discussion spends considerable time resolving adjacent implementation details\u2014recheck rates, outreach disposition logs, purposive sampling, and crosswalks\u2014without periodically returning to the still-unresolved primary eligibility definition. This is coherent, but it contributes to a scripted, solution-forward feel rather than a more tentative live planning exchange."
+      ]
+    }
+  ]
+}

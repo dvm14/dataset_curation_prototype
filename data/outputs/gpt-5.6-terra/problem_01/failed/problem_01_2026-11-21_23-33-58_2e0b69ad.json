@@ -1,0 +1,389 @@
+{
+  "transcript_id": "2e0b69ad",
+  "generated_at": "2026-11-21T23:33:58.979686",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style with mostly short to medium turns outside the formal presentations, including frequent greetings, technical check-ins, side chatter, and repeated acknowledgments like \u201cyeah,\u201d \u201cokay,\u201d and \u201cgreat.\u201d Speakers use many fillers, self-corrections, repetitions, and false starts, especially when asking questions or speaking spontaneously; nonnative phrasing and imperfect turn handoffs are left unpolished. The presentation segments are much longer and more structured, but still conversational, with hedges such as \u201csort of,\u201d \u201cI think,\u201d \u201cmaybe,\u201d \u201cwe believe,\u201d and \u201cto be fair,\u201d plus occasional informal audience-directed asides. Overlap is moderate: people sometimes begin responses before the previous turn fully resolves, but interruptions are generally supportive rather than adversarial. Participants build on one another through praise, follow-up questions, and tentative extensions of prior points; challenges are framed indirectly as curiosity or uncertainty rather than blunt disagreement. Questions tend to be prefaced with compliments or disclaimers (\u201cquick question,\u201d \u201cnaive question,\u201d \u201cI\u2019m just curious\u201d), then develop into multi-part, exploratory prompts rather than concise interrogations.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with a person asking for a quick catch-up because they missed the last meeting.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Reducing 30-day hospital readmissions among older adults with heart failure after discharge home.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "clinical medicine",
+      "functional_role": "PhD student",
+      "background": "A cardiology-trained physician completing a PhD in health services research, with 6 years of clinical experience caring for hospitalized adults with heart failure and 3 years working with electronic health record data. Her research focuses on transitional care, medication reconciliation, guideline-directed medical therapy, and pragmatic randomized studies embedded in hospital workflows.",
+      "distinct_perspective": "Frames preventable readmission as a transition-of-care problem with clinically actionable pathways: whether patients can obtain and take prescribed medicines, whether early follow-up identifies worsening symptoms or treatment barriers, and whether guideline-directed heart-failure therapy is continued or optimized after discharge. She sees a randomized comparison of enhanced post-discharge support versus usual discharge care as the clearest way to estimate impact, while recognizing that clinical delivery alone may not address the household conditions that determine whether a plan is feasible.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Luis Ramirez",
+      "discipline": "sociology",
+      "functional_role": "domain expert",
+      "background": "A medical sociologist with 14 years of experience studying chronic illness management, care transitions, and family caregiving among older adults. He uses semi-structured interviews, ethnographic home observation, fieldnotes, and qualitative comparative analysis to examine how institutional recommendations are translated into everyday household practice.",
+      "distinct_perspective": "Treats discharge as a social process rather than a discrete clinical event. He focuses on how living arrangements, caregiver availability and burden, household routines, transportation and pharmacy access, practical medication work, and trust in clinicians shape whether discharge instructions can be enacted. He will argue for purposive interviews with patients and caregivers and a limited optional home-observation component to identify mechanisms and implementation constraints, while avoiding causal claims about any single household factor before the study produces evidence in this population.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "dominant",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "discipline": "economics",
+      "functional_role": "domain expert",
+      "background": "A health economist with 11 years of experience evaluating hospital-based interventions under value-based payment arrangements. Her work combines hospital cost-accounting data, claims and billing records, utilization analyses, and trial-based economic evaluation, with particular attention to incentives created by readmission penalties and alternative payment models.",
+      "distinct_perspective": "Frames 30-day readmissions as both a patient-outcome and resource-allocation problem. She will emphasize that avoidable readmissions can carry financial consequences for hospitals under readmission penalties and value-based payment models, and that an intervention should be evaluated not only for effectiveness but also for implementation cost and cost per avoided readmission. She will press the group to specify whether the eventual economic evaluation adopts a hospital or payer perspective and to use hospital and billing data to characterize downstream utilization.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with a person asking for a quick catch-up because they missed the last meeting.",
+  "sample_seed": 1,
+  "task_id": "problem_01",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give an interdisciplinary research discussion with an identifiable research problem. The evaluated AI must summarize the whole discussion and acknowledge the participating disciplines.",
+  "seed_spec": {
+    "task_id": "problem_01",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give an interdisciplinary research discussion with an identifiable research problem. The evaluated AI must summarize the whole discussion and acknowledge the participating disciplines.",
+    "explicit_instruction": "Hold a planning meeting involving Dr. Maya Chen (clinical medicine), Dr. Luis Ramirez (sociology), and Dr. Priya Shah (economics). All participants agree that the central problem is preventable 30-day readmission after discharge home for older adults with heart failure, but they should explain why a purely clinical intervention may be insufficient. Dr. Chen should identify medication adherence, timely follow-up, and continuation or optimization of guideline-directed heart-failure therapy as clinically relevant pathways, and propose a randomized comparison of enhanced post-discharge support versus usual discharge care. Dr. Ramirez should explain that living alone, the availability and burden of informal caregivers, household routines, practical ability to obtain medicines, and trust in clinicians can affect whether discharge plans are carried out. He should argue for interviews and a limited set of home observations to understand these mechanisms, without claiming that any particular household factor has already been proven causal in this patient group. Dr. Shah should explain that readmissions create financial consequences under hospital readmission penalties and value-based payment models, and that the study should estimate both intervention cost and cost per avoided readmission. The team must agree on a feasible mixed-methods design: a randomized trial with 30-day unplanned readmission as the primary outcome; clinical process measures including medication adherence and follow-up completion; qualitative interviews with a purposive subset of patients and caregivers, with optional home observation; and an economic analysis using hospital and billing records. They must explicitly decide that the initial intervention will include a nurse contact within 72 hours of discharge, medication problem-solving, and caregiver-inclusive planning when the patient identifies a caregiver. They must retain two unresolved design questions: the exact operational definition of medication adherence and whether the intervention's economic evaluation will take the hospital or payer perspective. The discussion should naturally name and respect the contributions of clinical medicine, sociology, and economics. Do not introduce a hidden conflict, unsupported literature claims, or a different target population.",
+    "ground_truth": {
+      "summary": "The meeting formulates an interdisciplinary research problem: how to reduce 30-day unplanned hospital readmissions among adults aged 65 or older with heart failure after they are discharged home. The group views readmission as shaped by clinical care, household and relational conditions, and financial incentives rather than by a single cause.",
+      "disciplinary_contributions": {
+        "clinical_medicine": [
+          "Treats 30-day unplanned readmission as the primary outcome.",
+          "Identifies medication adherence, early post-discharge follow-up, and guideline-directed heart-failure therapy as important clinical pathways.",
+          "Proposes a randomized comparison of enhanced post-discharge support with usual discharge care."
+        ],
+        "sociology": [
+          "Examines how living arrangements, informal caregiver availability and burden, household routines, access to medicines, and trust in clinicians affect implementation of discharge plans.",
+          "Uses patient and caregiver interviews and optional home observation to investigate mechanisms and variation in post-discharge experience.",
+          "Does not assert that a specific household factor is already established as causal."
+        ],
+        "economics": [
+          "Addresses hospital readmission penalties and value-based payment incentives.",
+          "Estimates intervention cost and cost per avoided readmission using hospital and billing records.",
+          "Leaves the hospital-versus-payer analytic perspective unresolved."
+        ]
+      },
+      "agreed_study_design": {
+        "population": "Adults aged 65 years or older hospitalized for heart failure and discharged to a private home.",
+        "design": "Mixed-methods study centered on a randomized trial of enhanced post-discharge support versus usual discharge care.",
+        "intervention": [
+          "Nurse contact within 72 hours after discharge",
+          "Medication problem-solving",
+          "Caregiver-inclusive planning when the patient identifies a caregiver"
+        ],
+        "primary_outcome": "30-day unplanned hospital readmission.",
+        "additional_measures": [
+          "Medication adherence",
+          "Completion of follow-up care",
+          "Hospital and billing-record costs",
+          "Interviews with a purposive subset of patients and caregivers",
+          "Optional home observation"
+        ]
+      },
+      "unresolved_questions": [
+        "How medication adherence will be operationally defined.",
+        "Whether the economic evaluation will use the hospital perspective or the payer perspective."
+      ]
+    }
+  },
+  "seed_location": "Turns 1-29 contain an interdisciplinary planning discussion involving clinical medicine (Dr. Chen), sociology (Dr. Ramirez), and economics (Dr. Shah). The trial design and intervention are stated in turn 2: randomized enhanced support versus usual discharge care, 30-day unplanned readmission primary outcome, nurse contact within 72 hours, medication problem-solving, and caregiver involvement when desired. Turns 4-10 discuss household/caregiver and medication-access mechanisms and purposive qualitative sampling; turns 23-25 address optional home visits. Turns 6-7 and 11, 16, and 18 discuss costing and hospital/billing/claims data, including cost per avoided readmission (turn 16). However, the transcript is incomplete relative to the requested seed: it does not explicitly identify heart failure as the target condition, does not explicitly discuss guideline-directed heart-failure therapy, timely follow-up completion, living alone, caregiver burden, household routines, or trust in clinicians, does not explicitly state that purely clinical intervention is insufficient, and does not retain the exact operational definition of medication adherence or hospital-versus-payer perspective as unresolved questions. It also does not provide a whole-discussion summary.",
+  "ground_truth": {
+    "summary": "The meeting formulates an interdisciplinary research problem: how to reduce 30-day unplanned hospital readmissions among adults aged 65 or older with heart failure after they are discharged home. The group views readmission as shaped by clinical care, household and relational conditions, and financial incentives rather than by a single cause.",
+    "disciplinary_contributions": {
+      "clinical_medicine": [
+        "Treats 30-day unplanned readmission as the primary outcome.",
+        "Identifies medication adherence, early post-discharge follow-up, and guideline-directed heart-failure therapy as important clinical pathways.",
+        "Proposes a randomized comparison of enhanced post-discharge support with usual discharge care."
+      ],
+      "sociology": [
+        "Examines how living arrangements, informal caregiver availability and burden, household routines, access to medicines, and trust in clinicians affect implementation of discharge plans.",
+        "Uses patient and caregiver interviews and optional home observation to investigate mechanisms and variation in post-discharge experience.",
+        "Does not assert that a specific household factor is already established as causal."
+      ],
+      "economics": [
+        "Addresses hospital readmission penalties and value-based payment incentives.",
+        "Estimates intervention cost and cost per avoided readmission using hospital and billing records.",
+        "Leaves the hospital-versus-payer analytic perspective unresolved."
+      ]
+    },
+    "agreed_study_design": {
+      "population": "Adults aged 65 years or older hospitalized for heart failure and discharged to a private home.",
+      "design": "Mixed-methods study centered on a randomized trial of enhanced post-discharge support versus usual discharge care.",
+      "intervention": [
+        "Nurse contact within 72 hours after discharge",
+        "Medication problem-solving",
+        "Caregiver-inclusive planning when the patient identifies a caregiver"
+      ],
+      "primary_outcome": "30-day unplanned hospital readmission.",
+      "additional_measures": [
+        "Medication adherence",
+        "Completion of follow-up care",
+        "Hospital and billing-record costs",
+        "Interviews with a purposive subset of patients and caregivers",
+        "Optional home observation"
+      ]
+    },
+    "unresolved_questions": [
+      "How medication adherence will be operationally defined.",
+      "Whether the economic evaluation will use the hospital perspective or the payer perspective."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Hi, everyone\u2014quick catch-up, I missed the last meeting. Before we get too far into the intervention components, could someone give me the short version of where we landed on the trial shape? I'm especially trying to keep the home context from becoming just a checkbox\u2014just a checkbox variable."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "The proposed shape was an individual randomized trial at discharge, enhanced support versus usual discharge care, with 30-day unplanned readmission as the primary outcome. In the enhanced arm, there's nurse contact within 72 hours, medication problem-solving, and involving a caregiver when the patient wants that. And I agree, the home piece needs to shape what we actually ask and do, not just become a box in the EHR..."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Mm-hm, okay."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Good. Maya, when that 72-hour contact finds, say, the patient never got a new prescription, or the caregiver isn't sure which bottle was stopped, what latitude does the nurse actually have to resolve that? I'd want our qualitative sampling to follow those breakdowns, those points of breakdown, because \"caregiver involved\" can mean very different things in the household."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s exactly the operational question. I\u2019d give the nurse a defined escalation pathway. If the regimen needs clarifying- if there\u2019s an issue, they can clarify it with the discharging team or pharmacy, troubleshoot access or delivery, and help get an earlier clinician review when symptoms or medication changes need it. But I wouldn\u2019t leave it as just education. And yes, sampling those calls makes sense. We should record what barrier was found and whether it was actually resolved."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "That resolution field matters for the costing too. Maya, do you have a sense yet which of those escalations takes the most nurse time, medication calls, getting a prompt visit, or caregiver coordination? I'd rather measure the actual labor than treat the 72-hour contact like it's one uniform intervention."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I don't have reliable proportions from our charts yet, honestly. Medication reconciliation calls can be quick unless there's a prior authorization or a pharmacy access problem, and arranging an earlier visit can turn into several contacts. We should time-stamp each escalation and its outcome instead of assuming the initial call captures the dose of the intervention, because..."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "I\u2019d avoid treating those time stamps as just operational dose. A pharmacy-access escalation can show transportation, payment, or who in the household is actually doing the medication work. I\u2019d want a brief structured note on that context, and then we could purposively interview across the different unresolved and resolved pathways. I was going to say just the unresolved ones, but the resolved pathways matter too."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I like that, as long as the structured note is brief enough to survive a busy call. We can separate what the nurse could act on that day, pharmacy, prescriber, appointment, from the context the patient or caregiver says made the plan hard, without turning either into a blame..."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Right, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Yeah, and from my side, that split is useful. We can cost the nurse actions separately from the contextual note, then see whether unresolved barriers are associated with more downstream service use. I do need to check how completely the billing data capture care outside our system before we- before we lean too hard on that, though."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "That\u2019s important, because an apparent 30-day non-event in our records may just be care that migrated elsewhere. Priya, when you check that, could you also tell us whether the claims lag makes it unusable for near-term case finding, or whether it just- whether it only limits the final outcome ascertainment?"
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Yeah, exactly, that\u2019s what I need to verify. I expect the claims lag would make claims poor for real-time case finding, while EHR data can support recruitment and immediate tracking. For the final 30-day outcome, the question is whether we get sufficiently complete external claims and how much delay there is. I\u2019ll check the coverage and linkage rules before we specify that."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For recruitment and the nurse workflow, the EHR should be enough. We know the discharge home, I mean discharge-to-home, in real time. But for the primary 30-day unplanned readmission outcome in these adults 65 and older, I\u2019d want us to pre-specify what counts if outside claims are incomplete, rather than quietly treating missing capture as no readmission."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Mm, we need that rule."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "We should define a hierarchy now. Use linked claims or other external data when available, then EHR-confirmed readmissions, and then an explicitly unknown category, not \"no event.\" And for any cost-per-avoided-readmission estimate, the denominator has to carry that uncertainty too, or else..."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "And for the qualitative piece, the unknown category isn't just an analytic nuisance. If someone reports an outside admission later, or says they went to an ED elsewhere, that can tell us something about where they seek help and why. I'd preserve a small self-report field rather than force all of that into the claims hierarchy, because..."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "A small self-report field is worth it, especially if it separates an ED visit, an admission, and just an urgent call or visit. We can use it as supplementary ascertainment instead of quietly treating it like a billed readmission, and it may help us understand where the gaps are in the utilization data."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "For the primary outcome, I'd keep self-report as a trigger for adjudication where we can. I wouldn't- we shouldn't automatically count it as a 30-day unplanned admission. For these patients 65 and older, an outside ED visit without admission is still clinically useful, but it's not the same endpoint."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Yeah, separate endpoint."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "If we do ask about outside ED or hospital use, I'd keep the questions open enough to learn what came before it, like symptoms, an inability to reach someone, transport, or maybe maybe a decision by family. We shouldn't imply it was a failure to follow instructions. That's probably where a few caregiver interviews would be most informative."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "We can make the follow-up question neutral. What happened in the day or two before they decided to seek urgent care, and who was involved in that decision? Clinically, I'd still keep the trial endpoint tight. The 30-day unplanned hospital readmission- for the 65-plus discharge-home group, that's the endpoint. ED use and urgent calls can sit alongside it as secondary outcomes."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Mm-hm. For the caregiver interviews, I\u2019d recruit from both the ED/readmission group and people who never returned, because otherwise we only learn the crisis- the crisis narrative. And I still want to check the consent mechanics for an optional home visit, especially whether another household member can say no without affecting the patient\u2019s trial participation."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah\u2014home visits should be genuinely optional, with no effect on trial participation, especially in this 65-plus, 65-plus group."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "The opt-in needs to be separate at more than one level. A patient can join the trial and decline the visit, and a caregiver or other household member can decline being observed or interviewed without that showing up as noncooperation. I'll check with IRB on how to make that clear in the consent and the field protocol."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah, and we should make that especially clear for this 65-plus group."
+    },
+    {
+      "speaker": "Dr. Luis Ramirez",
+      "text": "Okay, I think we can, can give people a few minutes back. We'll pick this up next week. Thanks, both."
+    },
+    {
+      "speaker": "Dr. Priya Shah",
+      "text": "Sounds good\u2014take care, both."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Thanks, bye\u2014have a good week."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      11,
+      13,
+      14,
+      16,
+      18,
+      19,
+      21,
+      22,
+      23,
+      25
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The central target population is not fully recoverable: turns 14, 19, 22, 24, and 26 specify adults 65 and older discharged home, but no turn identifies heart failure. This is a major omission because the ground truth requires older adults with heart failure.",
+      "Dr. Chen does not identify continuation or optimization of guideline-directed heart-failure therapy as a clinical pathway. The discussion covers medication access, reconciliation, and symptom-driven review (turns 5, 7, 19), but not GDMT continuation or optimization.",
+      "Medication adherence is not explicitly included as a clinical process measure, and the required unresolved question\u2014its exact operational definition\u2014is never retained. Medication-related barriers are discussed, but this does not establish the adherence measure or leave its definition open.",
+      "The economics contribution omits readmission penalties and value-based payment models. Dr. Shah discusses costing, billing completeness, and cost per avoided readmission (turns 6, 11, 16, 18), but not the required financial-incentive rationale.",
+      "The required unresolved hospital-versus-payer economic perspective is never raised. No turn specifies or leaves open the analytic perspective, despite cost and claims discussions.",
+      "The team never explicitly agrees to use hospital and billing records for the economic analysis; billing/claims data are discussed, but hospital cost-accounting records are not clearly committed to.",
+      "Turn 27 gives a tidy closing and effectively recaps the meeting end rather than stopping abruptly because someone has another meeting soon, which weakens compliance with the requested rushed quick-check-in style.",
+      "Several substantive turns are polished, complete mini-arguments that immediately convert concerns into solutions\u2014especially turns 5, 8, 11, 16, 18, and 22. This makes the meeting read more like constructed dialogue than an unpolished weekly check-in."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.77,
+    "written_turns": [
+      2,
+      13,
+      16,
+      18,
+      25
+    ],
+    "exploration_share": 0.11,
+    "turn_moves": {
+      "request": 2,
+      "answer": 2,
+      "backchannel": 2,
+      "question": 2,
+      "proposal": 10,
+      "agreement": 9,
+      "concern": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      13,
+      25
+    ],
+    "unsure_turns": [
+      7,
+      11,
+      13,
+      23
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 33,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.9,
+      "exploration_share": 0.17,
+      "approved": false,
+      "issues": [
+        "The required target population is not fully recoverable: the transcript discusses heart-failure-style post-discharge management and discharge home, but never explicitly identifies adults aged 65 or older with heart failure. This makes the ground-truth population depend on outside/contextual inference rather than transcript evidence.",
+        "Dr. Chen does not explicitly identify continuation or optimization of guideline-directed heart-failure therapy as a clinical pathway. Turns 5, 8, 11, 19, 21, and 25 address medication routines, access, and monitoring, but not guideline-directed therapy continuation or optimization.",
+        "Dr. Shah never explicitly discusses hospital readmission penalties or value-based payment models, and she does not state that the economic analysis should estimate cost per avoided readmission. Turns 3, 10, 17, 24, and 30 cover intervention costs, hospital costs, payer spending, and utilization, but omit these required economics items.",
+        "The agreed mixed-methods design does not retain home observation as an optional implemented component. Luis proposes it in turn 26, but Maya resists it in turn 27 and Luis leaves it exploratory for later reconsideration in turn 28. This falls short of the specified optional home-observation element in the agreed design.",
+        "Clinical process measures do not clearly include follow-up completion. The transcript logs contact timing and delivery (turns 10-12) but does not establish completion of follow-up care as a study measure.",
+        "Medication adherence remains deliberately unoperationalized, as required, but the group also moves away from using a single adherence measure altogether in turns 21-24. This weakens the requirement that medication adherence be included among the clinical process measures.",
+        "Naturalness is limited by highly polished, consistently substantive turns. Although there are authentic fillers, cutoffs, and brief acknowledgments, most turns immediately transform the prior concern into a precise study-design refinement or assignment, and the discussion is unusually comprehensive for a rushed weekly check-in.",
+        "The ending in turns 29-31 functions as a compact decisions-and-actions recap, which reads somewhat like prepared meeting minutes despite the requested quick-check-in style."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.77,
+      "exploration_share": 0.11,
+      "approved": false,
+      "issues": [
+        "The central target population is not fully recoverable: turns 14, 19, 22, 24, and 26 specify adults 65 and older discharged home, but no turn identifies heart failure. This is a major omission because the ground truth requires older adults with heart failure.",
+        "Dr. Chen does not identify continuation or optimization of guideline-directed heart-failure therapy as a clinical pathway. The discussion covers medication access, reconciliation, and symptom-driven review (turns 5, 7, 19), but not GDMT continuation or optimization.",
+        "Medication adherence is not explicitly included as a clinical process measure, and the required unresolved question\u2014its exact operational definition\u2014is never retained. Medication-related barriers are discussed, but this does not establish the adherence measure or leave its definition open.",
+        "The economics contribution omits readmission penalties and value-based payment models. Dr. Shah discusses costing, billing completeness, and cost per avoided readmission (turns 6, 11, 16, 18), but not the required financial-incentive rationale.",
+        "The required unresolved hospital-versus-payer economic perspective is never raised. No turn specifies or leaves open the analytic perspective, despite cost and claims discussions.",
+        "The team never explicitly agrees to use hospital and billing records for the economic analysis; billing/claims data are discussed, but hospital cost-accounting records are not clearly committed to.",
+        "Turn 27 gives a tidy closing and effectively recaps the meeting end rather than stopping abruptly because someone has another meeting soon, which weakens compliance with the requested rushed quick-check-in style.",
+        "Several substantive turns are polished, complete mini-arguments that immediately convert concerns into solutions\u2014especially turns 5, 8, 11, 16, 18, and 22. This makes the meeting read more like constructed dialogue than an unpolished weekly check-in."
+      ]
+    }
+  ]
+}

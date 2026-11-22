@@ -1,0 +1,366 @@
+{
+  "transcript_id": "7cfa386c",
+  "generated_at": "2026-11-22T01:22:10.371972",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chat giving way to long, highly structured presentation turns and brief question-answer exchanges. Overlap is light but frequent in the form of quick acknowledgments, repeated \u201cyeah,\u201d greetings, and occasional self-corrections rather than hard interruptions. Speakers use many fillers and hedges\u2014\u201cum,\u201d \u201cyou know,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cI guess,\u201d \u201cof course\u201d\u2014and often restart phrases or repeat words while formulating ideas. The tone is collegial, relaxed, and professionally academic: participants praise talks generously, ask technically detailed but polite questions, and frame challenges as curiosity or uncertainty rather than contradiction. Questions are often prefaced with compliments, disclaimers such as \u201cnaive question\u201d or \u201cI\u2019m just curious,\u201d and several clauses of setup before the actual question. Responses are expansive, exploratory, and candid about limits, often acknowledging that an issue is unresolved or \u201cearly days,\u201d then building from the question toward possible next steps.\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Understanding why a low-cost point-of-care blood test is adopted in some rural clinics and left in a drawer in others.",
+  "disciplines": [
+    "biomedical engineering",
+    "anthropology",
+    "public health"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Maya Chen",
+      "discipline": "biomedical engineering",
+      "functional_role": "project manager",
+      "background": "Biomedical engineer with 11 years of experience designing and evaluating low-cost diagnostic devices for primary-care settings. She has led field validation and implementation studies of battery-powered analyzers in East African and Southeast Asian clinics, using device event logs, calibration histories, temperature records, error-code analysis, time-and-motion observation, and operator competency assessments. She is responsible for coordinating the six-month protocol, equipment data extraction, and district-approval timeline.",
+      "distinct_perspective": "Frames the adoption gap first as a reliability and usability problem: whether the device can be charged, calibrated, stored within reagent temperature limits, and operated correctly under real clinic conditions. She expects device logs to distinguish persistent hardware or maintenance constraints from sporadic operator workarounds, and initially favors sampling clinics by contrasting log signatures. Her practical concern is to identify modifiable failure points that can be addressed through maintenance routines, training, and supply support, while remaining receptive when evidence shows that technical indicators alone do not explain use.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Lila Njeri",
+      "discipline": "anthropology",
+      "functional_role": "principal investigator",
+      "background": "Medical anthropologist with 14 years of ethnographic research experience on maternal health, diagnostic technologies, referral practices, and frontline care in rural East Africa. Her methods include sustained participant observation, semi-structured interviews, case-based tracing of care journeys, and analysis of informal obligations surrounding formal health-system procedures. She completed short scoping visits at two participating clinics and has prior working relationships with nurses and community health workers in the district.",
+      "distinct_perspective": "Treats device use as a socially situated decision rather than a simple measure of technical capacity or staff compliance. She is attentive to how a test result redistributes responsibility: who is expected to explain risk, authorize next steps, find money, arrange transport, accompany a patient, and absorb blame if referral fails. From her scoping observations, she suspects that apparently unused devices may sometimes be deliberately avoided when a positive result creates obligations the clinic cannot safely fulfill. She argues for comparing sites with similar device conditions but different referral-support arrangements, and for observing antenatal clinic days and tracing the consequences of positive results through staff, community, and referral networks.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Samuel Okoro",
+      "discipline": "public health",
+      "functional_role": "postdoctoral researcher",
+      "background": "Public-health physician and health-systems researcher with 7 years of experience studying rural screening programs, commodity supply chains, and referral completion. He has mapped the district anemia-screening program, clinic staffing patterns, stock-delivery schedules, treatment availability, and routes to the district hospital. His work combines service-readiness assessments, routine data review, facility surveys, and interviews with program managers and frontline workers.",
+      "distinct_perspective": "Frames adoption in terms of whether screening is programmatically actionable. He asks whether anemia screening is scheduled and staffed, whether consumables are available, whether treatment or referral can follow a positive result, and whether the district pathway makes testing worthwhile for clinicians and patients. He sees device data as necessary but incomplete: a functioning analyzer has limited value when test supplies are absent, antenatal workflows do not include screening, or referral routes are impractical. He supports linking device-log patterns to stock records, screening schedules, and referral outcomes, and is likely to ask concise questions that turn broad concerns into measurable protocol components.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "questioning",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    }
+  ],
+  "research_id": "rural_point_of_care",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 1,
+  "task_id": "integration_01",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Give a meeting where one discipline dominates airtime and a quieter participant raises a substantive point that should change the plan. The evaluated AI must identify disciplines and summarize perspectives by substance, preserving the quieter contribution.",
+  "seed_spec": {
+    "task_id": "integration_01",
+    "benchmark_category": "Integration/Perspectives",
+    "benchmark_task": "Give a meeting where one discipline dominates airtime and a quieter participant raises a substantive point that should change the plan. The evaluated AI must identify disciplines and summarize perspectives by substance, preserving the quieter contribution.",
+    "explicit_instruction": "Simulate a planning meeting in which biomedical engineering dominates most of the airtime. Dr. Chen should argue that the central explanation is technical reliability: battery charging, calibration compliance, reagent storage temperature, and operator errors. She proposes selecting clinics using device-log patterns and concentrating observation on troubleshooting and maintenance. Dr. Okoro should contribute a shorter but clear public-health perspective: stock availability, whether anemia screening is actually scheduled, and whether a positive result can lead to a feasible referral or treatment pathway affect use. Dr. Njeri should speak least, but raise a substantive finding from her scoping visits: in one low-use clinic, nurses deliberately avoid testing pregnant patients on antenatal clinic days because a positive result triggers an informal expectation that staff will arrange transport and accompaniment to the district hospital; families often cannot afford transport, the formal referral slip does not solve this, and nurses fear being blamed when patients do not complete referral. The device is functional there. She should state that studying only technical failures and routine workflow would misclassify this as noncompliance. The group should decide to retain technical and supply-chain measures but revise sampling and data collection to include comparison of clinics with similar device conditions but different referral-support arrangements, observation on antenatal clinic days, and interviews with nurses, community health workers, patients or caregivers, and relevant referral-network actors about decision authority, transport, accompaniment, and consequences of a positive result. Do not resolve the empirical question of which factor is most important; it is the study's question. Ensure the meeting naturally establishes that engineering received substantially more airtime while the anthropological contribution changes the plan.",
+    "ground_truth": {
+      "disciplines_and_perspectives": [
+        {
+          "discipline": "biomedical engineering",
+          "perspective": "Explains uneven use through device and operational reliability, including power availability, calibration, reagent storage, maintenance, and user error. Supports extracting device logs and assessing troubleshooting conditions."
+        },
+        {
+          "discipline": "public health",
+          "perspective": "Treats test use as dependent on program implementation: screening schedules, reagent and consumable supply, referral pathways, and the practical availability of treatment or follow-up."
+        },
+        {
+          "discipline": "anthropology",
+          "perspective": "Shows that use is shaped by social obligations, authority, and informal referral arrangements. Nurses may deliberately avoid testing when a positive result creates responsibilities for transport or accompaniment that they and patients cannot meet, even when the device works."
+        }
+      ],
+      "airtime_dynamic": "Biomedical engineering dominates the meeting. Anthropology is the quietest contribution, but it provides the critical corrective.",
+      "substantive_quieter_contribution": "The low-use clinic described by the anthropologist has a functional device, yet nurses avoid testing pregnant patients on antenatal clinic days because a positive result can create an informal expectation that staff arrange transport and accompaniment for referral. Financial barriers and fear of blame when referral fails make non-testing a deliberate response, not necessarily technical noncompliance.",
+      "required_plan_change": [
+        "Keep technical reliability and supply-chain assessment.",
+        "Compare clinics with similar device conditions but different referral-support arrangements.",
+        "Observe practice during antenatal clinic days rather than only general workflow.",
+        "Interview nurses, community health workers, patients or caregivers, and actors involved in informal referral support.",
+        "Collect evidence on who decides to test, transport and accompaniment obligations, affordability, referral completion, and perceived consequences of a positive result."
+      ],
+      "unresolved_question": "The meeting does not determine whether technical, supply-chain, programmatic, or social-referral factors are most important; the revised study is designed to investigate their interaction."
+    }
+  },
+  "seed_location": "The target feature is present across turns 1-32. Biomedical engineering (Dr. Chen) dominates airtime, especially turns 1, 3, 5, 7, 9, 11, 13, 15, 18, 20, 22, 24, 26, 28, and 30, emphasizing device logs, calibration, power, consumables, operational conditions, and sampling from log patterns. Public health (Dr. Okoro) contributes implementation concerns in turns 2, 4, 6, 8, 10, 12, 14, 16, 23, 25, 27, 29, and 31, including ANC scheduling, stock, treatment, and referral feasibility. Anthropology is the quietest contribution: Dr. Njeri speaks substantively at turns 17, 19, and 21. Turn 17 states that the analyzer was functional but positive results created unsupported transport/accompaniment obligations beyond the formal referral slip; turn 21 proposes matched clinics with similar log/supply conditions but different referral support. This changes the plan in turn 22, where Chen adopts the referral-support comparison while retaining technical and supply measures, and related turns 9, 15, 23-26 establish ANC-day observation, open encounter documentation, and attention to transport/cost/accompaniment. The discussion does not resolve which factor is most important; it preserves this as an empirical comparison.",
+  "ground_truth": {
+    "disciplines_and_perspectives": [
+      {
+        "discipline": "biomedical engineering",
+        "perspective": "Explains uneven use through device and operational reliability, including power availability, calibration, reagent storage, maintenance, and user error. Supports extracting device logs and assessing troubleshooting conditions."
+      },
+      {
+        "discipline": "public health",
+        "perspective": "Treats test use as dependent on program implementation: screening schedules, reagent and consumable supply, referral pathways, and the practical availability of treatment or follow-up."
+      },
+      {
+        "discipline": "anthropology",
+        "perspective": "Shows that use is shaped by social obligations, authority, and informal referral arrangements. Nurses may deliberately avoid testing when a positive result creates responsibilities for transport or accompaniment that they and patients cannot meet, even when the device works."
+      }
+    ],
+    "airtime_dynamic": "Biomedical engineering dominates the meeting. Anthropology is the quietest contribution, but it provides the critical corrective.",
+    "substantive_quieter_contribution": "The low-use clinic described by the anthropologist has a functional device, yet nurses avoid testing pregnant patients on antenatal clinic days because a positive result can create an informal expectation that staff arrange transport and accompaniment for referral. Financial barriers and fear of blame when referral fails make non-testing a deliberate response, not necessarily technical noncompliance.",
+    "required_plan_change": [
+      "Keep technical reliability and supply-chain assessment.",
+      "Compare clinics with similar device conditions but different referral-support arrangements.",
+      "Observe practice during antenatal clinic days rather than only general workflow.",
+      "Interview nurses, community health workers, patients or caregivers, and actors involved in informal referral support.",
+      "Collect evidence on who decides to test, transport and accompaniment obligations, affordability, referral completion, and perceived consequences of a positive result."
+    ],
+    "unresolved_question": "The meeting does not determine whether technical, supply-chain, programmatic, or social-referral factors are most important; the revised study is designed to investigate their interaction."
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Sorry I\u2019m a minute late\u2014the rain\u2019s made the road by campus ridiculous this morning. I know we\u2019re all under the approvals deadline, so let\u2019s just get straight into what we need to fix in the protocol today. I\u2019d like us to settle the sampling logic, especially whether the device logs give us enough contrast across the eight\u2014sorry, the eight sites, and what observation needs to catch when a test isn\u2019t done."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Yeah, the rain's been doing its best to derail everything. For observation, I'd want the moments when a test isn't done tied to whether it's an antenatal day, who's available, and whether strips and treatment are actually, actually there."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I think we need to separate delivered stock from what was actually usable that morning. Strips can be on the ledger and still be expired, stored badly, or locked away. Samuel, do the facility records get us anywhere close to day-level availability, or do we need staff recall and observation for that? I\u2019d pair that with the log timestamp, so a non-test has a device-side and a clinic-side context."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Not reliably, not day by day. The stock cards show deliveries and issues, but they don't tell us whether strips were actually at the bench. We should verify that through observation and ask staff about stock-outs in the preceding week."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Then the observation form should make a really plain distinction. Consumables delivered, consumables physically available and in date, and consumables actually accessible at the point of care. If the log shows no tests that day, we can at least avoid- we shouldn't call it an operator or device problem if the strips were in a cupboard or unusable."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "And alongside that, could we record whether it was an actual screening session, and whether someone able to, um, act on a low result was there? Otherwise, accessible strips still might not mean testing was possible."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I'd put that on the form as a separate workflow condition, not fold it into availability. It may explain that clean-log, near-zero-use site. The analyzer can be maintained perfectly, but staff may not see a clinically actionable path after a low result. Lila, in your scoping visits, did people describe deciding not to test for that reason, or was it more about who physically held the device?"
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "I\u2019d also want to know whether a positive result actually changes anything that day. Whether there\u2019s iron in stock, someone who can counsel, or a realistic referral. Lila, did staff talk about asking women to return rather than- did they hold off on testing when those pieces weren\u2019t there?"
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "And if that's happening, we need to observe the decision before the sample is taken, not just failures at the analyzer. I'd add a short field for each eligible antenatal encounter. Was testing considered, was it offered, and if not, what reason does the staff member give in the moment? That would let us separate a deliberate deferral from, um, from nobody simply having the device ready."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "And we should capture what happens after a deferral too. Are they asked to return, given iron empirically, or referred? Otherwise, \u201cnot offered\u201d lumps together very different service pathways."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Those downstream options should be coded, but I'd keep the reason for deferral separate from the eventual pathway. Otherwise, a staff member may say no strips- they may say no strips when really they're anticipating that referral won't work. Lila's read on how to ask that without making it sound accusatory would be useful."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "If we ask the reason in the moment and then record the next step separately, we may get a cleaner picture of whether referral is driving the decision."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Yeah, exactly\u2014otherwise we mistake a pathway decision for non-use."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Exactly. And we should note whether that next step was actually feasible for the woman, not just what was advised."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Though I worry we can't reliably establish feasibility for every woman through a brief encounter observation. Maybe we record the stated plan and the immediate constraint\u2014transport, cost, accompaniment, whatever comes up\u2014and use the community health worker interviews to understand whether those plans tend to be workable. Otherwise we'll make the observation form impossible to complete."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Mm, that feels manageable."
+    },
+    {
+      "speaker": "Dr. Lila Njeri",
+      "text": "In the low-use clinic I visited, the analyzer was working, but the nurses described a positive result as starting obligations around transport and accompaniment that they couldn't guarantee. I'd keep the encounter field pretty open, what was said and what was done, rather than force a single reason. The formal referral slip may not capture the practical referral arrangement at all, and..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That makes sense. We can keep a short open note for the interaction, then have the observer code the operational pieces afterward, afterward, like whether the device was available, the consumables were usable, and a test was actually attempted. That way we don't make staff fit a reason that isn't theirs. Lila, was the analyzer physically accessible in that clinic, or was it kept with someone?"
+    },
+    {
+      "speaker": "Dr. Lila Njeri",
+      "text": "It was accessible that day, on a shelf in the consultation room, and staff said it was functional. But that was just one visit. I'd want- I'd want Maya's logs to show us whether it was operational across the antenatal sessions we observe."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s helpful because the log can tell us whether it was powered on or calibrated, but not whether it was sitting in a workflow people chose not to enter. I\u2019ll check whether the timestamps cluster around antenatal days at that site, and if they don\u2019t, that\u2019s a different signal. We should probably make it one of the four observation sites because it\u2019s the clean-log, low-use outlier."
+    },
+    {
+      "speaker": "Dr. Lila Njeri",
+      "text": "I think that site is important. Could the other observation sites include a pair with comparable log and supply conditions but different referral support? Otherwise we may see the outlier and not be able to tell what\u2019s distinctive about it..."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "That\u2019s a better contrast than just taking the four worst log profiles. I think we can hold the clean-log low-use clinic fixed, then select two sites matched as closely as we can on strip availability and calibration history but differing in the referral support Samuel mapped, plus one routine-use site with the intermittent-power signature. I need to check the raw exports are complete first, though. The manufacturer hasn\u2019t confirmed that yet."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "That pairing works, though I\u2019d match on whether antenatal sessions are actually running too, not just strips and calibration. Referral support may look different simply because one clinic has a nurse present to screen that day."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019ll treat an active antenatal session and the staff, staff configuration as matching variables, not outcomes. We can\u2019t call it a referral contrast if one site simply wasn\u2019t screening that day. The observation form can still record the actual session conditions because they may be what explains the gap."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "And for that matching, I\u2019d use the actual scheduled antenatal days, not just whether the clinic says it offers ANC. A session that\u2019s routinely cancelled or too crowded is a different condition, and the roster should let us check that."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Scheduled ANC days and the cancellation pattern need to go into the site-selection sheet. I can crosswalk the roster against the log timestamps, although I need to confirm the raw export gives us enough date resolution. If it doesn't, we shouldn't pretend the matching is tighter than it is. For approvals, can we leave the fourth site as a routine-use comparison pending, pending that check?"
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Leave it provisional. I\u2019ll send the ANC roster and cancellation pattern today, and I still need to check whether the referral-register linkage can be done without identifiers before we- before we promise that in the approval."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "I\u2019ll keep referral-register linkage out of the core claims until you know that. For the approval, we can describe it as a feasibility assessment using de-identified aggregate referral information if available, rather than committing to a linkage we may not get. I\u2019ll also chase the manufacturer today. Without the raw export, the logic for that provisional fourth site is pretty shaky."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "That wording is safer. I\u2019ll check the hospital register today. If the aggregate counts can be- if we can break them out by referring clinic without identifiers, that may still give us something useful."
+    },
+    {
+      "speaker": "Dr. Maya Chen",
+      "text": "Good. I\u2019ll word the protocol so aggregate referral data are supplementary, not something the study depends on. We\u2019re basically at time, but could you send me whatever you find before I circulate the approval draft? I need to lock the observation-site language once I hear back from the manufacturer about the exports."
+    },
+    {
+      "speaker": "Dr. Samuel Okoro",
+      "text": "Okay, I think we've covered what we needed for today. Thanks, both. Let's pick this up once the export and register checks are, um, clearer."
+    },
+    {
+      "speaker": "Dr. Lila Njeri",
+      "text": "Thanks, both. Bye for now."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      5,
+      7,
+      9,
+      15,
+      17,
+      19,
+      21,
+      22,
+      23,
+      25,
+      27,
+      28,
+      29
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Task compliance is incomplete for the anthropological corrective: Dr. Njeri identifies transport and accompaniment obligations and the insufficiency of formal referral slips in turn 17, but does not explicitly state that families cannot afford transport, that nurses fear blame when referral fails, or that this is deliberate avoidance of testing on antenatal clinic days. These are central ground-truth details.",
+      "The revised plan never explicitly commits to interviews with nurses, community health workers, patients or caregivers, and referral-network actors about decision authority, transport, accompaniment, affordability, and consequences of positive results. Turn 15 mentions community-health-worker interviews, and turns 27-29 discuss aggregate register data, but the required interview scope is absent.",
+      "Dr. Chen dominates turn count and much of the substantive planning, but Dr. Okoro has 13 of 32 turns versus Chen's 15. This makes engineering dominant but less substantially dominant in airtime than the seed requests.",
+      "Several turns are unusually polished protocol-writing turns that move directly from a concern to a clean operational solution, especially Chen's turns 5, 9, 15, 24, 26, and 28. Despite natural hesitations, this limits naturalness under the rubric's written-dialogue tell.",
+      "The meeting begins with small talk and does not close with a formal recap, which fits the style, but turn 31 nevertheless gives a tidy closing assessment ('we've covered what we needed') despite unresolved sampling and data-linkage questions."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.23,
+    "turn_moves": {
+      "proposal": 14,
+      "question": 3,
+      "answer": 1,
+      "idea": 1,
+      "agreement": 3,
+      "concern": 1,
+      "observation": 2,
+      "commitment": 4,
+      "request": 2,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      20,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "unsure_turns": [
+      19,
+      22,
+      26,
+      27,
+      28,
+      29,
+      31
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.18,
+      "approved": false,
+      "issues": [
+        "Turns 16, 18, and 21 preserve the anthropological mechanism only in an abstracted form. They do not state the required concrete scoping finding: that at a functional low-use clinic nurses deliberately avoid testing pregnant patients on antenatal days because positive results create expectations for staff to arrange transport and accompaniment.",
+        "The transcript never explicitly establishes that families cannot afford transport, that a formal referral slip is insufficient, or that nurses fear blame if patients fail to complete referral. These are central elements of the ground-truth quieter contribution.",
+        "The required interview plan is missing. Turns 16-18 support observing authority and obligations, but no one decides to interview nurses, CHWs, patients/caregivers, and referral-network actors about transport, accompaniment, affordability, referral completion, and consequences of a positive result.",
+        "Turn 7 refers to Lila's two visits, but Lila never reports a specific observation from them. Her contribution is substantively useful, yet it reads more like a methodological caution than the required empirically grounded corrective.",
+        "Engineering clearly dominates turn count and airtime, and Lila is quietest, but the transcript only partially shows that her finding changes the plan: the matched referral-support comparison is adopted, while antenatal-day observation and broader social-referral data collection are proposed by Maya and Samuel before or around Lila's intervention rather than clearly prompted by her finding.",
+        "Naturalness is limited by highly polished, agenda-efficient turns. Many turns immediately convert a concern into a protocol field or assignment, especially turns 9-15 and 20-31. The closing sequence in turns 30-34 functions as a fairly complete recap and handoff despite the requested running-out-of-time style and no final recap.",
+        "Lila's persona is distinguishable through authority, obligations, and distributed responsibility, but her stated high-jargon anthropological style is only lightly evident; her few turns could be made more recognizably ethnographic and anchored in what she saw at the clinic."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "Task compliance is incomplete for the anthropological corrective: Dr. Njeri identifies transport and accompaniment obligations and the insufficiency of formal referral slips in turn 17, but does not explicitly state that families cannot afford transport, that nurses fear blame when referral fails, or that this is deliberate avoidance of testing on antenatal clinic days. These are central ground-truth details.",
+        "The revised plan never explicitly commits to interviews with nurses, community health workers, patients or caregivers, and referral-network actors about decision authority, transport, accompaniment, affordability, and consequences of positive results. Turn 15 mentions community-health-worker interviews, and turns 27-29 discuss aggregate register data, but the required interview scope is absent.",
+        "Dr. Chen dominates turn count and much of the substantive planning, but Dr. Okoro has 13 of 32 turns versus Chen's 15. This makes engineering dominant but less substantially dominant in airtime than the seed requests.",
+        "Several turns are unusually polished protocol-writing turns that move directly from a concern to a clean operational solution, especially Chen's turns 5, 9, 15, 24, 26, and 28. Despite natural hesitations, this limits naturalness under the rubric's written-dialogue tell.",
+        "The meeting begins with small talk and does not close with a formal recap, which fits the style, but turn 31 nevertheless gives a tidy closing assessment ('we've covered what we needed') despite unresolved sampling and data-linkage questions."
+      ]
+    }
+  ]
+}

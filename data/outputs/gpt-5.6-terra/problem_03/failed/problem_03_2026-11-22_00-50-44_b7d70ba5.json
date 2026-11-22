@@ -1,0 +1,393 @@
+{
+  "transcript_id": "b7d70ba5",
+  "generated_at": "2026-11-22T00:50:44.684646",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style, with mostly short to medium turns in the opening and Q&A, contrasted with long, structured presentation turns. Overlap and interruptions are light but common at transitions, with people jumping in through brief acknowledgments, greetings, or follow-up questions. Speech is highly informal and disfluent: frequent \u201cum,\u201d \u201cyeah,\u201d \u201cokay,\u201d repetitions, self-corrections, abandoned starts, and loosely connected phrasing give it an unrehearsed feel, especially among non-native speakers. Participants hedge often with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cI guess,\u201d and \u201cit could be,\u201d and disagreements or corrections are generally indirect, framed as questions, caveats, or alternative possibilities rather than blunt contradiction. Speakers build on one another by praising a point, restating it in their own words, then extending it with a question or related observation. Questions are typically prefaced politely\u2014\u201cI have a question,\u201d \u201ccan I ask,\u201d \u201cnaive question,\u201d \u201cjust curious\u201d\u2014and often unfold as multipart, exploratory prompts rather than concise single questions.\n\nMeeting style for this meeting (thinking_aloud): An exploratory brainstorm. People ask questions they don't know the answer to, try out half-formed ideas, and sometimes contradict themselves. Nothing is decided. Turns are short to medium and often end in a question.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - I wonder if it's even the same thing- like, are we measuring the same thing in both places?\n  - Honestly no idea. Maybe? I'd have to look at how they set it up.\n  - Huh. Okay, so what if we just asked them?\nOpening: Start with one person already reading from, or referring to, a document the others have open.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Understanding how chronic sleep loss changes emotion regulation in teenagers, and whether later school start times help.",
+  "disciplines": [
+    "neuroscience",
+    "psychology",
+    "education"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mei Chen",
+      "discipline": "neuroscience",
+      "functional_role": "principal investigator",
+      "background": "Associate professor of developmental cognitive neuroscience with 12 years of experience studying adolescent sleep, affective circuitry, and fMRI reliability. Has led multisite studies using actigraphy, resting-state and task-based fMRI, and longitudinal mixed-effects models; she is accustomed to weighing mechanistic ambition against measurement stability and recruitable sample size.",
+      "distinct_perspective": "Frames chronic sleep loss as a potential perturbation of neurodevelopmental emotion-regulation systems, especially amygdala-prefrontal coordination. She wants neural measures to inform plausible mechanisms, but emphasizes that scan-to-scan variability, task reliability, and the available sample may make connectivity a poor initial primary endpoint. She distinguishes a feasible behavioral longitudinal study from a later mechanistic or intervention study rather than treating them as competing scientific goals.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Dr. Elena Morales",
+      "discipline": "psychology",
+      "functional_role": "research engineer",
+      "background": "Clinical-developmental psychologist with 9 years of experience designing adolescent ecological momentary assessment protocols and validating self-report measures of emotion regulation, mood, stress, and sleep. Her work combines repeated diary data, standardized questionnaires, actigraphy-linked daily analyses, and youth-focused retention procedures in school and community samples.",
+      "distinct_perspective": "Treats emotion regulation as a fluctuating set of strategies and capacities that must be measured in context, not inferred solely from brain activation or broad school outcomes. She is interested in whether objectively tracked sleep patterns predict next-day or within-person difficulties managing emotions, while pressing the team to confront self-report bias, burden, missingness, and the mismatch between a questionnaire's recall window and diary-based daily processes.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Ms. Anika Patel",
+      "discipline": "education",
+      "functional_role": "research engineer",
+      "background": "District-school research partnership specialist with 11 years of experience coordinating studies across public high schools. She has worked on attendance, course-performance, scheduling, transportation, family-engagement, and implementation-data projects, and regularly translates research protocols into requirements principals, teachers, students, and district operations staff can realistically sustain.",
+      "distinct_perspective": "Frames later start times as an implementation and equity question as much as a health intervention: effects depend on who receives a schedule change, how transportation and staffing are altered, and whether families accept the policy. She sees school records as consequential outcomes but warns that they are shaped by grading practices, course schedules, and school-level disruptions. She prioritizes a design that can proceed even while the district's decisions about timing, sites, and rollout remain unsettled.",
+      "tone": "enthusiastic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "questioning",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "sleep_adolescent_emotion",
+  "meeting_style": "thinking_aloud",
+  "meeting_opening": "Start with one person already reading from, or referring to, a document the others have open.",
+  "sample_seed": 5,
+  "task_id": "problem_03",
+  "benchmark_category": "Problem Formulation",
+  "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+  "seed_spec": {
+    "task_id": "problem_03",
+    "benchmark_category": "Problem Formulation",
+    "benchmark_task": "Give a meeting that considers multiple research questions and ultimately chooses one. Preserve which alternatives remain unresolved. The evaluated AI must accurately track those unresolved questions.",
+    "explicit_instruction": "Hold a planning meeting among Dr. Chen (neuroscience), Dr. Morales (psychology), and Ms. Patel (education). They must consider four candidate questions: (1) whether chronic sleep loss is associated with altered amygdala-prefrontal connectivity during emotion regulation in teenagers; (2) whether sleep loss predicts day-to-day emotion-regulation difficulties measured through diaries and questionnaires; (3) whether moving school start time later improves sleep duration, emotion regulation, attendance, and grades; and (4) whether later start times improve emotion regulation through increased sleep and accompanying changes in amygdala-prefrontal connectivity. The group must select question 2 as the primary question for the first study, using a one-school-year observational design with actigraphy plus evening diaries and questionnaires. They should state that this choice is feasible because it does not depend on a district schedule change, while recognizing that self-report validity will need attention. They must explicitly leave questions 1, 3, and 4 unresolved rather than rejecting them. Dr. Chen should explain that fMRI scan-to-scan variability and the available sample make question 1 unsuitable as the initial primary question, but should not claim that neural mechanisms are unimportant. Ms. Patel should explain that the district has not decided whether, when, or at which schools later starts could occur because bus routes and stakeholder attitudes are still under review; therefore questions 3 and 4 cannot yet be tested as planned interventions. The meeting must preserve these unresolved design gaps: the team has not decided which emotion-regulation questionnaire to use, whether diary entries will be daily or sampled on selected days, what duration or actigraphy threshold will define chronic sleep loss, and whether a future later-start evaluation would use a comparison school or a phased rollout. No participant should resolve those gaps during the meeting.",
+    "ground_truth": {
+      "selected_primary_question": "Among teenagers observed across one school year, how does chronic sleep loss relate to day-to-day emotion-regulation difficulties measured with actigraphy, evening diaries, and emotion-regulation questionnaires?",
+      "selected_design": {
+        "type": "observational longitudinal study",
+        "duration": "one school year",
+        "measures": [
+          "actigraphy",
+          "evening emotion-regulation diaries",
+          "emotion-regulation questionnaires"
+        ],
+        "rationale": [
+          "It can proceed without a district decision to change school schedules.",
+          "It permits examination of sleep-emotion associations in daily life.",
+          "Self-report validity needs to be addressed but does not prevent the initial study."
+        ]
+      },
+      "unresolved_research_questions": [
+        {
+          "question": "Whether chronic sleep loss is associated with altered amygdala-prefrontal connectivity during emotion regulation in teenagers.",
+          "status": "Deferred, not rejected.",
+          "reason": "Available sample size and fMRI scan-to-scan variability make it unsuitable as the initial primary question."
+        },
+        {
+          "question": "Whether moving school start time later improves sleep duration, emotion regulation, attendance, and grades.",
+          "status": "Unresolved pending district implementation decisions.",
+          "reason": "The district has not decided whether, when, or at which schools later starts would occur; bus routes and teacher and parent attitudes remain under review."
+        },
+        {
+          "question": "Whether later start times improve emotion regulation through increased sleep and accompanying changes in amygdala-prefrontal connectivity.",
+          "status": "Unresolved pending a feasible later-start intervention and future neural-measurement planning.",
+          "reason": "It depends on both an unresolved schedule-change decision and a later decision about fMRI feasibility."
+        }
+      ],
+      "unresolved_design_details": [
+        "Which emotion-regulation questionnaire will be used.",
+        "Whether diaries will be completed daily or on selected sampled days.",
+        "What actigraphy-based duration or threshold will define chronic sleep loss.",
+        "Whether a future later-start evaluation would use a comparison school or a phased rollout."
+      ],
+      "key_viewpoints_and_evidence": {
+        "neuroscience": "Amygdala-prefrontal connectivity is a relevant possible mechanism, but fMRI scan-to-scan variability and the available sample limit its suitability for the first primary study.",
+        "psychology": "Diaries and questionnaires can capture everyday emotion regulation and developmental variation, but the validity of self-report requires careful design.",
+        "education": "A later-start intervention is not currently assured because schedule decisions depend on bus-route feasibility and teacher and parent attitudes; attendance and grades remain important potential outcomes for a future evaluation."
+      }
+    }
+  },
+  "seed_location": "Turns 1-2, 4, 16-18, and 25 support selecting the sleep-to-day-to-day emotion-regulation observational question using actigraphy, evening diaries, and broader questionnaires, with no district schedule change required. Turn 2 leaves later-start implementation unresolved and mentions comparison-school versus phased-rollout feasibility. Turns 9 and 16 leave diary frequency and chronic-sleep-loss thresholds unresolved. However, the transcript does not explicitly preserve the unresolved choice of emotion-regulation questionnaire, does not explicitly state self-report validity needs attention, and does not provide Dr. Chen's required explanation that fMRI scan-to-scan variability plus available sample size make question 1 unsuitable; it only leaves the fMRI subset open (turn 25).",
+  "ground_truth": {
+    "selected_primary_question": "Among teenagers observed across one school year, how does chronic sleep loss relate to day-to-day emotion-regulation difficulties measured with actigraphy, evening diaries, and emotion-regulation questionnaires?",
+    "selected_design": {
+      "type": "observational longitudinal study",
+      "duration": "one school year",
+      "measures": [
+        "actigraphy",
+        "evening emotion-regulation diaries",
+        "emotion-regulation questionnaires"
+      ],
+      "rationale": [
+        "It can proceed without a district decision to change school schedules.",
+        "It permits examination of sleep-emotion associations in daily life.",
+        "Self-report validity needs to be addressed but does not prevent the initial study."
+      ]
+    },
+    "unresolved_research_questions": [
+      {
+        "question": "Whether chronic sleep loss is associated with altered amygdala-prefrontal connectivity during emotion regulation in teenagers.",
+        "status": "Deferred, not rejected.",
+        "reason": "Available sample size and fMRI scan-to-scan variability make it unsuitable as the initial primary question."
+      },
+      {
+        "question": "Whether moving school start time later improves sleep duration, emotion regulation, attendance, and grades.",
+        "status": "Unresolved pending district implementation decisions.",
+        "reason": "The district has not decided whether, when, or at which schools later starts would occur; bus routes and teacher and parent attitudes remain under review."
+      },
+      {
+        "question": "Whether later start times improve emotion regulation through increased sleep and accompanying changes in amygdala-prefrontal connectivity.",
+        "status": "Unresolved pending a feasible later-start intervention and future neural-measurement planning.",
+        "reason": "It depends on both an unresolved schedule-change decision and a later decision about fMRI feasibility."
+      }
+    ],
+    "unresolved_design_details": [
+      "Which emotion-regulation questionnaire will be used.",
+      "Whether diaries will be completed daily or on selected sampled days.",
+      "What actigraphy-based duration or threshold will define chronic sleep loss.",
+      "Whether a future later-start evaluation would use a comparison school or a phased rollout."
+    ],
+    "key_viewpoints_and_evidence": {
+      "neuroscience": "Amygdala-prefrontal connectivity is a relevant possible mechanism, but fMRI scan-to-scan variability and the available sample limit its suitability for the first primary study.",
+      "psychology": "Diaries and questionnaires can capture everyday emotion regulation and developmental variation, but the validity of self-report requires careful design.",
+      "education": "A later-start intervention is not currently assured because schedule decisions depend on bus-route feasibility and teacher and parent attitudes; attendance and grades remain important potential outcomes for a future evaluation."
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I'm looking at the one-page options document, and before we get too far into the neuroimaging question, I think it would help to decide what still works if the district doesn't change the bell schedule next year. My hope for today is that we identify a primary question a one-year observational study can answer credibly, and then keep the later-start and fMRI pieces as things we can build toward. Perhaps we should start with what the schools think is realistically possible?"
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "From the district side, honestly, it's not settled enough to base year one on a bell-time change. Bus-route feasibility, teacher staffing, and parent acceptance are all still live, and it could be all three schools, selected schools, or nothing. So I'd lean toward the observational sleep-and-emotion question for now, then we can see later whether a comparison school or a phased rollout is even realistic."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Mm, that makes sense."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I'd make the primary question the within-student one. After a shorter or more disrupted night on the watch, do they report more trouble managing emotions the next day? The evening diaries matter for that because a broad questionnaire is useful, but its recall window is just not the same construct. Anika, have students and families in these schools tolerated recurring evening check-ins before, or are there times of year when responses really drop off?"
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "They can usually tolerate it if it\u2019s genuinely brief, but I\u2019d expect drop-off around sports seasons, evenings with paid work, and family-care responsibilities. I worry that missingness isn\u2019t random there. It may be exactly the students having the most strained evenings. Elena, in your experience, does that change the emotional pattern we see, or mostly just make the estimates noisier?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "It can change the pattern, not just add noise. If the nights with work or caregiving are also nights with more conflict, less privacy, more demands, then the students least likely to complete a diary may have systematically different emotion-regulation days. We'd need to record a really low-burden reason for nonresponse, or competing demands somehow. Though I'd want to think through whether that itself makes the check-in too burdensome."
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "Hm, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That seems important for the inference, not just retention. If we do ask a one-tap- if a student misses a diary, would a competing-demands item be acceptable from the district and family perspective? And Elena, do you have a sense of how stable these diary emotion-regulation indicators are within a student across fairly ordinary school weeks?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "They\u2019re moderately stable, but not so stable that we should treat a person\u2019s average as the outcome we care about. On ordinary weeks, there\u2019s meaningful within-student movement, especially around interpersonal stress or high-demand days, and that\u2019s exactly why the diary is worth doing. But I\u2019d need to check expected completion before saying whether daily entries versus, versus sampled days gives us enough usable pairs."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That distinction is useful. For the neural work, I'd be reluctant to ask students for scanning around a signal that turns out to be mostly diary-completion selection. So maybe the immediate question is whether a sampled design still captures enough ordinary and high-demand days within each student. Elena, when you check completion, could you also look at whether the detectable day-to-day effect is typically next-day only, or whether it carries across several days..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I can look at both, although I\u2019d be cautious about assuming a multi-day carryover is sleep rather than the stressor that shortened sleep continuing into the next day. My guess is the clearest signal is probably next-day, with maybe cumulative short sleep over a few nights as a separate exposure\u2014but I\u2019d want to see what the actigraphy and completion patterns support first."
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "From the school side, I'd want those high-demand periods in the sample, not treated as nuisance weeks to avoid. We can ask a very light competing-demands item. I think I'd need to run the wording by the principals and maybe a few students. \"Work, sports, family responsibility, other\" could feel manageable. And if completion drops predictably during, say, playoffs or exam weeks, that's useful implementation information too, although..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Those weeks are part of the phenomenon, not just inconvenient missing data. We should probably distinguish a missed diary from a diary completed on a high-demand night, because those could mean really different things. But I don't know yet whether a follow-up one-tap item gets enough, enough response to help. And the diary itself needs to ask a little about context, otherwise an actigraphy-to-emotion link can just be standing in for an exam week or a fight at home."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I think that\u2019s why we should resist calling the exposure simply \u201cchronic sleep loss\u201d before we know what the watch data can support. A single short night, variability in timing, and several short nights may have really different relationships to next-day regulation. Elena, would the diary context items let us separate exam or conflict days enough to estimate those patterns without making the model and the student burden too, um, unwieldy?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I think we should keep it very lean. Maybe one item for major interpersonal stress and one for unusual school demand, with an optional \"other,\" rather than trying to inventory the whole day. Then we can see whether those contexts explain the short-sleep association or modify it. The tricky part is, the diary is in the evening, so we're asking them to recall regulation across the day. That\u2019s probably acceptable, but it\u2019s- we should be explicit that it\u2019s not moment-to-moment measurement."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I'd also want the questionnaire at a few broader intervals, because the evening report gives us the day-level outcome, but it doesn't necessarily show whether regulation is shifting over the school year. I'm still unsure how many consecutive watch-and-diary days we need before we can say anything about accumulated short sleep. That- it depends on wear time and, I suppose, what threshold is defensible for this age group."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "I\u2019d avoid locking ourselves into a clinical-looking cutoff, at least at first. We can model each student\u2019s deviation from their own typical duration and timing, then separately look at whether a run of shorter-than-usual nights adds anything beyond yesterday\u2019s sleep. The questionnaires at intervals can give us the broader trait-ish anchor, but they shouldn\u2019t- they shouldn\u2019t substitute for that daily outcome."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "I think that\u2019s a sensible starting point. I\u2019d just want to check whether the within-student deviation is interpretable with our likely wear time and number of valid days\u2014valid nights, I mean. Otherwise, a student\u2019s typical sleep may be estimated from a really uneven slice of the year. And for the broader questionnaires, maybe we can ask whether the cumulative pattern predicts change across the year without pretending it\u2019s the same outcome as the daily diary."
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "One practical wrinkle is the school calendar isn't an even slice either. Exam weeks, testing, breaks, and sports seasons will cluster those valid nights. I think we should plan for a few repeated collection windows across the year instead of assuming continuous wear is realistic, but I'd want to check with principals about which weeks are already too overloaded. Elena, would that still give you enough within-student variation?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Probably, if the windows are long enough to capture actual school routines and not just five pristine days. I\u2019d rather do repeated two- or three-week windows at different points in the year than continuous monitoring that falls apart by October. But I need to check the completion benchmarks before I can promise that gives us enough valid sleep\u2013diary pairs. Could the principals identify one exam-period window and one sports-heavy period that we should deliberately include?"
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "I think they can. I need to check their calendars and the transportation planning cycle before I say which exact weeks, but an exam window and a sports-heavy window- those feel more realistic than trying to avoid both. I\u2019d also want one relatively ordinary stretch, otherwise we may only learn what sleep looks like when school is already at maximum pressure."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "That seems like the right spread, an ordinary window, an exam window, and a sports-heavy one. From my side, I'd want enough valid nights in each window before we start interpreting a student-specific sleep deviation. The calendar isn't just logistics, it determines what the exposure means. And Anika, I lost my- do record-system changes or attendance coding shifts tend to happen at particular points in the year too?"
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Yeah, I hadn\u2019t thought about coding shifts."
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "They can, yes. I actually saw a recent extract where late arrivals jumped in one month but absences didn't, and I still can't tell if that was a bus-route problem, a tardy-coding change, or something about that school's schedule. So we should get the attendance-code calendar and flag, flag any operational changes alongside the collection windows, rather than treating those records as clean outcomes by default."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Before we treat attendance or tardiness as a secondary outcome, we need that code calendar and maybe school-level notes on bus or schedule disruptions. Given the time, I think the immediate design is still the repeated actigraphy-and-diary observational study across those three kinds of windows. The later-start question and the fMRI subset can stay open until we know what the district actually implements..."
+    },
+    {
+      "speaker": "Dr. Elena Morales",
+      "text": "Okay, I think we've got enough to work from today. Thanks, everyone. Let's reconnect once we've checked the calendars and, um, the completion assumptions."
+    },
+    {
+      "speaker": "Dr. Mei Chen",
+      "text": "Thank you, both. Bye for now."
+    },
+    {
+      "speaker": "Ms. Anika Patel",
+      "text": "Great, talk soon. Take care."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      4,
+      8,
+      10,
+      15,
+      16,
+      17,
+      19,
+      20,
+      24,
+      25
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Task compliance is incomplete because question 1 is only referred to generically as the \u201cneuroimaging question,\u201d \u201cneural work,\u201d or an \u201cfMRI subset\u201d (turns 1, 10, 25). Dr. Chen never explicitly states that fMRI scan-to-scan variability and the available sample make amygdala-prefrontal connectivity unsuitable as the initial primary question, as required by the ground truth.",
+      "The transcript never explicitly identifies the four candidate questions. In particular, the later-start outcomes question is not stated with sleep duration, emotion regulation, attendance, and grades, and the mediation/mechanism question combining later starts, sleep, and amygdala-prefrontal connectivity is not clearly articulated (turns 1-2, 25). This makes those unresolved alternatives only partially recoverable.",
+      "The selected question is framed primarily as shorter/disrupted sleep predicting next-day diary emotion regulation (turns 4, 11, 17), rather than clearly as the required chronic-sleep-loss question measured through actigraphy, evening diaries, and questionnaires. Turn 14 explicitly resists calling the exposure \u201cchronic sleep loss,\u201d which weakens direct recovery of the stated primary question.",
+      "Questionnaire selection remains open, but this is not made fully explicit. The meeting says questionnaires should be used at broader intervals (turns 16-18) without stating that the team has not decided which emotion-regulation questionnaire to use.",
+      "Naturalness is limited by many turns functioning as polished, complete mini-arguments that neatly extend the prior point and end in a well-formed question or conclusion, especially turns 4-6, 8-11, 13-20, and 24-25. The disfluencies are relatively sparse and often embedded in otherwise highly edited prose.",
+      "Turn 22 uses the prohibited stock phrase \u201cI lost my-,\u201d which closely invokes the disallowed \u201clost my thread/train/point\u201d construction. It should be replaced with a more organic interruption or direct question.",
+      "The stated meeting style says \u201cNothing is decided,\u201d yet turn 25 explicitly settles the immediate design. The benchmark itself requires choosing a primary question, so the task requirement appropriately takes priority, but the transcript could retain a more tentative brainstorming tone while still recording the selection."
+    ],
+    "seed_uses": [],
+    "spoken_share": 0.96,
+    "written_turns": [
+      1
+    ],
+    "exploration_share": 0.4,
+    "turn_moves": {
+      "proposal": 9,
+      "observation": 3,
+      "agreement": 2,
+      "concern": 4,
+      "answer": 2,
+      "backchannel": 3,
+      "question": 3,
+      "request": 1,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      11,
+      12,
+      21
+    ],
+    "unsure_turns": [
+      6,
+      9,
+      11,
+      12,
+      13,
+      16,
+      19,
+      20,
+      21,
+      24
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.27,
+      "approved": false,
+      "issues": [
+        "The transcript selects the sleep-to-day-to-day emotion-regulation topic in turns 1-3, but it never explicitly commits to the required first-study design of a one-school-year observational study with actigraphy, evening diaries, and questionnaires. Turn 5 calls year one observational, but duration and the complete measure set remain unstated as a selected design.",
+        "Evening diaries are not established. Turns 7-15 repeatedly question whether prompts should be after school, before bed, or next morning, and turn 18 proposes flexible windows. The required selected design specifically includes evening diaries.",
+        "Candidate question 1 is not actually considered as the stated amygdala-prefrontal connectivity question. Turn 25 briefly mentions an actigraphy-diary link and chronic restriction, but no participant discusses fMRI, amygdala-prefrontal connectivity, scan-to-scan variability, or available sample size. Consequently, the required rationale for deferring\u2014not rejecting\u2014question 1 is absent.",
+        "Candidate question 4, later start times improving emotion regulation through increased sleep and accompanying amygdala-prefrontal connectivity changes, is never raised or explicitly left unresolved.",
+        "The later-start intervention questions are only partially supported. Turns 2 and 4 establish that a schedule change is unsettled and could be systemwide or a subset, but they omit the required reasons that bus-route feasibility and teacher/parent or stakeholder attitudes remain under review. Turn 18 mentions bus days as diary-context logistics, not as a barrier to later-start implementation.",
+        "The future later-start design gap is not fully preserved in the required form. Turn 4 mentions the possibility of a phased rollout, but the transcript never raises or leaves open whether a future evaluation would use a comparison school versus a phased rollout.",
+        "The meeting resolves no final primary question in an explicit decision. It begins with a provisional agreement in turns 1-3, then ends in turns 26-27 by deferring a shared-design decision until further district and pilot information. This conflicts with the task requirement to ultimately choose question 2 as the first study's primary question.",
+        "The dialogue flow is strong, but much of the meeting narrows into diary timing and pilot logistics after turn 6. That leaves the required four-question comparison underdeveloped and makes the meeting less effective for a benchmark that tests tracking of all unresolved alternatives.",
+        "Naturalness is limited by highly polished, fully formed substantive turns: nearly every long turn cleanly states a concern, explains its implication, and proposes the next step. Although there are hedges, fillers, repairs, and brief acknowledgments, they are often surface-level additions to otherwise written-sounding turns."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 28,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.4,
+      "approved": false,
+      "issues": [
+        "Task compliance is incomplete because question 1 is only referred to generically as the \u201cneuroimaging question,\u201d \u201cneural work,\u201d or an \u201cfMRI subset\u201d (turns 1, 10, 25). Dr. Chen never explicitly states that fMRI scan-to-scan variability and the available sample make amygdala-prefrontal connectivity unsuitable as the initial primary question, as required by the ground truth.",
+        "The transcript never explicitly identifies the four candidate questions. In particular, the later-start outcomes question is not stated with sleep duration, emotion regulation, attendance, and grades, and the mediation/mechanism question combining later starts, sleep, and amygdala-prefrontal connectivity is not clearly articulated (turns 1-2, 25). This makes those unresolved alternatives only partially recoverable.",
+        "The selected question is framed primarily as shorter/disrupted sleep predicting next-day diary emotion regulation (turns 4, 11, 17), rather than clearly as the required chronic-sleep-loss question measured through actigraphy, evening diaries, and questionnaires. Turn 14 explicitly resists calling the exposure \u201cchronic sleep loss,\u201d which weakens direct recovery of the stated primary question.",
+        "Questionnaire selection remains open, but this is not made fully explicit. The meeting says questionnaires should be used at broader intervals (turns 16-18) without stating that the team has not decided which emotion-regulation questionnaire to use.",
+        "Naturalness is limited by many turns functioning as polished, complete mini-arguments that neatly extend the prior point and end in a well-formed question or conclusion, especially turns 4-6, 8-11, 13-20, and 24-25. The disfluencies are relatively sparse and often embedded in otherwise highly edited prose.",
+        "Turn 22 uses the prohibited stock phrase \u201cI lost my-,\u201d which closely invokes the disallowed \u201clost my thread/train/point\u201d construction. It should be replaced with a more organic interruption or direct question.",
+        "The stated meeting style says \u201cNothing is decided,\u201d yet turn 25 explicitly settles the immediate design. The benchmark itself requires choosing a primary question, so the task requirement appropriately takes priority, but the transcript could retain a more tentative brainstorming tone while still recording the selection."
+      ]
+    }
+  ]
+}

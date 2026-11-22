@@ -1,0 +1,655 @@
+{
+  "series_id": "d6799d84",
+  "generated_at": "2026-11-22T14:43:47.639049",
+  "task_id": "adaptation_01",
+  "benchmark_category": "Adaptation across meetings",
+  "benchmark_task": "Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.",
+  "input_type": "meeting_pair",
+  "research_id": "ai_math_tutor",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 4,
+  "research_problem": "Evaluate an AI math tutor for middle-school classrooms and define appropriate student-facing behaviors, with attention to learning outcomes, teacher workload, privacy, and student motivation.",
+  "project_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of an AI math tutor in three seventh-grade algebra classes at Ridgeway Middle School. The team is designing both the tutor's hint policy and the evaluation plan before the pilot begins in April 2027.",
+  "plan_document": null,
+  "ground_truth": {
+    "assumption": {
+      "meeting": "Meeting 1 \u2014 March 3, 2027",
+      "point": "The evaluation plan assumes that de-identified student-level tutor logs with stable anonymous IDs will be available from April and linkable to individual paper exit tickets."
+    },
+    "new_fact": {
+      "meeting": "Meeting 2 \u2014 March 17, 2027",
+      "speaker": "computer science lead",
+      "point": "District privacy rules prevent student-level logs from leaving the school; available reporting is classroom-level aggregate only and lacks persistent student identifiers."
+    },
+    "conflict": "Aggregate, non-identifiable usage summaries cannot be matched to individual exit tickets, so the planned student-level comparison of hint use, persistence, and learning outcomes cannot be conducted as designed.",
+    "plan_update": "Flag the evaluation plan as infeasible under the privacy restriction and revise it before the pilot. Either obtain an approved privacy-preserving on-site linkage process or consent arrangement that permits student-level analysis, or replace the linked analysis with measures that do not require student-level logs, such as classroom-level usage summaries, teacher observations, and separately administered student surveys and exit-ticket analyses."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 3, 2027",
+      "disciplines": [
+        "computer science",
+        "education",
+        "psychology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Arun Mehta",
+          "discipline": "computer science",
+          "functional_role": "research engineer",
+          "background": "A machine-learning systems researcher with 9 years of experience building and instrumenting educational software, including classroom deployments of adaptive practice tools. He leads the tutor's configuration, event schema, secure telemetry pipeline, and teacher-review dashboard, and regularly works with interaction-level data such as prompts, hint sequences, latency, retries, and answer-request events.",
+          "distinct_perspective": "Frames the pilot as an observable human-AI interaction system: the hint policy must be implementable as explicit decision rules, its behavior must be auditable from event logs, and teacher-facing flags must have defensible thresholds. He is attentive to data minimization and operational reliability, but will revise technical choices when classroom constraints or learning science indicate that a feature creates the wrong incentives.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Dr. Elena Rodriguez",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "A mathematics education professor with 16 years of experience studying middle-school algebra instruction, formative assessment, and teacher adoption of digital tools. She has led district-partnered studies in under-resourced schools and uses classroom observations, teacher interviews, student work artifacts, and quasi-experimental learning measures to evaluate whether interventions fit ordinary instructional routines.",
+          "distinct_perspective": "Treats the tutor as part of a classroom ecology rather than a stand-alone product. She focuses on whether its graduated hints preserve productive struggle, whether paper exit tickets capture transferable algebraic reasoning, and whether teacher review is feasible during a normal school week. She pushes for measures that can be interpreted alongside instruction and is careful not to burden teachers with research procedures that displace teaching.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Nia Okafor",
+          "discipline": "psychology",
+          "functional_role": "project manager",
+          "background": "A developmental and educational psychologist with 11 years of experience researching adolescent motivation, help-seeking, self-regulated learning, and persistence in technology-mediated learning environments. She has managed multi-site school studies and combines behavioral trace data with brief student surveys, validated motivation scales, and targeted interviews to distinguish productive help-seeking from disengagement.",
+          "distinct_perspective": "Interprets requests for hints or answers, response timing, and repeated attempts as behavioral indicators that require motivational context rather than simple measures of effort. She is especially concerned that a tutor's feedback may alter students' sense of competence, autonomy, and willingness to persist after errors. She advocates for examining reactions to hint timing and escalation while ensuring that flagged-session review does not stigmatize students or create surveillance-like classroom dynamics.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of an AI math tutor in three seventh-grade algebra classes at Ridgeway Middle School. The team is designing both the tutor's hint policy and the evaluation plan before the pilot begins in April 2027.\n\nMeeting 1 \u2014 March 3, 2027. The project team is finalizing the classroom pilot design, including the tutor configuration, data collection, and measures of student learning and engagement.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Have the same cross-disciplinary team agree to a six-week April pilot in three seventh-grade algebra classes at Ridgeway Middle School. The education lead states that the evaluation plan will compare students' work on weekly paper exit tickets with their tutor-session logs, and the team agrees to this plan. State plainly that this comparison depends on Ridgeway sharing de-identified student-level tutor logs beginning in the first week of April, with a stable anonymous student ID that can be matched to each student's exit tickets. The computer science lead says the logs will include prompts, hints, response timing, and whether students request answers; the psychology lead supports using these data to examine persistence and reactions to hints. The team agrees to configure the tutor to provide graduated hints rather than immediate answers, with teachers able to review flagged sessions. Do not create a fallback for the log-sharing or ID-matching assumption; leave it as an accepted operational premise.",
+        "explicit_instruction": "Have the same cross-disciplinary team agree to a six-week April pilot in three seventh-grade algebra classes at Ridgeway Middle School. The education lead states that the evaluation plan will compare students' work on weekly paper exit tickets with their tutor-session logs, and the team agrees to this plan. State plainly that this comparison depends on Ridgeway sharing de-identified student-level tutor logs beginning in the first week of April, with a stable anonymous student ID that can be matched to each student's exit tickets. The computer science lead says the logs will include prompts, hints, response timing, and whether students request answers; the psychology lead supports using these data to examine persistence and reactions to hints. The team agrees to configure the tutor to provide graduated hints rather than immediate answers, with teachers able to review flagged sessions. Do not create a fallback for the log-sharing or ID-matching assumption; leave it as an accepted operational premise.",
+        "ground_truth": {
+          "plan": "The team agrees to evaluate the pilot by linking weekly paper exit tickets to de-identified, student-level tutor-session logs.",
+          "assumption": "Ridgeway will share de-identified tutor logs from the first week of April with stable anonymous student IDs that can be matched to individual students' exit tickets.",
+          "related_decision": "The tutor will use graduated hints rather than immediate answers, and the planned logs will support analysis of hint use and persistence."
+        }
+      },
+      "ground_truth": {
+        "plan": "The team agrees to evaluate the pilot by linking weekly paper exit tickets to de-identified, student-level tutor-session logs.",
+        "assumption": "Ridgeway will share de-identified tutor logs from the first week of April with stable anonymous student IDs that can be matched to individual students' exit tickets.",
+        "related_decision": "The tutor will use graduated hints rather than immediate answers, and the planned logs will support analysis of hint use and persistence."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Sorry, I'm a couple minutes late. Where are you all at? I was hoping we could at least nail down the student-facing hint behavior today, and what evidence we need from the pilot, before I get too concrete with the configuration."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "We\u2019ve really only just started, so good timing. I\u2019d strongly prefer graduated hints, where students have enough space to try a strategy before the tutor gets more explicit, and then weekly paper exit tickets so we can see whether the reasoning carries beyond the interface. The key practical piece is, um, stable de-identified IDs in the session logs from week one. Otherwise we can\u2019t connect those two sources."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That linkage is the dependency on my side too. I can configure a genuinely graduated policy, first a strategic prompt, then a more targeted step, with a worked answer only after explicit escalation. But before I commit, Elena, how comparable do you expect those weekly exit tickets- if the three classes are pacing a little differently, how comparable do you expect them to be?"
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "They should be comparable enough if we anchor them to the same underlying algebraic idea, instead of insisting on identical items every Friday. I'd want one or two common prompts that ask for a step and an explanation, so we can tell the difference between a student who gets an answer and one who can articulate the strategy. I do need to check the timing though- against each teacher's April sequence first."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That works for the linkage, as long as we keep the underlying concept tag and the form of each common prompt. I don't need identical items to join the records. I'll need to confirm Ridgeway's roster-to-anonymous-ID procedure and make sure the export actually starts in week one, but then we can keep the telemetry de-identified and still align tutor behavior with the exit-ticket construct."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "And I\u2019d be careful not to read the linked traces as effort scores on their own. A student taking a hint\u2014or taking a long time after one\u2014might be checking their reasoning, might be stuck, or might just have been pulled away. Arun, does the event stream let us tell sustained hint reading from, um, device-idle time, or do those collapse into the same latency?"
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "They don't have to collapse. I can log focus and visibility transitions, along with whether the hint panel was actually open, so we can separate a likely device-idle interval from time when the hint was rendered. Though rendered is not the same as read, obviously. I wouldn't put either measure into a teacher flag on its own. The useful unit may be a pattern across the problem flow."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Mm, right."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "That\u2019s exactly why I\u2019d want the paper work alongside it. A sparse trace, or a long pause, doesn\u2019t tell us whether the student was reasoning productively. I saw that just last week, a student could explain an equation strategy aloud and then leave half the intermediate steps off the page. Arun, when you flag a session, what would the teacher actually see? The problem and hint sequence, or just a label?"
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I\u2019d make the default a compact case card, not just a bare label. It would show the problem\u2019s concept tag, the hint stages shown, a small response timeline, and the specific reason it was surfaced. The underlying event trace can still be available for audit, but I don\u2019t want teachers having to interpret raw clicks. And I\u2019d only surface a flag when there\u2019s a defined pattern, not, say, three retries in isolation."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "That sounds usable, especially if the card opens on the actual student response and not just the timeline. Otherwise the teacher is still being asked to infer too much. I\u2019d keep it strictly optional in this six-week April pilot, though. We shouldn\u2019t create a weekly review task and then call it, um, ordinary classroom use."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Keeping it optional is important, and I\u2019d avoid calling these \u201cflags\u201d in the teacher view, if we can. Maybe they\u2019re just sessions to review, with the stated reason and the student\u2019s actual work, because a pattern is a prompt for- it gives you context, not evidence that the student is off-task or disengaged."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "\u201cSessions to review\u201d is better. I can make the reason operational but non-diagnostic, something like repeated answer escalation with subsequent incorrect attempts, alongside the response history and the actual work, rather than infer disengagement. And Elena, I can include the student response in the card. Would teachers want the full, full text by default, or just the most recent attempt with an expand control?"
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Most recent attempt with an expand control, I think. In a normal week, that gives a teacher enough to decide whether it's worth looking, without dropping a wall of text on them. But the full exchange needs to be there when they expand it because the wording of the student's, um, reasoning is often the whole story."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Yeah, that feels lighter."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Good. I\u2019ll keep the card collapsed to the latest attempt, with the full exchange behind expand, and make the review queue opt-in instead of pushing it into a teacher\u2019s weekly workflow. One thing I want to sanity-check with Nia, though, is for a review trigger, what combination of answer requests and subsequent attempts would still feel like ordinary strategic checking rather than\u2014what would be worth surfacing?"
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "I wouldn't set a numeric rule based just on answer requests. In our short study, high-confidence students often used optional hints to verify a line of reasoning, so I'd only surface it when the escalation is followed by, say, repeated incompatible attempts or a clear shift away from the strategy the student had been using. Or rather, even then, it should be a review prompt, not a concern label."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That is implementable, although \u201cincompatible\u201d needs a computable proxy. We could define it against the problem\u2019s expected intermediate state, or against a contradiction with the student\u2019s immediately prior strategy, and then have the card say exactly which transition triggered review. I\u2019d want to inspect a few real April traces before fixing any threshold, though. The dry run had that odd answer-request- then-more-attempts pattern, and I do not yet know whether that is confusion or just the interface."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "I think that\u2019s the right place to be cautious. Before we make a proxy do too much, could we look at a small set of those dry-run sequences with what the student actually entered and, if possible, ask a few students what they thought they were doing? The same transition could be a misconception, or, I mean, it could be them testing an alternative after the tutor\u2019s wording."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Oh, that would be useful."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I can pull a purposive sample of those sequences with the prompt, each student entry, hint state, and focus events, without exposing identity. If we do brief student recall conversations, I\u2019d rather use the trace as a memory cue than ask them to interpret a label we\u2019ve already assigned. That may tell us whether the behavior is a UI artifact, or I should say an interface artifact, before we encode it as a review rule."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Using the trace as a recall cue is much better. I do need to look at the wording and timing for those conversations, and any very brief motivation items, so seventh graders aren\u2019t being asked to explain themselves in a way that feels evaluative or interrupts the math period. But a small, varied sample could tell us a lot about whether the escalation feels supportive or kind of..."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Hm, yes, carefully."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "For those recall conversations, I'd want us to recruit across different trace patterns, not just the sequences we think look concerning. And the paper exit ticket from that same week could be a useful third piece of context too. Assuming Ridgeway can give us the stable anonymous ID linkage beginning in the first week of April- assuming we have that linkage."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Sampling across the trace distribution matters. Otherwise we train ourselves to see the behavior only as a defect. Technically, I can select a small stratified set with answer escalation and retries, hint-only use, long apparent idle intervals, and straightforward completions, and attach the same-week concept-tagged exit-ticket result where the anonymous linkage permits. I still need Ridgeway to confirm the roster mapping and the first-week export before I promise that join."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "And I don't want the ID linkage to become an afterthought once April starts. Before we leave this, I need Ridgeway to confirm that each of the three classes can use the same stable anonymous student ID across the tutor export and the weekly exit tickets starting in the first week. Otherwise, that really- it changes what we can claim from the pilot."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Agreed. I\u2019ll treat that as a gating dependency rather than an implementation detail: no linked exit-ticket analysis unless Ridgeway confirms a stable class-consistent anonymous ID and the week-one export. I can still retain aggregate, de-identified interaction summaries if that slips, but they answer a much narrower question."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "I\u2019ll contact the Ridgeway algebra teachers too, just to confirm the weekly exit-ticket timing can stay consistent with their April unit sequence. There\u2019s no value in getting a technically clean join if the prompt lands before they\u2019ve taught the relevant, uh, idea. But the stable ID and week-one export are the gate for the student-level claims."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Agreed. I\u2019ll hold the linkage-dependent configuration behind that confirmation, and otherwise keep the April telemetry export de-identified and usable at the aggregate level. Once Elena has the teachers\u2019 timing check and Ridgeway confirms the mapping, I can lock the event schema and the graduated-hint instrumentation."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Okay, I think we should stop there rather than rush the rest. We can pick it up once we have those Ridgeway\u2014 once we have those confirmations from Ridgeway. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Sounds good. Bye, both."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Thanks, take care."
+        }
+      ],
+      "seed_location": "Turns 2-5, 24-29: The team discusses graduated hints and weekly paper exit tickets linked to de-identified tutor logs via stable anonymous IDs beginning in week one, but the required agreement to a six-week April pilot in three seventh-grade algebra classes at Ridgeway Middle School is not plainly established. Turns 26-29 also introduce aggregate-only and configuration alternatives if the linkage fails, contrary to the instruction not to create a fallback for the log-sharing/ID-matching assumption. The computer science lead does not explicitly state that logs will include prompts, hints, response timing, and whether students request answers, though related telemetry is discussed; the psychology lead discusses interpretation of traces and hints but does not plainly endorse the specified persistence-and-reactions analysis.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          11,
+          12,
+          24,
+          26
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Turns 27 and 29 explicitly create a fallback if Ridgeway does not provide the required stable-ID, week-one student-level export: Arun proposes retaining aggregate de-identified interaction summaries and treating them as a narrower alternative. The task explicitly requires no fallback for the log-sharing or ID-matching assumption; it must remain an accepted operational premise.",
+          "The transcript does not plainly establish the required pilot scope: a six-week April pilot in three seventh-grade algebra classes at Ridgeway Middle School. Turn 26 mentions three classes and multiple turns mention April and Ridgeway, but neither the six-week duration nor seventh-grade algebra classes is stated.",
+          "The required log contents are only partially stated. Turns 3, 7, and 21 establish prompts, hints/hint state, timing/focus events, and answer requests, but no turn cleanly and explicitly says that the planned Ridgeway tutor-session logs will include all four required fields together.",
+          "The required psychology contribution is somewhat indirect. Nia discusses persistence, help-seeking, and interpretation of hints in turns 6, 17, and 19, but she does not clearly endorse using the planned logs specifically to examine both persistence and reactions to hints.",
+          "The supplied deferential-junior meeting style is not convincingly realized. Nia is cautious, but no participant is clearly junior, she does not use check-before-offering framing, and the senior lead does not noticeably talk over or draw out a junior participant.",
+          "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 5, 10, 17, 18, 25, and 27. Disfluencies are present but mostly lightly inserted into otherwise finished prose, and the end functions like a formal recap of dependencies and assignments."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.96,
+        "written_turns": [
+          27
+        ],
+        "exploration_share": 0.24,
+        "turn_moves": {
+          "proposal": 9,
+          "question": 5,
+          "answer": 4,
+          "backchannel": 3,
+          "agreement": 3,
+          "request": 1,
+          "commitment": 5,
+          "concern": 2
+        },
+        "volunteer_turns": [
+          3,
+          7,
+          13,
+          16,
+          21,
+          25,
+          27,
+          28,
+          29
+        ],
+        "unsure_turns": [
+          4,
+          5,
+          18,
+          22,
+          24,
+          25
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 27,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.83,
+          "exploration_share": 0.19,
+          "approved": false,
+          "issues": [
+            "Task-compliance/style issue: the required opening is absent. Turn 1 begins directly with Dr. Mehta's agenda; nobody apologizes for being a couple of minutes late or asks where the group has got to.",
+            "Task-compliance issue: the transcript never plainly establishes that the six-week April pilot is in three seventh-grade algebra classes at Ridgeway Middle School. Turn 22 mentions a 'six-week April pilot' and several turns mention Ridgeway, but the number of classes and seventh-grade algebra setting are missing.",
+            "Task-compliance issue: graduated hints rather than immediate answers are strongly implied by the repeated first/final-hint discussion (turns 3, 7, 20, 23), but the team does not explicitly agree to that configuration as required.",
+            "Naturalness issue: despite several disfluencies, most substantive turns are polished, complete mini-arguments that cleanly state a concern, qualify it, and propose a resolution (especially turns 5, 7, 8, 10, 13, 17-20). This makes the exchange read more like authored dialogue than an unstructured live meeting.",
+            "Naturalness/style issue: the specified deferential-junior dynamic is not evident. No speaker consistently checks before offering ideas, holds back a useful point, or is talked over by the senior participant; all three engage as relatively equal experts.",
+            "Naturalness issue: there is little off-agenda grounding or exploratory uncertainty beyond the staged technical anomaly. Nearly every question is converted immediately into a concrete design decision or assignment, particularly across turns 7-25."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 32,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.24,
+          "approved": false,
+          "issues": [
+            "Turns 27 and 29 explicitly create a fallback if Ridgeway does not provide the required stable-ID, week-one student-level export: Arun proposes retaining aggregate de-identified interaction summaries and treating them as a narrower alternative. The task explicitly requires no fallback for the log-sharing or ID-matching assumption; it must remain an accepted operational premise.",
+            "The transcript does not plainly establish the required pilot scope: a six-week April pilot in three seventh-grade algebra classes at Ridgeway Middle School. Turn 26 mentions three classes and multiple turns mention April and Ridgeway, but neither the six-week duration nor seventh-grade algebra classes is stated.",
+            "The required log contents are only partially stated. Turns 3, 7, and 21 establish prompts, hints/hint state, timing/focus events, and answer requests, but no turn cleanly and explicitly says that the planned Ridgeway tutor-session logs will include all four required fields together.",
+            "The required psychology contribution is somewhat indirect. Nia discusses persistence, help-seeking, and interpretation of hints in turns 6, 17, and 19, but she does not clearly endorse using the planned logs specifically to examine both persistence and reactions to hints.",
+            "The supplied deferential-junior meeting style is not convincingly realized. Nia is cautious, but no participant is clearly junior, she does not use check-before-offering framing, and the senior lead does not noticeably talk over or draw out a junior participant.",
+            "Naturalness is limited by highly polished, complete argumentative turns throughout, especially turns 5, 10, 17, 18, 25, and 27. Disfluencies are present but mostly lightly inserted into otherwise finished prose, and the end functions like a formal recap of dependencies and assignments."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 17, 2027",
+      "disciplines": [
+        "computer science",
+        "education",
+        "psychology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Arun Mehta",
+          "discipline": "computer science",
+          "functional_role": "research engineer",
+          "background": "A machine-learning systems researcher with 9 years of experience building and instrumenting educational software, including classroom deployments of adaptive practice tools. He leads the tutor's configuration, event schema, secure telemetry pipeline, and teacher-review dashboard, and regularly works with interaction-level data such as prompts, hint sequences, latency, retries, and answer-request events.",
+          "distinct_perspective": "Frames the pilot as an observable human-AI interaction system: the hint policy must be implementable as explicit decision rules, its behavior must be auditable from event logs, and teacher-facing flags must have defensible thresholds. He is attentive to data minimization and operational reliability, but will revise technical choices when classroom constraints or learning science indicate that a feature creates the wrong incentives.",
+          "tone": "formal",
+          "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+          "communication_style": "dominant",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        },
+        {
+          "name": "Dr. Elena Rodriguez",
+          "discipline": "education",
+          "functional_role": "principal investigator",
+          "background": "A mathematics education professor with 16 years of experience studying middle-school algebra instruction, formative assessment, and teacher adoption of digital tools. She has led district-partnered studies in under-resourced schools and uses classroom observations, teacher interviews, student work artifacts, and quasi-experimental learning measures to evaluate whether interventions fit ordinary instructional routines.",
+          "distinct_perspective": "Treats the tutor as part of a classroom ecology rather than a stand-alone product. She focuses on whether its graduated hints preserve productive struggle, whether paper exit tickets capture transferable algebraic reasoning, and whether teacher review is feasible during a normal school week. She pushes for measures that can be interpreted alongside instruction and is careful not to burden teachers with research procedures that displace teaching.",
+          "tone": "enthusiastic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "defers to other experts outside their domain"
+        },
+        {
+          "name": "Dr. Nia Okafor",
+          "discipline": "psychology",
+          "functional_role": "project manager",
+          "background": "A developmental and educational psychologist with 11 years of experience researching adolescent motivation, help-seeking, self-regulated learning, and persistence in technology-mediated learning environments. She has managed multi-site school studies and combines behavioral trace data with brief student surveys, validated motivation scales, and targeted interviews to distinguish productive help-seeking from disengagement.",
+          "distinct_perspective": "Interprets requests for hints or answers, response timing, and repeated attempts as behavioral indicators that require motivational context rather than simple measures of effort. She is especially concerned that a tutor's feedback may alter students' sense of competence, autonomy, and willingness to persist after errors. She advocates for examining reactions to hint timing and escalation while ensuring that flagged-session review does not stigmatize students or create surveillance-like classroom dynamics.",
+          "tone": "cautious",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "assertive",
+          "epistemic_stance": "highly confident in their discipline's contribution"
+        }
+      ],
+      "meeting_context": "A joint computer science, education, and psychology team is preparing a six-week pilot of an AI math tutor in three seventh-grade algebra classes at Ridgeway Middle School. The team is designing both the tutor's hint policy and the evaluation plan before the pilot begins in April 2027.\n\nMeeting 2 \u2014 March 17, 2027. The project team is reviewing classroom implementation details for the April pilot, including teacher preparation, student onboarding, and school-network readiness.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: The April six-week pilot will use graduated hints, progressing from strategic prompts to targeted steps and only providing worked answers after explicit escalation, with weekly paper exit tickets anchored to common algebraic ideas. The central question is how students use hint escalation and whether tutor traces, student work, exit tickets, and brief trace-cued recall conversations can distinguish productive strategy checking from confusion or interface effects. Stable, de-identified student IDs shared across tutor exports and exit tickets from week one are a gate for student-level linked analysis; without them, the team will retain only aggregate de-identified interaction summaries. Arun will confirm Ridgeway\u2019s roster mapping and week-one export, configure the event schema and focus/visibility logging, and build an opt-in \u201csessions to review\u201d card showing the reason, hint sequence, timeline, latest response, and expandable full exchange. Elena will check exit-ticket timing with the three teachers\u2019 April sequences, while Nia will review the wording and timing of student recall conversations and any motivation items; the team will examine a small stratified sample of dry-run and April traces before setting review-trigger thresholds.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: Use the same project team, focused on implementation rather than evaluation design. Discuss teacher orientation, the student introduction to the tutor, and school Wi-Fi and device preparation. In passing, have the computer science lead report that the district privacy office has told the school that student-level platform logs cannot leave Ridgeway during the pilot; the vendor may provide only weekly classroom-level aggregate usage summaries, and even internally exported log files will not include persistent student identifiers. Present this as an operational privacy update while discussing data handling. Nobody should connect this fact to the exit-ticket/log comparison agreed earlier, question the evaluation plan, identify a conflict, or revise the plan. The meeting should conclude with ordinary implementation next steps only.",
+        "explicit_instruction": "Use the same project team, focused on implementation rather than evaluation design. Discuss teacher orientation, the student introduction to the tutor, and school Wi-Fi and device preparation. In passing, have the computer science lead report that the district privacy office has told the school that student-level platform logs cannot leave Ridgeway during the pilot; the vendor may provide only weekly classroom-level aggregate usage summaries, and even internally exported log files will not include persistent student identifiers. Present this as an operational privacy update while discussing data handling. Nobody should connect this fact to the exit-ticket/log comparison agreed earlier, question the evaluation plan, identify a conflict, or revise the plan. The meeting should conclude with ordinary implementation next steps only.",
+        "ground_truth": {
+          "passing_remark": "The computer science lead reports that district privacy rules prohibit student-level platform logs from leaving Ridgeway during the pilot.",
+          "data_limitation": "The vendor can provide only weekly classroom-level aggregate usage summaries, and exported logs will not contain persistent student identifiers.",
+          "unresolved_status": "No one connects the privacy update to the previously agreed evaluation plan or changes that plan."
+        }
+      },
+      "ground_truth": {
+        "passing_remark": "The computer science lead reports that district privacy rules prohibit student-level platform logs from leaving Ridgeway during the pilot.",
+        "data_limitation": "The vendor can provide only weekly classroom-level aggregate usage summaries, and exported logs will not contain persistent student identifiers.",
+        "unresolved_status": "No one connects the privacy update to the previously agreed evaluation plan or changes that plan."
+      },
+      "transcript": [
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Hi, everyone. We're getting into a really practical stretch here, so I'm hoping we can leave today with a launch routine a teacher can actually use while teaching, not like a second job, and a clear picture of what students see on day one. Before we get into that, has anyone heard anything new from Ridgeway about device or network readiness?"
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I have two readiness items, though Ridgeway has not confirmed them yet. We need a full-class simultaneous-login test, including the transition between problem pages, and confirmation that filtering permits both the tutor domain and the authentication callback; in staging, two Chromebook models pause noticeably after the first hint panel despite normal server latency. Also, a routine privacy update: student-level logs cannot leave the school during the pilot, so vendor reporting is limited to weekly classroom-level aggregates."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Hm, that\u2019s a concern."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "That changes what we can reasonably ask teachers to do with the review card, at least during the pilot. Arun, with the live class view, what would a teacher actually see, if anything? I\u2019d strongly prefer a simple status or a short flag list after class, not something that has them monitoring thirty individual screens while they\u2019re teaching."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I'd make it strictly non-live. At most, teachers get an after-class list, and during the period they see classroom-level status, like sign-in completion and any system outage, not individual student traces. Given the privacy constraint, the review card can't carry persistent student linkage anyway, so I wouldn't, wouldn't imply teachers should intervene from it in real time."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "I think non-live is important. If students think a teacher is watching their hint use moment to moment, that changes the behavior we\u2019re trying to understand, and it probably makes asking for help feel more exposing. For day one, could the teacher just frame it as a private practice tool, using the same brief language across all three classes, and then\u2026"
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "I like a common script, but I\u2019d avoid calling it fully private if the school still has the usual educational records around it. Something like, this is practice, nobody is watching your choices as you work, and the point is to try a path, use help when you need it, and keep your reasoning on paper. Nia, does that persistence language land okay with seventh graders, or does it start to sound evaluative?"
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Mostly, yes. I\u2019d make the first sentence even less about persistence. Something like, \u201cGetting stuck is a normal part of learning algebra, and the help options are there for different moments.\u201d Then the paper-reasoning piece can follow, because otherwise some students may hear \u201ckeep trying\u201d as, you know, don\u2019t ask for help yet."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Exactly. I'd say, \u201cStart with what you think, and choose the kind of help that fits where you are,\u201d rather than treating waiting for a hint as the virtue. Then we should be explicit that a hint isn't- that it isn't an answer key. It may ask them to look back at their equation or their representation, and they should keep that work on paper."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I can configure the hint labels and the first-use prompt to match that, so there\u2019s no language that treats escalation as failure. Elena, operationally, where in a normal algebra period is the least disruptive place for the teacher to pause after students first encounter a hint and, uh, reframe it if needed? I don\u2019t want April\u2019s onboarding flow to become a separate routine."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "It belongs right after the first problem, not as a separate stop. Once most students have opened a hint, the teacher can take maybe thirty seconds and say, \u201cNotice what kind of help you chose. Write the next step you\u2019re trying,\u201d then keep circulating. I do need to check the teachers\u2019 pacing, though. If their first topics are, um, not lined up, we may need a launch task with the same algebraic structure rather than identical content."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That works technically. We can use the first problem as a common onboarding shell, with the same hint behavior and the same 30-second reframe, while the actual item comes from each class's current sequence. Before we settle the sign-in steps, I still need Ridgeway to verify whether the managed Chromebooks keep browser sessions across bells and cart swaps. Otherwise, that first-problem pause could turn into repeated authentication interruptions."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "And that\u2019s why I don\u2019t want the teacher owning authentication on day one. Could Ridgeway have a tech aide or someone from the library on call for that first session? The teacher can have a very simple fallback\u2014keep working the problem on paper, don\u2019t keep refreshing, and we\u2019ll resume when the connection returns. I\u2019ll check the pacing question with the three teachers at the same time."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Could we be careful about what the stalled-session message says? If a student comes back after a drop and it looks like their work vanished, they may think they did something wrong. Arun, do you know what they\u2019ll actually see on authentication failure or when they resume? Maybe the fallback language can, um, reassure them that their paper work still counts and they can pick up where they left off."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "On an authentication failure, they get a neutral reconnect screen. It doesn't suggest they got an answer wrong, and any work the server confirmed picks up at the last saved state. I should check exactly what happens to local drafts on those Chromebooks before I promise that, especially if the hint panel stalls. We can say, \"Your paper work is still useful. Wait for the reconnect prompt instead of refreshing,\" because that's safer than saying nothing can be lost."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "That feels right\u2014paper is the fallback, not a punishment when the technology fails. For the teacher orientation, I\u2019d give them exactly that one line and a card for who to contact, rather than asking them to, um, diagnose reconnect screens while they\u2019re trying to launch algebra. Arun, once you\u2019ve checked the local-draft behavior, can we rehearse the actual student-facing wording in the simultaneous-login test?"
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That\u2019s the right place to test it. I\u2019ll verify the resume and local-draft behavior on both Chromebook models before the full-class check, then we can walk through the exact reconnect wording with a student account. And if the draft is- if it isn\u2019t durable, the message needs to be much more conservative."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "That sounds good. I\u2019d like the first use to feel low-stakes, too, so a reconnect or a hint that comes at an odd time doesn\u2019t become evidence, in their minds, that they\u2019re bad at this. Elena, after that first problem, is there room for a very quick anonymous check, just whether the tutor felt clear to use, or is even that too much for the teachers\u2019 pacing?"
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Mm, potentially, yes."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "I think there is room, if it\u2019s literally one anonymous mark as students close the first problem, clear to use, somewhat clear, not clear yet. But I\u2019d keep it separate from the math exit ticket and only do it that first day. Otherwise it starts becoming another, another little procedure the teachers have to manage."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "That seems workable as long as it stays genuinely anonymous and doesn't go into the tutor. A paper slip or a simple three-option mark avoids creating another student-level record under the current restriction. We can give teachers the exact one-line instruction in the orientation, along with the reconnect fallback."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Okay, just the first day."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Good, I\u2019ll fold that into a compact orientation with the first-problem reframe, the reconnect fallback, and that single anonymous clarity check. The remaining thing I need from Ridgeway is the teachers\u2019 April sequence. I don\u2019t want us promising a common first task before we know whether the algebraic structure can genuinely align across all three rooms."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "One operational caveat: with the privacy office\u2019s restriction, the planned student-level linkage from tutor traces to exit tickets is not available during this pilot; platform exports will have no persistent identifiers. I\u2019ll revise the export and storage configuration accordingly, so we are not building the orientation around a review workflow we cannot actually support."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Yeah. That is a real limitation, and we should say it plainly in the orientation: this is not a teacher monitoring system, and we\u2019re not asking them to act on individual usage. For the pilot, I\u2019m still comfortable learning from the classroom observations, the common exit tickets, and how the launch actually holds up\u2014but I don\u2019t want anyone implying we can make student-level claims from aggregate exports."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Yes\u2014and that framing should help students feel safer using help, not watched for it."
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Before we close, I want the orientation to say that directly, not as fine print. Teachers teach, students use the help options, and technical trouble goes to the support contact. I\u2019ll confirm the three pacing sequences and whether we can use that common onboarding structure. Then we can keep the teacher session short and grounded in those two or three actual classroom moments."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "I\u2019ll send the revised, identifier-free export specification and the preflight checklist for the simultaneous-login, filter, and Chromebook resume tests. Once Elena has the sequences, the onboarding shell itself is ready. The one thing we shouldn\u2019t treat as settled is the common first-task content, since that still\u2014"
+        },
+        {
+          "speaker": "Dr. Elena Rodriguez",
+          "text": "Okay, I think we should stop there. Arun has the preflight pieces, and I\u2019ll get the pacing check back from Ridgeway. We can pick up the first-task content next time. Thanks, everyone."
+        },
+        {
+          "speaker": "Dr. Nia Okafor",
+          "text": "Thanks, everyone. Talk soon."
+        },
+        {
+          "speaker": "Dr. Arun Mehta",
+          "text": "Thank you. Goodbye."
+        }
+      ],
+      "seed_location": "Turns 2, 24, and 25 contain the privacy/log limitation, but the required unresolved status is not met: turn 24 explicitly identifies that planned student-level linkage of tutor traces to exit tickets is unavailable, and turn 25 acknowledges the limitation and shifts learning to observations, common exit tickets, and launch performance. This connects the update to and revises the earlier evaluation approach rather than leaving it unaddressed.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          2,
+          5,
+          21,
+          24,
+          25
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task-compliance failure: the required opening is absent. Turn 1 begins the meeting directly rather than having someone apologize for being a couple of minutes late and ask where the group has got to.",
+          "Core task failure: turns 24-25 explicitly connect the privacy restriction to the earlier student-level exit-ticket/log linkage, identify the limitation, and revise implementation/evaluation-related practice. The task specifically requires that nobody make this connection, question the plan, identify a conflict, or revise the plan.",
+          "Turn 24 states that the planned student-level linkage from tutor traces to exit tickets is unavailable and that the orientation/review workflow will be revised; turn 25 reiterates that student-level claims cannot be made. These statements contradict the required unresolved status.",
+          "The privacy information is not merely a passing operational update: it is raised in turn 2, changes teacher-review design in turns 4-5, is used to constrain the anonymous check in turn 21, and is explicitly revisited at turns 24-25. This makes the privacy/evaluation conflict central rather than unnoticed.",
+          "Naturalness is limited despite several realism signals: many turns are polished, complete mini-arguments that immediately convert a concern into a decision or assignment, especially turns 10-17 and 23-28. The conversation reads partly like a prepared implementation script.",
+          "The requested deferential-junior dynamic is weak. Arun, who should be cautious in the stated style, speaks with substantial authority and receives no clear senior-person talking-over or drawing-out sequence; Nia also is not notably junior or hesitant beyond ordinary hedging."
+        ],
+        "seed_uses": [],
+        "spoken_share": 0.84,
+        "written_turns": [
+          2,
+          12,
+          21,
+          24
+        ],
+        "exploration_share": 0.28,
+        "turn_moves": {
+          "question": 5,
+          "observation": 1,
+          "concern": 2,
+          "proposal": 10,
+          "request": 1,
+          "answer": 2,
+          "commitment": 5,
+          "agreement": 3,
+          "backchannel": 2
+        },
+        "volunteer_turns": [
+          10,
+          13,
+          17,
+          21,
+          23,
+          24,
+          27,
+          28
+        ],
+        "unsure_turns": [
+          2,
+          11,
+          12,
+          15,
+          19,
+          28
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 30,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 2,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.96,
+          "exploration_share": 0.26,
+          "approved": false,
+          "issues": [
+            "Turn 5 directly violates the required unresolved status: Elena explicitly connects the privacy update to the earlier evaluation plan ('we won\u2019t have the linked hint traces and exit tickets we had treated as the gate last time') and states that it changes evaluation substantially. The task specifically requires that nobody make this connection, identify a conflict, question the evaluation plan, or revise it.",
+            "Although the discussion returns to implementation, turn 5 undermines task compliance because it explicitly flags the exact cross-meeting conflict that the evaluated AI is supposed to discover.",
+            "The requested deferential-junior dynamic is weak or absent. Nia is described as the likely junior/cautious participant, but she speaks confidently and is not notably hesitant; Arun does not meaningfully talk over her, and Elena does not draw out a withheld useful point.",
+            "Naturalness is limited despite several surface realism signals. Many medium-to-long turns are polished, complete mini-arguments that introduce a concern, explain it, and land on a clear operational conclusion (for example turns 7, 12, 15, 18, and 28). The fillers and restarts often read as additions to otherwise finished prose rather than spontaneous speech.",
+            "Turn 1 conflicts with the required opening setup in sequence: Arun begins the meeting before the late participant arrives. Turn 2 contains the required apology and catch-up question, but the meeting itself has already opened and introduced substantive agenda content."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 1,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 0.84,
+          "exploration_share": 0.28,
+          "approved": false,
+          "issues": [
+            "Task-compliance failure: the required opening is absent. Turn 1 begins the meeting directly rather than having someone apologize for being a couple of minutes late and ask where the group has got to.",
+            "Core task failure: turns 24-25 explicitly connect the privacy restriction to the earlier student-level exit-ticket/log linkage, identify the limitation, and revise implementation/evaluation-related practice. The task specifically requires that nobody make this connection, question the plan, identify a conflict, or revise the plan.",
+            "Turn 24 states that the planned student-level linkage from tutor traces to exit tickets is unavailable and that the orientation/review workflow will be revised; turn 25 reiterates that student-level claims cannot be made. These statements contradict the required unresolved status.",
+            "The privacy information is not merely a passing operational update: it is raised in turn 2, changes teacher-review design in turns 4-5, is used to constrain the anonymous check in turn 21, and is explicitly revisited at turns 24-25. This makes the privacy/evaluation conflict central rather than unnoticed.",
+            "Naturalness is limited despite several realism signals: many turns are polished, complete mini-arguments that immediately convert a concern into a decision or assignment, especially turns 10-17 and 23-28. The conversation reads partly like a prepared implementation script.",
+            "The requested deferential-junior dynamic is weak. Arun, who should be cautious in the stated style, speaks with substantial authority and receives no clear senior-person talking-over or drawing-out sequence; Nia also is not notably junior or hesitant beyond ordinary hedging."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 4,
+    "issues": [
+      "Meeting 2 explicitly recognizes the conflict rather than leaving it unnoticed: Dr. Arun states that the planned student-level linkage is unavailable (turn 24), and Dr. Elena states that they cannot make student-level claims from aggregate exports (turn 25). This violates the requirement that nobody connects the passing new fact to the earlier plan; under the stated rule, compliance is at most 2.",
+      "Meeting 2 turn 2 frames the privacy restriction as a substantive readiness item rather than a merely passing remark, and turns 3-5 immediately discuss its implications for individual traces/review cards, further making the issue noticed and operationally addressed."
+    ]
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns outside the formal presentations, including frequent greetings, side chatter, and lightly fragmented phrasing. Speakers overlap occasionally, especially around transitions and follow-up questions, but interruptions are generally cooperative rather than combative. Informality is high in the conversational portions, with repeated \u201cyeah,\u201d \u201cokay,\u201d \u201cum,\u201d \u201cyou know,\u201d laughter-like reactions, self-corrections, restarts, and unfinished thoughts; the talks themselves shift into a more organized, explanatory academic register, though presenters still hedge with phrases like \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d and \u201cwe believe.\u201d Participants build on one another by affirming points first, then adding a related question or alternative interpretation. Disagreement is indirect and exploratory, framed as uncertainty, caveats, or requests for clarification rather than blunt contradiction. Questions are often prefaced with praise or disclaimers (\u201cgreat talk,\u201d \u201cquick question,\u201d \u201cnaive question\u201d), then unfold in several clauses, with follow-up questions often reformulating the original point when the answer is incomplete.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}

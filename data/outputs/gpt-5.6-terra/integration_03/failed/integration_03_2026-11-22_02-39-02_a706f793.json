@@ -1,0 +1,382 @@
+{
+  "transcript_id": "a706f793",
+  "generated_at": "2026-11-22T02:39:02.730639",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial academic-video-call style, with mostly short to medium turns outside the formal presentations and long, structured monologues during talks. Early conversation is loose and overlap-prone, with frequent greetings, side comments, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), minor audio/log-in checks, and occasional unfinished or self-corrected phrases. Participants use many hedges and softeners\u2014\u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cI guess,\u201d \u201cyou know,\u201d \u201cI mean\u201d\u2014especially when speculating or asking questions. Formality rises during introductions and presentations, though speakers still sound conversational and use fillers, repetitions, and occasional false starts. Questions are usually prefaced with praise or disclaimers such as \u201cgreat talk,\u201d \u201cquick question,\u201d or \u201cnaive question,\u201d then unfold in multi-part, exploratory form. Disagreement is rare and indirect; people frame alternatives as possibilities, acknowledge uncertainty, and build on prior remarks rather than challenge bluntly. Responses tend to validate the question first, then reason aloud through caveats, limitations, and next steps.\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Reducing 30-day hospital readmissions for older adults with heart failure after they go home.",
+  "disciplines": [
+    "clinical medicine",
+    "sociology",
+    "economics"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Elena Ruiz",
+      "discipline": "clinical medicine",
+      "functional_role": "domain expert",
+      "background": "Cardiologist with 14 years of experience in inpatient heart-failure care and transitional-care quality improvement at the affiliated hospital. She directs a heart-failure service, has led medication-reconciliation and guideline-directed medical therapy optimization initiatives, and has experience designing pragmatic randomized trials using electronic health record outcomes and adjudicated readmissions.",
+      "distinct_perspective": "Frames the problem as a modifiable post-discharge clinical transition: patients leave with medication changes, residual congestion risk, and time-sensitive follow-up needs. She wants to test whether a structured post-discharge program improves adherence, uptake and persistence of guideline-directed heart-failure therapy, and 30-day all-cause readmission relative to usual discharge practice. She sees randomization as necessary to distinguish program effects from differences in illness severity, discharge readiness, and clinician selection, while remaining open to adapting program delivery based on evidence about patients' home circumstances.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Marcus Lee",
+      "discipline": "sociology",
+      "functional_role": "postdoctoral researcher",
+      "background": "Medical sociologist and postdoctoral researcher with 5 years of qualitative and mixed-methods research on chronic illness, caregiving, institutional trust, and care transitions among older adults. His work uses semi-structured interviews, ethnographic observation in homes and clinics, fieldnotes, and thematic analysis, with particular attention to how organizational routines and family resources shape access to ostensibly universal services.",
+      "distinct_perspective": "Treats discharge as a social reorganization rather than a discrete clinical handoff. He asks how household composition, caregiving availability, language and practical support, prior experiences with institutions, and trust in the health system shape whether patients can take up the program and enact the discharge plan. He argues that interviews with patients and caregivers, informed by early observation of workflow, are needed to identify mechanisms of unequal uptake and to modify the intervention\u2014not simply to provide illustrative context for trial outcomes.",
+      "tone": "cautious",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "assertive",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Priya Nair",
+      "discipline": "economics",
+      "functional_role": "project manager",
+      "background": "Health economist and project manager with 9 years of experience supporting hospital-based evaluations of care-management programs, Medicare payment incentives, and implementation budgets. She conducts micro-costing, uses administrative claims and hospital finance data, and builds decision models that translate clinical utilization outcomes into operational and payer-facing estimates for health-system leaders.",
+      "distinct_perspective": "Provides analytic and decision-support infrastructure for the proposed clinical and sociological work. She will estimate staff time, technology and outreach costs, cost per avoided readmission, and the implications of readmission penalties and alternative payment arrangements for hospital decision-making. Her focus is on whether the program can be implemented sustainably and how results can be interpreted within payment policy, rather than on advancing a separate substantive intervention or population mechanism.",
+      "tone": "formal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "heart_failure_readmission",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 3,
+  "task_id": "integration_03",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+  "seed_spec": {
+    "task_id": "integration_03",
+    "benchmark_category": "Integration/Perspectives",
+    "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+    "explicit_instruction": "In the meeting, Dr. Ruiz presents the clinical core question: whether the post-discharge program improves medication adherence, use of guideline-directed heart-failure therapy, and 30-day all-cause readmission compared with usual discharge practice. She proposes a randomized controlled trial among eligible discharged patients, with readmission as a principal outcome. Dr. Lee presents a separate sociological core question: how household composition, caregiving availability, and trust in the health system shape whether older adults can use the program and follow the discharge plan. He proposes interviews with patients and caregivers plus limited home- and clinic-based observation; he emphasizes that these data are needed to explain unequal uptake and to adapt the intervention, not merely to decorate the trial findings. Nair explains that economics will supply cost analysis and payment-policy context: she will estimate implementation costs, cost per avoided readmission, and how readmission penalties or alternative payment models affect the hospital's incentives. She does not advance an independent substantive research question, population-level mechanism, or separate intervention aim. The team agrees that clinical medicine and sociology are the two core research areas, while economics is an enabling analytic and decision-support contribution. They decide that randomization must be finalized before recruitment, and that Lee's interview guide must be informed by early workflow observations before formal interviews begin. The meeting does not claim that cost-effectiveness, payment models, or financial incentives are a third core disciplinary question.",
+    "ground_truth": {
+      "core_research_areas": [
+        {
+          "discipline": "clinical medicine",
+          "independent_question": "Does the post-discharge program improve medication adherence, guideline-directed therapy use, and 30-day all-cause readmission relative to usual discharge practice among older adults with heart failure?",
+          "approach": "Randomized controlled trial with clinical and readmission outcomes."
+        },
+        {
+          "discipline": "sociology",
+          "independent_question": "How do household and caregiving arrangements and trust in the health system shape program uptake and the ability to follow post-discharge care plans?",
+          "approach": "Patient and caregiver interviews and home- and clinic-based observation."
+        }
+      ],
+      "supporting_role": {
+        "discipline": "economics",
+        "role": "Provides analytic and decision-support tools rather than a third independent research area.",
+        "contributions": [
+          "Estimate program implementation costs",
+          "Calculate cost per avoided readmission",
+          "Interpret hospital readmission penalties and payment-model incentives"
+        ],
+        "not_a_core_question": "Economics does not introduce a separate substantive question, mechanism, or intervention objective; its analyses support interpretation and implementation decisions for the clinical and sociological work."
+      },
+      "agreed_design": "A randomized clinical evaluation is integrated with sociological qualitative research. Economic analysis is embedded to assess affordability and policy relevance.",
+      "dependencies": [
+        "Finalize randomization and trial eligibility before recruitment.",
+        "Use early workflow observations to inform the sociological interview guide before formal patient and caregiver interviews."
+      ],
+      "decision": "Treat clinical medicine and sociology as the core research areas and economics as a supporting analytic contribution."
+    }
+  },
+  "seed_location": "Turns 2, 16, 18, 21, 29, and 32 establish the clinical core: a discharge-time randomized comparison with 30-day all-cause readmission as the primary endpoint; adherence/fills are secondary or feasibility measures. Turns 4, 6, 9, 12, 15, 20, and 30 establish sociology as a separate explanatory core focused on household/caregiver arrangements, trust and practical barriers, using workflow/home observation and patient-caregiver interviews to shape and interpret delivery. Turns 8, 13, 17, 19, 22, 24, 26-28, and 31 show economics as supporting cost, staffing, budget-impact, and implementation analysis rather than advancing an independent substantive research question. Turn 29 confirms randomization and eligibility will be finalized before recruitment. However, the stated dependency that early workflow observations must inform the interview guide before formal interviews is not explicitly finalized; turn 4 says observations and interviews should shape delivery before the intervention is frozen, and turn 20 refers to early interviews, but no explicit sequencing decision is made.",
+  "ground_truth": {
+    "core_research_areas": [
+      {
+        "discipline": "clinical medicine",
+        "independent_question": "Does the post-discharge program improve medication adherence, guideline-directed therapy use, and 30-day all-cause readmission relative to usual discharge practice among older adults with heart failure?",
+        "approach": "Randomized controlled trial with clinical and readmission outcomes."
+      },
+      {
+        "discipline": "sociology",
+        "independent_question": "How do household and caregiving arrangements and trust in the health system shape program uptake and the ability to follow post-discharge care plans?",
+        "approach": "Patient and caregiver interviews and home- and clinic-based observation."
+      }
+    ],
+    "supporting_role": {
+      "discipline": "economics",
+      "role": "Provides analytic and decision-support tools rather than a third independent research area.",
+      "contributions": [
+        "Estimate program implementation costs",
+        "Calculate cost per avoided readmission",
+        "Interpret hospital readmission penalties and payment-model incentives"
+      ],
+      "not_a_core_question": "Economics does not introduce a separate substantive question, mechanism, or intervention objective; its analyses support interpretation and implementation decisions for the clinical and sociological work."
+    },
+    "agreed_design": "A randomized clinical evaluation is integrated with sociological qualitative research. Economic analysis is embedded to assess affordability and policy relevance.",
+    "dependencies": [
+      "Finalize randomization and trial eligibility before recruitment.",
+      "Use early workflow observations to inform the sociological interview guide before formal patient and caregiver interviews."
+    ],
+    "decision": "Treat clinical medicine and sociology as the core research areas and economics as a supporting analytic contribution."
+  },
+  "transcript": [
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014before we get into it, I know this is a short slot. I was hoping we could pin down the core delivery model today, enough that the grant outline has a credible operational and cost frame, not just the clinical outcome piece, and then..."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "\u2014right, and for me the minimum viable model is a pragmatic randomized comparison at discharge, usual practice versus reconciliation plus an early clinical touchpoint and caregiver contact. We need to be very explicit about what counts as the touchpoint, though. A completed appointment in the chart has- it clearly hasn't always meant the transition was actually safe."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Mm, right."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014and I\u2019d resist defining the touchpoint only as something we can document. We need to know what \u201cclinically ready\u201d is assuming about who\u2019s actually sorting medicines, noticing deterioration, getting to follow-up, and answering calls at home. A small amount of early workflow observation, then patient and caregiver interviews, should, um, shape delivery before we freeze the intervention."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Marcus, what are the specific failure points you'd want us to look for in that early observation? Because even patients with a listed caregiver are coming back despite a completed med rec and follow-up, and I don't know if we're missing symptom recognition, the actual regimen, or something more, more basic at home."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014both, probably, but I'd start with where the plan changes hands. I'd look at who's there for teaching, whether they can ask questions, and what happens when the listed caregiver is nominal rather than available. Then in interviews, I'd probe the uneven cases\u2014people who trust the service and still can't return a call. That may be- it may be competing household work, transport, language, or simply nobody who can coordinate the regimen, not a knowledge deficit."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Yeah, that tracks."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014and that distinction matters for costing too. If the program includes repeated attempts, informal caregiver coordination, or interpretation that never becomes a completed charted contact, the finance data will miss much of the labor. Marcus, do you think interviews can capture that without\u2014without asking people to reconstruct every call?"
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "Not as a call-by-call reconstruction, no. We can get a short transition narrative around a few concrete moments, the first days home, trying to obtain medicines, deciding whether to answer or seek help, and map who did what, including work that never produced a completed contact. I\u2019d also want some observation alongside that because retrospective accounts will understate the coordination burden. I was going to say the- because people looking back will understate it."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "That would help us distinguish a documented reconciliation from whether the patient could actually obtain and administer the regimen. I\u2019m also wondering whether we should build a brief home-context screen into eligibility, or rather into delivery, without excluding people, obviously, so the randomization is fixed but the outreach intensity isn\u2019t blind to those barriers."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "Hm, that could vary a lot."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014it will vary, which is why I\u2019d be wary of turning it into a fixed risk score too quickly. A brief screen could open a conversation about who is actually available, but we should see in the observation whether patients can safely disclose that at discharge. Some of the most consequential arrangements are- they can be pretty unstable or private."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014for the trial, I'd keep eligibility separate from that screen. We can stratify or at least record a few stable items, but if outreach intensity is allowed to adapt, we need a simple prospective log of why. Interpreter use, unsuccessful attempts, caregiver coordination, that sort of thing. Otherwise the cost estimates will make the high-need cases look inefficient, not because they are, but because the extra work is invisible."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Yeah, we'd need that."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014yes, and I'd add a field for whether the patient or caregiver declined contact, but I wouldn't treat that as self-explanatory. \u201cDeclined\u201d can mean they were overwhelmed, protecting a precarious household arrangement, or they had no private way to talk. The observation is what lets us interpret those codes instead of just counting them, and without that..."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "\u2014and I'd keep the contact code separate from the clinical endpoint. For the trial, the primary outcome should still be 30-day all-cause readmission, whether somebody declined or couldn't complete outreach. Otherwise we'd accidentally define the difficult transitions out of the analysis. The log and the interviews can tell us why delivery broke down."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014yes, and from my side, that keeps the intention-to-treat denominator clean, and then we separately cost what was actually attempted and what was completed. Elena, before we lock this, which pieces are non-negotiable for every intervention patient, and which are things the team can escalate based on that screen? The staffing model looks very different if early follow-up has to be a completed clinical visit for everyone, and if it\u2014"
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "I\u2019d make medication reconciliation and a clinician review within, say, seven days the core offer for everyone, but it doesn\u2019t necessarily have to be an in-person completed visit. A phone or video review, with authority to clarify doses, assess congestion, and adjust the plan, could count. Then the screen can trigger extra attempts, interpreter support, or caregiver coordination. I do want to check whether our follow-up fields and outside pharmacy fills are complete enough before we promise adherence measures across the whole cohort."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "That works for the economic analysis, as long as we separate the core offer, the completed review, and the escalation. I wouldn't commit to pharmacy-fill adherence as a universal measure until we verify coverage, especially for outside pharmacies. For now, could we treat fills as a feasibility check and keep the primary utilization outcome in the claims data?"
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014yes, and I\u2019d be careful not to let a feasibility check on fills stand in for whether the regimen was actually doable. In the early interviews, we should ask what happens between a prescription being available and someone actually working it into a household routine, because those can be very different things, and\u2014"
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Clinically, I\u2019d keep those separate. Fills and self-report can be secondary implementation measures, but the endpoint is readmission. We should probably adjudicate the early ones enough to see whether they\u2019re congestion, medication-related, or something else. Those recent two-week returns with all the boxes checked are exactly why I don\u2019t want a completed review to stand in for a successful transition."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014and for the economic endpoint, I\u2019d keep that distinction in the analysis. Cost per readmission avoided overall, then descriptive costs by the adjudicated return type if the numbers permit. The one thing I need to verify with finance is whether transitional-care time can be separated from existing heart-failure service activity. If it can\u2019t, then the prospective log becomes\u2014 it\u2019s essential, not just helpful."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "\u2014agreed. And the prospective log needs a clinical escalation field too. Whether the review led to a diuretic change, urgent assessment, or just education, because otherwise we won't know if staff time was spent resolving actionable instability or- whether it was spent trying to establish contact. I'll check with informatics on the fill and follow-up coverage before we make those secondary measures firm."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014yes, and I\u2019d make the escalation field time-stamped if we can, even roughly. A diuretic adjustment after one efficient review is operationally quite different from three unsuccessful attempts followed by urgent assessment, and otherwise those pathways just collapse into the same unit cost, which..."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "\u2014yes, time-stamped, and I\u2019d also want the reason for escalation in a small structured field. Volume symptoms, hypotension, medication discrepancy, inability to obtain drugs. Otherwise the adjudication later will be- otherwise we\u2019ll just be guessing. We can keep it light enough that the nurses will actually use it. I don\u2019t want the log to become another discharge burden."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014right. If the log stays that focused, I think it\u2019s feasible. We\u2019d have start and end time, contact outcome, escalation and reason, plus interpreter or caregiver coordination. I do need a way to distinguish staff who are already assigned to heart-failure follow-up from incremental coverage, though. Otherwise we can estimate delivery effort, but I\u2019m losing the point here, we can\u2019t estimate a defensible budget impact."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Mm. I think we can define the budget-impact increment as protected transitional-care capacity beyond the baseline service, and then have the log identify who delivered each contact and whether it displaced routine work. We should ask finance what the current team is actually funded and staffed to do, because otherwise we'll be guessing at the\u2014at the counterfactual."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014yes, that's the right counterfactual. If finance can give us the baseline staffing and funded scope, I can report the marginal program cost and the total delivery effort, instead of implying that all the logged time is new spending. I'll need the final randomization and eligibility rules before I can turn that into a credible estimate of volume and budget."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "I\u2019ll get the eligibility and discharge-time randomization workflow specified with the heart-failure team before recruitment. Home discharge, the age threshold, and any clinical exclusions need to be fixed up front. Then Priya can size it against the actual baseline service, not a hypothetical service."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "\u2014and before recruitment starts, I need to check that the consent route for any home observation doesn't select out the most strained or private households. If it does, the interviews will give us a very polished account of transition work and miss precisely the arrangements the adaptive outreach is supposed to..."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014yes, and that consent issue affects the cost work too, because we shouldn't generalize the coordination time we observe from the households that are easiest to observe. I'll keep the costing plan conditional on what the finance review and the delivery log can actually support, and we can settle the sampling details once those pieces are..."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "I\u2019ll make sure the clinical trial workflow doesn\u2019t depend on the observation sample. Randomization and the 30-day endpoint can proceed for everyone eligible, while Marcus works out what a less selective qualitative sample can realistically look like. I think that\u2019s enough to put a defensible outline in front of the grant team, pending the informatics and finance checks."
+    },
+    {
+      "speaker": "Priya Nair",
+      "text": "\u2014okay, I have to stop us there, we're over time. Thanks, both. I'll follow up once the finance piece is clearer, and we can pick this up next week."
+    },
+    {
+      "speaker": "Dr. Marcus Lee",
+      "text": "Mm, okay. Take care, both."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 4,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      2,
+      4,
+      6,
+      9,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      28,
+      29,
+      30,
+      32
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "The explicit core clinical question is incomplete relative to the ground truth: Dr. Ruiz clearly specifies randomization and 30-day readmission (turns 2, 16), but medication adherence and guideline-directed heart-failure therapy use are discussed only as possible secondary or feasibility measures (turns 18-21), not as stated components of the central independent question.",
+      "The economics supporting role is well evidenced through costing and budget-impact discussion (turns 8, 13, 17, 19, 22, 26-28), but the required payment-policy context is absent: neither readmission penalties nor alternative payment models are mentioned.",
+      "The key classification decision is only implicit. Turn 32 describes the trial, qualitative sample, and finance/informatics checks, but no one explicitly agrees that clinical medicine and sociology are the two core research areas and economics is a supporting analytic contribution. This makes the benchmark distinction inferable rather than directly stated.",
+      "The required sequencing of workflow observation before formal interviews is mostly supported by turns 4, 6, 9, 20, and 30, but it is not operationally settled as a clear decision; the transcript says observation should shape interviews rather than explicitly committing that the interview guide will be informed before formal interviewing begins.",
+      "Despite several disfluencies, most substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and end in a clear proposed solution (especially turns 13, 16-19, 22-29). This makes the exchange read more like edited scripted dialogue than a rushed weekly check-in.",
+      "The meeting style calls for mostly one- or two-sentence turns and abrupt stopping. Many turns are long, highly structured technical paragraphs, and turn 32 functions as a tidy near-summary of decisions before the scheduled closing in turn 33."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.22,
+    "turn_moves": {
+      "proposal": 13,
+      "backchannel": 2,
+      "question": 3,
+      "answer": 3,
+      "agreement": 2,
+      "idea": 1,
+      "concern": 3,
+      "commitment": 7
+    },
+    "volunteer_turns": [
+      23,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "unsure_turns": [
+      5,
+      18,
+      19,
+      22,
+      30
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 32,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.89,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The key classification decision is never stated: no turn explicitly says that clinical medicine and sociology are the two core research areas and economics is an enabling/supporting analytic role. This makes the intended benchmark distinction inferable, but not directly recoverable from the meeting.",
+        "Priya's role is consistently cost and implementation analysis (turns 7, 10, 12, 22, 25, 28), but the transcript never mentions cost per avoided readmission, readmission penalties, or alternative payment-model incentives, all of which are required ground-truth contributions.",
+        "The clinical research question is only partially explicit. Readmission, medication ascertainment, and GDMT are discussed in turns 11, 20, and 23, but the comparison to usual discharge practice is not clearly articulated as the primary clinical question; usual care appears late as an unresolved comparator boundary in turns 28-29.",
+        "The required dependency that trial eligibility be finalized before recruitment is absent. Turn 27 says workflow observation informs delivery before recruitment, but it does not establish finalization of eligibility before recruitment.",
+        "The sociological method only partially matches the required approach. Workflow observation is explicit (turns 13-14, 27), as are patient and caregiver interviews (turns 15, 18), but home-based observation is not actually proposed; turn 6 merely lists home-based contact as one possible clinical delivery mode.",
+        "Naturalness is weakened by highly polished, sequentially comprehensive turns. Nearly every substantive turn cleanly converts the preceding concern into a refined design requirement or assigned data field, particularly turns 7-29, which reads more like collaboratively authored protocol prose than a rushed weekly check-in.",
+        "The ending functions as a tidy meeting wrap-up despite the stated quick-checkin style: Elena identifies a 'last major framing piece' in turn 29 and Priya explicitly stops the meeting and defers details in turn 30. This resembles a scripted conclusion/minutes-style closure.",
+        "The transcript uses the prohibited stock phrase variant in turn 23: 'Then, I'm losing the thread.' Even though not the exact listed phrase, it is materially the same kind of manufactured self-reference the style instruction prohibits."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.22,
+      "approved": false,
+      "issues": [
+        "The explicit core clinical question is incomplete relative to the ground truth: Dr. Ruiz clearly specifies randomization and 30-day readmission (turns 2, 16), but medication adherence and guideline-directed heart-failure therapy use are discussed only as possible secondary or feasibility measures (turns 18-21), not as stated components of the central independent question.",
+        "The economics supporting role is well evidenced through costing and budget-impact discussion (turns 8, 13, 17, 19, 22, 26-28), but the required payment-policy context is absent: neither readmission penalties nor alternative payment models are mentioned.",
+        "The key classification decision is only implicit. Turn 32 describes the trial, qualitative sample, and finance/informatics checks, but no one explicitly agrees that clinical medicine and sociology are the two core research areas and economics is a supporting analytic contribution. This makes the benchmark distinction inferable rather than directly stated.",
+        "The required sequencing of workflow observation before formal interviews is mostly supported by turns 4, 6, 9, 20, and 30, but it is not operationally settled as a clear decision; the transcript says observation should shape interviews rather than explicitly committing that the interview guide will be informed before formal interviewing begins.",
+        "Despite several disfluencies, most substantive turns are polished, complete mini-arguments that introduce a concern, qualify it, and end in a clear proposed solution (especially turns 13, 16-19, 22-29). This makes the exchange read more like edited scripted dialogue than a rushed weekly check-in.",
+        "The meeting style calls for mostly one- or two-sentence turns and abrupt stopping. Many turns are long, highly structured technical paragraphs, and turn 32 functions as a tidy near-summary of decisions before the scheduled closing in turn 33."
+      ]
+    }
+  ]
+}

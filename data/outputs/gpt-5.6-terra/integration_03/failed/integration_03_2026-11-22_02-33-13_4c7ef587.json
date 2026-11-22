@@ -1,0 +1,441 @@
+{
+  "transcript_id": "4c7ef587",
+  "generated_at": "2026-11-22T02:33:13.530797",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial video-call style, with mostly short to medium turns outside the formal presentations and much longer, structured monologues during talks. Early conversation is highly fragmented, with frequent greetings, technical check-ins, side chatter, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cright\u201d), and occasional overlap or abrupt handoffs. Speakers use abundant fillers and self-repairs\u2014\u201cum,\u201d \u201cuh,\u201d repeated words, false starts, and reformulations\u2014especially in questions and spontaneous discussion. The overall register is informal but professionally respectful: participants praise talks warmly, thank one another often, and soften critiques or uncertainty with phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201csort of,\u201d \u201cit seems,\u201d \u201cI\u2019m not sure,\u201d and \u201cI\u2019m curious.\u201d Questions tend to begin with compliments, then unfold in multi-part, exploratory form; speakers often clarify or narrow the question as they go. Challenges are indirect and collaborative, framed as open issues, caveats, or requests for interpretation rather than blunt disagreement. Responses are generous and explanatory, often acknowledging the question\u2019s value before answering, while transitions are handled briskly with simple cues such as \u201cokay,\u201d \u201cgreat,\u201d and \u201call right.\u201d\n\nMeeting style for this meeting (quick_checkin): A rushed weekly check-in. People give short status updates and ask each other quick questions. Most turns are one or two sentences. Nobody summarizes. Someone has another meeting soon and the conversation stops where it stops.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, so, quick one from me- the export finished last night, mostly.\n  - Mostly?\n  - Two of the sites didn't come through. I haven't looked yet.\nOpening: Start with one person apologizing for being a couple of minutes late and asking where the group has got to.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Evaluating an AI math tutor used in middle-school classrooms and deciding what it should and should not do for students.",
+  "disciplines": [
+    "computer science",
+    "education",
+    "psychology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Marcus Chen",
+      "discipline": "computer science",
+      "functional_role": "PhD student",
+      "background": "A fourth-year PhD student in human-centered AI systems who has spent three years building and testing classroom-facing learning software with public-school partners. He works on reliable hint-generation pipelines, school-network latency testing, privacy-preserving telemetry, and pseudonymous event-log schemas. He has implemented teacher-facing dashboards and research exports for prior pilot studies, including failure-mode audits for generated instructional content.",
+      "distinct_perspective": "Marcus treats the tutor as infrastructure that must be dependable, inspectable, and minimally data-hungry before anyone can draw educational or psychological conclusions. His role is to provide and validate reliable tiered hint generation, latency monitoring on school networks, pseudonymous logging, privacy safeguards, and dashboards/exports that enable the other analyses. He will press for technical performance checks and clear logging definitions, but explicitly does not frame computer science as advancing an independent student-outcome research question in this study.",
+      "tone": "informal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "dominant",
+      "epistemic_stance": "skeptical of other disciplines' approaches"
+    },
+    {
+      "name": "Amina Patel",
+      "discipline": "education",
+      "functional_role": "PhD student",
+      "background": "A fifth-year doctoral candidate in curriculum and instruction and a former Grade 6\u20138 mathematics teacher. Her dissertation uses classroom observation, teacher implementation notes, student work, and pre/post mathematics measures to study how digital tools alter formative assessment routines in middle-school algebra. She has coordinated multi-classroom pilots and conducts structured observations focused on teacher moves, student participation, and alignment with ordinary lesson flow.",
+      "distinct_perspective": "Amina's core research aim is to determine whether the tutor supports formative assessment, preserves productive struggle, reduces or redistributes teacher workload, and fits constructive classroom norms rather than displacing teacher judgment. She wants evidence triangulated across classroom observations, teacher notes, and student learning measures, with attention to how teachers actually use referral and override options during instruction. She sees implementation quality and classroom routine as part of the intervention, not as background noise.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Elena Ruiz",
+      "discipline": "psychology",
+      "functional_role": "domain expert",
+      "background": "A developmental and educational psychologist with 14 years of research on adolescent mathematics anxiety, academic motivation, self-regulated learning, and help-seeking. She has led longitudinal and classroom-based studies using brief repeated surveys, behavioral trace data, and multilevel analyses of student responses. Her recent work examines how feedback contingencies influence persistence and perceived competence among early adolescents.",
+      "distinct_perspective": "Elena has a separate core research aim: to examine how hint timing and feedback shape mathematics anxiety, motivation, help-seeking, and students' willingness to persist across the six-week pilot. She requires brief student surveys and analysis of students' interaction and survey responses over time, emphasizing that a technically correct hint can still undermine agency if delivered too quickly or too prescriptively. She will distinguish productive persistence from avoidant delay and will flag that the exact anxiety-survey wording and threshold need later review with district ethics leads.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "reserved",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    }
+  ],
+  "research_id": "ai_math_tutor",
+  "meeting_style": "quick_checkin",
+  "meeting_opening": "Start with one person apologizing for being a couple of minutes late and asking where the group has got to.",
+  "sample_seed": 2,
+  "task_id": "integration_03",
+  "benchmark_category": "Integration/Perspectives",
+  "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+  "seed_spec": {
+    "task_id": "integration_03",
+    "benchmark_category": "Integration/Perspectives",
+    "benchmark_task": "Give a meeting with three fields where one participant provides a method or tool, without an independent research question. The evaluated AI must distinguish this supporting role from a third core research area with its own goals.",
+    "explicit_instruction": "Run a planning meeting with one representative each from computer science, education, and psychology. The education representative must state a core research aim about whether the tutor supports formative assessment, productive struggle, teacher workload, and classroom norms, and must seek evidence from classroom observations, teacher notes, and learning measures. The psychology representative must state a separate core research aim about how hint timing and feedback affect math anxiety, motivation, help-seeking, and students' willingness to persist; this aim must require brief student surveys and analysis of student responses over the six-week pilot. The computer-science representative must explain that their role is to provide and validate the tutor's technical infrastructure: reliable tiered hint generation, latency monitoring on school networks, pseudonymous event logging, privacy safeguards, and dashboards/exports that make the education and psychology analyses possible. They may propose technical performance checks, but must explicitly say that computer science is not advancing an independent student-outcome research question in this study. The group must decide that the tutor will not automatically reveal full solutions after an incorrect first attempt; it may give a first conceptual hint, then a more specific procedural hint only after a second attempt or a student request, while teachers can override the sequence. They must agree to start data collection on February 2, 2027, contingent on a privacy review being completed by January 22 and teacher orientation by January 29. Preserve the fact that the exact wording and threshold for the anxiety survey remain unresolved for later review by the psychology and district ethics leads.",
+    "ground_truth": {
+      "core_research_areas": [
+        {
+          "discipline": "education",
+          "independent_research_question": "Whether and under what classroom conditions the AI tutor supports formative assessment and productive struggle without increasing teacher workload or disrupting classroom norms.",
+          "primary_evidence": [
+            "classroom observations",
+            "teacher implementation notes",
+            "student mathematics pre/post measures"
+          ]
+        },
+        {
+          "discipline": "psychology",
+          "independent_research_question": "How the timing and type of AI hints and feedback affect middle-school students' math anxiety, motivation, help-seeking, and persistence.",
+          "primary_evidence": [
+            "brief student surveys",
+            "student tutor-response patterns",
+            "six-week changes in student-reported affect and motivation"
+          ]
+        }
+      ],
+      "supporting_role": {
+        "discipline": "computer science",
+        "role": "Method and infrastructure provider rather than a third independent student-outcome research area.",
+        "contributions": [
+          "validate tiered hint generation",
+          "measure latency on school networks",
+          "implement pseudonymous event logging and data minimization",
+          "provide privacy safeguards",
+          "supply dashboards and data exports for the education and psychology analyses"
+        ],
+        "not_a_core_question": "Technical checks assess whether the platform functions reliably and safely; they do not constitute an independent research question about student outcomes in this study."
+      },
+      "decisions": [
+        {
+          "decision": "Hint policy",
+          "details": "The tutor will not automatically reveal a full solution after a student's first incorrect attempt. It will offer a conceptual hint first, then a more specific procedural hint after a second attempt or when the student requests it. Teachers may override the sequence."
+        },
+        {
+          "decision": "Pilot schedule",
+          "details": "Data collection begins February 2, 2027, for six weeks."
+        },
+        {
+          "decision": "Dependencies",
+          "details": "The start depends on completion of the district privacy review by January 22, 2027, and teacher orientation by January 29, 2027."
+        }
+      ],
+      "unresolved_item": {
+        "issue": "The exact wording of the math-anxiety survey and the threshold that triggers follow-up are not decided.",
+        "owners": [
+          "psychology lead",
+          "district ethics lead"
+        ]
+      }
+    }
+  },
+  "seed_location": "Incomplete/missing required conditions. Education-related evidence and workload/routine-fit discussion appears in turns 2, 4, 10, 12, 14, 16, 18, 21, 23, and 28; psychology-related survey/timing discussion appears in turns 6, 8, 25, and 31; computer science acts as technical/logging/privacy support in turns 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 22, 27, 29, and 32. However, no participant explicitly states the required education core research aim, the required separate psychology core research aim over the six-week pilot, or that computer science is not advancing an independent student-outcome research question. The specified tiered hint policy is not decided or discussed. February 2 and January 22/29 are mentioned (turns 9-11), but February 2 data collection is not explicitly made contingent on completion of privacy review by January 22 and teacher orientation by January 29, and the six-week duration is absent. The anxiety-survey wording and follow-up threshold remain unresolved pending ethics review in turn 6, but the district ethics lead is not identified as an owner.",
+  "ground_truth": {
+    "core_research_areas": [
+      {
+        "discipline": "education",
+        "independent_research_question": "Whether and under what classroom conditions the AI tutor supports formative assessment and productive struggle without increasing teacher workload or disrupting classroom norms.",
+        "primary_evidence": [
+          "classroom observations",
+          "teacher implementation notes",
+          "student mathematics pre/post measures"
+        ]
+      },
+      {
+        "discipline": "psychology",
+        "independent_research_question": "How the timing and type of AI hints and feedback affect middle-school students' math anxiety, motivation, help-seeking, and persistence.",
+        "primary_evidence": [
+          "brief student surveys",
+          "student tutor-response patterns",
+          "six-week changes in student-reported affect and motivation"
+        ]
+      }
+    ],
+    "supporting_role": {
+      "discipline": "computer science",
+      "role": "Method and infrastructure provider rather than a third independent student-outcome research area.",
+      "contributions": [
+        "validate tiered hint generation",
+        "measure latency on school networks",
+        "implement pseudonymous event logging and data minimization",
+        "provide privacy safeguards",
+        "supply dashboards and data exports for the education and psychology analyses"
+      ],
+      "not_a_core_question": "Technical checks assess whether the platform functions reliably and safely; they do not constitute an independent research question about student outcomes in this study."
+    },
+    "decisions": [
+      {
+        "decision": "Hint policy",
+        "details": "The tutor will not automatically reveal a full solution after a student's first incorrect attempt. It will offer a conceptual hint first, then a more specific procedural hint after a second attempt or when the student requests it. Teachers may override the sequence."
+      },
+      {
+        "decision": "Pilot schedule",
+        "details": "Data collection begins February 2, 2027, for six weeks."
+      },
+      {
+        "decision": "Dependencies",
+        "details": "The start depends on completion of the district privacy review by January 22, 2027, and teacher orientation by January 29, 2027."
+      }
+    ],
+    "unresolved_item": {
+      "issue": "The exact wording of the math-anxiety survey and the threshold that triggers follow-up are not decided.",
+      "owners": [
+        "psychology lead",
+        "district ethics lead"
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "Marcus Chen",
+      "text": "Sorry, I\u2019m a couple minutes late\u2014where\u2019d we get to? I was hoping today we could lock down the minimum event log and the few reliability checks we need before February, especially since I found a small number of really slow responses on a filtered school-like connection."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "We were just getting into the evaluation plan. For the log, I need to know what it can show about teacher referrals and overrides, but I don't want to treat those clicks as the whole story. An observation can show whether the teacher actually used that information in the lesson. And the slow responses matter too. Waiting can look like persistence in the data, or rather it may just be interrupting a student's work."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I can log a referral or an override as a discrete event, but I need a narrow definition for that. Amina, what counts as an intervention versus a teacher just circulating? And on the stalls, I\u2019m adding request IDs and a pending-state lock so a second click is identifiable as a retry, not automatically another hint referral\u2014another hint request."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "I'd separate teacher intervention from ordinary circulation by whether the teacher acts on a tutor signal or takes over the next instructional move. Actually, the key is whether they're responding to a referral, overriding a hint, or using the dashboard to confer. We should still note purposeful circulation in the observation, though, because that may be the benefit even when there isn't a click."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Okay, that\u2019s usable. I\u2019ll make the log distinguish tutor-triggered referral, teacher override, and dashboard-open, and I\u2019ll leave purposeful circulation to the observation notes rather than pretending we can instrument it. One thing I still need to check with the district is whether their privacy review accepts the pseudonymous ID flow with, um, just those fields."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "For my piece, could the event record retain whether a hint was student-requested versus system-initiated, plus the latency from an error or pause to delivery? That distinction is really central to separating adaptive help-seeking from a tutor cutting off productive persistence. No free text needed. I'd pair it with very brief repeated affect items, though the exact anxiety wording and any follow-up threshold still need ethics review."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I can keep both flags and timestamps, but I\u2019d be careful with \u201cpause.\u201d We can measure inactivity in the interface, not whether they\u2019re thinking or talking to a teacher. Elena, what timing window would actually be useful to you? The long-tail stalls I saw could otherwise get misread as a long student pause, or I mean, a long interface pause, so I want the delivery timestamp and the request timestamp separate."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "I\u2019d treat the interface pause as an ambiguous exposure, not persistence. Could we retain the full sequence, error or last action, hint request if any, system decision, and actual delivery, with network-pending separately flagged? Then I can preregister a few broad latency bands rather than claiming, say, 90 seconds means withdrawal. Amina\u2019s observations can help interpret those bands."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That sequence is doable, including a separate pending flag and the request and delivery times. I\u2019ll need the district to sign off on the pseudonymous ID flow and that smallest field set before I freeze it. I\u2019m aiming to have that settled by January 22, so we can test the actual export and the retry- the retry behavior before February 2."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "That timing works, but I\u2019d want a January 29 classroom-facing check too, not just the export test. We need to see whether all four teachers can use the same short observation structure and implementation note without it becoming one more thing, one more task, during a normal algebra lesson."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I\u2019m good with a January 29 run-through, but I want it on the actual filtered district network if they\u2019ll let us. The retry case is exactly the kind of thing that looks fine in an export and then makes the dashboard or the hint flow, uh, noisy in a live room."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "For that run-through, I\u2019d like each teacher to use one real linear-equations segment, not a generic demo. Then we can see whether the referral and override options fit their normal circulation, and have them note, very briefly, any setup or monitoring burden while it\u2019s, it\u2019s still fresh."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "That\u2019s good. The real segment will also give us actual click patterns, including whether someone retries while a hint is pending. I just want the run-through to be a technical check, not us retaining any student work from it. I\u2019ll use test pseudonyms unless the district has, um, cleared the identifier flow by then."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "For January 29, I\u2019d keep the observation and teacher note on adult use and routine fit, and not- we shouldn\u2019t retain student responses. The teachers can tell us whether a referral changed what they did, or whether the interface itself created extra questions."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I\u2019ll configure the January 29 build to discard student-side events after the session and only retain the adult-use checklist under test IDs. One wrinkle is, if a teacher wants to see what the dashboard does with a referral, I can simulate that with seeded events, so we don\u2019t need real student data at\u2014"
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "That would let teachers try the whole decision path without putting students into a test session, which is what I need. Could the adult checklist have just a couple of prompts, um, whether the referral changed their next move, and whether the dashboard added monitoring work or helped them reach someone they might otherwise miss?"
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Two prompts is about right. I can put those on the adult checklist, and the seeded referral can- I'll keep it clearly marked as simulated so it can't leak into any later export. I\u2019ll just need to confirm the district is okay with retaining even that test checklist."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "That\u2019s fine by me. I\u2019d keep the checklist tied to the specific simulated referral, though. Otherwise teachers may answer generally, generally about the dashboard instead of whether it changed a real next instructional move in that moment."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Keeping it tied to the seeded referral makes sense. I can have the checklist come up right after that simulated case, with the referral ID attached, and keep it separate from the pilot schema so nobody later mistakes test activity for classroom use."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "Yeah, that seems clean\u2014and it keeps the January run-through from contaminating the student data."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "Yes, that keeps the run-through focused on routine fit rather than student data."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Good. I\u2019ll keep that whole January 29 path physically separate from the pilot export. The remaining thing on my side is the privacy review. If they trim even one of these timestamp fields, I need to know soon because it changes what we can reliably distinguish from a retry or a delayed delivery."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "Mm, and if a timestamp has to go, I'd rather keep the distinction between request and actual delivery, plus the pending flag, than try to infer anything from one pause measure. Otherwise, our observations and teacher notes can still tell us what happened instructionally, but the log will make student waiting look more like a choice than it..."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Yeah, the delivery time."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "And for the repeated surveys, that matters too. I need the timing of delivered help relative to the student\u2019s next action, not just that a hint existed. If privacy forces a choice, I\u2019d protect request, delivery, and next-action timestamps before any coarse, um, inactivity measure. Otherwise we can\u2019t tell whether confidence shifts track agency-supportive help or just system delay."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "Mm, that seems essential."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I\u2019ll take that priority order to privacy review, request, actual delivery, next action, and the pending/retry flag. And coarse inactivity is the first thing I\u2019d drop. Those are also the fields that let me audit whether the tutor itself is behaving, rather than\u2014whether we\u2019re manufacturing a story about student behavior from a stalled network."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "And in the observation form, we should mark when that pending state becomes visible in the room\u2014students asking about it, waiting, or turning to the teacher\u2014because that's where a technical delay can become extra, additional monitoring work instead of just a log artifact."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "I can add a simple observation marker for visible pending-state disruption, without trying to turn it into another student-level trace. I\u2019ll make sure the dashboard exposes the pending and retry status to us for the reliability audit, but not in a way that asks teachers to, to diagnose what the student was doing."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "Okay, good."
+    },
+    {
+      "speaker": "Dr. Elena Ruiz",
+      "text": "And I\u2019d want that marker available at the classroom level when we interpret the repeated surveys. A visible pending disruption might raise frustration or prompt help-seeking without telling us anything about the instructional value of the hint itself, so that\u2019s an important contextual distinction."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Yeah, classroom-level is the right granularity for that marker. I\u2019ll keep it out of the student event stream and make sure the reliability export can, uh, line up visible disruptions with the pending and retry counts, without implying every delayed request had the same classroom effect."
+    },
+    {
+      "speaker": "Amina Patel",
+      "text": "All right, I need to stop there\u2014we are out of time. Thank you both, and we can pick this up after the privacy\u2014after the privacy review."
+    },
+    {
+      "speaker": "Marcus Chen",
+      "text": "Yep, sounds good. Bye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 2,
+    "task_compliance": 2,
+    "naturalness": 3,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      15,
+      20,
+      22,
+      25,
+      27,
+      33
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "interruptions, cut-off sentences, or people jumping in",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Core seed requirements are absent: no participant explicitly states the full education research aim covering formative assessment, productive struggle, teacher workload, and classroom norms, nor does Amina seek student mathematics pre/post learning measures. Turns 2, 4, 10, 12, and 28 provide partial evidence only.",
+      "The psychology core aim is only partially recoverable. Elena discusses adaptive help-seeking, persistence, anxiety wording, and brief repeated affect items (turns 6, 8, 25, 31), but never explicitly states the separate research question spanning math anxiety, motivation, help-seeking, and persistence across the six-week pilot, nor analysis of six-week changes.",
+      "Marcus never explicitly says that computer science is a supporting infrastructure role rather than a third independent student-outcome research area. Technical contributions are well represented in turns 1, 3, 5, 7, 9, 22, 27, 29, and 32, but the required contrast is left inferential.",
+      "The required hint-policy decision is entirely missing. No turn establishes no automatic full solution after a first incorrect attempt, conceptual then procedural hints after a second attempt or student request, or teacher override of that sequence. References to hints, referrals, and overrides are insufficient.",
+      "The required pilot schedule is incomplete and dates are not fully recoverable: February 2 and January 22/29 appear (turns 9-13), but neither the year 2027 nor a six-week data-collection duration is stated. January 29 is described as a classroom-facing run-through, not clearly teacher orientation.",
+      "The unresolved anxiety-survey item is only partial. Elena says exact anxiety wording and a follow-up threshold need ethics review (turn 6), but the district ethics lead is not named as an owner and the issue is not explicitly assigned for later joint review by psychology and district ethics leads.",
+      "Despite several naturalistic markers, many medium-length turns are polished, complete mini-arguments that move directly from concern to solution or assignment, especially turns 3-19 and 22-32. The meeting also has little open exploration; most questions receive immediate operational resolutions.",
+      "The quick-check-in ending is plausible, but turn 33 briefly functions as a tidy closing recap ('we can pick this up after the privacy review'), and the meeting is highly focused on a single technical/privacy agenda rather than covering the benchmark's required cross-disciplinary planning decisions."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.12,
+    "turn_moves": {
+      "observation": 1,
+      "proposal": 12,
+      "question": 2,
+      "commitment": 9,
+      "request": 2,
+      "agreement": 6,
+      "concern": 1,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      3,
+      5,
+      7,
+      9,
+      13,
+      15,
+      17,
+      19,
+      27,
+      29,
+      32
+    ],
+    "unsure_turns": [
+      5,
+      6,
+      13,
+      17
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 36,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.93,
+      "exploration_share": 0.16,
+      "approved": false,
+      "issues": [
+        "The education core research aim is only partially recoverable. Amina provides classroom-observation, teacher-note, task-context, and implementation evidence in turns 3, 5, 19, 22, 24, and 27, but she never explicitly states that her independent aim concerns formative assessment, productive struggle, teacher workload, and classroom norms. Teacher workload is absent, and student mathematics pre/post measures are not clearly assigned to her education question.",
+        "The psychology aim is substantially evidenced in turns 7, 9, 11, 16, 21, 23, 25, and 28, including perceived competence, persistence, help-seeking, anxiety-item review, and repeated measures, but it is not clearly stated as a separate overarching core research question spanning math anxiety, motivation, help-seeking, and persistence across a six-week pilot. The six-week duration is never said.",
+        "Marcus clearly supplies infrastructure, logging, privacy, latency monitoring, dashboards, and exports (turns 1, 4, 8, 10, 12, 14, 17, 20, 26, 31, 33), but he never explicitly says that computer science is not advancing an independent student-outcome research question. This is a required distinction for the benchmark task.",
+        "The February 2, 2027 deployment and January 22 privacy dependency are explicit in turns 10 and 33, and the January 29 rehearsal is agreed in turns 13-14. However, the transcript calls January 29 a rehearsal rather than explicitly establishing teacher orientation by that date, and it does not explicitly make February 2 contingent on both requirements.",
+        "The transcript does preserve the unresolved anxiety-survey wording and follow-up threshold for district ethics review (turns 9 and 11), but the ownership is somewhat indirect rather than a clearly assigned psychology-lead/district-ethics-lead decision.",
+        "Despite multiple realism signals, many substantive turns are polished, self-contained mini-arguments that immediately convert concerns into solutions or assignments. For example, turns 7-8, 16-17, 21-22, 25-29, and 31-33 are highly orderly. This makes the rushed weekly check-in sound somewhat scripted.",
+        "The ending is more formally wrapped up than the specified abrupt check-in style: Elena explicitly lets people go early and says goodbye in turn 34, followed by two clean farewell turns."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 34,
+      "scores": {
+        "seed_recoverable": 2,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.12,
+      "approved": false,
+      "issues": [
+        "Core seed requirements are absent: no participant explicitly states the full education research aim covering formative assessment, productive struggle, teacher workload, and classroom norms, nor does Amina seek student mathematics pre/post learning measures. Turns 2, 4, 10, 12, and 28 provide partial evidence only.",
+        "The psychology core aim is only partially recoverable. Elena discusses adaptive help-seeking, persistence, anxiety wording, and brief repeated affect items (turns 6, 8, 25, 31), but never explicitly states the separate research question spanning math anxiety, motivation, help-seeking, and persistence across the six-week pilot, nor analysis of six-week changes.",
+        "Marcus never explicitly says that computer science is a supporting infrastructure role rather than a third independent student-outcome research area. Technical contributions are well represented in turns 1, 3, 5, 7, 9, 22, 27, 29, and 32, but the required contrast is left inferential.",
+        "The required hint-policy decision is entirely missing. No turn establishes no automatic full solution after a first incorrect attempt, conceptual then procedural hints after a second attempt or student request, or teacher override of that sequence. References to hints, referrals, and overrides are insufficient.",
+        "The required pilot schedule is incomplete and dates are not fully recoverable: February 2 and January 22/29 appear (turns 9-13), but neither the year 2027 nor a six-week data-collection duration is stated. January 29 is described as a classroom-facing run-through, not clearly teacher orientation.",
+        "The unresolved anxiety-survey item is only partial. Elena says exact anxiety wording and a follow-up threshold need ethics review (turn 6), but the district ethics lead is not named as an owner and the issue is not explicitly assigned for later joint review by psychology and district ethics leads.",
+        "Despite several naturalistic markers, many medium-length turns are polished, complete mini-arguments that move directly from concern to solution or assignment, especially turns 3-19 and 22-32. The meeting also has little open exploration; most questions receive immediate operational resolutions.",
+        "The quick-check-in ending is plausible, but turn 33 briefly functions as a tidy closing recap ('we can pick this up after the privacy review'), and the meeting is highly focused on a single technical/privacy agenda rather than covering the benchmark's required cross-disciplinary planning decisions."
+      ]
+    }
+  ]
+}

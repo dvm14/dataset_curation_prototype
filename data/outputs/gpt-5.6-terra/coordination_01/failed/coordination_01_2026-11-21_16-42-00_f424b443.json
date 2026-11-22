@@ -1,0 +1,421 @@
+{
+  "transcript_id": "f424b443",
+  "generated_at": "2026-11-21T16:42:00.796426",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a casual, collegial videoconference style with mostly short-to-medium turns, though presentations are long, highly structured monologues followed by brief audience exchanges. The opening is loose and chatty, with greetings, technical checks, side conversations, repeated acknowledgments (\u201cyeah,\u201d \u201cokay,\u201d \u201cgreat\u201d), and occasional overlap or abrupt handoffs; transcription-like false starts, repetitions, and self-corrections are common. Participants use frequent hedges and softeners\u2014\u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d \u201cI guess,\u201d \u201cit could be\u201d\u2014especially when speculating or framing limitations. The tone is professionally informal: speakers use polished scientific framing during talks but switch to warm, conversational praise and lightly humorous remarks in discussion. Questions are usually prefaced with compliments or disclaimers such as \u201cgreat talk,\u201d \u201cquick question,\u201d or \u201cnaive question,\u201d then unfold as multipart, exploratory prompts. Challenges are indirect and curiosity-driven rather than adversarial, often phrased as requests for clarification or alternative possibilities; speakers respond expansively, acknowledge uncertainty, and build on the question rather than rebutting it.\n\nMeeting style for this meeting (round_robin_updates): Each person takes a turn reporting what they have done since last time. Updates are fairly long and mostly uninterrupted. There are a few clarifying questions between updates and little cross-talk. The discussion that does happen is brief.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - Okay, mine. I got through most of the interviews, I think fourteen of twenty, and the rest are scheduled for the following two weeks.\n  - Fourteen, nice. Were those all from the first batch?\n  - Most of them. A couple were referrals.\nOpening: Start with someone saying what they most want out of this meeting, briefly and casually.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Protecting outdoor workers from wildfire smoke when air-quality alerts arrive after the shift has already started.",
+  "disciplines": [
+    "environmental science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Marisol Vega",
+      "discipline": "environmental science",
+      "functional_role": "project manager",
+      "background": "An air-quality scientist with 12 years of experience in wildfire-smoke exposure assessment for rural communities. She has managed county-scale monitoring projects using regulatory PM2.5 data, low-cost sensor co-location, satellite aerosol products, and smoke-plume forecast systems. Her recent work has examined indoor-outdoor particulate infiltration in schools, community centers, and agricultural facilities during smoke episodes.",
+      "distinct_perspective": "Frames the pilot as an operational exposure-classification problem: the team needs a defensible, timely trigger that integrates observed PM2.5 with forward-looking plume information rather than treating either source as sufficient alone. She is focused on quantifying alert-feed latency, local spatial representativeness, and the actual protection provided by candidate clean-air spaces through infiltration measurements. She sees the initial protocol as a testable decision workflow whose thresholds and routing rules must follow environmental characterization, not assumptions.",
+      "tone": "enthusiastic",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "highly confident in their discipline's contribution"
+    },
+    {
+      "name": "Dr. Aaron Patel",
+      "discipline": "epidemiology",
+      "functional_role": "research engineer",
+      "background": "An occupational and environmental epidemiologist with 8 years of experience designing field studies of short-term air-pollution exposure and respiratory health. He has worked with repeated symptom surveys, personal exposure monitoring, urgent-care and emergency-department encounter data, and quasi-experimental pilot designs. Much of his prior work has been in urban settings, and he is adapting those measurement approaches to agricultural and contingent-worker populations.",
+      "distinct_perspective": "Approaches the pilot through measurement validity and causal interpretation. He wants the team to pre-specify feasible exposure metrics and a short follow-up for acute respiratory symptoms, while developing transparent criteria for identifying plausibly smoke-related respiratory visits. He is especially concerned that heat, physical exertion, baseline respiratory disease, and differential access to care could distort apparent associations. He will press the group to distinguish feasibility and signal detection in a pilot from an effectiveness claim.",
+      "tone": "informal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "questioning",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    },
+    {
+      "name": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "discipline": "sociology",
+      "functional_role": "domain expert",
+      "background": "A medical and labor sociologist with 14 years of experience conducting bilingual qualitative research with farmworkers, day laborers, and immigrant worker organizations in the western United States. Her methods include rapid ethnography, semi-structured interviews, workplace communication mapping, and participatory protocol design. She has studied how piece-rate pay, contractor arrangements, immigration concerns, transportation constraints, and supervisor discretion shape whether workers can act on health guidance.",
+      "distinct_perspective": "Treats an alert as a social and employment event rather than merely an information event. She will ask how a mid-shift message reaches workers across crews and contractors, who can authorize a break or relocation, and whether following instructions could cost workers pay, future shifts, or standing with a supervisor. She prioritizes learning what English- and Spanish-language materials, trusted messengers, channels, and accessibility supports are necessary to include seasonal, informal, and day-labor workers. She views worker feasibility findings as a prerequisite for any protocol that claims to be practical.",
+      "tone": "diplomatic",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "dominant",
+      "epistemic_stance": "uncertain about how their methods apply to this problem"
+    }
+  ],
+  "research_id": "wildfire_smoke_workers",
+  "meeting_style": "round_robin_updates",
+  "meeting_opening": "Start with someone saying what they most want out of this meeting, briefly and casually.",
+  "sample_seed": 3,
+  "task_id": "coordination_01",
+  "benchmark_category": "Coordination",
+  "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+  "seed_spec": {
+    "task_id": "coordination_01",
+    "benchmark_category": "Coordination",
+    "benchmark_task": "Give a meeting planning research next steps with 2-4 disciplines represented. The evaluated AI must map tasks to disciplines consistently with the discussion.",
+    "explicit_instruction": "Hold a planning meeting with one environmental scientist, one epidemiologist, and one sociologist. Establish that the team will pursue a pilot rather than make claims about effectiveness yet. The environmental scientist should identify the need to define an alert trigger using both PM2.5 observations and plume forecasts, assess the lag in the existing alert feed, and characterize likely clean-air locations through indoor-outdoor infiltration measurements. The epidemiologist should identify the need to specify exposure and health outcome measures, including a short respiratory-symptom follow-up and criteria for identifying smoke-related respiratory visits while accounting for heat as a confounder. The sociologist should identify the need to learn how workers receive mid-shift messages, whether workers can safely act on them without losing pay or shifts, and what language/accessibility arrangements are needed for informal and day-labor workers. The group should agree that the first operational protocol cannot be finalized until the environmental trigger assessment and worker feasibility findings are available. Assign concrete next steps, owners, and dependencies. Do not resolve the numerical PM2.5 threshold, the final outcome definition, or the participating employer list during the meeting; leave these as items requiring the assigned work.",
+    "ground_truth": {
+      "agreed_scope": {
+        "decision": "Conduct a pilot to develop and test the feasibility of a mid-shift smoke alert-response protocol, not to make a definitive effectiveness claim.",
+        "population": "Outdoor workers in the selected agricultural county, including seasonal, informal, and day-labor workers.",
+        "protocol_goal": "Provide a feasible response when smoke conditions worsen after a shift has begun, potentially including relocation to cleaner indoor space, modified duties, breaks, or a stop-work option."
+      },
+      "task_assignments": [
+        {
+          "discipline": "environmental science",
+          "owner": "Environmental scientist",
+          "tasks": [
+            "Compare county PM2.5 monitor data, available local or portable sensor options, and regional smoke-plume forecasts to propose candidate real-time alert triggers.",
+            "Document the timing and lag of the current alert feed relative to observed smoke conditions during representative smoke events.",
+            "Measure or estimate indoor-outdoor PM2.5 infiltration at candidate clean-air locations and report which sites could plausibly reduce exposure."
+          ],
+          "deliverable": "A trigger-options memo and clean-air-site exposure characterization.",
+          "dependencies": [
+            "The operational protocol must wait for the trigger-options memo and clean-air-site characterization."
+          ]
+        },
+        {
+          "discipline": "epidemiology",
+          "owner": "Epidemiologist",
+          "tasks": [
+            "Draft a measurement plan for worker smoke exposure and short-term respiratory symptoms following alert events.",
+            "Propose a case definition and data source for smoke-related respiratory visits, while distinguishing the pilot's feasible surveillance outcomes from a definitive causal health-effect study.",
+            "Specify how heat will be measured and addressed as a confounder in the pilot analysis."
+          ],
+          "deliverable": "A draft outcome, case-definition, and confounding-control plan.",
+          "dependencies": [
+            "Final outcome definitions remain pending review of feasible symptom and visit data sources."
+          ]
+        },
+        {
+          "discipline": "sociology",
+          "owner": "Sociologist",
+          "tasks": [
+            "Conduct formative interviews or brief fieldwork with workers, labor intermediaries, and employers about how mid-shift alerts can reach workers and which communication channels are trusted.",
+            "Assess whether workers can take breaks, move indoors, change tasks, or stop work without retaliation, lost pay, or loss of future shifts.",
+            "Develop recommendations for English and Spanish materials and for recruitment and communication approaches that include informal and day-labor workers."
+          ],
+          "deliverable": "A worker and employer feasibility brief, including communication and language-access recommendations.",
+          "dependencies": [
+            "The operational protocol must wait for findings about safe worker actions, communication channels, and language access."
+          ]
+        }
+      ],
+      "coordination_decisions": [
+        "The environmental trigger assessment and the sociological feasibility findings will jointly determine the first operational alert-response protocol.",
+        "The epidemiologic measurement plan will be aligned with the resulting protocol so that alert timing, response uptake, exposure, heat, and short-term health measures can be linked.",
+        "A cross-disciplinary review will occur after the three initial deliverables are complete to select the protocol, finalize measures, and identify participating employers."
+      ],
+      "unresolved_items": [
+        "The numerical PM2.5 threshold and exact forecast criterion for triggering an alert.",
+        "The final definition of smoke-related respiratory visits and the final set of short-term health outcomes.",
+        "The participating employer list and which worksites will be enrolled."
+      ]
+    }
+  },
+  "seed_location": "Turns 1-26 substantively satisfy the requested planning discussion: Vega (environmental science) covers candidate monitor/plume triggers, alert-feed timing/lag, portable sensors, and indoor-outdoor clean-air-site conditions (turns 2, 4, 7, 9, 22); Patel (epidemiology) covers exposure/response timing, short end-of-shift and next-morning respiratory symptom follow-up, health-measure feasibility, and heat/exertion confounding (turns 6, 11, 14, 17, 19, 21, 25); Hern\u00e1ndez (sociology) covers message channels, worker trust, ability to act without pay/shift risk, access to clean-air locations, and English/Spanish/accessibility arrangements for seasonal and day-labor workers (turns 3, 8, 10, 13, 15, 18, 20, 23, 26). The pilot\u2014not-effectiveness-claim\u2014scope is explicit in turns 17 and 25. However, the task conditions are incomplete: there is no explicit assignment of concrete owners/deliverables and dependencies for all disciplines, no clear cross-disciplinary review plan after all deliverables, no explicit agreement that the operational protocol must wait jointly for environmental and worker-feasibility findings (though strongly implied in turns 26-27), and the unresolved PM2.5 threshold, final outcome definition, and participating employer list are not all explicitly left open.",
+  "ground_truth": {
+    "agreed_scope": {
+      "decision": "Conduct a pilot to develop and test the feasibility of a mid-shift smoke alert-response protocol, not to make a definitive effectiveness claim.",
+      "population": "Outdoor workers in the selected agricultural county, including seasonal, informal, and day-labor workers.",
+      "protocol_goal": "Provide a feasible response when smoke conditions worsen after a shift has begun, potentially including relocation to cleaner indoor space, modified duties, breaks, or a stop-work option."
+    },
+    "task_assignments": [
+      {
+        "discipline": "environmental science",
+        "owner": "Environmental scientist",
+        "tasks": [
+          "Compare county PM2.5 monitor data, available local or portable sensor options, and regional smoke-plume forecasts to propose candidate real-time alert triggers.",
+          "Document the timing and lag of the current alert feed relative to observed smoke conditions during representative smoke events.",
+          "Measure or estimate indoor-outdoor PM2.5 infiltration at candidate clean-air locations and report which sites could plausibly reduce exposure."
+        ],
+        "deliverable": "A trigger-options memo and clean-air-site exposure characterization.",
+        "dependencies": [
+          "The operational protocol must wait for the trigger-options memo and clean-air-site characterization."
+        ]
+      },
+      {
+        "discipline": "epidemiology",
+        "owner": "Epidemiologist",
+        "tasks": [
+          "Draft a measurement plan for worker smoke exposure and short-term respiratory symptoms following alert events.",
+          "Propose a case definition and data source for smoke-related respiratory visits, while distinguishing the pilot's feasible surveillance outcomes from a definitive causal health-effect study.",
+          "Specify how heat will be measured and addressed as a confounder in the pilot analysis."
+        ],
+        "deliverable": "A draft outcome, case-definition, and confounding-control plan.",
+        "dependencies": [
+          "Final outcome definitions remain pending review of feasible symptom and visit data sources."
+        ]
+      },
+      {
+        "discipline": "sociology",
+        "owner": "Sociologist",
+        "tasks": [
+          "Conduct formative interviews or brief fieldwork with workers, labor intermediaries, and employers about how mid-shift alerts can reach workers and which communication channels are trusted.",
+          "Assess whether workers can take breaks, move indoors, change tasks, or stop work without retaliation, lost pay, or loss of future shifts.",
+          "Develop recommendations for English and Spanish materials and for recruitment and communication approaches that include informal and day-labor workers."
+        ],
+        "deliverable": "A worker and employer feasibility brief, including communication and language-access recommendations.",
+        "dependencies": [
+          "The operational protocol must wait for findings about safe worker actions, communication channels, and language access."
+        ]
+      }
+    ],
+    "coordination_decisions": [
+      "The environmental trigger assessment and the sociological feasibility findings will jointly determine the first operational alert-response protocol.",
+      "The epidemiologic measurement plan will be aligned with the resulting protocol so that alert timing, response uptake, exposure, heat, and short-term health measures can be linked.",
+      "A cross-disciplinary review will occur after the three initial deliverables are complete to select the protocol, finalize measures, and identify participating employers."
+    ],
+    "unresolved_items": [
+      "The numerical PM2.5 threshold and exact forecast criterion for triggering an alert.",
+      "The final definition of smoke-related respiratory visits and the final set of short-term health outcomes.",
+      "The participating employer list and which worksites will be enrolled."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Hi, everyone. Before we get into it, I\u2019m hoping we can leave today with a clearer sense of what we need to learn from workers and crew leads before we treat an alert protocol as workable, especially once people are already out in the fields. Maybe we can do a quick update\u2014quick updates first?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That would be really useful. On my side, I want us to resist naming a trigger rule before we know what the monitor and plume product actually buy us locally. Last season's timing may tell us the alert feed is already behind the exposure curve. And for the indoor sites, I'm especially interested in which ones workers could realistically reach mid-shift, because a nominal clean-air room- if it's forty minutes away, that's not an intervention."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Even if a site is close on a map, I\u2019d want to know if a crew lead can actually release people, whether there\u2019s transport, and what happens to piece-rate earnings during that time. Marisol, when the plume forecast is worsening, do you have a sense yet of how much lead time it might give us over the monitor?"
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Not yet, and I don\u2019t want to overpromise. I\u2019m expecting the plume product might give us a useful directional window, maybe several hours in some transport regimes, but it\u2019ll miss or mis-time local surface concentrations. So I need to reconstruct last season\u2019s events against the county series and measure that lead or lag explicitly. I\u2019m also checking whether a few colocated portable sensors would show field-level gradients the county monitor can\u2019t see, and if they do..."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Mm, that field variation worries me."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "That variation matters for what we can honestly measure. Marisol, when you do that reconstruction, could you look at the distribution of monitor-to-plume timing, not just an average lead? For the pilot, I'd want to log the forecast, the monitor crossing, and the actual crew response separately. Otherwise a null symptom signal could just- it could mean the alert arrived after the relevant exposure window."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I\u2019ll treat those as three distinct timestamps, and I\u2019ll give us the full event-level distribution, especially the bad tail, not just the median. And I also want to flag when the county monitor is plausibly unrepresentative of a crew\u2019s location, because a clean-looking central-site trace could otherwise make the response look late when it\u2019s really- when it\u2019s actually a spatial mismatch."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "I\u2019d be cautious about calling any response late until we know what the crew actually heard and who had discretion to act. A central monitor, a forecast, a supervisor\u2019s text, and a crew lead- those are four different events from the worker\u2019s side, you know? I\u2019d like our fieldwork to capture those timestamps too."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That distinction is really important. I can keep the environmental timestamps alongside the communication chain instead of trying to collapse them into one \"alert time,\" and then we can see whether a miss was forecast performance, monitor representativeness, dissemination, or a genuinely infeasible response. For the field locations, Luc\u00eda, I\u2019d really value a short list of places crews could actually get to within, say, a break-length, break-length window, not just sites that exist."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "I can build that list through brief field visits instead of assuming the health department's site list is usable. I'd look at where crews are, how they get around, and whether a room feels safe to enter mid-shift. And I'd test the English and Spanish alert language with workers and crew leads, because the same instruction can land very differently as a text than when someone repeats it in person."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "That would help a lot, because for the symptom piece, I need to know what follow-up channel is realistic after the shift. Luc\u00eda, do you have an early hunch whether a very short text or WhatsApp check-in the next morning would reach day-labor workers, or would it, um, need to come through the crew lead? I'm trying not to build an outcome measure around a response pattern that's mostly about phone access or pay pressure."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Yeah, that\u2019s a real concern."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "I don't think it can be just one channel. A WhatsApp or text the next morning may work for some people, but for day laborers and seasonal crews it may be intermittent or shared, or they may just ignore it if it feels connected to the employer. I'd want to ask workers whether a community intermediary feels more trustworthy. And Aaron, would voice responses or assisted completion still give you something interpretable?"
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "I think so, as long as we treat the mode as part of the measurement process instead of pretending it\u2019s neutral. We could keep the core symptom items really short and identical, cough, wheeze, shortness of breath, throat or eye irritation, and record whether it was self-completed, voice, or assisted. Then we can see whether responses differ by channel. I\u2019d also want a baseline respiratory-history question early on, but not anything that turns the check-in into a survey."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "That sounds workable, especially if the assisted option is clearly separate from the employer. Otherwise people may answer in ways that feel safer rather than more accurate. I\u2019d also ask in the formative conversations who they\u2019d actually accept help from. A promotor/a, a worker organization, maybe a clinic outreach person. It may- it could differ pretty sharply by crew arrangement."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "That mode field is useful on the environmental side too, because we can line up the symptom window with the response timestamp instead of acting like everyone had the same intervention. Aaron, if smoke goes up partway through a shift, is next-morning reporting still close enough to interpret if we log when they moved indoors, or would you want an end-of-shift check as..."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "I'd lean toward a really brief end-of-shift check, if we can keep it low burden, and then a next-morning follow-up for symptoms that emerge or persist overnight. But I don't think we should treat either one as a clean acute-effect measure until we capture heat and task intensity that day. The throat and eye reports I saw last summer were weirdly high on hot, only moderately smoky days. We can use the pilot to see whether those windows and channels actually give us usable within-event signal."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "And I\u2019d be careful that an end-of-shift check doesn\u2019t become another thing workers have to do when they\u2019re trying to get transport or secure tomorrow\u2019s work. In the field conversations, I can ask what moment is least risky and most, uh, realistic, and whether we can capture heat and task intensity with a couple of plain-language items instead of asking people to reconstruct the whole day."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "A couple of plain-language items may be enough, like whether the work felt light, moderate, or very strenuous, and whether they spent much of the shift in direct sun. I'd rather measure those imperfectly than leave heat and exertion completely folded into the smoke signal. We can also pair that with weather-station temperature or heat index, assuming there's one close enough to the crews, crews."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Mm. And the heat question needs to include whether they could get water, shade, or a break, because those aren't just individual conditions. They depend on the crew and the supervisor. I don't think we need to settle the exact items today, but that's something I'd put in the worker feasibility conversations, whether those questions feel answerable, answerable at all after a piece-rate day."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "I\u2019d keep those as context items, not try to turn them into a precise heat-exposure score. For the analysis, we need the ambient heat index plus those worker-reported conditions, then see if the symptom pattern is even separable from smoke in this small pilot. Otherwise, we\u2019ll be calling irritation a PM effect when it may just be a brutal hot day."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "From the exposure side, that means we should keep heat as a parallel condition, not try to make the PM trigger explain every high-symptom day. I\u2019m also thinking the clean-air-site checks need temperature and, I lost my train of thought there, door traffic and HVAC operating status logged alongside indoor and outdoor PM. Two rooms that looked comparable behaved completely differently for us last season."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "And I\u2019d add one social check to that site log, like who controls the door and whether workers can enter without a supervisor calling ahead. A room can have great filtration and still be unusable if people feel they need permission, or worry they\u2019ll be marked as difficult for leaving the crew. I\u2019ll make sure the site visits ask that directly."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "Yes\u2014usability is part of the exposure pathway, not an add-on."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "That\u2019s why I\u2019d define uptake as more than just, \"the site was available.\" We should log whether a worker was offered the option, whether they could enter, and how long they actually spent there. Otherwise, any exposure or symptom comparison is basically uninterpretable. I\u2019ll keep the outcome plan focused on feasibility and signal detection, not an effectiveness claim, until we know what those logs and the follow-ups can support."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "That feels like the right stopping point. We should not call this an employer protocol until we know whether workers are actually offered the response, able to use it, and safe using it. I\u2019ll frame the formative piece around that whole chain, the message, authority, transport, pay risk, and follow-up channel, and come back with a feasibility brief before we lock the first version, because..."
+    },
+    {
+      "speaker": "Dr. Marisol Vega",
+      "text": "I think we've covered what we needed for today, and I know we're at the hard stop. Thanks, everyone. Let's reconnect once the feasibility and environmental\u2014 once those pieces have had a little time to take shape."
+    },
+    {
+      "speaker": "Dr. Aaron Patel",
+      "text": "Sounds good. Take care, everyone."
+    },
+    {
+      "speaker": "Luc\u00eda Hern\u00e1ndez, PhD",
+      "text": "Thanks, both. Bye for now."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 3,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 4,
+    "domain_alignment": 4,
+    "dialogue_flow": 4,
+    "evidence_turns": [
+      2,
+      4,
+      6,
+      7,
+      9,
+      10,
+      13,
+      14,
+      17,
+      21,
+      22,
+      23,
+      25,
+      26,
+      27
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths",
+      "imperfect coherence"
+    ],
+    "issues": [
+      "Task-compliance gap: no concrete, explicit assignments with owners and deliverables are made for all three disciplines. Marisol describes work she needs to do in turns 4 and 7, Luc\u00eda volunteers fieldwork in turns 10 and 26, and Aaron proposes measurement elements in turns 14, 17, 19, 21, and 25, but the meeting never clearly assigns the required epidemiologic case-definition/data-source work for smoke-related respiratory visits or identifies its deliverable.",
+      "Task-compliance gap: the required cross-disciplinary review after the three deliverables is not explicitly agreed. Turn 27 only says to reconnect once feasibility and environmental pieces have developed; it omits Aaron's deliverable and does not state that the team will select the protocol, finalize measures, and identify participating employers then.",
+      "Task-compliance gap: participating employers/worksites are not explicitly left as a future item to identify. They are simply absent. This preserves non-resolution, but does not establish the planned dependency required by the ground truth.",
+      "Seed recoverability is limited because the transcript never states the full protocol goal, including modified duties, breaks, and a stop-work option. It discusses indoor relocation and breaks (turns 2, 17, 18, 25), but does not clearly establish the broader response menu or population as outdoor workers in a selected agricultural county.",
+      "Naturalness problem: most substantive turns are polished, self-contained mini-arguments that neatly extend the prior point and land on a clear action or implication, especially turns 2-4, 6-10, 13-18, and 21-26. This reads more like scripted collaborative prose than an unpolished round-robin update meeting.",
+      "Naturalness problem: the transcript uses a prohibited stock phrase in turn 22: \"I lost my train of thought there.\" It also introduces an oddly clean recovery into a detailed site-log recommendation, making the disfluency feel inserted rather than organically consequential.",
+      "Naturalness problem: although there are some hedges and repetitions, they are largely superficial additions to otherwise grammatically complete, highly organized turns. The meeting contains little genuine uncertainty exploration beyond methodological caveats; concerns are typically converted immediately into a proposed measurement or task.",
+      "Domain-alignment minor issue: Marisol in turn 9 requests Luc\u00eda's feasibility list, and Aaron frequently helps formulate operational logging decisions. This is collaborative and plausible, but a few operational-design statements could be made by any participant rather than being tightly discipline-specific."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.18,
+    "turn_moves": {
+      "proposal": 10,
+      "concern": 2,
+      "question": 3,
+      "answer": 2,
+      "request": 2,
+      "commitment": 5,
+      "agreement": 4,
+      "backchannel": 1
+    },
+    "volunteer_turns": [
+      4,
+      7,
+      10,
+      13,
+      15,
+      18,
+      23,
+      25,
+      26
+    ],
+    "unsure_turns": [
+      4,
+      13,
+      19,
+      22
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 31,
+      "scores": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.87,
+      "exploration_share": 0.19,
+      "approved": false,
+      "issues": [
+        "Task-compliance gap: Luc\u00eda establishes safety, permission, pay, day-labor inclusion, and communication-channel questions (turns 3, 6, 12, 21, 25), but the meeting never assigns development of English and Spanish materials or an explicit language/accessibility recommendation deliverable required by the ground truth.",
+        "Task-compliance gap: Aaron says heat will be included alongside task intensity in the event record/analysis (turn 22), but he does not specify how heat will be measured or addressed as a confounder, and no concrete epidemiology deliverable is assigned.",
+        "Task-compliance gap: there is no explicit cross-disciplinary review after all three deliverables, nor an explicit plan to identify participating employers at that review. The employer/worksite list is left open implicitly, but the required coordination decision is absent.",
+        "Task-compliance gap: environmental and sociological next steps are fairly concrete (turns 25 and 28), but Aaron has no clearly stated deliverable such as a draft outcome/case-definition/confounding-control plan; turn 26 only says he needs to check data availability.",
+        "Naturalness is limited by the highly polished, sequential construction of most substantive turns. Speakers repeatedly turn the prior concern into a complete analytical distinction and a next action, especially turns 15-23; this reads more like collaboratively drafted planning prose than spontaneous round-robin updates.",
+        "The stated round_robin_updates style is only partly realized: after the opening, the transcript becomes an extended tightly coupled technical discussion rather than each person reporting a relatively uninterrupted update since the last meeting."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 3,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 4,
+        "domain_alignment": 4,
+        "dialogue_flow": 4
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.18,
+      "approved": false,
+      "issues": [
+        "Task-compliance gap: no concrete, explicit assignments with owners and deliverables are made for all three disciplines. Marisol describes work she needs to do in turns 4 and 7, Luc\u00eda volunteers fieldwork in turns 10 and 26, and Aaron proposes measurement elements in turns 14, 17, 19, 21, and 25, but the meeting never clearly assigns the required epidemiologic case-definition/data-source work for smoke-related respiratory visits or identifies its deliverable.",
+        "Task-compliance gap: the required cross-disciplinary review after the three deliverables is not explicitly agreed. Turn 27 only says to reconnect once feasibility and environmental pieces have developed; it omits Aaron's deliverable and does not state that the team will select the protocol, finalize measures, and identify participating employers then.",
+        "Task-compliance gap: participating employers/worksites are not explicitly left as a future item to identify. They are simply absent. This preserves non-resolution, but does not establish the planned dependency required by the ground truth.",
+        "Seed recoverability is limited because the transcript never states the full protocol goal, including modified duties, breaks, and a stop-work option. It discusses indoor relocation and breaks (turns 2, 17, 18, 25), but does not clearly establish the broader response menu or population as outdoor workers in a selected agricultural county.",
+        "Naturalness problem: most substantive turns are polished, self-contained mini-arguments that neatly extend the prior point and land on a clear action or implication, especially turns 2-4, 6-10, 13-18, and 21-26. This reads more like scripted collaborative prose than an unpolished round-robin update meeting.",
+        "Naturalness problem: the transcript uses a prohibited stock phrase in turn 22: \"I lost my train of thought there.\" It also introduces an oddly clean recovery into a detailed site-log recommendation, making the disfluency feel inserted rather than organically consequential.",
+        "Naturalness problem: although there are some hedges and repetitions, they are largely superficial additions to otherwise grammatically complete, highly organized turns. The meeting contains little genuine uncertainty exploration beyond methodological caveats; concerns are typically converted immediately into a proposed measurement or task.",
+        "Domain-alignment minor issue: Marisol in turn 9 requests Luc\u00eda's feasibility list, and Aaron frequently helps formulate operational logging decisions. This is collaborative and plausible, but a few operational-design statements could be made by any participant rather than being tightly discipline-specific."
+      ]
+    }
+  ]
+}

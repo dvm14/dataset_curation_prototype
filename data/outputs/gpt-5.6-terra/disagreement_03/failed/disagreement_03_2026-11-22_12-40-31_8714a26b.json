@@ -1,0 +1,344 @@
+{
+  "transcript_id": "8714a26b",
+  "generated_at": "2026-11-22T12:40:31.186552",
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has a relaxed, collegial academic-video-call style, with mostly short to medium turns outside the presentations and long, structured monologues during talks. Early conversation is informal and fragmented, with frequent greetings, technical check-ins, side chatter, fillers (\u201cum,\u201d \u201cyeah,\u201d \u201cokay\u201d), repetitions, self-corrections, and occasional awkward pauses or transcription-like false starts. Interruptions are limited during formal talks but common in the sense of quick acknowledgments, backchanneling, and loosely timed follow-up questions. Speakers hedge heavily when speculating, using phrases like \u201cI think,\u201d \u201cmaybe,\u201d \u201csort of,\u201d \u201ckind of,\u201d \u201clikely,\u201d and \u201cwe\u2019re interested in,\u201d while presenting results more confidently. Questions are usually prefaced politely\u2014\u201cI have a question,\u201d \u201cnaive question,\u201d \u201cjust curious\u201d\u2014and often unfold as multi-part, exploratory thoughts rather than concise interrogatives. Challenges are indirect and collaborative: participants frame alternatives as open questions, caveats, or extensions rather than objections. Introductions and transitions are more formal and appreciative, but the overall register remains warm, conversational, and supportive, with praise before questions and frequent thanks at handoffs.\n\nMeeting style for this meeting (deferential_junior): A senior person leads and a more junior person is cautious, checks before offering ideas ('this might be a dumb question') and sometimes holds back something useful. A third person occasionally draws them out. The senior person is friendly but sometimes talks over them.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - This might be a dumb question, but is that normal for this kind of data?\n  - No, it's fine, it's- well, it depends. Go ahead.\n  - Sorry, I was going to say, in my group we usually-\nOpening: Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions.",
+  "research_problem": "Protecting outdoor workers from wildfire smoke when air-quality alerts arrive after the shift has already started.",
+  "disciplines": [
+    "environmental science",
+    "epidemiology",
+    "sociology"
+  ],
+  "discipline_distance": "distant",
+  "speakers": [
+    {
+      "name": "Dr. Mei Lin",
+      "discipline": "environmental science",
+      "functional_role": "domain expert",
+      "background": "Dr. Lin is an atmospheric exposure scientist with 14 years of experience studying wildfire-smoke microenvironments in agricultural valleys and urban-edge worksites. She has led field campaigns using regulatory monitors, low-cost sensor networks, portable nephelometers, and personal PM2.5 samplers, with particular attention to calibration, spatial gradients, and task-related variation in inhaled exposure. For this pilot, she is responsible for integrating plume forecasts, nearby monitor data, and feasible site-level measurement protocols.",
+      "distinct_perspective": "Dr. Lin treats an air-quality alert as a useful decision trigger but not automatically as a valid measure of an individual worker's exposure. She focuses on how smoke varies across worksites, through the day, and by task, and on the distinction between ambient concentration, personal exposure, and the operational threshold used to trigger protective action. She will press for measurement designs that preserve that distinction while remaining workable for employers.",
+      "tone": "formal",
+      "language_complexity": "high jargon \u2014 uses discipline-specific terminology freely",
+      "communication_style": "collaborative",
+      "epistemic_stance": "open to other perspectives, willing to revise"
+    },
+    {
+      "name": "Dr. Rafael Alvarez",
+      "discipline": "epidemiology",
+      "functional_role": "project manager",
+      "background": "Dr. Alvarez is an occupational epidemiologist with 11 years of experience designing pragmatic studies of heat, air pollution, and respiratory outcomes among hourly workers. His work combines short repeated symptom surveys, employer scheduling data, electronic urgent-care and emergency-department encounter data, and quasi-experimental analyses of policy changes. He manages the pilot timeline, outcome collection plan, and analytic framework for comparing health indicators across alert periods and non-alert periods.",
+      "distinct_perspective": "Dr. Alvarez prioritizes a pre-specified, consistently applied exposure classification that can be linked to same-day symptoms and urgent respiratory-care visits without creating so much field burden that the study loses data. He sees alert timing as an administratively actionable index that may support a pragmatic evaluation, while recognizing that environmental measurement specialists should determine how much local refinement is necessary and feasible. He is attentive to denominators, missingness, confounding by work intensity and heat, and the limited statistical power of a three-employer pilot.",
+      "tone": "informal",
+      "language_complexity": "moderate \u2014 balances jargon with accessible language",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    },
+    {
+      "name": "Dr. Amara Okafor",
+      "discipline": "sociology",
+      "functional_role": "principal investigator",
+      "background": "Dr. Okafor is a labor sociologist with 16 years of experience conducting interviews, workplace observations, and organizational network studies in agriculture, landscaping, food processing, and other contingent-work settings. Her research examines how safety rules move through contractors, crew leaders, labor brokers, and informal hiring arrangements, and how wage insecurity, immigration-related concerns, and language access shape whether workers can use nominal protections. She leads the pilot's implementation and equity evaluation.",
+      "distinct_perspective": "Dr. Okafor distinguishes a policy's formal announcement from its actual reach, credibility, and usability for workers with unequal bargaining power. She examines who receives a message, who understands it, who can request reassignment without retaliation, and whether paid alternatives are real for direct hires, subcontracted crews, and day laborers. She regards employer records and message-delivery logs as organizational claims that need to be checked against workers' accounts and the labor arrangements present at each site.",
+      "tone": "formal",
+      "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+      "communication_style": "assertive",
+      "epistemic_stance": "defers to other experts outside their domain"
+    }
+  ],
+  "research_id": "wildfire_smoke_workers",
+  "meeting_style": "deferential_junior",
+  "meeting_opening": "Start with a few lines of small talk (weather, campus, a deadline elsewhere), then move to the topic without announcing it.",
+  "sample_seed": 4,
+  "task_id": "disagreement_03",
+  "benchmark_category": "Disagreement/Agreement",
+  "benchmark_task": "Give a meeting with two indirect disagreements, softened into questions or comments about disciplinary practice rather than explicit statements of disagreement. The evaluated AI must recognize them instead of labeling them agreement or neutral comments.",
+  "seed_spec": {
+    "task_id": "disagreement_03",
+    "benchmark_category": "Disagreement/Agreement",
+    "benchmark_task": "Give a meeting with two indirect disagreements, softened into questions or comments about disciplinary practice rather than explicit statements of disagreement. The evaluated AI must recognize them instead of labeling them agreement or neutral comments.",
+    "explicit_instruction": "Simulate a planning meeting among Dr. Lin (environmental science), Dr. Alvarez (epidemiology), and Dr. Okafor (sociology). Include exactly two indirect disagreements, each expressed as a collegial question or a comment about disciplinary practice rather than an explicit claim that someone is wrong. First, Dr. Lin should question whether treating a countywide alert time as every worker's exposure onset is adequate, noting that smoke conditions can differ by worksite and task and proposing personal or site-level PM2.5 measurements. This indirectly challenges Dr. Alvarez's planned alert-based exposure classification. Second, Dr. Okafor should question whether employer records and translated text messages can be treated as evidence that workers received and could act on a protection offer, noting subcontracting, day-labor arrangements, fear of lost shifts, and language access. This indirectly challenges the proposed implementation measure used by Dr. Lin and Dr. Alvarez. Keep both disagreements unresolved by the end of the meeting; the group may agree to examine feasibility, but must not settle on a final measurement choice. Include ordinary constructive discussion and at least one genuine agreement: all participants support providing prompt multilingual smoke-risk information and exploring paid indoor alternatives or reassignment. Do not state that either indirect comment is a disagreement, and do not make any participant identify the benchmark task.",
+    "ground_truth": {
+      "indirect_disagreements": [
+        {
+          "speaker": "Dr. Lin, environmental science",
+          "target": "Dr. Alvarez's plan to classify exposure onset using the countywide alert timestamp",
+          "substantive_issue": "A countywide alert is not necessarily a valid proxy for each outdoor worker's actual smoke exposure because PM2.5 varies across worksites and tasks.",
+          "required_indirect_form": "A polite question or disciplinary-method comment about exposure assessment, raising site-level or personal monitoring as an alternative.",
+          "why_it_is_disagreement": "It challenges the adequacy of the epidemiologic exposure definition even though it is framed as a methodological question."
+        },
+        {
+          "speaker": "Dr. Okafor, sociology",
+          "target": "The team's plan to use employer records and translated messages as evidence that workers received and could use the intervention",
+          "substantive_issue": "Documented messages and employer records do not establish that subcontracted, day-labor, or precariously employed workers received, understood, or could safely act on protections.",
+          "required_indirect_form": "A polite question or comment about what implementation evidence captures, mentioning employment arrangements, fear of losing shifts, or language access.",
+          "why_it_is_disagreement": "It challenges the validity of the proposed implementation measure while avoiding direct confrontation."
+        }
+      ],
+      "genuine_agreement": "The participants agree that workers need prompt multilingual smoke-risk information and that paid indoor breaks, indoor reassignment, or comparable protective alternatives should be explored.",
+      "unresolved_items": [
+        "Whether exposure should be defined by countywide alert timing, worksite monitoring, personal monitoring, or a combination.",
+        "Whether employer records and translated messages are sufficient implementation evidence, and what worker-centered evidence is needed.",
+        "Whether employers will fund paid indoor alternatives or reassignment."
+      ]
+    }
+  },
+  "seed_location": "The two required indirect disagreements are present, though not both in the exact requested phrasing. (1) Turns 3\u20136: Dr. Alvarez proposes using a fixed alert rule that maps to a shift, and Dr. Lin in turn 4 collegially qualifies the exposure-assessment practice: she would use the county alert administratively but would not treat its timestamp/concentration as the worker's exposure start, proposing nearby/site PM2.5 measurement and task/location records. This indirectly challenges alert-time exposure classification. (2) Turns 17\u201322, especially 17, 19, and 22: Dr. Okafor says an employer delivery log cannot stand in for implementation and questions whether records capture whether workers could safely use protections, citing subcontracting, day labor, wages/lost hours, and language/channel concerns. This indirectly challenges employer-record/message-based implementation evidence. Both remain unresolved: turns 5 and 20 retain alert timing while considering site validation and worker/location data; turns 17\u201323 discuss additional worker-centered evidence rather than settling sufficiency; paid usable alternatives remain unresolved in turn 17. Genuine agreement on multilingual communication and protective paid/indoor/reassignment options is reflected in turns 9\u201312 and 14\u201320.",
+  "ground_truth": {
+    "indirect_disagreements": [
+      {
+        "speaker": "Dr. Lin, environmental science",
+        "target": "Dr. Alvarez's plan to classify exposure onset using the countywide alert timestamp",
+        "substantive_issue": "A countywide alert is not necessarily a valid proxy for each outdoor worker's actual smoke exposure because PM2.5 varies across worksites and tasks.",
+        "required_indirect_form": "A polite question or disciplinary-method comment about exposure assessment, raising site-level or personal monitoring as an alternative.",
+        "why_it_is_disagreement": "It challenges the adequacy of the epidemiologic exposure definition even though it is framed as a methodological question."
+      },
+      {
+        "speaker": "Dr. Okafor, sociology",
+        "target": "The team's plan to use employer records and translated messages as evidence that workers received and could use the intervention",
+        "substantive_issue": "Documented messages and employer records do not establish that subcontracted, day-labor, or precariously employed workers received, understood, or could safely act on protections.",
+        "required_indirect_form": "A polite question or comment about what implementation evidence captures, mentioning employment arrangements, fear of losing shifts, or language access.",
+        "why_it_is_disagreement": "It challenges the validity of the proposed implementation measure while avoiding direct confrontation."
+      }
+    ],
+    "genuine_agreement": "The participants agree that workers need prompt multilingual smoke-risk information and that paid indoor breaks, indoor reassignment, or comparable protective alternatives should be explored.",
+    "unresolved_items": [
+      "Whether exposure should be defined by countywide alert timing, worksite monitoring, personal monitoring, or a combination.",
+      "Whether employer records and translated messages are sufficient implementation evidence, and what worker-centered evidence is needed.",
+      "Whether employers will fund paid indoor alternatives or reassignment."
+    ]
+  },
+  "transcript": [
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "Good morning, everyone. I hope the smoke has stayed away from your part of town this week. It\u2019s been oddly hazy here already. I know we\u2019re all carrying the season deadline, so I thought today we could focus on what an alert actually has to trigger at the worksite, and whether that protection reaches people outside the direct payroll, or..."
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "Mm, yes."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "Morning. It's already looking like one of those seasons where the forecast changes before lunch, unfortunately. For the pilot, I think we need an alert rule that's fixed up front and actually maps to a shift. But I'd- I'd like Mei's sense first on how much the nearby monitors tend to reorder conditions compared with the public monitor."
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "They can reorder things substantially, especially in these valleys. I\u2019d use the county alert as the administrative trigger, but I wouldn\u2019t treat its timestamp or concentration as when the worker\u2019s exposure starts. A nearby site measurement at least lets us check whether the plume was actually over that worksite. We don\u2019t need a dense network, maybe one calibrated portable PM2.5 instrument per employer site during alert periods, but task and location records would still matter because..."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "That sounds workable, county alert as the clock for the intervention and analysis, then the portable instrument as site-level validation rather than something that keeps changing the case definition. Mei, would one unit per employer really capture the landscaping crews when they scatter across locations, or- I lost my thread there. Do we need a simple work-location field on the shift record to know when that check is meaningful?"
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "One unit is adequate only for a fixed agricultural site, and even there I'd want the inlet placed away from loading dust and irrigation spray. For dispersed landscaping crews, yes, a simple location-and-task field is essential. Otherwise, a monitor at the yard isn't evidence of conditions at a roadside crew. I'm also wondering, Amara, whether supervisors' existing dispatch records are reliable enough to reconstruct that without creating another reporting- I mean, another burden?"
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "I\u2019d be cautious about treating dispatch records as ground truth, especially for the subcontracted crews. They may show where a crew was assigned at 7 a.m., but not whether people moved sites or whether day laborers were added after dispatch. Maybe we should, should ask workers a very short, non-identifying location-and-task question too. And Mei, what would a crew lead actually need to get in real time for the monitor information to be usable, instead of just something we validate later?"
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "For real-time use, I wouldn't send raw monitor values to crew leads. I'd send a plain status, uh, conditions are elevated at this site, so take the pre-specified break or reassignment step, and we'd retain the time series for analysis. But for mobile crews, that status has to be tied to the crew's actual location. So Amara's short worker check-in may be more informative than dispatch alone, even if it's only once during the alert."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "I like the once-per-alert check-in, but I worry about making it identify people who were missed by the employer roster, especially if it feels like the company is tracking them. Could we make it a two- or three-item, multilingual survey that asks about task, general location type, and symptoms, without names, then link it only through a shift code where that, where that exists? Amara, do you think people would actually trust that?"
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "Not automatically. A shift code can still feel identifiable when there are only a few people on a crew, and that's even sharper for subcontracted and day-labor workers. We need to ask first, at each employer, which languages and channels people actually use. Spanish is not enough. I recently saw Mixteco-speaking workers learn a posted instruction only through a crew lead near the end of a shift. And the check-in, I would keep it voluntary, separate from supervisors, and be very clear it can't affect pay or assignment."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "From the outcome side, voluntary and genuinely separate from supervision is probably worth some missingness. Coerced completion would be worse data anyway. Could we pilot the wording and channel with a few workers before we lock it in, and ask whether a same-day symptom question feels like health support or, um, like reporting on the employer?"
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "A small pre-pilot conversation is necessary, and not just on the wording. We should ask whether the channel feels private enough, whether a crew lead is the only practical route for some workers, and whether reporting symptoms could be read as putting the next day's work at risk. If it does, then a low response rate isn't just missing data, it tells us something about how usable the protection is..."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "And analytically, I\u2019d want to preserve that distinction, not just treat nonresponse as neutral. If the voluntary check-in is mostly completed by the stable, direct-hire crews, we could- we might wind up comparing their symptoms with everybody else\u2019s absence from the dataset. Amara, in those pre-pilot conversations, could we ask what kind of aggregate reporting back to workers would make the survey feel less extractive?"
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "I\u2019d ask workers what they want returned, rather than assume a dashboard is useful. It might be something really concrete, like whether people were offered paid time, reassignment, or a real chance to stop work, reported by crew type without exposing a small crew. And I wouldn\u2019t promise individual follow-up unless we have a safe way to provide it across direct hires, subcontractors, and day laborers\u2014"
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "That kind of aggregate return would also help us interpret the exposure side, actually. Last August, I saw a packing-area monitor drop sharply after a wind shift, while a pruning crew about 6 km away was still in dense smoke. So reporting conditions and protections by crew type or broad work area- not just the county alert- may make those differences visible without identifying anyone."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "Hm, that\u2019s revealing."
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "Exactly. That is why an employer delivery log cannot stand in for implementation. We need to record, in some form, whether each crew was told to stop, offered an indoor or lower-exposure alternative, and whether taking it meant- this part is still unresolved, whether it meant losing wages. Otherwise the protection may look available on paper while being unusable in practice."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "For the analysis, I need that offer documented separately from whether people took it, and ideally why they didn't take it if workers are comfortable saying. No indoor space, a supervisor said it was impractical, wages, whatever. Otherwise low uptake could make it look like the alert did nothing when the real problem was that the option wasn't viable."
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "We should be careful that asking, \"why didn\u2019t you take it?\" doesn\u2019t make it sound like an individual choice when the choice may not have been real. I\u2019d separate out whether an option was offered, whether it was paid, who communicated it, and whether the worker believed they could use it without losing hours or being passed over later. And for day labor, I\u2019m not sure an employer record will even capture that last..."
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "And from the exposure side, I'd keep those implementation fields separate from the concentration record. A worker declining an unpaid break during high site-level PM2.5 isn't the same as a worker choosing to stay outside when paid reassignment was genuinely available. We can probably keep the employer log pretty lean, just alert time, broad crew area, option offered, whether it was paid, while the voluntary check-in tells us whether that account matched, matched what workers experienced."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "Yeah, that distinction matters."
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "And the log needs a field for labor arrangement, or we won't know whose offer we're documenting. A subcontractor saying the crew was notified isn't the same as knowing each worker had a paid, usable alternative. For day laborers, it may be especially unclear who, who had the authority to offer one at all."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "I think that labor-arrangement field is non-negotiable, and we should not use the employer roster as the denominator by default. We may need separate denominators for people listed as assigned to the crew, people documented as receiving an offer, and voluntary respondents. Otherwise the missingness gets buried before we even look at symptoms."
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "Right, that\u2019s important."
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "And alongside those denominators, I would want one explicit category for workers who were present but not on any roster. Rather than treating them as an analytic inconvenience, we may only learn about that through the voluntary channel. It's imperfect, but otherwise the day-labor gap- it disappears by design."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "For the health analysis, I\u2019d label that an observed off-roster presence. I wouldn\u2019t fold it into a denominator we can\u2019t defend. Before we close, I need to check the urgent-care data access and lag, because those encounters may be too delayed to be anything but a secondary outcome in this pilot."
+    },
+    {
+      "speaker": "Dr. Amara Okafor",
+      "text": "All right, I think we should stop there. The rest can wait until our next meeting. Thank you both, this was very helpful."
+    },
+    {
+      "speaker": "Dr. Rafael Alvarez",
+      "text": "Thanks, everyone. Take care."
+    },
+    {
+      "speaker": "Dr. Mei Lin",
+      "text": "Thank you. Goodbye."
+    }
+  ],
+  "qa_feedback": {
+    "seed_recoverable": 5,
+    "task_compliance": 3,
+    "naturalness": 2,
+    "speaker_distinctness": 5,
+    "domain_alignment": 5,
+    "dialogue_flow": 5,
+    "evidence_turns": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26
+    ],
+    "realism_signals": [
+      "fillers and false starts",
+      "hedging",
+      "uneven turn lengths, including short reactions and backchannels",
+      "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+    ],
+    "issues": [
+      "Turn 5 uses the explicitly prohibited stock phrase \"I lost my thread there.\" This directly violates the supplied meeting-style instruction.",
+      "The first indirect disagreement is recoverable in turns 3-4, but it is effectively resolved into a shared plan by turns 5 and 8: county alert becomes the intervention/analysis clock and site monitoring becomes validation. This conflicts with the requirement that the county-alert versus local/personal measurement choice remain unresolved.",
+      "The second disagreement is recoverable across turns 6-10 and 17-25, but the transcript never clearly establishes an initial plan centered on translated text messages as implementation evidence. Language access is discussed, but translated messages are not a concrete proposed implementation measure that Okafor then indirectly challenges.",
+      "The required genuine agreement is only partially explicit. Turns 8-10 support multilingual risk communication, and turns 14, 17-20 discuss paid alternatives, but all participants do not clearly endorse prompt multilingual information plus paid indoor alternatives/reassignment as a shared agreement.",
+      "The prescribed deferential-junior dynamic is weak or absent. No speaker consistently acts as the cautious junior who checks before offering ideas, and there is no clear friendly senior interruption or drawing-out behavior.",
+      "Despite several disfluencies, many substantive turns are polished, complete mini-arguments that move directly from concern to solution or assignment (for example turns 4, 10, 18-20, 23, and 25). The discussion is unusually efficient and systematically exhaustive, reducing realism.",
+      "Turn 27 functions as a tidy meeting-minutes-style closure after the group has methodically covered nearly every implementation issue; it reinforces the scripted feel, although it is brief rather than a full recap."
+    ],
+    "seed_uses": [],
+    "spoken_share": 1.0,
+    "written_turns": [],
+    "exploration_share": 0.32,
+    "turn_moves": {
+      "proposal": 10,
+      "backchannel": 4,
+      "question": 4,
+      "answer": 1,
+      "observation": 2,
+      "request": 2,
+      "concern": 2,
+      "agreement": 3,
+      "commitment": 1
+    },
+    "volunteer_turns": [
+      26
+    ],
+    "unsure_turns": [
+      5,
+      17,
+      19
+    ],
+    "approved": false
+  },
+  "qa_cycles": 2,
+  "qa_history": [
+    {
+      "attempt": 1,
+      "num_turns": 27,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 2,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 0.96,
+      "exploration_share": 0.23,
+      "approved": false,
+      "issues": [
+        "The first intended disagreement is introduced adequately by Dr. Lin in turn 4 and sharpened in turn 18, but it is ultimately resolved rather than left open: Dr. Alvarez accepts site-specific concentration curves in turn 19, Dr. Okafor says this preserves the relevant distinction in turn 20, and turns 21 and 24 settle the structure around site traces. This violates the requirement that the county-alert versus site/personal-monitoring measurement choice remain unresolved.",
+        "The second intended disagreement is raised clearly by Dr. Okafor in turns 3, 9, 12, and 16, but the group reaches a settled measurement decision: turn 13 assigns inclusive crew-site headcounts as the primary denominator and worker surveys as the reach/usability measure; turns 21-25 repeatedly endorse that structure and call inclusive headcount the gatekeeper. The task requires uncertainty about sufficiency of employer records/messages and worker-centered evidence to remain unresolved.",
+        "The transcript does not preserve the required unresolved question of whether employers will fund paid indoor alternatives or reassignment. Paid options are discussed in turns 2, 16, 17, and 22, but there is no employer-funding question left open.",
+        "The required genuine agreement is only partially explicit. Prompt multilingual information is supported in turn 14, and paid breaks/reassignment are named as options, but there is no clear all-participant agreement to explore paid indoor alternatives or reassignment; later agreement instead centers on headcounts, surveys, exposure traces, and urgent-care linkage.",
+        "The meeting does not convincingly realize the requested deferential-junior interaction style. There is no clearly junior participant who hesitates before contributing, is drawn out by a third participant, or is occasionally talked over by the senior lead. Turn 7 has limited caution about feasibility, but the overall interaction is highly balanced and polished.",
+        "Naturalness is constrained by highly complete, decision-oriented turns. Nearly every concern immediately produces a precise protocol change or assignment, and turns 21, 24, and 25 read like a tidy consensus recap. Despite fillers and repairs, the discussion feels more scripted than spontaneously exploratory."
+      ]
+    },
+    {
+      "attempt": 2,
+      "num_turns": 29,
+      "scores": {
+        "seed_recoverable": 5,
+        "task_compliance": 3,
+        "naturalness": 2,
+        "speaker_distinctness": 5,
+        "domain_alignment": 5,
+        "dialogue_flow": 5
+      },
+      "spoken_share": 1.0,
+      "exploration_share": 0.32,
+      "approved": false,
+      "issues": [
+        "Turn 5 uses the explicitly prohibited stock phrase \"I lost my thread there.\" This directly violates the supplied meeting-style instruction.",
+        "The first indirect disagreement is recoverable in turns 3-4, but it is effectively resolved into a shared plan by turns 5 and 8: county alert becomes the intervention/analysis clock and site monitoring becomes validation. This conflicts with the requirement that the county-alert versus local/personal measurement choice remain unresolved.",
+        "The second disagreement is recoverable across turns 6-10 and 17-25, but the transcript never clearly establishes an initial plan centered on translated text messages as implementation evidence. Language access is discussed, but translated messages are not a concrete proposed implementation measure that Okafor then indirectly challenges.",
+        "The required genuine agreement is only partially explicit. Turns 8-10 support multilingual risk communication, and turns 14, 17-20 discuss paid alternatives, but all participants do not clearly endorse prompt multilingual information plus paid indoor alternatives/reassignment as a shared agreement.",
+        "The prescribed deferential-junior dynamic is weak or absent. No speaker consistently acts as the cautious junior who checks before offering ideas, and there is no clear friendly senior interruption or drawing-out behavior.",
+        "Despite several disfluencies, many substantive turns are polished, complete mini-arguments that move directly from concern to solution or assignment (for example turns 4, 10, 18-20, 23, and 25). The discussion is unusually efficient and systematically exhaustive, reducing realism.",
+        "Turn 27 functions as a tidy meeting-minutes-style closure after the group has methodically covered nearly every implementation issue; it reinforces the scripted feel, although it is brief rather than a full recap."
+      ]
+    }
+  ]
+}

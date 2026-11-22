@@ -1,0 +1,639 @@
+{
+  "series_id": "b43c43ed",
+  "generated_at": "2026-11-22T14:54:58.040326",
+  "task_id": "adaptation_01",
+  "benchmark_category": "Adaptation across meetings",
+  "benchmark_task": "Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.",
+  "input_type": "meeting_pair",
+  "research_id": "school_vaccination_outreach",
+  "meeting_style": "running_out_of_time",
+  "meeting_opening": "Start mid-thought, as if the conversation was already under way before the recording started.",
+  "sample_seed": 5,
+  "research_problem": "Planning a county campaign to raise school-entry vaccination rates after a recent measles cluster, integrating surveillance evidence, service delivery, and community trust considerations.",
+  "project_context": "The Pine Valley County Health Department is preparing a six-week school-entry vaccination campaign after a measles cluster was identified in two neighboring elementary-school catchment areas. The core team includes Dr. Lena Ortiz (epidemiology), Marcus Chen (public health operations), and Dr. Aisha Bell (sociology), and they are coordinating with the county school district.",
+  "plan_document": null,
+  "ground_truth": {
+    "assumption": {
+      "meeting": "Meeting 1 \u2014 March 3, 2027",
+      "fact": "The district would provide de-identified, address-level kindergarten-registration records beginning March 15."
+    },
+    "new_fact": {
+      "meeting": "Meeting 2 \u2014 March 17, 2027",
+      "speaker": "Marcus Chen",
+      "fact": "The district legal office has temporarily halted all student-registration extract releases and has given no release date."
+    },
+    "conflict": "The hold makes the March 15 data delivery assumption unreliable or impossible, yet those records are the agreed basis for targeting invitations and selecting mobile-clinic locations for the final week of March.",
+    "plan_update": "Flag the data dependency as blocked immediately; ask the district for the status, scope, and permissible alternatives; delay or revise record-dependent targeting; and establish a fallback using existing aggregate school-entry coverage data, measles-cluster geography, clinic utilization data, and partner-led outreach in the four previously identified low-coverage catchments while privacy review continues."
+  },
+  "meetings": [
+    {
+      "label": "Meeting 1 \u2014 March 3, 2027",
+      "disciplines": [
+        "epidemiology",
+        "public health",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Lena Ortiz",
+          "discipline": "epidemiology",
+          "functional_role": "domain expert",
+          "background": "County infectious-disease epidemiologist with 11 years of experience in immunization surveillance, outbreak investigation, and small-area coverage analysis. She routinely links state immunization registry extracts, school-entry reporting, and case investigations to identify gaps in protection, and she led the analytic response to the recent measles cluster.",
+          "distinct_perspective": "Frames the campaign around preventing further transmission by locating concentrations of susceptible children before school entry. She is attentive to denominators, data completeness, timing, and the difference between a low reported rate and a genuinely under-immunized population. She sees the four catchments as priority geographic units but asks whether registration data will accurately represent families who have not yet engaged with schools.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Marcus Chen",
+          "discipline": "public health",
+          "functional_role": "PhD student",
+          "background": "DrPH candidate and county immunization-program operations analyst with 6 years of experience coordinating mobile clinics, appointment workflows, vaccine supply, and school-health partnerships. He has built outreach lists and clinic deployment plans using service-utilization data, registration feeds, and GIS routing, and is responsible for translating the campaign strategy into a six-week schedule.",
+          "distinct_perspective": "Treats the problem as a delivery-system design challenge: match clinic hours, locations, staffing, and reminders to families who are likely to need vaccination. He favors practical targeting tools that can produce weekly action lists and rapidly direct evening mobile clinics, while recognizing that data-sharing arrangements, uptake, and family contact preferences may constrain implementation.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Aisha Bell",
+          "discipline": "sociology",
+          "functional_role": "research engineer",
+          "background": "Medical sociologist and community-engagement research engineer with 9 years of experience studying institutional trust, parent decision-making, and access barriers in local public-health programs. Her work combines interviews, focus groups, survey design, and partnership mapping with faith organizations, parent liaisons, and neighborhood groups. She has advised the county on communication after prior school-health controversies.",
+          "distinct_perspective": "Approaches vaccination uptake as shaped by relationships, institutional credibility, practical burdens, and families' prior experiences with schools and health systems. She distinguishes between identifying a geographic need and earning permission to engage families effectively. She emphasizes trusted messengers, non-stigmatizing outreach, and listening mechanisms that can reveal why families are delayed or hesitant rather than assuming a single cause.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "The Pine Valley County Health Department is preparing a six-week school-entry vaccination campaign after a measles cluster was identified in two neighboring elementary-school catchment areas. The core team includes Dr. Lena Ortiz (epidemiology), Marcus Chen (public health operations), and Dr. Aisha Bell (sociology), and they are coordinating with the county school district.\n\nMeeting 1 \u2014 March 3, 2027. The team is setting the operational plan for a six-week campaign before kindergarten registration begins, including how to identify low-coverage areas and where to place vaccination services.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 1 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: All three team members meet to agree the campaign plan. Dr. Ortiz presents school-entry coverage data and identifies four elementary-school catchment areas with the largest concentration of under-immunized incoming kindergarten students, including the two areas affected by the measles cluster. Marcus Chen proposes using the district's weekly kindergarten-registration export to identify unvaccinated or incompletely vaccinated children and send families tailored appointment information; he states plainly that the district will provide de-identified, address-level registration records beginning March 15. The team agrees to make those records the targeting basis for mobile evening clinics, with the first clinics scheduled for the final week of March in the two lowest-coverage catchments. Dr. Bell recommends messages delivered through parent liaisons and faith-community partners rather than school administrators alone. The team adopts the plan without creating a fallback for the district-records assumption.",
+        "explicit_instruction": "All three team members meet to agree the campaign plan. Dr. Ortiz presents school-entry coverage data and identifies four elementary-school catchment areas with the largest concentration of under-immunized incoming kindergarten students, including the two areas affected by the measles cluster. Marcus Chen proposes using the district's weekly kindergarten-registration export to identify unvaccinated or incompletely vaccinated children and send families tailored appointment information; he states plainly that the district will provide de-identified, address-level registration records beginning March 15. The team agrees to make those records the targeting basis for mobile evening clinics, with the first clinics scheduled for the final week of March in the two lowest-coverage catchments. Dr. Bell recommends messages delivered through parent liaisons and faith-community partners rather than school administrators alone. The team adopts the plan without creating a fallback for the district-records assumption.",
+        "ground_truth": {
+          "assumption": "The campaign will receive de-identified, address-level kindergarten-registration records from the school district beginning March 15.",
+          "plan_dependent_on_assumption": "Those records will be used to target invitations and site mobile evening vaccination clinics in the lowest-coverage catchment areas.",
+          "decision": "The team schedules the first targeted mobile clinics for the final week of March and creates no fallback if the records are unavailable."
+        }
+      },
+      "ground_truth": {
+        "assumption": "The campaign will receive de-identified, address-level kindergarten-registration records from the school district beginning March 15.",
+        "plan_dependent_on_assumption": "Those records will be used to target invitations and site mobile evening vaccination clinics in the lowest-coverage catchment areas.",
+        "decision": "The team schedules the first targeted mobile clinics for the final week of March and creates no fallback if the records are unavailable."
+      },
+      "transcript": [
+        {
+          "speaker": "Marcus Chen",
+          "text": "\u2014and I think we can keep this pretty lean since we only have ten minutes. Um, before we get into it, I've got the district's March 15 registration export penciled in, which is kind of the hinge for the whole six-week schedule. What I'm hoping we can settle today is how much we trust that matching approach for picking the first clinic sites, and whether Cedar Grove and Maple Ridge still make sense for those late-March evening clinics."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "\u2014Cedar Grove and Maple Ridge still make sense as the first sites, yes. Coverage is low, there are enough incoming children that it\u2019s not just a small-denominator effect, and that\u2019s where we saw transmission. I\u2019d use the March 15 export for siting, but I\u2019m less comfortable using it as a complete invitation list. The Cedar Grove registry match had more unmatched records than I expected. Marcus, can the address export be refreshed weekly once registration opens, or\u2014"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "The district says they can refresh it weekly once registration opens, so I can use each export to update the map and the outreach queue. The unmatched Cedar Grove records are a reason not to make it invitation-only, though. We should keep the clinics open and use school channels broadly. Lena, for location, if the individual addresses are messy, is the match quality still good enough at the catchment level?"
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "At the catchment level, yes, I think it\u2019s good enough for that first decision. The unmatched records could shift the exact child count, but they\u2019re not enough to erase the pattern. Cedar Grove and Maple Ridge are low on both coverage and volume. I\u2019d just want to rerun the match after the registry cleanup before we start- before we describe neighborhood-level gaps too precisely."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "That gives me enough to hold Cedar Grove and Maple Ridge for the first two evening sites. But let's keep the language broad and not say we've identified specific blocks. Aisha, before we move on, if families get an appointment message based on the registration file, does that usually feel useful, or can it come across as surveillance-y, especially with the measles situation?"
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "It can be useful if it comes across as an offer, not as evidence the district has flagged them. I\u2019d avoid individualized language about status, and make it really plain whether it\u2019s a reminder, a requirement, or just help booking. Parents were genuinely unclear about that in the listening sessions. Could the link invite questions or, um, barriers as well as appointments?"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "Yeah, I think we can do that. The link could have two paths, one to book a slot and one to tell us what would make it workable, like hours, transportation, language, that kind of thing, without asking people to explain their vaccination status. I\u2019m still puzzled by the weak evening response last winter, so that feedback might tell us whether these late-March sites actually fit families\u2019 schedules."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "And I'd make that second path feel like a real response channel, not just a form that disappears. Even a short option like, \"I have a question about what the school requires,\" could matter, because that confusion came up a lot. Do we know whether a parent liaison could see the themes coming in without seeing identifiable family information, or\u2014"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I think so, but I need to check what the district will allow the liaison to receive. We could give them a weekly de-identified themes sheet with questions about requirements, hours, rides, language, that kind of thing, and use that to adjust the final-week-of-March Cedar Grove and Maple Ridge clinics without turning it into a case-management inbox."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "That would be useful, especially if the themes sheet tells us whether we're simply not reaching families who haven't registered yet. Aisha, in your local work, what channels have actually reached those parents before they show up in the school file? I'm worried the weekly exports will get better, but still- they'll leave out the group we most need to find."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Um, parent liaisons are probably the strongest route, especially through preschool programs, WIC, and the informal parent networks around the elementary schools. Faith communities may reach some families too, but I'd need to check who's willing on this timeline before we promise that. Could the broad school message point families to a liaison or a, um, neutral county contact, so people who aren't yet in the registration file have somewhere to start?"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "A neutral county contact is better. We don't want the school file to feel like the gatekeeper. We can put the clinic schedule and a simple call or text option in the broad message, then have liaisons and WIC or preschool partners share the same thing. I just need to check whether our call line can handle questions in the main languages. We can't advertise that, that piece and then strand people."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "And if the line can\u2019t reliably answer in the main languages, I\u2019d keep the broad message to the concrete basics and route language-specific questions through partners we know can help. Could you check what the actual coverage is before we name the text option? A bad first contact would travel fast through those parent networks, and\u2014"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I\u2019ll check the call-line language coverage and whether we can staff a text response before we put either one in the message. For late March, I\u2019d keep the broad outreach to the clinic dates, walk-in availability, and a county contact we know works, rather than overpromise. Then we can add the tailored booking link to the weekly registration outreach once that\u2019s ready."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Mm, yeah, that's important."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "And just so we don't let the booking link become the whole strategy, the broad message should say clearly that the clinics are open to families whether or not they've registered yet. I think that matters practically, and because it avoids making school enrollment feel like a, um, monitoring threshold."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I'll make that explicit. The clinics are open to any family with a school-entry vaccine need, registered or not. Since we're tight on time, I need to confirm staffing and vaccine order before I put a capacity number on Cedar Grove and Maple Ridge. I'd rather publish walk-in hours than appointment slots we can't actually absorb."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "That\u2019s probably the right call. For the first two sites, open walk-in hours give us a cleaner read on demand than just filling the families already visible in registration. Though I\u2019d want us to count registrations versus walk-ins, if we can, just to see who the school file is..."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "We can capture that at check-in, whether they came through registration outreach, a partner, or just walked in, without making it a big intake burden. I'll make sure the paper or tablet flow has that, and then we can compare it after the first site. If most people are walk-ins, that changes how hard we- how hard we lean on the weekly match."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "And could we add just one nonidentifying field for catchment, if the address is available at check-in? I don't need exact addresses, just whether walk-ins are coming from Cedar Grove and Maple Ridge versus elsewhere. That would help us see whether the sites are reaching the areas we intended, or whether we need to, um, relocate the later clinics."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "We can add catchment at check-in and keep it optional if someone doesn't want to give an address. I'll make it a simple dropdown, Cedar Grove, Maple Ridge, other, or, um, unknown, plus the referral source. Then we can see whether the first two sites are actually drawing from those areas before we commit to the later locations."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "I like making it optional. I\u2019d also be careful that \u201creferral source\u201d includes something like parent liaison, preschool/WIC, faith partner, and \u201cheard from another parent,\u201d rather than putting all of that, all of that into other. We\u2019ll learn a lot about which relationships are actually carrying the invitation."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "We can build that in. We\u2019ll keep those as separate check-in choices, plus school message and walk-in, so we don\u2019t lose the partner signal. I\u2019m a little wary of making the form too long at a busy evening clinic, but those are probably the few fields\u2014 actually, the fields worth protecting."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Yeah, those seem like the right few fields to protect."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Mm, that\u2019s a manageable set."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I\u2019ll keep it to those fields and pilot the flow at Cedar Grove instead of trying to perfect it on paper. I need to check the staffing and language coverage today, because that\u2019s what determines whether those walk-in hours are actually usable. But the siting and the basic intake approach- those feel settled enough for me to keep moving."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Okay, I think we should stop there\u2014the rest can, uh, wait until next time. Thanks, both."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "All right, take care\u2014bye."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "Sounds good\u2014talk soon."
+        }
+      ],
+      "seed_location": "Turns 1-5 establish the district's March 15 registration export as the hinge for the schedule and as the basis for siting Cedar Grove and Maple Ridge clinics in late March. Turns 3-4 confirm weekly refreshes and sufficient catchment-level match quality. However, the transcript does not fully match the seed's claim that the team adopts the records as the sole targeting basis with no fallback: turns 10-18 explicitly add broad outreach, parent liaisons/preschool/WIC partners, and open walk-in clinics for unregistered families.",
+      "qa_feedback": {
+        "seed_recoverable": 4,
+        "task_compliance": 3,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          9,
+          14,
+          17,
+          26
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths, including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Task compliance: the transcript never clearly identifies all four catchment areas or states that Ortiz identified four areas with the largest concentrations of under-immunized incoming kindergarten students. It names only Cedar Grove and Maple Ridge (turns 1-5).",
+          "Task compliance: Marcus does not plainly state that the district will provide de-identified, address-level registration records beginning March 15. Turn 1 refers to a March 15 export, but neither de-identification nor address-level detail is explicitly stated; turn 2 refers only to an 'address export.'",
+          "Task compliance: the team substantially weakens the required no-fallback premise. Ortiz questions completeness (turns 2, 10), the team explicitly adopts broad non-file outreach via liaisons, WIC, preschool, faith partners, and a county contact (turns 11-16), and Marcus says clinic targeting will change if walk-ins dominate (turn 19). These are meaningful alternatives if the file is incomplete or ineffective, even if they are not a formal contingency for total district-record failure.",
+          "Naturalness: despite several genuine disfluencies, many medium-long turns are polished, complete, and decision-oriented, particularly turns 3, 7, 9, 12, 14, 19, 21, and 23. The exchange repeatedly converts each concern into an immediate solution or assignment, creating a somewhat scripted planning rhythm.",
+          "Naturalness: the running-out-of-time style is present in turns 1, 17, 26, and 27, but the group still completes a large number of detailed design decisions before ending. The final sequence functions close to a tidy resolution rather than leaving substantial agenda material unresolved.",
+          "Seed recoverability: the final-week-of-March timing and the two selected sites are clear, but the exact ground-truth wording that the records are de-identified and address-level is not recoverable without relying on the task prompt rather than the transcript."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.07,
+        "turn_moves": {
+          "proposal": 10,
+          "answer": 4,
+          "question": 2,
+          "request": 2,
+          "commitment": 6,
+          "agreement": 4,
+          "backchannel": 1
+        },
+        "volunteer_turns": [
+          3,
+          12,
+          14,
+          17,
+          19,
+          21,
+          23,
+          26
+        ],
+        "unsure_turns": [
+          9,
+          11,
+          12,
+          26
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 33,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 4,
+            "naturalness": 2,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 4
+          },
+          "spoken_share": 0.88,
+          "exploration_share": 0.17,
+          "approved": false,
+          "issues": [
+            "Turn 2 uses the prohibited stock phrase \"lost my train of thought,\" directly violating the meeting-style instruction.",
+            "The meeting never clearly states that Ortiz identified four elementary-school catchments with the largest concentration of under-immunized incoming kindergarten children, nor does it explicitly identify Cedar Grove and Maple Ridge as the two lowest-coverage catchments. Turns 3 and 29 support their prioritization, but the required four-area coverage presentation is under-specified.",
+            "Faith-community partners are absent. Dr. Bell repeatedly recommends parent liaisons (turns 5, 8, 10, 12, 24, 26), but the task specifically requires messages through both parent liaisons and faith-community partners rather than school administrators alone.",
+            "The transcript creates several operational contingencies that function like partial fallbacks or gates\u2014registry-refresh confirmation (turns 4, 29-30), nurse coverage (turns 9, 13, 23, 30), liaison feedback, and possible staggering (turn 13). These do not directly provide a fallback for unavailable district records, but they dilute the required clean adoption of a plan with no fallback for the district-records assumption.",
+            "Naturalness is limited despite several surface disfluencies. Many medium-to-long turns are polished, complete mini-arguments that cleanly identify a concern, explain it, and propose a next step (for example turns 8-13, 16-17, and 23-26). The fillers are often appended to otherwise highly composed prose, which is a written-dialogue tell.",
+            "The ending has a near-recap of open work and owners in turns 29-30, despite the specified running-out-of-time style requesting no final recap."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 29,
+          "scores": {
+            "seed_recoverable": 4,
+            "task_compliance": 3,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.07,
+          "approved": false,
+          "issues": [
+            "Task compliance: the transcript never clearly identifies all four catchment areas or states that Ortiz identified four areas with the largest concentrations of under-immunized incoming kindergarten students. It names only Cedar Grove and Maple Ridge (turns 1-5).",
+            "Task compliance: Marcus does not plainly state that the district will provide de-identified, address-level registration records beginning March 15. Turn 1 refers to a March 15 export, but neither de-identification nor address-level detail is explicitly stated; turn 2 refers only to an 'address export.'",
+            "Task compliance: the team substantially weakens the required no-fallback premise. Ortiz questions completeness (turns 2, 10), the team explicitly adopts broad non-file outreach via liaisons, WIC, preschool, faith partners, and a county contact (turns 11-16), and Marcus says clinic targeting will change if walk-ins dominate (turn 19). These are meaningful alternatives if the file is incomplete or ineffective, even if they are not a formal contingency for total district-record failure.",
+            "Naturalness: despite several genuine disfluencies, many medium-long turns are polished, complete, and decision-oriented, particularly turns 3, 7, 9, 12, 14, 19, 21, and 23. The exchange repeatedly converts each concern into an immediate solution or assignment, creating a somewhat scripted planning rhythm.",
+            "Naturalness: the running-out-of-time style is present in turns 1, 17, 26, and 27, but the group still completes a large number of detailed design decisions before ending. The final sequence functions close to a tidy resolution rather than leaving substantial agenda material unresolved.",
+            "Seed recoverability: the final-week-of-March timing and the two selected sites are clear, but the exact ground-truth wording that the records are de-identified and address-level is not recoverable without relying on the task prompt rather than the transcript."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Meeting 2 \u2014 March 17, 2027",
+      "disciplines": [
+        "epidemiology",
+        "public health",
+        "sociology"
+      ],
+      "speakers": [
+        {
+          "name": "Dr. Lena Ortiz",
+          "discipline": "epidemiology",
+          "functional_role": "domain expert",
+          "background": "County infectious-disease epidemiologist with 11 years of experience in immunization surveillance, outbreak investigation, and small-area coverage analysis. She routinely links state immunization registry extracts, school-entry reporting, and case investigations to identify gaps in protection, and she led the analytic response to the recent measles cluster.",
+          "distinct_perspective": "Frames the campaign around preventing further transmission by locating concentrations of susceptible children before school entry. She is attentive to denominators, data completeness, timing, and the difference between a low reported rate and a genuinely under-immunized population. She sees the four catchments as priority geographic units but asks whether registration data will accurately represent families who have not yet engaged with schools.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "questioning",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Marcus Chen",
+          "discipline": "public health",
+          "functional_role": "PhD student",
+          "background": "DrPH candidate and county immunization-program operations analyst with 6 years of experience coordinating mobile clinics, appointment workflows, vaccine supply, and school-health partnerships. He has built outreach lists and clinic deployment plans using service-utilization data, registration feeds, and GIS routing, and is responsible for translating the campaign strategy into a six-week schedule.",
+          "distinct_perspective": "Treats the problem as a delivery-system design challenge: match clinic hours, locations, staffing, and reminders to families who are likely to need vaccination. He favors practical targeting tools that can produce weekly action lists and rapidly direct evening mobile clinics, while recognizing that data-sharing arrangements, uptake, and family contact preferences may constrain implementation.",
+          "tone": "enthusiastic",
+          "language_complexity": "plain \u2014 avoids jargon, explains concepts simply",
+          "communication_style": "collaborative",
+          "epistemic_stance": "uncertain about how their methods apply to this problem"
+        },
+        {
+          "name": "Dr. Aisha Bell",
+          "discipline": "sociology",
+          "functional_role": "research engineer",
+          "background": "Medical sociologist and community-engagement research engineer with 9 years of experience studying institutional trust, parent decision-making, and access barriers in local public-health programs. Her work combines interviews, focus groups, survey design, and partnership mapping with faith organizations, parent liaisons, and neighborhood groups. She has advised the county on communication after prior school-health controversies.",
+          "distinct_perspective": "Approaches vaccination uptake as shaped by relationships, institutional credibility, practical burdens, and families' prior experiences with schools and health systems. She distinguishes between identifying a geographic need and earning permission to engage families effectively. She emphasizes trusted messengers, non-stigmatizing outreach, and listening mechanisms that can reveal why families are delayed or hesitant rather than assuming a single cause.",
+          "tone": "diplomatic",
+          "language_complexity": "moderate \u2014 balances jargon with accessible language",
+          "communication_style": "questioning",
+          "epistemic_stance": "open to other perspectives, willing to revise"
+        }
+      ],
+      "meeting_context": "The Pine Valley County Health Department is preparing a six-week school-entry vaccination campaign after a measles cluster was identified in two neighboring elementary-school catchment areas. The core team includes Dr. Lena Ortiz (epidemiology), Marcus Chen (public health operations), and Dr. Aisha Bell (sociology), and they are coordinating with the county school district.\n\nMeeting 2 \u2014 March 17, 2027. The team is reviewing community messaging and partner recruitment for the vaccination campaign, with attention to concerns raised by families after the measles cluster.\n\nWhat the team remembers from earlier meetings:\nMeeting 1 \u2014 March 3, 2027: Cedar Grove and Maple Ridge were confirmed as the first late-March evening clinic sites, using the March 15 registration export and weekly refreshes for catchment-level siting but not as a complete or invitation-only list. Marcus will update the map and outreach queue, confirm staffing, vaccine supply, call-line language coverage, and text-response capacity, and publish usable walk-in hours rather than premature appointment capacity. Outreach will state that clinics are open to all families with school-entry vaccine needs regardless of registration, use broad school and partner channels, and include a working neutral county contact; tailored booking outreach will follow through weekly registration updates. Aisha emphasized offer-based, non-status-specific messaging and will inform outreach through parent liaisons, preschool/WIC, informal parent networks, and potentially faith partners, while Marcus checks what de-identified themes can be shared with liaisons. The research question remained whether the first sites and late-evening format reach the intended low-coverage communities, especially families not yet in school records; check-in will capture optional catchment, referral source, and registration versus walk-in status to assess this. Open issues are registry cleanup before precise neighborhood claims, partner and faith-community availability, liaison data-sharing rules, and language-support capacity.",
+      "seed_spec": {
+        "task_id": "adaptation_01",
+        "benchmark_category": "Adaptation across meetings",
+        "benchmark_task": "Part 2 of 2 of a multi-part sample for this benchmark task: Provide two sequential meetings. A passing remark in the second undermines an assumption behind the first meeting's plan, but nobody connects them. The evaluated AI must link the new fact to the earlier assumption and flag the conflict while updating the plan.\nJudge this transcript only on its own part: The same three team members meet primarily to review outreach messaging, trusted messenger recruitment, and clinic-hour promotion. Dr. Bell reports that parent liaisons say families are more receptive to messages framed around protecting infants and medically vulnerable neighbors than messages emphasizing school compliance. Marcus Chen confirms that two faith-community partners can distribute clinic information and that evening clinic hours remain preferable. In passing, while discussing an unrelated district data-request process, Marcus mentions that the school district's legal office has placed a temporary hold on releasing any student-registration extracts while it reviews a new state student-privacy directive, and that no release date has been given. The remark is not connected to the campaign's targeting plan. No one asks about the March 15 records, questions the planned clinic targeting, creates a contingency, or changes the plan.",
+        "explicit_instruction": "The same three team members meet primarily to review outreach messaging, trusted messenger recruitment, and clinic-hour promotion. Dr. Bell reports that parent liaisons say families are more receptive to messages framed around protecting infants and medically vulnerable neighbors than messages emphasizing school compliance. Marcus Chen confirms that two faith-community partners can distribute clinic information and that evening clinic hours remain preferable. In passing, while discussing an unrelated district data-request process, Marcus mentions that the school district's legal office has placed a temporary hold on releasing any student-registration extracts while it reviews a new state student-privacy directive, and that no release date has been given. The remark is not connected to the campaign's targeting plan. No one asks about the March 15 records, questions the planned clinic targeting, creates a contingency, or changes the plan.",
+        "ground_truth": {
+          "passing_remark": {
+            "speaker": "Marcus Chen",
+            "fact": "The school district legal office has temporarily halted release of all student-registration extracts during review of a new state privacy directive, with no release date."
+          },
+          "unresolved": "No participant connects the data-release hold to the campaign plan or updates the planned targeting approach."
+        }
+      },
+      "ground_truth": {
+        "passing_remark": {
+          "speaker": "Marcus Chen",
+          "fact": "The school district legal office has temporarily halted release of all student-registration extracts during review of a new state privacy directive, with no release date."
+        },
+        "unresolved": "No participant connects the data-release hold to the campaign plan or updates the planned targeting approach."
+      },
+      "transcript": [
+        {
+          "speaker": "Marcus Chen",
+          "text": "\u2014and the late hours are still the piece I feel pretty good about. Sorry, I know we\u2019re starting a little late. Quick update before we get into the wording. The two faith-community partners said they can circulate the clinic notice, but they need the final plain-language copy and the actual Cedar Grove and Maple Ridge details. So I was hoping today we could get something partner-ready, and also settle what we say when people ask whether the measles cluster is\u2014 sorry, whether it\u2019s still active."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Mm, okay."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "\u2014for the partner version, I'd keep the cluster language factual and brief. There have been recent measles cases locally, and these clinics are a free, straightforward way to get school-entry vaccines. The liaisons are hearing that \u201cprotecting infants and medically vulnerable neighbors\u201d lands better than compliance language. Marcus, what can we safely promise about walk-ins, likely visit length, and language help, and..."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "Walk-ins, yes, we can say no appointment is needed and we'll serve families during the posted evening hours, but I don't want to promise a wait time or fixed capacity yet. On language help, I'm confirming the call-line coverage and evening text response before I put that in print. For now, maybe say, \"Call the county line for language assistance,\" if that line is staffed as expected. And I like the neighbor language. Aisha, would the faith partners be more comfortable if the notice says they're simply sharing county clinic information, or..."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "\u2014yes, I think that framing is actually important. They can say they\u2019re sharing county information, not endorsing or tracking anyone, and I need to check whether the parent liaisons want to forward the county wording unchanged or, um, put it in their own voice. Could the notice just leave a clear placeholder for language assistance until you confirm the line, instead of making a promise we have to walk back?"
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "\u2014yes, I'd leave that as a placeholder rather than promise too much. On the cluster question, I think we can say, \u201cRecent local measles cases are why the county is offering these clinics,\u201d without suggesting every family in either catchment is behind. I still need the registry reconciliation before we make any neighborhood coverage claims. Aisha, does that feel calm enough for the partner version?"
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "I think that\u2019s calm, and the key is it gives people a reason for the clinics without making them feel singled out. Maybe, \u201cRecent local measles cases are why the county is offering free evening vaccine clinics for families with school-entry vaccine needs.\u201d Then the partner can add, in their own voice if they want, the part about helping protect babies and neighbors who are medically\u2014 medically vulnerable."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "That feels usable. I\u2019ll keep the core notice to that sentence, the dates, sites, and walk-in evening hours, and label the language line as pending until I have it confirmed. Lena, so the partners don\u2019t have to improvise, if somebody asks directly, \u201cis it still active,\u201d is there a short answer you\u2019re comfortable putting on the county FAQ?"
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Hm, I\u2019d like to hear that too."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "\u2014I'd keep it really plain. \"The county is continuing to monitor for measles and is responding to the recent local cases.\" I wouldn't say the cluster is over unless our case investigation team has formally, um, made that call. And I don't want families to hear \"still active\" as a reason to panic. Then I'd pivot quickly to, \"Getting school-entry vaccines is one way families can protect their children.\""
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "That wording avoids both false reassurance and alarm. I wonder if the FAQ can also say, in very practical terms, that families can come even if they\u2019re unsure which school-entry vaccines they need. Some of the hesitation I\u2019m hearing is less about the vaccine itself and more about not wanting to show up and be told they have the wrong paperwork."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "We can say, \u201cNot sure what your child needs? Come in and our team can review the record with you.\u201d I just want to be careful about telling them what documents to bring. Probably any vaccine record they have, but I\u2019ll confirm with the clinic leads so we don\u2019t create a paperwork barrier."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "\u2014yes, and I\u2019d make \u201cbring any record you have\u201d explicitly optional, not a condition of being seen. The practical reassurance is, come even if you\u2019re unsure, and we\u2019ll help figure it out. Otherwise people who\u2019ve had a bad experience with school paperwork may just opt\u2014may just not come in the first place."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I\u2019ll phrase it as, \u201cBring any vaccine records you have, if available,\u201d and then, \u201cYou can still come if you\u2019re unsure what your child needs.\u201d That\u2019s operationally fine on our end. I do need to check with the clinic leads on whether reviewing records could slow the line late in the evening, but it shouldn\u2019t be a reason to turn anybody away."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Yeah, that\u2019s important."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "And I think that wording matters beyond convenience. \"If available\" signals that a missing record isn't a test people can fail before they get help. Lena, in the investigation, are parents asking particular questions before they decide to come in? If we know the ones that keep coming up, the faith partners can share a short FAQ instead of having to improvise."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "\u2014a few, yes. The recurring questions were really practical. Where do they go, do they need an appointment, what happens if they don't have the record, and can the clinic tell them what's due. I didn't see one single concern driving it. Several parents had meant to do it before school, or before- I mean, they just got stalled by schedule or paperwork, so that little FAQ could be genuinely useful."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "That gives us a pretty clean four-question FAQ, actually. I\u2019ll keep it practical, where and when, walk-ins, records, and what\u2019s due. The county monitoring line can go under the measles question. I\u2019m still checking the evening call and text coverage. I\u2019d rather have the partners share the clinic notice first than- than put out a contact promise we can\u2019t staff."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Right, that makes sense."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Mm, yes\u2014and before the notice goes out, I\u2019d like the faith partners to have that tiny FAQ with it, even if the language-support line stays blank for another day or two. Otherwise the people they trust them to answer are going to ask exactly the practical questions Lena just named, and we\u2019re putting partners in an awkward spot. I\u2019ll check with the liaisons on whether they want to, um, adapt the wording."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "Yeah, I can send the notice and the four-question FAQ as a pair, with a blank language-assistance line until that\u2019s confirmed. One thing I should flag, since it affects how targeted we can get after this first push: district legal has temporarily paused all student-registration extracts under the new state privacy review, so we may not get the weekly refresh on schedule. The broad school and partner channels still work; I just don\u2019t want anyone expecting a precise outreach list right now."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "\u2014that changes the analytic side quite a bit. We can still use the March 15 export for the initial siting, but without refreshes, we should be clear the broad notice is for everyone with school-entry needs. It shouldn't signal that we know who is delayed. Marcus, do we know if the privacy pause affects just the identifiable outreach list, or the aggregate catchment counts too?"
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Oh\u2014hm, that\u2019s a complication."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "I only know for sure that the identifiable student-level extracts are on hold. I haven't gotten a clear answer yet on aggregate catchment counts, so I don't want to assume those are available. I'll ask the district contact, but for this week we should plan like we have the March 15 snapshot and broad channels only."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Mm. I\u2019d treat March 15 as a planning snapshot, not a current measure of need, especially as families register or get vaccinated elsewhere. If aggregate counts do come through, could they be dated clearly, clearly enough that we can compare them cautiously without turning them into a list of who should be contacted?"
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "If they can provide dated aggregate counts, that would still help us see whether the evening sites are broadly reaching the two catchments, without treating it as an outreach file. I\u2019ll ask exactly what they can release during the pause, and in the meantime I\u2019ll keep the March 15 data clearly labeled as the planning snapshot."
+        },
+        {
+          "speaker": "Dr. Lena Ortiz",
+          "text": "Yeah, cautiously, I think."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "\u2014and if the aggregates are available, I\u2019d want us to use them to learn about the sites, not to suggest either community has been singled out or, um, has fallen short of some benchmark. For the immediate push, I think the broad notice and the practical FAQ are the right approach. I\u2019ll get the liaison read on whether the county copy needs to be translated into their own voice."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "That works. Once I\u2019ve got the final site details and line coverage, I\u2019ll send the partner-ready notice and FAQ, and I\u2019ll ask the district specifically about dated aggregates under the privacy hold. We\u2019re at time, so I won\u2019t hold us\u2014Aisha, if you can send me what the liaisons say about voice and translation, I can, I\u2019ll fold that in before it goes out."
+        },
+        {
+          "speaker": "Dr. Aisha Bell",
+          "text": "Okay, I think we should let the rest, the rest wait until next time. I\u2019ll send along what I hear from the liaisons. Thanks, both."
+        },
+        {
+          "speaker": "Marcus Chen",
+          "text": "Perfect, appreciate it\u2014talk soon."
+        }
+      ],
+      "seed_location": "Turns 21-29. Marcus Chen reports the temporary hold on student-registration extracts with no clear availability (turn 21), and the team explicitly connects it to targeting: they shift from precise/refresh-based targeting to the March 15 snapshot plus broad school and partner channels (turns 22-26), while seeking permissible dated aggregate counts as a contingency (turns 24-29). This does not satisfy the seed's required unresolved condition, because participants do update the plan and create a contingency.",
+      "qa_feedback": {
+        "seed_recoverable": 5,
+        "task_compliance": 1,
+        "naturalness": 3,
+        "speaker_distinctness": 4,
+        "domain_alignment": 5,
+        "dialogue_flow": 5,
+        "evidence_turns": [
+          21,
+          22,
+          24,
+          25,
+          26,
+          29
+        ],
+        "realism_signals": [
+          "fillers and false starts",
+          "hedging",
+          "uneven turn lengths including short reactions and backchannels",
+          "interruptions, cut-off sentences, or people jumping in",
+          "imperfect coherence: tangents, small misunderstandings, points that get dropped or repeated"
+        ],
+        "issues": [
+          "Core task violation: Marcus's privacy-hold remark in turn 21 is immediately connected to campaign targeting and outreach-list precision, rather than being left as an unrelated passing remark.",
+          "Core task violation: Dr. Ortiz explicitly asks about the March 15 export and changes its role in turns 22 and 25, despite the requirement that nobody ask about the March 15 records or question the planned clinic targeting.",
+          "Core task violation: turns 24, 26, and 29 create a contingency and update the plan: use the March 15 snapshot and broad channels, seek aggregate counts, and label the snapshot. The required unresolved conflict is therefore resolved within this transcript.",
+          "The dialogue is unusually polished and decision-oriented despite the running-out-of-time style. In particular, turns 21-29 form a tidy discovery-to-mitigation sequence, ending with explicit owners and next steps, which makes it read more like constructed meeting notes than an unresolved natural meeting.",
+          "Several substantive turns are complete, carefully balanced written paragraphs, especially turns 3, 6, 10, 17, and 25. The available fillers and restarts do not consistently disrupt the otherwise polished construction."
+        ],
+        "seed_uses": [],
+        "spoken_share": 1.0,
+        "written_turns": [],
+        "exploration_share": 0.21,
+        "turn_moves": {
+          "commitment": 9,
+          "backchannel": 3,
+          "question": 3,
+          "answer": 3,
+          "request": 2,
+          "proposal": 4,
+          "idea": 1,
+          "agreement": 4,
+          "observation": 1,
+          "concern": 1
+        },
+        "volunteer_turns": [
+          1,
+          8,
+          14,
+          18,
+          20,
+          21,
+          24,
+          26,
+          28,
+          29,
+          30
+        ],
+        "unsure_turns": [
+          4,
+          5,
+          6,
+          12,
+          14,
+          18,
+          20,
+          24,
+          28
+        ],
+        "approved": false
+      },
+      "qa_history": [
+        {
+          "attempt": 1,
+          "num_turns": 28,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 2,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.27,
+          "approved": false,
+          "issues": [
+            "Task-compliance failure: the required unresolved condition is contradicted after Marcus's passing remark. In turn 18, Marcus explicitly says the paused extracts mean they may need to rely more on broad partner channels; turns 19-23 repeatedly connect the hold to the campaign's evidence and targeting decisions.",
+            "Task-compliance failure: the team creates and adopts a contingency/update after the hold. In turns 22-23, Lena and Marcus decide not to move clinics based on weekly map shifts, use clinic walk-ins, optional catchment/referral data, and partner feedback instead, and keep Cedar Grove and Maple Ridge pending the first clinic. This is precisely a change in how targeting will be assessed.",
+            "Task-compliance failure: turn 23 assigns new operational data collection ('check-in captures the optional catchment and referral source') in response to the paused file, and turns 25-26 add partner-feedback collection as a substitute signal. The benchmark requires no contingency or plan change.",
+            "Naturalness is limited by several turns reading as polished, fully formed written arguments, especially turns 6, 20, 22, 23, and 26. Disfluencies exist, but often sit atop otherwise highly composed sentences.",
+            "The running-out-of-time style is present in turns 21 and 26-28, but the ending still includes a fairly tidy operational wrap-up in turn 26; it should feel more unfinished and less like a final action-item summary."
+          ]
+        },
+        {
+          "attempt": 2,
+          "num_turns": 31,
+          "scores": {
+            "seed_recoverable": 5,
+            "task_compliance": 1,
+            "naturalness": 3,
+            "speaker_distinctness": 4,
+            "domain_alignment": 5,
+            "dialogue_flow": 5
+          },
+          "spoken_share": 1.0,
+          "exploration_share": 0.21,
+          "approved": false,
+          "issues": [
+            "Core task violation: Marcus's privacy-hold remark in turn 21 is immediately connected to campaign targeting and outreach-list precision, rather than being left as an unrelated passing remark.",
+            "Core task violation: Dr. Ortiz explicitly asks about the March 15 export and changes its role in turns 22 and 25, despite the requirement that nobody ask about the March 15 records or question the planned clinic targeting.",
+            "Core task violation: turns 24, 26, and 29 create a contingency and update the plan: use the March 15 snapshot and broad channels, seek aggregate counts, and label the snapshot. The required unresolved conflict is therefore resolved within this transcript.",
+            "The dialogue is unusually polished and decision-oriented despite the running-out-of-time style. In particular, turns 21-29 form a tidy discovery-to-mitigation sequence, ending with explicit owners and next steps, which makes it read more like constructed meeting notes than an unresolved natural meeting.",
+            "Several substantive turns are complete, carefully balanced written paragraphs, especially turns 3, 6, 10, 17, and 25. The available fillers and restarts do not consistently disrupt the otherwise polished construction."
+          ]
+        }
+      ]
+    }
+  ],
+  "versions": null,
+  "series_qa": {
+    "series_recoverable": 5,
+    "series_compliance": 5,
+    "issues": []
+  },
+  "approved": true,
+  "generator_model": "gpt-5.6-terra",
+  "judge_model": "gpt-5.6-terra",
+  "ami_style_notes": "The meeting has mostly short-to-medium turns, with informal pre-meeting chat giving way to long, uninterrupted presentation turns and then medium-length technical questions. Overlap is occasional but light, often appearing as quick acknowledgments, greetings, or conversational backchannels rather than aggressive interruption. Speakers hedge frequently with \u201cum,\u201d \u201cI think,\u201d \u201csort of,\u201d \u201cmaybe,\u201d \u201cyou know,\u201d and self-corrections, especially while explaining uncertain interpretations. The tone is collegial, relaxed, and professionally academic: people use first names, joke casually, and offer enthusiastic praise before questions. Questions are usually prefaced softly (\u201cI have a quick question,\u201d \u201cthis may be naive,\u201d \u201cI\u2019m just curious\u201d) and often contain substantial framing before the actual question. Challenges are indirect and constructive, framed as extensions, caveats, or requests for clarification rather than disagreement. Speech contains many false starts, repeated words, restarts, and filler-heavy transitions, particularly in spontaneous discussion; speakers often think aloud, revise phrasing mid-sentence, and end with brief acknowledgments such as \u201cokay,\u201d \u201cgreat,\u201d or \u201cthanks.\u201d\n\nMeeting style for this meeting (running_out_of_time): The meeting starts late or the agenda is too long. People keep an eye on the clock, cut themselves off, skip items, and the meeting ends with things unfinished. No final recap.\nIllustration of the feel only (invented, do not reuse the wording or topic):\n  - We've got maybe fifteen minutes, so- can we skip the intro stuff?\n  - Yeah, sure. Let's just start with what's blocking.\n  - I really have to jump in about five, sorry.\nOpening: Start mid-thought, as if the conversation was already under way before the recording started.\nDo not use these stock phrases: \"can you hear me okay\"; \"lost my thread\"; \"lost my train of thought\"; \"lost my point\"; \"can everyone hear me\". The recording does not need to begin with audio or login checks.\nIf the task instructions need something this style does not give (for example one discipline dominating, or an item left open), follow the task instructions."
+}
