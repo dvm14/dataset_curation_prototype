@@ -49,7 +49,10 @@ def main():
             discipline_distance=d["discipline_distance"], meeting_context="",
             seed=SeedSpec(**d["seed_spec"]))
         filming = FilmingOutput(transcript=[Turn(**t) for t in d["transcript"]],
-                                seed_location=d.get("seed_location", ""))
+                                seed_location=d.get("seed_location", ""),
+                                beats=d.get("beats", []),
+                                beat_conditions=d.get("beat_conditions", []),
+                                ground_truth=d.get("ground_truth", {}) if d.get("beats") else {})
         print(f"{d['task_id']:16} {path.name}")
         try:
             qa = agent4.run(filming=filming, content=content,

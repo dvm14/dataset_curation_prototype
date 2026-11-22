@@ -16,9 +16,11 @@ from schema import (
     ContentCurationOutput,
     CastingOutput,
 )
+from benchmark_tasks import OUTCOME_TASKS
 from utils.llm import call_llm_json, CACHE_BREAKPOINT
 from utils.names import remap
 from utils import floor_control as floor
+from utils import beats as beat_plan
 from utils.required_facts import parse_facts, unsaid, fact_nudge, cues_in, FACT_GATE_TURNS
 from utils.seed_terms import (
     seed_terms, count_mentions, mentions, seed_speakers, term_uses, seed_nudge,
@@ -96,8 +98,27 @@ TURN_NOTES = {
 BID_INTENTS = ("respond", "brief", "interject")
 
 
-def prepare_private_briefs(content, casting, qa_feedback=None):
-    """Prepare a separate discussion brief for each participant."""
+PLANNED_MOMENTS_NOTE = """
+planned_moments lists points specific participants will bring up during
+the meeting. Make each consistent with its owner's brief, as their own
+knowledge or intention, without saying when to raise it. Don't give those
+points to anyone else, and don't hint at how planned moments relate to
+each other.
+"""
+
+HIDDEN_PIECES_NOTE = """
+For this meeting seed_instruction and ground_truth are withheld: some
+points will come up on their own later, and nobody may know them in
+advance. Build the situation from benchmark_task, the research problem and
+planned_moments, and don't invent dates, deadlines or schedules beyond them.
+"""
+
+
+def prepare_private_briefs(content, casting, qa_feedback=None, planned=()):
+    """
+    Prepare a separate discussion brief for each participant. planned: the
+    task's beats (utils/beats.py); each owner's points go into their brief.
+    """
 
     planner_prompt = """
 Prepare shared meeting background and one private brief per participant.
@@ -158,12 +179,31 @@ Return JSON:
         "ground_truth": content.seed.ground_truth,
         "qa_feedback": qa_feedback,
     }
+    prompt = planner_prompt
+    hidden = set()
+    if planned:
+        # Neither piece of a hidden conflict is known in advance: the later
+        # one comes up at its turn, the earlier one is planted afterwards
+        # (beat_plan.planted_ids). When either was in a brief, the speaker
+        # connected the two the moment the other came up.
+        hidden = beat_plan.planted_ids(planned) | {b["id"] for b in planned if b["linked"]}
+        setup["planned_moments"] = [
+            {"owner": b["owner"], "window": b["window"], "says": b["says"]}
+            for b in planned if b["id"] not in hidden
+        ]
+        prompt += PLANNED_MOMENTS_NOTE
+        if hidden:
+            # Asking the planner to leave the pieces out wasn't enough: given
+            # the seed, it still wrote them in as background (coordination_03:
+            # the interview start date). It now never sees them.
+            del setup["seed_instruction"], setup["ground_truth"]
+            prompt += HIDDEN_PIECES_NOTE
 
     # Names in the reply are matched to the cast ignoring titles; a reply
     # that still misses someone is requested once more before giving up.
     for attempt in range(2):
         result = call_llm_json(
-            planner_prompt,
+            prompt,
             json.dumps(setup, indent=2),
             max_tokens=3500,
         )
@@ -179,6 +219,12 @@ Return JSON:
             raise ValueError("Planner returned no shared meeting context.")
         raise ValueError(f"Missing private brief for {missing[0]}")
 
+    # The owner of a planned point knows it as their own, whatever the
+    # planner wrote.
+    for b in planned:
+        if b["id"] not in hidden:
+            briefs[b["owner"]] += "\n\nPoints you plan to raise in this meeting:\n- " + b["says"]
+
     return shared_context, briefs, parse_facts(result.get("required_facts"), casting.speakers)
 
 
@@ -186,6 +232,25 @@ def format_history(transcript):
     if not transcript:
         return "The meeting has not started yet."
     return "\n".join(f"{turn.speaker}: {turn.text}" for turn in transcript)
+
+
+def outcome_note(content, transcript):
+    """
+    For tasks whose meeting must reach an outcome (OUTCOME_TASKS), tell
+    every speaker what it has to settle; speakers never see the task, so
+    the speaking prompt's "explore first, don't volunteer" rules otherwise
+    kept these meetings from deciding anything. Stronger in the last third.
+    """
+    outcome = OUTCOME_TASKS.get(content.seed.task_id)
+    if not outcome:
+        return ""
+    note = (f"This meeting is meant to end having settled {outcome}. "
+            "Exploring is fine early on, but proposing, deciding and taking "
+            "on work are normal here.")
+    minutes = sum(len(t.text.split()) for t in transcript) / WORDS_PER_MINUTE
+    if len(transcript) >= MAX_TURNS * 2 / 3 or minutes >= MEETING_MINUTES * 2 / 3:
+        note += f" Time is getting on and {outcome} still needs settling."
+    return note
 
 
 def time_cue(transcript):
@@ -438,7 +503,40 @@ def wrap_up(speakers, content, shared_context, briefs, ami_style_notes,
     return transcript + [Turn(speaker=chair, text=text)], cues
 
 
-def check_seed_leak(content, transcript, text, terms=()):
+# Beat tasks: the conditions planned with the beats ("nobody connects b1
+# and b4", "Marcus doesn't speak about the dataset again").
+MUST_NOT_RULE = """
+must_not_happen lists things the meeting must not do. A new turn that does
+one of them also violates the task.
+"""
+
+
+def plant_beat(beat, plan, slots, status, transcript, content, terms, conditions):
+    """
+    Add the earlier piece of a hidden conflict to one of its owner's turns,
+    after the meeting (beat_plan.planted_ids): nobody who spoke later knew
+    it, so nobody connects it. Checked like a live beat; one retry.
+    """
+    later = [status[b["id"]]["turn"] for b in plan
+             if beat["id"] in b["linked"] and b["id"] in status]
+    i = beat_plan.plant_index(beat, slots[beat["id"]], transcript,
+                              min(later) if later else len(transcript))
+    status[beat["id"]] = {"turn": None, "conveyed": False}
+    if i is None:
+        print(f"      Beat {beat['id']}: {beat['owner']} has no turn to plant it in")
+        return
+    for _ in range(2):
+        text = beat_plan.plant(beat, transcript[i].text)
+        if (text and beat_plan.check_beat(beat, format_history(transcript[max(0, i - 4):i]), text)[0]
+                and not check_seed_leak(content, transcript[:i], text, terms, conditions)[0]):
+            transcript[i] = Turn(speaker=beat["owner"], text=text)
+            status[beat["id"]] = {"turn": i + 1, "conveyed": True}
+            print(f"      Beat {beat['id']} planted in turn {i + 1} ({beat['owner']})")
+            return
+    print(f"      Beat {beat['id']}: planting failed, turn {i + 1} left as it was")
+
+
+def check_seed_leak(content, transcript, text, terms=(), conditions=()):
     """
     Check whether the turn violates the selected task's conditions.
 
@@ -457,10 +555,13 @@ def check_seed_leak(content, transcript, text, terms=()):
         "recent_conversation": format_history(transcript[-LEAK_CONTEXT_TURNS:]),
         "new_turn": text,
     }
+    if conditions:
+        task["must_not_happen"] = list(conditions)
 
     try:
         result = call_llm_json(
-            LEAK_CHECK_PROMPT + (TERM_LEAK_RULES if terms else ""),
+            LEAK_CHECK_PROMPT + (TERM_LEAK_RULES if terms else "")
+            + (MUST_NOT_RULE if conditions else ""),
             json.dumps(task, indent=2),
             max_tokens=200,
         )
@@ -707,11 +808,52 @@ def run(
 
     by_name = {speaker.name: speaker for speaker in speakers}
 
+    # Constraints the code enforces (utils/floor_control.py).
+    roles = floor.airtime_roles(content, speakers)
+    if roles:
+        print(f"      Airtime: {roles['dominant']} leads (~{roles['share']:.0%} of words), "
+              f"{roles['quiet']} speaks late and little")
+
+    # The moments the task can't do without, placed by the code
+    # (utils/beats.py). For these tasks they replace required facts and the
+    # outcome note.
+    plan, conditions, slots = [], [], {}
+    if beat_plan.uses_beats(content.seed.task_id):
+        plan, conditions = beat_plan.write_beats(content, speakers)
+        quiet_late = {roles["quiet"]: floor.QUIET_FROM_TURN} if roles else {}
+        slots = beat_plan.schedule(plan, MAX_TURNS, not_before=quiet_late)
+        for b in plan:
+            print(f"      Beat {b['id']} (turn {slots[b['id']]}, {b['owner']}): {b['says']}")
+    done, status = set(), {}     # beat id -> {"turn", "conveyed"}
+    planted = beat_plan.planted_ids(plan)    # added after the meeting, not spoken live
+    live = [b for b in plan if b["id"] not in planted]
+
+    # Hidden-conflict tasks: no sentence speakers are shown may carry a
+    # hidden piece's exact values (Agent 1's context, the shared background,
+    # the briefs). The full content is kept for everything that isn't shown.
+    cues = beat_plan.hidden_cues(plan) if content.seed.task_id in beat_plan.HIDDEN_LINK_TASKS else []
+    removed = []
+    if cues:
+        problem, r1 = beat_plan.strip_cues(content.research_problem, cues)
+        context, r2 = beat_plan.strip_cues(content.meeting_context, cues)
+        content = content.model_copy(update={"research_problem": problem, "meeting_context": context})
+        removed += r1 + r2
+
     shared_context, private_briefs, facts = prepare_private_briefs(
         content,
         casting,
         qa_feedback,
+        planned=plan,
     )
+    if cues:
+        shared_context, r = beat_plan.strip_cues(shared_context, cues)
+        removed += r
+        for name in private_briefs:
+            private_briefs[name], r = beat_plan.strip_cues(private_briefs[name], cues)
+            removed += [f"({name}) {x}" for x in r]
+        print(f"      Hidden pieces kept out of what speakers see: {len(removed)} sentence(s) removed")
+        for x in removed:
+            print(f"        - {x}")
 
     transcript = []
     reactions = []          # texts of listener reactions so far
@@ -732,17 +874,12 @@ def run(
 
     # Every other task: the facts it depends on (see utils/required_facts.py).
     # Terminology tasks already have the term check and are left as they were.
-    if terms:
+    if terms or plan:
         facts = []
     elif facts:
         print(f"      Required facts: {len(facts)} "
               f"({'; '.join(f['cue'] for f in facts)})")
 
-    # Constraints the code enforces (utils/floor_control.py).
-    roles = floor.airtime_roles(content, speakers)
-    if roles:
-        print(f"      Airtime: {roles['dominant']} leads (~{roles['share']:.0%} of words), "
-              f"{roles['quiet']} speaks late and little")
     items = floor.action_items(content)
     if items:
         print(f"      Action items: {len(items[0])} assigned + {len(items[1])} unassigned, "
@@ -769,8 +906,9 @@ def run(
         )
 
         facts_block_end = missing_facts and turn_index < FACT_GATE_TURNS
+        beats_pending = any(b["id"] not in done for b in live)
         name = pick_speaker(bids, transcript, turn_index,
-                            can_end=(not missing and not facts_block_end
+                            can_end=(not missing and not facts_block_end and not beats_pending
                                      and not floor.quiet_still_due(roles, transcript)))
         if name is None:
             print(f"      Meeting ended naturally (bids: {bid_summary})")
@@ -784,6 +922,13 @@ def run(
                        and consecutive_turns(transcript, n) < MAX_CONSECUTIVE}
             if allowed:
                 name = pick_speaker(allowed, transcript, turn_index, can_end=False)
+
+        beat = beat_plan.due(live, slots, done, len(transcript) + 1,
+                             transcript[-1].speaker if transcript else None)
+        if beat:
+            name = beat["owner"]
+            bids[name]["intent"] = "respond"
+        keep = beat_plan.leak_conditions(plan, conditions, done | ({beat["id"]} if beat else set()))
 
         speaker = by_name[name]
         intent = bids[name]["intent"]
@@ -812,7 +957,7 @@ def run(
                         if recent else ""
                     ),
                 )
-                if not check_seed_leak(content, transcript, reaction, terms)[0]:
+                if not check_seed_leak(content, transcript, reaction, terms, keep)[0]:
                     transcript.append(Turn(speaker=reactor, text=reaction))
                     reactions.append(reaction)
                     just_reacted.add(reactor)
@@ -823,6 +968,10 @@ def run(
             nudge = (TERM_VOCAB_NOTE + "\n" + nudge).strip()
         if items and turn_index >= NUDGE_AFTER:
             nudge = (nudge + "\n" + floor.items_hold_note(items)).strip()
+        if beat:
+            nudge = (nudge + "\n" + beat_plan.beat_note(beat)).strip()
+        else:
+            nudge = (nudge + "\n" + outcome_note(content, transcript)).strip()
         if word_limit:
             nudge = (nudge + f"\nKeep this turn short: one or two sentences, "
                      f"under {word_limit} words.").strip()
@@ -832,8 +981,22 @@ def run(
             word_limit=word_limit,
         )
 
+        if beat:
+            conveyed, gap = beat_plan.check_beat(beat, format_history(transcript[-4:]), text)
+            for _ in range(beat_plan.BEAT_RETRIES):
+                if conveyed:
+                    break
+                print(f"      Turn {len(transcript) + 1}: beat {beat['id']} didn't come across, regenerating ({gap})")
+                text = speak(
+                    speaker, content, shared_context, private_briefs[name],
+                    ami_style_notes, transcript, intent,
+                    extra_note=f"{nudge}\nYour last try didn't get this across: {gap}",
+                    word_limit=word_limit,
+                )
+                conveyed, gap = beat_plan.check_beat(beat, format_history(transcript[-4:]), text)
+
         for attempt in range(LEAK_RETRIES + 1):
-            leaked, reason = check_seed_leak(content, transcript, text, terms)
+            leaked, reason = check_seed_leak(content, transcript, text, terms, keep)
             if not leaked:
                 break
             if attempt == LEAK_RETRIES:
@@ -850,6 +1013,14 @@ def run(
                 ).strip(),
                 word_limit=word_limit,
             )
+            if beat:     # a regenerated turn may have dropped the point
+                conveyed, gap = beat_plan.check_beat(beat, format_history(transcript[-4:]), text)
+
+        if beat:
+            done.add(beat["id"])
+            status[beat["id"]] = {"turn": len(transcript) + 1, "conveyed": conveyed}
+            print(f"      Turn {len(transcript) + 1}: beat {beat['id']} "
+                  + ("conveyed" if conveyed else f"NOT conveyed ({gap})"))
 
         transcript.append(Turn(speaker=name, text=text))
         just_reacted.discard(name)
@@ -894,12 +1065,43 @@ def run(
             + (f"; never said: {'; '.join(f['cue'] for f in left)}" if left else "")
         )
 
+    for b in plan:
+        if b["id"] in planted:
+            plant_beat(b, plan, slots, status, transcript, content, terms, conditions)
+
     if SPEECH_PASS:
+        before = list(transcript)
         transcript = speech_pass(content, transcript, terms, list(facts) + wrap_cues)
+        # The speech pass sometimes rewrote a planned point away; keep the
+        # original turn when that happens.
+        for b in plan:
+            st = status.get(b["id"])
+            if st and st["conveyed"]:
+                i = st["turn"] - 1
+                if transcript[i].text != before[i].text and not beat_plan.check_beat(
+                        b, format_history(transcript[max(0, i - 4):i]), transcript[i].text)[0]:
+                    transcript[i] = before[i]
+                    print(f"      Speech pass dropped beat {b['id']}; kept turn {st['turn']} as written")
+
+    if plan:
+        print(f"      Beats: {sum(st['conveyed'] for st in status.values())}/{len(plan)} conveyed"
+              + (f"; never placed: {', '.join(b['id'] for b in plan if not status.get(b['id'], {}).get('turn'))}"
+                 if any(not status.get(b['id'], {}).get('turn') for b in plan) else ""))
 
     seed_location = locate_seed(content, transcript)
+
+    placed = [{**b, "slot": slots[b["id"]],
+               **status.get(b["id"], {"turn": None, "conveyed": False})} for b in plan]
+    truth, changes = {}, []
+    if plan:
+        truth, changes = beat_plan.write_ground_truth(content, transcript, placed, conditions)
+        print(f"      Ground truth written from the transcript ({len(changes)} change(s) from the draft)")
 
     return FilmingOutput(
         transcript=transcript,
         seed_location=seed_location,
+        beats=placed,
+        beat_conditions=conditions,
+        ground_truth=truth,
+        ground_truth_changes=changes,
     )

@@ -48,6 +48,21 @@ _DEFAULTS = {
     'assumptions_02': dict(disciplines=['clinical medicine', 'sociology']),
 }
 
+# Tasks whose meeting has to reach an outcome, and what it must settle, in
+# words a speaker can be told without giving the task away. Speakers never
+# see the task, so without this the exploration rules in the speaking prompt
+# kept these meetings from deciding anything (0/5 approved in the GPT batch
+# for coordination_01 and assumptions_01). coordination_05 is left out: its
+# action items are read out by the chair's wrap-up, and telling everyone to
+# take on work could give owners to items that must stay unassigned.
+OUTCOME_TASKS = {
+    'coordination_01': 'who will do what next, and which discipline takes each piece',
+    'assumptions_01': 'the decisions you came to finalize',
+    'problem_03': 'which research question to pursue',
+    'disagreement_02': 'which dataset to use',
+    'methods_03': 'which method to use',
+}
+
 TASKS = {key: dict(task_id=key, benchmark_category=category,
                   benchmark_task=description, input_type=kind,
                   defaults=_DEFAULTS.get(key, {}))

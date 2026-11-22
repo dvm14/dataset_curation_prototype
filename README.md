@@ -72,7 +72,11 @@ controls them (`utils/floor_control.py`):
 - **Action items** (ground truth with `assigned_items` / `unassigned_items`, e.g.
   `coordination_05`): nobody reads out a list or adds a to-do during the meeting; the
   chair runs through exactly those items at the end, owners and dates checked in code
-  and protected from the speech pass.
+  and protected from the speech pass. For `coordination_05` only, a single
+  `action_items` list is read too (item under `action`, `item`, `task` or
+  `description`; no owner or `status: "unassigned"` means unassigned), since GPT's
+  Agent 1 writes that format and the wrap-up was skipped without it.
+- **Planned moments (beats)**: see [Agent 3](#agent-3-meeting-simulation), step 0.
 
 ## Batch runs
 
@@ -110,7 +114,10 @@ Offline test (fake LLM, no key or cost needed):
 
 ```bash
 python -m pytest tests -q
+python tests/test_beats.py        # beat parsing, scheduling, planting, value removal
 ```
+
+**Results on this branch** (GPT-5.6-terra, one transcript per task, the 17 single-meeting tasks that failed in the 21 Nov batch): 14 of 17 approved on the first attempt, against 14 of 86 for the same tasks before. The judge changes don't explain it: the 18 pre-beats baseline transcripts re-scored with the current judge pass 2/18 (3/18 with the old one). After the hidden-conflict and action-item fixes, `coordination_03` passed; `assumptions_03` and `methods_03` still fail (see Agent 3, step 0), and `coordination_05` now runs its wrap-up but fails on decisions nothing makes sure are said and a minutes-like recap (naturalness 2).
 
 ## Pipeline
 
@@ -126,6 +133,23 @@ Agent 4  QA                 — scores the transcript against the rubric
 ### Agent 3: meeting simulation
 
 No single LLM call writes the transcript. Each cast speaker is a separate agent that sees only its own profile and private brief, plus what has been said so far.
+
+0. **Planned moments (beats)** (`utils/beats.py`). In GPT runs most failures were the required content never being said, or said in a form the judge couldn't use, while speakers improvised freely. So for most tasks one call first plans the few moments the task can't do without, and the code places them:
+   - **The plan.** 3–7 beats (at most 4 for summarising and planning tasks, `ANCHOR_TASKS`), each one point of at most 25 words with exact values, an **owner** (a cast speaker; people the seed names who weren't cast are left out), a **window** (early / middle / late), and optionally what must **never** happen after it. Decisions are beats too ("the group adopts X"). Meeting-wide **conditions** ("nobody notices that b1 and b4 conflict") are returned alongside.
+   - **Scheduling.** Each beat gets a turn spread evenly within its window, at least 3 turns apart (`MIN_GAP`), and linked pieces of a hidden conflict at least 10 apart (`LINKED_GAP`). The quiet speaker's beats wait until they are allowed to speak (airtime tasks).
+   - **Saying it.** When a beat's turn comes, its owner takes the floor (one turn later if they just spoke) and is told to bring the point up in passing, in their own words. A check call confirms the turn got it across; if not, the turn is regenerated once. The meeting can't end naturally while a beat is still due. Owners also see their points in their brief ("Points you plan to raise in this meeting").
+   - **Leak check.** After a beat is said, its "never" joins the conditions the leak check enforces.
+   - **Not used for** `jargon_01`, `jargon_02` (they keep the seed-term machinery) and `coordination_05` (the action-item wrap-up covers it) (`NO_BEAT_TASKS`). Those tasks keep the planner's required facts and nudges; beat tasks don't use them.
+   - **Hidden-conflict tasks** (`assumptions_03`, `coordination_03`, `methods_03`, `HIDDEN_LINK_TASKS`). Once either piece of a conflict was known in advance, speakers connected the two as soon as the other came up. So:
+     - the later piece is said live at its turn, by a different owner from the earlier piece;
+     - the earlier piece is **planted** after the meeting as a short aside in one of its owner's earlier turns, at least 10 turns before, so no turn was written knowing it;
+     - the planner doesn't see the seed instruction, Agent 1's ground truth or either piece, only the task description, research problem and the other beats;
+     - any sentence with one of the pieces' exact values (dates either way round, clock times, numbers with a unit) is removed from Agent 1's research problem and meeting context, the shared background and every brief, and the removed sentences are printed;
+     - a later piece may not repeat the earlier piece's values; if it does, the beats are planned once more.
+
+     This held for `coordination_03` (dates). When Agent 1 picks a conflict of ideas instead (`assumptions_03`: an English-only survey for Spanish-speaking tenants; `methods_03`: a survey for a causal question) there are no values to remove and the participants still notice it, so those two still fail. For `methods_03`, removing "30 days" also removed the research problem's main sentence.
+   - **Ground truth after the meeting.** Once the transcript is final, one call rewrites the reference answer from what was actually said (turn numbers, the cast speaker who said it), using Agent 1's draft and the beats. It is saved as `ground_truth`; Agent 1's draft stays in `seed_spec.ground_truth` and the differences are listed in `ground_truth_changes`.
+   - **Log.** Each run prints the beats with their turns, `Beats: x/y conveyed`, and any beat never placed.
 
 1. **Planning.** One call writes **shared background** that everyone in the meeting knows (city, institution, grant and deadline, datasets, what happened last meeting, logistics), plus a **private brief** per speaker. The task's required facts are split across briefs so the situation can arise, but nobody is told the answer or that they are being tested. For terminology tasks, seed speakers get their own meaning of the seed term as their everyday word for it. Each brief also gives the speaker things they don't know: one or two open questions (at least one about another participant's field), something they'd need to check, and a puzzling observation from their own work, with no ready-made solutions or task assignments unless the task calls for them. Without these, meetings were almost all proposals and volunteering.
 2. **Turn-taking by bidding.** Before every turn, all speakers bid in parallel on how much they want to speak (urgency 0–10) and how: a normal response, a quick reaction, cutting in, or passing. The highest bid speaks, and ties are broken at random. Nobody assigns turns.
@@ -162,6 +186,13 @@ The judge scores each criterion from 1 to 5, using 1/3/5 as anchors:
 
 The approval decision is made in code (`APPROVAL_THRESHOLDS` in `agents/agent4_qa.py`), not by the LLM. A missing or malformed score counts as 1. The judge also receives measured turn statistics (turn lengths, disfluency rate, turns per speaker) as context, which are not targets, and for terminology tasks, an exact count of which turns each speaker says the seed term in. It does not see the seed locator's report, which has misread speakers before.
 
+**What the judge sees on beat runs.**
+- The planned moments and conditions, and it scores seed recoverability and task compliance against them. Agent 1's seed is background: the judge doesn't fail a run because the seed named someone who wasn't cast or gave a part to a different speaker.
+- The ground truth written after the meeting.
+- The AMI style notes **without** the meeting style and opening. Shown those, the judge graded them as requirements ("not meaningfully tangent-heavy") even when told they were guidance.
+
+**Meeting styles and outcome tasks.** Tasks whose meeting has to settle something (`OUTCOME_TASKS` in `benchmark_tasks.py`: `coordination_01`, `assumptions_01`, `problem_03`, `disagreement_02`, `methods_03`) never get the `thinking_aloud` or `tangent_heavy` style, which told speakers not to decide anything.
+
 **Seed use check (terminology tasks).** A separate small call labels each turn containing the seed term (and the turn after it) with which discipline's sense it carries, and whether it comments on the word or renames a sense. In code, task_compliance is capped at 3 if any turn comments or renames, if nobody says the term, or if a seed speaker's sense never appears in a plain use. The main judge once gave 5 to a transcript whose only anthropology use objected to the label. The labels are saved as `seed_uses` (empty for other tasks).
 
 **Spoken share.** The 1–5 naturalness score barely moves between versions of a transcript, so QA also labels each turn of 15+ words as sounding spoken or written and reports the share (`spoken_share`, with `written_turns`). It is for comparing runs and is not part of approval.
@@ -187,7 +218,8 @@ Edit the `CONFIG` dict in `main.py`:
 
 Each output JSON contains:
 - The transcript (ordered turns)
-- Seed spec, ground truth, and the reported seed location
+- Seed spec, ground truth, and the reported seed location. On beat runs `ground_truth` is the one written from the transcript, and `seed_spec.ground_truth` is Agent 1's draft
+- `beats` (id, owner, window, says, linked, scheduled and actual turn, whether it got across, whether it was planted), `beat_conditions`, and `ground_truth_changes`; all empty for tasks without beats
 - Speaker profiles
 - `qa_feedback`: the QA of the saved transcript, including `evidence_turns`, `realism_signals` and `issues`
 - `qa_history`: scores, approval and issues for every attempt, to see whether a re-film improved things

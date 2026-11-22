@@ -15,6 +15,8 @@ one discipline to dominate overrides a "balanced" style).
 
 import random
 
+from benchmark_tasks import OUTCOME_TASKS
+
 MEETING_STYLES = {
     "quick_checkin": {
         "description": (
@@ -188,6 +190,13 @@ TASK_STYLE_EXCLUDE = {
     "disagreement_01": SHORT + ["round_robin_updates"], # rationale and evidence per side
     "other_01": ["polite_friction"],                    # control: productive, no tension
 }
+
+# Meetings that must reach an outcome (OUTCOME_TASKS): thinking_aloud says
+# "nothing is decided", and the judge marked a dense planning meeting down
+# for having no tangents under tangent_heavy (GPT runs e20d402e, 805ebacf).
+for _task in OUTCOME_TASKS:
+    TASK_STYLE_EXCLUDE[_task] = list(dict.fromkeys(
+        TASK_STYLE_EXCLUDE.get(_task, []) + ["thinking_aloud", "tangent_heavy"]))
 
 
 def pick_style(name=None, avoid_seniority=False, task_id=None):
