@@ -103,6 +103,10 @@ def turn_limit(roles, name, transcript):
 
 # ── action items ─────────────────────────────────────────────────────────
 
+# Tasks where a single "action_items" list (owner / status per item) is also
+# read; kept to the action-item task so no other ground truth starts a wrap-up.
+COMBINED_LIST_TASKS = {"coordination_05"}
+
 def _first(item, *keys):
     for k in keys:
         if item.get(k) not in (None, ""):
@@ -114,9 +118,18 @@ def action_items(content):
     """(assigned, unassigned) from the ground truth, or None if the task has no item list."""
     truth = content.seed.ground_truth or {}
     assigned, unassigned = truth.get("assigned_items"), truth.get("unassigned_items")
+    combined = truth.get("action_items")
+    if (assigned is None and unassigned is None and isinstance(combined, list)
+            and content.seed.task_id in COMBINED_LIST_TASKS):
+        # Agent 1 sometimes writes one list with an owner / status per item
+        items = [i for i in combined if isinstance(i, dict)]
+        is_open = lambda it: (str(it.get("status", "")).lower() == "unassigned"
+                              or not _first(it, "owner", "assignee"))
+        assigned = [i for i in items if not is_open(i)]
+        unassigned = [i for i in items if is_open(i)]
     if not isinstance(assigned, list) or not isinstance(unassigned, list) or not assigned + unassigned:
         return None
-    norm = lambda it: {"item": _first(it, "item", "task", "description"),
+    norm = lambda it: {"item": _first(it, "item", "task", "description", "action"),
                        "owner": _first(it, "owner", "assignee"),
                        "date": _first(it, "due_date", "date", "due")}
     return [norm(i) for i in assigned if isinstance(i, dict)], [norm(i) for i in unassigned if isinstance(i, dict)]

@@ -270,7 +270,11 @@ def run_pipeline(config: dict) -> GeneratedTranscript:
         benchmark_task=content.seed.benchmark_task,
         seed_spec=content.seed,
         seed_location=filming.seed_location,
-        ground_truth=content.seed.ground_truth,
+        # Beat runs: written from the transcript; the draft stays in seed_spec.
+        ground_truth=filming.ground_truth or content.seed.ground_truth,
+        ground_truth_changes=filming.ground_truth_changes,
+        beats=filming.beats,
+        beat_conditions=filming.beat_conditions,
         transcript=filming.transcript,
         qa_feedback=qa,
         qa_cycles=qa_cycles,

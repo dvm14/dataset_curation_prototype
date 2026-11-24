@@ -27,6 +27,7 @@ import agents.agent3_filming as agent3  # noqa: E402
 import agents.agent4_qa as agent4  # noqa: E402
 import utils.style_extractor as style_extractor  # noqa: E402
 import utils.floor_control as floor_control  # noqa: E402
+import utils.beats as beats  # noqa: E402
 from prompts import agent1_prompt, agent2_prompt, agent3_prompt, agent4_prompt  # noqa: E402
 
 TERM = "resilience"
@@ -80,6 +81,7 @@ class FakeLLM:
 
         if "Prepare shared meeting background" in system:
             self.calls["planner"] += 1
+            self.planner_setup = json.loads(body)
             names = [s["name"] for s in json.loads(body)["speakers"]]
             facts = [] if self.term_task else [
                 {"speaker": names[0], "fact": "Approval is expected March 1, 2027.", "cue": "March 1, 2027"},
@@ -94,6 +96,29 @@ class FakeLLM:
             return {"shared_context": "Durham, grant due Dec 1.",
                     "briefs": {k: f"brief for {k}" for k in keys},
                     "required_facts": facts}
+
+        if "You plan the few key moments" in system:
+            self.calls["beats"] += 1
+            names = [c["name"] for c in json.loads(body)["cast"]]
+            return {"beats": [
+                {"id": "b1", "owner": names[0], "window": "early", "says": "Approval is expected March 1, 2027."},
+                {"id": "b2", "owner": names[0], "window": "late", "says": "Interviews start February 1, 2027.",
+                 "linked": ["b1"], "never": "nobody connects b1 and b2"}],
+                "conditions": ["the conflict stays unnoticed"]}
+
+        if "You write the reference answer for a benchmark item" in system:
+            self.calls["ground_truth"] += 1
+            return {"ground_truth": {"conflict": "rewritten from the transcript", "evidence_turns": [5, 18]},
+                    "changes": ["owner changed to the cast speaker"]}
+
+        if "Add the given point to it as a" in system:
+            self.calls["plant"] += 1
+            req = json.loads(body)
+            return {"text": req["turn"] + " Oh, and " + req["point"]}
+
+        if "against a point the speaker was meant" in system:
+            self.calls["beat_check"] += 1
+            return {"conveyed": True, "missing": ""}
 
         if system.startswith(agent3_prompt.BID_PROMPT):
             self.calls["bid"] += 1
@@ -166,7 +191,7 @@ def run_task(task_id, **fake_kwargs):
     task = main.get_task(task_id)
     fake = FakeLLM(term_task=agent1.is_term_task(task["benchmark_category"], task["benchmark_task"]),
                    **fake_kwargs)
-    patched = [(m, "call_llm_json") for m in (agent1, agent2, agent3, agent4, floor_control)]
+    patched = [(m, "call_llm_json") for m in (agent1, agent2, agent3, agent4, floor_control, beats)]
     saved = {(m, a): getattr(m, a) for m, a in patched}
     saved[(style_extractor, "call_llm")] = style_extractor.call_llm
     for m, a in patched:
@@ -217,6 +242,37 @@ def test_task_defaults_apply():
     assert len(result.speakers) == 2
 
 
+def test_outcome_note_only_for_outcome_tasks():
+    """Speakers never see the task, so only OUTCOME_TASKS get told what the
+    meeting must settle, more firmly in the last third."""
+    from types import SimpleNamespace as S
+    from schema import Turn
+
+    def content(task_id):
+        return S(seed=S(task_id=task_id))
+
+    early = [Turn(speaker="A", text="Short turn.")] * 3
+    late = [Turn(speaker="A", text="Short turn.")] * (agent3.MAX_TURNS * 2 // 3 + 1)
+    assert agent3.outcome_note(content("jargon_01"), early) == ""
+    assert agent3.outcome_note(content("coordination_05"), late) == ""
+    note = agent3.outcome_note(content("coordination_01"), early)
+    assert "who will do what next" in note and "Time is getting on" not in note
+    assert "Time is getting on" in agent3.outcome_note(content("coordination_01"), late)
+
+
+
+def test_judge_gets_planned_moments_and_no_meeting_style():
+    from schema import FilmingOutput, Turn
+    from utils.meeting_styles import style_block, MEETING_STYLES
+    filming = FilmingOutput(transcript=[Turn(speaker="A", text="x")], seed_location="",
+                            beats=[{"id": "b1", "owner": "A", "says": "Approval March 1.", "turn": 4}],
+                            beat_conditions=["nobody connects b1 and b2"])
+    text = agent4.planned_moments(filming)
+    assert "b1 (A, placed at turn 4" in text and "nobody connects b1 and b2" in text
+    assert agent4.planned_moments(FilmingOutput(transcript=[], seed_location="")) == ""
+    notes = "AMI notes." + "\n\n" + style_block("tangent_heavy", MEETING_STYLES["tangent_heavy"], "x")
+    assert agent4.without_meeting_style(notes) == "AMI notes."
+
 if __name__ == "__main__":
     for task_id in ("jargon_01", "jargon_03", "coordination_03"):
         result, fake = run_task(task_id)
@@ -251,9 +307,51 @@ def test_seed_speakers_ignore_scripted_example():
 
 
 def test_required_facts_get_said_before_meeting_ends():
-    result, fake = run_task("coordination_03")
+    """Tasks without beats (utils/beats.NO_BEAT_TASKS) still track facts."""
+    result, fake = run_task("coordination_05")
+    assert fake.calls["ground_truth"] == 0          # no beats: Agent 1's ground truth stays
     text = " ".join(t.text for t in result.transcript)
     assert "March 1st, 2027" in text and "February 1st, 2027" in text
+
+
+def test_beats_are_placed_and_recorded():
+    """Hidden-conflict task: the later piece is said live by its owner at
+    its turn; the earlier piece is planted afterwards in one of its owner's
+    turns well before it, from a different person; neither is in a brief."""
+    result, fake = run_task("coordination_03")
+    assert fake.calls["beats"] >= 1 and fake.calls["plant"] >= 1
+    b1, b2 = result.beats
+    assert b1["conveyed"] and b2["conveyed"]
+    assert b1["owner"] != b2["owner"]                       # linked: separated in code
+    assert b2["turn"] - b1["turn"] >= beats.LINKED_GAP
+    planted = result.transcript[b1["turn"] - 1]
+    assert planted.speaker == b1["owner"] and "Approval is expected March 1" in planted.text
+    assert result.transcript[b2["turn"] - 1].speaker == b2["owner"]
+    assert result.beat_conditions == ["the conflict stays unnoticed"]
+    setup = fake.planner_setup
+    # The planner never sees the hidden pieces, the seed or Agent 1's answer.
+    assert "comes_up_later" not in setup
+    assert "seed_instruction" not in setup and "ground_truth" not in setup
+    assert setup["planned_moments"] == []
+    # Ground truth rewritten from the transcript; Agent 1's draft kept.
+    assert result.ground_truth == {"conflict": "rewritten from the transcript", "evidence_turns": [5, 18]}
+    assert result.seed_spec.ground_truth == {"conflict": "approval after interviews"}
+    assert result.ground_truth_changes == ["owner changed to the cast speaker"]
+
+
+
+def test_combined_action_item_list_is_read_for_coordination_05_only():
+    """beats_v1 run: Agent 1 wrote one "action_items" list with owner and
+    status, the wrap-up never ran and half the items went unsaid."""
+    from types import SimpleNamespace as NS
+    from utils import floor_control as floor
+    truth = {"action_items": [
+        {"action": "Draft the plot plan.", "owner": "Mira", "due_date": "28 March 2027", "status": "assigned"},
+        {"action": "Meet the community reps.", "owner": None, "due_date": None, "status": "unassigned"}]}
+    assigned, unassigned = floor.action_items(NS(seed=NS(task_id="coordination_05", ground_truth=truth)))
+    assert assigned == [{"item": "Draft the plot plan.", "owner": "Mira", "date": "28 March 2027"}]
+    assert [i["item"] for i in unassigned] == ["Meet the community reps."]
+    assert floor.action_items(NS(seed=NS(task_id="coordination_01", ground_truth=truth))) is None
 
 
 def test_extra_cast_is_trimmed_not_fatal():

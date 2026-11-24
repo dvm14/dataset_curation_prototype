@@ -173,6 +173,24 @@ class FilmingOutput(BaseModel):
         description="Brief note on where in the transcript the seed "
                     "was embedded, for ground truth logging"
     )
+    beats: list[dict] = Field(
+        default_factory=list,
+        description="Planned moments (utils/beats.py) with their owner, "
+                    "scheduled turn, actual turn and whether they came across"
+    )
+    beat_conditions: list[str] = Field(
+        default_factory=list,
+        description="Meeting-wide conditions planned with the beats"
+    )
+    ground_truth: dict = Field(
+        default_factory=dict,
+        description="Beat runs: reference answer written from the finished "
+                    "transcript (empty otherwise; Agent 1's draft is used)"
+    )
+    ground_truth_changes: list[str] = Field(
+        default_factory=list,
+        description="How that reference answer differs from Agent 1's draft"
+    )
 
 
 # ─────────────────────────────────────────────
@@ -309,7 +327,10 @@ class GeneratedTranscript(BaseModel):
     seed_spec: SeedSpec
     seed_location: str
     ground_truth: dict
-    
+    beats: list[dict] = Field(default_factory=list)
+    beat_conditions: list[str] = Field(default_factory=list)
+    ground_truth_changes: list[str] = Field(default_factory=list)
+
     # the transcript itself
     transcript: list[Turn]
     

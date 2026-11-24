@@ -212,6 +212,45 @@ def score(raw, key):
         return 1
 
 
+def without_meeting_style(notes):
+    """
+    The AMI notes without the meeting style and opening appended by main.py
+    (utils/meeting_styles.style_block). Those are suggestions for the
+    participants; shown to the judge, they were graded as requirements
+    ("not meaningfully tangent-heavy"), even when labelled as guidance.
+    """
+    return notes.split("\n\nMeeting style for this meeting (")[0]
+
+
+def planned_moments(filming):
+    """
+    Beat runs (utils/beats.py): the moments the generator placed are what
+    the seed scores are judged against. Judged against Agent 1's full seed,
+    runs failed for a person the seed named who was never cast, or because a
+    beat had given a part to a different cast speaker on purpose.
+    """
+    if not filming.beats:
+        return ""
+    lines = "\n".join(
+        f"- {b['id']} ({b['owner']}, placed at turn {b.get('turn') or '?'}; verify): {b['says']}"
+        for b in filming.beats
+    )
+    conditions = "\n".join(f"- {c}" for c in filming.beat_conditions) or "- none"
+    return f"""
+PLANNED MOMENTS: the task's required content, placed in the meeting by the
+generator. For seed_recoverable and task_compliance, judge whether these
+moments are actually in the transcript as described, whether the conditions
+hold, and whether the benchmark task can be done on this transcript. The SEED
+further down was written before the meeting and is background: where it
+names a person who is not in the meeting, gives a part to a different person,
+or asks for more detail than the planned moments, follow the planned moments. Don't report a moment as wrong because the seed gave it
+to someone else or named a person who isn't in the meeting.
+{lines}
+Conditions:
+{conditions}
+"""
+
+
 def run(
     filming: FilmingOutput,
     content: ContentCurationOutput,
@@ -254,6 +293,7 @@ def run(
 
     user_message = f"""
 Evaluate the generated meeting material, NOT a tested assistant response.
+{planned_moments(filming)}
 
 TASK ID: {content.seed.task_id}
 CATEGORY: {content.seed.benchmark_category}
@@ -268,14 +308,14 @@ SPEAKER PERSONAS:
 SEED that should be embedded:
 {content.seed.explicit_instruction}
 
-GROUND TRUTH the AI assistant should be able to derive:
-{json.dumps(content.seed.ground_truth, indent=2)}
+GROUND TRUTH the AI assistant should be able to derive{" (written from this transcript after the meeting)" if filming.ground_truth else ""}:
+{json.dumps(filming.ground_truth or content.seed.ground_truth, indent=2)}
 
 TURN STATISTICS (measured):
 {turn_statistics(filming.transcript)}
 {measured_uses}
-AMI style reference (what a natural meeting sounds like):
-{ami_style_notes}
+STYLE NOTES (what a natural meeting sounds like):
+{without_meeting_style(ami_style_notes)}
 
 Score each criterion 1-5 and list specific issues.
 
