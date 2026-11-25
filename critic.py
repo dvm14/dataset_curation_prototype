@@ -19,6 +19,7 @@ import json
 import re
 import sys
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
@@ -138,6 +139,7 @@ def main():
     ap.add_argument("--no-llm", action="store_true", help="code checks only, no API calls")
     ap.add_argument("--probe", type=int, default=0, metavar="N",
                     help="also run N blind solver attempts per transcript and contrast them")
+    ap.add_argument("--workers", type=int, default=1, help="transcripts critiqued in parallel")
     args = ap.parse_args()
 
     from utils.llm import output_root, usage_report, JUDGE_MODEL
@@ -152,18 +154,25 @@ def main():
     out_dir = root / f"critic_{datetime.now():%Y%m%d-%H%M%S}"
     out_dir.mkdir(parents=True)
     rows = []
-    for path, data in items:
-        print(f"{data['task_id']:16} {path.name}")
+    def one(item):
+        path, data = item
         try:
-            report = critique(data, use_llm=not args.no_llm, probe_runs=args.probe)
+            return path, data, critique(data, use_llm=not args.no_llm, probe_runs=args.probe), None
         except Exception as e:                    # keep going; note the error
-            print(f"   error: {e}")
-            continue
-        (out_dir / path.name).write_text(report.model_dump_json(indent=2))
-        row = row_for(path, data, report)
-        rows.append(row)
-        print(f"   QA {'approved' if row['qa_approved'] else 'failed  '} -> critic {report.verdict}"
-              + (f": {report.reasons[0]}" if report.reasons else ""))
+            return path, data, None, e
+
+    # Calls are network-bound, so threads are enough; the usage meter is locked.
+    with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
+        for done, (path, data, report, error) in enumerate(pool.map(one, items), start=1):
+            print(f"[{done}/{len(items)}] {data['task_id']:16} {path.name}")
+            if error:
+                print(f"   error: {error}")
+                continue
+            (out_dir / path.name).write_text(report.model_dump_json(indent=2))
+            row = row_for(path, data, report)
+            rows.append(row)
+            print(f"   QA {'approved' if row['qa_approved'] else 'failed  '} -> critic {report.verdict}"
+                  + (f": {report.reasons[0]}" if report.reasons else ""), flush=True)
 
     if not rows:
         print("Nothing was critiqued.")
