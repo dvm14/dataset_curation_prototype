@@ -107,6 +107,52 @@ python rejudge.py --judge gpt-5.6-terra --limit 5
 
 It writes `rejudge_<judge>_<time>.csv` with the saved and new scores side by side.
 
+### Critic (second pass after QA)
+
+QA scores a meeting; the critic (`agents/agent5_critic.py`) looks for reasons it can't
+enter the benchmark, the problems the Week 9-10 read-through found by hand:
+
+- a ground-truth point that nobody says, or that the text contradicts
+- an issue that must stay unnoticed getting noticed, or one that must stay open getting
+  settled (`MUST_STAY_UNNOTICED`, `MUST_STAY_UNRESOLVED`); this gives rubric v2's
+  `seed_implicit`, which QA doesn't score
+- a control (jargon_03, opportunity_04, other_01) that contains the problem
+- a role the task needs who never speaks, or a meaning that needs outside knowledge
+
+Every quote the critic gives is checked against the transcript in code, and quotes that
+aren't there are dropped. Verdicts: `block` (missing/contradicted point, hidden issue
+surfaced, control violated, or critic seed scores below 4), `flag` (a person should
+look), `pass`. It uses `JUDGE_MODEL`.
+
+`utils/critic_checks.py` adds free code checks: doubled-word tics ("actually, actually"),
+stock openings, reused lines, fixed rotation and even turn counts, titled names nobody
+cast, endings that read out assignments, repeated turn openers, and question rate.
+
+```bash
+python critic.py                                  # saved samples of GEN_MODEL
+python critic.py --dir data/outputs/gpt-5.6-terra --tasks jargon_02 assumptions_04
+python critic.py --no-llm                         # code checks only, no API cost
+```
+
+It writes `critic_<time>/` next to the samples: one report per transcript, `critic.csv`,
+and `summary.md` with QA vs critic counts. Multi-meeting sets are skipped for now.
+
+The critic sees the ground truth, which makes faint evidence look sufficient.
+`--probe N` adds a blind check (`agents/agent6_probe.py`): a solver gets only the
+transcript and the question an assistant would get (`probe_questions.py`, written not to
+give the answer away), N times; a grader scores each answer against the critic's
+ground-truth points. The report lists where the two readings disagree, each as a flag:
+
+| kind | meaning |
+|---|---|
+| `too_faint` | critic finds a point, blind solvers miss it |
+| `critic_disputed` | critic calls a point missing, blind solvers find it |
+| `ambiguous` | a blind answer differs from the ground truth and the transcript backs it |
+| `false_alarm_bait` | blind solvers report a problem in a control |
+
+`PROBE_MODEL` sets the solver (default `JUDGE_MODEL`); a different model is closer to
+the assistants being evaluated.
+
 `RUN_TAG=v2` stores a run in `data/outputs/<GEN_MODEL>__v2/`, so a rerun on changed code
 doesn't count earlier samples as done.
 

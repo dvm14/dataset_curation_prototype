@@ -291,6 +291,79 @@ class QAAttempt(BaseModel):
     issues: list[str]
 
 
+class CriticReport(BaseModel):
+    """
+    Second-pass review (agents/agent5_critic.py). QA scores the meeting; the
+    critic looks for reasons the item can't enter the benchmark, and every
+    quote it gives is checked against the transcript in code.
+    """
+    verdict: Literal["pass", "flag", "block"] = Field(
+        description="block = should not enter the benchmark; flag = needs a human look"
+    )
+    reasons: list[str] = Field(default_factory=list, description="Why, most serious first")
+    seed_recoverable: int | None = Field(default=None, description="Critic's 1-5, rubric v2")
+    seed_implicit: int | None = Field(
+        default=None, description="Critic's 1-5, rubric v2; None when nothing must stay unnoticed"
+    )
+    points: list[dict] = Field(
+        default_factory=list,
+        description="Ground-truth claims with status and verified evidence quotes",
+    )
+    surfaced: list[dict] = Field(
+        default_factory=list, description="Verified turns where the hidden issue is noticed"
+    )
+    control_violations: list[dict] = Field(default_factory=list)
+    missing_participants: list[str] = Field(default_factory=list)
+    unverified_quotes: int = Field(
+        default=0, description="Quotes the critic gave that are not in the transcript (dropped)"
+    )
+    checks: dict = Field(default_factory=dict, description="utils/critic_checks.py results")
+    probe: Optional[dict] = Field(
+        default=None, description="ProbeReport: blind solver attempts and their grades"
+    )
+    contrast: list[dict] = Field(
+        default_factory=list,
+        description="Where the critic (sees the answer) and the blind probe disagree",
+    )
+    judge_model: str = ""
+
+
+class ProbeAttempt(BaseModel):
+    """One blind solver answer and how the grader scored it."""
+    run: int
+    answer: str = Field(description="The solver's answer, as text")
+    points: list[dict] = Field(
+        default_factory=list,
+        description="Each ground-truth point: found / partial / missed / contradicted",
+    )
+    extra_claims: list[dict] = Field(
+        default_factory=list,
+        description="Claims beyond the ground truth, with whether the transcript supports them",
+    )
+    false_alarm: bool | None = Field(
+        default=None, description="Controls only: the solver reported the problem the control lacks"
+    )
+    score: int | None = Field(default=None, description="Grader's 1-5 for the answer")
+    error: str = ""
+
+
+class ProbeReport(BaseModel):
+    """
+    Blind probe (agents/agent6_probe.py): a solver that sees only the transcript
+    and the question an assistant would get, graded against the ground truth.
+    """
+    question: str
+    solver_model: str
+    grader_model: str
+    attempts: list[ProbeAttempt]
+    found_rate: dict[str, float] = Field(
+        default_factory=dict,
+        description="Per ground-truth point: share of attempts that found it (partial = 0.5)",
+    )
+    mean_score: float | None = None
+    false_alarm_rate: float | None = None
+
+
 # ─────────────────────────────────────────────
 # FINAL OUTPUT — saved to outputs/
 # ─────────────────────────────────────────────
